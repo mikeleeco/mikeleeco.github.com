@@ -98,3 +98,18 @@ ul {
   list-style: disc;
   padding-left: 25px;
 }
+ol {
+  list-style-position: inside;
+  list-style: decimal;
+  padding-left: 25px;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+}
+
+dl, dt, dd, dl p {
+	font-color: #444;
+}
