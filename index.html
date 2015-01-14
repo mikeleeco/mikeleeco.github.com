@@ -19,66 +19,8 @@
 </header>
 <p><i>Statistical Musings and Data Science</i></p>
 </section>
-<style>
-	body {
-		font-family: Helvetica;
-	}
-	svg {
-		width: 500px;
-		height: 500px;
-	}
-	.top-label {
-		font-size: 13px;
-		font-style: italic;
-		text-transform: uppercase;
-		float: le	ft;
-	}
-	.age-label {
-		text-align: right;
-		font-weight: bold;
-		width: 90px;
-		padding-right: 10px;
-	}
-	.clearfix {
-		clear: both;
-	}
-	.bar {
-		fill: DarkSlateBlue;
-	}
-	.bar-label {
-		text-anchor: end;
-	}
-	.axis-label {
-		text-anchor: middle;
-		font-size: 13px;
-	}
-</style>
 </head>
 <body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-	var body = d3.select("body");
-	body.append("h2")
-		.text("Age distribution of the world, 2010");
-	body.append("div")
-		.attr("class","top-label age-label")
-	.append("p")
-		.text("age group");
-	body.append("div")
-		.attr("class", "top-label")
-	.append("p")
-		.text("portion of the population");
-	body.append("div")
-		.attr("class", "clearfix")
-	var svg = body.append("svg");
-	var barGroup = svg.append("g")
-		.attr("transform", "translate(100,300) scale(43,1)")
-	barGroup.append("rect")
-		.attr("x", 0)
-		.attr("y", 0)
-		.attr("height", 20)
-		.attr("width", 1.6);
-</script>
 </body>
 <footer>Powered by <a href="http://github.com/" target="_blank">Github</a></footer>
 </html>
