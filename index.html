@@ -2,32 +2,18 @@
 layout: default
 title: Home
 ---
-<div class="grid">
-<figure class="effect-zoe">
-	<img src="img/14.jpg" alt="" height="400" width="640">
-        <figcaption>
-          <h2>Creative <span>Zoe</span></h2>
-          <p>Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
-          <a href="/galleries/zoe.html">View more</a>
-        </figcaption>
-    </figure>
-<figure class="effect-zoe">
-	<img src="img/14.jpg" alt="" height="400" width="640">
-        <figcaption>
-          <h2>Creative <span>Zoe</span></h2>
-          <p>Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
-          <a href="/galleries/zoe.html">View more</a>
-        </figcaption>
-    </figure>
-<figure class="effect-zoe">
-	<img src="img/14.jpg" alt="" height="400" width="640">
-        <figcaption>
-          <h2>Creative <span>Zoe</span></h2>
-          <p>Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
-          <a href="/galleries/zoe.html">View more</a>
-        </figcaption>
-    </figure>
-</div>
+<div class="posts wrapper grid grid module">
+<div class="posts list">
+    <div class="post">
+    <div class="modules-group left-modules">
+      <div class="inner">
+      
+        <div class="post-upvote left-left cell">
+	 <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </div>
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
