@@ -2,26 +2,28 @@
 layout: default
 title: Home
 ---
-<div class="posts wrapper grid grid module">
-<div class="posts list">
-    <div class="post">
-    <div class="modules-group left-modules">
-      <div class="inner">
-      
-        <div class="post-upvote left-left cell">
-	 <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
+<!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                {{#foreach posts}}
+                    <div class="post-preview">
+                        <a href="{{url}}">
+                            <h2 class="post-title">{{title}}</h2>
+                            <h3 class="post-subtitle">{{excerpt character="80"}}</h3>
+                        </a>
+                        <p classs="post-meta">Posted by {{author}} on {{date format="MMMM DD, YYYY"}}</p>
+                    </div>
+                    <hr>
+                {{/foreach}}
+                
+                {{pagination}}
+
+            </div>
+        </div>
     </div>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
