@@ -1,23 +1,20 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-<p class="important">
-  Hey there! Welcome to middlee.com, a website of data visualizations, analysis, inquiry and thoughtless musings.
 
 
-</p>
-## Background
+## Set up instructions
 
-I'm a data analyst interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). This interest is founded through a passion for sports, the processes involved in human behavior, and two years teaching special education.
+Fork this Jekyll-Grid on Github: [https://github.com/femmebot/jekyll-grid](https://github.com/femmebot/jekyll-grid)
 
-## Website Acknowledgements
+Part of the [25x52](http://25x52.com) initiative, this theme is based on [Jekyll Now](https://github.com/barryclark/jekyll-now). Refer to the following original instructions for help with the setup:
 
-The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo) and is hosted for free on [GitHub Pages](https://pages.github.com).
+> Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
 
-## Questions?
+> ![_config.yml]({{ site.baseurl }}/images/config.png)
 
-Have comments or suggestions? Feel free to send me an [email](mailto:mdlee12@gmail.com), contact me on [GitHub](https://github.com/mdlee12/), or ask me on [Twitter](https://twitter.com/mlee_mke).
+> The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
 
-Thanks for reading!
