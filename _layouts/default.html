@@ -20,10 +20,8 @@
 
     <!-- Based on Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
-
-   <body>
-
-    {% include sidebar.html %}
+  <body id="article-page">
+	{% include sidebar.html %}
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
@@ -44,9 +42,6 @@
         }, false);
       })(document);
     </script>
-  </body>
-
-  <body id="article-page">
     <div class="content-wrapper">
 
       {% include masthead.html %}
