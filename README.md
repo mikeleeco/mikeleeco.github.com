@@ -1,6 +1,1 @@
-jekyll-grid
-=========================
-
-Jekyll theme ideal for projects; displays posts in a grid
-
-View the example: http://femmebot.github.io/jekyll-grid.
+website: [http://25x52.com](http://25x52.com)

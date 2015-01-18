@@ -64,7 +64,6 @@ h1 {
 #home .post {
   width: 220px;
   float: left;
-  vertical-align: top;
   margin: 0 20px 0 0;
   height: 360px;
   overflow: hidden;
@@ -84,13 +83,10 @@ h1 {
 }
 
 #home h1.site-name {
-  font-size: 72px;
-  line-height: 74px;
+  font-size: 90px;
   font-weight: 700;
-  max-width: 600px;
+  max-width: 300px;
   margin-top: 30px;
-  margin-bottom: 20px;
-  letter-spacing: -.03em;
   a {
     color: $darkGray;
   }
@@ -133,6 +129,17 @@ p {
   color: $gray;
 }
 
+#article-page .entry p {
+  font-family: $helveticaNeue;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 720px;
+  color: $darkGray;
+  @include mobile {
+
+  }
+}
+
 a {
   color: $red;
   text-decoration: none;
@@ -172,13 +179,6 @@ strong, b {
   color: $darkGray;
 }
 
-blockquote {
-  margin: 1.8em .8em;
-  padding: 0.1em 1em;
-  background-color: $xlightGray;
-  font-family: $helveticaNeue;
-}
-
 img {
   max-width: 100%;
 }
@@ -186,6 +186,7 @@ img {
 .date {
   font-size: 60%;
   color: $gray;
+  margin-bottom: 60px;
 }
 
 // Specify the color of the selection
@@ -214,6 +215,14 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
+//
+// .masthead
+//
+
+//.wrapper-masthead {
+//  margin-bottom: 0;
+//}
+
 .content-wrapper {
   min-height: 600px;
 }
@@ -227,10 +236,10 @@ img {
 
 .site-avatar {
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   margin-right: 15px;
-  margin-bottom: 15px;
+
   @include mobile {
     float: none;
     display: block;
@@ -238,7 +247,7 @@ img {
   }
 
   img {
-    border-radius: 26px;
+    border-radius: 5px;
   }
 }
 
@@ -275,7 +284,8 @@ nav {
   float: right;
   margin-top: 23px;
   font-family: $helveticaNeue; 
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   
   @include mobile {
     float: none;
@@ -285,7 +295,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $gray;
+    color: #000;
     width: 225px;
     display: block;
     float: right;
@@ -301,6 +311,20 @@ nav {
   }
 }
 
+//
+// .main
+//
+
+//.posts > .post {
+//  padding-bottom: 2em;
+//  border-bottom: 1px solid $lightGray;
+//}
+
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
+
 article {
   @include mobile {
     margin: 0 20px;
@@ -308,26 +332,26 @@ article {
 }
 
 .post { 
+  img {
+    margin: 30px 0;
+  }
   blockquote {
     margin: 1.8em .8em;
     border-left: 1px dotted $gray;
     padding: 0.1em 1em;
     color: $gray;
   }
-
   .eyebrow {
     font-size: 12px;
     line-height: 30px;
-    color: $gray;
-    padding-top: 6px;
-    margin-bottom: 6px;
+    color: $darkGray;
+    padding-top: 3px;
+    margin-bottom: 3px;
     border-top: 1px solid $medGray;
   }
-
   .comments {
     margin-top: 10px;
   }
-
   .small-link {
     font-size: 11px;
     color: $medGray;
@@ -338,7 +362,7 @@ article {
   }
   .large-link {
     font-size: 20px;
-    color: $darkGray;
+    color: $red;
     font-weight: 500;
   }
   .primary-link {
@@ -365,6 +389,52 @@ footer {
   text-align: center;
 }
 
+/*********************/
+/* NEWSLETTER SIGNUP */
+/*********************/
+
+#updates form {
+  border-top: 1px solid $gray;
+  padding: 60px 0;
+  margin-top: 60px;
+  input {
+    font-family: $helveticaNeue;
+  }
+  @include mobile {
+    margin: 60px 20px 0 20px;
+
+  }
+}
+
+#updates #tlemail { 
+
+  box-shadow: none;
+  width: 320px;
+  padding: 6px;  
+  border: 1px solid $lightGray;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+#updates h4 {
+  font-weight: 500;
+  color: $darkGray;
+}
+
+.btn-primary { 
+  background-color: $red; 
+  padding: 12px 20px;
+  border: none; 
+  border-radius: 3px;
+  font: 16px $helveticaNeue;
+  color: #fff;
+}
+
+.tinytype { 
+  font: 10px Arial; 
+  color: $medGray;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

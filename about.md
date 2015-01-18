@@ -5,16 +5,19 @@ permalink: /about/
 ---
 
 
+### Shipping Products is Better than Getting Tasks Done
 
-## Set up instructions
 
-Fork this Jekyll-Grid on Github: [https://github.com/femmebot/jekyll-grid](https://github.com/femmebot/jekyll-grid)
+25x52 is an experiment. It&rsquo;s a personal initiative to ship 25 projects in 52 weeks. 
 
-Part of the [25x52](http://25x52.com) initiative, this theme is based on [Jekyll Now](https://github.com/barryclark/jekyll-now). Refer to the following original instructions for help with the setup:
+Why 52 weeks? I wanted to set a timeline that was long enough to compel a behavior change. In order to change from **Doing** to **Shipping**, I needed to establish a long-term habit of launching projects. 
 
-> Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
+Why 25 projects? It roughly corresponds to launching a project every two weeks which, at the time, seemed perfectly reasonable and sustainable over a 1-year period. Two weeks also would provide enough time to tackle projects that had more substance than typical weekend hacks.
 
-> ![_config.yml]({{ site.baseurl }}/images/config.png)
+What&rsquo;s a project? Anything that&rsquo;s useful to someone else. Generally, I&rsquo;m interested in developing projects that help others, encourage learning and foster community among creative and product-minded folks.
 
-> The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
 
+### Get in touch
+
+Twitter: [femmebot]({{ page.twitter }})<br>
+Github: [femmebot]({{ page.github }})
