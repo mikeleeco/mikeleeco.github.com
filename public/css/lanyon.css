@@ -72,6 +72,12 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .container {
   margin: 0 auto;
   max-width: 980px;
