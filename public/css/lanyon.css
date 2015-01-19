@@ -72,19 +72,26 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+html {
   box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 0 10px;
-  width: 100%;
+  max-width: 28rem;
 }
-
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
 
 
 /*
