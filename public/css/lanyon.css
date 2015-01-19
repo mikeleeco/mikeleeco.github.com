@@ -79,53 +79,11 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  font-size: 100%;
-}
-
-body {
-  background: #fff;
-  font: 16px/23px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #777;
-  -webkit-font-smoothing: antialiased;
-}
-
 .container {
   margin: 0 auto;
   max-width: 980px;
   padding: 0 10px;
   width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #555;
-  font-weight: 700;
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
-}
-@media screen and (max-width: 640px) {
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
-  }
-}
-
-h1 {
-  font-size: 60px;
-  margin: 60px 0;
-}
-h1 a {
-  color: #d42;
-}
-h1 a:hover {
-  color: #c30;
-}
-
-.post h1 {
-  font-size: 60px;
-  letter-spacing: -.03em;
-  line-height: 1.1;
 }
 
 
@@ -386,58 +344,6 @@ a.sidebar-nav-item:focus {
 }
 .related-posts li a:hover small {
   color: inherit;
-}
-
-
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
-
-.pagination {
-  overflow: hidden; /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
-  text-align: center;
-}
-
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  display: block;
-  padding: 1rem;
-  border: 1px solid #eee;
-}
-.pagination-item:first-child {
-  margin-bottom: -1px;
-}
-
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  background-color: #f5f5f5;
-}
-
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
 }
 
 
