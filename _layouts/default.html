@@ -43,5 +43,27 @@
         }, false);
       })(document);
     </script>
+
+    <div class="content-wrapper">
+
+      {% include masthead.html %}
+
+      <div id="main" role="main" class="container">
+        {{ content }}
+      </div>
+
+   {% include subscribe.html %}
+
+    </div><!-- /content-wrapper -->
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
   </body>
 </html>
