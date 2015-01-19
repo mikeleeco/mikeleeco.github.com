@@ -79,11 +79,53 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #fff;
+  font: 16px/23px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  -webkit-font-smoothing: antialiased;
+}
+
 .container {
   margin: 0 auto;
   max-width: 980px;
   padding: 0 10px;
   width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 640px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+}
+
+h1 {
+  font-size: 60px;
+  margin: 60px 0;
+}
+h1 a {
+  color: #d42;
+}
+h1 a:hover {
+  color: #c30;
+}
+
+.post h1 {
+  font-size: 60px;
+  letter-spacing: -.03em;
+  line-height: 1.1;
 }
 
 
