@@ -24,20 +24,7 @@
         {{ content }}
       </div>
 
-   {% include subscribe.html %}
-
-    </div><!-- /content-wrapper -->
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+ <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>
       (function(document) {
@@ -56,6 +43,21 @@
         }, false);
       })(document);
     </script>
+
+   {% include subscribe.html %}
+
+    </div><!-- /content-wrapper -->
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+   
   </body>
 </html>
 
