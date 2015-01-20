@@ -34,49 +34,23 @@
  * Update the foundational and global aspects of the page.
  */
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+/* Prevent scroll on narrow devices */
 html,
 body {
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width: 38em) {
-  html {
-    font-size: 20px;
-  }
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
-body {
-  color: #515151;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #313131;
+  letter-spacing: -.025rem;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
-a {
-  color: #268bd2;
-  text-decoration: none;
-}
-a strong {
-  color: inherit;
-}
-/* `:focus` is linked to `:hover` for basic accessibility */
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
 
 /*
  * Wrapper
@@ -324,45 +298,19 @@ a.sidebar-nav-item:focus {
  */
 
 .page,
-.post blockquote {
-  margin: 1.8em .8em;
-  border-left: 1px dotted #777;
-  padding: 0.1em 1em;
-  color: #777;
+.post {
+  margin-bottom: 4em;
 }
-.post .eyebrow {
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  padding-top: 6px;
-  margin-bottom: 6px;
-  border-top: 1px solid #999;
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
 }
-.post .comments {
-  margin-top: 10px;
-}
-.post .small-link {
-  font-size: 11px;
-  color: #999;
-  display: block;
-}
-.post .small-link:hover {
-  color: #d42;
-}
-.post .large-link {
-  font-size: 20px;
-  color: #555;
-  font-weight: 500;
-}
-.post .primary-link {
-  color: #000;
-  font-size: 13px;
-  font-weight: 500;
-}
-.post .spacer {
-  padding-right: 8px;
-  margin-right: 8px;
-  border-right: 1px solid #ccc;
+.page-title,
+.post-title {
+  margin-top: 0;
 }
 
 /* Meta data line below post title */
@@ -603,3 +551,4 @@ a.pagination-item:hover {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
