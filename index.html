@@ -2,7 +2,7 @@
 layout: default
 title: home
 ---
-<div id="grid" role="grid" class="grid">
+<div id="main" role="main" class="container">
   <div class="posts clearfix">
   {% for post in site.posts %}
     <article class="post">    
@@ -12,7 +12,7 @@ title: home
       </a>
     </h1>
 
-      <div class="grid">
+      <div class="entry">
       	<p>{{ post.desc }}</p>
 <!--         {{ post.content | truncatewords:40}}
  -->  </div>
