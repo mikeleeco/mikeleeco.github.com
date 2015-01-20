@@ -298,19 +298,45 @@ a.sidebar-nav-item:focus {
  */
 
 .page,
-.post {
-  margin-bottom: 4em;
+.post blockquote {
+  margin: 1.8em .8em;
+  border-left: 1px dotted #777;
+  padding: 0.1em 1em;
+  color: #777;
 }
-
-/* Blog post or page title */
-.page-title,
-.post-title,
-.post-title a {
-  color: #303030;
+.post .eyebrow {
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  padding-top: 6px;
+  margin-bottom: 6px;
+  border-top: 1px solid #999;
 }
-.page-title,
-.post-title {
-  margin-top: 0;
+.post .comments {
+  margin-top: 10px;
+}
+.post .small-link {
+  font-size: 11px;
+  color: #999;
+  display: block;
+}
+.post .small-link:hover {
+  color: #d42;
+}
+.post .large-link {
+  font-size: 20px;
+  color: #555;
+  font-weight: 500;
+}
+.post .primary-link {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+}
+.post .spacer {
+  padding-right: 8px;
+  margin-right: 8px;
+  border-right: 1px solid #ccc;
 }
 
 /* Meta data line below post title */
