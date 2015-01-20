@@ -71,19 +71,83 @@ h1, h2, h3, h4, h5, h6 {
  *
  * Center the page content.
  */
+//
+// .main
+//
+
+//.posts > .post {
+//  padding-bottom: 2em;
+//  border-bottom: 1px solid $lightGray;
+//}
+
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
+
+article {
+  @include mobile {
+    margin: 0 20px;
+  }
+}
+
+.post { 
+  img {
+    margin: 30px 0;
+  }
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 1px dotted $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+  }
+  .eyebrow {
+    font-size: 12px;
+    line-height: 30px;
+    color: $darkGray;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    border-top: 1px solid $medGray;
+  }
+  .comments {
+    margin-top: 10px;
+  }
+  .small-link {
+    font-size: 11px;
+    color: $medGray;
+    display: block;
+      &:hover {
+        color: $red;
+      }
+  }
+  .large-link {
+    font-size: 20px;
+    color: $red;
+    font-weight: 500;
+  }
+  .primary-link {
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .spacer {
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid $lightGray;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 .container {
-  max-width: 28rem;
-}
-@media (min-width: 38em) {
-  .container {
-    max-width: 32rem;
-  }
-}
-@media (min-width: 56em) {
-  .container {
-    max-width: 38rem;
-  }
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 10px;
+  width: 100%;
 }
 
 
@@ -298,45 +362,19 @@ a.sidebar-nav-item:focus {
  */
 
 .page,
-.post blockquote {
-  margin: 1.8em .8em;
-  border-left: 1px dotted #777;
-  padding: 0.1em 1em;
-  color: #777;
+.post {
+  margin-bottom: 4em;
 }
-.post .eyebrow {
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  padding-top: 6px;
-  margin-bottom: 6px;
-  border-top: 1px solid #999;
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
 }
-.post .comments {
-  margin-top: 10px;
-}
-.post .small-link {
-  font-size: 11px;
-  color: #999;
-  display: block;
-}
-.post .small-link:hover {
-  color: #d42;
-}
-.post .large-link {
-  font-size: 20px;
-  color: #555;
-  font-weight: 500;
-}
-.post .primary-link {
-  color: #000;
-  font-size: 13px;
-  font-weight: 500;
-}
-.post .spacer {
-  padding-right: 8px;
-  margin-right: 8px;
-  border-right: 1px solid #ccc;
+.page-title,
+.post-title {
+  margin-top: 0;
 }
 
 /* Meta data line below post title */
@@ -370,58 +408,6 @@ a.sidebar-nav-item:focus {
 }
 .related-posts li a:hover small {
   color: inherit;
-}
-
-
-/*
- * Pagination
- *
- * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
- * there are no more previous or next posts to show.
- */
-
-.pagination {
-  overflow: hidden; /* clearfix */
-  margin-left: -1rem;
-  margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
-  text-align: center;
-}
-
-/* Pagination items can be `span`s or `a`s */
-.pagination-item {
-  display: block;
-  padding: 1rem;
-  border: 1px solid #eee;
-}
-.pagination-item:first-child {
-  margin-bottom: -1px;
-}
-
-/* Only provide a hover state for linked pagination items */
-a.pagination-item:hover {
-  background-color: #f5f5f5;
-}
-
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
 }
 
 
