@@ -67,6 +67,103 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
+ * Container
+ *
+ * Center the page content.
+ */
+//
+// .main
+//
+
+//.posts > .post {
+//  padding-bottom: 2em;
+//  border-bottom: 1px solid $lightGray;
+//}
+
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
+
+article {
+  @include mobile {
+    margin: 0 20px;
+  }
+}
+
+.post { 
+  img {
+    margin: 30px 0;
+  }
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 1px dotted $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+  }
+  .eyebrow {
+    font-size: 12px;
+    line-height: 30px;
+    color: $darkGray;
+    padding-top: 3px;
+    margin-bottom: 3px;
+    border-top: 1px solid $medGray;
+  }
+  .comments {
+    margin-top: 10px;
+  }
+  .small-link {
+    font-size: 11px;
+    color: $medGray;
+    display: block;
+      &:hover {
+        color: $red;
+      }
+  }
+  .large-link {
+    font-size: 20px;
+    color: $red;
+    font-weight: 500;
+  }
+  .primary-link {
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .spacer {
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid $lightGray;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
  * Masthead
  *
  * Super small header above the content for site name and short description.
