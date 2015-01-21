@@ -150,67 +150,6 @@ h1 a:hover {
   }
 }
 
-#home .post-teaser{
-	position:relative;
-	z-index:1;
-	display:block;
-	overflow:hidden;
-	-webkit-perspective:1000px;
-	perspective:1000px;
-	-webkit-backface-visibility:hidden;
-	backface-visibility:hidden
-}
-
-#home .post-teaser img{
-	position:relative;
-	display:block;
-	z-index:1;
-	-webkit-transition:all 0.3s;
-	transition:all 0.3s
-}
-
-#home .post-teaser img.load{
-	display:none
-}
-
-#home .post-teaser:before,#home .post-teaser:after{
-	position:absolute;
-	content:'';
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	width:100%;
-	height:100.5%
-}
-
-#home .post-teaser:before{
-	z-index:2;
-	-webkit-transition:all 0.3s;
-	transition:all 0.3s
-}
-
-#home .post-teaser:after{
-	border:10px solid #fff;
-	opacity:0;
-	z-index:3;
-	-webkit-transition:all 0.3s;
-	transition:all 0.3s
-}
-
-#home .post-teaser:hover:before{
-	background:rgba(51,51,51,0.5)
-}
-
-#home .post-teaser:hover:after{
-	opacity:0.4
-}
-
-#home .post-teaser:hover img{
-	-webkit-transform:scale(1.25);
-	-ms-transform:scale(1.25);
-	transform:scale(1.25)
-}
 h2 {
   font-size: 24px;
   margin: 48px 0 12px;
