@@ -12,8 +12,11 @@ layout: default
 
 
       <div class="container content">
-        {{ content }}
-      </div>
+	<div class="post">
+	  <h1 class="post-title">{{ page.title }}</h1>
+ 	 <span class="post-date">{{ page.date | date_to_string }}</span>
+ 	 {{ content }}
+	</div>
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
@@ -37,11 +40,6 @@ layout: default
     </script>
   </body>
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
 
 <div class="related">
   <h2>Related Posts</h2>
