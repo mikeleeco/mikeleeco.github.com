@@ -339,7 +339,7 @@ a.sidebar-nav-item:focus {
   visibility: visible;
 }
 #sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .content-wrapper,
+#sidebar-checkbox:checked ~ .main,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
