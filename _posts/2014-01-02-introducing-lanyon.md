@@ -4,8 +4,8 @@ title: Introducing Lanyooooo
 description: "Learn how I draw outer space scenes filled with stars, galaxies, planets, black holes and more with Paper by FiftyThree and Pencil."
 tags: [paper by 53, tutorial, outer space, blend, pencil, stylus, ipad]
 date: 2014-01-02
-page.image.feature: paper-53-space-feature.jpg
-page.image.teaser: paper-53-space-teaser.jpg
+image.feature: paper-53-space-feature.jpg
+image.teaser: paper-53-space-teaser.jpg
 
 ---
 
