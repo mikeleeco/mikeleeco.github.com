@@ -91,7 +91,8 @@ article {
   }
 }
 
-.post img {
+.post { 
+  img {
     margin: 30px 0;
   }
   blockquote {
@@ -377,10 +378,6 @@ a.sidebar-nav-item:focus {
   margin-bottom: 4em;
 }
 
-.post img {
-margin: 30px 0;
-}
-
 /* Blog post or page title */
 .page-title,
 .page-image,
@@ -514,7 +511,7 @@ margin: 30px 0;
 
 }
 
-.post-teaser{
+#home .post-teaser{
 	position:relative;
 	z-index:1;
 	display:block;
@@ -525,7 +522,7 @@ margin: 30px 0;
 	backface-visibility:hidden
 }
 
-.post-teaser img{
+#home .post-teaser img{
 	position:relative;
 	display:block;
 	z-index:1;
@@ -533,11 +530,11 @@ margin: 30px 0;
 	transition:all 0.3s
 }
 
-.post-teaser img.load{
+#home .post-teaser img.load{
 	display:none
 }
 
-.post-teaser:before,.post-teaser:after{
+#home .post-teaser:before,#home .post-teaser:after{
 	position:absolute;
 	content:'';
 	top:0;
@@ -548,13 +545,13 @@ margin: 30px 0;
 	height:100.5%
 }
 
-.post-teaser:before{
+#home .post-teaser:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-.post-teaser:after{
+#home .post-teaser:after{
 	border:10px solid #fff;
 	opacity:0;
 	z-index:3;
@@ -562,15 +559,15 @@ margin: 30px 0;
 	transition:all 0.3s
 }
 
-.post-teaser:hover:before{
+#home .post-teaser:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-.post-teaser:hover:after{
+#home .post-teaser:hover:after{
 	opacity:0.4
 }
 
-.post-teaser:hover img{
+#home .post-teaser:hover img{
 	-webkit-transform:scale(1.25);
 	-ms-transform:scale(1.25);
 	transform:scale(1.25)
