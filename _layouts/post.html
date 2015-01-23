@@ -21,6 +21,12 @@ layout: default
 		{% if page.image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      {% endif %}
+	      <div class="page-title">
+		{% include breadcrumbs.html %}
+		<h1><span>{{ page.title }}</span></h1>
+		{% if page.subtitle %}<h2><span>{{ page.subtitle }}</span></h2>{% endif %}
+	      </div><!-- /.page-title -->
+	    </div><!-- /.page-header -->
 	  <h1 class="post-title">{{ page.title }}</h1>
 	  <span class="post-date">{{ page.date | date_to_string }}</span>
 	  {{ content }}
