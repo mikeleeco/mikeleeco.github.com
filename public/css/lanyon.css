@@ -381,7 +381,6 @@ a.sidebar-nav-item:focus {
 /* Blog post or page title */
 .page-title,
 .page-image,
-.page-image.feature,
 .page-image.teaser,
 .post-title,
 .post-title a {
@@ -389,7 +388,6 @@ a.sidebar-nav-item:focus {
 }
 .page-title,
 .page-image,
-.page-image.feature,
 .page-image.teaser,
 .post-title {
   margin-top: 0;
