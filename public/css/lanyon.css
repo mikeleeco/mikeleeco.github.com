@@ -511,7 +511,7 @@ a.sidebar-nav-item:focus {
 
 }
 
-#post .post-teaser{
+#article .post-teaser{
 	position:relative;
 	z-index:1;
 	display:block;
@@ -522,7 +522,7 @@ a.sidebar-nav-item:focus {
 	backface-visibility:hidden
 }
 
-#post .post-teaser img{
+#article .post-teaser img{
 	position:relative;
 	display:block;
 	z-index:1;
@@ -530,11 +530,11 @@ a.sidebar-nav-item:focus {
 	transition:all 0.3s
 }
 
-#post .post-teaser img.load{
+#article .post-teaser img.load{
 	display:none
 }
 
-#post .post-teaser:before,#post .post-teaser:after{
+#article .post-teaser:before,#article .post-teaser:after{
 	position:absolute;
 	content:'';
 	top:0;
@@ -545,13 +545,13 @@ a.sidebar-nav-item:focus {
 	height:100.5%
 }
 
-#post .post-teaser:before{
+#article .post-teaser:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-#post .post-teaser:after{
+#article .post-teaser:after{
 	border:10px solid #fff;
 	opacity:0;
 	z-index:3;
@@ -559,15 +559,15 @@ a.sidebar-nav-item:focus {
 	transition:all 0.3s
 }
 
-#post .post-teaser:hover:before{
+#article .post-teaser:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-#post .post-teaser:hover:after{
+#article .post-teaser:hover:after{
 	opacity:0.4
 }
 
-#post .post-teaser:hover img{
+#article .post-teaser:hover img{
 	-webkit-transform:scale(1.25);
 	-ms-transform:scale(1.25);
 	transform:scale(1.25)
