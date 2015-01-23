@@ -16,7 +16,7 @@ layout: default
 	    <div class="{% if page-image.feature %}page-feature-header{% else %}page-header{% endif %}">
 	      {% if page-image.feature %}
 	      <div class="page-image">
-		<img src="/img/{{ page-image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+		<img src="/img/{{ page-image.feature }}" alt="{{ page.title }}" style="max-width:100%;">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      {% endif %}
