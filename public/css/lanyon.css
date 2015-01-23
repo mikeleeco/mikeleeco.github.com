@@ -405,6 +405,32 @@ a.sidebar-nav-item:focus {
 }
 
 /* Related posts */
+.image {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.image-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.image-posts h3 {
+  margin-top: 0;
+}
+.image-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.image-posts li a:hover {
+  color: #268bd2;
+  text-decoration: none;
+}
+.image-posts li a:hover small {
+  color: inherit;
+}
+
+
+/* Related posts */
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;

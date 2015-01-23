@@ -10,12 +10,8 @@ layout: default
    	 {% include sidebar.html %}
 	</body>
 
-
-      <div class="container content">
-	<div id="main" role="main"> 
-	    <div class="{% if page-image.feature %}page-feature-header{% else %}page-header{% endif %}">
-	      {% if page-image.feature %}
-	      <div class="page-image">
+	<div class="image"> 
+	  <ul class="image-posts">
 		<img src="/img/{{ page-image.feature }}" alt="{{ page.title }}" style="max-width:100%;">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
@@ -25,11 +21,9 @@ layout: default
 		<h1><span>{{ page.title }}</span></h1>
 		{% if page.subtitle %}<h2><span>{{ page.subtitle }}</span></h2>{% endif %}
 	      </div><!-- /.page-title -->
-	    </div><!-- /.page-header -->
 	  {{ content }}
-	</div>
+	  </ul>
       </div>
-    </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
