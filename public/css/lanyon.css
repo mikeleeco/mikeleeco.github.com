@@ -380,13 +380,15 @@ a.sidebar-nav-item:focus {
 
 /* Blog post or page title */
 .page-title,
+.page-image,
 .page-image.feature,
 .page-image.teaser,
-.posttitle,
+.post-title,
 .post-title a {
   color: #303030;
 }
 .page-title,
+.page-image,
 .page-image.feature,
 .page-image.teaser,
 .post-title {
