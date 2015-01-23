@@ -91,8 +91,7 @@ article {
   }
 }
 
-.post { 
-  img {
+.post img {
     margin: 30px 0;
   }
   blockquote {
@@ -376,6 +375,10 @@ a.sidebar-nav-item:focus {
 .page,
 .post {
   margin-bottom: 4em;
+}
+
+.post img {
+margin: 30px 0;
 }
 
 /* Blog post or page title */
