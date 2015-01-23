@@ -511,7 +511,7 @@ a.sidebar-nav-item:focus {
 
 }
 
-#main .post-teaser{
+#container .post-teaser{
 	position:relative;
 	z-index:1;
 	display:block;
@@ -522,7 +522,7 @@ a.sidebar-nav-item:focus {
 	backface-visibility:hidden
 }
 
-#main .post-teaser img{
+#container .post-teaser img{
 	position:relative;
 	display:block;
 	z-index:1;
@@ -530,11 +530,11 @@ a.sidebar-nav-item:focus {
 	transition:all 0.3s
 }
 
-#main .post-teaser img.load{
+#container .post-teaser img.load{
 	display:none
 }
 
-#main .post-teaser:before,#main .post-teaser:after{
+#container .post-teaser:before,#container .post-teaser:after{
 	position:absolute;
 	content:'';
 	top:0;
@@ -545,13 +545,13 @@ a.sidebar-nav-item:focus {
 	height:100.5%
 }
 
-#main .post-teaser:before{
+#container .post-teaser:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-#main .post-teaser:after{
+#container .post-teaser:after{
 	border:10px solid #fff;
 	opacity:0;
 	z-index:3;
@@ -559,15 +559,15 @@ a.sidebar-nav-item:focus {
 	transition:all 0.3s
 }
 
-#main .post-teaser:hover:before{
+#container .post-teaser:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-#main .post-teaser:hover:after{
+#container .post-teaser:hover:after{
 	opacity:0.4
 }
 
-#main .post-teaser:hover img{
+#container .post-teaser:hover img{
 	-webkit-transform:scale(1.25);
 	-ms-transform:scale(1.25);
 	transform:scale(1.25)
