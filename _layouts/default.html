@@ -5,18 +5,10 @@
 
 
   <body id="home">
-	<div id="main" role="main"> 
-	  <article class="wrap" itemscope itemtype="http://schema.org/Article">
-	    <div class="{% if page.image.feature %}page-feature-header{% else %}page-header{% endif %}">
-	      {% if page.image.feature %}
-	      <div class="page-image">
-		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
-		{% if page.image.credit %}{% include image-credit.html %}{% endif %}
-	      </div><!-- /.page-image -->
-	      {% endif %}
 	<body>
    	 {% include sidebar.html %}
 	</body>
+
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
       <div class="masthead">
