@@ -13,19 +13,19 @@ layout: default
 
       <div class="container content">
 	<div id="main" role="main"> 
-	    <div class="{% if page.image.feature %}page-feature-header{% else %}page-header{% endif %}">
-	      {% if page.image.feature %}
-	      <div class="page-image">
-		<img src="/img/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
-		{% if page.image.credit %}{% include image-credit.html %}{% endif %}
+	    <div class="{% if post.image.feature %}post-feature-header{% else %}post-header{% endif %}">
+	      {% if post.image.feature %}
+	      <div class="post-image">
+		<img src="/img/{{ post.image.feature }}" class="post-feature-image" alt="{{ post.title }}" itemprop="image">
+		{% if post.image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      {% endif %}
-	      <div class="page-title">
+	      <div class="post-title">
 		{% include breadcrumbs.html %}
-		<h1><span>{{ page.title }}</span></h1>
-		{% if page.subtitle %}<h2><span>{{ page.subtitle }}</span></h2>{% endif %}
-	      </div><!-- /.page-title -->
-	    </div><!-- /.page-header -->
+		<h1><span>{{ post.title }}</span></h1>
+		{% if post.subtitle %}<h2><span>{{ post.subtitle }}</span></h2>{% endif %}
+	      </div><!-- /.post-title -->
+	    </div><!-- /.post-header -->
 	  {{ content }}
 	</div>
       </div>
