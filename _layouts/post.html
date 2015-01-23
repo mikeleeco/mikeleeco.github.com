@@ -10,16 +10,15 @@ layout: default
    	 {% include sidebar.html %}
 	</body>
 
-	<div class="image"> 
-	  <ul class="image-posts">
-		<img src="/img/{{ page-image.feature }}" alt="{{ page.title }}" style="max-width:100%;">
-		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
-	      </div><!-- /.page-image -->
-	      <div class="page-title">
+	<div class="post-image"> 
+		<img src="/img/{{ post-image.feature }}" alt="{{ post.title }}" style="max-width:100%;">
+		{% if post-image.credit %}{% include image-credit.html %}{% endif %}
+	      </div><!-- /.post-image -->
+	      <div class="post-title">
 		{% include breadcrumbs.html %}
-		<h1><span>{{ page.title }}</span></h1>
-		{% if page.subtitle %}<h2><span>{{ page.subtitle }}</span></h2>{% endif %}
-	      </div><!-- /.page-title -->
+		<h1><span>{{ post.title }}</span></h1>
+		{% if post.subtitle %}<h2><span>{{ post.subtitle }}</span></h2>{% endif %}
+	      </div><!-- /.post-title -->
 	  {{ content }}
 	  </ul>
       </div>
