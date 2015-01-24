@@ -102,70 +102,70 @@ h1 a:hover {
   color: #c30;
 }
 
-.tile{
+.home{
 	max-width:80em;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:3.236em
 }
-.tile:after{
+.home:after{
 	content:"";
 	display:table;
 	clear:both
 }
 
 @media screen and (min-width: 15em) and (max-width: 30em){
-	.tile{
+	.home{
 		width:100%
 	}
 
 }
 
 @media screen and (min-width: 30em) and (max-width: 48em){
-	.tile{
+	.home{
 		float:left;
 		display:block;
 		margin-right:2.35765%;
 		width:48.82117%
 	}
 
-	.tile:last-child{
+	.home:last-child{
 		margin-right:0
 	}
 
-	.tile:nth-child(2n){
+	.home:nth-child(2n){
 		margin-right:0
 	}
 
-	.tile:nth-child(2n+1){
+	.home:nth-child(2n+1){
 		clear:left
 	}
 
 }
 
 @media screen and (min-width: 48.0625em){
-	.tile{
+	.home{
 		float:left;
 		display:block;
 		margin-right:2.35765%;
 		width:23.23176%
 	}
 
-	.tile:last-child{
+	.home:last-child{
 		margin-right:0
 	}
 
-	.tile:nth-child(4n){
+	.home:nth-child(4n){
 		margin-right:0
 	}
 
-	.tile:nth-child(4n+1){
+	.home:nth-child(4n+1){
 		clear:left
 	}
 
 }
 
-.tile .entry-date{
+.home .entry-date{
 	margin-top:0;
 	font-family:Lato, Calibri, Arial, sans-serif;
 	font-size:12px;
@@ -176,19 +176,19 @@ h1 a:hover {
 	color:rgba(127,127,127,0.88)
 }
 
-.tile .page-title{
+.home .post-title{
 	font-size:18px;
 	font-size:1.125rem;
 	line-height:1.33333;
 	margin-bottom:0
 }
 
-.tile .page-title a{
+.home .post-title a{
 	text-decoration:none;
 	color:rgba(0,0,0,0.8)
 }
 
-.tile .page-excerpt{
+.home .post-excerpt{
 	font-size:14px;
 	font-size:0.875rem;
 	line-height:1.5;
@@ -196,7 +196,7 @@ h1 a:hover {
 	margin-top:6px
 }
 
-.tile .page-teaser{
+.home .post-teaser{
 	position:relative;
 	z-index:1;
 	display:block;
@@ -207,7 +207,7 @@ h1 a:hover {
 	backface-visibility:hidden
 }
 
-.tile .page-teaser img{
+.home .post-teaser img{
 	position:relative;
 	display:block;
 	z-index:1;
@@ -215,11 +215,11 @@ h1 a:hover {
 	transition:all 0.3s
 }
 
-.tile .page-teaser img.load{
+.home .post-teaser img.load{
 	display:none
 }
 
-.tile .page-teaser:before,.tile .page-teaser:after{
+.home .post-teaser:before,.home .post-teaser:after{
 	position:absolute;
 	content:'';
 	top:0;
@@ -230,13 +230,13 @@ h1 a:hover {
 	height:100.5%
 }
 
-.tile .page-teaser:before{
+.home .post-teaser:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-.tile .page-teaser:after{
+.home .post-teaser:after{
 	border:10px solid #fff;
 	opacity:0;
 	z-index:3;
@@ -244,26 +244,26 @@ h1 a:hover {
 	transition:all 0.3s
 }
 
-.tile .page-teaser:hover:before{
+.home .post-teaser:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-.tile .page-teaser:hover:after{
+.home .post-teaser:hover:after{
 	opacity:0.4
 }
 
-.tile .page-teaser:hover img{
+.home .post-teaser:hover img{
 	-webkit-transform:scale(1.25);
 	-ms-transform:scale(1.25);
 	transform:scale(1.25)
 }
 
-.tiles-right{
+.homes-right{
 	clear:both
 }
 
 @media screen and (min-width: 56.25em){
-	.tiles-right{
+	.homes-right{
 		clear:none;
 		float:left;
 		display:block;
@@ -271,13 +271,13 @@ h1 a:hover {
 		width:65.88078%
 	}
 
-	.tiles-right:last-child{
+	.homes-right:last-child{
 		margin-right:0
 	}
 
 }
 
-.related-pages .entry-date{
+.related-posts .entry-date{
 	display:none
 }
 }
@@ -419,7 +419,7 @@ p {
   margin: 15px 0;
 }
 
-#tile p.site-description {
+#home p.site-description {
   font-size: 30px;
   font-weight: 300;
   line-height: 40px;
@@ -427,12 +427,12 @@ p {
   margin-bottom: 120px;
 }
 @media screen and (max-width: 640px) {
-  #tile p.site-description {
+  #home p.site-description {
     margin: 30px 20px 60px 20px;
   }
 }
 
-#tile .entry p {
+#home .entry p {
   color: #777;
 }
 
@@ -614,13 +614,13 @@ nav a {
   }
 }
 
-.page blockquote {
+.post blockquote {
   margin: 1.8em .8em;
   border-left: 1px dotted #777;
   padding: 0.1em 1em;
   color: #777;
 }
-.page .image {
+.post .image {
   margin-top: 10px;
 }
 
