@@ -53,20 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*
- * Wrapper
- *
- * The wrapper is used to position site content when the sidebar is toggled. We
- * use an outter wrap to position the sidebar without interferring with the
- * regular page content.
- */
-
-.content-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-
-/*
  * Container
  *
  * Center the page content.
