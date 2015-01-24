@@ -155,21 +155,6 @@ h1 a:hover {
 	margin-bottom:1.618em
 }
 
-.page-feature-header img{
-	width:100%
-}
-
-@media screen and (min-width: 37.5em){
-	.page-feature-header.overlay .page-title{
-		position:absolute;
-		bottom:0;
-		z-index:1;
-		float:left;
-		display:block;
-		margin-right:2.35765%;
-		width:82.94039%;
-		padding-bottom:3.236em
-	}
 
 #home .post-teaser{
 	position:relative;
