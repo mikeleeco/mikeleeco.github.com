@@ -107,14 +107,7 @@ h1 a:hover {
   letter-spacing: -.03em;
   line-height: 1.1;
 }
-#home .page-teaser {
-  width: 220px;
-  float: left;
-  vertical-align: top;
-  margin: 0 20px 0 0;
-  height: 360px;
-  overflow: hidden;
-}
+
 #home .post {
   width: 220px;
   float: left;
@@ -555,8 +548,39 @@ nav a {
   padding: 0.1em 1em;
   color: #777;
 }
-.post .image {
+.post .eyebrow {
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  padding-top: 6px;
+  margin-bottom: 6px;
+  border-top: 1px solid #999;
+}
+.post .comments {
   margin-top: 10px;
+}
+.post .small-link {
+  font-size: 11px;
+  color: #999;
+  display: block;
+}
+.post .small-link:hover {
+  color: #d42;
+}
+.post .large-link {
+  font-size: 20px;
+  color: #555;
+  font-weight: 500;
+}
+.post .primary-link {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+}
+.post .spacer {
+  padding-right: 8px;
+  margin-right: 8px;
+  border-right: 1px solid #ccc;
 }
 
 .wrapper-footer {
