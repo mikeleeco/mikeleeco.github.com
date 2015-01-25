@@ -12,7 +12,7 @@ layout: default
 
 	<div class="page-image"> 
 		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
-		<img src="/images/{{ page.image.teaser }}" class="page-teaser-image" alt="{{ page.title }}" itemprop="image">
+		<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      <div class="page-title">
