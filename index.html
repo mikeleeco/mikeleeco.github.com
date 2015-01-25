@@ -6,16 +6,16 @@ title: home
   <div class="posts clearfix">
   {% for post in site.posts %}
     <article class="post">   
-    <a class="post-teaser"> 
-    <h1 class="post-title">
+    <h1 class="post-teaser"> 
+      <a href="{{ post.url }}">
+        {{ post.image.teaser }}
+      </a>
+    <h2 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h1></a>
-	<div class="page-image"> 
-		<img src="{{ site.url }}/images/{{ page.image.teaser }}" class="page-teaser-image" alt="{{ page.title }}" itemprop="image">
-		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
-	      </div><!-- /.page-image -->
+
       <div class="entry">
       	<p>{{ post.desc }}</p>
 <!--         {{ post.content | truncatewords:40}}
