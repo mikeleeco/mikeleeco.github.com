@@ -408,23 +408,7 @@ img {
   font-size: 28px;
 }
 
-.site-description {
-  margin: -5px 0 0 0;
-  font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-@media screen and (max-width: 640px) {
-  .site-description {
-    margin: 3px 0;
-  }
-}
 
-nav {
-  float: right;
-  margin-top: 23px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-}
 @media screen and (max-width: 640px) {
   nav {
     float: none;
@@ -432,29 +416,8 @@ nav {
     display: block;
   }
 }
-nav a {
-  margin-left: 20px;
-  color: #777;
-  width: 225px;
-  display: block;
-  float: right;
-}
-@media screen and (max-width: 640px) {
-  nav a {
-    display: inline-block;
-    float: none;
-    margin: 0 10px;
-    color: #555;
-    width: 150px;
-    text-align: left;
-  }
-}
 
-@media screen and (max-width: 640px) {
-  article {
-    margin: 0 20px;
-  }
-}
+
 
 .post blockquote {
   margin: 1.8em .8em;
@@ -1262,5 +1225,6 @@ a.sidebar-nav-item:focus {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
 
 
