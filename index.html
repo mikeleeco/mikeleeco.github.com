@@ -12,10 +12,10 @@ title: home
         {{ post.title }}
       </a>
     </h1></a>
-	<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="post-teaser-image">
-	    <img src="{{ site.url }}/images/preload-400.png" data-original="{{ site.url }}/images/{% if post.image.teaser %}{{ post.image.teaser }}{% else %}{{ site.teaser }}{% endif %}" class="load" alt="teaser" itemprop="image">
-	    <noscript><img src="{{ site.url }}/images/{% if post.image.teaser %}{{ post.image.teaser }}{% else %}{{ site.teaser }}{% endif %}" alt="teaser" itemprop="image"></noscript>
-		</a>
+	<div class="page-image"> 
+		<img src="/images/{{ page.image.teaser }}" class="page-teaser-image" alt="{{ page.title }}" itemprop="image">
+		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
+	      </div><!-- /.page-image -->
       <div class="entry">
       	<p>{{ post.desc }}</p>
 <!--         {{ post.content | truncatewords:40}}
