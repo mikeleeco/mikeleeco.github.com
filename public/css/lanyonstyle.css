@@ -926,9 +926,9 @@ code {
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-@media () {
+@media (min-width: 30em) {
   .sidebar {
-    font-size: 1.25em; /* 16px */
+    font-size: .75rem; /* 14px */
   }
 }
 
@@ -963,7 +963,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .sidebar-item {
-    padding: 1.0rem;
+    padding: 1.5rem;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
@@ -1239,5 +1239,4 @@ a.sidebar-nav-item:focus {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
-
 
