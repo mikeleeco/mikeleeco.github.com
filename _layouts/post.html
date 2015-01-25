@@ -4,12 +4,11 @@ layout: default
 
   {% include head.html %}
 
-  <body>
-    <div class="content-wrapper">
-       <body>
+
+  <body id="home">
+	<body>
    	 {% include sidebar.html %}
 	</body>
-
 	<div class="page-image"> 
 		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
