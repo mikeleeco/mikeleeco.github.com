@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: About
 image:
   feature: paper-53-space-feature.jpg
