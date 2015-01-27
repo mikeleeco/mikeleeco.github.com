@@ -72,8 +72,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 980px;
-  padding: 0 10px;
+  max-width: 1400px;
+  padding: 0 5px;
   width: 100%;
 }
 
@@ -107,7 +107,7 @@ h1 a:hover {
   letter-spacing: -.03em;
   line-height: 1.1;
 }
-
+	
 #home .post-image h1 {
   width: 220px;
   float: left;
@@ -139,8 +139,8 @@ h1 a:hover {
 }
 
 #home .post h1 {
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 40px;
+  line-height: 1.5;
   min-height: 60px;
   margin: 0 0 12px;
   letter-spacing: normal;
