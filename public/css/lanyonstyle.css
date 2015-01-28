@@ -124,11 +124,11 @@ h1 a:hover {
 }
 
 #home .post {
-  width: 220px;
+  width: 320px;
   float: left;
   vertical-align: top;
   margin: 0 20px 0 0;
-  height: 360px;
+  height: 540px;
   overflow: hidden;
 }
 @media screen and (max-width: 640px) {
