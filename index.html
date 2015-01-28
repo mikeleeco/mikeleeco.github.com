@@ -4,7 +4,7 @@ title: home
 ---
 <div id="main" role="main" class="container">
   <div class="posts clearfix">
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts limit:4 %}
     <article class="post">   
     <div class="post-teaser"> 
       <a href="{{ post.url }}">
@@ -22,8 +22,8 @@ title: home
  -->  </div>
 
       
-      <a href="{{ post.proj-url }}" class="small-link primary-link" target="_blank">View Project Site <i class="fa fa-external-link"></i></a>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="small-link">Read details</a>
+      <a href="{{ post.proj-url }}" class="small-link primary-link" target="_blank">{% post.description %} <i class="fa fa-external-link"></i></a>
+      <a href="{{ post.proj-url }}" class="small-link">Read on...</a>
     </article>
   {% endfor %}
 </div>
