@@ -5,7 +5,7 @@ description: "Learn how I draw outer space scenes filled with stars, galaxies, p
 tags: [paper by 53, tutorial, outer space, blend, pencil, stylus, ipad]
 date: 2014-01-02
 image:
-  feature: hakeem2.jpg
+  feature: hakeem (copy).jpg
   teaser: hakeem.jpg
 ---
 
