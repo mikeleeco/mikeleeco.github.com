@@ -31,10 +31,7 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% if site.footer-links.email %}<a href="mailto:{{ site.footer-links.email }}">{% include svg-icons/email.html %}</a>{% endif %}
-          {% if site.footer-links.github %}<a href="http://github.com/{{ site.footer-links.github }}">{% include svg-icons/github.html %}</a>{% endif %}
-          {% if site.footer-links.linkedin %}<a href="http://linkedin.com/in/{{ site.footer-links.linkedin }}">{% include svg-icons/linkedin.html %}</a>{% endif %}
-          {% if site.footer-links.twitter %}<a href="http://twitter.com/{{ site.footer-links.twitter }}">{% include svg-icons/twitter.html %}</a>{% endif %}
+          {% include svg-icons.html %}
         </footer>
       </div>
     </div>
