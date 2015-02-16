@@ -516,7 +516,10 @@ img {
 }
 
 .masthead {
-  padding: 15px 0 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   border-bottom: 1px solid #ccc;
 }
 @media screen and (max-width: 640px) {
