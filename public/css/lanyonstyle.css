@@ -124,7 +124,7 @@ h1 a:hover {
 }
 
 #home .post {
-  width: 320px;
+  width: 640px;
   float: left;
   vertical-align: top;
   margin: 0 20px 0 0;
@@ -140,7 +140,7 @@ h1 a:hover {
 
 #home .post h1 {
   font-size: 40px;
-  line-height: 1.5;
+  line-height: 1.1;
   min-height: 60px;
   margin: 0 0 12px;
   letter-spacing: normal;
@@ -178,7 +178,7 @@ h1 a:hover {
 
 #home .post-teaser img{
 	position:relative;
-	width:320px;
+	width:640px;
 	height:480px;
 	display:block;
 	z-index:1;
@@ -224,9 +224,9 @@ h1 a:hover {
 }
 
 #home .post-teaser:hover img{
-	-webkit-transform:scale(1.1);
-	-ms-transform:scale(1.1);
-	transform:scale(1.1)
+	-webkit-transform:scale(1.05);
+	-ms-transform:scale(1.05);
+	transform:scale(1.05)
 }
 
 h2 {
