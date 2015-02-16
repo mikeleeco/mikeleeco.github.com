@@ -199,7 +199,10 @@ th {
   width: 220px;
   float: left;
   vertical-align: top;
-  margin: 0 50px 0 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   height: 360px;
   overflow: hidden;
 }
@@ -214,7 +217,7 @@ th {
   width: 640px;
   float: left;
   vertical-align: top;
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 0;
   height: 720px;
   overflow: hidden;
 }
@@ -513,7 +516,7 @@ img {
 }
 
 .masthead {
-  padding: 20px 0 0;
+  padding: 15px 0 0;
   border-bottom: 1px solid #ccc;
 }
 @media screen and (max-width: 640px) {
@@ -2602,8 +2605,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2623,8 +2626,8 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
