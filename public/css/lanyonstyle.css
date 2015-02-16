@@ -199,6 +199,7 @@ th {
   width: 220px;
   float: left;
   vertical-align: top;
+
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -516,10 +517,7 @@ img {
 }
 
 .masthead {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 15px 0 0;
   border-bottom: 1px solid #ccc;
 }
 @media screen and (max-width: 640px) {
@@ -1005,8 +1003,6 @@ code {
  */
 
 .masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
