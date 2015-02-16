@@ -7,6 +7,7 @@ date: 2014-01-02
 image:
   feature: giannis (copy).JPEG
   teaser: giannis.JPEG
+  related: giannis.JPEG
 ---
 
 
