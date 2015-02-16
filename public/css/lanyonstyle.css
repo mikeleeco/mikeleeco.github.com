@@ -890,6 +890,8 @@ code {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
   color: #505050;
 }
 .masthead-title a {
