@@ -516,16 +516,6 @@ img {
   min-height: 600px;
 }
 
-.masthead {
-  padding: 15px 0 0;
-  border-bottom: 1px solid #ccc;
-}
-@media screen and (max-width: 640px) {
-  .masthead {
-    text-align: center;
-  }
-}
-
 .site-avatar {
   float: left;
   width: 50px;
