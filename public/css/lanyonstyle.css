@@ -543,7 +543,6 @@ footer {
 }
 .masthead-title a {
   color: #505050;
-}
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
@@ -586,7 +585,7 @@ footer {
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
+  font-size: .975rem;
   color: rgba(255,255,255,.6);
   background-color: #202020;
   -webkit-transition: all .3s ease-in-out;
@@ -630,6 +629,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.0rem;
+    margin-top: 20px;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
