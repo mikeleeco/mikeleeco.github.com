@@ -1003,13 +1003,12 @@ code {
  */
 
 .masthead {
+  margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #505050;
 }
 .masthead-title a {
