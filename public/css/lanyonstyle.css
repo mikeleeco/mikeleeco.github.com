@@ -629,7 +629,6 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.0rem;
-    margin-top: 20px;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
