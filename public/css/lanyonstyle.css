@@ -229,7 +229,7 @@ h1 a:hover {
 	transform:scale(1.02)
 }
 
-#post .post-related{
+#home .post-related{
 	position:relative;
 	display:block;
 	overflow:hidden;
@@ -239,7 +239,7 @@ h1 a:hover {
 	backface-visibility:hidden
 }
 
-#post .post-related img{
+#home .post-related img{
 	position:relative;
 	width:300px;
 	height:240px;
@@ -249,11 +249,11 @@ h1 a:hover {
 	transition:all 0.3s
 }
 
-#post .post-related img.load{
+#home .post-related img.load{
 	display:none
 }
 
-#post .post-related:before,#home .page-teaser:after{
+#home .post-related:before,#home .page-teaser:after{
 	position:relative;
 	content:'';
 	top:0;
@@ -264,13 +264,13 @@ h1 a:hover {
 	height:100.5%
 }
 
-#post .post-related:before{
+#home .post-related:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-#post .post-related:after{
+#home .post-related:after{
 	border:10px solid #fff;
 	opacity:0;	
 	z-index:3;
@@ -278,15 +278,15 @@ h1 a:hover {
 	transition:all 0.3s
 }
 
-#post .post-related:hover:before{
+#home .post-related:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-#post .post-related:hover:after{
+#home .post-related:hover:after{
 	opacity:0.4
 }
 
-#post .post-related:hover img{
+#home .post-related:hover img{
 	-webkit-transform:scale(1.02);
 	-ms-transform:scale(1.02);
 	transform:scale(1.02)
