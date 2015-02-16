@@ -6,7 +6,7 @@ title: home
   <div class="posts clearfix">
     {% for post in site.posts limit:4 %}
     <article class="post">   
-    <div class="post-teaser"> 
+    <div class="post-teaser">
       <a href="{{ post.url }}">
 	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
       </a>
