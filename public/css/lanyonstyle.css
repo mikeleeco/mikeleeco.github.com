@@ -229,6 +229,69 @@ h1 a:hover {
 	transform:scale(1.02)
 }
 
+#home .post-recent{
+	position:relative;
+	display:block;
+	overflow:hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden
+}
+
+#home .post-recent img{
+	position:relative;
+	width:60px;
+	height:48px;
+	display:block;
+	z-index:1;
+	-webkit-transition:all 0.3s;
+	transition:all 0.3s
+}
+
+#home .post-recent img.load{
+	display:none
+}
+
+#home .post-recent:before,#home .page-recent:after{
+	position:relative;
+	content:'';
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100.5%
+}
+
+#home .post-recent:before{
+	z-index:2;
+	-webkit-transition:all 0.3s;
+	transition:all 0.3s
+}
+
+#home .post-recent:after{
+	border:10px solid #fff;
+	opacity:0;	
+	z-index:3;
+	-webkit-transition:all 0.3s;
+	transition:all 0.3s
+}
+
+#home .post-recent:hover:before{
+	background:rgba(51,51,51,0.5)
+}
+
+#home .post-recent:hover:after{
+	opacity:0.4
+}
+
+#home .post-recent:hover img{
+	-webkit-transform:scale(1.01);
+	-ms-transform:scale(1.01);
+	transform:scale(1.01)
+}
+
 h2 {
   font-size: 24px;
   margin: 48px 0 12px;
