@@ -18,12 +18,7 @@ aside,
 details,
 figcaption,
 figure,
-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: #ccc;
-},
+footer,
 header,
 hgroup,
 main,
