@@ -39,21 +39,20 @@ Follow @mlee_mke
 
 <hr>
 
-	<div class="post-related">
-	  <h2>Related Posts</h2>
-   	 {% for post in site.posts limit:3 %}
-	      <li>
-		<h3>
-		  <a href="{{ post.url }}">
-			<img src="/images/{{ post.image.related }}" class="post-related-image" alt="{{ page.title }}" itemprop="image">
-		      </a>
-		        <h3 class="post-title">
+
+<div class="row">
+    {% for post in site.posts limit:3 %}
+    <article class="col-md-4 post">   
+    <div class="post-related">
+      <a href="{{ post.url }}">
+	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
+      </a>
+    <h1 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
-      </a></h3>
-		    <small>{{ post.date | date_to_string }}</small>
-		  </a>
-		</h3>
-	      </li>
-	    {% endfor %}
-	</div>
+      </a>
+    </h1></a>
+<h2><small>{{ post.date | date_to_string }}</small>></h2>
+    </article>
+  {% endfor %}
+</div>
