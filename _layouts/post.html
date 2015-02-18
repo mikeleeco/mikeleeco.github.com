@@ -1,74 +1,6 @@
 ---
 layout: default
 ---
-<script>
-<?php
-if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "96240738a81c4b49a41b5a483bc2b19c.protect@whoisguard.com";
-    $email_subject = "A comment from middlee.com";
- 
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
- 
-    // validation expected data exists
-    if( !isset($_POST['name']) ||
-        !isset($_POST['email']) ||        
-        !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');      
-    }
- 
-    $name = $_POST['name']; // required
-    $email_from = $_POST['email']; // required    
-    $comments = $_POST['comments']; // required
- 
-    $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-  if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
-    $string_exp = "/^[A-Za-z\s.'-]+$/";
-
-  if(!preg_match($string_exp,$name)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
-  if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
-  }
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
-    $email_message = "Form details below.\n\n";
- 
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
- 
-    $email_message .= "Last Name: ".clean_string($name)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";  
-    $email_message .= "Comments: ".clean_string($comments)."\n";
- 
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
-sleep(2);
-echo "<meta http-equiv='refresh' content=\"0; url=http://www.middlee.com">";
-?>
- 
-<?php
-}
-?>
-</script>
 
  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
@@ -181,7 +113,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="mlee_mke" data-size="large" data-dnt="true">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
 
-
+<div>
+<a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script></div>
 <hr>
 
 	<div class="post-related">
