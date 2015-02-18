@@ -15,13 +15,13 @@ if(isset($_POST['email'])) {
     }
  
     // validation expected data exists
-    if( !isset($_POST['last_name']) ||
+    if( !isset($_POST['name']) ||
         !isset($_POST['email']) ||        
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');      
     }
  
-    $last_name = $_POST['last_name']; // required
+    $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required    
     $comments = $_POST['comments']; // required
  
@@ -32,7 +32,7 @@ if(isset($_POST['email'])) {
   }
     $string_exp = "/^[A-Za-z\s.'-]+$/";
 
-  if(!preg_match($string_exp,$last_name)) {
+  if(!preg_match($string_exp,$name)) {
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
   }
   if(strlen($comments) < 2) {
@@ -48,7 +48,7 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
     }
  
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Last Name: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";  
     $email_message .= "Comments: ".clean_string($comments)."\n";
  
