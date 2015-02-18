@@ -35,6 +35,14 @@ wrap {
     /* Negative indent footer by it's height */
     margin: 0 auto -30px;
 }
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 summary {
   display: block;
 }
