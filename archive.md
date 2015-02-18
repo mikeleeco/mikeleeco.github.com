@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Archive
 image:
   feature: paper-53-space-feature.jpg
