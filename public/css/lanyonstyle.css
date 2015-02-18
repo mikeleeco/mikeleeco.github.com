@@ -11,8 +11,8 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
-}
+ padding-bottom: 70px; 
+},
 article,
 aside,
 details,
