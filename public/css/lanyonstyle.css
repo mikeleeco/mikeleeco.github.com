@@ -20,12 +20,6 @@ figcaption,
 figure,
 footer {
   position:relative;
-	display:block;
-	overflow:hidden;
-	-webkit-perspective:1000px;
-	perspective:1000px;
-	-webkit-backface-visibility:hidden;
-	backface-visibility:hidden
 },
 header,
 hgroup,
