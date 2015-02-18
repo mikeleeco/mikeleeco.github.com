@@ -6591,47 +6591,8 @@ button.close {
 }
 
 .post {
-  width: 640px;
-  float: left;
-  vertical-align: top;
-  margin: 0 20px 0 0;
-  height: 720px;
-  overflow: hidden;
+margin-bottom: 25px;
 }
-@media screen and (max-width: 640px) {
-  .post {
-    margin: 0 20px;
-    width: 300px;
-  }
-}
-
-.post h1 {
-  font-size: 40px;
-  line-height: 1.1;
-  min-height: 60px;
-  margin: 0 0 12px;
-  letter-spacing: normal;
-  font-weight: 700;
-}
-
-h1.site-name {
-  font-size: 72px;
-  line-height: 74px;
-  font-weight: 700;
-  max-width: 600px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  letter-spacing: -.03em;
-}
-h1.site-name a {
-  color: #555;
-}
-@media screen and (max-width: 640px) {
-  h1.site-name {
-    margin: 30px 20px 0;
-  }
-}
-
 
 .post-teaser{
 	position:relative;
@@ -6695,5 +6656,6 @@ h1.site-name a {
 	-ms-transform:scale(1.02);
 	transform:scale(1.02)
 }
+
 
 
