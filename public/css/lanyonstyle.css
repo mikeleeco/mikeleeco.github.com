@@ -7143,38 +7143,22 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 
 server {
-  server_name www.middlee.com;
-  root /var/www/nginx-default/;
-  location / {
-    [...]
-  }
-  location /foo {
-    [...]
-  }
-  location /bar {
-    [...]
-  }
-}
+    listen       80;
+    server_name  middlee.com;
 
-http {
-  index index.php index.htm index.html;
-  server {
-    server_name www.middlee.com;
     location / {
-      [...]
+        root   html;
+        index  index.html index.htm;
     }
-  }
-  server {
-    server_name domain.com;
-    location / {
-      [...]
-    }
-    location /foo {
-      [...]
-    }
-  }
-}
 
+    error_page  404     /404.html;
+    error_page  403     /403.html;
+
+    # To allow POST on static pages
+    error_page  405     =200 $uri;
+
+    # ...
+}	
 
 
 
