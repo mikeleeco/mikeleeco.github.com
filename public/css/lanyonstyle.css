@@ -6577,7 +6577,7 @@ button.close {
   line-height: 1.1;
 }
 	
-#home .post-image h1 {
+.post-image h1 {
   width: 220px;
   float: left;
   vertical-align: top;
@@ -6596,7 +6596,7 @@ button.close {
   line-height: 1.1;
 }
 
-#home .post {
+.post {
   width: 640px;
   float: left;
   vertical-align: top;
@@ -6605,13 +6605,13 @@ button.close {
   overflow: hidden;
 }
 @media screen and (max-width: 640px) {
-  #home .post {
+  .post {
     margin: 0 20px;
     width: 300px;
   }
 }
 
-#home .post h1 {
+.post h1 {
   font-size: 40px;
   line-height: 1.1;
   min-height: 60px;
@@ -6620,7 +6620,7 @@ button.close {
   font-weight: 700;
 }
 
-#home h1.site-name {
+h1.site-name {
   font-size: 72px;
   line-height: 74px;
   font-weight: 700;
@@ -6629,17 +6629,17 @@ button.close {
   margin-bottom: 20px;
   letter-spacing: -.03em;
 }
-#home h1.site-name a {
+h1.site-name a {
   color: #555;
 }
 @media screen and (max-width: 640px) {
-  #home h1.site-name {
+  h1.site-name {
     margin: 30px 20px 0;
   }
 }
 
 
-#home .post-teaser{
+.post-teaser{
 	position:relative;
 	display:block;
 	overflow:hidden;
@@ -6649,7 +6649,7 @@ button.close {
 	backface-visibility:hidden
 }
 
-#home .post-teaser img{
+.post-teaser img{
 	position:relative;
 	width:600px;
 	height:320px;
@@ -6659,11 +6659,11 @@ button.close {
 	transition:all 0.3s
 }
 
-#home .post-teaser img.load{
+.post-teaser img.load{
 	display:none
 }
 
-#home .post-teaser:before,#home .page-teaser:after{
+.post-teaser:before,.page-teaser:after{
 	position:relative;
 	content:'';
 	top:0;
@@ -6674,13 +6674,13 @@ button.close {
 	height:100.5%
 }
 
-#home .post-teaser:before{
+.post-teaser:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-#home .post-teaser:after{
+.post-teaser:after{
 	border:10px solid #fff;
 	opacity:0;	
 	z-index:3;
@@ -6688,21 +6688,21 @@ button.close {
 	transition:all 0.3s
 }
 
-#home .post-teaser:hover:before{
+.post-teaser:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-#home .post-teaser:hover:after{
+.post-teaser:hover:after{
 	opacity:0.4
 }
 
-#home .post-teaser:hover img{
+.post-teaser:hover img{
 	-webkit-transform:scale(1.02);
 	-ms-transform:scale(1.02);
 	transform:scale(1.02)
 }
 
-#home .post-related{
+.post-related{
 	position:relative;
 	display:block;
 	overflow:hidden;
@@ -6712,7 +6712,7 @@ button.close {
 	backface-visibility:hidden
 }
 
-#home .post-related img{
+.post-related img{
 	position:relative;
 	width:300px;
 	height:240px;
@@ -6722,11 +6722,11 @@ button.close {
 	transition:all 0.3s
 }
 
-#home .post-related img.load{
+.post-related img.load{
 	display:none
 }
 
-#home .post-related:before,#home .page-teaser:after{
+.post-related:before,.page-teaser:after{
 	position:relative;
 	content:'';
 	top:0;
@@ -6737,13 +6737,13 @@ button.close {
 	height:100.5%
 }
 
-#home .post-related:before{
+.post-related:before{
 	z-index:2;
 	-webkit-transition:all 0.3s;
 	transition:all 0.3s
 }
 
-#home .post-related:after{
+.post-related:after{
 	border:10px solid #fff;
 	opacity:0;	
 	z-index:3;
@@ -6751,15 +6751,15 @@ button.close {
 	transition:all 0.3s
 }
 
-#home .post-related:hover:before{
+.post-related:hover:before{
 	background:rgba(51,51,51,0.5)
 }
 
-#home .post-related:hover:after{
+.post-related:hover:after{
 	opacity:0.4
 }
 
-#home .post-related:hover img{
+.post-related:hover img{
 	-webkit-transform:scale(1.02);
 	-ms-transform:scale(1.02);
 	transform:scale(1.02)
