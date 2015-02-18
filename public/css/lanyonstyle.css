@@ -19,10 +19,13 @@ details,
 figcaption,
 figure,
 footer {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  position:relative;
+	display:block;
+	overflow:hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden
 },
 header,
 hgroup,
