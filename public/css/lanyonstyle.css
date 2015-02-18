@@ -7135,6 +7135,11 @@ button.close {
     display: none !important;
   }
 }
+
+.input-group[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    }
 /*# sourceMappingURL=bootstrap.css.map */
 
 
