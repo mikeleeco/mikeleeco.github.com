@@ -18,10 +18,7 @@ aside,
 details,
 figcaption,
 figure,
-footer {
-  position: relative;
-  margin-top: -10px; /* negative value of footer height */
-},
+footer,
 header,
 hgroup,
 main,
