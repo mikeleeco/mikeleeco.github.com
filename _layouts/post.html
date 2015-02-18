@@ -20,99 +20,12 @@ layout: default
       </div>
       </div>
 <hr>
-      <div class="container">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mlee_mke">Tweet me @mlee_mke</button>
-
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<h4 class="modal-title" id="exampleModalLabel">New message</h4>
-	      </div>
-	      <div class="modal-body">
-		<form>
-		  <div class="form-group">
-		    <label for="recipient-name" class="control-label">Recipient:</label>
-		    <input type="text" class="form-control" id="recipient-name">
-		  </div>
-		  <div class="form-group">
-		    <label for="message-text" class="control-label">Message:</label>
-		    <textarea class="form-control" id="message-text"></textarea>
-		  </div>
-		</form>
-	      </div>
-	      <div class="modal-footer">
-		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		<button type="button" class="btn btn-primary">Send message</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-<script>
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
-</script>
-
-	<div class="container">
-	<!-- Button to trigger modal -->
-	    <a href="#myModal" role="button" class="btn btn-custom" data-toggle="modal">Open Contact Form</a>
-	    <!-- Modal -->
-	    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-		<div class="modal-content">
-		<div class="modal-header">
-		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		    <h4 class="modal-title">Contact Form</h4>
-		</div>
-		<div class="modal-body">
-		<form class="form-horizontal" name="commentform" method="post" action="send_form_email.php"> 
-			    <div class="form-group">
-				<label class="control-label col-md-4" for="name">Name</label>
-				<div class="col-md-6">
-				    <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
-				</div>
-			    </div>
-			    <div class="form-group">
-				<label class="control-label col-md-4" for="email">Email Address</label>
-				<div class="col-md-6 input-group">
-				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
-				</div>
-			    </div>
-			    <div class="form-group">
-				<label class="control-label col-md-4" for="comment">Question or Comment</label>
-				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
-				</div>
-			    </div>
-			    <div class="form-group">
-				<div class="col-md-6">
-				    <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
-				</div>
-			    </div>
-			</form>
-		</div><!-- End of Modal body -->
-		</div><!-- End of Modal content -->
-		</div><!-- End of Modal dialog -->
-	    </div><!-- End of Modal -->
-	</div>
-
-
 
 
 <div class="container">
 	<div class="bs-docs-social">
 		<ul class="bs-docs-social-buttons">
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="mlee_mke" data-size="large" data-dnt="true">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="mlee_mke" data-size="small" data-dnt="true">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 <a class="twitter-follow-button"
@@ -128,7 +41,7 @@ Follow @mlee_mke
 
 <iframe src="https://ghbtns.com/github-btn.html?user=mdlee12&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-<a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+<iframe data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></iframe>
 <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
 <script type="text/javascript" src="//www.reddit.com/buttonlite.js?i=1"></script></ul></div></div>
 <hr>
