@@ -75,9 +75,9 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 		<div class="modal-body">
 		<form class="form-horizontal" name="commentform" method="post" action="send_form_email.php"> 
 			    <div class="form-group">
-				<label class="control-label col-md-4" for="last_name">Name</label>
+				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+				    <input type="text" class="form-control" id="name" name="name" placeholder="Last name"/>
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -106,76 +106,11 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 	</div>
 
 
-<div class="container">
-	<div id="thanks"><p><a data-toggle="modal" href="#form-content" class="btn btn-primary">Contact us</a></p></div>
-	<!-- model content -->	
-	<div id="form-content" class="modal hide fade in" style="display: none; ">
-	        <div class="modal-header">
-	              <a class="close" data-dismiss="modal">×</a>
-	              <h3>Contact us</h3>
-	        </div>
-		<div>
-			<form class="contact">
-			<fieldset>
-		         <div class="modal-body">
-		        	 <ul class="nav nav-list">
-				<li class="nav-header">Name</li>
-				<li><input class="input-xlarge" value=" krizna" type="text" name="name"></li>
-				<li class="nav-header">Email</li>
-				<li><input class="input-xlarge" value=" user@krizna.com" type="text" name="Email"></li>
-				<li class="nav-header">Message</li>
-				<li><textarea class="input-xlarge" name="sug" rows="3"> Thanks for the article and demo
-				</textarea></li>
-				</ul> 
-		        </div>
-			</fieldset>
-			</form>
-		</div>
-	     <div class="modal-footer">
-	         <button class="btn btn-success" id="submit">submit</button>
-	         <a href="#" class="btn" data-dismiss="modal">Close</a>
-  		</div>
-	</div>
- </div>
-<script>
- $(function() {
-//twitter bootstrap script
-	$("button#submit").click(function(){
-		   	$.ajax({
-    		   	type: "POST",
-			url: "process.php",
-			data: $('form.contact').serialize(),
-        		success: function(msg){
- 	          		  $("#thanks").html(msg)
- 		        	$("#form-content").modal('hide');	
- 		        },
-			error: function(){
-				alert("failure");
-				}
-      			});
-	});
-});
-</script>
-</body>
-</html>
-
-<script>
-<?php
-if (isset($_POST['name'])) {
-$name = strip_tags($_POST['name']);
-$email = strip_tags($_POST['Email']);
-$sug = strip_tags($_POST['sug']);
-echo "Name =".$name."</br>";
-echo "Email =".$email."</br>";
-echo "Message =".$sug."</br>";
-echo "<span class=\"label label-info\" >your message has been submitted .. Thanks you</span>";
-}?>
-</script>
 
 
 <div>
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="mlee_mke" data-size="large" data-dnt="true">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagname(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
 
 
 <hr>
