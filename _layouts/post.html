@@ -2,7 +2,7 @@
 layout: default
 ---
 
-	<div class="page-image"> 
+	<div class="row"> 
 		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
@@ -16,7 +16,7 @@ layout: default
       </div>
 <hr>
 
-<div>  	
+<div class="row">  	
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="mlee_mke" data-size="small" data-dnt="true">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -52,7 +52,7 @@ Follow @mlee_mke
         {{ post.title }}
       </a>
     </h1></a>
-<h2><small>{{ post.date | date_to_string }}</small>></h2>
+<h2><small>{{ post.date | date_to_string }}</small></h2>
     </article>
   {% endfor %}
 </div>
