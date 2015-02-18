@@ -2,8 +2,7 @@
 layout: default
 title: home
 ---
-<div id="main" role="main" class="container">
-  <div class="posts clearfix">
+<div class="container">
     {% for post in site.posts limit:4 %}
     <article class="post">   
     <div class="post-teaser">
@@ -27,5 +26,3 @@ title: home
     </article>
   {% endfor %}
 </div>
-
-    </div>
