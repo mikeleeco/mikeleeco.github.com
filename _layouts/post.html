@@ -73,45 +73,37 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-		  .....
+		<form class="form-horizontal" name="commentform" method="post" action="send_form_email.php"> 
+			    <div class="form-group">
+				<label class="control-label col-md-4" for="last_name">Name</label>
+				<div class="col-md-6">
+				    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+				</div>
+			    </div>
+			    <div class="form-group">
+				<label class="control-label col-md-4" for="email">Email Address</label>
+				<div class="col-md-6 input-group">
+				<span class="input-group-addon">@</span>
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+				</div>
+			    </div>
+			    <div class="form-group">
+				<label class="control-label col-md-4" for="comment">Question or Comment</label>
+				<div class="col-md-6">
+				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				</div>
+			    </div>
+			    <div class="form-group">
+				<div class="col-md-6">
+				    <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
+				</div>
+			    </div>
+			</form>
 		</div><!-- End of Modal body -->
 		</div><!-- End of Modal content -->
 		</div><!-- End of Modal dialog -->
 	    </div><!-- End of Modal -->
 	</div>
-
-	<form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
-	    <div class="form-group">
-		<label class="control-label col-md-4" for="first_name">First Name</label>
-		<div class="col-md-6">
-		    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
-		</div>
-	    </div>
-	    <div class="form-group">
-		<label class="control-label col-md-4" for="last_name">Last Name</label>
-		<div class="col-md-6">
-		    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
-		</div>
-	    </div>
-	    <div class="form-group">
-		<label class="control-label col-md-4" for="email">Email Address</label>
-		<div class="col-md-6 input-group">
-		<span class="input-group-addon">@</span>
-		    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
-		</div>
-	    </div>
-	    <div class="form-group">
-		<label class="control-label col-md-4" for="comment">Question or Comment</label>
-		<div class="col-md-6">
-		    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
-		</div>
-	    </div>
-	    <div class="form-group">
-		<div class="col-md-6">
-		    <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
-		</div>
-	    </div>
-	</form>
 
 <script>
 <?php
@@ -131,14 +123,12 @@ if(isset($_POST['email'])) {
     }
  
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
-        !isset($_POST['last_name']) ||
+    if( !isset($_POST['last_name']) ||
         !isset($_POST['email']) ||        
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');      
     }
  
-    $first_name = $_POST['first_name']; // required
     $last_name = $_POST['last_name']; // required
     $email_from = $_POST['email']; // required    
     $comments = $_POST['comments']; // required
@@ -149,9 +139,7 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
   }
     $string_exp = "/^[A-Za-z\s.'-]+$/";
-  if(!preg_match($string_exp,$first_name)) {
-$error_message .= 'The First Name you entered does not appear to be valid.<br />';
-  }
+
   if(!preg_match($string_exp,$last_name)) {
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
   }
@@ -168,7 +156,6 @@ $error_message .= 'The First Name you entered does not appear to be valid.<br />
       return str_replace($bad,"",$string);
     }
  
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";  
     $email_message .= "Comments: ".clean_string($comments)."\n";
