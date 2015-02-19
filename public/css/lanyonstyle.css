@@ -11,9 +11,30 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+  margin: 0;
+}
+html,
+body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #E5E5E5;
+}
+
 article,
 aside,
 details,
@@ -6565,24 +6586,6 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-  background-color: #E5E5E5;
-}
-
 
 
 .post-image h1 {
