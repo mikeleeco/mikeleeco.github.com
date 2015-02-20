@@ -14,7 +14,6 @@ tagline:             'Data Visualization, Analysis, and Statistical Musings'
 description:         'Interested in learning more? Check out my <a href="https://github.com/mdlee12" target="_blank">Github</a>, follow me on <a href="https://twitter.com/mlee_mke" target="_blank">Twitter</a>, or connect with me on <a href="https://www.linkedin.com/in/middlee" target="_blank">Linkedin</a>.'
 url:                 http://middlee.com
 baseurl:             /
-paginate:            5
 
 # About/contact
 author:
@@ -23,4 +22,15 @@ author:
   email:             mdlee12@gmail.com
 
 # Custom vars
-version:             1.0.0
+current_version:  1.0.0
+repo:             https://github.com/mdlee12/mdlee12.github.com
+
+download:
+  source:         https://github.com/twbs/bootstrap/archive/v3.3.2.zip
+  dist:           https://github.com/twbs/bootstrap/releases/download/v3.3.2/bootstrap-3.3.2-dist.zip
+  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.3.2.tar.gz
+
+cdn:
+  css:            https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
+  css_theme:      https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css
+  js:             https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
