@@ -6726,3 +6726,17 @@ margin-bottom: 25px;
 	transform:scale(1.02)
 }
 
+FB.ui(
+  {
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  },
+  function(response) {
+    if (response && !response.error_code) {
+      alert('Posting completed.');
+    } else {
+      alert('Error while posting.');
+    }
+  }
+);
+
