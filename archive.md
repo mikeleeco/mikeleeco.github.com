@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Archive
-image:
-  feature: paper-53-space-feature.jpg
+
 ---
-<div class="container">
-<div class="row">
+<div class="container-fluid">
+<div class="row ">
     {% for post in site.posts %}
-    <article class="col-md-4 post">
+    <article class="post col-md-4 col-sm-6 inner">
     <div class="post">
       <a href="{{ post.url }}">
 	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
