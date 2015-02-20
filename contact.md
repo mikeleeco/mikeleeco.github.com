@@ -1,3 +1,7 @@
+---
+layout: default
+title: Contact
+---
 <?php
 $subjectPrefix = '[Contato via Site]';
 $emailTo = '<YOUR_EMAIL_HERE>';
