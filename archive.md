@@ -19,6 +19,7 @@ image:
     </h1></a>
 <h2><small>{{ post.date | date_to_string }}</small></h2>
     </article>
+  {% endfor %}
 
 <hr>
     {% include footer.html %}
