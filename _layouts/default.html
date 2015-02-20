@@ -39,23 +39,19 @@
 
 <div id="footer">
 <div class="container">
-<div class="twitter col-md-4 col-sm-6 inner">
-            <div class="twitter_container" data-twttr-id="twttr-sandbox-0">
-                <h4>Twitter</h4>
-             </div>
-         </div>
-<a class="twitter-timeline" href="https://twitter.com/mlee_mke" data-widget-id="568835700255363072">Tweets by @mlee_mke</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<div class="projects col-md-4 col-sm-6 inner">
-<div class="projects_container" data-twttr-id="twttr-sandbox-0">
-                <h4>Recent Posts</h4>
-    <h1 class="project-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1></a>
-<h2><small>{{ post.date | date_to_string }}</small></h2>
-</div>
+	<div class="twitter col-md-4 col-sm-6 inner">
+		<a class="twitter-timeline" href="https://twitter.com/mlee_mke" data-widget-id="568835700255363072">Tweets by @mlee_mke</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	<div class="projects col-md-4 col-sm-6 inner">
+		        <h4>Recent Posts</h4>
+	    <h1 class="project-title">
+	      <a href="{{ post.url }}">
+		{{ post.title }}
+	      </a>
+	    </h1></a>
+	<h2><small>{{ post.date | date_to_string }}</small></h2>
+	</div>
 </div>
       <div class="container">
     		<div class="navbar-text pull-left">
