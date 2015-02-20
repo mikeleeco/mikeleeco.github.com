@@ -3,7 +3,7 @@ layout: default
 title: Archive
 
 ---
-<div class="container-fluid">
+<div class="container">
 <div class="row ">
     {% for post in site.posts %}
     <article class="post col-md-4 col-sm-6 inner">
