@@ -25,14 +25,14 @@ layout: default
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</div>
 	<div class="projects col-md-4 col-sm-6 outer">
-		        <h4>Recent Posts</h4>
-   {% for post in site.posts limit:3 %}
-	    <h1 class="post-title">
-	      <a href="{{ post.url }}">
-		{{ post.title }}
+		        <h4>Recent Interactives</h4>
+   {% for interactive in site.interactive limit:3 %}
+	    <h1 class="interactive-title">
+	      <a href="{{ interactive.url }}">
+		{{ interactive.title }}
 	      </a>
 	    </h1></a>
-	<h2><small>{{ post.date | date_to_string }}</small></h2>
+	<h2><small>{{ interactive.date | date_to_string }}</small></h2>
   {% endfor %}
 	</div>
 	</div>
@@ -40,18 +40,18 @@ layout: default
 
 <div class="container">
 <div class="row">
-    {% for post in site.posts limit:3 %}
-    <article class="col-md-4 post">   
-    <div class="post-related">
-      <a href="{{ post.url }}">
-	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
+    {% for interactive in site.interactives limit:3 %}
+    <article class="col-md-4 interactive">   
+    <div class="interactive-related">
+      <a href="{{ interactive.url }}">
+	<img src="/images/{{ interactive.image.teaser }}" class="interactive-teaser-image" alt="{{ page.title }}" itemprop="image">
       </a>
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
+    <h1 class="interactive-title">
+      <a href="{{ interactive.url }}">
+        {{ interactive.title }}
       </a>
     </h1></a>
-<h2><small>{{ post.date | date_to_string }}</small></h2>
+<h2><small>{{ interactive.date | date_to_string }}</small></h2>
     </article>
   {% endfor %}
 </div>
