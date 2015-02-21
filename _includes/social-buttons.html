@@ -25,6 +25,7 @@ var left = (screen.width / 2) - (width / 2),
 top = (screen.height / 2) - (height / 2);
 window.open(
 url,
+title,
 "",
 "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
 );
@@ -39,7 +40,7 @@ windowPopup($(this).attr("href"), 500, 300);
 	<span class="label">Share this:</span>
   <ul class="share-this-buttons">
     <li>
-      <a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | post.title | post.image }}" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span class="share-text">Facebook</span></a>
+      <a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span class="share-text">Facebook</span></a>
     </li>
     <li>
     	<a class="btn-social js-social-share google-plus" onclick="ga('send', 'event', 'link', 'click', 'Google+ share');" href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><span class="share-text">Google+</span></a>
