@@ -15,3 +15,12 @@ https://www.facebook.com/dialog/share_open_graph?
 			 <a href="http://github.com/mdlee12"><i class="fa fa-github fa-2x"></i>
 		</div>
 		</div>
+<script>
+FB.ui({
+  method: 'share_open_graph',
+  action_type: 'og.likes',
+  action_properties: JSON.stringify({
+      object:'https://developers.facebook.com/docs/',
+  })
+}, function(response){});
+</script>
