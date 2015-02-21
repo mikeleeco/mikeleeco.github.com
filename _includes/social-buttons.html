@@ -26,9 +26,22 @@ top = (screen.height / 2) - (height / 2);
 window.open(url,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height +",top=" + top + ",left=" + left);
 }
 $(".js-social-share").on("click", function(e) {
-e.preventDefault();
-windowPopup($(this).attr("href"), 500, 300);
+  e.preventDefault();
+
+  windowPopup($(this).attr("href"), 500, 300);
 });
+
+// Vanilla JavaScript
+var jsSocialShares = document.querySelectorAll(".js-social-share");
+if (jsSocialShares) {
+  [].forEach.call(jsSocialShares, function(anchor) {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      windowPopup(this.href, 500, 300);
+    });
+  });
+}
 </script>
 
 <div class="share-this">
