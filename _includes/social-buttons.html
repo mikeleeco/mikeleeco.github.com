@@ -22,18 +22,16 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <script>
-FB.ui(
-  {
-  method: 'share',
-  href: '{{ post.url }}',
-  caption: '{{ post.title }}',
-  },
-  function(response) {
-    if (response && !response.error_code) {
-      alert('Posting completed.');
-    } else {
-      alert('Error while posting.');
-    }
-  }
-);
+FB.api('https://graph.facebook.com/', 'post', {
+    id: '[URL]',
+    scrape: true
+}, function(response) {
+    FB.ui({
+        method: 'send',
+        name: '[name]',
+        picture: '[Picture URL]',
+        link: [URL]',
+        description: '[description]'
+    });
+}); 
 </script>
