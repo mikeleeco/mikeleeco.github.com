@@ -4,17 +4,12 @@
 			 <a href="mailto:mdlee12@gmail.com"><i class="fa fa-envelope-o fa-2x"></i>
 			<a href="https://twitter.com/share" data-via="mlee_mke" data-dnt="true"><i class="fa fa-twitter fa-2x"></a></i>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
  
-<a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></i></a></i>
+<a class="js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
 			 <a href="http://github.com/mdlee12"><i class="fa fa-github fa-2x"></i>
+<a href="http://www.reddit.com/submit/
+     ?url=https%3A%2F%2Fmiddlee.com%2F"
+   target="_blank">Share on Reddit</a>
 		</div>
 		</div>
 <script>
@@ -43,7 +38,6 @@ if (jsSocialShares) {
 	<span class="label">Share this:</span>
   <ul class="share-this-buttons">
     <li>
-      <a class="js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span class="share-text">Facebook</span></a>
     </li>
     <li>
     	<a class="btn-social js-social-share google-plus" onclick="ga('send', 'event', 'link', 'click', 'Google+ share');" href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><span class="share-text">Google+</span></a>
