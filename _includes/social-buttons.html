@@ -4,34 +4,33 @@
 			 <a href="mailto:mdlee12@gmail.com"><i class="fa fa-envelope-o fa-2x"></i>
 			<a href="https://twitter.com/share" data-via="mlee_mke" data-dnt="true"><i class="fa fa-twitter fa-2x"></a></i>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<a target="_blank" href="javascript:window.open('true','{{ post.title }}','width=500,height=300')">
-<img src="/images/{{ post.image.teaser }}"></a><i class="fa fa-facebook fa-2x"></a></i>
-<div class="fb-share-button" data-href="{{ post.url }}" data-layout="button"></div></a><i class="fa fa-facebook fa-2x"></a></i>
+<a href="{{ post.url }}" onclick = 'postToFeed("<?= $uniqueURL;?>")' id="facebook">Share</a><i class="fa fa-facebook fa-2x"></a></i>
 
 			 <a href="http://github.com/mdlee12"><i class="fa fa-github fa-2x"></i>
 		</div>
 		</div>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <script>
-FB.api('https://graph.facebook.com/', 'post', {
-    id: '[URL]',
-    scrape: true
-}, function(response) {
-    FB.ui({
-        method: 'send',
-        name: '[name]',
-        picture: '[Picture URL]',
-        link: [URL]',
-        description: '[description]'
-    });
-}); 
+FB.init({appId: "125980477501398", status: true, cookie: true});
+    function postToFeed(url) {
+      /* You said you wanted it to be redirect_uri, so you put 
+       * the url parameter there
+       */
+       var obj = {
+        method: 'feed',
+        redirect_uri: url,
+        link: '', 
+        picture: '',
+        name: '',
+        caption: '',
+        description: ''
+      };
+
+      function callback(response) {
+        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+      }
+
+      FB.ui(obj, callback);
+    }
 </script>
