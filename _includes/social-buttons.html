@@ -48,7 +48,7 @@ if (jsSocialShares) {
 	<span class="label">Share this:</span>
   <ul class="share-this-buttons">
     <li>
-      <a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span class="share-text">Facebook</span></a>
+      <a class="js-social-share" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i><span class="share-text">Facebook</span></a>
     </li>
     <li>
     	<a class="btn-social js-social-share google-plus" onclick="ga('send', 'event', 'link', 'click', 'Google+ share');" href="https://plus.google.com/share?url={{ post.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><span class="share-text">Google+</span></a>
