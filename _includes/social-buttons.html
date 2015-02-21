@@ -4,13 +4,22 @@
 			 <a href="mailto:mdlee12@gmail.com"><i class="fa fa-envelope-o fa-2x"></i>
 			<a href="https://twitter.com/share" data-via="mlee_mke" data-dnt="true"><i class="fa fa-twitter fa-2x"></a></i>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<script>function fbs_click()
-{u=location.href;t=document.title;window.open
-('http://www.facebook.com/sharer.php?u='+
-encodeURIComponent(u)+'&t='+encodeURIComponent(t),
-'sharer','toolbar=0,status=0,width=6
-26,height=436');return false;}</script>
-<a href="http://www.facebook.com/share.php?u=" target="_blank" onclick="return fbs_click()" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+<script type="text/javascript">
+function fbs_click(width, height) {
+    var leftPosition, topPosition;
+    //Allow for borders.
+    leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+    //Allow for title and status bars.
+    topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+    var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+    u=location.href;
+    t=document.title;
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer', windowFeatures);
+    return false;
+}
+</script>
+
+<a href="http://www.facebook.com/share.php?u=<full page url to share" onClick="return fbs_click(400, 300)" target="_blank" title="Share This on Facebook"><img src="images/facebookimage.jpg" alt="facebook share"></a>
 			 <a href="http://github.com/mdlee12"><i class="fa fa-github fa-2x"></i>
 		</div>
 		</div>
