@@ -1,14 +1,13 @@
 <div class="row">
-	<div class=container-fluid">
 	<div class="col-md-2 col-md-offset-5">
-			<h1>Share</h1>
+			<b>Share</b>
 			 <a href="mailto:mdlee12@gmail.com"><i class="fa fa-envelope-o fa-2x"></i>
 			<a href="https://twitter.com/share" data-via="mlee_mke" data-dnt="true"><i class="fa fa-twitter fa-2x"></a></i>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
  
 <a class="js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
 
-<a class="js-social-share google" onclick="ga('send', 'event', 'link', 'click', 'Google share');" href="https://plus.google.com/share?url=https%3A%2F%2Fmiddlee.com%2F{{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank">><i class="fa fa-google-plus fa-2x"></i>
+<a class="js-social-share google" onclick="ga('send', 'event', 'link', 'click', 'Google share');" href="https://plus.google.com/share?url=https%3A%2F%2Fmiddlee.com%2F{{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-google-plus fa-2x"></i>
 
 
 <a class="js-social-share reddit" onclick="ga('send', 'event', 'link', 'click', 'Reddit share');" href="http://www.reddit.com/submit/?url=https%3A%2F%2Fmiddlee.com%2F" target="_blank"><i class="fa fa-reddit fa-2x"></i>
@@ -38,5 +37,4 @@ if (jsSocialShares) {
 }
 </script>
 </div><!-- /.share-this -->
-</div>
 
