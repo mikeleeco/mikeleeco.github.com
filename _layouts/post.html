@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<!-- Open Graph url property --> <meta property="og:url" content="{{ post.url }}" /> 
+<!-- Open Graph title property --> <meta property="og:title" content="{{ post.url }}" /> 
+<!-- Open Graph description property --> <meta property="og:description" content="{{ post.description }}" /> 
+<!-- Open Graph image property --> <meta property="og:image" content="/images/{{ post.image.teaser }}" /> 
+<!-- Open Graph site_name property --> <meta property="og:site_name" content="http://www.middlee.com" />
+
 	<div class="row"> 
 		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
