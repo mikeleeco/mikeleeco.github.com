@@ -15,7 +15,7 @@
 		</div>
 		</div>
 <script>
-function windowPopup(url, width, height) {
+function windowPopup(title, url, width, height) {
 // Calculate the position of the popup so
 // it’s centered on the screen.
 var left = (screen.width / 2) - (width / 2),
@@ -30,7 +30,7 @@ if (jsSocialShares) {
     anchor.addEventListener("click", function(e) {
       e.preventDefault();
 
-      windowPopup(this.href, 500, 300);
+      windowPopup(this.title, this.href, 500, 300);
     });
   });
 }
