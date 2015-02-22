@@ -1,6 +1,9 @@
 # Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+markdown:            kramdown
+highlighter:         rouge
+detach:  false
+port:    4000
+host:    127.0.0.1
 
 # Permalinks
 #
