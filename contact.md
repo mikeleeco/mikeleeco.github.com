@@ -2,6 +2,7 @@
 layout: default
 title: Contact
 ---
+
 <div class="container">
 <a href="#myModal" role="button" class="btn btn-custom" data-toggle="modal">Open Contact Form</a>
     <!-- Modal -->
