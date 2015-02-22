@@ -2,9 +2,8 @@
 layout: default
 title: Contact
 ---
-
-<!-- Button to trigger modal -->
-    <a href="#myModal" role="button" class="btn btn-custom" data-toggle="modal">Open Contact Form</a>
+<div class="container">
+<a href="#myModal" role="button" class="btn btn-custom" data-toggle="modal">Open Contact Form</a>
     <!-- Modal -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -45,3 +44,4 @@ title: Contact
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
     </div><!-- End of Modal -->
+</div>
