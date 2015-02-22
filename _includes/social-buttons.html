@@ -1,7 +1,7 @@
 <div class="row">
 	<h1><strong><p class="text-center">Share</p></strong></h1>
 		<p class="text-center">
-<a class="js-social-share twitter" onclick="ga('send', 'event', 'link', 'click', 'Twitter share');" href="https://twitter.com/share?text={{ page.url | replace:'index.html','' | prepend: post.title | uri_escape }}" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+<a class="js-social-share twitter" onclick="ga('send', 'event', 'link', 'click', 'Twitter share');" href="https://twitter.com/share?text={{ page.url | replace:'index.html','' | post.title }}" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <a class="js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.url | uri_escape }}" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
 
