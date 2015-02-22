@@ -8,6 +8,18 @@
 	<script src="javascripts/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+<!-- Open Graph url property --> <meta property="og:url" content="{{ page.url }}" /> 
+<!-- Open Graph title property --> <meta property="og:title" content="{{ page.title }}" /> 
+<!-- Open Graph description property --> <meta property="og:description" content="{{ page.description }}" /> 
+<!-- Open Graph image property --> <meta property="og:image" link rel="image_src" type="image/jpeg" href="/images/{{ page.image.teaser }}" /> 
+<!-- Open Graph type property --> <meta property="og:type" content="website" /> 
+<!-- Open Graph site_name property --> <meta property="og:site_name" content="http://middlee.com" />
+<!-- Open Graph title property --> <meta name="title" content="{{ page.title }}" />
+<!-- Open Graph url property --> <meta name="url" content="{{ page.url }}" /> 
+<!-- Open Graph description property --> <meta name="description" content="{{ page.description }}" /> 
+<!-- Open Graph image property --> <link rel="image_src" type="image/jpeg" href="/images/{{ page.image.teaser }}"/>
+<!-- Open Graph type property --> <meta name="type" content="website" /> 
+<!-- Open Graph site_name property --> <meta property="site_name" content="http://www.middlee.com" />
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
