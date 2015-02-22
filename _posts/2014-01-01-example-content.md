@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Example content
-description: "Learn how I draw outer space scenes filled with stars, galaxies, planets, black holes and more with Paper by FiftyThree and Pencil."
+description: "Learn to chow down on bubkas"
 tags: [paper by 53, tutorial, outer space, blend, pencil, stylus, ipad]
 date: 2014-01-02
 image:
-  feature: giannis.JPEG
-  teaser: giannis.JPEG
-  related: giannis.JPEG
+  feature: giannis.jpg
+  teaser: giannis.jpg
+  related: giannis.jpg
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: This is a super long post?
-description: "Learn how I draw outer space scenes filled with stars, galaxies, planets, black holes and more with Paper by FiftyThree and Pencil."
+description: "Howdy folks."
 tags: [paper by 53, tutorial, outer space, blend, pencil, stylus, ipad]
 date: 2014-01-02
 image:
