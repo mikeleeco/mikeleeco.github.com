@@ -3,7 +3,8 @@ layout: default
 title: Contact
 ---
 <form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
-    <div class="form-group">
+<p class="text-left">
+ <div class="form-group">
         <label class="control-label col-md-4" for="name">Name</label>
         <div class="col-md-6">
             <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
@@ -27,4 +28,5 @@ title: Contact
             <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
         </div>
     </div>
+</p>
 </form>
