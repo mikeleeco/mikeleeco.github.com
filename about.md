@@ -71,6 +71,3 @@ I'm a data scientist interested in sports, education, and psychology. My recent 
 <p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</a></p>
 </div>
 <hr>
-<div class="container">
-	<p class="text-left">The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo), and hosted for free on [GitHub Pages](https://pages.github.com).</p>
-</div>
