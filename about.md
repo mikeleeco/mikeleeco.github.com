@@ -46,7 +46,6 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 				</div>
 			    </div>
 			</form>
-          .....
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
