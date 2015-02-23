@@ -7,7 +7,7 @@ layout: default
 <div class="col-md-4">
 <p class="text-left">
 Hey there! Welcome to middlee.com, a website of data visualizations, analysis, inquiry and thoughtless musings. I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). I keep this site to display my work, and I hope you find it interesting! If you do, let me know!</p></div></div>
-<div class="col-md-8">
+<div class="col-md-4">
 <h1>Contact</h1>
 <p class="text-left">It's nice to keep in touch! Feel free to contact me however works best for you. Thanks for reading!</p>
 <h2>Email</h2>
