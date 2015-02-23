@@ -49,9 +49,10 @@ title: Contact
 </div>
 
 <h2>Twitter</h2>
+<div class="container">
 	<a class="twitter-timeline"  href="https://twitter.com/mlee_mke" data-widget-id="568835700255363072">Tweets by @mlee_mke</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+</div>
 <h2>Linkedin</h2>
 <div class="container">
 <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
