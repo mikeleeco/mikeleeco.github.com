@@ -17,7 +17,7 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 <p class="text-left">I'll get back to you. I swears it.</p>
 
 <div class="container">
-{{% include contact.html %}}
+{% include contact.html %}
 </div>
 
 <h2>Github</h2>
