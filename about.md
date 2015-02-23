@@ -54,14 +54,13 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 
 <h2>Twitter</h2>
 <p class="text-left">I tweet about sports and pop culture. Get at me!</p>
-<div class="container">
-	<a class="twitter-timeline"  href="https://twitter.com/mlee_mke" data-widget-id="568835700255363072">Tweets by @mlee_mke</a>
+<div class="twitter-timeline"  href="https://twitter.com/mlee_mke" data-widget-id="568835700255363072">Tweets by @mlee_mke</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 <h2>Linkedin</h2>
 <p class="text-left">All professional inquiries welcomed!</p>
-<div class="container" script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/middlee" data-format="inline" data-related="false"></script></div>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/middlee" data-format="inline" data-related="false"></script>
           
 <h2>Github</h2>
 <p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</a></p>
