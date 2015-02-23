@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="row">
 <div class="container">
 <h1>About</h1>
 <div class="col-md-4">
