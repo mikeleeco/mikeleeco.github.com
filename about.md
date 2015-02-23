@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 <div class="col-md-6">
 ## About
@@ -72,7 +72,6 @@ I'm a data scientist interested in sports, education, and psychology. My recent 
 <p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</p>
 
 Thanks for reading!
-
 
 <hr>
 The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo), and hosted for free on [GitHub Pages](https://pages.github.com).
