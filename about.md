@@ -69,7 +69,7 @@ I'm a data scientist interested in sports, education, and psychology. My recent 
           
 <h2>Github</h2>
 <div class="container">
-<p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</p></div>
+<p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</a></p></div>
 
 Thanks for reading!
 </div>
