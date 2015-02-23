@@ -3,13 +3,13 @@ layout: default
 title: Contact
 ---
 <h1><strong>Contact</strong></h1>
-It's nice to keep in touch! Feel free to contact me however works best for you.
+<p class="text-left">It's nice to keep in touch! Feel free to contact me however works best for you.</p>
 <h2>Email</h2>
 <div class="container">
 	<a href="#myModal" role="button" class="btn btn-custom" data-toggle="modal">Send me an email!</a>
     	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       	  <div class="modal-dialog">
-       	 <div class="modal-content">
+       	  <div class="modal-content">
 		<div class="modal-header">
 		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 		    <h4 class="modal-title">Contact Form</h4>
@@ -41,7 +41,6 @@ It's nice to keep in touch! Feel free to contact me however works best for you.
 				</div>
 			    </div>
 			</form>
-		</div>
           .....
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
