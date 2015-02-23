@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Example content
-description: "Learn to chow down on bubkas"
-tags: [paper by 53, tutorial, outer space, blend, pencil, stylus, ipad]
+title: Rvest Scraper: Minor League Baseball Database
+description: "Make your own Minor League Baseball Database using rvest."
+tags: [R, rvest, HTML scraper, data, sports, MiLB, MLB]
 date: 2014-01-02
 image:
   feature: giannis.jpg
