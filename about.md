@@ -68,4 +68,5 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 <p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</a></p>
 </div>
 </div>
+</div>
 <hr>
