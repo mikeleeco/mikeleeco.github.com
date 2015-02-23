@@ -6,7 +6,7 @@ layout: default
 <p class="text-left">
   Hey there! Welcome to middlee.com, a website of data visualizations, analysis, inquiry and thoughtless musings.
 
-I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). This interest is founded through a passion for sports, the processes involved in human behavior, and two years teaching special education.</p>
+I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). This interest is founded through a passion for sports, the processes involved in human behavior, and two years teaching special education.</p></div>
 <div class="col-md-6">
 ## Contact
 <p class="text-left">It's nice to keep in touch! Feel free to contact me however works best for you.</p>
@@ -72,6 +72,6 @@ I'm a data scientist interested in sports, education, and psychology. My recent 
 <p class="text-left"><a href="https://github.com/mdlee12">Contribute to my code.</p>
 
 Thanks for reading!
-
+</div>
 <hr>
 The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo), and hosted for free on [GitHub Pages](https://pages.github.com).
