@@ -28,7 +28,7 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 				</div>
 			    </div>
 			    <div class="form-group">
-				<label class="control-label col-md-4" for="email">Email Address</label>
+				<label class="control-label col-md-4" for="email">Your Email Address</label>
 				<div class="col-md-6 input-group">
 				<span class="input-group-addon">@</span>
 				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
@@ -60,8 +60,7 @@ Hey there! Welcome to middlee.com, a website of data visualizations, analysis, i
 </div>
 <h2>Linkedin</h2>
 <p class="text-left">All professional inquiries welcomed!</p>
-<div class="container">
-<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<div class="container" script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/middlee" data-format="inline" data-related="false"></script></div>
           
 <h2>Github</h2>
