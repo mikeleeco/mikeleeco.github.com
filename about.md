@@ -74,4 +74,6 @@ I'm a data scientist interested in sports, education, and psychology. My recent 
 Thanks for reading!
 </div>
 <hr>
-<div>The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo), and hosted for free on [GitHub Pages](https://pages.github.com).</div>
+<div class="container">
+	<p class="text-left">The [Jekyll](http://jekyllrb.com) framework for this site was built by [@mdo](https://twitter.com/mdo), and hosted for free on [GitHub Pages](https://pages.github.com).</p>
+</div>
