@@ -19,7 +19,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 <p><p>What do you mean Baseball Reference doesn't calculate similarity scores for minor league players?</p></p>
 
-<p><a class="btn btn-success btn-lg btn-block" href="http://youtu.be/VpVoUvLdErw?t=3s">As if Button</a></p>
+<p><a class="btn btn-success btn-lg btn-block" href="https://www.youtube.com/watch?v=bnRrvOb0m-I">As If Button</a></p>
 
 
 <p><strong><h2>Let's make our own damn database!</h2></strong>	
@@ -62,7 +62,7 @@ tbl_df() -> df
 <p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
 
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="http://youtu.be/1EiqELgKp5g?t=56s"> </iframe>
+  <iframe class="embed-responsive-item" src="http://youtu.be/1EiqELgKp5g?t=56s"></iframe>
   <figcaption><i class="fa fa-video-camera"></i> The other lankier Chris Young</figcaption>
 </div>
 
