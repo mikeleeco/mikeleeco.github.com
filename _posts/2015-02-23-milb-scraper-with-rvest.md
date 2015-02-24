@@ -69,22 +69,22 @@ tbl_df() -> df
 
 <p>This code extracts the attributes of the links in the table and changes them into characters.</p>
 
-<pre><code class="html">
+~~~ rconsole
 html %>>%
         html_nodes(stats_id) %>>%
         html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
-</code></pre>
+~~~ rconsole
 
 <p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids</p>
 
-<pre><code>
+~~~ rout
 df %>>% nrow() -> rows
     df[1:rows,] -> df
 df=df[!na.omit(df$Rk=='Rk'),]
 df$season <- c(season)
 bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
-</code></pre>
+~~~ rout
 
 <p>Finally, bind the tables together.</p>
 <pre><code class="html">
