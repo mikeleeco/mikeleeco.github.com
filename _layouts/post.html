@@ -8,7 +8,7 @@ layout: default
 	
 <div class="container"> 
 	<div class="row"> 
-		<img src="/images/{{ page.image.teaser }}" class="page-teaser-image" alt="{{ page.title }}" itemprop="image">
+		<img src="/images/{{ page.image.feature }}" class="img-responsive" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      <div class="page-title">
@@ -32,7 +32,7 @@ layout: default
     <article class="post col-md-4 col-sm-1 inner">
     <div class="post-related">
       <a href="{{ post.url }}">
-	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
+	<img src="/images/{{ post.image.teaser }}" class="img-responsive" alt="{{ page.title }}" itemprop="image">
       </a>
     <h3 class="post-title">
       <a href="{{ post.url }}">
