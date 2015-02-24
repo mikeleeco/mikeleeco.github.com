@@ -1,6 +1,6 @@
 # Dependencies
 markdown:            kramdown
-syntax_highlighter:  rouge
+highlighter:         rouge
 
 # Permalinks
 #
@@ -33,4 +33,4 @@ download:
 cdn:
   css:            https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
   css_theme:      https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css
-  js:             https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.j
+  js:             https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
