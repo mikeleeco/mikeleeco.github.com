@@ -29,10 +29,10 @@ To make our database we're going to use <a href="https://github.com/hadley/rvest
 
 <pre><code class="html">
 #if you haven't done so already, install rvest from Wickham's github repository
- #install.packages("devtools")
- #install_github("hadley/rvest")</i>
+#install.packages("devtools")
+#install_github("hadley/rvest")</i>
 c('rvest','dplyr','pipeR') -> packages
-lapply(packages, library, character.only = T)
+lapply(packages, library, character. = T)
 </code></pre>
 
 
