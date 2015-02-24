@@ -6,10 +6,9 @@ title: Archive
 <div class="container">
 <div class="row ">
     {% for post in site.posts %}
-    <article class="post col-md-4 col-sm-6 inner">
     <div class="post">
       <a href="{{ post.url }}">
-	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
+	<img src="/images/{{ post.image.teaser }}"  class="img-responsive" alt="{{ page.title }}" itemprop="image">
       </a>
     <h1 class="post-title">
       <a href="{{ post.url }}">
