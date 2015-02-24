@@ -146,6 +146,6 @@ Get that query going and have some breakfast/lunch/dinner. Stay tuned to the sit
 -----
 
 Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mdlee12/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.
-  <a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/master/fork">Edit my code</button>
+  <a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/master/fork">Edit my code</a>
 </div>
 </div>
