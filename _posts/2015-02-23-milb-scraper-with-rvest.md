@@ -12,7 +12,7 @@ image:
 
 <div class="row">
 <div class="container">
-<div class=".col-md-8">
+<div class=".col-md-6">
 <p><div class="lead">
   Baseball is a game of numbers, some more accessible than others.</div> Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>, which is the most robust catalog of MLB player statistics available to the public.</p>
 <p>
@@ -26,7 +26,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 <p><strong><h2>Let's make our own damn database!</h2></strong>	
 </p>
 
-<p>To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:</p>
+To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:
 
 {% highlight rout %}
 #if you haven't done so already, install rvest from Wickham's github repository
@@ -49,7 +49,7 @@ stats_table %>>% paste0(stats_table,' a') -> stats_id
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
 
 {% highlight rout %}
-<i>#select the seasons you wish to pull starting with the most recent</i>
+#select the seasons you wish to pull starting with the most recent
 for (season in 2014:2012) { 
 cur_url <- paste(url,"affiliate.cgi?id=","ARI","&year=",season,sep="")
 
@@ -67,7 +67,9 @@ tbl_df() -> df
   <figcaption><i class="fa fa-video-camera"></i> The other lankier Chris Young</figcaption>
 </figure>
 
-<p>This code extracts the attributes of the links in the table and changes them into characters.</p>
+
+This code extracts the attributes of the links in the table and changes them into characters.
+
 
 {% highlight rout %}
 html %>>%
@@ -75,7 +77,9 @@ html %>>%
         html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
 {% endhighlight %}
 
-<p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids</p>
+
+Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.
+
 
 {% highlight rout %}
 df %>>% nrow() -> rows
@@ -86,7 +90,8 @@ bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
 {% endhighlight %}
 
-<p>Finally, bind the tables together.</p>
+Finally, bind the tables together.
+
 {% highlight rout %}
 minors_batting_ARI <- rbind(minors_batting_ARI,df)
 {% endhighlight %}
