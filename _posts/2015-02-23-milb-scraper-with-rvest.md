@@ -75,7 +75,7 @@ html %>>%
         html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
 </code></pre>
 
-<p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.</p>
+<p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids</p>
 
 <pre><code>
 df %>>% nrow() -> rows
