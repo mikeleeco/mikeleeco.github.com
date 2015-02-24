@@ -5,7 +5,6 @@ description: "A step-by-step tutorial to make your own Minor League Baseball Dat
 tags: [R, rvest, HTML scraper, data, sports, MiLB, MLB]
 date: 2015-02-23
 image:
-  feature: bryant.jpg
   teaser: bryant.jpg
   related: bryant.jpg
 ---
