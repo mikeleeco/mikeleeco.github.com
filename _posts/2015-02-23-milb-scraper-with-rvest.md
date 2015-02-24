@@ -62,7 +62,7 @@ tbl_df() -> df
 <p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
 
 <figure>
-  <iframe width="560" height="315" src="http://youtu.be/1EiqELgKp5g?t=56s" frameborder="0"> </iframe>
+  <iframe class="embed-responsive-item" href="http://youtu.be/1EiqELgKp5g?t=56s"> </iframe>
   <figcaption><i class="fa fa-video-camera"></i> The other lankier Chris Young</figcaption>
 </figure>
 
@@ -144,8 +144,7 @@ minors_batting_team_code <- rbind(minors_batting_team_code,df)
 <img src="{{ site.url }}/images/sys_time_MiLB.jpg">
 <figcaption>The query takes a while, but it's worth it!</figcaption>
 </figure>
-<h4>Pro Tip</h4>
-<p>Get that query going and have some breakfast/lunch/dinner. Stay tuned to the site for another post about who Kris Bryant is most similar to!</p>
+<strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. Stay tuned to the site for another post about who Kris Bryant is most similar to!
 
 -----
 

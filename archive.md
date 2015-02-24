@@ -15,7 +15,7 @@ title: Archive
         {{ post.title }}
       </a>
     </h1></a>
-<h3><{{ post.date | date_to_string }}</small></h3>
+<h3>{{ post.date | date_to_string }}</small></h3>
     </article>
   {% endfor %}
 
