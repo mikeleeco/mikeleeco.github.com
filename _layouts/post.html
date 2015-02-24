@@ -3,7 +3,7 @@ layout: default
 ---
 
 <script src="{{ site.baseurl }}public/css/bootstrap.css"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initHighlightingOnLoad.apply(null, hljs.ALL_LANGUAGES);</script>
 
 	<div class="row"> 
 		<img src="/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
