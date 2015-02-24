@@ -35,8 +35,8 @@ c('rvest','dplyr','pipeR') -> packages
 lapply(packages, library, character.only = T)
 </code></pre>
 
-<div class="message">
-The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</div></p>
+
+The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
 <pre><code class="html">
 url <- "http://www.baseball-reference.com/minors/"
