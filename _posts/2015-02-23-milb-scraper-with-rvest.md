@@ -61,10 +61,10 @@ tbl_df() -> df
 
 <p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
 
-<figure>
+<div class="embed-responsive embed-responsive-16by9"
   <iframe class="embed-responsive-item" href="http://youtu.be/1EiqELgKp5g?t=56s"> </iframe>
   <figcaption><i class="fa fa-video-camera"></i> The other lankier Chris Young</figcaption>
-</figure>
+</div>
 
 
 This code extracts the attributes of the links in the table and changes them into characters.
