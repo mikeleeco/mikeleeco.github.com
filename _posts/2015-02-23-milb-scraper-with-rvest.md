@@ -28,7 +28,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 <p>To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:</p>
 
-<pre><code>
+<pre><code class="html">
 #if you haven't done so already, install rvest from Wickham's github repository
 #install.packages("devtools")
 #install_github("hadley/rvest")</i>
@@ -39,7 +39,7 @@ lapply(packages, library, character.only = T)
 
 <p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
-<pre><code>
+<pre><code class="html">
 url <- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
@@ -77,7 +77,7 @@ html %>>%
 
 <p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.</p>
 
-<pre><code class="html">
+<pre><code>
 df %>>% nrow() -> rows
     df[1:rows,] -> df
 df=df[!na.omit(df$Rk=='Rk'),]
@@ -102,7 +102,7 @@ minors_batting_ARI <- rbind(minors_batting_ARI,df)
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 {% endhighlight %}
 
-<pre><code class="html">
+{% highlight rconsole %}
 url <- "http://www.baseball-reference.com/minors/"
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 '#team_batting.sortable.stats_table' -> stats_table
@@ -132,7 +132,7 @@ minors_batting_team_code <- rbind(minors_batting_team_code,df)
 
 }
 }
-</code></pre>
+{% endhighlight %}
 
 <h3>Obligatory heads up!</h3>
 <p>This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
