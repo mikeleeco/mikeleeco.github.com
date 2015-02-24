@@ -40,11 +40,9 @@ lapply(packages, library, character.only = T)
 <p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
 <pre><code>
-{% highlight rconsole %}
 url <- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
-{% endhighlight %}
 </code></pre>
 
 <p>
