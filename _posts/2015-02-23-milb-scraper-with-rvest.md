@@ -10,13 +10,14 @@ image:
   related: bryant.jpg
 ---
 
-
+<div class="row">
+<div class="container">
 <p><div class="lead">
   Baseball is a game of numbers, some more accessible than others.</div><div class="message"> Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>, which is the most robust catalog of MLB player statistics available to the public.</p>
 
 One area of relatively limited accessibility to the average fan is statistics for Minor League players. Though player statistics by position, year, and team are available at many sites, a thorough catalog of MiLB data akin to the Lahman database is unavailable. I wonder who <a href="http://www.baseball-reference.com/minors/player.cgi?id=bryant001kri">Kris Bryant</a> would be most similar to? What do you mean Baseball Reference doesn't calculate similarity scores for minor league players?</p>
 
-<a class="btn btn-success btn-lg btn-block" href="https://s-media-cache-ak0.pinimg.com/originals/c2/4c/81/c24c81b11744437dd9d2c2d46322d525.jpg">As if Button</a></p>
+<a class="btn btn-success btn-lg btn-block" href="http://youtu.be/VpVoUvLdErw?t=3s">As if Button</a></p>
 
 
 <strong><h1>Let's make our own damn database!</h1></strong>	
@@ -56,7 +57,7 @@ data.frame() %>%
 tbl_df() -> df
 </td></pre>
 
-So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a> The lanky <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
+So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" href="http://youtu.be/1EiqELgKp5g?t=56s"></iframe>
@@ -141,3 +142,5 @@ Get that query going and have some breakfast/lunch/dinner. Stay tuned to the sit
 
 Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mdlee12/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.
   <button type="button" class="btn btn-primary" a href="https://github.com/mdlee12/MiLB-Scraper/master/fork">Edit my code</button>
+</div>
+</div>
