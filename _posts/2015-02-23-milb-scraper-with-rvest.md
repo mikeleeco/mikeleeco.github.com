@@ -19,17 +19,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 <p><p>What do you mean Baseball Reference doesn't calculate similarity scores for minor league players?</p></p>
 
-
-
-<div class="modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-body">
-<a class="btn btn-success btn-lg btn-block" href="https://www.youtube.com/watch?v=bnRrvOb0m-I">As If Button</a>
-</div>
-</div>
-</div>
-</div> 
+<p><a class="btn btn-success btn-lg btn-block" href="https://www.youtube.com/watch?v=bnRrvOb0m-I">As If Button</a></p>
 
 
 <p><strong><h2>Let's make our own damn database!</h2></strong>	
@@ -73,7 +63,6 @@ tbl_df() -> df
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="http://youtu.be/1EiqELgKp5g?t=56s"></iframe>
-  <figcaption><i class="fa fa-video-camera"></i> The other lankier Chris Young</figcaption>
 </div>
 
 
