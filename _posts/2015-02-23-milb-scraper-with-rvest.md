@@ -27,27 +27,27 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:</p>
 
-<pre><td class="code">
+<pre><code>
 <i>#if you haven't done so already, install rvest from Wickham's github repository
  #install.packages("devtools")
  #install_github("hadley/rvest")</i>
 c('rvest','dplyr','pipeR') -> packages
 lapply(packages, library, character.only = T)
-</td></pre>
+</code></pre>
 
 <div class="message">
 The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</div></p>
 
-<pre><td class="code">
+<pre><code>
 url <- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
-</td></pre>
+</code></pre>
 
 <div class="message">
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
 
-<pre><td class="code">
+<pre><code>
 <i>#select the seasons you wish to pull starting with the most recent</i>
 for (season in 2014:2012) { 
 cur_url <- paste(url,"affiliate.cgi?id=","ARI","&year=",season,sep="")
@@ -57,7 +57,7 @@ html_nodes(stats_table) %>%
 html_table(header = T) %>%
 data.frame() %>%
 tbl_df() -> df
-</td></pre>
+</code></pre>
 
 So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
 
@@ -68,27 +68,27 @@ So far our code will scrape the batting table from the team's minor league page,
 
 This code extracts the attributes of the links in the table and changes them into characters.</p>
 
-<pre><td class="code">
+<pre><code>
 html %>>%
         html_nodes(stats_id) %>>%
         html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
-</td></pre>
+</code></pre>
 
 Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.</p>
 
-<pre><td class="code">
+<pre><code>
 df %>>% nrow() -> rows
     df[1:rows,] -> df
 df=df[!na.omit(df$Rk=='Rk'),]
 df$season <- c(season)
 bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
-</td></pre>
+</code></pre>
 
 Finally, bind the tables together.
-<pre><td class="code">
+<pre><code>
 minors_batting_ARI <- rbind(minors_batting_ARI,df)
-</td></pre>
+</code></pre>
 
 There we are! Arizona's minor league batting stats from 2012-2014!</p>
 
@@ -97,11 +97,11 @@ There we are! Arizona's minor league batting stats from 2012-2014!</p>
 
 First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
 
-<pre><td class="code">
+<pre><code>
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
-</td></pre>
+</code></pre>
 
-<pre><td class="code">
+<pre><code>
 url <- "http://www.baseball-reference.com/minors/"
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 '#team_batting.sortable.stats_table' -> stats_table
@@ -131,7 +131,7 @@ minors_batting_team_code <- rbind(minors_batting_team_code,df)
 
 }
 }
-</td></pre>
+</code></pre>
 
 <h3>Obligatory heads up!</h3>
 This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
