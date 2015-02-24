@@ -98,11 +98,9 @@ minors_batting_ARI <- rbind(minors_batting_ARI,df)
 
 <p>First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
 
-<pre><code class="html">
-{% highlight rconsole %}
+{% highlight rout %}
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 {% endhighlight %}
-</code></pre>
 
 <pre><code class="html">
 url <- "http://www.baseball-reference.com/minors/"
