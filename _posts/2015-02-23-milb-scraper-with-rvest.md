@@ -28,7 +28,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 <p>To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:</p>
 
-<pre><code class="html">
+<pre><code>
 #if you haven't done so already, install rvest from Wickham's github repository
 #install.packages("devtools")
 #install_github("hadley/rvest")</i>
@@ -39,7 +39,7 @@ lapply(packages, library, character.only = T)
 
 <p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
-<pre><code class="html">
+<pre><code>
 url <- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
