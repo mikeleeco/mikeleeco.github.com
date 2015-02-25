@@ -93,7 +93,7 @@ View(minors_batting_ARI)
 minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_ARI.csv')
 </code></pre>
 
-<p>There we are! Arizona's minor league batting stats from 2012-2014! 824 instances may seem like too much, but it is over a three year period and Baseball-reference.com doesn't aggregate a player's statistics by year; they do it by level. Therefore some players may have multiple rows for the same season (aren't you glad we pulled out the reference id!) </p>
+<p>There we are! Arizona's minor league batting stats from 2012-2014! 824 instances may seem like too much, for only a three year period, but Baseball-reference.com doesn't aggregate a player's statistics by year; they do it by level. Therefore, some players may have multiple rows for the same season (aren't you glad we pulled out the reference id!) </p>
 <div class="container">
 <figure>
 <img src="{{ site.url }}/images/minors_batting_ARI.jpg" class="img-responsive">
