@@ -98,7 +98,7 @@ minors_batting_ARI %>% write.csv('/home/michael/R/Github-mdlee12/MiLB_Scraper_Ba
 <figcaption>That scraper took a lot of GRIT, well done.</figcaption>
 </figure>
 
-<h5>Here is the code in it's entirety:</h5>
+<h4>Here is the code in it's entirety:</h4>
 <pre><code class="r">
 #install.packages("devtools")
 #install_github("hadley/rvest")
@@ -132,9 +132,9 @@ minors_batting_ARI <- rbind(minors_batting_ARI,df)
 }
 </code></pre>
 
-<p>...but enough about teams built on <i>grit</i>. Let's pull in <strong>all MiLB batting statistics since 2000</strong>.</p>
+<p>... let's take a left turn on <a href="http://hardballtalk.nbcsports.com/2013/01/25/the-diamondbacks-are-travelling-down-grit-avenue-and-guts-boulevard-and-grind-parkway/">Grind Parkway</a> and pull in <strong>all MiLB batting statistics since 2000</strong>.</p>
 
-##MiLB Batting Stats for All Teams
+<h2>MiLB Batting Stats for All Teams</h2>
 
 <p>First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
 
