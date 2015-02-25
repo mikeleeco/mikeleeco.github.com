@@ -93,7 +93,7 @@ View(minors_batting_ARI)
 minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_ARI.csv')
 </code></pre>
 
-<p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
+<p>There we are! Arizona's minor league batting stats from 2012-2014! 824 players over a three year period seems reasonable. </p>
 <div class="container">
 <figure>
 <img src="{{ site.url }}/images/minors_batting_ARI.jpg" class="img-responsive">
