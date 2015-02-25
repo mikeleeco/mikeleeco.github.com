@@ -23,16 +23,11 @@ $(".js-social-share").on("click", function(e) {
 </script>
 <script>
 function windowPopup(url, width, height) {
-// Vanilla JavaScript
-var jsSocialShares = document.querySelectorAll(".js-social-share");
-if (jsSocialShares) {
-  [].forEach.call(jsSocialShares, function(anchor) {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
-
-      windowPopup(this.href, 500, 300);
-    });
-  });
+// Calculate the position of the popup so
+// it’s centered on the screen.
+var left = (screen.width / 2) - (width / 2),
+top = (screen.height / 2) - (height / 2);
+window.open(url,"","menubar=yes,toolbar=yes,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height +",top=" + top + ",left=" + left);
 }
 </script>
 
