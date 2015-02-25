@@ -95,12 +95,11 @@ minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_A
 
 <p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
 <div class="container">
-<div class="row">
 <figure>
 <img src="{{ site.url }}/images/minors_batting_ARI.jpg">
 <figcaption>That scraper took a lot of GRIT, well done.</figcaption>
 </figure>
-</div></div>
+</div>
 <h4>Here is the code in it's entirety:</h4>
 <pre><code class="r">
 #install.packages("devtools")
