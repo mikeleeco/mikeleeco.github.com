@@ -9,8 +9,8 @@
 
 <!-- Open Graph -->
 		<meta property="og:locale" content="{{ site.locale }}">
+		<meta property="og:image" content="{{ site.baseurl }}/images/{{ page.image.feature }}">
 		<meta property="og:type" content="article">
-		<meta property="og:image" content="{{ site.url }}/images/{{ page.image.feature }}">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 		{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
 		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
@@ -20,8 +20,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/bootstrap.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/bootstrap.footnotes.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/bootstrap.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/bootstrap.footnotes.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles/default.css">
 
