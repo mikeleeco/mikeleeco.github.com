@@ -95,11 +95,12 @@ minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_A
 
 <p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
 <div class="container">
+<div class="row">
 <figure>
 <img src="{{ site.url }}/images/minors_batting_ARI.jpg">
 <figcaption>That scraper took a lot of GRIT, well done.</figcaption>
 </figure>
-<div>
+</div></div>
 <h4>Here is the code in it's entirety:</h4>
 <pre><code class="r">
 #install.packages("devtools")
@@ -177,10 +178,12 @@ minors_batting <- rbind(minors_batting,df)
 
 <h3>Obligatory heads up!</h3>
 <p>This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
-
+<div class="container">
+<div class="row">
 <figure>
 <img src="{{ site.url }}/images/sys_time_MiLB.jpg">
 </figure>
+</div></div>
 The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. 
 
 <h4>Coming up...</h4>Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant's best comparisons.
