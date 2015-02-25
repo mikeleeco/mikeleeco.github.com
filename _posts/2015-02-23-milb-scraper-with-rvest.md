@@ -64,7 +64,7 @@ tbl_df() -> df
 <div class="container">
 <div class="row">
 <div class="embed-responsive embed-responsive-16by9">
-	<iframe width="420" height="315" src="https://www.youtube.com/embed/1EiqELgKp5g"></iframe>
+	<iframe width="420" height="315" src="//www.youtube.com/embed/1EiqELgKp5g"></iframe>
 <div class="embed-responsive embed-responsive-16by9">
 </div>
 </div>
