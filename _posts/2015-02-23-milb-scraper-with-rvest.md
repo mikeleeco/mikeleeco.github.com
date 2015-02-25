@@ -134,7 +134,7 @@ minors_batting_ARI <- rbind(minors_batting_ARI,df)
 }
 </code></pre>
 
-<p>... let's take a left turn on <a href="http://hardballtalk.nbcsports.com/2013/01/25/the-diamondbacks-are-travelling-down-grit-avenue-and-guts-boulevard-and-grind-parkway/">Grind Parkway</a> and pull in <strong>all MiLB batting statistics since 2000</strong>.</p>
+<p>... let's take a left turn on <a href="http://hardballtalk.nbcsports.com/2013/01/25/the-diamondbacks-are-travelling-down-grit-avenue-and-guts-boulevard-and-grind-parkway/">Grind Parkway</a> and pull in <strong>all MiLB batting statistics for 2014</strong>.</p>
 
 <h2>MiLB Batting Stats for All Teams</h2>
 
@@ -167,6 +167,7 @@ df %>>% nrow() -> rows
     df[1:rows,] -> df
 df=df[!na.omit(df$Rk=='Rk'),]
 df$season <- c(season)
+df$team <- c(teams)
 bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
 
@@ -174,6 +175,18 @@ minors_batting <- rbind(minors_batting,df)
 }
 }
 </code></pre>
+
+To query other seasons or teams, simply change the information selected. For example:
+<pre><code class="r">
+teams=c("OAK","TBD")
+
+'#team_batting.sortable.stats_table' -> stats_table
+stats_table %>>% paste0(stats_table,' a') -> stats_id
+minors_batting <- data.frame()
+
+for (teams in teams){ for (season in 2010:2005) {
+</code></pre>
+Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.
 
 <h3>Obligatory heads up!</h3>
 <p>This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
