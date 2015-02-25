@@ -147,7 +147,7 @@ url <- "http://www.baseball-reference.com/minors/"
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
-minors_batting_team_code <- data.frame()
+minors_batting <- data.frame()
 
 for (teams in teams){ for (season in 2014:2014) {
 html <- paste(url,"affiliate.cgi?id=",teams,"&year=",season,sep="")
@@ -168,7 +168,7 @@ df$season <- c(season)
 bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
 
-minors_batting_team_code <- rbind(minors_batting_team_code,df)
+minors_batting <- rbind(minors_batting,df)
 }
 }
 </code></pre>
@@ -182,10 +182,9 @@ minors_batting_team_code <- rbind(minors_batting_team_code,df)
 </figure>
 <strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. Stay tuned to the site for another post about who Kris Bryant is most similar to!
 
------
+<hr>
 
-<p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mdlee12/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.
-  <a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/master/fork">Edit my code</a></p>
+<p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mdlee12/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.<a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/fork">Edit My Code</a></p>
 </div>
 </div>
 </div>
