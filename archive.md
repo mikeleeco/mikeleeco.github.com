@@ -3,7 +3,6 @@ layout: default
 title: Archive
 
 ---
-Most Recent
 <div class="container">
 <div class="row ">
     {% for post in site.posts %}
