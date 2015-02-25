@@ -90,15 +90,16 @@ minors_batting_ARI <- rbind(minors_batting_ARI,df) #Finally, bind the tables tog
 <pre><code class="r">
 #to view the dataset and save it as a .csv
 View(minors_batting_ARI)
-minors_batting_ARI %>% write.csv('/home/michael/R/Github-mdlee12/MiLB_Scraper_Batting/minors_batting_ARI.csv')
+minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_ARI.csv')
 </code></pre>
 
 <p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
+<div class="container">
 <figure>
 <img src="{{ site.url }}/images/minors_batting_ARI.jpg">
 <figcaption>That scraper took a lot of GRIT, well done.</figcaption>
 </figure>
-
+<div>
 <h4>Here is the code in it's entirety:</h4>
 <pre><code class="r">
 #install.packages("devtools")
