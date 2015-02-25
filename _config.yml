@@ -1,19 +1,15 @@
 # Setup
-title:               middlee
-tagline:             'Data Visualization, Analysis, and Statistical Musings'
-description: 	     "Personal website of data scientist Michael Lee."
-url:                 http://middlee.com
-baseurl:             /
+title: middlee
+description: "Personal website of data scientist Michael Lee."
+url: http://middlee.com
+baseurl: /
 locale: en_US
 
 # Jekyll configuration
 
 permalink: /:categories/:title/
-lsi: true
-relative_permalinks: true
-markdown:            kramdown
-highlighter:         pygments
-parse_block_html:    true
+markdown: kramdown
+highlighter: pygments
 
 
 # Plugin: jekyll-archives
@@ -49,14 +45,14 @@ owner:
 
 # Custom vars
 current_version:  1.0.0
-repo:             https://github.com/mdlee12/mdlee12.github.com
+repo: https://github.com/mdlee12/mdlee12.github.com
 
 download:
-  source:         https://github.com/twbs/bootstrap/archive/v3.3.2.zip
-  dist:           https://github.com/twbs/bootstrap/releases/download/v3.3.2/bootstrap-3.3.2-dist.zip
-  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.3.2.tar.gz
+  source: https://github.com/twbs/bootstrap/archive/v3.3.2.zip
+  dist: https://github.com/twbs/bootstrap/releases/download/v3.3.2/bootstrap-3.3.2-dist.zip
+  sass: https://github.com/twbs/bootstrap-sass/archive/v3.3.2.tar.gz
 
 cdn:
-  css:            https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
-  css_theme:      https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css
-  js:             https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
+  css: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
+  css_theme:  https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css
+  js: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
