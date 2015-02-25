@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Archive
-
 ---
 <div class="container">
-<div class="row ">
+<div class="row">
     {% for post in site.posts %}
     <div class="post">
       <a href="{{ post.url }}">
