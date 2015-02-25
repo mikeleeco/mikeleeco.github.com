@@ -30,7 +30,7 @@ To make our database we're going to use <a href="https://github.com/hadley/rvest
 <pre><code class="r">
 #if you haven't done so already, install rvest from Wickham's github repository
 #install.packages("devtools")
-#install_github("hadley/rvest")</i>
+#install_github("hadley/rvest")
 c('rvest','dplyr','pipeR') -> packages
 lapply(packages, library, character.only = T)
 </code></pre>
@@ -48,32 +48,24 @@ stats_table %>>% paste0(stats_table,' a') -> stats_id
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
 
 <pre><code class="r">
+minors_batting_ARI <- data.frame()
 #select the seasons you wish to pull starting with the most recent
 for (season in 2014:2012) { 
-cur_url <- paste(url,"affiliate.cgi?id=","ARI","&year=",season,sep="")
+html <- paste(url,"affiliate.cgi?id=","ARI","&year=",season,sep="")
 
-df <- html %>%
-html_nodes(stats_table) %>%
-html_table(header = T) %>%
-data.frame() %>%
-tbl_df() -> df
+html(html) %>%
+	html_nodes(stats_table) %>%
+	html_table(header = T) %>%
+	data.frame() %>%
+	tbl_df() -> df
 </code></pre>
 
-<p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to get angry.</p>
+<p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to <a href="http://youtu.be/1EiqELgKp5g?t=56s">get angry</a>.</p>
 
-<div class="container">
-<div class="row">
-<div class="embed-responsive embed-responsive-16by9">
-	<iframe width="420" height="315" src="//www.youtube.com/embed/1EiqELgKp5g"></iframe>
-<div class="embed-responsive embed-responsive-16by9">
-</div>
-</div>
-
-This code extracts the attributes of the links in the table and changes them into characters.
-
+This code extracts the attributes of the URL in the table and changes them into characters.
 
 <pre><code class="r">
-html %>>%
+html(html) %>>%
         html_nodes(stats_id) %>>%
         html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
 </code></pre>
@@ -84,23 +76,65 @@ Using R formatting code we delete unnecessary rows and create a column called <i
 
 <pre><code class="r">
 df %>>% nrow() -> rows
+df[1:rows,] -> df
+df=df[!na.omit(df$Rk=='Rk'),]
+df$season <- c(season)
+
+bref_player_id=substr(bref_player_id, 23,34)
+df$bref_player_id <- c(bref_player_id)
+
+minors_batting_ARI <- rbind(minors_batting_ARI,df) #Finally, bind the tables together.
+</code></pre>
+
+<pre><code class="r">
+#to view the dataset and save it as a .csv
+View(minors_batting_ARI)
+minors_batting_ARI %>% write.csv('/home/michael/R/Github-mdlee12/MiLB_Scraper_Batting/minors_batting_ARI.csv')
+</code></pre>
+
+<p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
+<figure>
+<img src="{{ site.url }}/images/minors_batting_ARI.jpg">
+<figcaption>That scraper took a lot of GRIT, well done.</figcaption>
+</figure>
+
+<h5>Here is the code in it's entirety:</h5>
+<pre><code class="r">
+#install.packages("devtools")
+#install_github("hadley/rvest")
+c('rvest','dplyr','pipeR') -> packages
+lapply(packages, library, character.only = T)
+url <- "http://www.baseball-reference.com/minors/"
+'#team_batting.sortable.stats_table' -> stats_table
+stats_table %>>% paste0(stats_table,' a') -> stats_id
+minors_batting_ARI <- data.frame()
+
+for (season in 2014:2012) {
+html <- paste(url,"affiliate.cgi?id=","ARI","&year=",season,sep="")
+
+html(html) %>%
+	html_nodes(stats_table) %>%
+	html_table(header = T) %>%
+	data.frame() %>%
+	tbl_df() -> df
+
+html(html) %>>%
+        html_nodes(stats_id) %>>%
+        html_attr(name="href") %>>% unlist %>>% as.character -> bref_player_id
+df %>>% nrow() -> rows
     df[1:rows,] -> df
 df=df[!na.omit(df$Rk=='Rk'),]
 df$season <- c(season)
 bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
-</code></pre>
 
-Finally, bind the tables together.
-
-<pre><code class="r">
 minors_batting_ARI <- rbind(minors_batting_ARI,df)
+}
 </code></pre>
-
-<p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
-
 
 <p>...but enough about teams built on <i>grit</i>. Let's pull in <strong>all MiLB batting statistics since 2000</strong>.</p>
+
+##MiLB Batting Stats for All Teams
 
 <p>First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
 
