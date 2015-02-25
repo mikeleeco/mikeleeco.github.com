@@ -96,7 +96,7 @@ minors_batting_ARI %>% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_A
 <p>There we are! Arizona's minor league batting stats from 2012-2014!</p>
 <div class="container">
 <figure>
-<img src="{{ site.url }}/images/minors_batting_ARI.jpg">
+<img src="{{ site.url }}/images/minors_batting_ARI.jpg" class="img-responsive">
 <figcaption>That scraper took a lot of GRIT, well done.</figcaption>
 </figure>
 </div>
@@ -180,7 +180,7 @@ minors_batting <- rbind(minors_batting,df)
 <div class="container">
 <div class="row">
 <figure>
-<img src="{{ site.url }}/images/sys_time_MiLB.jpg">
+<img src="{{ site.url }}/images/sys_time_MiLB.jpg" class="img-responsive">
 </figure>
 </div></div>
 The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. 
