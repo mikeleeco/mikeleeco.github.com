@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<div class="container">
-<div class="row">
     {% for post in site.posts %}
     <div class="post">
       <a href="{{ post.url }}">
