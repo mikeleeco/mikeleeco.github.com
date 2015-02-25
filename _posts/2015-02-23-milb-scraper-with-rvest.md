@@ -178,9 +178,10 @@ minors_batting <- rbind(minors_batting,df)
 
 <figure>
 <img src="{{ site.url }}/images/sys_time_MiLB.jpg">
-<figcaption>The query takes a while, but it's worth it!</figcaption>
 </figure>
-<strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. Stay tuned to the site for another post about who Kris Bryant is most similar to!
+The query takes about a 1:45 for every league-wide season pull.<strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. 
+
+<h4>Coming up...</h4>Stay tuned to the site for another post about similarity scores and who Kris Bryant is most similar to!
 
 <hr>
 
