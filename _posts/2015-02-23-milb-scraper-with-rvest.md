@@ -84,6 +84,7 @@ bref_player_id=substr(bref_player_id, 23,34)
 df$bref_player_id <- c(bref_player_id)
 
 minors_batting_ARI <- rbind(minors_batting_ARI,df) #Finally, bind the tables together.
+} 
 </code></pre>
 
 <pre><code class="r">
