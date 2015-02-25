@@ -30,7 +30,6 @@ layout: default
 <h1><strong><p class="text-center">Recent Posts</p></strong></h1>
 <div class="container">
 <div class="row">
-  <div class="col-sm-6 col-md-4">
     {% for post in site.related_posts limit:3 %}
     <div class="thumbnail">
       <img "/images/{{ post.image.teaser }}" class="img-responsive" alt="{{ page.title }}" itemprop="image">
@@ -40,7 +39,6 @@ layout: default
 	<a href="{{ post.url }}">
         <p>{{ post.description }}</p>
         <p><a href="{{ post.url }}"> class="btn btn-primary" role="button">Read more...</a></a></p>
-      </div>
     </div>
   {% endfor %}
   </div>
