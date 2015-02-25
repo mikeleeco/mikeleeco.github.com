@@ -1,26 +1,51 @@
-# Dependencies
+# Setup
+title:               middlee
+tagline:             'Data Visualization, Analysis, and Statistical Musings'
+description: 	     "Personal website of data scientist Michael Lee."
+url:                 http://middlee.com
+baseurl:             /
+locale: en_US
+
+# Jekyll configuration
+
+permalink: /:categories/:title/
+lsi: true
+relative_permalinks: true
 markdown:            kramdown
 highlighter:         pygments
 parse_block_html:    true
 
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: /:categories/:title/
-relative_permalinks: true
 
-# Setup
-title:               middlee
-tagline:             'Data Visualization, Analysis, and Statistical Musings'
-description:         'Interested in learning more? Check out my <a href="https://github.com/mdlee12" target="_blank">Github</a>, follow me on <a href="https://twitter.com/mlee_mke" target="_blank">Twitter</a>, or connect with me on <a href="https://www.linkedin.com/in/middlee" target="_blank">Linkedin</a>.'
-url:                 http://middlee.com
-baseurl:             /
+# Plugin: jekyll-archives
 
-# About/contact
-author:
-  name:              Michael Lee
-  url:               https://twitter.com/mlee_mke
-  email:             mdlee12@gmail.com
+jekyll-archives:
+  enabled:
+    - tags
+    - year
+  layouts:
+    year: year_index
+    tag: tag_index
+  permalinks:
+    year: /:year/
+    tag: /tag/:name/
+
+
+# Site owner
+
+owner:
+  name: Michael Lee
+  email: mdlee12@gmail.com
+  twitter: mlee_mke
+  github: mdlee12
+  github-repo: https://github.com/mdlee12/mdlee12.github.com
+  google:
+    ad-client: 
+    ad-slot: 
+    analytics: 
+    plus: 
+    verify: 
+  bio: ""
+  avatar: .jpg # 160x160 px image for author byline
 
 # Custom vars
 current_version:  1.0.0
