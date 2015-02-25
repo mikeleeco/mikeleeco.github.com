@@ -1,6 +1,7 @@
 # Dependencies
 markdown:            kramdown
 highlighter:         pygments
+parse_block_html:    true
 
 # Permalinks
 #
