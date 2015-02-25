@@ -65,6 +65,10 @@ tbl_df() -> df
     <iframe class="embed-responsive-item" src="//www.youtu.be/1EiqELgKp5g?t=56s"></iframe>
 </div>
 
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.youtube.com/1EiqELgKp5g"></iframe>
+</div>
+
 This code extracts the attributes of the links in the table and changes them into characters.
 
 
