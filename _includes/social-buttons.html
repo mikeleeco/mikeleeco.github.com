@@ -21,4 +21,18 @@ $(".js-social-share").on("click", function(e) {
   windowPopup($(this).attr("href"), 500, 300);
 });
 </script>
+<script>
+function windowPopup(url, width, height) {
+// Vanilla JavaScript
+var jsSocialShares = document.querySelectorAll(".js-social-share");
+if (jsSocialShares) {
+  [].forEach.call(jsSocialShares, function(anchor) {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      windowPopup(this.href, 500, 300);
+    });
+  });
+}
+</script>
 
