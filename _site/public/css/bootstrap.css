@@ -3889,6 +3889,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  margin-top: 8px;
   font-size: 20px;
 }
 .nav > li > a:hover,
@@ -4073,7 +4074,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 75px;
   margin-bottom: 0px;
   border: 1px solid transparent;
 }
@@ -4183,7 +4184,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   height: 50px;
-  padding: 8px 15px;
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
 }
