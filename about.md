@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="jumbotron">
+<h1>About Michael Lee</h1>
+</div></div>
 <div class="container">
-<h1>www.middlee.com</h1>
-</div>
 <div class="col-md-12">
 <p class="lead">
 Welcome to middlee.com, a website of data visualizations, analysis, inquiry and thoughtless musings. I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). I keep this site to display my work, and I hope you find it interesting! If you do, let me know!</p></div>
