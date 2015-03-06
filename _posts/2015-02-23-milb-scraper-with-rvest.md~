@@ -38,11 +38,11 @@ lapply(packages, library, character.only = T)
 
 <p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
-<pre><code class="r">
+<code class="r">
 url <- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
-</code></pre>
+</code>
 
 <p>
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
