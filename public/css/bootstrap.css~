@@ -264,9 +264,9 @@ th {
   select {
     background: #fff !important;
   }
-  .navbar {
-    display: none;
-  }
+.navbar { 
+margin-bottom:0px;
+}
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -4073,7 +4073,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -6852,4 +6852,3 @@ width: 120px;
 .popover.right .arrow:after {
 border-right-color: #e74c3c;
 }
-
