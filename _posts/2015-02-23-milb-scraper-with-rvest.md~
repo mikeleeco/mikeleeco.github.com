@@ -168,8 +168,7 @@ minors_batting <- rbind(minors_batting,df)
 </code></pre>
 
 To query other seasons or teams, simply change the information selected. For example:
-<pre><code class="r">
-teams=c("OAK","TBD")
+<pre><code class="r">teams=c("OAK","TBD")
 
 '#team_batting.sortable.stats_table' -> stats_table
 stats_table %>>% paste0(stats_table,' a') -> stats_id
