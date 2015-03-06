@@ -11,7 +11,7 @@ layout: default
 
 <div class="container"> 
 	<div class="row"> 
-		<img src="/images/{{ page.image.feature }}" class="img-responsive" alt="{{ page.title }}" itemprop="image">
+		<img src="/images/{{ page.image.teaser }}" class="img-responsive" alt="{{ page.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div><!-- /.page-image -->
 	      <div class="page-title">
