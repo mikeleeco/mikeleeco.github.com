@@ -1560,7 +1560,7 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 9.5px;
+  padding: 2px;
   margin: 0 0 10px;
   font-size: 13px;
   line-height: 1.42857143;
@@ -4074,7 +4074,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 75px;
+  min-height: 60px;
   margin-bottom: 0px;
   border: 1px solid transparent;
 }
@@ -6642,7 +6642,7 @@ margin-bottom: 25px;
   display: inline-block;
   max-width: 100%;
   height: auto;
-  padding: 4px;
+  padding: 15px;
   line-height: 1.42857143;
   background-color: #fff;
   border: 1px solid #ddd;

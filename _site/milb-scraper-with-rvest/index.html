@@ -34,7 +34,6 @@ Let's make our own damn database!
 
 To make our database we're going to use rvest, an R package designed by Hadley Wickham at RStudio 1. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:
 
-
 #if you haven't done so already, install rvest from Wickham's github repository
 #install.packages("devtools")
 #install_github("hadley/rvest")
@@ -45,7 +44,6 @@ lapply(packages, library, character.only = T)
 
 The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.
 
-
 url &lt;- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -&gt; stats_table
 stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
@@ -53,7 +51,6 @@ stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
 
 
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable "minors_batting_ARI". We're reconstructing the url http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&amp;year=2014 and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.
-
 
 minors_batting_ARI &lt;- data.frame()
 #select the seasons you wish to pull starting with the most recent
@@ -71,7 +68,6 @@ So far our code will scrape the batting table from the team's minor league page,
 
 This code extracts the attributes of the URL in the table and changes them into characters.
 
-
 html(html) %&gt;&gt;%
         html_nodes(stats_id) %&gt;&gt;%
         html_attr(name="href") %&gt;&gt;% unlist %&gt;&gt;% as.character -&gt; bref_player_id
@@ -79,7 +75,6 @@ html(html) %&gt;&gt;%
 
 
 Using R formatting code we delete unnecessary rows and create a column called bref_player_id to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.
-
 
 
 df %&gt;&gt;% nrow() -&gt; rows
@@ -92,7 +87,6 @@ df$bref_player_id &lt;- c(bref_player_id)
 
 minors_batting_ARI &lt;- rbind(minors_batting_ARI,df) #Finally, bind the tables together.
 } 
-
 
 
 #to view the dataset and save it as a .csv
@@ -108,7 +102,6 @@ That scraper took a lot of GRIT, well done.
 
 
 Here is the code in it's entirety:
-
 #install.packages("devtools")
 #install_github("hadley/rvest")
 c('rvest','dplyr','pipeR') -&gt; packages
@@ -147,9 +140,7 @@ MiLB Batting Stats for All Teams
 
 First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data 2.
 
-
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
-
 
 
 url &lt;- "http://www.baseball-reference.com/minors/"
@@ -184,7 +175,6 @@ minors_batting &lt;- rbind(minors_batting,df)
 
 
 To query other seasons or teams, simply change the information selected. For example:
-
 teams=c("OAK","TBD")
 
 '#team_batting.sortable.stats_table' -&gt; stats_table
@@ -298,8 +288,7 @@ One area of relatively limited accessibility to the average fan is statistics fo
 
 To make our database we're going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio <sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:
 
-<pre><code class="r">
-#if you haven't done so already, install rvest from Wickham's github repository
+<pre><code class="r">#if you haven't done so already, install rvest from Wickham's github repository
 #install.packages("devtools")
 #install_github("hadley/rvest")
 c('rvest','dplyr','pipeR') -&gt; packages
@@ -309,8 +298,7 @@ lapply(packages, library, character.only = T)
 
 <p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
 
-<pre><code class="r">
-url &lt;- "http://www.baseball-reference.com/minors/"
+<pre><code class="r">url &lt;- "http://www.baseball-reference.com/minors/"
 '#team_batting.sortable.stats_table' -&gt; stats_table
 stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
 </code></pre>
@@ -318,8 +306,7 @@ stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
 <p>
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&amp;year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
 
-<pre><code class="r">
-minors_batting_ARI &lt;- data.frame()
+<pre><code class="r">minors_batting_ARI &lt;- data.frame()
 #select the seasons you wish to pull starting with the most recent
 for (season in 2014:2012) { 
 html &lt;- paste(url,"affiliate.cgi?id=","ARI","&amp;year=",season,sep="")
@@ -335,8 +322,7 @@ html(html) %&gt;%
 
 This code extracts the attributes of the URL in the table and changes them into characters.
 
-<pre><code class="r">
-html(html) %&gt;&gt;%
+<pre><code class="r">html(html) %&gt;&gt;%
         html_nodes(stats_id) %&gt;&gt;%
         html_attr(name="href") %&gt;&gt;% unlist %&gt;&gt;% as.character -&gt; bref_player_id
 </code></pre>
@@ -345,8 +331,7 @@ html(html) %&gt;&gt;%
 Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player's unique reference id. We're trimming out characters from the href attributes we don't need, leaving only the reference ids.
 
 
-<pre><code class="r">
-df %&gt;&gt;% nrow() -&gt; rows
+<pre><code class="r">df %&gt;&gt;% nrow() -&gt; rows
 df[1:rows,] -&gt; df
 df=df[!na.omit(df$Rk=='Rk'),]
 df$season &lt;- c(season)
@@ -358,8 +343,7 @@ minors_batting_ARI &lt;- rbind(minors_batting_ARI,df) #Finally, bind the tables 
 } 
 </code></pre>
 
-<pre><code class="r">
-#to view the dataset and save it as a .csv
+<pre><code class="r">#to view the dataset and save it as a .csv
 View(minors_batting_ARI)
 minors_batting_ARI %&gt;% write.csv('/Desktop/MiLB_Scraper_Batting/minors_batting_ARI.csv')
 </code></pre>
@@ -372,8 +356,7 @@ minors_batting_ARI %&gt;% write.csv('/Desktop/MiLB_Scraper_Batting/minors_battin
 </figure>
 </div>
 <h4>Here is the code in it's entirety:</h4>
-<pre><code class="r">
-#install.packages("devtools")
+<pre><code class="r">#install.packages("devtools")
 #install_github("hadley/rvest")
 c('rvest','dplyr','pipeR') -&gt; packages
 lapply(packages, library, character.only = T)
@@ -411,12 +394,10 @@ minors_batting_ARI &lt;- rbind(minors_batting_ARI,df)
 
 <p>First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
 
-<pre><code class="r">
-teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
+<pre><code class="r">teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 </code></pre>
 
-<pre><code class="r">
-url &lt;- "http://www.baseball-reference.com/minors/"
+<pre><code class="r">url &lt;- "http://www.baseball-reference.com/minors/"
 teams=c("ARI","ATL","BAL","BOS","CHC","CHW","CIN","CLE","COL","DET","HOU","KCR","ANA","LAD","FLA","MIL","MIN","NYM","NYY","OAK","PHI","PIT","SDP","SFG","SEA","STL","TBD","TEX","TOR","WSN")
 '#team_batting.sortable.stats_table' -&gt; stats_table
 stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
@@ -448,8 +429,7 @@ minors_batting &lt;- rbind(minors_batting,df)
 </code></pre>
 
 To query other seasons or teams, simply change the information selected. For example:
-<pre><code class="r">
-teams=c("OAK","TBD")
+<pre><code class="r">teams=c("OAK","TBD")
 
 '#team_batting.sortable.stats_table' -&gt; stats_table
 stats_table %&gt;&gt;% paste0(stats_table,' a') -&gt; stats_id
