@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="jumbotron">
 <h1>About Michael Lee</h1>
-</div>
+</div></div>
 <div class="container">
 <div class="col-md-12">
 <p class="lead">
