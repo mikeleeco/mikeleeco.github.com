@@ -95,7 +95,8 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form class="form-horizontal" name="_next" method="POST" action="http://formspree.io/mdlee12@gmail.com" input="" type="hidden" value="//middlee.com/about" />
+			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
@@ -120,7 +121,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
 				</div>
 			    </div>
-			
+			</form>
 		<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
 		</script>
@@ -158,7 +159,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
     			<p>© 2015 middlee.com</p>
 		</div>
 		<div class="navbar-text pull-right">
-			 <a href="mailto:mdlee12@gmail.com"><i class="fa fa-envelope-o fa-2x"></i>
+			 <a href="#myModal" data-toggle="modal"><i class="fa fa-envelope-o fa-2x"></i>
 			 <a href="http://twitter.com/mlee_mke"><i class="fa fa-twitter fa-2x"></i>
 			 <a href="http://linkedin.com/in/middlee"><i class="fa fa-linkedin fa-2x"></i>
 			 <a href="http://github.com/mdlee12"><i class="fa fa-github fa-2x"></i>
