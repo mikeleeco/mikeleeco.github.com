@@ -76,10 +76,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 </div>
 </div>
 </div>
-<hr />
+<hr></hr>
 
 </div>
-      </div>
-      </div>
-      </div>
 </div>
