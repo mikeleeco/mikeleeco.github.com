@@ -1,5 +1,5 @@
-
-		<a href="#myModal" data-toggle="modal">Send me an email!</a>
+	<div class="container">
+		<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Send me an email!</a>
 	    	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	      	  <div class="modal-dialog">
 	       	  <div class="modal-content">
@@ -38,4 +38,6 @@
 		</div><!-- End of Modal content -->
 		</div><!-- End of Modal dialog -->
 	    </div>
+	</div>
+
 
