@@ -21,8 +21,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 </div>
 <div class=".col-xs-6 .col-sm-6">
 <h1><small>Email</small></h1>
-
-	<a href="http://middlee.com/contact">Send me an email!</a>
+<a href="http://middlee.com/contact">Send me an email!</a>
 
 <h1><small>Github</small></h1>
 <a href="https://github.com/mdlee12">Contribute to my code.</a>
