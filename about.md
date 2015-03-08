@@ -31,7 +31,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com" input type="hidden" name="_next" value="//middlee.com/about" />
+			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com" input type="hidden" name="_next" value="middlee.com/about">
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
