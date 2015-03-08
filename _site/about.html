@@ -95,7 +95,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			<form class="form-horizontal" name="_next" method="POST" action="http://formspree.io/mdlee12@gmail.com" input="" type="hidden" value="//middlee.com/about" />
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
@@ -117,10 +117,13 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			    </div>
 			    <div class="form-group">
 				<div class="col-md-6">
-				    <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
+				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
 				</div>
 			    </div>
-			</form>
+			
+		<script>
+		$('#send_btn').popover({content: 'Thank You'},'click');	
+		</script>
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
@@ -143,7 +146,8 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 <hr />
 
 </div>
-      </div>
+</div>
+
       </div>
       </div>
 </div>
