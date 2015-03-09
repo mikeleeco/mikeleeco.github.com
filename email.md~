@@ -34,22 +34,22 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			<form id="commentForm" class="form-horizontal" method="post" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
-				<label class="control-label col-md-4">Name</label>
+				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control required" name="name">
+				    <input type="text" class="form-control required" id="name" name="name" placeholder="Name" />
 				</div>
 			    </div>
 			    <div class="form-group">
-				<label class="control-label col-md-4">Your Email Address</label>
+				<label class="control-label col-md-4" for="email">Your Email Address</label>
 				<div class="col-md-6 input-group">
 				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" name="email">
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" />
 				</div>
 			    </div>
 			    <div class="form-group">
-				<label class="control-label col-md-4">Question or Comment</label>
+				<label class="control-label col-md-4" for="comment">Question or Comment</label>
 				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" name="comments"></textarea>
+				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -59,42 +59,38 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			    </div>
 			</form>
 	<script>
-		$(document).ready(function() {
-		    $('#commentForm')
-			.formValidation({
-			    ...
-			})
-			.on('success.form.fv', function(e) {
-			    // Prevent form submission
-			    e.preventDefault();
-
-			    var $form = $(e.target),                  // The form instance
-				bv    = $form.data('formValidation'); // FormValidation instance
-
-			    // Use Formspree to submit form data
-			    $.post($form.attr('action'), $form.serialize(), function(result) {
-				// ... Process the result ...
-			    }, 'json');
-			});
-
-		    // Login button click handler
-		    $('#send_btn').on('click', function() {
-			// Same code as above
-			.formValidation({
-			    ...
-			})
-			.on('success.form.fv', function(e) {
-			    // Prevent form submission
-			    e.preventDefault();
-
-			    var $form = $(e.target),                  // The form instance
-				bv    = $form.data('formValidation'); // FormValidation instance
-
-			    // Use Formspree to submit form data
-			    $.post($form.attr('action'), $form.serialize(), function(result) {
-				// ... Process the result ...
-			    }, 'json');
-			});
+	   
+	$(document).ready(function() {
+ 		$('#commentForm').formValidation({
+			framework: 'bootstrap',
+			icon: {
+			    valid: 'glyphicon glyphicon-ok',
+			    invalid: 'glyphicon glyphicon-remove',
+			    validating: 'glyphicon glyphicon-refresh'
+			},
+			fields: {
+			    name: {
+				validators: {
+				    notEmpty: {
+				        message: 'Name is a required field'
+				    }
+				}
+			    },
+			    email: {
+				validators: {
+				    notEmpty: {
+				        message: 'Email is a required field'
+				    }
+				}
+			    },
+			    comments: {
+				validators: {
+				    notEmpty: {
+				        message: 'Comments is a required field'
+				    }
+				}
+			    }
+			}
 		    });
 		});
 	</script>
