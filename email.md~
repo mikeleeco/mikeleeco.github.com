@@ -31,118 +31,81 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<div class="form-group" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			<form id="commentForm" class="form-horizontal" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
-			 	<label>Name</label>
-                      			<input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text">
-                </div>
+				<label class="control-label col-md-4" for="name">Name</label>
+				<div class="col-md-6">
+				    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+				</div>
+			    </div>
 			    <div class="form-group">
-				<label>E-Mail</label>
-                    			<input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
-                </div>
+				<label class="control-label col-md-4" for="email">Your Email Address</label>
+				<div class="col-md-6 input-group">
+				<span class="input-group-addon">@</span>
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+				</div>
+			    </div>
 			    <div class="form-group">
-				 <label>Message</label>
-                    <textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>
-                </div>
+				<label class="control-label col-md-4" for="comment">Question or Comment</label>
+				<div class="col-md-6">
+				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				</div>
+			    </div>
 			    <div class="form-group">
-                      	<button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
-                    <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
-                	</div>
-		</div>
-               </div>
-	</div>
-	</div>
+				<div class="col-md-6">
+				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
+				</div>
+			    </div>
+			</form>
 	<script>
-		/* form validation plugin */
-		$.fn.goValidate = function() {
-		    var $form = this,
-			$inputs = $form.find('input:text');
-		  
-		    var validators = {
-			name: {
-			    regex: /^[A-Za-z]{3,}$/
-			},
-			email: {
-			    regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
-			},
-			comments: {
-			    regex: /^[A-Za-z]{3,}$/
-			},
-		    };
-		    var validate = function(klass, value) {
-			var isValid = true,
-			    error = '';
-			    
-			if (!value && /required/.test(klass)) {
-			    error = 'This field is required';
-			    isValid = false;
-			} else {
-			    klass = klass.split(/\s/);
-			    $.each(klass, function(i, k){
-				if (validators[k]) {
-				    if (value && !validators[k].regex.test(value)) {
-				        isValid = false;
-				        error = validators[k].error;
-				    }
+		(function($,W,D)
+		{
+		    var JQUERY4U = {};
+		 
+		    JQUERY4U.UTIL =
+		    {
+			setupFormValidation: function()
+			{
+			    //form validation rules
+			    $("#commentForm").validate({
+				rules: {
+				    name: "required",
+				    email: {
+				        required: true,
+				        email: true
+				    },
+				    comments: "required"
+				},
+				messages: {
+				    name: "Please enter your Name",
+				    email: "Please enter a valid email address",
+				    comments: "Please enter your message"
+				},
+				submitHandler: function(form) {
+				    form.submit();
 				}
 			    });
 			}
-			return {
-			    isValid: isValid,
-			    error: error
-			}
-		    };
-		    var showError = function($input) {
-			var klass = $input.attr('class'),
-			    value = $input.val(),
-			    test = validate(klass, value);
-		      
-			$input.removeClass('invalid');
-			$('#form-error').addClass('hide');
-		
-			if (!test.isValid) {
-			    $input.addClass('invalid');
-			    
-			    if(typeof $input.data("shown") == "undefined" || $input.data("shown") == false){
-			       $input.popover('show');
-			    }
-			    
-			}
-		      else {
-			$input.popover('hide');
-		      }
-		    };
-		   
-		    $inputs.keyup(function() {
-			showError($(this));
+		    }
+		 
+		    //when the dom has loaded setup form validation rules
+		    $(D).ready(function($) {
+			JQUERY4U.UTIL.setupFormValidation();
 		    });
-		  
-		    $inputs.on('shown.bs.popover', function () {
-		  		$(this).data("shown",true);
-			});
-		  
-		    $inputs.on('hidden.bs.popover', function () {
-		  		$(this).data("shown",false);
-			});
-		  
-		    $form.submit(function(e) {
-		      
-			$inputs.each(function() { /* test each input */
-				if ($(this).is('.required') || $(this).hasClass('invalid')) {
-			    	showError($(this));
-				}
-		    	});
-			if ($form.find('input.invalid').length) { /* form is not valid */
-				e.preventDefault();
-			    $('#form-error').toggleClass('hide');
-			}
-		    });
-		    return this;
-		};
-		$('form').goValidate();
+		 
+		})(jQuery, window, document);
 	</script>
-	</div>
+	<script>
+		$('#send_btn').popover({content: 'Thank You'},'click');	
+	</script>
+
+        </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div>
+
+
 
 
 <h1><small>Github</small></h1>
