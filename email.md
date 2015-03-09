@@ -22,7 +22,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 <div class=".col-xs-6 .col-sm-6">
 <h1><small>Email</small></h1>
 
-<a href="#myModal" data-toggle="modal">Send me an email!</a>
+	<a href="#myModal" data-toggle="modal">Send me an email!</a>
     	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       	  <div class="modal-dialog">
        	  <div class="modal-content">
@@ -61,7 +61,6 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
 		</script>
-
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
@@ -85,3 +84,4 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 
 </div>
 </div>
+

@@ -22,7 +22,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 <div class=".col-xs-6 .col-sm-6">
 <h1><small>Email</small></h1>
 
-	<a href="#myModal" data-toggle="modal">Send me an email!</a>
+<a href="#myModal" data-toggle="modal">Send me an email!</a>
     	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       	  <div class="modal-dialog">
        	  <div class="modal-content">
@@ -31,7 +31,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form id="commentForm" class="form-horizontal" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
@@ -43,7 +43,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				<label class="control-label col-md-4" for="email">Your Email Address</label>
 				<div class="col-md-6 input-group">
 				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" />
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -58,10 +58,9 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-
-	<script>
+		<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
-	</script>
+		</script>
 
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
