@@ -31,7 +31,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			<form id="commentForm" form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
@@ -60,7 +60,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			</form>
 	<script>
 	$(document).ready(function() {
-	    $('#send_btn').formValidation({
+	    $('#commentForm').formValidation({
 		framework: 'bootstrap',
 		icon: {
 		    valid: 'glyphicon glyphicon-ok',
