@@ -54,7 +54,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	</div>
 	</div>
 
-		<script>
+	<script>
 		/* form validation plugin */
 		$.fn.goValidate = function() {
 		    var $form = this,
