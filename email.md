@@ -34,29 +34,22 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			<form id="commentForm" class="form-horizontal" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
-				<label class="control-label col-md-4" for="name">Name</label>
-				<div class="col-md-6">
-				    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
-				</div>
-			    </div>
+			 	<label>Name</label>
+                      			<input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text">
+                </div>
 			    <div class="form-group">
-				<label class="control-label col-md-4" for="email">Your Email Address</label>
-				<div class="col-md-6 input-group">
-				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-				</div>
-			    </div>
+				<label>E-Mail</label>
+                    			<input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
+                </div>
 			    <div class="form-group">
-				<label class="control-label col-md-4" for="comment">Question or Comment</label>
-				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
-				</div>
-			    </div>
+				 <label>Message</label>
+                    <textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>
+                </div>
 			    <div class="form-group">
-				<div class="col-md-6">
-				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
+                      	<button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
+                    <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
+                </div>
 				</div>
-			    </div>
 			</form>
 		<script>
 		/* form validation plugin */
@@ -68,15 +61,12 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			name: {
 			    regex: /^[A-Za-z]{3,}$/
 			},
-			pass: {
-			    regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
-			},
 			email: {
 			    regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
 			},
-			phone: {
-			    regex: /^[2-9]\d{2}-\d{3}-\d{4}$/,
-			}
+			comments: {
+			    regex: /^[A-Za-z]{3,}$/
+			},
 		    };
 		    var validate = function(klass, value) {
 			var isValid = true,
@@ -153,12 +143,6 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
 	</script>
-
-        </div><!-- End of Modal body -->
-        </div><!-- End of Modal content -->
-        </div><!-- End of Modal dialog -->
-    </div>
-
 
 
 
