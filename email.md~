@@ -51,9 +51,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
                 	</div>
 		</div>
                </div>
-	</div>
-	</div>
-	</div>
+
 	<script>
 		/* form validation plugin */
 		$.fn.goValidate = function() {
@@ -143,7 +141,9 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		};
 		$('form').goValidate();
 	</script>
-
+	</div>
+	</div>
+	</div>
 
 
 <h1><small>Github</small></h1>
