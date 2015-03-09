@@ -49,7 +49,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			    <div class="form-group">
 				<label class="control-label col-md-4" for="comment">Question or Comment</label>
 				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				    <input type="text" textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -58,9 +58,37 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-		<script>
+	<script>
+		$(document).ready(function () {
+
+		$('#commentForm').validate({
+		    rules: {
+			name: {
+			    minlength: 1,
+			    required: true
+			},
+			email: {
+			    required: true,
+			    email: true
+			},
+			comments: {
+			    minlength: 1,
+			    required: true
+			}
+		    },
+		    highlight: function (element) {
+			$(element).closest('.control-group').removeClass('success').addClass('error');
+		    },
+		    success: function (element) {
+			element.text('OK!').addClass('valid')
+			    .closest('.control-group').removeClass('error').addClass('success');
+		    }
+		});
+		});
+	</script>
+	<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
-		</script>
+	</script>
 
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
