@@ -31,7 +31,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form id="commentForm" class="form-horizontal" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			<div class="form-group" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
 			 	<label>Name</label>
@@ -48,11 +48,11 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			    <div class="form-group">
                       	<button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
                     <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
-                </div>
-				</div>
-                </div>
-				</div>
+                	</div>
 			</form>
+		</div>
+               </div>
+	</div>
 		<script>
 		/* form validation plugin */
 		$.fn.goValidate = function() {
