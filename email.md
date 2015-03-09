@@ -63,7 +63,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		</script>
 	<script>
 	$(document).ready(function() {
-	    $('#myModal').formValidation({
+	    $('#send_btn').formValidation({
 		framework: 'bootstrap',
 		icon: {
 		    valid: 'glyphicon glyphicon-ok',
@@ -91,7 +91,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		                message: 'Comments is a required field'
 		            }
 		        }
-		    },
+		    }
 		}
 	    });
 	});
