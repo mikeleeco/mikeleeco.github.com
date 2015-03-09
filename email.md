@@ -60,7 +60,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			</form>
 	<script>
 	$(document).ready(function() {
-	    $('#send_btn').formValidation({
+	    $('#commentform').formValidation({
 		framework: 'bootstrap',
 		icon: {
 		    valid: 'glyphicon glyphicon-ok',
