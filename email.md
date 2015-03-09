@@ -54,11 +54,50 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			    </div>
 			    <div class="form-group">
 				<div class="col-md-6">
-				    <button type="submit"class="btn btn-custom pull-right" id="send_btn">Send</button>
+				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
 				</div>
 			    </div>
 			</form>
+	<script>
+		$(document).ready(function() {
+		    $('#commentForm')
+			.formValidation({
+			    ...
+			})
+			.on('success.form.fv', function(e) {
+			    // Prevent form submission
+			    e.preventDefault();
 
+			    var $form = $(e.target),                  // The form instance
+				bv    = $form.data('formValidation'); // FormValidation instance
+
+			    // Use Formspree to submit form data
+			    $.post($form.attr('action'), $form.serialize(), function(result) {
+				// ... Process the result ...
+			    }, 'json');
+			});
+
+		    // Login button click handler
+		    $('#send_btn').on('click', function() {
+			// Same code as above
+			.formValidation({
+			    ...
+			})
+			.on('success.form.fv', function(e) {
+			    // Prevent form submission
+			    e.preventDefault();
+
+			    var $form = $(e.target),                  // The form instance
+				bv    = $form.data('formValidation'); // FormValidation instance
+
+			    // Use Formspree to submit form data
+			    $.post($form.attr('action'), $form.serialize(), function(result) {
+				// ... Process the result ...
+			    }, 'json');
+			});
+		    });
+		});
+	</script>
 
 
 
