@@ -81,7 +81,21 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    // Login button click handler
 		    $('#send_btn').on('click', function() {
 			// Same code as above
-			...
+			.formValidation({
+			    ...
+			})
+			.on('success.form.fv', function(e) {
+			    // Prevent form submission
+			    e.preventDefault();
+
+			    var $form = $(e.target),                  // The form instance
+				bv    = $form.data('formValidation'); // FormValidation instance
+
+			    // Use Formspree to submit form data
+			    $.post($form.attr('action'), $form.serialize(), function(result) {
+				// ... Process the result ...
+			    }, 'json');
+			});
 		    });
 		});
 	</script>
