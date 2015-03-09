@@ -49,12 +49,9 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
                  	  <input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
               	 </div>
                	<div class="form-group">
-                   	<button type="submit" class="btn btn-success pull-right">Send</button>
+                   	<button type="submit"  value="Submit" id="send_btn" class="btn btn-success pull-right">Send</button>
                    	<p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
                 </div>
-            </div>
-          	 <div class="modal-footer">
-              	 <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
             </div>
         </div>
     </div>
