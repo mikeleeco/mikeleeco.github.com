@@ -22,42 +22,43 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 <div class=".col-xs-6 .col-sm-6">
 <h1><small>Email</small></h1>
 
-<a href="#myModal" data-toggle="modal">Send me an email!</a>
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    	   <div class="modal-content"></div>
-    </div>
-    <div class="modal-dialog">
-      	 <div class="modal-content">
-         	  <div class="modal-header">
-	<input type="hidden" name="_next" value="about" />
-               	 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                	 <h3 id="myModalLabel">Contact</h3>
-
-            </div>
-            <div class="modal-body">
-               	<div class="form-group" action="http://formspree.io/mdlee12@gmail.com">
-                  	 <label>Name</label>
-                   	<input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text">
-               	</div>
-              	 <div class="form-group">
-                  	 <label>Message</label>
-                   	<textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>
-                </div>
-              	 <div class="form-group">
-                	   <label>E-Mail</label>
-                 	  <input class="form-control email" placeholder="email@you.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text">
-              	 </div>
-               	<div class="form-group">
-                   	<button type="submit"  value="Submit" id="send_btn" class="btn btn-success pull-right">Send</button>
-                   	<p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-	<script>
+	<a href="#myModal" data-toggle="modal">Send me an email!</a>
+    	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      	  <div class="modal-dialog">
+       	  <div class="modal-content">
+		<div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h4 class="modal-title">Contact Form</h4>
+		</div>
+		<div class="modal-body">
+			<form id="commentForm" class="form-horizontal" name="commentForm" method="POST" action="http://formspree.io/mdlee12@gmail.com">
+			 <input type="hidden" name="_next" value="about" />
+			 <div class="form-group">
+				<label class="control-label col-md-4" for="name">Name</label>
+				<div class="col-md-6">
+				    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+				</div>
+			    </div>
+			    <div class="form-group">
+				<label class="control-label col-md-4" for="email">Your Email Address</label>
+				<div class="col-md-6 input-group">
+				<span class="input-group-addon">@</span>
+				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+				</div>
+			    </div>
+			    <div class="form-group">
+				<label class="control-label col-md-4" for="comment">Question or Comment</label>
+				<div class="col-md-6">
+				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				</div>
+			    </div>
+			    <div class="form-group">
+				<div class="col-md-6">
+				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
+				</div>
+			    </div>
+			</form>
+		<script>
 		/* form validation plugin */
 		$.fn.goValidate = function() {
 		    var $form = this,
@@ -152,6 +153,11 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
 	</script>
+
+        </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div>
 
 
 
