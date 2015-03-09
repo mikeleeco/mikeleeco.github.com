@@ -60,7 +60,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			</form>
 	<script>
 	$(document).ready(function() {
-	    $('#commentform').formValidation({
+	    $('#send_btn').formValidation({
 		framework: 'bootstrap',
 		icon: {
 		    valid: 'glyphicon glyphicon-ok',
@@ -93,9 +93,6 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	    });
 	});
 	</script>
-		<script>
-		$('#send_btn').popover({content: 'Thank You'},'click');	
-		</script>
 
 
 
