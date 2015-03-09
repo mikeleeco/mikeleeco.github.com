@@ -58,44 +58,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-	<script>
-		(function($,W,D)
-		{
-		    var JQUERY4U = {};
-		 
-		    JQUERY4U.UTIL =
-		    {
-			setupFormValidation: function()
-			{
-			    //form validation rules
-			    $("#commentForm").validate({
-				rules: {
-				    name: "required",
-				    email: {
-				        required: true,
-				        email: true
-				    },
-				    comments: "required"
-				},
-				messages: {
-				    name: "Please enter your Name",
-				    email: "Please enter a valid email address",
-				    comments: "Please enter your message"
-				},
-				submitHandler: function(form) {
-				    form.submit();
-				}
-			    });
-			}
-		    }
-		 
-		    //when the dom has loaded setup form validation rules
-		    $(D).ready(function($) {
-			JQUERY4U.UTIL.setupFormValidation();
-		    });
-		 
-		})(jQuery, window, document);
-	</script>
+
 	<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
 	</script>
