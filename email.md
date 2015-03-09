@@ -75,8 +75,44 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	    }
 	  });
 	</script>
+	<script type="text/javascript">
+	  $('#commentForm').on('submit', function(e) {
+	    var email = $('#email');
 
+	    // Check if there is an entered value
+	    if(!email.val()) {
+	      // Add errors highlight
+	      email.closest('.form-group').removeClass('has-success').addClass('has-error');
 
+	      // Stop submission of the form
+	      e.preventDefault();
+	    } else {
+	      // Remove the errors highlight
+	      email.closest('.form-group').removeClass('has-error').addClass('has-success');
+	    }
+	  });
+	</script>
+	<script type="text/javascript">
+	  $('#commentForm').on('submit', function(e) {
+	    var comments = $('#comments');
+
+	    // Check if there is an entered value
+	    if(!comments.val()) {
+	      // Add errors highlight
+	      comments.closest('.form-group').removeClass('has-success').addClass('has-error');
+
+	      // Stop submission of the form
+	      e.preventDefault();
+	    } else {
+	      // Remove the errors highlight
+	      comments.closest('.form-group').removeClass('has-error').addClass('has-success');
+	    }
+	  });
+	</script>
+
+	<script>
+	$('#send_btn').popover({content: 'Thank You'},'click');	
+	</script>
 
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
