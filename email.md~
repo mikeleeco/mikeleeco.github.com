@@ -36,25 +36,25 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			 <div class="form-group">
 				<label class="control-label col-md-4">Name</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control required" id="name" name="name" placeholder="Name" />
+				    <input type="text" class="form-control required" name="name">
 				</div>
 			    </div>
 			    <div class="form-group">
 				<label class="control-label col-md-4">Your Email Address</label>
 				<div class="col-md-6 input-group">
 				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" />
+				    <input type="email" class="form-control" name="email">
 				</div>
 			    </div>
 			    <div class="form-group">
 				<label class="control-label col-md-4">Question or Comment</label>
 				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				    <textarea rows="6" class="form-control" name="comments"></textarea>
 				</div>
 			    </div>
 			    <div class="form-group">
 				<div class="col-md-6">
-				    <button type="submit" value="Submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
+				    <button type="submit" class="btn btn-custom pull-right" id="send_btn">Send</button>
 				</div>
 			    </div>
 			</form>
