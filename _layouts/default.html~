@@ -44,11 +44,11 @@
 		</div>
 		<div class="navbar-text pull-right">
 			 <a href="http://middlee.com/email">
-	<script type="text/javascript">
-		$(window).load(function(){
-		$('#myModal').modal('show');
-		});
-	</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#myModal').modal('show');
+    });
+</script>
 <i class="fa fa-envelope-o fa-2x"></i>
 			 <a href="http://twitter.com/mlee_mke"><i class="fa fa-twitter fa-2x"></i>
 			 <a href="http://linkedin.com/in/middlee"><i class="fa fa-linkedin fa-2x"></i>
