@@ -58,9 +58,6 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-		<script>
-		$('#send_btn').popover({content: 'Thank You'},'click');	
-		</script>
 	<script>
 	$(document).ready(function() {
 	    $('#send_btn').formValidation({
@@ -96,6 +93,10 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 	    });
 	});
 	</script>
+		<script>
+		$('#send_btn').popover({content: 'Thank You'},'click');	
+		</script>
+
 
 
         </div><!-- End of Modal body -->

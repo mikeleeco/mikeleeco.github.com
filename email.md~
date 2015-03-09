@@ -91,7 +91,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		                message: 'Comments is a required field'
 		            }
 		        }
-		    },
+		    }
 		}
 	    });
 	});
