@@ -31,12 +31,12 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 		    <h4 class="modal-title">Contact Form</h4>
 		</div>
 		<div class="modal-body">
-			<form id="commentForm" class="form-horizontal" method="post" action="http://formspree.io/mdlee12@gmail.com">
+			<form class="form-horizontal" name="commentform" method="POST" action="http://formspree.io/mdlee12@gmail.com">
 			 <input type="hidden" name="_next" value="about" />
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control required" id="name" name="name" placeholder="Name" />
+				    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -58,42 +58,13 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-	<script>
-	   
-	$(document).ready(function() {
- 		$('#commentForm').formValidation({
-			framework: 'bootstrap',
-			icon: {
-			    valid: 'glyphicon glyphicon-ok',
-			    invalid: 'glyphicon glyphicon-remove',
-			    validating: 'glyphicon glyphicon-refresh'
-			},
-			fields: {
-			    name: {
-				validators: {
-				    notEmpty: {
-				        message: 'Name is a required field'
-				    }
-				}
-			    },
-			    email: {
-				validators: {
-				    notEmpty: {
-				        message: 'Email is a required field'
-				    }
-				}
-			    },
-			    comments: {
-				validators: {
-				    notEmpty: {
-				        message: 'Comments is a required field'
-				    }
-				}
-			    }
-			}
-		    });
-		});
-	</script>
+		<script>
+		$('#send_btn').popover({content: 'Thank You'},'click');	
+		</script>
+        </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div>
 
 
 
