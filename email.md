@@ -50,6 +50,8 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
                     <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid.</p>
                 </div>
 				</div>
+                </div>
+				</div>
 			</form>
 		<script>
 		/* form validation plugin */
