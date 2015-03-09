@@ -36,20 +36,20 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 			 <div class="form-group">
 				<label class="control-label col-md-4" for="name">Name</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+				    <input type="text" class="form-control required" id="name" name="name" placeholder="Name" />
 				</div>
 			    </div>
 			    <div class="form-group">
 				<label class="control-label col-md-4" for="email">Your Email Address</label>
 				<div class="col-md-6 input-group">
 				<span class="input-group-addon">@</span>
-				    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" />
+				    <input type="email" class="form-control required" id="email" name="email" placeholder="Email Address" />
 				</div>
 			    </div>
 			    <div class="form-group">
 				<label class="control-label col-md-4" for="comment">Question or Comment</label>
 				<div class="col-md-6">
-				    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+				    <textarea rows="6" class="form-control required" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
 				</div>
 			    </div>
 			    <div class="form-group">
@@ -58,40 +58,22 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-	<script>
-	$(document).ready(function() {
-	    $('#commentForm').formValidation({
-		framework: 'bootstrap',
-		icon: {
-		    valid: 'glyphicon glyphicon-ok',
-		    invalid: 'glyphicon glyphicon-remove',
-		    validating: 'glyphicon glyphicon-refresh'
-		},
-		fields: {
-		    name: {
-		        validators: {
-		            notEmpty: {
-		                message: 'Name is a required field'
-		            }
-		        }
-		    },
-		    email: {
-		        validators: {
-		            notEmpty: {
-		                message: 'Email is a required field'
-		            }
-		        }
-		    },
-		    comments: {
-		        validators: {
-		            notEmpty: {
-		                message: 'Comments is a required field'
-		            }
-		        }
-		    }
-		}
-	    });
-	});
+	<script type="text/javascript">
+	  $('#commentForm').on('submit', function(e) {
+	    var name = $('#name');
+
+	    // Check if there is an entered value
+	    if(!name.val()) {
+	      // Add errors highlight
+	      name.closest('.form-group').removeClass('has-success').addClass('has-error');
+
+	      // Stop submission of the form
+	      e.preventDefault();
+	    } else {
+	      // Remove the errors highlight
+	      name.closest('.form-group').removeClass('has-error').addClass('has-success');
+	    }
+	  });
 	</script>
 
 
