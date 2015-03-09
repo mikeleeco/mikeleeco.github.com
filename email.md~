@@ -58,9 +58,9 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-	<script>
+		<script>
 		$('#send_btn').popover({content: 'Thank You'},'click');	
-	</script>
+		</script>
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
