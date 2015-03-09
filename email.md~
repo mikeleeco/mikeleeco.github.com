@@ -58,8 +58,7 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 				</div>
 			    </div>
 			</form>
-		<script>
-	   
+	<script>
 		$(document).ready(function() {
 		    $('#commentForm')
 			.formValidation({
