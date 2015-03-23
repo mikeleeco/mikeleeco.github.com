@@ -5,9 +5,9 @@ description: "Using the Minor League Baseball database to calculate each players
 tags: [R, dplyr, Similarity Scores, data, sports, MiLB, MLB]
 date: 2015-03-11
 image:
-  feature: bryant.jpg
-  teaser: bryant.jpg
-  related: bryant.jpg
+  feature: bryant2.jpg
+  teaser: bryant2.jpg
+  related: bryant2.jpg
 ---
 <div class="container">
 <div class="row">
