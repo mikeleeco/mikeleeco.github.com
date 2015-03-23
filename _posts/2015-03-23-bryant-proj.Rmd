@@ -1,0 +1,31 @@
+---
+title: Performance Projection - Kris Bryant
+author: Michael Lee
+github: {user: mdlee12, repo: bryant-projection, branch: "master"}
+framework: bootstrap
+mode: selfcontained
+highlighter: prettify
+hitheme: twitter-bootstrap
+---
+
+A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at <http://middlee.com/milb-similarity-scores/>.
+
+You can change the y-axis parameters by selecting the performance measure you'd like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.
+
+```{r, echo=FALSE,results='asis',comment=NA}
+library(rCharts)
+options(
+  rcharts.mode = 'iframesrc', 
+  rcharts.cdn = TRUE,
+  RCHART_WIDTH = 600,
+  RCHART_HEIGHT = 400
+)
+bry_age=read.csv("/home/michael/mdlee12.github.com/mdlee12.github.com/bry_age.csv")
+h1=nPlot(HR~Age, data=bry_age, type="lineChart",group="Name")
+h1$addControls("y", value = "HR", values = names(bry_age[, 8:24]))
+h1$yAxis( axisLabel = "Total", width = 50 )
+h1$xAxis( axisLabel = "Age", width = 50 )
+h1$show('iframesrc',cdn=TRUE)
+
+```
+
