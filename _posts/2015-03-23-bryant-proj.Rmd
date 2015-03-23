@@ -21,9 +21,7 @@ You can change the y-axis parameters by selecting the performance measure you'd 
 library(rCharts)
 options(
   rcharts.mode = 'iframesrc', 
-  rcharts.cdn = TRUE,
-  RCHART_WIDTH = 1000,
-  RCHART_HEIGHT = 1000
+  rcharts.cdn = TRUE
 )
 bry_age=read.csv("/home/michael/mdlee12.github.com/mdlee12.github.com/bry_age.csv")
 h1=nPlot(HR~Age, data=bry_age, type="lineChart",group="Name")
