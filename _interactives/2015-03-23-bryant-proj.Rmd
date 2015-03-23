@@ -22,8 +22,8 @@ library(rCharts)
 options(
   rcharts.mode = 'iframesrc', 
   rcharts.cdn = TRUE,
-  RCHART_WIDTH = 600,
-  RCHART_HEIGHT = 400
+  RCHART_WIDTH = 1000,
+  RCHART_HEIGHT = 1000
 )
 bry_age=read.csv("/home/michael/mdlee12.github.com/mdlee12.github.com/bry_age.csv")
 h1=nPlot(HR~Age, data=bry_age, type="lineChart",group="Name")
