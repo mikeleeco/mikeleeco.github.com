@@ -1,4 +1,5 @@
 ---
+layout: interactive
 title: Performance Projection - Kris Bryant
 author: Michael Lee
 github: {user: mdlee12, repo: bryant-projection, branch: "master"}
@@ -6,6 +7,10 @@ framework: bootstrap
 mode: selfcontained
 highlighter: prettify
 hitheme: twitter-bootstrap
+image:
+  feature: bryant2.jpg
+  teaser: bryant2.jpg
+  related: bryant2.jpg
 ---
 
 A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at <http://middlee.com/milb-similarity-scores/>.
