@@ -1,0 +1,48 @@
+---
+layout: interactive
+title: Performance Projection - Kris Bryant
+author: Michael Lee
+github: {user: mdlee12, repo: bryant-projection, branch: "master"}
+framework: bootstrap
+highlighter: prettify
+hitheme: twitter-bootstrap
+image:
+  feature: bryant2.jpg
+  teaser: bryant2.jpg
+  related: bryant2.jpg
+---
+
+A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at <http://middlee.com/milb-similarity-scores/>.
+
+You can change the y-axis parameters by selecting the performance measure you'd like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.
+
+
+```{r, echo=F, warning= F, message=F}
+# make this an external chunk that can be included in any file
+library(rCharts)
+library(knitr)
+options(width = 100)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', tidy = F, fig.path = "/home/michael/mdlee12.github.com/mdlee12.github.com/_posts/")
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+```{r, rChart, echo=FALSE,results='asis',comment=NA}
+bry_age=read.csv("/home/michael/mdlee12.github.com/mdlee12.github.com/bry_age.csv")
+bryant=nPlot(HR~Age, data=bry_age, type="lineChart",group="Name")
+bryant$addControls("y", value = "HR", values = names(bry_age[, 8:24]))
+bryant$yAxis( axisLabel = "Total", width = 50 )
+bryant$xAxis( axisLabel = "Age", width = 50 )
+bryant$save('bryant.html', cdn = TRUE)
+cat('<iframe src="bryant.html" width=100%, height=550></iframe>')
+```
+
+
+Be sure to bookmark my site to check out future visualizations!
