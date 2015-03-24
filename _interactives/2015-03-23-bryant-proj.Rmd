@@ -19,12 +19,7 @@ You can change the y-axis parameters by selecting the performance measure you'd 
 
 ```{r, echo=FALSE,results='asis',comment=NA}
 library(rCharts)
-options(
-  rcharts.mode = 'iframesrc', 
-  rcharts.cdn = TRUE,
-  RCHART_WIDTH = 1000,
-  RCHART_HEIGHT = 1000
-)
+options(rcharts.mode = 'iframe', rcharts.cdn = TRUE)
 bry_age=read.csv("/home/michael/mdlee12.github.com/mdlee12.github.com/bry_age.csv")
 h1=nPlot(HR~Age, data=bry_age, type="lineChart",group="Name")
 h1$addControls("y", value = "HR", values = names(bry_age[, 8:24]))
