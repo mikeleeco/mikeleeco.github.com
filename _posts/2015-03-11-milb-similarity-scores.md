@@ -48,7 +48,7 @@ James' Similarity Score model was designed for major league careers, but let's s
 You might have heard of a few of those names. The issue with these similarities is that they encompass a player's <i>career</i> minor league statistics; we're more interested in the performance of Bryant's same-aged peers. 
 
 <h3>Similarities - Age</h3>
-Let's see how we compares to other 22 year old players:
+Let's see how he compares to other 22 year old players:
 
 <p><div class="table-responsive"><table class="table table-hover">
 <th>Name</th><th>Age</th><th>LevEq</th><th>G</th><th>PA</th><th>AB</th><th>R</th><th>H</th><th>X2B</th><th>X3B</th><th>HR</th><th>RBI</th><th>SB</th><th>CS</th><th>BB</th><th>SO</th><th>BA</th><th>OBP</th><th>SLG</th><th>OPS</th><th>TB</th><th>SS</th></tr>
@@ -65,7 +65,31 @@ Let's see how we compares to other 22 year old players:
  <tr><td>Hunter Pence</td><td>22</td><td>1.0</td><td>172</td><td>737</td><td>652</td><td>119</td><td>207</td><td>40</td><td>5</td><td>39</td><td>127</td><td>12</td><td>10</td><td>79</td><td>120</td><td>0.317</td><td>0.391</td><td>0.574</td><td>0.964</td><td>374</td><td>898</td></tr>
 </table></div></p>
 
-Still a very impressive list. Using these similar players, lets take a play out of the PECOTA playbook and generate some basic projections without adjusting for outside effects (park factors, leagues, league-wide performance shifts, etc). By simply calculating the mean of these top 10 player comparables we can get a general idea of Bryant's future performance.
+Still a very impressive list. Using these similar players, lets take a play out of the PECOTA playbook and generate some basic projections without adjusting for outside effects (park factors, leagues, league-wide performance shifts, etc). By simply calculating the mean of these top 10 player comparables for each statistical category we can get a general idea of Bryant's future performance.
+
+<h3>10 Year Projection - Kris Bryant</h3>
+
+
+<p><div class="table-responsive"><table class="table table-hover"><th>Year</th><th>Age</th><th>LevEq</th><th>G</th><th>PA</th><th>AB</th><th>R</th><th>H</th><th>X2B</th><th>X3B</th><th>HR</th><th>RBI</th><th>SB</th><th>CS</th><th>BB</th><th>SO</th><th>BA</th><th>OBP</th><th>SLG</th><th>OPS</th><th>Count</th></tr>
+ <tr><td>2015</td><td>23</td><td>3</td><td>130</td><td>548</td><td>489</td><td>76</td><td>138</td><td>32</td><td>5</td><td>24</td><td>83</td><td>9</td><td>4</td><td>47</td><td>105</td><td>0.282</td><td>0.35</td><td>0.515</td><td>0.865</td><td>10</td></tr>
+ <tr><td>2016</td><td>24</td><td>4</td><td>132</td><td>551</td><td>492</td><td>77</td><td>140</td><td>32</td><td>5</td><td>23</td><td>77</td><td>8</td><td>4</td><td>49</td><td>107</td><td>0.285</td><td>0.354</td><td>0.51</td><td>0.864</td><td>9</td></tr>
+ <tr><td>2017</td><td>25</td><td>4</td><td>115</td><td>476</td><td>424</td><td>66</td><td>121</td><td>26</td><td>3</td><td>20</td><td>72</td><td>7</td><td>4</td><td>43</td><td>89</td><td>0.285</td><td>0.356</td><td>0.502</td><td>0.859</td><td>8</td></tr>
+ <tr><td>2018</td><td>26</td><td>4</td><td>129</td><td>543</td><td>478</td><td>76</td><td>135</td><td>31</td><td>3</td><td>22</td><td>73</td><td>7</td><td>4</td><td>56</td><td>93</td><td>0.282</td><td>0.363</td><td>0.498</td><td>0.861</td><td>6</td></tr>
+ <tr><td>2019</td><td>27</td><td>4</td><td>148</td><td>635</td><td>569</td><td>92</td><td>169</td><td>36</td><td>4</td><td>28</td><td>94</td><td>15</td><td>6</td><td>58</td><td>104</td><td>0.297</td><td>0.365</td><td>0.522</td><td>0.887</td><td>5</td></tr>
+ <tr><td>2020</td><td>28</td><td>4</td><td>151</td><td>647</td><td>574</td><td>87</td><td>174</td><td>38</td><td>3</td><td>25</td><td>94</td><td>11</td><td>3</td><td>64</td><td>109</td><td>0.303</td><td>0.376</td><td>0.51</td><td>0.886</td><td>5</td></tr>
+ <tr><td>2021</td><td>29</td><td>4</td><td>127</td><td>532</td><td>475</td><td>70</td><td>130</td><td>26</td><td>4</td><td>20</td><td>77</td><td>5</td><td>3</td><td>47</td><td>96</td><td>0.274</td><td>0.343</td><td>0.472</td><td>0.815</td><td>5</td></tr>
+ <tr><td>2022</td><td>30</td><td>4</td><td>143</td><td>591</td><td>525</td><td>81</td><td>141</td><td>32</td><td>3</td><td>21</td><td>81</td><td>10</td><td>3</td><td>56</td><td>104</td><td>0.269</td><td>0.345</td><td>0.461</td><td>0.806</td><td>5</td></tr>
+ <tr><td>2023</td><td>31</td><td>4</td><td>159</td><td>696</td><td>620</td><td>98</td><td>163</td><td>28</td><td>6</td><td>30</td><td>93</td><td>9</td><td>4</td><td>64</td><td>120</td><td>0.263</td><td>0.336</td><td>0.473</td><td>0.808</td><td>2</td></tr>
+ <tr><td>2024</td><td>32</td><td>4</td><td>118</td><td>440</td><td>380</td><td>48</td><td>93</td><td>22</td><td>1</td><td>14</td><td>63</td><td>3</td><td>1</td><td>46</td><td>60</td><td>0.245</td><td>0.327</td><td>0.418</td><td>0.745</td><td>2</td></tr>
+</table></div></p>
+
+Lets take that table and visualize it! Using<a href="http://ramnathv.github.io/rCharts"/>rCharts</a>, a interactive visualization package maintained by <a href="https://github.com/ramnathv">Ramnath Vaidyanathan</a>, I created a Rmarkdown page with knitr displaying the projection data. <a href="http://middlee.com/bryant-visualization/">Have a look!</a>
+<p>
+<a class="btn btn-primary" href="http://middlee.com/bryant-visualization/">Bryant Projection Visualization</a></p>
+
+<hr>
+
+<p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mdlee12/">this page</a> or fork my repository to propose changes.<a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/fork">Edit My Code</a></p>
 
 
 
