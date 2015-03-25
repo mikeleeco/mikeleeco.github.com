@@ -1,0 +1,33 @@
+{
+  "name": "mdlee12/mdlee12.github.com",
+  "description": "'Data Visualization, Analysis, and Statistical Musings",
+  "keywords": [
+    "Data",
+    "Visualization",
+    "R",
+    "Python",
+    "Analysis",
+    "Statistics",
+    "Sports",
+    "Pop Culture"
+  ],
+  "homepage": "http://middlee.com",
+  "authors": [
+    {
+      "name": "Michael Lee",
+      "email": "mdlee12@gmail.com"
+    },
+  ],
+  "support": {
+    "issues": "https://github.com/mdlee12"
+  },
+  "license": "MIT",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "3.3.x-dev"
+    }
+  },
+  "replace": {
+    "twitter/mlee_mke": "self.version"
+  }
+}

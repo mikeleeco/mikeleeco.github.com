@@ -14,7 +14,7 @@ yo
         {{ interactive.title }}
       </a>
     </h1></a>
-<h3>{{ interactive.date | date_to_string }}</small></h3>
+
   {% endfor %}
 
 <hr>
