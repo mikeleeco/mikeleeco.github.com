@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 <div class="container">
 <div class="row">
     {% for interactives in site.interactives %}
