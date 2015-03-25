@@ -1,0 +1,29 @@
+---
+layout: default
+title: home
+---
+<div class="row">
+    {% for post in site.posts limit:4 %}
+    <article class="col-md-6 post">   
+    <div class="post-teaser">
+      <a href="{{ post.url }}">
+	<img src="/images/{{ post.image.teaser }}" class="post-teaser-image" alt="{{ page.title }}" itemprop="image">
+      </a>
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1></a>
+
+      <div class="entry">
+      	<p>{{ post.desc }}</p>
+<!--         {{ post.content | truncatewords:40}}
+ -->  </div>
+
+      
+      <a href="{{ post.url }}" class="small-link primary-link" target="_blank"> {{ post.description }} <i class="fa fa-external-link"></i></a>
+      <a href="{{ post.url }}" class="small-link">Read on...</a>
+    </article>
+  {% endfor %}
+</div>
+
