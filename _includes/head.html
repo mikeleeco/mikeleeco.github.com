@@ -12,7 +12,7 @@
 		<meta property="og:image" content="{% if page.image.feature %}{{ page.image.feature }}{% else %}{{ site.title }}{% endif %}">
 		<meta property="og:type" content="article">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-		{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
+		<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.title }}{% endif %}">
 		<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 		<meta property="og:site_name" content="{{ site.title }}">
 
