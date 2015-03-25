@@ -1,7 +1,9 @@
 ---
 layout: default
+title: "Interactives"
+excerpt: "A selection of interactive visualizations I’ve created."
 ---
-
+yo
 <div class="container">
 <div class="row">
     {% for post in site.categories.interactives %}
