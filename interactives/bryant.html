@@ -42,7 +42,7 @@
     </div>
     <div class='col-md-8'>
       <div class="bs-docs-example">
-        <div id='chart5a283be5395f' class='rChart '>
+        <div id='chart5e7b2d5d5564' class='rChart '>
           <svg></svg>
         </div>
         
@@ -53,14 +53,14 @@
 <script type="text/javascript">
 function DemoCtrl($scope){
   $scope.opts = {
- "dom": "chart5a283be5395f",
+ "dom": "chart5e7b2d5d5564",
 "width":    700,
 "height":    400,
 "x": "Age",
 "y": "HR",
 "type": "lineChart",
 "group": "Name",
-"id": "chart5a283be5395f" 
+"id": "chart5e7b2d5d5564" 
 }
   $scope.data = [
  {
@@ -1908,7 +1908,9 @@ function drawChart(opts, data){
 			.width(opts.width)
 			.height(opts.height)
 		
-	
+	chart
+  .tooltipContent( function(bry_age$Name, x, y){return bry_age$Name + '  Age: ' + x + '  Total: ' + y 
+} )
           
 	chart.xAxis
   .axisLabel("Age")
