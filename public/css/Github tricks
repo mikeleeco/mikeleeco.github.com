@@ -1,6 +1,0 @@
-git revert --no-commit   ~~~~~~~..HEAD
-git commit -m "revert post"
-git push
-
-
-~~~~~~~ -> insert the parent here
