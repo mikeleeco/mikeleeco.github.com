@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="container">
 <div class="row">
-    {% for post in site.posts %}
+    {% for post in site.categories.posts %}
     <div class="post">
       <a href="{{ post.url }}">
 	<img src="/images/{{ post.image.teaser }}"  class="img-responsive" alt="{{ page.title }}" itemprop="image">
