@@ -3,7 +3,7 @@ layout: post
 title: Visualizing Video Games Throughout History
 description: "A Guide to the video game rating system using interactive visuals."
 tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
-date: 2015-04-08
+date: 2015-06-10
 category: posts
 image:
   feature: rampage.jpg
