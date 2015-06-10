@@ -14,7 +14,7 @@ title: home
   <div class="panel-heading">
     <h3 class="panel-title"><a href="{{ site.url }}/archive">Posts</a></h3>
   </div></div></div>
-    {% for post in site.categories.posts limit:4 %}
+    {% for post in site.categories.posts limit:2 %}
     <div class="col-md-4">   
     <div class="post-teaser">
       <a href="{{ post.url }}">
@@ -77,17 +77,38 @@ title: home
   <div class="panel-heading">
     <h3 class="panel-title"><a href="{{ site.url }}/interactives">Interactives</a></h3>
   </div></div></div>
-    {% for interactive in site.categories.interactives %}
-    <div class="interactive">
+    {% for interactive in site.categories.interactives limit:2 %}
+    <div class="col-md-4">   
+    <div class="interactive-teaser">
       <a href="{{ interactive.url }}">
-	<img src="/images/{{ interactive.image.teaser }}"  class="img-responsive" alt="{{ page.title }}" itemprop="image">
+	<img src="/images/{{ interactive.image.teaser }}" class="interactive-teaser-image" alt="{{ page.title }}" itemprop="image">
       </a>
     <h3 class="interactive-title">
       <a href="{{ interactive.url }}">
         {{ interactive.title }}
       </a>
     </h3></a>
+      <a href="{{ interactive.url }}" class="small-link primary-link" target="_blank"> {{ interactive.description }} <i class="fa fa-external-link"></i></a>
+      <a href="{{ interactive.url }}" class="small-link">Read on...</a>
+    </div></div>
   {% endfor %}
+
+<div class="row">
+<div class="col-md-4">
+<div class="col-md-12">
+<div class="list-group">
+  <a href="{{ site.url }}/archive" class="list-group-item list-group-item-info">
+    Recent interactives
+  </a>
+{% for interactive in site.categories.interactives limit:10 %}
+   <a href="{{ interactive.url }}" class="list-group-item">{{ interactive.title }}</a>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 </div>

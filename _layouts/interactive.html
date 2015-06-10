@@ -11,7 +11,7 @@ layout: default
 
 <div class="container"> 
 	<div class="row"> 
-		<img src="/images/{{ page.image.feature }}" class="img-responsive" alt="{{ post.title }}" itemprop="image">
+		<img src="/images/{{ page.image.feature }}" class="img-responsive" alt="{{ interactive.title }}" itemprop="image">
 		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
 	      </div></div><!-- /.page-image -->
 		<div>
@@ -25,20 +25,19 @@ layout: default
       </div>
       </div>
 
-<<hr>
+<hr>
     {% include footer.html %}
 <hr>
 
 
-<h1><strong><p class="text-center">Related Posts</p></strong></h1>
+<h1><strong><p class="text-center">Related Interactives</p></strong></h1>
 <div class="container">
  <div class="row">
-    <div class="col-md-12 col-md-12">
-    {% for post in site.related_posts %}
+    {% for interactive in site.related_interactives limit:3 %}
         {% assign sameTagCount = 0 %}
         {% assign commonTags = '' %}
 
-        {% for tag in post.tags %}
+        {% for tag in interactive.tags %}
             {% if page.tags contains tag %}
 
               {% assign sameTagCount = sameTagCount | plus: 1 %}
@@ -49,14 +48,13 @@ layout: default
         {% endfor %}
 
         {% if sameTagCount >= 2 %}
-          <div>
- 	<div class="thumbnail">
-	<a href="{{ post.url }}">
-      <img src="/images/{{ post.image.teaser }}" class="img-responsive" alt="{{ post.title }}" itemprop="image">
-	<a href="{{ post.url }}">
-        <h3>{{ post.title }}</h3>
-	<a href="{{ post.url }}">
-        <p>{{ post.description }}{{ commonTags }}</p>
+ 	<div class="thumbnail col-md-4">
+	<a href="{{ interactive.url }}">
+      <img src="/images/{{ interactive.image.teaser }}" class="img-responsive" alt="{{ interactive.title }}" itemprop="image">
+	<a href="{{ interactive.url }}">
+        <h3>{{ interactive.title }}</h3>
+	<a href="{{ interactive.url }}">
+        <p>{{ interactive.description }}{{ commonTags }}</p>
           </div>
         {% endif %}
 
