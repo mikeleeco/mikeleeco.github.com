@@ -18,7 +18,7 @@ image:
 <p class="large"></p>Created in 1999 by <a href="https://www.mobygames.com/info/faq5">Jim Leonard</a> to catalogue titles and connect games to their developers and fans, the database has grown to nearly 50,000 games. Ratings, images, and other details are contributed by users. Though there has been management changes leading to some contributor vitriol in recent years, the site is on stable footing and recently surpassed 50,000 unique games.
 <p class="large"></p>
 <h3>Method</h3>
-Using the R package 'rvest' I scraped the site's complete game list <a href="http://www.mobygames.com/browse/games/list-games/">html table</a>, then used each game's URL to scrape additional game information from their profile pages. To avoid issues with replicate game titles the URL was used as a unique reference ID for each title - for example, <b>007: The World is Not Enough</b> has <a href="http://www.mobygames.com/game/007-the-world-is-not-enough">three</a> <a href="http://www.mobygames.com/game/007-the-world-is-not-enough_">unique</a> <a href="http://www.mobygames.com/game/007-the-world-is-not-enough__">pages</a> containing details for each system for which it was released. Each game's profile follows a similar format which made it effective for scraping, but specific genres of games used atypical formatting, requiring a good deal of database cleansing. The guideline that 80% of the work with data involves cleaning is no expection here. We're left with a database of 50,021 games. Check out the code I used to pull and clean the data on <a href="hhttps://github.com/mdlee12/ESRB-Scraper">my Github page</a>.
+Using the R package 'rvest' I scraped the site's complete game list <a href="http://www.mobygames.com/browse/games/list-games/">html table</a>, then used each game's URL to scrape additional game information from their profile pages. To avoid issues with replicate game titles the URL was used as a unique reference ID for each title - for example, <b>007: The World is Not Enough</b> has <a href="http://www.mobygames.com/game/007-the-world-is-not-enough">three</a> <a href="http://www.mobygames.com/game/007-the-world-is-not-enough_">unique</a> <a href="http://www.mobygames.com/game/007-the-world-is-not-enough__">pages</a> containing details for each system for which it was released. Each game's profile follows a similar format which made it effective for scraping, but specific genres of games used atypical formatting, requiring a good deal of database cleansing. The guideline that 80% of the work with data involves cleaning is no expection here. We're left with a database of 50,021 games. Check out the code I used to pull and clean the data on <a href="https://github.com/mdlee12/Mobygames-Scraper/blob/master/MobygamesScraper.R">my Github page</a>.
 <p class="large"></p>
 Let's dive into what the numbers tell us.
 <p class="large"></p>
@@ -699,8 +699,9 @@ function(error, data) {
 });
 </script>
 
+The data set is quite large with and there is much to still be explored, so stayed tuned to the site for additional posts!
 
 <hr>
 
-<p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mdlee12/mdlee12.github.com/blob/master/_posts/2015-03-25-milb-similarity-scores.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mdlee12/Kris-Bryant-Projection/fork">Edit My Code</a></p>
+<p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mdlee12/mdlee12.github.com/blob/master/_posts/2015-06-10-video-games-interactive.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mdlee12/Mobygames-Scraper/fork">Edit My Code</a></p>
 
