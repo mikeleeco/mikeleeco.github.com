@@ -50,12 +50,12 @@ layout: default
         {% if sameTagCount >= 2 %}
  	<div class="thumbnail col-md-4">
 	<a href="{{ post.url }}">
-      <img src="/images/{{ post.image.teaser }}" class="img-responsive" alt="{{ post.title }}" itemprop="image">
+      <img src="/images/{{ post.image.teaser }}" class="img-responsive" alt="{{ post.title }}" itemprop="image"></img>
 	<a href="{{ post.url }}">
         <h3>{{ post.title }}</h3>
 	<a href="{{ post.url }}">
         <p>{{ post.description }}{{ commonTags }}</p>
-          </div>
+          </div></a></a></a>
         {% endif %}
 
   {% endfor %}
