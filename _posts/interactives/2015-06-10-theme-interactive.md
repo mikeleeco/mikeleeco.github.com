@@ -3,7 +3,7 @@ layout: interactive
 title: Video Games Theme Interactive
 description: "An interactive D3.js heatmap describing the co-occurence of themes in video games."
 tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
-date: 2015-04-08
+date: 2015-06-10
 category: interactives
 image:
   teaser: theme_interactive.png
