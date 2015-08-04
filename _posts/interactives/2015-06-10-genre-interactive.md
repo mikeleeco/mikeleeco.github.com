@@ -3,7 +3,7 @@ layout: interactive
 title: Video Games Genre Interactive
 description: "An interactive D3.js heatmap describing the themes of video games by genre."
 tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
-date: 2015-04-08
+date: 2015-06-10
 category: interactives
 image:
   teaser: genre_interactive.png
