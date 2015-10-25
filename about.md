@@ -29,7 +29,7 @@ Welcome to mikelee.co, a website of data visualizations, analysis, inquiry and t
 <a href="https://www.linkedin.com/in/mikeleeco">All professional inquiries welcomed!</a>
 <h1><small>Twitter</small></h1>
 <p class="text-justify">I mostly tweet about sports, data, and pop culture. Get at me!</p>
-<div class="twitter-timeline" href="https://twitter.com/michael_Iee" data-widget-id="568835700255363072">Tweets by @mlee_mke
+<div class="twitter-timeline" href="https://twitter.com/mikeleeco" data-widget-id="568835700255363072">Tweets by @mlee_mke
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 </div>
