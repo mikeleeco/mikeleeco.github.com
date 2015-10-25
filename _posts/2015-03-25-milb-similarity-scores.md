@@ -25,7 +25,7 @@ Similarity scores were created by Bill James to compare the careers of Hall of F
 <p>"The PECOTA similarity scores are based primarily on looking at a three-year window of a pitcher’s performance. Thus, we might look at what a pitcher did from ages 35-37, and compare that against the most similar age 35-37 performances, after adjusting for parks, league effects, and a whole host of other things. This is different from the similarity scores you might see at baseball-reference.com or in other places, which attempt to evaluate the totality of a player’s career up to a given age."
 <footer><a href="http://web.archive.org/web/20120205121306/http://www.baseballprospectus.com/unfiltered/?p=136">Nate Silver</a></footer></p></blockquote></p>
 
-One of Silver's first explanations of <a href="http://www.baseballprospectus.com/article.php?articleid=2659">PECOTA's forecasting method</a> details the value in projecting a minor league player's future career based on the career performance of their comparisons. Teams would be remiss to not consider what a player's future statistics might look like based on their previous performance. PECOTA has created a projection system that models minor league players better than it's competitors utilizing the comparable player's model. Let's use <a href="http://middlee.com/milb-scraper-with-rvest/">our minor league database</a> to investigate minor league similarity scores and create projections for a notable minor league player.
+One of Silver's first explanations of <a href="http://www.baseballprospectus.com/article.php?articleid=2659">PECOTA's forecasting method</a> details the value in projecting a minor league player's future career based on the career performance of their comparisons. Teams would be remiss to not consider what a player's future statistics might look like based on their previous performance. PECOTA has created a projection system that models minor league players better than it's competitors utilizing the comparable player's model. Let's use <a href="http://mikelee.co/milb-scraper-with-rvest/">our minor league database</a> to investigate minor league similarity scores and create projections for a notable minor league player.
 
 <h1><a href="http://www.baseball-reference.com/about/similarity.shtml">Bill James Similarity Scores</a></h1>
 
@@ -89,9 +89,9 @@ Still a very impressive list. Using these similar players, lets take a play out 
 <h3>Lets take that table and visualize it! </h3>
 <p></p>Using <a href="http://ramnathv.github.io/rCharts">rCharts</a>, an interactive visualization package maintained by <a href="https://github.com/ramnathv">Ramnath Vaidyanathan</a>, I created a Rmarkdown page with knitr displaying the projection data.
 
-<a href="http://middlee.com/bryant-visualization/">Have a look!</a>
+<a href="http://mikelee.co/bryant-visualization/">Have a look!</a>
 <p></p>
-<div class="well"><a class="btn btn-primary btn-lg btn-block" href="http://middlee.com/bryant-visualization/">Bryant Projection Visualization</a></p></button></div>
+<div class="well"><a class="btn btn-primary btn-lg btn-block" href="http://mikelee.co/bryant-visualization/">Bryant Projection Visualization</a></p></button></div>
 
 
 <hr>

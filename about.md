@@ -11,7 +11,7 @@ layout: default
 <div class="container">
 <div class="col-md-12">
 <p class="lead">
-Welcome to middlee.com, a website of data visualizations, analysis, inquiry and thoughtless musings. I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). I keep this site to display my work, and I hope you find it interesting! If you do, let me know!</p></div>
+Welcome to mikelee.co, a website of data visualizations, analysis, inquiry and thoughtless musings. I'm a data scientist interested in sports, education, and psychology. My recent experience involves analyses relating to education measures (student demographics, attendance, performance) and sports research (player comparisons, arbitration information, and salary compensation). I keep this site to display my work, and I hope you find it interesting! If you do, let me know!</p></div>
 <div class="container">
 <div class=".col-xs-6 col-sm-6">
 <img src="/images/profile.jpg" class="img-responsive" itemprop="image" />
@@ -21,12 +21,12 @@ Welcome to middlee.com, a website of data visualizations, analysis, inquiry and 
 </div>
 <div class=".col-xs-6 .col-sm-6">
 <h1><small>Email</small></h1>
-<a href="http://middlee.com/email">Send me an email!</a>
+<a href="http://mikelee.co/email">Send me an email!</a>
 
 <h1><small>Github</small></h1>
 <a href="https://github.com/mdlee12">Contribute to my code.</a>
 <h1><small>Linkedin</small></h1>
-<a href="https://www.linkedin.com/in/middlee">All professional inquiries welcomed!</a>
+<a href="https://www.linkedin.com/in/mikeleeco">All professional inquiries welcomed!</a>
 <h1><small>Twitter</small></h1>
 <p class="text-justify">I mostly tweet about sports, data, and pop culture. Get at me!</p>
 <div class="twitter-timeline" href="https://twitter.com/michael_Iee" data-widget-id="568835700255363072">Tweets by @mlee_mke
