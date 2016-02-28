@@ -1096,9 +1096,9 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Verdana", Geneva, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 2.0;
+  font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   color: #333;
   background-color: #fff;
 }
@@ -1299,15 +1299,16 @@ h6,
   font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
 }
 p.large {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 .lead {
   margin-bottom: 20px;
+  font-style: italic;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
@@ -1541,6 +1542,7 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
+  font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #c7254e;
   background-color: #f9f2f4;
   border-radius: 4px;
@@ -1563,16 +1565,16 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 2px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.42857143;
+  padding: 10px;
+  margin: 10 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
 }
 pre code {
   padding: 0;
@@ -5854,7 +5856,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Verdana", Geneva, Arial, sans-serif;
+  font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5962,7 +5964,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Verdana", Geneva, Arial, sans-serif;
+  font-family:"Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
