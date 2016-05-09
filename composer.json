@@ -1,5 +1,5 @@
 {
-  "name": "mdlee12/mdlee12.github.com",
+  "name": "mikeleeco/mikeleeco.github.com",
   "description": "'Data Visualization, Analysis, and Statistical Musings",
   "keywords": [
     "Data",
@@ -19,7 +19,7 @@
     },
   ],
   "support": {
-    "issues": "https://github.com/mdlee12"
+    "issues": "https://github.com/mikeleeco"
   },
   "license": "MIT",
   "extra": {

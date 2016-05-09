@@ -210,7 +210,7 @@ for (teams in teams){ for (season in 2010:2005) {
 </code></pre>
 Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.<p></p>
 
-Lets clean up all of the stray objects bvsides the <code>minors_batting</code>code> dataframe in our working environment before moving on:
+Lets clean up all of the stray objects besides the <code>minors_batting</code> dataframe in our working environment before moving on:
 <pre><code class="r">rm(list=setdiff(ls(), "minors_batting"))</code></pre>
 
 <h3>Obligatory heads up!</h3>
@@ -227,7 +227,7 @@ The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!
 
 <hr>
 
-<p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mdlee12/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.<a class="btn btn-primary" href="https://github.com/mdlee12/MiLB-Scraper/fork">Edit My Code</a></p>
+<p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mikeleeco/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.<a class="btn btn-primary" href="https://github.com/mikeleeco/MiLB-Scraper/fork">Edit My Code</a></p>
 </div>
 </div>
 </div>

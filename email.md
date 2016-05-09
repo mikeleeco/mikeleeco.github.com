@@ -70,7 +70,7 @@ Welcome to mikelee.co, a website of data visualizations, analysis, inquiry and t
 
 
 <h1><small>Github</small></h1>
-<a href="https://github.com/mdlee12">Contribute to my code.</a>
+<a href="https://github.com/mikeleeco">Contribute to my code.</a>
 <h1><small>Linkedin</small></h1>
 <a href="https://www.linkedin.com/in/mikeleeco">All professional inquiries welcomed!</a>
 <h1><small>Twitter</small></h1>

@@ -96,7 +96,7 @@ Still a very impressive list. Using these similar players, lets take a play out 
 
 <hr>
 
-<p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mdlee12/mdlee12.github.com/blob/master/_posts/2015-03-25-milb-similarity-scores.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mdlee12/Kris-Bryant-Projection/fork">Edit My Code</a></p>
+<p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_posts/2015-03-25-milb-similarity-scores.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mikeleeco/Kris-Bryant-Projection/fork">Edit My Code</a></p>
 </div>
 </div>
 </div>
