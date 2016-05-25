@@ -28,6 +28,6 @@
     }
   },
   "replace": {
-    "twitter/mlee_mke": "self.version"
+    "twitter/mikeleeco": "self.version"
   }
 }

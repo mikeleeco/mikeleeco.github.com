@@ -10,9 +10,7 @@ image:
   teaser: bryant2.jpg
   related: bryant2.jpg
 ---
-<div class="container">
-<div class="row">
-<div class=".col-md-8">
+
 <p><div class="well well-lg">
 There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don't deny the validity of that approach-but if you take that tack, then you can't turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player's. "Similarity" is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way...players who have similar primary characteristics will tend to have similar secondary characteristics as well.
 
@@ -32,7 +30,7 @@ One of Silver's first explanations of <a href="http://www.baseballprospectus.com
 <h3>Similarities - Career</h3>
 James' Similarity Score model was designed for major league careers, but let's see how the model holds for minor league careers. The dataset includes minor league statistics from 2000-2014:
 
-<p><div class="table-responsive"><table class="table table-hover">
+<p><div class="table-responsive"><table class="table table-hover" width="100%">
 <th>Name</th><th>Age</th><th>LevEq</th><th>G</th><th>PA</th><th>AB</th><th>R</th><th>H</th><th>X2B</th><th>X3B</th><th>HR</th><th>RBI</th><th>SB</th><th>CS</th><th>BB</th><th>SO</th><th>BA</th><th>OBP</th><th>SLG</th><th>OPS</th><th>TB</th><th>SS</th></tr>
  <tr class="success"><td>Kris Bryant</td><td>22</td><td>1.58</td><td>174</td><td>740</td><td>620</td><td>140</td><td>203</td><td>48</td><td>3</td><td>52</td><td>142</td><td>16</td><td>4</td><td>97</td><td>197</td><td>0.327</td><td>0.428</td><td>0.666</td><td>1.094</td><td>413</td><td>1000</td></tr>
  <tr><td>Ryan Braun</td><td>23</td><td>1.67</td><td>199</td><td>864</td><td>767</td><td>131</td><td>240</td><td>61</td><td>6</td><td>42</td><td>144</td><td>34</td><td>12</td><td>70</td><td>151</td><td>0.313</td><td>0.375</td><td>0.572</td><td>0.947</td><td>439</td><td>926</td></tr>
@@ -99,7 +97,3 @@ Still a very impressive list. Using these similar players, lets take a play out 
 <p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_posts/2015-03-25-milb-similarity-scores.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mikeleeco/Kris-Bryant-Projection/fork">Edit My Code</a></p>
 </div>
 </div>
-</div>
-</div>
-</div>
-

@@ -10,9 +10,7 @@ image:
   teaser: bryant.jpg
   related: bryant.jpg
 ---
-<div class="container">
-<div class="row">
-<div class=".col-md-8">
+
 <p><div class="lead">
 Baseball is a game of numbers, some more accessible than others.</div> Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>, which is the most robust catalog of MLB player statistics available to the public.</p>
 <p>
@@ -228,6 +226,4 @@ The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!
 <hr>
 
 <p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mikeleeco/MiLB-Scraper">MiLB Scraper on github</a> or fork my repository to propose changes.<a class="btn btn-primary" href="https://github.com/mikeleeco/MiLB-Scraper/fork">Edit My Code</a></p>
-</div>
-</div>
-</div>
+
