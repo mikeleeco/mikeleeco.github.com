@@ -50,7 +50,7 @@
 .highlight .se { color: #606060; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
 .highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
 .highlight .si { background-color: #e0e0e0 } /* Literal.String.Interpol */
-.highlight .sx { color: #D02000; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sx { color: #DC143C; } /* Literal.String.Other */
 .highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
 .highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
 .highlight .ss { color: #A06000 } /* Literal.String.Symbol */
