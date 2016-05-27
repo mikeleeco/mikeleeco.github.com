@@ -8,8 +8,8 @@ locale: en_US
 # Jekyll configuration
 
 permalink: /:categories/:title/
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 
 # Plugin: jekyll-archives
 

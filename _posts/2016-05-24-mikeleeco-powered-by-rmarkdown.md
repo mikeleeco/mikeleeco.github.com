@@ -25,17 +25,17 @@ I first heard about the ability to generate and serve files within R from a twee
 
 This workflow blew my mind at the time (still does) and the post in which he explains the scaffolding is very useful. Check it out [here](https://brendanrocks.com/blogging-with-rmarkdown-knitr-jekyll/).
 
-Adding in a [`_source`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_source/2016-05-24-mikeleeco-powered-by-rmarkdown.Rmd) directory to store .Rmd files allows	Yihui Xie's [servr package](https://github.com/yihui/servr) the ability to render markdown documents in  [`_posts`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_posts/2016-05-24-mikeleeco-powered-by-rmarkdown.md), after which Jekyll creates individual folders in [`posts`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/posts/) for each markdown file's sister [`index.html`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/posts/mikeleeco-powered-by-rmarkdown/index.html) - which is what you are reading now!
+Adding in a [`_source`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_source/2016-05-24-mikeleeco-powered-by-rmarkdown.Rmd) directory to store .Rmd files allows	Yihui Xie's [servr package](https://github.com/yihui/servr) the ability to render markdown documents in  [`_posts`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_posts/2016-05-24-mikeleeco-powered-by-rmarkdown.md), which Jekyll converts to HTML - which is what you are reading now!
 
-**Improving Syntax Highlighting**
+**Improving Syntax Highlighting** *(with updates!)*
 
-The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my previous highlighter (rouge) but were being rendered with an "r" in front like so:
+The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my highlighter (rouge) but were being rendered with an "r" in front like so:
 
 `r``cat(paste(c("This","drove","me","mental D:"),sep=" "))`
 
 `## This drove me mental D:`
 
-After a few missteps, I ultimately changed my markdown generator to redcarpet and adjusted my syntax highlighter from Jekyll's base rouge to pygments. To do so, make sure you have [ruby](https://rubygems.org/pages/download) installed and updated, then run `gem install pygments.rb` to get the syntax highlighting options. Finally, I added a [`syntax.css`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/public/css/syntax.css) template with formatting options.
+An earlier version of this post detailed a method of updating syntax highlighting using redcarpet markdown and pygments - a soon to be deprecated syntax highlighter. Turns out I wasn't the only one having this issue! After more than a few missteps, and applying the advice from [this post](https://github.com/jekyll/jekyll/issues/1342), make sure you have both jekyll [ruby](https://rubygems.org/pages/download) installed and updated! After updating your site infrastructure, add a css template with formatting options - such as my [`syntax.css`](https://github.com/mikeleeco/mikeleeco.github.com/tree/master/public/css/syntax.css).
 
 **Final Result**
 

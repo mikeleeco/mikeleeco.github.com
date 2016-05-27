@@ -3,8 +3,6 @@ layout: default
 ---
 
 <link rel="stylesheet" href="/public/css/syntax.css">
-<link rel="stylesheet" href="/public/css/bootstrap.footnotes.css">
-<script src="/js/bootstrap.footnotes.js"></script>
 
 
 <div class="container"> 
@@ -21,10 +19,10 @@ layout: default
 </div>
 </div><!-- /.page-title -->
 <p>
-<div class="container">
+<div class="container-fluid">
 <div class="row">
-  <div class="col-md-2 blog-sidebar">
-  <div class="hexagon hexagon2"><div class="hexagon-in1"><div class="hexagon-in2" style="background-image: url({{ site.baseurl }}images/michael.png);"></div></div></div>
+  <div class="col-md-2 hidden-sm">
+  <div class="hexagon hexagon2"><div class="hexagon-in1"><div class="hexagon-in2" style="background-image: url(/images/michael.png);"></div></div></div>
     <div class="hexagon" ></div>
 
      <h3>Michael Lee</h3>
@@ -34,6 +32,10 @@ layout: default
         <a href="http://linkedin.com/in/mikeleeco"><i class="fa fa-linkedin fa-2x"></i></a>
         <a href="http://github.com/mikeleeco"><i class="fa fa-github fa-2x"></i></a>
       </ol>
+      <a href="http://mikelee.co/archive" class="list-group-item list-group-item-info">Recent Posts</a>
+        {% for post in site.categories.posts limit:10 %}
+      <a href="{{ post.url }}" class="list-group-item">{{ post.title }}</a>
+        {% endfor %}
   </div>
     <div class="col-md-10 blog-main">
       {{ content }}

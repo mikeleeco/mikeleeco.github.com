@@ -6880,6 +6880,7 @@ border-right-color: #e74c3c;
 }
 
 .hexagon {
+    width: 100%;
     overflow: hidden;
     visibility: hidden;
     -webkit-transform: rotate(120deg);
