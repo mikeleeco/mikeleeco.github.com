@@ -13,10 +13,9 @@ title: Projects
     <h3 class="panel-title"><a href="{{ site.url }}/projects">Projects</a></h3>
   </div></div></div>
 <p class="important">
-This page is under construction!
 </p>
     {% for project in site.categories.projects %}
-    <div class="col-md-6">   
+    <div class="col-md-12">   
     <div class="project-teaser">
       <a href="{{ project.url }}">
 	<img src="/images/{{ project.image.teaser }}" class="project-teaser-image" alt="{{ page.title }}" itemprop="image">
