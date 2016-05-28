@@ -1,9 +1,6 @@
 ---
 layout: default
-title: Projects
 ---
-
-
 
 <div class="container">
 <div class="row">
@@ -12,10 +9,8 @@ title: Projects
   <div class="panel-heading">
     <h3 class="panel-title"><a href="{{ site.url }}/projects">Projects</a></h3>
   </div></div></div>
-<p class="important">
-</p>
     {% for project in site.categories.projects %}
-    <div class="col-md-12">   
+    <div class="col-md-6">   
     <div class="project-teaser">
       <a href="{{ project.url }}">
 	<img src="/images/{{ project.image.teaser }}" class="project-teaser-image" alt="{{ page.title }}" itemprop="image">
