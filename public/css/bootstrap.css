@@ -6879,6 +6879,112 @@ margin-bottom: 25px;
     padding-left: 15px;
     }
 
+
+.project-image h1 {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+  
+.project-image h1 {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.project h2 {
+  font-size: 60px;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+
+.project {
+margin-bottom: 25px;
+}
+
+.project-teaser{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  -webkit-perspective:1000px;
+  perspective:1000px;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden
+}
+
+.project-teaser img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.project-teaser img.load{
+  display:none
+}
+
+.project-teaser:before,.page-teaser:after{
+  position:relative;
+  content:'';
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100.5%
+}
+
+.project-teaser:before{
+  z-index:2;
+  -webkit-transition:all 0.3s;
+  transition:all 0.3s
+}
+
+.project-teaser:after{
+  border:10px solid #fff;
+  opacity:0;  
+  z-index:3;
+  -webkit-transition:all 0.3s;
+  transition:all 0.3s
+}
+
+.project-teaser:hover:before{
+  background:rgba(51,51,51,0.5)
+}
+
+.project-teaser:hover:after{
+  opacity:0.4
+}
+
+.project-teaser:hover img{
+  -webkit-transform:scale(1.02);
+  -ms-transform:scale(1.02);
+  transform:scale(1.02)
+}
+
 .popover   {
 background-color: #e74c3c;
 color: #ecf0f1;
