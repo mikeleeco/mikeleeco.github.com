@@ -88,7 +88,7 @@ function (playerID = NULL, yearID = NULL, ...)
 }
 ```
 ---
-<div class="row"><div class="col-sm-6 col-sm-offset-3"><img src="http://i.imgur.com/Z0MX0qd.gif" class="img-responsive center-block"/></div></div>
+<div class="row"><div class="col-sm-6  col-sm-offset-3"><img src="http://i.imgur.com/Z0MX0qd.gif" class="img-responsive center-block"/></div></div>
 ---
 How about some numbers:
 
