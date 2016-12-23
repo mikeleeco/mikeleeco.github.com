@@ -30,14 +30,16 @@ Let's dive into what the numbers tell us.
 <p>
 MobyGames aggregates two sources to formulate their video game ratings: users and critics. User ratings are determined on a 0 to 5 scale and are contributed by an individual's subjective rating of a particular game. Critic ratings are reviews from magazines, entertainment websites, and other online video game forums. A weighted average of these individual critics formulate the site's "MobyRank" score. For this article I gave equal importance to user and critic ratings to ascertain each game's overall rating, simply averaging the two scores into one total rating. Of the 50,000+ games, a total of 9224 had either user or critics ratings, ranging in years from 1976-2015. In the scatterplot below you'll see the combined Mobygames ratings by date of original publication.
 </p>
-<img src="/images/gamerank.png" class="img-responsive center-block center-block"></img>
+<img src="/images/gamerank.png" class="img-responsive center-block center-block">
+
 
 <p>
 
 That looks pretty sharp, but in the spirit of video games, lets make it a bit more...8-bit.
 </p>
 <p>
-<img src="/images/mean_game_ranking_2d.png" class="img-responsive center-block"></img>
+<img src="/images/mean_game_ranking_2d.png" class="img-responsive center-block">
+
 </p>
 
 <p>
@@ -70,7 +72,8 @@ Mobygames uses 43 themes to delineate aspects of games, which is detailed in the
 <p>
 Of the 38,615 games listing at least one theme, the image below shows the distribution of themes as a percentage decimal.
 </p>
-<img src="/images/games_by_theme.png" class="img-responsive center-block"></img>
+<img src="/images/games_by_theme.png" class="img-responsive center-block">
+
 <p>
 
 I was also curious which themes were most likely to occur simultaneously. Think of the following interactive as such: "If I were to randomly select from the pool of Arcade games, what is the likelihood that it also has a _____ theme?" <i>Click the Themes on the left side to reorganize the heatmap, and hover over the cells to gain further details</i>.
@@ -448,7 +451,8 @@ Before moving on, here are a couple interesting observations, from most to least
 
 Mobygames uses 8 genres to categorize game types. The vast majority of games have at least one genre, many having multiple. Shovelware games, which are packages of dissimilar games (think <b>The 1000 Best Windows 95 Games Bundle</b>) are responsible for many of the missing titles.
 </p>
-<img src="/images/games_by_genre.png" class="img-responsive center-block"></img>
+<img src="/images/games_by_genre.png" class="img-responsive center-block">
+
 <p>
 
 It's a bit unexpected that Action games have such a dominating share of the market. This is likely due to its emphasis on reflex-based gameplay, which is a component of most of the other genres - especially racing and sports games.
