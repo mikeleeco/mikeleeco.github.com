@@ -4,11 +4,10 @@ title: "sabr - R package to query and calculate MLB offensive performance statis
 tags: [R, sabr, baseball, data]
 author: "Michael Lee"
 date: "April 10, 2016"
-category: projects
-image:
-  feature: county.jpg
-  teaser: county.jpg
-  related: county.jpg
+category: project
+comments: true
+description: some test text to tsee
+bigimg: /images/county.jpg
 ---
 
 The [sabr package](https://github.com/mikeleeco/sabr/) connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in [The Book: Playing the Percentages in Baseball](http://www.insidethebook.com/woba.shtml), wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:

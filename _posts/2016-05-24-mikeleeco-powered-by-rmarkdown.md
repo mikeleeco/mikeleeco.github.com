@@ -1,14 +1,11 @@
 ---
 layout: post
 title: "mikelee.co: Powered by RMarkdown, knitr, and Jekyll"
-description: "Generating blog content made easier with R"
+subtitle: "Generating blog content made easier with R"
 tags: [R, knitr,Jekyll, RMarkdown]
 date: 2016-05-24
-category: posts
-image:
-  feature: jekyll-blog.jpg
-  teaser: jekyll-blog.jpg
-  related: jekyll-blog.jpg
+comments: true
+bigimg: /images/jekyll-blog.jpg
 ---
 > This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

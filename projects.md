@@ -1,32 +1,30 @@
 ---
-layout: default
+layout: custom
 ---
 
-<div class="container">
-<div class="row">
-<div class="col-sm-12">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title"><a href="{{ site.url }}/projects">Projects</a></h3>
-  </div></div></div>
-    {% for project in site.categories.projects %}
-    <div class="col-md-6">   
-    <div class="project-teaser">
+{% include header.html type="page" %}
+
+<div class="container-fluid" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h1 class="project-title">Projects</h1>
+
+    {% for project in site.categories.project %}  
+    <div class="col-lg-6 col-lg-6"> 
       <a href="{{ project.url }}">
-	<img src="/images/{{ project.image.teaser }}" class="project-teaser-image" alt="{{ page.title }}" itemprop="image">
+        <img src="{{ project.bigimg }}" class="big-img intro-header" alt="{{ project.title }}" itemprop="image"></div>
       </a>
-    <h3 class="project-title">
+    <h2 class="project-title">
       <a href="{{ project.url }}">
         {{ project.title }}
+        <br>
       </a>
-    </h3></a>
-      <a href="{{ project.url }}" class="small-link primary-link" target="_blank"> {{ project.description }} <i class="fa fa-external-link"></i></a>
-      <a href="{{ project.url }}" class="small-link">Read on...</a>
-    </div></div>
+    </h2>
+    <h3 class="project-description">
+        {{ project.description }}
+    </h3>
+    </div>
   {% endfor %}
-
-
-<hr>
 
 
 </div>

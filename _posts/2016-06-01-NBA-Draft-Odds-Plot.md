@@ -1,14 +1,11 @@
 ---
 layout: post
 title: "NBA Draft Odds Plot"
-description: "Reproduce an NBA drafts odds plot"
+subtiitle: "Reproduce an NBA drafts odds plot"
 tags: [R, ggplot2, data, dataviz, NBA]
 date: 2016-06-01
-category: posts
-image:
-  feature: draft_odds.png
-  teaser: draft_odds.png
-  related: draft_odds.png
+comments: true
+bigimg: /images/draft_odds.png
 ---
 
 **Original Source**
@@ -50,7 +47,7 @@ odds$Team <- as.character(odds$Team)
 odds$Team <- factor(odds$Team, levels = odds[1:14,1])
 odds$Team <- factor(odds$Team, levels=rev(levels(odds$Team)))
 odds$Pick <- factor(odds$Pick, levels = 1:14)
-getPalette = colorRampPalette(brewer.pal(11, "Spectral"))(14)
+getPalette <- colorRampPalette(brewer.pal(11, "Spectral"))(14)
 odds$Probability <- ifelse(is.na(odds$Probability),0,odds$Probability)
 ```
 

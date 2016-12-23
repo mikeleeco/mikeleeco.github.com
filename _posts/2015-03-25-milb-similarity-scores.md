@@ -1,27 +1,29 @@
 ---
 layout: post
 title: Working with Minor League Similarity Scores
-description: "Using the Minor League Baseball database to calculate each players most similar comparison."
+subtitle: "Using the Minor League Baseball database to calculate each players most similar comparison."
 tags: [R, dplyr, Similarity Scores, data, sports, MiLB, MLB]
 date: 2015-03-25
-category: posts
-image:
-  feature: bryant2.jpg
-  teaser: bryant2.jpg
-  related: bryant2.jpg
+comments: true
+bigimg: /images/bryant2.jpg
 ---
 
-<p><div class="well well-lg">
+<p><blockquote>
 There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don't deny the validity of that approach-but if you take that tack, then you can't turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player's. "Similarity" is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way...players who have similar primary characteristics will tend to have similar secondary characteristics as well.
 
-<br>
-<div class="pull-right">- <a href="https://books.google.com/books?id=f_v8RmhGjekC&pg=PT101&dq=similarity+score+bill+james&hl=en&sa=X&ei=lmIAVcabOsu4ggTAkoS4DA&ved=0CDYQ6AEwBA#v=onepage&q=similarity%20score%20bill%20james&f=false">Bill James in <cite title>Whatever Happened to the Hall of Fame?</cite></a></div></br></div></div>
+<p> - Bill James in <a href="https://books.google.com/books?id=f_v8RmhGjekC&pg=PT101&dq=similarity+score+bill+james&hl=en&sa=X&ei=lmIAVcabOsu4ggTAkoS4DA&ved=0CDYQ6AEwBA#v=onepage&q=similarity%20score%20bill%20james&f=false">Whatever Happened to the Hall of Fame?</a></p></blockquote>
+</p>
 
-Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players. In the most basic sense, similarity scores use aggregated performance statistics to compare a player's worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player's recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player's base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors. Notably, PECOTA uses 3 year performance statistics of <i>comparable</i> players, using nearest-neighors analysis, to forecast a player's future performance.
+<br>
+
+Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players.In  In the most basic sense, similarity scores use aggregated performance statistics to compare a player's worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player's recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player's base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors. Notably, PECOTA uses 3 year performance statistics of <i>comparable</i> players, using nearest-neighors analysis, to forecast a player's future performance.
 
 <p><blockquote>
-<p>"The PECOTA similarity scores are based primarily on looking at a three-year window of a pitcher’s performance. Thus, we might look at what a pitcher did from ages 35-37, and compare that against the most similar age 35-37 performances, after adjusting for parks, league effects, and a whole host of other things. This is different from the similarity scores you might see at baseball-reference.com or in other places, which attempt to evaluate the totality of a player’s career up to a given age."
-<footer><a href="http://web.archive.org/web/20120205121306/http://www.baseballprospectus.com/unfiltered/?p=136">Nate Silver</a></footer></p></blockquote></p>
+"The PECOTA similarity scores are based primarily on looking at a three-year window of a pitcher’s performance. Thus, we might look at what a pitcher did from ages 35-37, and compare that against the most similar age 35-37 performances, after adjusting for parks, league effects, and a whole host of other things. This is different from the similarity scores you might see at baseball-reference.com or in other places, which attempt to evaluate the totality of a player’s career up to a given age."
+<p>
+<a href="http://web.archive.org/web/20120205121306/http://www.baseballprospectus.com/unfiltered/?p=136">Nate Silver</a>
+</p>
+</blockquote></p>
 
 One of Silver's first explanations of <a href="http://www.baseballprospectus.com/article.php?articleid=2659">PECOTA's forecasting method</a> details the value in projecting a minor league player's future career based on the career performance of their comparisons. Teams would be remiss to not consider what a player's future statistics might look like based on their previous performance. PECOTA has created a projection system that models minor league players better than it's competitors utilizing the comparable player's model. Let's use <a href="http://mikelee.co/milb-scraper-with-rvest/">our minor league database</a> to investigate minor league similarity scores and create projections for a notable minor league player.
 
@@ -95,5 +97,3 @@ Still a very impressive list. Using these similar players, lets take a play out 
 <hr>
 
 <p>Have feedback, questions, or want to see something else added? Check out the code I used to create <a href="https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_posts/2015-03-25-milb-similarity-scores.md">this page</a> or fork my repository to propose changes. <a class="btn btn-primary" href="https://github.com/mikeleeco/Kris-Bryant-Projection/fork">Edit My Code</a></p>
-</div>
-</div>

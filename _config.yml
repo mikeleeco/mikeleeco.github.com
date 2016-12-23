@@ -1,57 +1,185 @@
-# Setup
-title: mikelee
-description: "Personal website of Michael Lee."
-url: http://mikelee.co
-baseurl: /
-locale: en_US
+# --- General options --- #
 
-# Jekyll configuration
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-permalink: /:categories/:title/
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+url: "http://mikeleeco.github.io"
+baseurl: ""
+
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
+
+# Of course don't forget to change the username and projectname to YOUR username and project
+
+# Name of website
+title: mikeleeco
+
+# Short description of your site
+description: A virtual proof that name is awesome!
+
+# --- Navigation bar options --- #
+
+# List of links in the navigation bar
+navbar-links:
+  Resume: "resume"
+  Resources:
+    - Projects: "http://mikelee.co/projects"
+    - Interactives: "http://mikelee.co/interactives"
+    - GitHub: "https://www.github.com/mikeleeco"
+
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/images/avatar-icon.png"
+
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter. The logo will have a height of 40px
+# title-img: "/images/avatar-icon.png"
+
+# --- Footer options --- #
+
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Michael Lee
+  email: "mdlee12@gmail.com"
+  github: mikeleeco
+  twitter: mikeleeco
+  linkedin: mikeleeco
+  stackoverflow: 5982900/michael-lee
+
+# Select which links to show in the footer
+footer-links-active:
+  rss: true
+  facebook: true
+  email: true
+  twitter: true
+  google-plus: false
+  github: true
+  reddit: true
+  linkedin: true
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+
+# Select which share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  google: false
+  linkedin: true
+
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "mikelee.co"  
+
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+disqus: mikeleeco
+
+# Fill in your Google Analytics ID to track your website using GA
+google_analytics: UA-58518999-1
+
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
 
-# Plugin: jekyll-archives
+kramdown:
+  input: GFM
 
-jekyll-archives:
-  enabled:
-    - tags
-    - year
-  layouts:
-    year: year_index
-    tag: tag_index
-  permalinks:
-    year: /:year/
-    tag: /tag/:name/
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
 
+# Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
+link-tags: false
 
-# Site owner
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+  - Vagrantfile
+  - /_site
 
-owner:
-  name: Michael Lee
-  email: mdlee12@gmail.com
-  twitter: mikeleeco
-  github: mikeleeco
-  github-repo: https://github.com/mikeleeco/mikeleeco.github.com
-  google:
-    ad-client: 
-    ad-slot: 
-    analytics: UA-58518999-1
-    plus: 
-    verify: 
-  bio: ""
-  avatar: .jpg # 160x160 px image for author byline
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
 
-# Custom vars
-current_version:  1.0.0
-repo: https://github.com/mikeleeco/mikeleeco.github.com
+gems:
+  - jekyll-paginate
 
-download:
-  source: https://github.com/twbs/bootstrap/archive/v3.3.2.zip
-  dist: https://github.com/twbs/bootstrap/releases/download/v3.3.2/bootstrap-3.3.2-dist.zip
-  sass: https://github.com/twbs/bootstrap-sass/archive/v3.3.2.tar.gz
-
-cdn:
-  css: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
-  css_theme:  https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css
-  js: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189

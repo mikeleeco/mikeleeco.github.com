@@ -1,32 +1,30 @@
 ---
-layout: default
+layout: custom
 ---
 
-<div class="container">
-<div class="row">
-<div class="col-sm-12">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title"><a href="{{ site.url }}/interactives">Interactives</a></h3>
-  </div></div></div>
-    {% for interactive in site.categories.interactives %}
-    <div class="col-md-6">   
-    <div class="interactive-teaser">
+{% include header.html type="post" %}
+
+<div class="container-fluid" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h1 class="interactive-title">Interactives</h1>
+
+    {% for interactive in site.categories.interactive %}  
+      <div class="col-lg-6 col-lg-6"> 
+
       <a href="{{ interactive.url }}">
-	<img src="/images/{{ interactive.image.teaser }}" class="interactive-teaser-image" alt="{{ page.title }}" itemprop="image">
+        <img src="{{ interactive.bigimg }}" class="big-img intro-header" alt="{{ interactive.title }}" itemprop="image"></img>
       </a>
-    <h3 class="interactive-title">
+    <h2 class="interactive-title">
       <a href="{{ interactive.url }}">
         {{ interactive.title }}
+        <br>
       </a>
-    </h3></a>
-      <a href="{{ interactive.url }}" class="small-link primary-link" target="_blank"> {{ interactive.description }} <i class="fa fa-external-link"></i></a>
-      <a href="{{ interactive.url }}" class="small-link">Read on...</a>
-    </div></div>
+    </h2>
+    <h3 class="interactive-description">{{ interactive.description }}</h3>
+    </div>
   {% endfor %}
 
+
 </div>
 </div>
-
-<hr>
-

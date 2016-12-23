@@ -1,59 +1,49 @@
 ---
-layout: default
+layout: base
 ---
 
-<link rel="stylesheet" href="/public/css/styles/default.css">
+{% include header.html type="interactive" %}
 
+<div class="container-fluid" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="container"> 
-	<div class="row"> 
-		<img src="/images/{{ page.image.feature }}" class="img-responsive" alt="{{ interactive.title }}" itemprop="image">
-		{% if page-image.credit %}{% include image-credit.html %}{% endif %}
-	      </div></div><!-- /.page-image -->
-		<div>
-	      <div class="page-title">
-		<h1><span>{{ page.title }}</span></h1>
-		{% if page.subtitle %}<h2><span>{{ page.subtitle }}</span></h2>{% endif %}
-	      </div><!-- /.page-title -->
-	  {{ content }}
-	  </ul>
-      </div>
-      </div>
-      </div>
+      <p>
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          Tags:
+          {% if site.link-tags %}
+          {% for tag in page.tags %}
+            <a href="/tag/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+          {% else %}
+            {{ page.tags | join: ", " }}
+          {% endif %}
+        </div>
+      {% endif %}
 
-<hr>
-    {% include footer.html %}
-<hr>
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
 
-
-<h1><strong><p class="text-center">Related Interactives</p></strong></h1>
-<div class="container">
- <div class="row">
-    {% for interactive in site.related_interactives limit:3 %}
-        {% assign sameTagCount = 0 %}
-        {% assign commonTags = '' %}
-
-        {% for tag in interactive.tags %}
-            {% if page.tags contains tag %}
-
-              {% assign sameTagCount = sameTagCount | plus: 1 %}
-              {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
-              {% assign commonTags = commonTags | append: tagmarkup %}
-
-            {% endif %}
-        {% endfor %}
-
-        {% if sameTagCount >= 2 %}
- 	<div class="thumbnail col-md-4">
-	<a href="{{ interactive.url }}">
-      <img src="/images/{{ interactive.image.teaser }}" class="img-responsive" alt="{{ interactive.title }}" itemprop="image">
-	<a href="{{ interactive.url }}">
-        <h3>{{ interactive.title }}</h3>
-	<a href="{{ interactive.url }}">
-        <p>{{ interactive.description }}{{ commonTags }}</p></a></a></a>
-          </div>
+      <ul class="pager blog-pager">
+        {% if page.previous.url %}
+        <li class="previous">
+          <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+        </li>
         {% endif %}
+        {% if page.next.url %}
+        <li class="next">
+          <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+        </li>
+        {% endif %}
+      </ul>
 
-  {% endfor %}
+      {% if page.comments %}
+        <div class="disqus-comments">
+          {% include disqus.html %}
+        </div>
+      {% endif %}
+    </div>
   </div>
-</div></div>
+</div>
