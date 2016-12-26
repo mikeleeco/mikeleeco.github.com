@@ -21,7 +21,7 @@ layout: custom
         <br>
       </a>
     </h2>
-    <h3 class="interactive-description">{{ interactive.description }}</h3>
+    <h4 class="interactive-description">{{ interactive.description }}</h4>
     </div>
   {% endfor %}
 

@@ -5,6 +5,7 @@ subtiitle: "Reproduce an NBA drafts odds plot"
 tags: [R, ggplot2, data, dataviz, NBA]
 date: 2016-06-01
 comments: true
+category: post
 bigimg: /images/draft_odds.png
 ---
 

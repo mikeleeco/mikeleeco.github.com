@@ -10,9 +10,10 @@ layout: custom
       <h1 class="project-title">Projects</h1>
 
     {% for project in site.categories.project %}  
-    <div class="col-lg-6 col-lg-6"> 
+    <div class="col-lg-6 col-lg-6">
+
       <a href="{{ project.url }}">
-        <img src="{{ project.bigimg }}" class="big-img intro-header" alt="{{ project.title }}" itemprop="image"></div>
+        <img src="{{ project.bigimg }}" class="big-img intro-header" alt="{{ project.title }}" itemprop="image">
       </a>
     <h2 class="project-title">
       <a href="{{ project.url }}">
@@ -20,9 +21,9 @@ layout: custom
         <br>
       </a>
     </h2>
-    <h3 class="project-description">
+    <h4 class="project-description">
         {{ project.description }}
-    </h3>
+    </h4>
     </div>
   {% endfor %}
 

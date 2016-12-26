@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "sabr - R package to query and calculate MLB offensive performance statistics"
+title: "sabr - R package"
 tags: [R, sabr, baseball, data]
 author: "Michael Lee"
 date: "April 10, 2016"
 category: project
 comments: true
-description: some test text to tsee
+description: Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics
 bigimg: /images/county.jpg
 ---
 

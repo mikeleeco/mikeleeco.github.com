@@ -6,6 +6,7 @@ tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
 date: 2015-06-10
 category: post
 comments: true
+category: post
 bigimg: /images/rampage.jpg
 ---
 

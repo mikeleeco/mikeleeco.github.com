@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Let's Make a Minor League Baseball Database!
-subtitle: A step-by-step tutorial to make your own Minor League Baseball Database using rvest.
+title: "Let's Make a Minor League Baseball Database!"
+subtitle: "A step-by-step tutorial to make your own Minor League Baseball Database using rvest."
 tags: [R, rvest, HTML scraper, data, sports, MiLB, MLB]
 date: 2015-02-23
 comments: true
+category: post
 bigimg: /images/bryant.jpg
 ---
 
 <p>
-Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>, which is the most robust catalog of MLB player statistics available to the public.</p>
+Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the <a href="http://www.seanlahman.com/baseball-archive/statistics/">Lahman Baseball Database</a>, which is the most robust catalog of MLB player statistics available to the public.
+</p>
 <p>
 One area of relatively limited accessibility to the average fan is statistics for Minor League players. Though player statistics by position, year, and team are available at many sites, a thorough catalog of MiLB data akin to the Lahman database is unavailable. I wonder who <a href="http://www.baseball-reference.com/minors/player.cgi?id=bryant001kri">Kris Bryant</a> would be most similar to? </p>
 
@@ -224,7 +226,7 @@ minors_batting <- data.frame()
 for (teams in teams){ for (season in 2010:2005) {
 ```
 
-Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.<p></p>
+Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.
 
 Lets clean up all of the stray objects besides the <code>minors_batting</code> dataframe in our working environment before moving on:
 
@@ -237,11 +239,17 @@ rm(list=setdiff(ls(), "minors_batting"))
 <p>This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
 <p></p>
 <img src="{{ site.url }}/images/sys_time_MiLB.jpg">
-<p></p>
 
 The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner. 
+<h4>Coming up...</h4>
+Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant's best comparisons.
 
-<h4>Coming up...</h4>Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant's best comparisons.
+<h4>Footnotes</h4>
+<sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>
+In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.
+<br>
+<sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>
+For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).
 
 <hr>
 

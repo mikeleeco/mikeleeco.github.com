@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Visualizing Video Games Throughout History
+title: Theme Interactive - Visualizing Video Games Throughout History
 subtitle: "A Guide to the video game rating system using interactive visuals."
 tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
 date: 2015-06-10
