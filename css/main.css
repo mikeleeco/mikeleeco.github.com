@@ -18,7 +18,7 @@ p a {
   color: #008AFF;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: 800;
 }
 a {
@@ -60,7 +60,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -107,7 +107,7 @@ img {
 .navbar-custom {
   background: #F5F5F5;
   border-bottom: 1px solid #EAEAEA;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
 }
 
 .navbar-custom .nav li a {
@@ -344,7 +344,7 @@ footer .theme-by {
 
 }
 .post-preview .post-entry {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
 }
 .post-preview .post-read-more {
   font-weight: 800;
@@ -359,7 +359,7 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   color: #999;
   font-size: 15px;
   margin-bottom: 30px;
@@ -439,7 +439,7 @@ footer .theme-by {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
 
@@ -465,7 +465,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   right: 0;
   bottom: 0;
   display: none;
@@ -539,7 +539,7 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
@@ -665,7 +665,7 @@ td.gutter {
     margin-right: 15%;
   }
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
     font-weight: 800;
     margin-left: 15%;
     margin-right: 15%;
@@ -726,7 +726,7 @@ td.gutter {
 
   }
   .post-preview .post-entry {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
     margin-left: 15%;
     margin-right: 15%;
   }
@@ -738,7 +738,7 @@ td.gutter {
   /* --- Tags --- */
 
   .blog-tags {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
     color: #999;
     font-size: 15px;
     margin-bottom: 30px;
