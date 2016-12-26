@@ -13,7 +13,7 @@ layout: custom
       <div class="col-lg-6 col-lg-6"> 
 
       <a href="{{ interactive.url }}">
-        <img src="{{ interactive.bigimg }}" class="big-img intro-header" alt="{{ interactive.title }}" itemprop="image"></img>
+        <img src="{{ interactive.bigimg }}" class="big-img intro-header" alt="{{ interactive.title }}" itemprop="image">
       </a>
     <h2 class="interactive-title">
       <a href="{{ interactive.url }}">
@@ -26,5 +26,6 @@ layout: custom
   {% endfor %}
 
 
+</div>
 </div>
 </div>
