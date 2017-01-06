@@ -3,7 +3,7 @@ layout: post
 title: "Mapping Wisconsin Presidential Election Results"
 description: ""
 tags: [R, ggplot2, politics, dataviz]
-date: 2016-12-26
+date: 2017-01-05
 category: posts
 bigimg: /images/WisconsinMinnesota.png
 ---
