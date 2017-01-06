@@ -9,7 +9,7 @@ layout: custom
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <h1 class="project-title">Projects</h1>
 
-    {% for project in site.categories.project %}  
+    {% for project in site.categories.projects %}  
     <div class="col-lg-6 col-lg-6">
 
       <a href="{{ project.url }}">

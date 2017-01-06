@@ -6,7 +6,7 @@ tags: [MobyGames, Video Games, FiveThirtyEight, data, R, ggplot2, rvest, D3.js]
 date: 2015-06-10
 comments: true
 hidden: true
-category: interactive
+category: interactives
 bigimg: /images/theme_interactive.png
 ---
 

@@ -5,7 +5,7 @@ subtitle: "Using the Minor League Baseball database to calculate each players mo
 tags: [R, dplyr, Similarity Scores, data, sports, MiLB, MLB]
 date: 2015-03-25
 comments: true
-category: post
+category: posts
 bigimg: /images/bryant2.jpg
 ---
 

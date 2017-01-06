@@ -1,0 +1,16 @@
+base
+knitr
+readr
+stringr
+plyr
+XML
+acs
+choroplethr
+choroplethrMaps
+ggplot2
+ggthemes
+RColorBrewer
+gridExtra
+dplyr
+tidyr
+extrafont

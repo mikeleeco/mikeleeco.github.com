@@ -9,7 +9,7 @@ layout: custom
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <h1 class="interactive-title">Interactives</h1>
 
-    {% for interactive in site.categories.interactive %}  
+    {% for interactive in site.categories.interactives %}  
       <div class="col-lg-6 col-lg-6"> 
 
       <a href="{{ interactive.url }}">
