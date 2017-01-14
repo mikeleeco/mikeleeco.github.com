@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Resume
+baseurl: resume.md
 subtitle: Michael Lee
 ---
 

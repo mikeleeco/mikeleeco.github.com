@@ -1,5 +1,6 @@
 ---
 layout: custom
+baseurl: interactives.md
 ---
 
 {% include header.html type="post" %}

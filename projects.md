@@ -1,5 +1,6 @@
 ---
 layout: custom
+baseurl: projects.md
 ---
 
 {% include header.html type="page" %}
