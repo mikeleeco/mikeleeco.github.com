@@ -6,7 +6,7 @@ subtitle: Michael Lee
 ---
 
 ## Professional Profile
-I'm a research and data professional with a keen interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I'm able to contribute meaningful work augmented strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
+I'm a research and data professional with a keen interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I'm able to contribute meaningful work, augmented by strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
 
 ## Core Compentencies
 
@@ -54,7 +54,7 @@ Demonstrated ability converting both unstructured and clean data into meaningful
 2013 - 2014
 
 * Analyzed student performance data and literature to identify trends and answer key questions for staff and board members
-* Contributed to the development of a report summarizing student behavior, course grades, and performance on assessments, apccommodating for parents and guardians of low-literacy
+* Contributed to the development of a report summarizing student behavior, course grades, and performance on assessments, accommodating for parents and guardians of low-literacy
 * Supported data handling and validation to provide student performance information to staff
 * Documented operating procedures for the data department to enhance data infrastructure
 
@@ -64,3 +64,7 @@ Demonstrated ability converting both unstructured and clean data into meaningful
 
 * Cardinal Stritch University - MA in Urban Education, 2013
 * University of Wisconsin-Madison - BS in Psychology, 2011
+
+***
+
+### *A one-page resume can be found [here]({{ base.url }}/Michael_Lee_Resume.pdf)*.
