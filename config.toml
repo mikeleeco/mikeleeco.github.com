@@ -1,0 +1,65 @@
+baseurl = "https://mikeleeco.github.io"
+languageCode = "en-us"
+title = "Michael Lee"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+disqusShortname = "mikeleeco"
+googleAnalytics = "UA-58518999-1"
+
+[Params]
+  subtitle = "R and Data Visualization"
+  logo = "img/avatar-icon.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "Michael Lee"
+  email = "mdlee12@gmail.com"
+  github = "mikeleeco"
+  twitter = "mikeleeco"
+  linkedin = "mikeleeco"
+  stackoverflow = "users/5982900/michael-lee"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/posts"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "/projects"
+    weight = 2
+
+[[menu.main]]
+    name = "Interactives"
+    url = "/interactives"
+    weight = 3
+
+[[menu.main]]
+    name = "Animation"
+    url = "/animation"
+    weight = 4
+
+[[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 5
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"

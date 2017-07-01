@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>sabr - R package</title>
+  <meta property="og:title" content="sabr - R package" />
+  <meta name="twitter:title" content="sabr - R package" />
+  <meta name="description" content="Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics">
+  <meta property="og:description" content="Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics">
+  <meta name="twitter:description" content="Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics">
+  <meta name="author" content="Michael Lee"/>
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mikeleeco" />
+  <meta name="twitter:creator" content="@mikeleeco" />
+  <meta property="og:url" content="/posts/2016-05-28-sabr-R-package/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Michael Lee" />
+
+  <meta name="generator" content="Hugo 0.19" />
+  <link rel="canonical" href="/posts/2016-05-28-sabr-R-package/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael Lee">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="//css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="//css/pygment_highlights.css" />
+  <link rel="stylesheet" href="//css/highlight.min.css" />
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Michael Lee</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/posts">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Projects" href="/projects">Projects</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Interactives" href="/interactives">Interactives</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Animation" href="/animation">Animation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Resume" href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Michael Lee" href="/">
+            <img class="avatar-img" src="//img/avatar-icon.png" alt="Michael Lee" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/county.jpg" data-img-desc-1="Milwaukee County Stadium">
+    </div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+
+
+
+    <div class="container" role="main">
+      
+        <head>
+  <link rel="stylesheet" href="//css/postCustom.css" />
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-lg-offset-0">
+
+            <h2 class="post-title">sabr - R package</h2>
+
+    
+      
+    
+      <p class="post-meta">
+        Posted on April 10, 2016
+      </p>
+    
+      
+  
+    <span class="post-meta">
+      
+        <span class="post-tags"><a href="/tags/r">#R</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/sabr">#sabr</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/baseball">#baseball</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/data">#data</a></span>&nbsp;
+      
+    </span>
+  
+
+        
+
+<p>The <a href="https://github.com/mikeleeco/sabr/">sabr package</a> connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in <a href="http://www.insidethebook.com/woba.shtml">The Book: Playing the Percentages in Baseball</a>, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:</p>
+
+<ul>
+<li>Retrieves the most up-to-date wOBA measures from 1871-2015</li>
+<li>Queries yearly and career offensive performance from the Lahman SQL database</li>
+<li>Calculates a player&rsquo;s seasonal wOBA performance</li>
+</ul>
+
+<h2 id="installation">Installation:</h2>
+
+<p>Download the latest development version from github:</p>
+
+<pre><code class="language-r">if (packageVersion(&quot;devtools&quot;) &lt; 1.6) {
+  install.packages(&quot;devtools&quot;)
+}
+devtools::install_github(&quot;mdlee12/sabr&quot;)
+</code></pre>
+
+<h2 id="motivation">Motivation:</h2>
+
+<p>wOBA is one of the best catch-all offensive performance statistics, but it&rsquo;s formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season&rsquo;s run environment.</p>
+
+<p>For example, the wOBA formula for the 2013 season was:</p>
+
+<pre><code class="language-r">wOBA = (0.690 * uBB + 0.722 * HBP + 0.888 * (H - DB - TR - HR) + 1.271 * DB + 1.616 * TR + 2.101 * HR) / (AB + BB - IBB + SF + HBP)
+</code></pre>
+
+<p>Check out <a href="http://www.fangraphs.com/library/offense/woba/">Fangraphs</a>&rsquo; library for additional details.</p>
+
+<h2 id="new-functions-with-0-2">New Functions with 0.2:</h2>
+
+<ul>
+<li>wRAA_season : Returns a MLB player&rsquo;s weighted Runs Above Average by yearID</li>
+</ul>
+
+<pre><code class="language-r">library(sabr)
+wRAA_season(&quot;braunry02&quot;,&quot;2015&quot;)
+</code></pre>
+
+<pre><code>## [1] 23.89798
+</code></pre>
+
+<ul>
+<li>wRC_season : Returns a MLB player&rsquo;s weighted Runs Created by yearID</li>
+</ul>
+
+<pre><code class="language-r">wRC_season(&quot;molitpa01&quot;,&quot;1991&quot;)
+</code></pre>
+
+<pre><code>## [1] 127.0164
+</code></pre>
+
+<ul>
+<li>wRCp_season : Returns a MLB player&rsquo;s weighted Runs Created Plus by yearID</li>
+</ul>
+
+<pre><code class="language-r">wRCp_season(&quot;yountro01&quot;,&quot;1989&quot;)
+</code></pre>
+
+<pre><code>## [1] 152.5421
+</code></pre>
+
+<p><strong>Full calculation details are in the <a href="https://github.com/mdlee12/sabr/blob/master/vignettes/wOBA%20and%20wRC%2B%20calculation.Rmd">wOBA and wRC+ calculation.Rmd file</a></strong></p>
+
+<p><em>wRCp_season makes a couple assumptions:</em>
+1. Park Factors are pulled from the Lahman Database - these are different from other sources
+2. A player&rsquo;s primary position is used to remove pitchers from the League Runs/Plate Appearance calculation</p>
+
+<hr />
+
+<h2 id="key-functions-from-0-1">Key Functions from 0.1:</h2>
+
+<ul>
+<li>battingseason : Offensive seasonal performance by playerID and yearID</li>
+</ul>
+
+<pre><code class="language-r">battingseason(&quot;parrage01&quot;,&quot;2014&quot;)
+</code></pre>
+
+<pre><code>##    playerID yearID stints  teamID  AB  R   H DB TR HR RBI SB CS BB  SO IBB SF SH GIDP HBP
+## 1 parrage01   2014      2 ARI,MIL 529 64 138 22  4  9  40  9  7 32 100   5  2  6   10   5
+</code></pre>
+
+<ul>
+<li>battingcareer : Offensive career performance by playerID by organized by season</li>
+</ul>
+
+<pre><code class="language-r">battingcareer(&quot;fieldpr01&quot;)
+</code></pre>
+
+<pre><code>##     playerID yearID stints teamID  AB   R   H DB TR HR RBI SB CS  BB  SO IBB SF SH GIDP HBP
+## 1  fieldpr01   2005      1    MIL  59   2  17  4  0  2  10  0  0   2  17   0  1  0    0   0
+## 2  fieldpr01   2006      1    MIL 569  82 154 35  1 28  81  7  2  59 125   5  8  0   17  12
+## 3  fieldpr01   2007      1    MIL 573 109 165 35  2 50 119  2  2  90 121  21  4  0    9  14
+## 4  fieldpr01   2008      1    MIL 588  86 162 30  2 34 102  3  2  84 134  19 10  0   12  12
+## 5  fieldpr01   2009      1    MIL 591 103 177 35  3 46 141  2  3 110 138  21  9  0   14   9
+## 6  fieldpr01   2010      1    MIL 578  94 151 25  0 32  83  1  0 114 138  17  1  0   12  21
+## 7  fieldpr01   2011      1    MIL 569  95 170 36  1 38 120  1  1 107 106  32  6  0   17  10
+## 8  fieldpr01   2012      1    DET 581  83 182 33  1 30 108  1  0  85  84  18  7  0   19  17
+## 9  fieldpr01   2013      1    DET 624  82 174 36  0 25 106  1  1  75 117   5  4  0   20   9
+## 10 fieldpr01   2014      1    TEX 150  19  37  8  0  3  16  0  0  25  24  11  1  0    5   2
+## 11 fieldpr01   2015      1    TEX 613  78 187 28  0 23  98  0  0  64  88  14  5  0   21  11
+</code></pre>
+
+<ul>
+<li>woba_season : Returns a MLB player&rsquo;s weighted On-Base Average by yearID</li>
+</ul>
+
+<pre><code class="language-r">woba_season(&quot;fieldpr01&quot;,&quot;2014&quot;)
+</code></pre>
+
+<pre><code>## [1] 0.3049516
+</code></pre>
+
+<ul>
+<li>lahman_search : Returns a player&rsquo;s Lahman playerID using either:
+
+<ul>
+<li>nameFirst (Player First Name)</li>
+<li>nameLast (Player Last Name)</li>
+<li>nameGiven (Player Given Name)</li>
+<li>retroID (<a href="http://www.retrosheet.org/retroID.htm">Retrosheet</a> ID)</li>
+<li>bbrefID (<a href="http://www.baseball-reference.com/players/">Baseball Reference</a> ID)</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-r">lahman_search(nameFirst = &quot;Robin&quot;)
+</code></pre>
+
+<pre><code>##    playerID nameFirst nameLast         nameGiven  retroID   bbrefID
+## 1 jenniro01     Robin Jennings Robin Christopher jennr001 jenniro01
+## 2 roberro01     Robin  Roberts        Robin Evan rober102 roberro01
+## 3 venturo01     Robin  Ventura        Robin Mark ventr001 venturo01
+## 4 yountro01     Robin    Yount          Robin R. younr001 yountro01
+</code></pre>
+
+<pre><code class="language-r">lahman_search(nameLast = &quot;Fielder&quot;)
+</code></pre>
+
+<pre><code>##    playerID nameFirst nameLast     nameGiven  retroID   bbrefID
+## 1 fieldce01     Cecil  Fielder   Cecil Grant fielc001 fieldce01
+## 2 fieldpr01    Prince  Fielder Prince Semien fielp001 fieldpr01
+</code></pre>
+
+<pre><code class="language-r">lahman_search(nameGiven = &quot;Russell Oles&quot;)
+</code></pre>
+
+<pre><code>##    playerID nameFirst nameLast    nameGiven  retroID   bbrefID
+## 1 branyru01   Russell  Branyan Russell Oles branr001 branyru01
+</code></pre>
+
+<pre><code class="language-r">lahman_search(retroID = &quot;molip001&quot;)
+</code></pre>
+
+<pre><code>##    playerID nameFirst nameLast nameGiven  retroID   bbrefID
+## 1 molitpa01      Paul  Molitor  Paul Leo molip001 molitpa01
+</code></pre>
+
+<pre><code class="language-r">lahman_search(bbrefID = &quot;yostne01&quot;)
+</code></pre>
+
+<pre><code>##   playerID nameFirst nameLast       nameGiven  retroID  bbrefID
+## 1 yostne01       Ned     Yost Edgar Frederick yoste001 yostne01
+</code></pre>
+
+<hr />
+
+<p>Have a question, issue or suggestion? Create a pull request, file an issue, or feel free to contact me on <a href="https://twitter.com/mikeleeco">Twitter</a></p>
+
+
+              <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="/posts/2015-06-10-video-games-interactive/" data-toggle="tooltip" data-placement="top" title="Visualizing Video Games Throughout History">&larr; Previous Post</a>
+          </li>
+        
+        
+        
+          <li class="next">
+            <a href="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/" data-toggle="tooltip" data-placement="top" title="mikelee.co: Powered by RMarkdown, knitr, and Jekyll">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mikeleeco';
+    var disqus_identifier = '\/posts\/2016-05-28-sabr-R-package\/';
+    var disqus_title = 'sabr - R package';
+    var disqus_url = '\/posts\/2016-05-28-sabr-R-package\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-lg-offset-0">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mdlee12@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mikeleeco" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mikeleeco" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="//index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Michael Lee
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">Michael Lee</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.19</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//js/main.js"></script>
+<script src="//js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58518999-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>

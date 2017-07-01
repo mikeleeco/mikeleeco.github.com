@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Michael Lee</title>
+    <link>/tags/research/index.xml</link>
+    <description>Recent content in Research on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>EdSurvey - R package</title>
+      <link>/projects/2017-06-03-EdSurvey-R-package/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2017-06-03-EdSurvey-R-package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NAEPprimer - R package</title>
+      <link>/projects/2017-06-03-NAEPprimer-R-package/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2017-06-03-NAEPprimer-R-package/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

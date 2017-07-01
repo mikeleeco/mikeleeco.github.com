@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>NBA Draft Odds Plot</title>
+  <meta property="og:title" content="NBA Draft Odds Plot" />
+  <meta name="twitter:title" content="NBA Draft Odds Plot" />
+  <meta name="description" content="Original Source
+I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:
+With thanks to @hadleywickham, @hrbrmstr, and @ColorBrewer. #rstats https://t.co/hjX39Xhi4P https://t.co/XD27alzwNI
+&mdash; David Sparks (@dsparks) April 22, 2016 
+With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.
+Package Dependencies and Data">
+  <meta property="og:description" content="Original Source
+I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:
+With thanks to @hadleywickham, @hrbrmstr, and @ColorBrewer. #rstats https://t.co/hjX39Xhi4P https://t.co/XD27alzwNI
+&mdash; David Sparks (@dsparks) April 22, 2016 
+With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.
+Package Dependencies and Data">
+  <meta name="twitter:description" content="Original Source
+I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:
+With thanks to @hadleywickham, @hrbrmstr, and @ColorBrewer. …">
+  <meta name="author" content="Michael Lee"/>
+  <link href='https://mikeleeco.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://mikeleeco.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://mikeleeco.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mikeleeco" />
+  <meta name="twitter:creator" content="@mikeleeco" />
+  <meta property="og:url" content="https://mikeleeco.github.io/post/2016-06-01-NBA-Draft-Odds-Plot/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="mikelee.co" />
+
+  <meta name="generator" content="Hugo 0.19" />
+  <link rel="canonical" href="https://mikeleeco.github.io/post/2016-06-01-NBA-Draft-Odds-Plot/" />
+  <link rel="alternate" href="https://mikeleeco.github.io/index.xml" type="application/rss+xml" title="mikelee.co">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://mikeleeco.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://mikeleeco.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://mikeleeco.github.io/css/highlight.min.css" />
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://mikeleeco.github.io">mikelee.co</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Resume" href="/resume">Resume</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+              <div class="navlinks-children">
+                
+                  <a href="/projects">Projects</a>
+                
+                  <a href="/interactives">Interactives</a>
+                
+                  <a href="https://www.github.com/mikeleeco">Github</a>
+                
+              </div>
+            </li>
+          
+        
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="mikelee.co" href="https://mikeleeco.github.io">
+            <img class="avatar-img" src="https://mikeleeco.github.io/img/avatar-icon.png" alt="mikelee.co" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=3 data-img-src-1="https://mikeleeco.github.io/img/draft_odds.png" data-img-desc-1="NBA Draft Odds"data-img-src-2="https://mikeleeco.github.io/img/sphere.jpg" data-img-desc-2="Sphere"data-img-src-3="https://mikeleeco.github.io/img/hexagon.jpg" data-img-desc-3="Hexagon"></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-lg-offset-0">
+              <div class="post-heading">
+                <h1>NBA Draft Odds Plot</h1>
+                  
+                  
+                    <span class="post-meta">Posted on June 1, 2016</span>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-lg-offset-0">
+            <div class="post-heading">
+              <h1>NBA Draft Odds Plot</h1>
+                
+                
+                  <span class="post-meta">Posted on June 1, 2016</span>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    <div class="container" role="main">
+      
+        <div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-lg-offset-0">
+      <article role="main" class="blog-post">
+        <p><strong>Original Source</strong></p>
+
+<p>I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:</p>
+
+<p><blockquote class="twitter-tweet" align="center" data-lang="en"><p lang="en" dir="ltr">With thanks to <a href="https://twitter.com/hadleywickham">@hadleywickham</a>, <a href="https://twitter.com/hrbrmstr">@hrbrmstr</a>, and <a href="https://twitter.com/ColorBrewer">@ColorBrewer</a>. <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/hjX39Xhi4P">https://t.co/hjX39Xhi4P</a> <a href="https://t.co/XD27alzwNI">https://t.co/XD27alzwNI</a></p>&mdash; David Sparks (@dsparks) <a href="https://twitter.com/dsparks/status/723497233988096004">April 22, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.</p>
+
+<p><strong>Package Dependencies and Data</strong></p>
+
+<p>The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the <a href="https://en.wikipedia.org/wiki/2016_NBA_draft">raw lottery odds</a>. I fudged some of the data based on how it looked in the plot - not much I can do about that since there wasn&rsquo;t anything programmatically to work from there! <code>¯\_(ツ)_/¯</code></p>
+
+<pre><code class="language-r">#devtools::install_github(&quot;hadley/ggplot2&quot;)
+#devtools::install_github(&quot;hadley/tidyr&quot;)
+library(ggplot2)
+library(tidyr)
+library(RCurl)
+library(RColorBrewer)
+dataurl &lt;- 'https://gist.githubusercontent.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766/raw/afa955af265d14a2f72780e4e0b87ffe469c0109/odds.csv'
+data &lt;- getURL(dataurl)                
+odds &lt;- read.csv(textConnection(data))
+</code></pre>
+
+<p><strong>Data Cleanup</strong></p>
+
+<p>The tidyr package allows us to reshape our data between long and wide formats, RColorBrewer helps generate a fluid color pallete for our plot, and RCurl assists in sourcing the data from <a href="https://gist.github.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766#file-odds-csv">my gist</a>.</p>
+
+<pre><code class="language-r">odds &lt;- gather(odds, X)
+odds[,2] &lt;- substring(odds[,2], 2)
+colnames(odds) &lt;- c(&quot;Team&quot;,&quot;Pick&quot;,&quot;Probability&quot;)
+odds$Pick &lt;- as.numeric(odds$Pick)
+odds$Team &lt;- as.character(odds$Team)
+odds$Team &lt;- factor(odds$Team, levels = odds[1:14,1])
+odds$Team &lt;- factor(odds$Team, levels=rev(levels(odds$Team)))
+odds$Pick &lt;- factor(odds$Pick, levels = 1:14)
+getPalette &lt;- colorRampPalette(brewer.pal(11, &quot;Spectral&quot;))(14)
+odds$Probability &lt;- ifelse(is.na(odds$Probability),0,odds$Probability)
+</code></pre>
+
+<p>The <code>colorRampPallete</code> and <code>brewer.pal</code> functions expands the &ldquo;Spectral&rdquo; color pallete from 11 to 14 colors, and we&rsquo;ve organized our Team y-axis to be leveled in order of likelihood of winning the top pick - without factoring in the projections that were used in the @celtics figure.</p>
+
+<p><strong>The Custom Plot Theme</strong></p>
+
+<p>Now that we&rsquo;ve prepared our data, we can get to customizing the plot!</p>
+
+<pre><code class="language-r">g &lt;- ggplot(odds, aes(Team))
+g &lt;- g + geom_bar(aes(x = Team, y = Probability, fill = Pick),alpha=0.9,stat=&quot;identity&quot;)  
+g &lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&quot;Probability&quot;, labels=scales::percent) +
+    labs(x=NULL, y=NULL, title=&quot;2016 NBA Draft Lottery Probabilities&quot;,
+         subtitle = &quot;After tiebreakers and trades. Trades with protections are indicated by a black border, and the receiving team is named. Based on 100,000 simulations&quot;,
+         caption=&quot;Reproduced by: @mikeleeco                  Original: @dsparks                  Source: http://www.nba.com/celtics/news/sidebar/2016-draft-lottery-qa&quot;) +
+    coord_flip() +
+    scale_fill_manual(values = getPalette)
+</code></pre>
+
+<p>The development version of <a href="https://github.com/hadley/ggplot2">ggplot2 on github</a> features numerous additions including ecpanded arguments for <code>labs</code> such as subtitles and captions. Check out <code>?ggplot2::labs</code> or <a href="https://rud.is/b/2016/03/16/supreme-annotations/">Bob Rudis&rsquo; post</a> on his contribution to ggplot2.</p>
+
+<pre><code class="language-r">g &lt;- g  + theme(
+  axis.text.x = element_text(size=14,margin=margin(b=5),color = &quot;black&quot;),
+  axis.title.x = element_text(size=16),
+  plot.subtitle = element_text(size=14),
+  plot.caption = element_text(size=16,margin = margin(t=20),face = &quot;italic&quot;, hjust = .5),
+  axis.text.y = element_text(size=18,margin = margin(r=-40),colour = &quot;black&quot;),
+  axis.ticks.y=element_blank(),
+  axis.ticks.x=element_blank(),
+  plot.title = element_text(size=30,margin = margin(b=10)),
+  panel.border=element_blank(),
+  panel.grid.major.x=element_line(color=&quot;#2b2b2b&quot;, linetype=&quot;dotted&quot;, size=0.15),
+  panel.grid.major.y=element_blank(),
+  legend.text = element_text(size=14),
+  legend.title = element_text(size=18),
+  legend.key = element_rect(fill=&quot;#DCDCDC&quot;,colour = &quot;#DCDCDC&quot;),
+  legend.background = element_rect(fill=&quot;#DCDCDC&quot;),
+  panel.background = element_rect(fill=&quot;#DCDCDC&quot;),
+  plot.background = element_rect(fill=&quot;#DCDCDC&quot;)
+)
+</code></pre>
+
+<p>As seen in the theme here, the developtmental version of ggplot2 also features elements to customize the new caption and subtitle arguments. Things are looking pretty sharp!</p>
+
+<p><strong>Annotations - Call for Help!</strong></p>
+
+<p>The lottery data has been transformed into a customized plot; the only missing pieces are the transparent rectangular grobs indicating picks with trade implications. I tried a few different methods to programmatically assign labels over the rows in our dataset, none of which gave the desired final output. Instead I used brute force to place transparent rectangles and texts over the appropriate data blocks:</p>
+
+<pre><code class="language-r">g &lt;- g + annotate(&quot;text&quot;, x = (13.45+12.55)/2, y = .6, alpha = 1,color=&quot;black&quot;, label=&quot;to PHI&quot;, size= rel(7)) +
+            annotate(&quot;rect&quot;, xmin = 12.55, xmax = 13.45, ymin = .555, ymax = 1, alpha = .3,color=&quot;black&quot;) +
+            annotate(&quot;text&quot;, x = (2.45+1.55)/2, y = .1, alpha = 1,color=&quot;black&quot;, label=&quot;to PHX&quot;, size= rel(7)) +
+            annotate(&quot;rect&quot;, xmin = 1.55, xmax = 2.45, ymin = .021, ymax = 1, alpha = .3,color=&quot;black&quot;) +
+            annotate(&quot;text&quot;, x = (7.45+6.55)/2, y = .95, alpha = 1,color=&quot;black&quot;, label=&quot;to CHI &gt;&quot;, size= rel(7)) +
+            annotate(&quot;rect&quot;, xmin = 6.55, xmax = 7.45, ymin = .999, ymax = 1, alpha = .3,color=&quot;black&quot;)
+</code></pre>
+
+<p>There has to be a more efficient method to do this! If you know of a better way please <a href="http://www.twitter.com/mikeleeco">contact me on twitter</a> or create a <a href="https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd">pull request on this post</a>.</p>
+
+<p><strong>Final product:</strong>
+<div class="row"><img src="/img/draft_odds.png" class="img-responsive center-block"/></div></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://mikeleeco.github.io/post/2016-05-24-mikeleeco-powered-by-rmarkdown/" data-toggle="tooltip" data-placement="top" title="mikelee.co: Powered by RMarkdown, knitr, and Jekyll">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://mikeleeco.github.io/post/2016-12-26-wisconsin-presidential-election-results/" data-toggle="tooltip" data-placement="top" title="Mapping Wisconsin Presidential Election Results">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'mikeleeco';
+    var disqus_identifier = 'https:\/\/mikeleeco.github.io\/post\/2016-06-01-NBA-Draft-Odds-Plot\/';
+    var disqus_title = 'NBA Draft Odds Plot';
+    var disqus_url = 'https:\/\/mikeleeco.github.io\/post\/2016-06-01-NBA-Draft-Odds-Plot\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-lg-offset-0">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mdlee12@gmail..com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mikeleeco" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mikeleeco" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://mikeleeco.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Michael Lee
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://mikeleeco.github.io">mikelee.co</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.19</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://mikeleeco.github.io/js/main.js"></script>
+<script src="https://mikeleeco.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58518999-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>

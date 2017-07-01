@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knitr on Michael Lee</title>
+    <link>/tags/knitr/index.xml</link>
+    <description>Recent content in Knitr on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/knitr/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>mikelee.co: Powered by RMarkdown, knitr, and Jekyll</title>
+      <link>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Spend a few months documenting code scripts in RStudio and you&amp;rsquo;ll have surely seen those introductory lines numerous times.&lt;/p&gt;
+
+&lt;p&gt;This is also a R code script. And a markdown document. And an HTML page. All of which are generated within one .Rmd document. My site had previously supported by Github Pages and Jekyll, and now my preferred statistical software tool will streamline my blogging process. I expect this to make the transition from idea, analyses, visualization, and blog post production much more seamless.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Inspiration and First Steps&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I first heard about the ability to generate and serve files within R from a tweet from Brendan Rocks:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; align=&#34;center&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Post on my BARUG talk tonight: Blogging w/ &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt; &amp;amp; knitr-jekyll (all credit to &lt;a href=&#34;https://twitter.com/xieyihui&#34;&gt;@xieyihui&lt;/a&gt;!) &lt;a href=&#34;https://t.co/PsGXbyXZJa&#34;&gt;https://t.co/PsGXbyXZJa&lt;/a&gt; &lt;a href=&#34;https://t.co/eZycscbmup&#34;&gt;pic.twitter.com/eZycscbmup&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brendan Rocks (@rocksbrendan) &lt;a href=&#34;https://twitter.com/rocksbrendan/status/656564982885146625&#34;&gt;October 20, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;This workflow blew my mind at the time (still does) and the post in which he explains the scaffolding is very useful. Check it out &lt;a href=&#34;https://brendanrocks.com/blogging-with-rmarkdown-knitr-jekyll/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adding in a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_source/2016-05-24-mikeleeco-powered-by-rmarkdown.Rmd&#34;&gt;&lt;code&gt;_source&lt;/code&gt;&lt;/a&gt; directory to store .Rmd files allows   Yihui Xie&amp;rsquo;s &lt;a href=&#34;https://github.com/yihui/servr&#34;&gt;servr package&lt;/a&gt; the ability to render markdown documents in  &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_posts/2016-05-24-mikeleeco-powered-by-rmarkdown.md&#34;&gt;&lt;code&gt;_posts&lt;/code&gt;&lt;/a&gt;, which Jekyll converts to HTML - which is what you are reading now!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Improving Syntax Highlighting&lt;/strong&gt; &lt;em&gt;(with updates!)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my highlighter (rouge) but were being rendered with an &amp;ldquo;r&amp;rdquo; in front like so:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;r&lt;/code&gt;&lt;code&gt;cat(paste(c(&amp;quot;This&amp;quot;,&amp;quot;drove&amp;quot;,&amp;quot;me&amp;quot;,&amp;quot;mental D:&amp;quot;),sep=&amp;quot; &amp;quot;))&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;## This drove me mental D:&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;An earlier version of this post detailed a method of updating syntax highlighting using redcarpet markdown and pygments - a soon to be deprecated syntax highlighter. Turns out I wasn&amp;rsquo;t the only one having this issue! After more than a few missteps, and applying the advice from &lt;a href=&#34;https://github.com/jekyll/jekyll/issues/1342&#34;&gt;this post&lt;/a&gt;, make sure you have both jekyll &lt;a href=&#34;https://rubygems.org/pages/download&#34;&gt;ruby&lt;/a&gt; installed and updated! After updating your site infrastructure, add a css template with formatting options - such as my &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/public/css/syntax.css&#34;&gt;&lt;code&gt;syntax.css&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final Result&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;cat(paste(c(&amp;quot;Yay&amp;quot;,&amp;quot;for&amp;quot;,&amp;quot;making&amp;quot;,&amp;quot;life&amp;quot;,&amp;quot;easier!&amp;quot;),sep=&amp;quot; &amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Yay for making life easier!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Look how great that looks! Lets see what a function looks like.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;devtools::install_github(&amp;quot;mdlee12/sabr&amp;quot;)
+library(sabr)
+sabr::woba_season
+function (playerID = NULL, yearID = NULL, ...) 
+{
+    db &amp;lt;- lahman()
+    woba_guts &amp;lt;- RSQLite::dbGetQuery(db, &amp;quot;SELECT * FROM wOBA_Table&amp;quot;)
+    wobayear &amp;lt;- woba_guts[woba_guts$yearID == yearID, ]
+    wobayear &amp;lt;- data.frame(wobayear)
+    query &amp;lt;- paste(&amp;quot;SELECT GROUP_CONCAT(DISTINCT teamID) as teamID, 
+                   SUM(H) as H, SUM([2B]) as DB, SUM([3B]) as TR,SUM(HR) as HR, 
+                   SUM(AB) as AB, SUM(BB) as BB, SUM(IBB) as IBB, SUM(SF) as SF, 
+                   SUM(SH) as SH, SUM(HBP) as HBP FROM Batting WHERE playerID = &#39;&amp;quot;, 
+                   playerID, &amp;quot;&#39; AND yearID = &#39;&amp;quot;, yearID, &amp;quot;&#39;&amp;quot;, sep = &amp;quot;&amp;quot;)
+    db &amp;lt;- lahman()
+    query &amp;lt;- RSQLite::dbGetQuery(db, query)
+    query &amp;lt;- as.data.frame(query)
+    uBB &amp;lt;- wobayear$wobaBB * (query$BB - query$IBB)
+    HBP &amp;lt;- wobayear$wobaHB * (query$HBP)
+    DB &amp;lt;- wobayear$woba2B * (query$DB)
+    TR &amp;lt;- wobayear$woba3B * (query$TR)
+    HR &amp;lt;- wobayear$wobaHR * (query$HR)
+    H &amp;lt;- wobayear$woba1B * (query$H - query$DB - query$TR - query$HR)
+    AB &amp;lt;- query$AB
+    BB &amp;lt;- query$BB
+    IBB &amp;lt;- query$IBB
+    SF &amp;lt;- query$SF
+    SH &amp;lt;- query$SH
+    PA &amp;lt;- query$PA
+    woba &amp;lt;- (uBB + HBP + H + DB + TR + HR)/(AB + BB - IBB + SF + HBP)
+    woba
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;http://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;How about some numbers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;6*9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 54
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sabr::woba_season(&amp;quot;yountro01&amp;quot;,1982)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0.414997
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also embed plots. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Much plots. Such scatter.
+plot(iris)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More to come soon :D&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

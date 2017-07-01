@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+ <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Michael Lee</title>
+  <meta property="og:title" content="Michael Lee" />
+  <meta name="twitter:title" content="Michael Lee" />
+  <meta name="author" content="Michael Lee"/>
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mikeleeco" />
+  <meta name="twitter:creator" content="@mikeleeco" />
+  <meta property="og:url" content="/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Michael Lee" />
+
+  <meta name="generator" content="Hugo 0.19" />
+  <link rel="canonical" href="/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael Lee">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="//css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="//css/pygment_highlights.css" />
+  <link rel="stylesheet" href="//css/highlight.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="../js/fullPage.js-master/jquery.fullPage.css" />
+
+
+  <style>
+
+
+   
+  * {
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 5em;
+    color: black;
+    margin:0;
+    padding-right:0px;
+    padding-left:0px;
+  }
+
+  h2 {
+    font-size: 3em;
+    margin:0;
+  } 
+
+  h3 {
+    font-size: 1.9em;
+    margin:0;
+  }
+
+
+  li h4 {
+    font-size: 1.5em;
+    margin:0;
+    padding-right:15px;
+    padding-left:15px;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    margin:0;
+  }
+
+  span {
+    margin:0;
+  }
+ 
+  p {
+    font-size: 1.2em;
+    margin:0;
+  }
+
+  .post-item {
+      display: flex;
+      list-style: none;
+      padding-right:1%;
+      padding-left:1%;
+  }
+
+   
+  .section {
+    text-align:center;
+  }
+
+  .dataViz {
+    width:95%;
+    max-width:600px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #f5f5f5;
+    background-image: url("/img/hex.png");
+
+  }
+
+   
+  #section0 {
+    background-image: url("/img/hex.png");
+  }
+
+  #section1 {
+     background-image: url("/img/hex.png");
+  }
+
+  #section2 {
+     background-image: url("/img/hex.png");
+     text-align:left;
+  }
+
+
+   
+  .fp-slidesNav.bottom {
+    bottom: 25px;
+  }
+
+   
+  #infoMenu li a {
+    color: #fff;
+  }
+
+  #section2 h1 {
+    color: #333;
+  }
+
+  .img-circle {
+    border-radius: 50%;
+    padding:15px;
+    padding-top:25px;
+    padding-bottom:25px;
+  }
+
+  #titleLeftSide {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #f1f1f1;
+  }
+
+  #titleRightSide {
+    background: rgba(255, 255, 255, 0.75);
+    border: 3px solid #f1f1f1;
+    }
+
+  #info {
+    text-align:left;
+    background: rgba(255, 255, 255, 0);
+    }
+
+  #blogCenter h4 { 
+    line-height: 150%;
+  }
+
+  #blogCenter h5 { 
+    line-height: 170%;
+  }
+  #blogCenter {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #f1f1f1;
+    padding: 40px;
+  }
+
+ #sectionList li {
+    margin-left:1%;
+    margin-right:1%;
+  }
+
+ 
+
+
+ 
+
+.container { 
+  width: auto;
+}
+
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.is-flex .box {
+  background: none;
+  position: static;
+}
+
+.headerTitle {
+  color: black;
+}
+@media screen and (max-width : 500px)
+{
+
+  h1 {
+    font-size: 8vw;
+    margin:0;
+  }
+
+  h2 {
+    font-size: 5vw;
+    margin:0;
+  }
+
+  h3 {
+    font-size: 4vw;
+    margin:0;
+  }
+
+
+  li h4 {
+    font-size: .9em;
+    margin:0;
+    padding-right:15px;
+    padding-left:15px;
+    margin-top: 0px;
+  }
+
+  h5 {
+    font-size: .75em;
+    margin:0;
+    text-align:top;
+    margin-top: 0px;
+  }
+
+  ul {
+    margin-left:0%;
+    margin-right:0%;
+  }
+
+  p {
+    font-size: 1em;
+    margin:0;
+  }
+
+  #blogCenter {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #f1f1f1;
+    padding: 4px;
+
+  }
+
+  #blogCenter h5 { 
+    line-height: 170%;
+  }
+
+  .post-item {
+        display: flex;
+        list-style: none;
+        padding-right:1%;
+        padding-left:1%;
+    }
+}
+
+@media only screen 
+and (min-width : 500px) 
+and (max-width : 800px) {
+
+   h1 {
+    font-size: 8vw;
+    margin:0;
+  }
+
+  h2 {
+    font-size: 5vw;
+    margin:0;
+  }
+
+  h3 {
+    font-size: 4vw;
+    margin:0;
+  }
+
+
+  li h4 {
+    font-size: 3.0vw;
+    margin:0;
+    padding-right:15px;
+    padding-left:15px;
+    margin-top: 0px;
+  }
+
+  h5 {
+    font-size: 2.5vw;
+    margin:0;
+    text-align:top;
+    margin-top: 0px;
+  }
+
+  ul {
+    margin-left:0%;
+    margin-right:0%;
+  }
+
+  p {
+    font-size: 1em;
+    margin:0;
+  }
+
+  #blogCenter {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #f1f1f1;
+    padding: 4px;
+
+  }
+
+  #blogCenter h5 { 
+    line-height: 170%;
+  }
+
+.post-item {
+      display: flex;
+      list-style: none;
+      padding-right:1%;
+      padding-left:1%;
+  }
+}
+
+
+ #helpText:before {
+    content: "Click arrows or tap \2192  to view content";
+    font-style: italic;
+    color: #666;
+  }
+
+@media screen and (max-width : 500px)
+{
+ #helpText:before {
+    content: "Swipe to view content";
+    font-style: italic;
+    color: #666;
+  }
+}
+
+@media all and (max-width: 1200px) and (min-width: 480px) {
+ #helpText:before {
+    content: "Click arrows  \2192  to view content";
+    font-style: italic;
+    color: #666;
+  }
+
+}
+
+
+ 
+
+@media (max-width: 480px) {
+
+
+}
+
+
+</style>
+  
+
+
+  <script type="text/javascript" src="../js/fullPage.js-master/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        sectionsColor: ['#F5F5F5', '#F5F5F5', '#F5F5F5', '#F5F5F5', '#F5F5F5', '#F5F5F5'],
+        slidesNavigation: true,
+        responsiveWidth: 1200
+
+      });
+    });
+  </script>
+
+</head>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Michael Lee</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/posts">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Projects" href="/projects">Projects</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Interactives" href="/interactives">Interactives</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Animation" href="/animation">Animation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Resume" href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<body>
+
+
+<div id="fullpage">
+
+  <div class="section " id="section1">
+
+    <div class="container">
+      <div class="row is-flex">
+
+
+        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12" id="titleLeftSide">
+          <br>
+           <img class="img-circle" src="//img/michael.png" />
+              <h2>Michael Lee</h2>
+              <br>
+              <h3>Research and Data Professional</h3>
+              <br>
+              <ul class="list-inline footer-links">
+              
+                  <li>
+                    <a href="mailto:mdlee12@gmail.com" title="Email me">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mikeleeco" title="GitHub">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/mikeleeco" title="Twitter">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12" id="titleRightSide">
+          <br>
+
+          <div id ="info">
+            <h2>Biography</h2>
+            <br>
+              <p>
+              I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work, augmented by strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
+              <br><br>
+              I'm from Milwaukee and currently live in Washington, DC.
+              </p>
+          </div>
+              <br>
+          <div>
+              <ul class="list-inline" id="sectionList">
+                  <li><a href="/#secondPage"><h3>Blog</h3></a></li>
+                  <li><a href="/#thirdPage"><h3>Projects</h3></a></li>
+                  <li><a href="/#fourthPage"><h3>Animation</h3></a></li>
+                  <li><a href="/#fifthPage"><h3>Interactives</h3></a></li>
+                  <li><a href="/sixthPage"><h3>Contact</h3></a></li>
+                </ul>
+          </div>
+        </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="section" id="section2">
+      <div class="container">
+      <div class="row">
+
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12" id="blogCenter">
+        <h1><a href="/posts" class = "headerTitle">Blog</a></h1>
+        <br>
+      
+
+    
+                <li class="post-item"><h5>06/28/17</h5><a href="/posts/2017-06-28-wsj-measles-vaccination-chart/"><h4> Reproducing the WSJ Measles Vaccination Chart Using R</h4></a> </li>
+
+            
+                <li class="post-item"><h5>04/05/17</h5><a href="/posts/some-tips-on-making-animations-in-r/"><h4> Some Tips on Making Animations in R</h4></a> </li>
+
+            
+                <li class="post-item"><h5>04/02/17</h5><a href="/posts/some-other-tips-on-making-animations-in-r/"><h4> Some Other Tips on Making Animations in R</h4></a> </li>
+
+            
+                <li class="post-item"><h5>01/05/17</h5><a href="/posts/2016-12-26-wisconsin-presidential-election-results/"><h4> Mapping Wisconsin Presidential Election Results</h4></a> </li>
+
+            
+                <li class="post-item"><h5>06/01/16</h5><a href="/posts/2016-06-01-NBA-Draft-Odds-Plot/"><h4> NBA Draft Odds Plot</h4></a> </li>
+
+            
+                <li class="post-item"><h5>05/24/16</h5><a href="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/"><h4> mikelee.co: Powered by RMarkdown, knitr, and Jekyll</h4></a> </li>
+
+            
+                <li class="post-item"><h5>04/10/16</h5><a href="/posts/2016-05-28-sabr-R-package/"><h4> sabr - R package</h4></a> </li>
+
+            
+                <li class="post-item"><h5>06/10/15</h5><a href="/posts/2015-06-10-video-games-interactive/"><h4> Visualizing Video Games Throughout History</h4></a> </li>
+
+            
+                <li class="post-item"><h5>03/25/15</h5><a href="/posts/2015-03-25-bryant-visualization/"><h4> Kris Bryant Performance Projection</h4></a> </li>
+
+            
+                <li class="post-item"><h5>03/25/15</h5><a href="/posts/2015-03-25-milb-similarity-scores/"><h4> Working with Minor League Similarity Scores</h4></a> </li>
+
+            
+        </div>
+        </div>
+        </div>
+  </div>
+
+  <div class="section" id="section3">
+      <div class="slide" id="slide1" data-anchor="slide1">
+        <h1><a href="/projects" class = "headerTitle">Projects</a></h1>
+        <div id="helpText"></div>
+      </div>
+
+      
+      <div class="slide">
+      <a href="/projects/2017-06-03-EdSurvey-R-package/">
+       <h2>EdSurvey - R package</h2>
+        
+          <img src="/img/edsurvey.png" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      <div class="slide">
+      <a href="/projects/2017-06-03-NAEPprimer-R-package/">
+       <h2>NAEPprimer - R package</h2>
+        
+          <img src="/img/NAEP.png" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      <div class="slide">
+      <a href="/projects/2016-05-28-sabr-R-package/">
+       <h2>sabr - R package</h2>
+        
+          <img src="/img/county.jpg" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      
+  </div>
+  
+  <div class="section" id="section4">
+    <div class="slide" id="slide1" data-anchor="slide1">
+      <h1><a href="/animation" class = "headerTitle">Animation</a></h1>
+
+      <div id="helpText"></div>
+
+    </div>
+
+      
+      <div class="slide">
+      <br>
+      <a href="/animation/2017-06-28-animated-line-chart-coe-bullying/">
+       <h2>Animated Line Chart from Condition of Education 2017 Data Release</h2>
+       <br>
+        
+          <img src="/img/line_graph_bullying.gif" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      <div class="slide">
+      <br>
+      <a href="/animation/2017-06-28-wsj-measles-vaccination-chart/">
+       <h2>Reproducing the WSJ Measles Vaccination Chart Using R</h2>
+       <br>
+        
+          <img src="/img/measles.gif" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      
+  </div>
+
+  <div class="section" id="section5">
+    <div class="slide" id="slide1" data-anchor="slide1">
+      <h1><a href="/interactives" class = "headerTitle">Interactives</a></h1>
+
+      <div id="helpText"></div>
+
+    </div>
+
+      
+      <div class="slide">
+      <br>
+      <a href="/interactives/2015-06-10-genre-interactive/">
+       <h2>Genre Interactive - Visualizing Video Games Throughout History</h2>
+       <br>
+        
+          <img src="/img/genre_interactive.png" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      <div class="slide">
+      <br>
+      <a href="/interactives/2015-06-10-theme-interactive/">
+       <h2>Theme Interactive - Visualizing Video Games Throughout History</h2>
+       <br>
+        
+          <img src="/img/theme_interactive.png" class="dataViz"/>
+        
+      </a>
+      </div>
+      
+      
+  </div>
+
+  <div class="section" id="section6">
+      <h1>Contact</h1>
+      <br>
+              <ul class="list-inline footer-links">
+              
+                  <li>
+                    <a href="mailto:mdlee12@gmail.com" title="Email me">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mikeleeco" title="GitHub">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/mikeleeco" title="Twitter">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+            </ul>
+  </div>
+</div>
+
+
+</body>
+</html>

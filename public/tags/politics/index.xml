@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Politics on Michael Lee</title>
+    <link>/tags/politics/index.xml</link>
+    <description>Recent content in Politics on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mapping Wisconsin Presidential Election Results</title>
+      <link>/posts/2016-12-26-wisconsin-presidential-election-results/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2016-12-26-wisconsin-presidential-election-results/</guid>
+      <description>
+
+&lt;h4 id=&#34;your-home-state-did-us-no-favors&#34;&gt;&lt;em&gt;&amp;ldquo;Your home state did us no favors&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;As a Wisconsinite transplanted into the highest density of left-leaning voters in the country (District of Columbia) I&amp;rsquo;ve heard from several friends over the weeks in the aftermath of the US presidential election that voters in my home state should shoulder responsibility for contributing to Donald Trump winning an electoral majority.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;winner-take-all&amp;rdquo; basis in which electoral votes are allocated means the margin of victory in each state is null - extra votes don&amp;rsquo;t matter - which contributes to an outcome in which a winning candidate can have fewer total votes than another nominee.&lt;/p&gt;
+
+&lt;h4 id=&#34;big-idea&#34;&gt;Big Idea&lt;/h4&gt;
+
+&lt;p&gt;The urban/rural divide has been a popular explanation for Donald Trump&amp;rsquo;s electoral victory in the 2016 presidential election. Does this theory explain why Trump won Wisconsin and Clinton won Minnesota?&lt;/p&gt;
+
+&lt;p&gt;This post seeks to explore this idea. First, a bit of background. These two Midwestern neighbors have striking &lt;a href=&#34;http://www.indexmundi.com/facts/united-states/quick-facts/compare/wisconsin.minnesota&#34;&gt;population, demographic, and social indicator similarities&lt;/a&gt;. Recent gubernatorial and congressional elections in both states have resulted in major party shifts. The policies of Wisconsin&amp;rsquo;s Republican governor Scott Walker and Minnesota&amp;rsquo;s Democratic governor Mark Dayton and their impact on state success has inspired &lt;a href=&#34;https://www.google.com/#q=wisconsin+and+minnesota+government&#34;&gt;several comparisons and juxtaposed analyses&lt;/a&gt;. While each state has elected Republican or Independent candidates as governors in the last few decades, the Democratic nominee has won each state in 7 straight presidential elections from 1988 to 2012.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s try to unpack the voting results in each state in 2016.&lt;/p&gt;
+
+&lt;h4 id=&#34;wisconsin-voting-results&#34;&gt;Wisconsin Voting Results&lt;/h4&gt;
+
+&lt;p&gt;I started this analysis using Julia Silge&amp;rsquo;s &lt;a href=&#34;http://juliasilge.com/blog/Election-Mapping/&#34;&gt;Utah Election Mapping&lt;/a&gt; script, then supplemented these analyses with urban and rural county population numbers from the 2010 Census. First, I loaded the R package libraries. Next, I read in the county level 2016 presidential election results and 2010 census data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(readr)
+library(choroplethr)
+library(choroplethrMaps)
+library(ggplot2)
+library(ggthemes)
+library(RColorBrewer)
+library(gridExtra)
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(extrafont)
+extrafont::loadfonts(quiet = TRUE)
+
+all_results &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&amp;quot;)
+
+urban &amp;lt;- read.table(&amp;quot;http://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.txt&amp;quot;,
+                  header=TRUE,sep=&amp;quot;,&amp;quot;, colClasses = &amp;quot;character&amp;quot;)
+urban$fips &amp;lt;- paste0(urban$STATE,urban$COUNTY)
+urban &amp;lt;- urban %&amp;gt;% select(POP_COU, POPPCT_URBAN, fips)
+urban[,1:2] &amp;lt;- sapply(urban[,1:2], as.numeric)
+all_results &amp;lt;- left_join(all_results,urban)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the data is read and joined together through the &lt;code&gt;fips&lt;/code&gt; code in each data set, we can subset &lt;code&gt;all_results&lt;/code&gt; to determine the percent of votes allocated for the two major party candidates, as well as the two most popular candidates from alternative parties:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wisconsin &amp;lt;- all_results %&amp;gt;% 
+  filter(str_detect(fips, &amp;quot;^55&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wisconsin_spread &amp;lt;- wisconsin %&amp;gt;% 
+  filter(cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;, &amp;quot;Jill Stein&amp;quot;)) %&amp;gt;%
+  select(fips, cand, pct) %&amp;gt;% 
+  mutate(pct = pct * 100,
+         region = as.numeric(fips)) %&amp;gt;%
+  spread(cand, pct) %&amp;gt;%
+  select(-fips)
+
+wisconsin_spread
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 72 × 5
+##    region `Donald Trump` `Gary Johnson` `Hillary Clinton` `Jill Stein`
+## *   &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
+## 1   55001       59.19660       2.048085          37.39982    0.7915306
+## 2   55003       43.25006       2.296240          52.18269    1.7663386
+## 3   55005       60.38465       3.224660          35.00489    0.7506440
+## 4   55007       43.46223       1.959751          52.18628    1.9492150
+## 5   55009       52.70085       3.907543          41.85040    1.0753194
+## 6   55011       58.50311       3.149834          36.56986    1.0692097
+## 7   55013       62.07134       2.626448          33.81122    0.7684367
+## 8   55015       58.06122       3.980476          36.45238    0.7718794
+## 9   55017       56.91589       3.835277          37.73315    0.8388675
+## 10  55019       63.81016       3.291999          31.18541    0.7897845
+## # ... with 62 more rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that our data has been reshaped, we can further subset by candidate to create county-level voting maps, using Ari Lamstein&amp;rsquo;s &lt;a href=&#34;https://cran.r-project.org/web/packages/choroplethr/index.html&#34;&gt;choroplethr&lt;/a&gt; package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wisconsin_spread$value &amp;lt;- wisconsin_spread$`Donald Trump`
+choro1 = CountyChoropleth$new(wisconsin_spread)
+choro1$set_zoom(&amp;quot;wisconsin&amp;quot;)
+choro1$title = &amp;quot;Donald Trump&amp;quot;
+choro1$set_num_colors(1)
+choro1$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro1$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Reds&amp;quot;))
+
+wisconsin_spread$value &amp;lt;- wisconsin_spread$`Hillary Clinton`
+choro2 = CountyChoropleth$new(wisconsin_spread)
+choro2$set_zoom(&amp;quot;wisconsin&amp;quot;)
+choro2$title = &amp;quot;Hillary Clinton&amp;quot;
+choro2$set_num_colors(1)
+choro2$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro2$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Blues&amp;quot;))
+
+wisconsin_spread$value &amp;lt;- wisconsin_spread$`Gary Johnson`
+choro3 = CountyChoropleth$new(wisconsin_spread)
+choro3$set_zoom(&amp;quot;wisconsin&amp;quot;)
+choro3$title = &amp;quot;Gary Johnson&amp;quot;
+choro3$set_num_colors(1)
+choro3$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro3$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Purples&amp;quot;))
+
+wisconsin_spread$value &amp;lt;- wisconsin_spread$`Jill Stein`
+choro4 = CountyChoropleth$new(wisconsin_spread)
+choro4$set_zoom(&amp;quot;wisconsin&amp;quot;)
+choro4$title = &amp;quot;Jill Stein&amp;quot;
+choro4$set_num_colors(1)
+choro4$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro4$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Greens&amp;quot;))
+
+grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro2$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro3$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+
+&lt;p&gt;A bar graph more accurately displays the results by candidate. Wisconsin&amp;rsquo;s 10 electoral votes were decided by only 27257 votes! That is a really small margin.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;votes &amp;lt;- wisconsin %&amp;gt;%
+  filter(cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;,&amp;quot;Jill Stein&amp;quot;)) %&amp;gt;%
+  mutate(cand = factor(cand, levels = c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;,&amp;quot;Jill Stein&amp;quot;))) %&amp;gt;%
+  group_by(cand) %&amp;gt;%
+  summarise(sum = sum(votes))
+
+ggplot(votes, aes(cand, sum, fill = cand)) +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, alpha = 0.8) +
+  theme_tufte(base_family = &amp;quot;DejaVu Sans Mono&amp;quot;) +
+  scale_fill_manual(values = c(&amp;quot;red3&amp;quot;, &amp;quot;navyblue&amp;quot;, &amp;quot;#6A51A3&amp;quot;,&amp;quot;darkgreen&amp;quot;)) +
+  theme(legend.position=&amp;quot;none&amp;quot;) +
+  labs(title = &amp;quot;Total Votes Cast in Wisconsin&amp;quot;, y = &amp;quot;Number of votes&amp;quot;, x = NULL)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;wisconsin-and-minnesota-voting-results&#34;&gt;Wisconsin and Minnesota Voting Results&lt;/h4&gt;
+
+&lt;p&gt;To get a better sense of how the results compare, lets perform the same analyses using both Wisconsin and Minnesota data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;minnesotawisconsin &amp;lt;- all_results %&amp;gt;% 
+  filter(str_detect(fips, c(&amp;quot;^55&amp;quot;)) | str_detect(fips, c(&amp;quot;^27&amp;quot;)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;minnesotawisconsin_spread &amp;lt;- minnesotawisconsin %&amp;gt;% 
+  filter(cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;, &amp;quot;Jill Stein&amp;quot;)) %&amp;gt;%
+  select(fips, cand, pct) %&amp;gt;% 
+  mutate(pct = pct * 100,
+         region = as.numeric(fips)) %&amp;gt;%
+  spread(cand, pct) %&amp;gt;%
+  select(-fips)
+
+minnesotawisconsin_spread$value &amp;lt;- minnesotawisconsin_spread$`Donald Trump`
+choro1 = CountyChoropleth$new(minnesotawisconsin_spread)
+choro1$set_zoom(c(&amp;quot;minnesota&amp;quot;,&amp;quot;wisconsin&amp;quot;))
+choro1$title = &amp;quot;Donald Trump&amp;quot;
+choro1$set_num_colors(1)
+choro1$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro1$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Reds&amp;quot;))
+
+minnesotawisconsin_spread$value &amp;lt;- minnesotawisconsin_spread$`Hillary Clinton`
+choro2 = CountyChoropleth$new(minnesotawisconsin_spread)
+choro2$set_zoom(c(&amp;quot;minnesota&amp;quot;,&amp;quot;wisconsin&amp;quot;))
+choro2$title = &amp;quot;Hillary Clinton&amp;quot;
+choro2$set_num_colors(1)
+choro2$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro2$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Blues&amp;quot;))
+
+minnesotawisconsin_spread$value &amp;lt;- minnesotawisconsin_spread$`Gary Johnson`
+choro3 = CountyChoropleth$new(minnesotawisconsin_spread)
+choro3$set_zoom(c(&amp;quot;minnesota&amp;quot;,&amp;quot;wisconsin&amp;quot;))
+choro3$title = &amp;quot;Gary Johnson&amp;quot;
+choro3$set_num_colors(1)
+choro3$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro3$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Purples&amp;quot;))
+
+minnesotawisconsin_spread$value &amp;lt;- minnesotawisconsin_spread$`Jill Stein`
+choro4 = CountyChoropleth$new(minnesotawisconsin_spread)
+choro4$set_zoom(c(&amp;quot;minnesota&amp;quot;,&amp;quot;wisconsin&amp;quot;))
+choro4$title = &amp;quot;Jill Stein&amp;quot;
+choro4$set_num_colors(1)
+choro4$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
+choro4$ggplot_scale = scale_fill_gradientn(name = &amp;quot;Percent&amp;quot;, 
+                                           colours = brewer.pal(8, &amp;quot;Greens&amp;quot;))
+
+grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro2$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro3$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), 
+             choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Mapping the allocation of votes by county shows Wisconsin and Minnesota have very similar county-level maps. Each has strong results favoring Clinton in major metropolitan areas, including Milwaukee, Madison, and Minneapolis/St Paul. Based solely on each state&amp;rsquo;s map, I&amp;rsquo;d posit that Minnesota seems the more likely Trump-majority. This perspective is deceiving though, as the distribution of votes by county is skewed. Each map displays the percent of votes for each candidate by county, neglecting the county&amp;rsquo;s total votes. More than 78 percent of Menominee County, WI voters selected Hilary Clinton, resulting in Northeastern Wisconsin&amp;rsquo;s dark blue polygon, but totaled only 1279 votes.&lt;/p&gt;
+
+&lt;p&gt;Lets break this down further by exploring the allocation of votes by county.&lt;/p&gt;
+
+&lt;h3 id=&#34;vote-distributions-by-county&#34;&gt;Vote Distributions by County&lt;/h3&gt;
+
+&lt;p&gt;Focusing on the two major candidates, the two states also have similar vote distributions. Each of these figures displays the percentage of votes for Donald Trump (red) and Hilary Clinton (blue), with each bubble sized by percentage of total state vote, organized by the percentage of votes for Donald Trump.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;minnesota &amp;lt;- subset(minnesotawisconsin, st==&amp;quot;MN&amp;quot;)
+minnesota$votePct &amp;lt;- (minnesota$votes/sum(minnesota$votes)) * 100
+minnesota &amp;lt;- minnesota %&amp;gt;% arrange(desc(votes))
+vals = minnesota[ minnesota$cand == &#39;Donald Trump&#39;, ]
+minnesota$county &amp;lt;- factor(minnesota$county, levels = rev(vals$county))
+minnesotaSubset &amp;lt;- subset(minnesota, cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;))
+mnScatter &amp;lt;- ggplot(minnesotaSubset, aes(county, votePct,color = cand)) +
+  geom_point(aes(size = votes)) +
+  scale_y_continuous(limits=c(0,15)) +
+  theme_tufte(base_family = &amp;quot;DejaVu Sans Mono&amp;quot;) +
+  scale_color_manual(values = c(&amp;quot;red3&amp;quot;, &amp;quot;navyblue&amp;quot;)) +
+  scale_size_continuous(guide = FALSE) +
+  labs(title = &amp;quot;Percentage of Total Votes Cast for Clinton and Trump By County&amp;quot;,
+       subtitle = &amp;quot;Minnesota&amp;quot;,
+       y = &amp;quot;Total Vote Percentage&amp;quot;,
+       x = NULL) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.title = element_blank(),
+        plot.title =  element_text(size = 16),
+        plot.subtitle =  element_text(size = 13))
+
+wisconsin$votePct &amp;lt;- (wisconsin$votes/sum(wisconsin$votes)) * 100
+wisconsin &amp;lt;- wisconsin %&amp;gt;% arrange(desc(votes))
+vals = wisconsin[ wisconsin$cand == &#39;Donald Trump&#39;, ]
+wisconsin$county &amp;lt;- factor(wisconsin$county, levels = rev(vals$county))
+wisconsinSubset &amp;lt;- subset(wisconsin, cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;))
+wiScatter &amp;lt;- ggplot(wisconsinSubset, aes(county, votePct,color = cand)) +
+  geom_point(aes(size = votes)) +
+  scale_y_continuous(limits=c(0,15)) +
+  theme_tufte(base_family = &amp;quot;DejaVu Sans Mono&amp;quot;) +
+  scale_color_manual(values = c(&amp;quot;red3&amp;quot;, &amp;quot;navyblue&amp;quot;)) +
+  scale_size_continuous(guide = FALSE) +
+  labs(subtitle = &amp;quot;Wisconsin&amp;quot;,
+       y = &amp;quot;Total Vote Percentage&amp;quot;,
+       x = &amp;quot;County (ordered by Total Vote Percentage\n for Donald Trump (smallest to largest))&amp;quot;) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.title = element_blank(),
+        plot.title = element_text(size = 20),
+        plot.subtitle = element_text(size = 13))
+
+grid.arrange(mnScatter,wiScatter,ncol=1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png&#34; title=&#34;plot of chunk scatter plotting&#34; alt=&#34;plot of chunk scatter plotting&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Two things of note from these figures:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The county with Minnesota&amp;rsquo;s most votes significantly backed Clinton over Trump (14.7% and 6.6% of the total votes cast in the state respectively). Meanwhile, the top-voting Wisconsin&amp;rsquo;s county also garnered significant support for Clinton over Trump, but contributed only 9.8% and 4.3% of the total votes cast in the state respectively.&lt;/li&gt;
+&lt;li&gt;Trump earned more votes than Clinton in 7 of Wisconsin&amp;rsquo;s 10 largest counties, including Waukesha - the third largest (4.9% and 2.7% of the total votes cast in the state respectively). Only 4 out of the top 10 most populous counties in Minnesota favored Trump.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above figure seems to imply that the counties with larger populations in each state had a significant impact on each state&amp;rsquo;s victor; while most Wisconsin counties favored Trump, most Minnesota counties favored Clinton. Perhaps different levels of urban density might result in a better explanation?&lt;/p&gt;
+
+&lt;p&gt;The 2010 Census &lt;a href=&#34;https://www.whitehouse.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf&#34;&gt;breaks up metropolitan areas&lt;/a&gt; into segments: small, medium, and large. An area must have a population of at least 50,000 to be considered an urbanized metropolitan area, and is further separated if it&amp;rsquo;s population is greater than 250,000. For this analysis, small metropolitan areas consist of those ranging in population from 50,000 to 250,000, while populations greater than 250,000 are combined into one category.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;minnesotawisconsin &amp;lt;- all_results %&amp;gt;% 
+  filter(str_detect(fips, c(&amp;quot;^55&amp;quot;)) | str_detect(fips, c(&amp;quot;^27&amp;quot;)))
+
+minnesotawisconsin$urbanClass &amp;lt;- ifelse(minnesotawisconsin$POP_COU &amp;lt; 50000, &amp;quot;Not a Metropolitan Area&amp;quot;,
+                                 ifelse(minnesotawisconsin$POP_COU &amp;gt; 50000 &amp;amp; minnesotawisconsin$POP_COU &amp;lt; 250000,
+                                        &amp;quot;Small Metropolitan Area&amp;quot;,&amp;quot;Medium to Large Metropolitan Area&amp;quot;))
+# Quick idiot check to make sure our ifelse statement didn&#39;t go awry
+table(round(minnesotawisconsin$POP_COU,-5), minnesotawisconsin$urbanClass)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##          
+##           Medium to Large Metropolitan Area Not a Metropolitan Area Small Metropolitan Area
+##   0                                       0                     920                       0
+##   1e+05                                   0                       0                     241
+##   2e+05                                   0                       0                      69
+##   3e+05                                   9                       0                       0
+##   4e+05                                  16                       0                       0
+##   5e+05                                  16                       0                       0
+##   9e+05                                   7                       0                       0
+##   1200000                                 9                       0                       0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After a quick &lt;code&gt;table&lt;/code&gt; to ensure correct recoding of urban classification, I grouped the data by candidate, state, and urban classification to better isolate the voting distributions.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;minnesotawisconsin$urbanClass &amp;lt;- factor(minnesotawisconsin$urbanClass,
+                                        levels = c(&amp;quot;Medium to Large Metropolitan Area&amp;quot;, &amp;quot;Small Metropolitan Area&amp;quot;, &amp;quot;Not a Metropolitan Area&amp;quot;))
+
+mnwiUrban &amp;lt;- minnesotawisconsin %&amp;gt;%
+  filter(cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;, &amp;quot;Jill Stein&amp;quot;)) %&amp;gt;%
+  mutate(cand = factor(cand, levels = c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;, &amp;quot;Jill Stein&amp;quot;),
+                       labels = c(&amp;quot;Trump&amp;quot;, &amp;quot;Clinton&amp;quot;, &amp;quot;Johnson&amp;quot;, &amp;quot;Stein&amp;quot;))) %&amp;gt;%
+  group_by(cand, st,urbanClass) %&amp;gt;%
+  summarise(sumVotes = sum(votes), population = sum(POP_COU))
+
+mnwiUrban &amp;lt;- mnwiUrban %&amp;gt;%
+  group_by(st, urbanClass) %&amp;gt;%
+  mutate(percent = sumVotes/sum(sumVotes))
+
+mnwiUrban$st &amp;lt;- factor(mnwiUrban$st, levels = c(&amp;quot;MN&amp;quot;, &amp;quot;WI&amp;quot;), labels = c(&amp;quot;Minnesota&amp;quot;, &amp;quot;Wisconsin&amp;quot;))
+
+p &amp;lt;- ggplot(mnwiUrban, aes(cand, sumVotes,fill = cand))  +
+  geom_bar(stat = &amp;quot;identity&amp;quot;, alpha = 0.8) + 
+  facet_grid(st ~ urbanClass) +
+  theme_tufte(base_family = &amp;quot;DejaVu Sans Mono&amp;quot;) +
+  scale_fill_manual(values = c(&amp;quot;red3&amp;quot;, &amp;quot;navyblue&amp;quot;, &amp;quot;#6A51A3&amp;quot;,&amp;quot;darkgreen&amp;quot;)) +
+  theme(legend.position=&amp;quot;none&amp;quot;,
+        strip.text.x = element_text(size = 12),
+        strip.text.y = element_text(size = 14),
+        plot.title =  element_text(size = 16)) +
+  geom_text(aes(label=paste0(round(percent,3)*100,&amp;quot;%&amp;quot;)), nudge_y = 50000,family = &amp;quot;DejaVu Sans Mono&amp;quot;) +
+  labs(title = &amp;quot;Distribution of Votes Cast in Minnesota and Wisconsin Counties By Urban Classification&amp;quot;, y = &amp;quot;Number of votes&amp;quot;, x = NULL) + 
+  scale_y_continuous(limits=c(0,1000000))
+
+## Add in some annotations - since we&#39;re facetting we need to make a dummy data.frame with the same factor levels and plot positions as those used in the figure
+anns &amp;lt;- data.frame(cand = factor(&amp;quot;Gary Johnson&amp;quot;, levels = c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;, &amp;quot;Gary Johnson&amp;quot;, &amp;quot;Jill Stein&amp;quot;),
+                                 labels = c(&amp;quot;Trump&amp;quot;, &amp;quot;Clinton&amp;quot;, &amp;quot;Johnson&amp;quot;, &amp;quot;Stein&amp;quot;)),
+                   st = factor(&amp;quot;MN&amp;quot;, levels = c(&amp;quot;MN&amp;quot;, &amp;quot;WI&amp;quot;), labels = c(&amp;quot;Minnesota&amp;quot;, &amp;quot;Wisconsin&amp;quot;)),
+                   sumVotes = 700000,
+                   lab = &amp;quot;For each State and Urban Class:\nBar Height - Total Votes\n\n  Percent - Portion of votes&amp;quot;,
+                   urbanClass = factor(&amp;quot;Not a Metropolitan Area&amp;quot;,levels = c(&amp;quot;Medium to Large Metropolitan Area&amp;quot;,
+                                                                            &amp;quot;Small Metropolitan Area&amp;quot;, &amp;quot;Not a Metropolitan Area&amp;quot;)))
+
+## Apply the annotations to the top right facet (i.e. Minnesota, Not a Metropolitan Area). Swoopy arrows are fun!
+p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&amp;quot;, size = 3) +
+  geom_curve(data=anns, aes(x=2.1, xend=1.5, y=690000, yend=100000), curvature=0.3, arrow=arrow(length=unit(0.03, &amp;quot;npc&amp;quot;))) +
+  geom_curve(data=anns, aes(x=2.4, xend=3, y=580000, yend=110000), curvature=-0.3, arrow=arrow(length=unit(0.03, &amp;quot;npc&amp;quot;)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png&#34; title=&#34;plot of chunk Presidential Election Results by Urban Area&#34; alt=&#34;plot of chunk Presidential Election Results by Urban Area&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+
+&lt;p&gt;The data shows a sizable rural/urban divide in Minnesota &lt;strong&gt;and&lt;/strong&gt; Wisconsin. Both states voted for each candidate at nearly the exact same rate in medium/large and small metropolitan areas. The major difference is how the population in each state is distributed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mnwiUrban %&amp;gt;%
+    select(st,urbanClass, sumVotes, population) %&amp;gt;%
+    group_by(st,urbanClass) %&amp;gt;%
+    summarise(total = sum(sumVotes), metroPopulationTotal = unique(population)) %&amp;gt;%
+    mutate(stateVoteAllocationByMetro = total/sum(total),
+           populationPctByMetro = metroPopulationTotal/sum(metroPopulationTotal),
+           votingPctByMetro = total/metroPopulationTotal)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Source: local data frame [6 x 7]
+## Groups: st [2]
+## 
+##          st                        urbanClass   total metroPopulationTotal stateVoteAllocationByMetro populationPctByMetro votingPctByMetro
+##      &amp;lt;fctr&amp;gt;                            &amp;lt;fctr&amp;gt;   &amp;lt;int&amp;gt;                &amp;lt;dbl&amp;gt;                      &amp;lt;dbl&amp;gt;                &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 Minnesota Medium to Large Metropolitan Area 1318717              2390461                  0.4644240            0.4506966        0.5516580
+## 2 Minnesota           Small Metropolitan Area  854434              1579726                  0.3009134            0.2978409        0.5408748
+## 3 Minnesota           Not a Metropolitan Area  666317              1333738                  0.2346626            0.2514625        0.4995861
+## 4 Wisconsin Medium to Large Metropolitan Area  972116              1825699                  0.3318823            0.3210310        0.5324624
+## 5 Wisconsin           Small Metropolitan Area 1411946              2766790                  0.4820411            0.4865125        0.5103192
+## 6 Wisconsin           Not a Metropolitan Area  545037              1094497                  0.1860767            0.1924564        0.4979794
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While the highest portion of votes in Minnesota came from counties defined as medium and large metropolitan areas (46.4%), those defined as small metropolitan areas contributed the most votes in Wisconsin (48.2%). These voting distributions match up nicely with the percentage of each state&amp;rsquo;s population by metropolitan area, as seen in the two variables &lt;code&gt;stateVoteAllocationByMetro&lt;/code&gt; and &lt;code&gt;populationPctByMetro&lt;/code&gt; - these distributions contributed to the outcome of each state&amp;rsquo;s election. The rate at which different types of urban areas supported a particular candidate is nearly identical between Minnesota and Wisconsin.&lt;/p&gt;
+
+&lt;h4 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;While there are major differences in how rural and urban voters supported particular candidates, this division is not unique to states that cracked the &amp;ldquo;Midwestern Blue-State Firewall&amp;rdquo; in the 2016 presidential election. In Minnesota and Wisconsin, larger metropolitan areas voted strongly in favor of Clinton, while smaller and non-urban areas strongly favored Trump. Further exploration is necessary to make more granular conclusions, but in these two states the differing distributions of populations into small and medium/large metropolitan areas may help explain each candidate&amp;rsquo;s victory.&lt;/p&gt;
+
+&lt;h4 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h4&gt;
+
+&lt;p&gt;Data with eligible-voter populations and demographic information at the county level might further supplement this exploration by providing a more detailed picture of rural and urban voters beyond raw population and vote totals. Outlets such as &lt;a href=&#34;http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/&#34;&gt;FiveThirtyEight&lt;/a&gt; have used this type of granular data to inform predictive forecasts of elections. Thoughts or questions about the post? Contact me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt; or leave a message in the comments section.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

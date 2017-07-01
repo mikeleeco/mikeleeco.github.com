@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tweenr on Michael Lee</title>
+    <link>https://mikeleeco.github.io/tags/tweenr/index.xml</link>
+    <description>Recent content in Tweenr on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="https://mikeleeco.github.io/tags/tweenr/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Animated Line Graph</title>
+      <link>https://mikeleeco.github.io/animation/2016-06-15-Animated-Line-Graph/</link>
+      <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>https://mikeleeco.github.io/animation/2016-06-15-Animated-Line-Graph/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;https://twitter.com/EdNCES/status/859807520881344512&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. &lt;a href=&#34;https://t.co/5BlyLdHS9W&#34;&gt;https://t.co/5BlyLdHS9W&lt;/a&gt; &lt;a href=&#34;https://t.co/Fr1pTt8xca&#34;&gt;pic.twitter.com/Fr1pTt8xca&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;May 3, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Have a question, issue or suggestion? Create a pull request, file an issue, or feel free to contact me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;Twitter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

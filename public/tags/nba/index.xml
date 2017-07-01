@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nba on Michael Lee</title>
+    <link>/tags/nba/index.xml</link>
+    <description>Recent content in Nba on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/nba/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>NBA Draft Odds Plot</title>
+      <link>/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; align=&#34;center&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With thanks to &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;@hadleywickham&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/hrbrmstr&#34;&gt;@hrbrmstr&lt;/a&gt;, and &lt;a href=&#34;https://twitter.com/ColorBrewer&#34;&gt;@ColorBrewer&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/hjX39Xhi4P&#34;&gt;https://t.co/hjX39Xhi4P&lt;/a&gt; &lt;a href=&#34;https://t.co/XD27alzwNI&#34;&gt;https://t.co/XD27alzwNI&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Sparks (@dsparks) &lt;a href=&#34;https://twitter.com/dsparks/status/723497233988096004&#34;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Package Dependencies and Data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the &lt;a href=&#34;https://en.wikipedia.org/wiki/2016_NBA_draft&#34;&gt;raw lottery odds&lt;/a&gt;. I fudged some of the data based on how it looked in the plot - not much I can do about that since there wasn&amp;rsquo;t anything programmatically to work from there! &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#devtools::install_github(&amp;quot;hadley/ggplot2&amp;quot;)
+#devtools::install_github(&amp;quot;hadley/tidyr&amp;quot;)
+library(ggplot2)
+library(tidyr)
+library(RCurl)
+library(RColorBrewer)
+dataurl &amp;lt;- &#39;https://gist.githubusercontent.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766/raw/afa955af265d14a2f72780e4e0b87ffe469c0109/odds.csv&#39;
+data &amp;lt;- getURL(dataurl)                
+odds &amp;lt;- read.csv(textConnection(data))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Data Cleanup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The tidyr package allows us to reshape our data between long and wide formats, RColorBrewer helps generate a fluid color pallete for our plot, and RCurl assists in sourcing the data from &lt;a href=&#34;https://gist.github.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766#file-odds-csv&#34;&gt;my gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;odds &amp;lt;- gather(odds, X)
+odds[,2] &amp;lt;- substring(odds[,2], 2)
+colnames(odds) &amp;lt;- c(&amp;quot;Team&amp;quot;,&amp;quot;Pick&amp;quot;,&amp;quot;Probability&amp;quot;)
+odds$Pick &amp;lt;- as.numeric(odds$Pick)
+odds$Team &amp;lt;- as.character(odds$Team)
+odds$Team &amp;lt;- factor(odds$Team, levels = odds[1:14,1])
+odds$Team &amp;lt;- factor(odds$Team, levels=rev(levels(odds$Team)))
+odds$Pick &amp;lt;- factor(odds$Pick, levels = 1:14)
+getPalette &amp;lt;- colorRampPalette(brewer.pal(11, &amp;quot;Spectral&amp;quot;))(14)
+odds$Probability &amp;lt;- ifelse(is.na(odds$Probability),0,odds$Probability)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;colorRampPallete&lt;/code&gt; and &lt;code&gt;brewer.pal&lt;/code&gt; functions expands the &amp;ldquo;Spectral&amp;rdquo; color pallete from 11 to 14 colors, and we&amp;rsquo;ve organized our Team y-axis to be leveled in order of likelihood of winning the top pick - without factoring in the projections that were used in the @celtics figure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Custom Plot Theme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we&amp;rsquo;ve prepared our data, we can get to customizing the plot!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- ggplot(odds, aes(Team))
+g &amp;lt;- g + geom_bar(aes(x = Team, y = Probability, fill = Pick),alpha=0.9,stat=&amp;quot;identity&amp;quot;)  
+g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot;Probability&amp;quot;, labels=scales::percent) +
+    labs(x=NULL, y=NULL, title=&amp;quot;2016 NBA Draft Lottery Probabilities&amp;quot;,
+         subtitle = &amp;quot;After tiebreakers and trades. Trades with protections are indicated by a black border, and the receiving team is named. Based on 100,000 simulations&amp;quot;,
+         caption=&amp;quot;Reproduced by: @mikeleeco                  Original: @dsparks                  Source: http://www.nba.com/celtics/news/sidebar/2016-draft-lottery-qa&amp;quot;) +
+    coord_flip() +
+    scale_fill_manual(values = getPalette)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The development version of &lt;a href=&#34;https://github.com/hadley/ggplot2&#34;&gt;ggplot2 on github&lt;/a&gt; features numerous additions including ecpanded arguments for &lt;code&gt;labs&lt;/code&gt; such as subtitles and captions. Check out &lt;code&gt;?ggplot2::labs&lt;/code&gt; or &lt;a href=&#34;https://rud.is/b/2016/03/16/supreme-annotations/&#34;&gt;Bob Rudis&amp;rsquo; post&lt;/a&gt; on his contribution to ggplot2.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g  + theme(
+  axis.text.x = element_text(size=14,margin=margin(b=5),color = &amp;quot;black&amp;quot;),
+  axis.title.x = element_text(size=16),
+  plot.subtitle = element_text(size=14),
+  plot.caption = element_text(size=16,margin = margin(t=20),face = &amp;quot;italic&amp;quot;, hjust = .5),
+  axis.text.y = element_text(size=18,margin = margin(r=-40),colour = &amp;quot;black&amp;quot;),
+  axis.ticks.y=element_blank(),
+  axis.ticks.x=element_blank(),
+  plot.title = element_text(size=30,margin = margin(b=10)),
+  panel.border=element_blank(),
+  panel.grid.major.x=element_line(color=&amp;quot;#2b2b2b&amp;quot;, linetype=&amp;quot;dotted&amp;quot;, size=0.15),
+  panel.grid.major.y=element_blank(),
+  legend.text = element_text(size=14),
+  legend.title = element_text(size=18),
+  legend.key = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;,colour = &amp;quot;#DCDCDC&amp;quot;),
+  legend.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
+  panel.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
+  plot.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As seen in the theme here, the developtmental version of ggplot2 also features elements to customize the new caption and subtitle arguments. Things are looking pretty sharp!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Annotations - Call for Help!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The lottery data has been transformed into a customized plot; the only missing pieces are the transparent rectangular grobs indicating picks with trade implications. I tried a few different methods to programmatically assign labels over the rows in our dataset, none of which gave the desired final output. Instead I used brute force to place transparent rectangles and texts over the appropriate data blocks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g + annotate(&amp;quot;text&amp;quot;, x = (13.45+12.55)/2, y = .6, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHI&amp;quot;, size= rel(7)) +
+            annotate(&amp;quot;rect&amp;quot;, xmin = 12.55, xmax = 13.45, ymin = .555, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
+            annotate(&amp;quot;text&amp;quot;, x = (2.45+1.55)/2, y = .1, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHX&amp;quot;, size= rel(7)) +
+            annotate(&amp;quot;rect&amp;quot;, xmin = 1.55, xmax = 2.45, ymin = .021, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
+            annotate(&amp;quot;text&amp;quot;, x = (7.45+6.55)/2, y = .95, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to CHI &amp;gt;&amp;quot;, size= rel(7)) +
+            annotate(&amp;quot;rect&amp;quot;, xmin = 6.55, xmax = 7.45, ymin = .999, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There has to be a more efficient method to do this! If you know of a better way please &lt;a href=&#34;http://www.twitter.com/mikeleeco&#34;&gt;contact me on twitter&lt;/a&gt; or create a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd&#34;&gt;pull request on this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
+&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
