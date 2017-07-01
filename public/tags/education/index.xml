@@ -2,30 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Education on Michael Lee</title>
-    <link>/tags/education/index.xml</link>
+    <link>https://mikeleeco.github.io/tags/education/index.xml</link>
     <description>Recent content in Education on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/education/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.github.io/tags/education/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>EdSurvey - R package</title>
-      <link>/projects/2017-06-03-EdSurvey-R-package/</link>
+      <link>https://mikeleeco.github.io/projects/2017-06-03-EdSurvey-R-package/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/projects/2017-06-03-EdSurvey-R-package/</guid>
-      <description></description>
+      <guid>https://mikeleeco.github.io/projects/2017-06-03-EdSurvey-R-package/</guid>
+      <description>
+
+&lt;h2 id=&#34;package-description&#34;&gt;Package Description&lt;/h2&gt;
+
+&lt;p&gt;The EdSurvey package is a tool to read and analyze functions for education surveys and assessments data from the &lt;a href=&#34;https://nces.ed.gov/&#34;&gt;National Center for Education Statistics&lt;/a&gt;, including the &lt;a href=&#34;https://nces.ed.gov/nationsreportcard/&#34;&gt;National Assessment of Educational Progress (NAEP)&lt;/a&gt;. Due to the large file sizes and complex formatting of NCES data sets, the package offers user-friendly methods to format and conduct statisitical analyses with a small memory footprint.&lt;/p&gt;
+
+&lt;h2 id=&#34;for-more-info&#34;&gt;For more info:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/EdSurvey/index.html&#34;&gt;https://cran.r-project.org/web/packages/EdSurvey/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.air.org/project/nces-data-r-project-edsurvey&#34;&gt;http://www.air.org/project/nces-data-r-project-edsurvey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>NAEPprimer - R package</title>
-      <link>/projects/2017-06-03-NAEPprimer-R-package/</link>
+      <link>https://mikeleeco.github.io/projects/2017-06-03-NAEPprimer-R-package/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/projects/2017-06-03-NAEPprimer-R-package/</guid>
-      <description></description>
+      <guid>https://mikeleeco.github.io/projects/2017-06-03-NAEPprimer-R-package/</guid>
+      <description>
+
+&lt;h2 id=&#34;package-description&#34;&gt;Package Description&lt;/h2&gt;
+
+&lt;p&gt;The NAEP Primer package contains a random mini-sample of real data from the 2005 grade 8 mathematics assessment that have been approved for public use. This includes two data files, as well as a system control file that corresponds to each data file to read in and format for further processing. The NAEP Primer is designed to simplify access to the NAEP database and make its technologies more user-friendly in NAEP data analysis.&lt;/p&gt;
+
+&lt;h3 id=&#34;for-more-info&#34;&gt;For more info:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/NAEPprimer/index.html&#34;&gt;https://cran.r-project.org/web/packages/NAEPprimer/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2011463&#34;&gt;https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2011463&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

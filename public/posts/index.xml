@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Michael Lee</title>
-    <link>/posts/index.xml</link>
+    <link>https://mikeleeco.github.io/posts/index.xml</link>
     <description>Recent content in Posts on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
     <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reproducing the WSJ Measles Vaccination Chart Using R</title>
-      <link>/posts/2017-06-28-wsj-measles-vaccination-chart/</link>
+      <link>https://mikeleeco.github.io/posts/2017-06-28-wsj-measles-vaccination-chart/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2017-06-28-wsj-measles-vaccination-chart/</guid>
+      <guid>https://mikeleeco.github.io/posts/2017-06-28-wsj-measles-vaccination-chart/</guid>
       <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
 &lt;p&gt;Recently I’ve been working on creating gif animations for &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;social media&lt;/a&gt;:&lt;/p&gt;
@@ -33,7 +33,7 @@ New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#C
 &lt;h2&gt;Wall Street Journal Measles Vaccination Chart&lt;/h2&gt;
 &lt;p&gt;One of the more compelling data visualizations produced in recent years is the following representation of measles incidence from 1928 to 2003 produced by the Wall Street Journal graphics team:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measles.png&#34; alt=&#34;Wall Street Journal&#34; /&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/measles.png&#34; alt=&#34;Wall Street Journal&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Wall Street Journal&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In the two years after its release, many prominent data journalists, designers, and developers have analyzed/applauded the design decisions in the chart, which urge the reader to its take-home message: the introduction of the measles vaccine &lt;strong&gt;drastically&lt;/strong&gt; reduced the incidence of the virus.&lt;/p&gt;
@@ -128,14 +128,14 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
            vjust=1, hjust=0, size=I(3), family=&amp;quot;Open Sans&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Volia!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-06-28-wsj-measles-vaccination-chart_files/figure-html/gg-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mikeleeco.github.io/posts/2017-06-28-wsj-measles-vaccination-chart_files/figure-html/gg-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;explore-the-ggplot2-object-with-gganimate&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Explore the &lt;code&gt;ggplot2&lt;/code&gt; object with &lt;code&gt;gganimate&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;It’s dang easy to create an animation using &lt;code&gt;gganimate&lt;/code&gt;. Just add &lt;code&gt;frame&lt;/code&gt; to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to interate over the data years, so &lt;code&gt;.frame = year&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gganimate(gg, &amp;quot;/home/michael/Documents/hugo/static/img/gganimate_measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/gganimate_measles.gif&#34; alt=&#34;Measles Animation using gganimate&#34; /&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/gganimate_measles.gif&#34; alt=&#34;Measles Animation using gganimate&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Measles Animation using gganimate&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;That’s a great start! Though this could be further developed using &lt;code&gt;gganimate&lt;/code&gt; I prefer to use the &lt;code&gt;animation&lt;/code&gt; package’s &lt;code&gt;saveGIF&lt;/code&gt; function since I prefer the method in which multiple images can be called within one call.&lt;/p&gt;
@@ -203,7 +203,7 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
   ,movie.name=&amp;quot;/home/michael/Documents/hugo/static/img/measles.gif&amp;quot;,interval = .1, ani.width = 2050, ani.height = 1550)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measles.gif&#34; alt=&#34;Measles Animation using animation&#34; /&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/measles.gif&#34; alt=&#34;Measles Animation using animation&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Measles Animation using animation&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
@@ -212,38 +212,11 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Some Tips on Making Animations in R</title>
-      <link>/posts/some-tips-on-making-animations-in-r/</link>
-      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/some-tips-on-making-animations-in-r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Some Other Tips on Making Animations in R</title>
-      <link>/posts/some-other-tips-on-making-animations-in-r/</link>
-      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/some-other-tips-on-making-animations-in-r/</guid>
-      <description>&lt;p&gt;jfjff&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Length)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-04-02-some-other-tips-on-making-animations-in-r_files/figure-html/plot-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Sepal.Width)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-04-02-some-other-tips-on-making-animations-in-r_files/figure-html/plot-2.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Petal.Length)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-04-02-some-other-tips-on-making-animations-in-r_files/figure-html/plot-3.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(iris$Species)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-04-02-some-other-tips-on-making-animations-in-r_files/figure-html/plot-4.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Mapping Wisconsin Presidential Election Results</title>
-      <link>/posts/2016-12-26-wisconsin-presidential-election-results/</link>
+      <link>https://mikeleeco.github.io/posts/2016-12-26-wisconsin-presidential-election-results/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-12-26-wisconsin-presidential-election-results/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-12-26-wisconsin-presidential-election-results/</guid>
       <description>
 
 &lt;h4 id=&#34;your-home-state-did-us-no-favors&#34;&gt;&lt;em&gt;&amp;ldquo;Your home state did us no favors&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/h4&gt;
@@ -364,7 +337,7 @@ grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu S
              choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;A bar graph more accurately displays the results by candidate. Wisconsin&amp;rsquo;s 10 electoral votes were decided by only 27257 votes! That is a really small margin.&lt;/p&gt;
 
@@ -382,7 +355,7 @@ ggplot(votes, aes(cand, sum, fill = cand)) +
   labs(title = &amp;quot;Total Votes Cast in Wisconsin&amp;quot;, y = &amp;quot;Number of votes&amp;quot;, x = NULL)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;wisconsin-and-minnesota-voting-results&#34;&gt;Wisconsin and Minnesota Voting Results&lt;/h4&gt;
 
@@ -442,7 +415,7 @@ grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu S
              choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Mapping the allocation of votes by county shows Wisconsin and Minnesota have very similar county-level maps. Each has strong results favoring Clinton in major metropolitan areas, including Milwaukee, Madison, and Minneapolis/St Paul. Based solely on each state&amp;rsquo;s map, I&amp;rsquo;d posit that Minnesota seems the more likely Trump-majority. This perspective is deceiving though, as the distribution of votes by county is skewed. Each map displays the percent of votes for each candidate by county, neglecting the county&amp;rsquo;s total votes. More than 78 percent of Menominee County, WI voters selected Hilary Clinton, resulting in Northeastern Wisconsin&amp;rsquo;s dark blue polygon, but totaled only 1279 votes.&lt;/p&gt;
 
@@ -497,7 +470,7 @@ wiScatter &amp;lt;- ggplot(wisconsinSubset, aes(county, votePct,color = cand)) +
 grid.arrange(mnScatter,wiScatter,ncol=1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png&#34; title=&#34;plot of chunk scatter plotting&#34; alt=&#34;plot of chunk scatter plotting&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png&#34; title=&#34;plot of chunk scatter plotting&#34; alt=&#34;plot of chunk scatter plotting&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Two things of note from these figures:&lt;/p&gt;
 
@@ -579,7 +552,7 @@ p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&a
   geom_curve(data=anns, aes(x=2.4, xend=3, y=580000, yend=110000), curvature=-0.3, arrow=arrow(length=unit(0.03, &amp;quot;npc&amp;quot;)))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png&#34; title=&#34;plot of chunk Presidential Election Results by Urban Area&#34; alt=&#34;plot of chunk Presidential Election Results by Urban Area&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png&#34; title=&#34;plot of chunk Presidential Election Results by Urban Area&#34; alt=&#34;plot of chunk Presidential Election Results by Urban Area&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;The data shows a sizable rural/urban divide in Minnesota &lt;strong&gt;and&lt;/strong&gt; Wisconsin. Both states voted for each candidate at nearly the exact same rate in medium/large and small metropolitan areas. The major difference is how the population in each state is distributed:&lt;/p&gt;
 
@@ -619,10 +592,10 @@ p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&a
     
     <item>
       <title>NBA Draft Odds Plot</title>
-      <link>/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
+      <link>https://mikeleeco.github.io/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:&lt;/p&gt;
@@ -719,16 +692,16 @@ g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot
 &lt;p&gt;There has to be a more efficient method to do this! If you know of a better way please &lt;a href=&#34;http://www.twitter.com/mikeleeco&#34;&gt;contact me on twitter&lt;/a&gt; or create a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd&#34;&gt;pull request on this post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
-&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>mikelee.co: Powered by RMarkdown, knitr, and Jekyll</title>
-      <link>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
+      <link>https://mikeleeco.github.io/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -824,7 +797,7 @@ function (playerID = NULL, yearID = NULL, ...)
 plot(iris)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;More to come soon :D&lt;/p&gt;
 </description>
@@ -832,10 +805,10 @@ plot(iris)
     
     <item>
       <title>sabr - R package</title>
-      <link>/posts/2016-05-28-sabr-R-package/</link>
+      <link>https://mikeleeco.github.io/posts/2016-05-28-sabr-R-package/</link>
       <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-05-28-sabr-R-package/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-05-28-sabr-R-package/</guid>
       <description>
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/mikeleeco/sabr/&#34;&gt;sabr package&lt;/a&gt; connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in &lt;a href=&#34;http://www.insidethebook.com/woba.shtml&#34;&gt;The Book: Playing the Percentages in Baseball&lt;/a&gt;, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:&lt;/p&gt;
@@ -1011,10 +984,10 @@ wRAA_season(&amp;quot;braunry02&amp;quot;,&amp;quot;2015&amp;quot;)
     
     <item>
       <title>Visualizing Video Games Throughout History</title>
-      <link>/posts/2015-06-10-video-games-interactive/</link>
+      <link>https://mikeleeco.github.io/posts/2015-06-10-video-games-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-06-10-video-games-interactive/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-06-10-video-games-interactive/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Call of Duty :: Frank Underwood // Frogger :: George Costanza // Shinobi :: Wu-Tang Clan // Super Nintendo &amp;amp; Sega Genesis :: &lt;a href=&#34;https://youtu.be/CHio4lLOhKc?t=2m32s&#34;&gt;???&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1038,14 +1011,14 @@ Let&amp;rsquo;s dive into what the numbers tell us.
 &lt;p&gt;
 MobyGames aggregates two sources to formulate their video game ratings: users and critics. User ratings are determined on a 0 to 5 scale and are contributed by an individual&amp;rsquo;s subjective rating of a particular game. Critic ratings are reviews from magazines, entertainment websites, and other online video game forums. A weighted average of these individual critics formulate the site&amp;rsquo;s &amp;ldquo;MobyRank&amp;rdquo; score. For this article I gave equal importance to user and critic ratings to ascertain each game&amp;rsquo;s overall rating, simply averaging the two scores into one total rating. Of the 50,000+ games, a total of 9224 had either user or critics ratings, ranging in years from 1976-2015. In the scatterplot below you&amp;rsquo;ll see the combined Mobygames ratings by date of original publication.
 &lt;/p&gt;
-&lt;img src=&#34;/img/gamerank.png&#34; class=&#34;img-responsive center-block center-block&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/gamerank.png&#34; class=&#34;img-responsive center-block center-block&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;
 
 That looks pretty sharp, but in the spirit of video games, lets make it a bit more...8-bit.
 &lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&#34;/img/mean_game_ranking_2d.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/mean_game_ranking_2d.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;/p&gt;
 
@@ -1078,7 +1051,7 @@ Mobygames uses 43 themes to delineate aspects of games, which is detailed in the
 &lt;p&gt;
 Of the 38,615 games listing at least one theme, the image below shows the distribution of themes as a percentage decimal.
 &lt;/p&gt;
-&lt;img src=&#34;/img/games_by_theme.png&#34; class=&#34;img-responsive center-block&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/games_by_theme.png&#34; class=&#34;img-responsive center-block&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;
 
@@ -1457,7 +1430,7 @@ Before moving on, here are a couple interesting observations, from most to least
 
 Mobygames uses 8 genres to categorize game types. The vast majority of games have at least one genre, many having multiple. Shovelware games, which are packages of dissimilar games (think &lt;b&gt;The 1000 Best Windows 95 Games Bundle&lt;/b&gt;) are responsible for many of the missing titles.
 &lt;/p&gt;
-&lt;img src=&#34;/img/games_by_genre.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/games_by_genre.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;p&gt;
 
@@ -1748,10 +1721,10 @@ Have feedback, questions, or want to see something else added? Check out the cod
     
     <item>
       <title>Kris Bryant Performance Projection</title>
-      <link>/posts/2015-03-25-bryant-visualization/</link>
+      <link>https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-03-25-bryant-visualization/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/</guid>
       <description>&lt;body&gt;
 
 
@@ -1759,7 +1732,7 @@ Have feedback, questions, or want to see something else added? Check out the cod
 
 &lt;p&gt;A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at &lt;a href=&#34;http://mikelee.co/posts/milb-similarity-scores/&#34; class=&#34;uri&#34;&gt;http://mikelee.co/posts/milb-similarity-scores/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can change the y-axis parameters by selecting the performance measure you’d like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.&lt;/p&gt;
-&lt;iframe src=&#34;/knitr/bryant.html&#34; , width=&#34;100%,&#34; height=&#34;550px&#34;&gt;
+&lt;iframe src=&#34;https://mikeleeco.github.io/knitr/bryant.html&#34; , width=&#34;100%,&#34; height=&#34;550px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;
 &lt;div class=&#34;table-responsive&#34;&gt;
@@ -2512,10 +2485,10 @@ $(document).ready(function () {
     
     <item>
       <title>Working with Minor League Similarity Scores</title>
-      <link>/posts/2015-03-25-milb-similarity-scores/</link>
+      <link>https://mikeleeco.github.io/posts/2015-03-25-milb-similarity-scores/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-03-25-milb-similarity-scores/</guid>
       <description>&lt;p&gt;&lt;blockquote&gt;
 There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way...players who have similar primary characteristics will tend to have similar secondary characteristics as well.
 
@@ -2596,9 +2569,9 @@ There are some people who see baseball players that way-each one is unique, abso
 
 &lt;p&gt;Using &lt;a href=&#34;http://ramnathv.github.io/rCharts&#34;&gt;rCharts&lt;/a&gt;, an interactive visualization package maintained by &lt;a href=&#34;https://github.com/ramnathv&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt;, I created a Rmarkdown page with knitr displaying the projection data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -2608,10 +2581,10 @@ There are some people who see baseball players that way-each one is unique, abso
     
     <item>
       <title>Let&#39;s Make a Minor League Baseball Database!</title>
-      <link>/posts/2015-02-23-milb-scraper-with-rvest/</link>
+      <link>https://mikeleeco.github.io/posts/2015-02-23-milb-scraper-with-rvest/</link>
       <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-02-23-milb-scraper-with-rvest/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-02-23-milb-scraper-with-rvest/</guid>
       <description>&lt;p&gt;
 Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the &lt;a href=&#34;http://www.seanlahman.com/baseball-archive/statistics/&#34;&gt;Lahman Baseball Database&lt;/a&gt;, which is the most robust catalog of MLB player statistics available to the public.
 &lt;/p&gt;
@@ -2696,7 +2669,7 @@ write.csv(minors_batting_ARI, &amp;quot;minors_batting_ARI.csv&amp;quot;)
 &lt;p&gt;There we are! Arizona&#39;s minor league batting stats from 2012-2014! 824 instances may seem like too much, for only a three year period, but Baseball-reference.com doesn&#39;t aggregate a player&#39;s statistics by year; they do it by level. Therefore, some players may have multiple rows for the same season (aren&#39;t you glad we pulled out the reference id!) &lt;/p&gt;
 &lt;div class=&#34;container&#34;&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/minors_batting_ARI.jpg&#34; class=&#34;img-responsive&#34;&gt;&lt;/figure&gt;&lt;/img&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/minors_batting_ARI.jpg&#34; class=&#34;img-responsive&#34;&gt;&lt;/figure&gt;&lt;/img&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 
@@ -2772,7 +2745,7 @@ for (teams in teams){ for (season in 2010:2005) {
 
 &lt;p&gt;This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/sys_time_MiLB.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/sys_time_MiLB.jpg&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The query takes about a 1:45 for every league-wide season pull. &lt;strong&gt;Pro-Tip!&lt;/strong&gt; Get that query going and have some breakfast/lunch/dinner.&lt;/p&gt;
 
@@ -2793,1953 +2766,6 @@ for (teams in teams){ for (season in 2010:2005) {
 &lt;hr&gt;
 
 &lt;p&gt;Have feedback, questions, or want to see something else added? Check out my &lt;a href=&#34;https://github.com/mikeleeco/Baseball-Reference-Scrapers&#34;&gt;MiLB Scraper on github&lt;/a&gt; or fork my repository to propose changes.  &lt;a class=&#34;btn btn-primary&#34; href=&#34;https://github.com/mikeleeco/Baseball-Reference-Scrapers/fork&#34;&gt;Edit My Code&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/knitr/bryant/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/knitr/bryant/</guid>
-      <description>&lt;!doctype HTML&gt;
-&lt;meta charset = &#39;utf-8&#39;&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;link rel=&#39;stylesheet&#39; href=&#34;http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css&#34;&gt;
-    &lt;link rel=&#39;stylesheet&#39; href=&#39;//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css&#39;&gt;
-    
-    &lt;script src=&#39;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&#39; type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
-    &lt;script src=&#39;//d3js.org/d3.v3.min.js&#39; type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
-    &lt;script src=&#39;//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js&#39; type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
-    &lt;script src=&#39;//nvd3.org/assets/lib/fisheye.js&#39; type=&#39;text/javascript&#39;&gt;&lt;/script&gt;
-    
-     &lt;script src=&#34;http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js&#34;&gt;&lt;/script&gt;
-     &lt;script src=&#34;http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js&#34;&gt;&lt;/script&gt;
-    
-    &lt;style&gt;
-    .rChart {
-      display: block
-      margin: auto auto;
-      width: 100%;
-      height: 400px;
-    }
-    .bs-docs-example:after {
-      content: &#34;&#34;;
-      background: transparent;
-      border: none;
-    }
-    &lt;/style&gt;
-    
-  &lt;/head&gt;
-  &lt;body ng-app&gt;
-      
-    &lt;div class=&#39;container&#39; ng-controller=&#34;DemoCtrl&#34;&gt;
-  &lt;div class=&#39;row&#39;&gt;
-    &lt;div class=&#39;col-md-3&#39;&gt;
-      &lt;form class=&#39;well&#39;&gt;
-        &lt;label&gt;&lt;b&gt;Select  y :&lt;/b&gt;&lt;/label&gt;
-    		&lt;select class=&#39;form-control&#39; ng-model=&#34;opts.y&#34; 
-          ng-options=&#34;ctl for ctl in controls.y.values&#34;&gt;   
-    		&lt;/select&gt;&lt;br&gt;
-              &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class=&#39;col-md-8&#39;&gt;
-      &lt;div class=&#34;bs-docs-example&#34;&gt;
-        &lt;div id=&#39;chart29d8351c2a0c&#39; class=&#39;rChart &#39;&gt;
-          &lt;svg&gt;&lt;/svg&gt;
-        &lt;/div&gt;
-        
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-function DemoCtrl($scope){
-  $scope.opts = {
- &#34;dom&#34;: &#34;chart29d8351c2a0c&#34;,
-&#34;width&#34;:    700,
-&#34;height&#34;:    400,
-&#34;x&#34;: &#34;Age&#34;,
-&#34;y&#34;: &#34;HR&#34;,
-&#34;type&#34;: &#34;lineChart&#34;,
-&#34;group&#34;: &#34;Name&#34;,
-&#34;id&#34;: &#34;chart29d8351c2a0c&#34; 
-}
-  $scope.data = [
- {
- &#34;X.1&#34;: 1,
-&#34;X&#34;: 1,
-&#34;bref_season&#34;: &#34;akins-001nic_2011&#34;,
-&#34;min_playerid&#34;: &#34;akins-001nic&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;Nick Akins&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:            0.5,
-&#34;G&#34;: 92,
-&#34;PA&#34;: 380,
-&#34;AB&#34;: 327,
-&#34;R&#34;: 47,
-&#34;H&#34;: 75,
-&#34;X2B&#34;: 12,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 14,
-&#34;RBI&#34;: 51,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 41,
-&#34;SO&#34;: 85,
-&#34;BA&#34;:          0.229,
-&#34;OBP&#34;:          0.324,
-&#34;SLG&#34;:          0.413,
-&#34;OPS&#34;:          0.737,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 2,
-&#34;X&#34;: 2,
-&#34;bref_season&#34;: &#34;akins-001nic_2012&#34;,
-&#34;min_playerid&#34;: &#34;akins-001nic&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Nick Akins&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:              1,
-&#34;G&#34;: 84,
-&#34;PA&#34;: 333,
-&#34;AB&#34;: 291,
-&#34;R&#34;: 44,
-&#34;H&#34;: 70,
-&#34;X2B&#34;: 14,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 10,
-&#34;RBI&#34;: 32,
-&#34;SB&#34;: 11,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 33,
-&#34;SO&#34;: 68,
-&#34;BA&#34;:          0.241,
-&#34;OBP&#34;:          0.328,
-&#34;SLG&#34;:          0.399,
-&#34;OPS&#34;:          0.727,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 3,
-&#34;X&#34;: 3,
-&#34;bref_season&#34;: &#34;braun-001rya_2007&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2007,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 147,
-&#34;PA&#34;: 626,
-&#34;AB&#34;: 568,
-&#34;R&#34;: 119,
-&#34;H&#34;: 186,
-&#34;X2B&#34;: 38,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 44,
-&#34;RBI&#34;: 119,
-&#34;SB&#34;: 19,
-&#34;CS&#34;: 8,
-&#34;BB&#34;: 44,
-&#34;SO&#34;: 123,
-&#34;BA&#34;:          0.327,
-&#34;OBP&#34;:           0.38,
-&#34;SLG&#34;:          0.648,
-&#34;OPS&#34;:          1.028,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 4,
-&#34;X&#34;: 4,
-&#34;bref_season&#34;: &#34;braun-001rya_2008&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2008,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 151,
-&#34;PA&#34;: 663,
-&#34;AB&#34;: 611,
-&#34;R&#34;: 92,
-&#34;H&#34;: 174,
-&#34;X2B&#34;: 39,
-&#34;X3B&#34;: 7,
-&#34;HR&#34;: 37,
-&#34;RBI&#34;: 106,
-&#34;SB&#34;: 14,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 42,
-&#34;SO&#34;: 129,
-&#34;BA&#34;:          0.285,
-&#34;OBP&#34;:          0.335,
-&#34;SLG&#34;:          0.553,
-&#34;OPS&#34;:          0.888,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 5,
-&#34;X&#34;: 5,
-&#34;bref_season&#34;: &#34;braun-001rya_2009&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2009,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 158,
-&#34;PA&#34;: 708,
-&#34;AB&#34;: 635,
-&#34;R&#34;: 113,
-&#34;H&#34;: 203,
-&#34;X2B&#34;: 39,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 32,
-&#34;RBI&#34;: 114,
-&#34;SB&#34;: 20,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 57,
-&#34;SO&#34;: 121,
-&#34;BA&#34;:           0.32,
-&#34;OBP&#34;:          0.386,
-&#34;SLG&#34;:          0.551,
-&#34;OPS&#34;:          0.937,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 6,
-&#34;X&#34;: 6,
-&#34;bref_season&#34;: &#34;braun-001rya_2010&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2010,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 157,
-&#34;PA&#34;: 685,
-&#34;AB&#34;: 619,
-&#34;R&#34;: 101,
-&#34;H&#34;: 188,
-&#34;X2B&#34;: 45,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 103,
-&#34;SB&#34;: 14,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 56,
-&#34;SO&#34;: 105,
-&#34;BA&#34;:          0.304,
-&#34;OBP&#34;:          0.365,
-&#34;SLG&#34;:          0.501,
-&#34;OPS&#34;:          0.866,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 7,
-&#34;X&#34;: 7,
-&#34;bref_season&#34;: &#34;braun-001rya_2011&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 150,
-&#34;PA&#34;: 629,
-&#34;AB&#34;: 563,
-&#34;R&#34;: 109,
-&#34;H&#34;: 187,
-&#34;X2B&#34;: 38,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 33,
-&#34;RBI&#34;: 111,
-&#34;SB&#34;: 33,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 58,
-&#34;SO&#34;: 93,
-&#34;BA&#34;:          0.332,
-&#34;OBP&#34;:          0.397,
-&#34;SLG&#34;:          0.597,
-&#34;OPS&#34;:          0.994,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 8,
-&#34;X&#34;: 8,
-&#34;bref_season&#34;: &#34;braun-001rya_2012&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 154,
-&#34;PA&#34;: 677,
-&#34;AB&#34;: 598,
-&#34;R&#34;: 108,
-&#34;H&#34;: 191,
-&#34;X2B&#34;: 36,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 41,
-&#34;RBI&#34;: 112,
-&#34;SB&#34;: 30,
-&#34;CS&#34;: 7,
-&#34;BB&#34;: 63,
-&#34;SO&#34;: 128,
-&#34;BA&#34;:          0.319,
-&#34;OBP&#34;:          0.391,
-&#34;SLG&#34;:          0.595,
-&#34;OPS&#34;:          0.987,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 9,
-&#34;X&#34;: 9,
-&#34;bref_season&#34;: &#34;braun-001rya_2013&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 61,
-&#34;PA&#34;: 253,
-&#34;AB&#34;: 225,
-&#34;R&#34;: 30,
-&#34;H&#34;: 67,
-&#34;X2B&#34;: 14,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 9,
-&#34;RBI&#34;: 38,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 5,
-&#34;BB&#34;: 27,
-&#34;SO&#34;: 56,
-&#34;BA&#34;:          0.298,
-&#34;OBP&#34;:          0.372,
-&#34;SLG&#34;:          0.498,
-&#34;OPS&#34;:          0.869,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 10,
-&#34;X&#34;: 10,
-&#34;bref_season&#34;: &#34;braun-001rya_2014&#34;,
-&#34;min_playerid&#34;: &#34;braun-001rya&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Ryan Braun&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 135,
-&#34;PA&#34;: 580,
-&#34;AB&#34;: 530,
-&#34;R&#34;: 68,
-&#34;H&#34;: 141,
-&#34;X2B&#34;: 30,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 19,
-&#34;RBI&#34;: 81,
-&#34;SB&#34;: 11,
-&#34;CS&#34;: 5,
-&#34;BB&#34;: 41,
-&#34;SO&#34;: 113,
-&#34;BA&#34;:          0.266,
-&#34;OBP&#34;:          0.324,
-&#34;SLG&#34;:          0.453,
-&#34;OPS&#34;:          0.777,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 11,
-&#34;X&#34;: 11,
-&#34;bref_season&#34;: &#34;darnel001jam_2010&#34;,
-&#34;min_playerid&#34;: &#34;darnel001jam&#34;,
-&#34;season&#34;: 2010,
-&#34;Name&#34;: &#34;James Darnell&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:            1.5,
-&#34;G&#34;: 108,
-&#34;PA&#34;: 458,
-&#34;AB&#34;: 398,
-&#34;R&#34;: 51,
-&#34;H&#34;: 108,
-&#34;X2B&#34;: 25,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 11,
-&#34;RBI&#34;: 58,
-&#34;SB&#34;: 2,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 49,
-&#34;SO&#34;: 68,
-&#34;BA&#34;:          0.271,
-&#34;OBP&#34;:          0.359,
-&#34;SLG&#34;:          0.422,
-&#34;OPS&#34;:          0.781,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 12,
-&#34;X&#34;: 12,
-&#34;bref_season&#34;: &#34;darnel001jam_2011&#34;,
-&#34;min_playerid&#34;: &#34;darnel001jam&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;James Darnell&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:           3.25,
-&#34;G&#34;: 129,
-&#34;PA&#34;: 553,
-&#34;AB&#34;: 467,
-&#34;R&#34;: 84,
-&#34;H&#34;: 141,
-&#34;X2B&#34;: 31,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 24,
-&#34;RBI&#34;: 86,
-&#34;SB&#34;: 3,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 73,
-&#34;SO&#34;: 85,
-&#34;BA&#34;:          0.302,
-&#34;OBP&#34;:          0.396,
-&#34;SLG&#34;:          0.527,
-&#34;OPS&#34;:          0.922,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 13,
-&#34;X&#34;: 13,
-&#34;bref_season&#34;: &#34;darnel001jam_2012&#34;,
-&#34;min_playerid&#34;: &#34;darnel001jam&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;James Darnell&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 38,
-&#34;PA&#34;: 156,
-&#34;AB&#34;: 133,
-&#34;R&#34;: 23,
-&#34;H&#34;: 35,
-&#34;X2B&#34;: 7,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 8,
-&#34;RBI&#34;: 22,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 18,
-&#34;SO&#34;: 27,
-&#34;BA&#34;:          0.263,
-&#34;OBP&#34;:          0.359,
-&#34;SLG&#34;:          0.496,
-&#34;OPS&#34;:          0.855,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 14,
-&#34;X&#34;: 14,
-&#34;bref_season&#34;: &#34;darnel001jam_2013&#34;,
-&#34;min_playerid&#34;: &#34;darnel001jam&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;James Darnell&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              3,
-&#34;G&#34;: 15,
-&#34;PA&#34;: 64,
-&#34;AB&#34;: 61,
-&#34;R&#34;: 5,
-&#34;H&#34;: 15,
-&#34;X2B&#34;: 5,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 0,
-&#34;RBI&#34;: 10,
-&#34;SB&#34;: 0,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 3,
-&#34;SO&#34;: 12,
-&#34;BA&#34;:          0.246,
-&#34;OBP&#34;:          0.281,
-&#34;SLG&#34;:          0.361,
-&#34;OPS&#34;:          0.642,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 15,
-&#34;X&#34;: 15,
-&#34;bref_season&#34;: &#34;dicker001mck_2012&#34;,
-&#34;min_playerid&#34;: &#34;dicker001mck&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Corey Dickerson*&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:            1.5,
-&#34;G&#34;: 127,
-&#34;PA&#34;: 559,
-&#34;AB&#34;: 506,
-&#34;R&#34;: 83,
-&#34;H&#34;: 154,
-&#34;X2B&#34;: 40,
-&#34;X3B&#34;: 7,
-&#34;HR&#34;: 22,
-&#34;RBI&#34;: 81,
-&#34;SB&#34;: 16,
-&#34;CS&#34;: 8,
-&#34;BB&#34;: 43,
-&#34;SO&#34;: 93,
-&#34;BA&#34;:          0.304,
-&#34;OBP&#34;:          0.358,
-&#34;SLG&#34;:          0.542,
-&#34;OPS&#34;:          0.899,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 16,
-&#34;X&#34;: 16,
-&#34;bref_season&#34;: &#34;dicker001mck_2013&#34;,
-&#34;min_playerid&#34;: &#34;dicker001mck&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;Corey Dickerson*&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 144,
-&#34;PA&#34;: 558,
-&#34;AB&#34;: 509,
-&#34;R&#34;: 93,
-&#34;H&#34;: 168,
-&#34;X2B&#34;: 34,
-&#34;X3B&#34;: 19,
-&#34;HR&#34;: 16,
-&#34;RBI&#34;: 67,
-&#34;SB&#34;: 8,
-&#34;CS&#34;: 12,
-&#34;BB&#34;: 42,
-&#34;SO&#34;: 90,
-&#34;BA&#34;:           0.33,
-&#34;OBP&#34;:          0.377,
-&#34;SLG&#34;:          0.566,
-&#34;OPS&#34;:          0.943,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 17,
-&#34;X&#34;: 17,
-&#34;bref_season&#34;: &#34;dicker001mck_2014&#34;,
-&#34;min_playerid&#34;: &#34;dicker001mck&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Corey Dickerson*&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 134,
-&#34;PA&#34;: 492,
-&#34;AB&#34;: 449,
-&#34;R&#34;: 76,
-&#34;H&#34;: 141,
-&#34;X2B&#34;: 28,
-&#34;X3B&#34;: 7,
-&#34;HR&#34;: 24,
-&#34;RBI&#34;: 77,
-&#34;SB&#34;: 8,
-&#34;CS&#34;: 7,
-&#34;BB&#34;: 38,
-&#34;SO&#34;: 105,
-&#34;BA&#34;:          0.314,
-&#34;OBP&#34;:          0.366,
-&#34;SLG&#34;:          0.568,
-&#34;OPS&#34;:          0.934,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 18,
-&#34;X&#34;: 18,
-&#34;bref_season&#34;: &#34;gordon001ale_2007&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2007,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 151,
-&#34;PA&#34;: 601,
-&#34;AB&#34;: 543,
-&#34;R&#34;: 60,
-&#34;H&#34;: 134,
-&#34;X2B&#34;: 36,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 15,
-&#34;RBI&#34;: 60,
-&#34;SB&#34;: 14,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 41,
-&#34;SO&#34;: 137,
-&#34;BA&#34;:          0.247,
-&#34;OBP&#34;:          0.314,
-&#34;SLG&#34;:          0.411,
-&#34;OPS&#34;:          0.725,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 19,
-&#34;X&#34;: 19,
-&#34;bref_season&#34;: &#34;gordon001ale_2008&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2008,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 134,
-&#34;PA&#34;: 571,
-&#34;AB&#34;: 493,
-&#34;R&#34;: 72,
-&#34;H&#34;: 128,
-&#34;X2B&#34;: 35,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 16,
-&#34;RBI&#34;: 59,
-&#34;SB&#34;: 9,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 66,
-&#34;SO&#34;: 120,
-&#34;BA&#34;:           0.26,
-&#34;OBP&#34;:          0.351,
-&#34;SLG&#34;:          0.432,
-&#34;OPS&#34;:          0.783,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 20,
-&#34;X&#34;: 20,
-&#34;bref_season&#34;: &#34;gordon001ale_2009&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2009,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:   2.8333333333,
-&#34;G&#34;: 79,
-&#34;PA&#34;: 322,
-&#34;AB&#34;: 268,
-&#34;R&#34;: 50,
-&#34;H&#34;: 72,
-&#34;X2B&#34;: 13,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 11,
-&#34;RBI&#34;: 45,
-&#34;SB&#34;: 5,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 44,
-&#34;SO&#34;: 67,
-&#34;BA&#34;:          0.269,
-&#34;OBP&#34;:          0.377,
-&#34;SLG&#34;:          0.448,
-&#34;OPS&#34;:          0.825,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 21,
-&#34;X&#34;: 21,
-&#34;bref_season&#34;: &#34;gordon001ale_2010&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2010,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              3,
-&#34;G&#34;: 149,
-&#34;PA&#34;: 633,
-&#34;AB&#34;: 519,
-&#34;R&#34;: 100,
-&#34;H&#34;: 138,
-&#34;X2B&#34;: 33,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 22,
-&#34;RBI&#34;: 66,
-&#34;SB&#34;: 9,
-&#34;CS&#34;: 7,
-&#34;BB&#34;: 94,
-&#34;SO&#34;: 137,
-&#34;BA&#34;:          0.266,
-&#34;OBP&#34;:          0.391,
-&#34;SLG&#34;:          0.468,
-&#34;OPS&#34;:          0.859,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 22,
-&#34;X&#34;: 22,
-&#34;bref_season&#34;: &#34;gordon001ale_2011&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 151,
-&#34;PA&#34;: 690,
-&#34;AB&#34;: 611,
-&#34;R&#34;: 101,
-&#34;H&#34;: 185,
-&#34;X2B&#34;: 45,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 23,
-&#34;RBI&#34;: 87,
-&#34;SB&#34;: 17,
-&#34;CS&#34;: 8,
-&#34;BB&#34;: 67,
-&#34;SO&#34;: 139,
-&#34;BA&#34;:          0.303,
-&#34;OBP&#34;:          0.376,
-&#34;SLG&#34;:          0.502,
-&#34;OPS&#34;:          0.879,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 23,
-&#34;X&#34;: 23,
-&#34;bref_season&#34;: &#34;gordon001ale_2012&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 161,
-&#34;PA&#34;: 721,
-&#34;AB&#34;: 642,
-&#34;R&#34;: 93,
-&#34;H&#34;: 189,
-&#34;X2B&#34;: 51,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 14,
-&#34;RBI&#34;: 72,
-&#34;SB&#34;: 10,
-&#34;CS&#34;: 5,
-&#34;BB&#34;: 73,
-&#34;SO&#34;: 140,
-&#34;BA&#34;:          0.294,
-&#34;OBP&#34;:          0.368,
-&#34;SLG&#34;:          0.455,
-&#34;OPS&#34;:          0.822,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 24,
-&#34;X&#34;: 24,
-&#34;bref_season&#34;: &#34;gordon001ale_2013&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 156,
-&#34;PA&#34;: 700,
-&#34;AB&#34;: 633,
-&#34;R&#34;: 90,
-&#34;H&#34;: 168,
-&#34;X2B&#34;: 27,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 20,
-&#34;RBI&#34;: 81,
-&#34;SB&#34;: 11,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 52,
-&#34;SO&#34;: 141,
-&#34;BA&#34;:          0.265,
-&#34;OBP&#34;:          0.327,
-&#34;SLG&#34;:          0.422,
-&#34;OPS&#34;:          0.749,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 25,
-&#34;X&#34;: 25,
-&#34;bref_season&#34;: &#34;gordon001ale_2014&#34;,
-&#34;min_playerid&#34;: &#34;gordon001ale&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Alex Gordon*&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 156,
-&#34;PA&#34;: 643,
-&#34;AB&#34;: 563,
-&#34;R&#34;: 87,
-&#34;H&#34;: 150,
-&#34;X2B&#34;: 34,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 19,
-&#34;RBI&#34;: 74,
-&#34;SB&#34;: 12,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 65,
-&#34;SO&#34;: 126,
-&#34;BA&#34;:          0.266,
-&#34;OBP&#34;:          0.351,
-&#34;SLG&#34;:          0.432,
-&#34;OPS&#34;:          0.783,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 26,
-&#34;X&#34;: 26,
-&#34;bref_season&#34;: &#34;gyorko001jed_2012&#34;,
-&#34;min_playerid&#34;: &#34;gyorko001jed&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Jedd Gyorko&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:            2.5,
-&#34;G&#34;: 126,
-&#34;PA&#34;: 557,
-&#34;AB&#34;: 499,
-&#34;R&#34;: 80,
-&#34;H&#34;: 155,
-&#34;X2B&#34;: 28,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 30,
-&#34;RBI&#34;: 100,
-&#34;SB&#34;: 5,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 51,
-&#34;SO&#34;: 95,
-&#34;BA&#34;:          0.311,
-&#34;OBP&#34;:          0.373,
-&#34;SLG&#34;:          0.547,
-&#34;OPS&#34;:          0.921,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 27,
-&#34;X&#34;: 27,
-&#34;bref_season&#34;: &#34;gyorko001jed_2013&#34;,
-&#34;min_playerid&#34;: &#34;gyorko001jed&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;Jedd Gyorko&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:           2.75,
-&#34;G&#34;: 128,
-&#34;PA&#34;: 533,
-&#34;AB&#34;: 494,
-&#34;R&#34;: 64,
-&#34;H&#34;: 126,
-&#34;X2B&#34;: 27,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 23,
-&#34;RBI&#34;: 64,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 33,
-&#34;SO&#34;: 124,
-&#34;BA&#34;:          0.255,
-&#34;OBP&#34;:          0.306,
-&#34;SLG&#34;:          0.449,
-&#34;OPS&#34;:          0.755,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 28,
-&#34;X&#34;: 28,
-&#34;bref_season&#34;: &#34;gyorko001jed_2014&#34;,
-&#34;min_playerid&#34;: &#34;gyorko001jed&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Jedd Gyorko&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 117,
-&#34;PA&#34;: 471,
-&#34;AB&#34;: 424,
-&#34;R&#34;: 44,
-&#34;H&#34;: 91,
-&#34;X2B&#34;: 19,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 11,
-&#34;RBI&#34;: 56,
-&#34;SB&#34;: 3,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 40,
-&#34;SO&#34;: 104,
-&#34;BA&#34;:          0.215,
-&#34;OBP&#34;:          0.287,
-&#34;SLG&#34;:          0.342,
-&#34;OPS&#34;:          0.629,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 29,
-&#34;X&#34;: 29,
-&#34;bref_season&#34;: &#34;lamb--002jac_2014&#34;,
-&#34;min_playerid&#34;: &#34;lamb--002jac&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Jake Lamb*&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:           3.25,
-&#34;G&#34;: 145,
-&#34;PA&#34;: 593,
-&#34;AB&#34;: 518,
-&#34;R&#34;: 78,
-&#34;H&#34;: 157,
-&#34;X2B&#34;: 43,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 19,
-&#34;RBI&#34;: 95,
-&#34;SB&#34;: 3,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 59,
-&#34;SO&#34;: 140,
-&#34;BA&#34;:          0.303,
-&#34;OBP&#34;:          0.374,
-&#34;SLG&#34;:          0.519,
-&#34;OPS&#34;:          0.894,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 30,
-&#34;X&#34;: 30,
-&#34;bref_season&#34;: &#34;mench-001kev_2001&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2001,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:              2,
-&#34;G&#34;: 120,
-&#34;PA&#34;: 521,
-&#34;AB&#34;: 475,
-&#34;R&#34;: 78,
-&#34;H&#34;: 126,
-&#34;X2B&#34;: 34,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 26,
-&#34;RBI&#34;: 83,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 34,
-&#34;SO&#34;: 76,
-&#34;BA&#34;:          0.265,
-&#34;OBP&#34;:          0.319,
-&#34;SLG&#34;:          0.509,
-&#34;OPS&#34;:          0.828,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 31,
-&#34;X&#34;: 31,
-&#34;bref_season&#34;: &#34;mench-001kev_2002&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2002,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 136,
-&#34;PA&#34;: 529,
-&#34;AB&#34;: 464,
-&#34;R&#34;: 69,
-&#34;H&#34;: 116,
-&#34;X2B&#34;: 28,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 21,
-&#34;RBI&#34;: 75,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 48,
-&#34;SO&#34;: 116,
-&#34;BA&#34;:           0.25,
-&#34;OBP&#34;:           0.33,
-&#34;SLG&#34;:          0.455,
-&#34;OPS&#34;:          0.785,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 32,
-&#34;X&#34;: 32,
-&#34;bref_season&#34;: &#34;mench-001kev_2003&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2003,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:           3.25,
-&#34;G&#34;: 70,
-&#34;PA&#34;: 282,
-&#34;AB&#34;: 241,
-&#34;R&#34;: 32,
-&#34;H&#34;: 69,
-&#34;X2B&#34;: 20,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 6,
-&#34;RBI&#34;: 32,
-&#34;SB&#34;: 3,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 30,
-&#34;SO&#34;: 34,
-&#34;BA&#34;:          0.286,
-&#34;OBP&#34;:          0.365,
-&#34;SLG&#34;:          0.444,
-&#34;OPS&#34;:          0.809,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 33,
-&#34;X&#34;: 33,
-&#34;bref_season&#34;: &#34;mench-001kev_2004&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2004,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              3,
-&#34;G&#34;: 129,
-&#34;PA&#34;: 498,
-&#34;AB&#34;: 454,
-&#34;R&#34;: 72,
-&#34;H&#34;: 127,
-&#34;X2B&#34;: 30,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 27,
-&#34;RBI&#34;: 72,
-&#34;SB&#34;: 0,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 34,
-&#34;SO&#34;: 63,
-&#34;BA&#34;:           0.28,
-&#34;OBP&#34;:          0.335,
-&#34;SLG&#34;:          0.537,
-&#34;OPS&#34;:          0.873,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 34,
-&#34;X&#34;: 34,
-&#34;bref_season&#34;: &#34;mench-001kev_2005&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2005,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 150,
-&#34;PA&#34;: 615,
-&#34;AB&#34;: 557,
-&#34;R&#34;: 71,
-&#34;H&#34;: 147,
-&#34;X2B&#34;: 33,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 73,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 50,
-&#34;SO&#34;: 68,
-&#34;BA&#34;:          0.264,
-&#34;OBP&#34;:          0.328,
-&#34;SLG&#34;:          0.469,
-&#34;OPS&#34;:          0.797,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 35,
-&#34;X&#34;: 35,
-&#34;bref_season&#34;: &#34;mench-001kev_2006&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2006,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 127,
-&#34;PA&#34;: 482,
-&#34;AB&#34;: 446,
-&#34;R&#34;: 45,
-&#34;H&#34;: 120,
-&#34;X2B&#34;: 24,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 13,
-&#34;RBI&#34;: 68,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 27,
-&#34;SO&#34;: 59,
-&#34;BA&#34;:          0.269,
-&#34;OBP&#34;:          0.313,
-&#34;SLG&#34;:          0.419,
-&#34;OPS&#34;:          0.733,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 36,
-&#34;X&#34;: 36,
-&#34;bref_season&#34;: &#34;mench-001kev_2007&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2007,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 101,
-&#34;PA&#34;: 308,
-&#34;AB&#34;: 288,
-&#34;R&#34;: 39,
-&#34;H&#34;: 77,
-&#34;X2B&#34;: 20,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 8,
-&#34;RBI&#34;: 37,
-&#34;SB&#34;: 3,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 16,
-&#34;SO&#34;: 21,
-&#34;BA&#34;:          0.267,
-&#34;OBP&#34;:          0.305,
-&#34;SLG&#34;:          0.441,
-&#34;OPS&#34;:          0.746,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 37,
-&#34;X&#34;: 37,
-&#34;bref_season&#34;: &#34;mench-001kev_2008&#34;,
-&#34;min_playerid&#34;: &#34;mench-001kev&#34;,
-&#34;season&#34;: 2008,
-&#34;Name&#34;: &#34;Kevin Mench&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:   3.3333333333,
-&#34;G&#34;: 102,
-&#34;PA&#34;: 330,
-&#34;AB&#34;: 299,
-&#34;R&#34;: 43,
-&#34;H&#34;: 80,
-&#34;X2B&#34;: 23,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 4,
-&#34;RBI&#34;: 40,
-&#34;SB&#34;: 2,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 28,
-&#34;SO&#34;: 43,
-&#34;BA&#34;:          0.268,
-&#34;OBP&#34;:          0.327,
-&#34;SLG&#34;:          0.405,
-&#34;OPS&#34;:          0.732,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 38,
-&#34;X&#34;: 39,
-&#34;bref_season&#34;: &#34;pence-001hun_2006&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2006,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:              2,
-&#34;G&#34;: 136,
-&#34;PA&#34;: 592,
-&#34;AB&#34;: 523,
-&#34;R&#34;: 97,
-&#34;H&#34;: 148,
-&#34;X2B&#34;: 31,
-&#34;X3B&#34;: 8,
-&#34;HR&#34;: 28,
-&#34;RBI&#34;: 95,
-&#34;SB&#34;: 17,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 60,
-&#34;SO&#34;: 109,
-&#34;BA&#34;:          0.283,
-&#34;OBP&#34;:          0.357,
-&#34;SLG&#34;:          0.533,
-&#34;OPS&#34;:           0.89,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 39,
-&#34;X&#34;: 40,
-&#34;bref_season&#34;: &#34;pence-001hun_2007&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2007,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:            3.5,
-&#34;G&#34;: 133,
-&#34;PA&#34;: 590,
-&#34;AB&#34;: 551,
-&#34;R&#34;: 74,
-&#34;H&#34;: 178,
-&#34;X2B&#34;: 41,
-&#34;X3B&#34;: 10,
-&#34;HR&#34;: 20,
-&#34;RBI&#34;: 90,
-&#34;SB&#34;: 13,
-&#34;CS&#34;: 5,
-&#34;BB&#34;: 36,
-&#34;SO&#34;: 110,
-&#34;BA&#34;:          0.323,
-&#34;OBP&#34;:          0.364,
-&#34;SLG&#34;:          0.543,
-&#34;OPS&#34;:          0.907,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 40,
-&#34;X&#34;: 41,
-&#34;bref_season&#34;: &#34;pence-001hun_2008&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2008,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 157,
-&#34;PA&#34;: 642,
-&#34;AB&#34;: 595,
-&#34;R&#34;: 78,
-&#34;H&#34;: 160,
-&#34;X2B&#34;: 34,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 83,
-&#34;SB&#34;: 11,
-&#34;CS&#34;: 10,
-&#34;BB&#34;: 40,
-&#34;SO&#34;: 124,
-&#34;BA&#34;:          0.269,
-&#34;OBP&#34;:          0.318,
-&#34;SLG&#34;:          0.466,
-&#34;OPS&#34;:          0.783,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 41,
-&#34;X&#34;: 42,
-&#34;bref_season&#34;: &#34;pence-001hun_2009&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2009,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 159,
-&#34;PA&#34;: 647,
-&#34;AB&#34;: 585,
-&#34;R&#34;: 76,
-&#34;H&#34;: 165,
-&#34;X2B&#34;: 26,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 72,
-&#34;SB&#34;: 14,
-&#34;CS&#34;: 11,
-&#34;BB&#34;: 58,
-&#34;SO&#34;: 109,
-&#34;BA&#34;:          0.282,
-&#34;OBP&#34;:          0.346,
-&#34;SLG&#34;:          0.472,
-&#34;OPS&#34;:          0.818,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 42,
-&#34;X&#34;: 43,
-&#34;bref_season&#34;: &#34;pence-001hun_2010&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2010,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 156,
-&#34;PA&#34;: 658,
-&#34;AB&#34;: 614,
-&#34;R&#34;: 93,
-&#34;H&#34;: 173,
-&#34;X2B&#34;: 29,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 91,
-&#34;SB&#34;: 18,
-&#34;CS&#34;: 9,
-&#34;BB&#34;: 41,
-&#34;SO&#34;: 105,
-&#34;BA&#34;:          0.282,
-&#34;OBP&#34;:          0.325,
-&#34;SLG&#34;:          0.461,
-&#34;OPS&#34;:          0.786,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 43,
-&#34;X&#34;: 44,
-&#34;bref_season&#34;: &#34;pence-001hun_2011&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 154,
-&#34;PA&#34;: 668,
-&#34;AB&#34;: 606,
-&#34;R&#34;: 84,
-&#34;H&#34;: 190,
-&#34;X2B&#34;: 38,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 22,
-&#34;RBI&#34;: 97,
-&#34;SB&#34;: 8,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 56,
-&#34;SO&#34;: 124,
-&#34;BA&#34;:          0.314,
-&#34;OBP&#34;:           0.37,
-&#34;SLG&#34;:          0.502,
-&#34;OPS&#34;:          0.871,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 44,
-&#34;X&#34;: 45,
-&#34;bref_season&#34;: &#34;pence-001hun_2012&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2012,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 160,
-&#34;PA&#34;: 688,
-&#34;AB&#34;: 617,
-&#34;R&#34;: 87,
-&#34;H&#34;: 156,
-&#34;X2B&#34;: 26,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 24,
-&#34;RBI&#34;: 104,
-&#34;SB&#34;: 5,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 56,
-&#34;SO&#34;: 145,
-&#34;BA&#34;:          0.253,
-&#34;OBP&#34;:          0.319,
-&#34;SLG&#34;:          0.425,
-&#34;OPS&#34;:          0.743,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 45,
-&#34;X&#34;: 46,
-&#34;bref_season&#34;: &#34;pence-001hun_2013&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2013,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 162,
-&#34;PA&#34;: 687,
-&#34;AB&#34;: 629,
-&#34;R&#34;: 91,
-&#34;H&#34;: 178,
-&#34;X2B&#34;: 35,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 27,
-&#34;RBI&#34;: 99,
-&#34;SB&#34;: 22,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 52,
-&#34;SO&#34;: 115,
-&#34;BA&#34;:          0.283,
-&#34;OBP&#34;:          0.339,
-&#34;SLG&#34;:          0.483,
-&#34;OPS&#34;:          0.822,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 46,
-&#34;X&#34;: 47,
-&#34;bref_season&#34;: &#34;pence-001hun_2014&#34;,
-&#34;min_playerid&#34;: &#34;pence-001hun&#34;,
-&#34;season&#34;: 2014,
-&#34;Name&#34;: &#34;Hunter Pence&#34;,
-&#34;Age&#34;: 31,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 162,
-&#34;PA&#34;: 708,
-&#34;AB&#34;: 650,
-&#34;R&#34;: 106,
-&#34;H&#34;: 180,
-&#34;X2B&#34;: 29,
-&#34;X3B&#34;: 10,
-&#34;HR&#34;: 20,
-&#34;RBI&#34;: 74,
-&#34;SB&#34;: 13,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 52,
-&#34;SO&#34;: 130,
-&#34;BA&#34;:          0.277,
-&#34;OBP&#34;:          0.332,
-&#34;SLG&#34;:          0.445,
-&#34;OPS&#34;:          0.777,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 47,
-&#34;X&#34;: 48,
-&#34;bref_season&#34;: &#34;teixei001mar_2003&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2003,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 146,
-&#34;PA&#34;: 589,
-&#34;AB&#34;: 529,
-&#34;R&#34;: 66,
-&#34;H&#34;: 137,
-&#34;X2B&#34;: 29,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 26,
-&#34;RBI&#34;: 84,
-&#34;SB&#34;: 1,
-&#34;CS&#34;: 2,
-&#34;BB&#34;: 44,
-&#34;SO&#34;: 120,
-&#34;BA&#34;:          0.259,
-&#34;OBP&#34;:          0.331,
-&#34;SLG&#34;:           0.48,
-&#34;OPS&#34;:          0.811,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 48,
-&#34;X&#34;: 49,
-&#34;bref_season&#34;: &#34;teixei001mar_2004&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2004,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:              3,
-&#34;G&#34;: 146,
-&#34;PA&#34;: 629,
-&#34;AB&#34;: 548,
-&#34;R&#34;: 101,
-&#34;H&#34;: 153,
-&#34;X2B&#34;: 34,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 38,
-&#34;RBI&#34;: 112,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 68,
-&#34;SO&#34;: 118,
-&#34;BA&#34;:          0.279,
-&#34;OBP&#34;:          0.369,
-&#34;SLG&#34;:          0.557,
-&#34;OPS&#34;:          0.925,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 49,
-&#34;X&#34;: 50,
-&#34;bref_season&#34;: &#34;teixei001mar_2005&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2005,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 162,
-&#34;PA&#34;: 730,
-&#34;AB&#34;: 644,
-&#34;R&#34;: 112,
-&#34;H&#34;: 194,
-&#34;X2B&#34;: 41,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 43,
-&#34;RBI&#34;: 144,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 72,
-&#34;SO&#34;: 124,
-&#34;BA&#34;:          0.301,
-&#34;OBP&#34;:          0.379,
-&#34;SLG&#34;:          0.575,
-&#34;OPS&#34;:          0.954,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 50,
-&#34;X&#34;: 51,
-&#34;bref_season&#34;: &#34;teixei001mar_2006&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2006,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 162,
-&#34;PA&#34;: 727,
-&#34;AB&#34;: 628,
-&#34;R&#34;: 99,
-&#34;H&#34;: 177,
-&#34;X2B&#34;: 45,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 33,
-&#34;RBI&#34;: 110,
-&#34;SB&#34;: 2,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 89,
-&#34;SO&#34;: 128,
-&#34;BA&#34;:          0.282,
-&#34;OBP&#34;:          0.371,
-&#34;SLG&#34;:          0.514,
-&#34;OPS&#34;:          0.886,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 51,
-&#34;X&#34;: 52,
-&#34;bref_season&#34;: &#34;teixei001mar_2007&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2007,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:   3.3333333333,
-&#34;G&#34;: 133,
-&#34;PA&#34;: 579,
-&#34;AB&#34;: 496,
-&#34;R&#34;: 86,
-&#34;H&#34;: 151,
-&#34;X2B&#34;: 33,
-&#34;X3B&#34;: 2,
-&#34;HR&#34;: 30,
-&#34;RBI&#34;: 105,
-&#34;SB&#34;: 0,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 74,
-&#34;SO&#34;: 112,
-&#34;BA&#34;:          0.304,
-&#34;OBP&#34;:          0.401,
-&#34;SLG&#34;:           0.56,
-&#34;OPS&#34;:          0.961,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 52,
-&#34;X&#34;: 53,
-&#34;bref_season&#34;: &#34;teixei001mar_2008&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2008,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 157,
-&#34;PA&#34;: 685,
-&#34;AB&#34;: 574,
-&#34;R&#34;: 102,
-&#34;H&#34;: 177,
-&#34;X2B&#34;: 41,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 33,
-&#34;RBI&#34;: 121,
-&#34;SB&#34;: 2,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 97,
-&#34;SO&#34;: 93,
-&#34;BA&#34;:          0.308,
-&#34;OBP&#34;:           0.41,
-&#34;SLG&#34;:          0.552,
-&#34;OPS&#34;:          0.962,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 53,
-&#34;X&#34;: 54,
-&#34;bref_season&#34;: &#34;teixei001mar_2009&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2009,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 156,
-&#34;PA&#34;: 707,
-&#34;AB&#34;: 609,
-&#34;R&#34;: 103,
-&#34;H&#34;: 178,
-&#34;X2B&#34;: 43,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 39,
-&#34;RBI&#34;: 122,
-&#34;SB&#34;: 2,
-&#34;CS&#34;: 0,
-&#34;BB&#34;: 81,
-&#34;SO&#34;: 114,
-&#34;BA&#34;:          0.292,
-&#34;OBP&#34;:          0.383,
-&#34;SLG&#34;:          0.565,
-&#34;OPS&#34;:          0.948,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 54,
-&#34;X&#34;: 55,
-&#34;bref_season&#34;: &#34;teixei001mar_2010&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2010,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 158,
-&#34;PA&#34;: 712,
-&#34;AB&#34;: 601,
-&#34;R&#34;: 113,
-&#34;H&#34;: 154,
-&#34;X2B&#34;: 36,
-&#34;X3B&#34;: 0,
-&#34;HR&#34;: 33,
-&#34;RBI&#34;: 108,
-&#34;SB&#34;: 0,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 93,
-&#34;SO&#34;: 122,
-&#34;BA&#34;:          0.256,
-&#34;OBP&#34;:          0.365,
-&#34;SLG&#34;:          0.481,
-&#34;OPS&#34;:          0.846,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 55,
-&#34;X&#34;: 56,
-&#34;bref_season&#34;: &#34;teixei001mar_2011&#34;,
-&#34;min_playerid&#34;: &#34;teixei001mar&#34;,
-&#34;season&#34;: 2011,
-&#34;Name&#34;: &#34;Mark Teixeira#&#34;,
-&#34;Age&#34;: 31,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 156,
-&#34;PA&#34;: 684,
-&#34;AB&#34;: 589,
-&#34;R&#34;: 90,
-&#34;H&#34;: 146,
-&#34;X2B&#34;: 26,
-&#34;X3B&#34;: 1,
-&#34;HR&#34;: 39,
-&#34;RBI&#34;: 111,
-&#34;SB&#34;: 4,
-&#34;CS&#34;: 1,
-&#34;BB&#34;: 76,
-&#34;SO&#34;: 110,
-&#34;BA&#34;:          0.248,
-&#34;OBP&#34;:          0.341,
-&#34;SLG&#34;:          0.494,
-&#34;OPS&#34;:          0.835,
-&#34;Bryant&#34;: &#34;Similar Player&#34; 
-},
-{
- &#34;X.1&#34;: 56,
-&#34;X&#34;: 58,
-&#34;bref_season&#34;: &#34;bryant001kri_2015&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2015,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 23,
-&#34;LevEq&#34;:              3,
-&#34;G&#34;: 130,
-&#34;PA&#34;: 548,
-&#34;AB&#34;: 489,
-&#34;R&#34;: 76,
-&#34;H&#34;: 138,
-&#34;X2B&#34;: 32,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 24,
-&#34;RBI&#34;: 83,
-&#34;SB&#34;: 9,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 47,
-&#34;SO&#34;: 105,
-&#34;BA&#34;:          0.282,
-&#34;OBP&#34;:           0.35,
-&#34;SLG&#34;:          0.515,
-&#34;OPS&#34;:          0.865,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 57,
-&#34;X&#34;: 59,
-&#34;bref_season&#34;: &#34;bryant001kri_2016&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2016,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 24,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 132,
-&#34;PA&#34;: 551,
-&#34;AB&#34;: 492,
-&#34;R&#34;: 77,
-&#34;H&#34;: 140,
-&#34;X2B&#34;: 32,
-&#34;X3B&#34;: 5,
-&#34;HR&#34;: 23,
-&#34;RBI&#34;: 77,
-&#34;SB&#34;: 8,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 49,
-&#34;SO&#34;: 107,
-&#34;BA&#34;:          0.285,
-&#34;OBP&#34;:          0.354,
-&#34;SLG&#34;:           0.51,
-&#34;OPS&#34;:          0.864,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 58,
-&#34;X&#34;: 60,
-&#34;bref_season&#34;: &#34;bryant001kri_2017&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2017,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 25,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 115,
-&#34;PA&#34;: 476,
-&#34;AB&#34;: 424,
-&#34;R&#34;: 66,
-&#34;H&#34;: 121,
-&#34;X2B&#34;: 26,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 20,
-&#34;RBI&#34;: 72,
-&#34;SB&#34;: 7,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 43,
-&#34;SO&#34;: 89,
-&#34;BA&#34;:          0.285,
-&#34;OBP&#34;:          0.356,
-&#34;SLG&#34;:          0.502,
-&#34;OPS&#34;:          0.859,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 59,
-&#34;X&#34;: 61,
-&#34;bref_season&#34;: &#34;bryant001kri_2018&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2018,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 26,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 129,
-&#34;PA&#34;: 543,
-&#34;AB&#34;: 478,
-&#34;R&#34;: 76,
-&#34;H&#34;: 135,
-&#34;X2B&#34;: 31,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 22,
-&#34;RBI&#34;: 73,
-&#34;SB&#34;: 7,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 56,
-&#34;SO&#34;: 93,
-&#34;BA&#34;:          0.282,
-&#34;OBP&#34;:          0.363,
-&#34;SLG&#34;:          0.498,
-&#34;OPS&#34;:          0.861,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 60,
-&#34;X&#34;: 62,
-&#34;bref_season&#34;: &#34;bryant001kri_2019&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2019,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 27,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 148,
-&#34;PA&#34;: 635,
-&#34;AB&#34;: 569,
-&#34;R&#34;: 92,
-&#34;H&#34;: 169,
-&#34;X2B&#34;: 36,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 28,
-&#34;RBI&#34;: 94,
-&#34;SB&#34;: 15,
-&#34;CS&#34;: 6,
-&#34;BB&#34;: 58,
-&#34;SO&#34;: 104,
-&#34;BA&#34;:          0.297,
-&#34;OBP&#34;:          0.365,
-&#34;SLG&#34;:          0.522,
-&#34;OPS&#34;:          0.887,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 61,
-&#34;X&#34;: 63,
-&#34;bref_season&#34;: &#34;bryant001kri_2020&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2020,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 28,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 151,
-&#34;PA&#34;: 647,
-&#34;AB&#34;: 574,
-&#34;R&#34;: 87,
-&#34;H&#34;: 174,
-&#34;X2B&#34;: 38,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 25,
-&#34;RBI&#34;: 94,
-&#34;SB&#34;: 11,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 64,
-&#34;SO&#34;: 109,
-&#34;BA&#34;:          0.303,
-&#34;OBP&#34;:          0.376,
-&#34;SLG&#34;:           0.51,
-&#34;OPS&#34;:          0.886,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 62,
-&#34;X&#34;: 64,
-&#34;bref_season&#34;: &#34;bryant001kri_2021&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2021,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 29,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 127,
-&#34;PA&#34;: 532,
-&#34;AB&#34;: 475,
-&#34;R&#34;: 70,
-&#34;H&#34;: 130,
-&#34;X2B&#34;: 26,
-&#34;X3B&#34;: 4,
-&#34;HR&#34;: 20,
-&#34;RBI&#34;: 77,
-&#34;SB&#34;: 5,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 47,
-&#34;SO&#34;: 96,
-&#34;BA&#34;:          0.274,
-&#34;OBP&#34;:          0.343,
-&#34;SLG&#34;:          0.472,
-&#34;OPS&#34;:          0.815,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 63,
-&#34;X&#34;: 65,
-&#34;bref_season&#34;: &#34;bryant001kri_2022&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2022,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 30,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 143,
-&#34;PA&#34;: 591,
-&#34;AB&#34;: 525,
-&#34;R&#34;: 81,
-&#34;H&#34;: 141,
-&#34;X2B&#34;: 32,
-&#34;X3B&#34;: 3,
-&#34;HR&#34;: 21,
-&#34;RBI&#34;: 81,
-&#34;SB&#34;: 10,
-&#34;CS&#34;: 3,
-&#34;BB&#34;: 56,
-&#34;SO&#34;: 104,
-&#34;BA&#34;:          0.269,
-&#34;OBP&#34;:          0.345,
-&#34;SLG&#34;:          0.461,
-&#34;OPS&#34;:          0.806,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-},
-{
- &#34;X.1&#34;: 64,
-&#34;X&#34;: 66,
-&#34;bref_season&#34;: &#34;bryant001kri_2023&#34;,
-&#34;min_playerid&#34;: &#34;bryant001kri&#34;,
-&#34;season&#34;: 2023,
-&#34;Name&#34;: &#34;Kris Bryant&#34;,
-&#34;Age&#34;: 31,
-&#34;LevEq&#34;:              4,
-&#34;G&#34;: 159,
-&#34;PA&#34;: 696,
-&#34;AB&#34;: 620,
-&#34;R&#34;: 98,
-&#34;H&#34;: 163,
-&#34;X2B&#34;: 28,
-&#34;X3B&#34;: 6,
-&#34;HR&#34;: 30,
-&#34;RBI&#34;: 93,
-&#34;SB&#34;: 9,
-&#34;CS&#34;: 4,
-&#34;BB&#34;: 64,
-&#34;SO&#34;: 120,
-&#34;BA&#34;:          0.263,
-&#34;OBP&#34;:          0.336,
-&#34;SLG&#34;:          0.473,
-&#34;OPS&#34;:          0.808,
-&#34;Bryant&#34;: &#34;Bryant&#34; 
-} 
-]
-  $scope.controls = {
- &#34;y&#34;: {
- &#34;name&#34;: &#34;y&#34;,
-&#34;value&#34;: &#34;HR&#34;,
-&#34;values&#34;: [ &#34;LevEq&#34;, &#34;G&#34;, &#34;PA&#34;, &#34;AB&#34;, &#34;R&#34;, &#34;H&#34;, &#34;X2B&#34;, &#34;X3B&#34;, &#34;HR&#34;, &#34;RBI&#34;, &#34;SB&#34;, &#34;CS&#34;, &#34;BB&#34;, &#34;SO&#34;, &#34;BA&#34;, &#34;OBP&#34;, &#34;SLG&#34; ],
-&#34;label&#34;: &#34;Select  y :&#34; 
-} 
-} 
-  $scope.filters = []
-  
-  $scope.drawChart = function(){
-    drawChart($scope.opts, $scope.data)  
-  }
-  
-  $scope.$watch(&#39;selected&#39;, function(){
-    var keys = _.pluck($scope.selected, &#34;variable&#34;)
-    var values = _.pluck($scope.selected, &#34;value&#34;)
-    $scope.opts.selected = _.zipObject(keys, values)
-  }) 
-  
-  $scope.$watch(&#39;opts&#39;,function(){
-    $scope.drawChart()
-	}, true)
-}  
-
-function drawChart(opts, data){ 
-  if (Object.keys(opts.selected).length &gt; 0){
-    data = _.filter(data, opts.selected)
-  }
-  
-  if(!(opts.type===&#34;pieChart&#34; || opts.type===&#34;sparklinePlus&#34; || opts.type===&#34;bulletChart&#34;)) {
-    var data = d3.nest()
-      .key(function(d){
-        //return opts.group === undefined ? &#39;main&#39; : d[opts.group]
-        //instead of main would think a better default is opts.x
-       return opts.group === undefined ? opts.y : d[opts.group];
-      }).entries(data);
-  }
-      
-  if (opts.disabled != undefined){
-    data.map(function(d, i){
-      d.disabled = opts.disabled[i]
-    })
-  }
-	
-	nv.addGraph(function() {
-		var chart = nv.models[opts.type]()
-			.x(function(d) { return d[opts.x] })
-			.y(function(d) { return d[opts.y] })
-			.width(opts.width)
-			.height(opts.height)
-		
-	chart
-  .tooltipContent( function(bry_age$Name, x, y){return bry_age$Name + &#39;  Age: &#39; + x + &#39;  Total: &#39; + y 
-} )
-          
-	chart.xAxis
-  .axisLabel(&#34;Age&#34;)
-  .width(    50)
-
-	
-	
-	chart.yAxis
-  .axisLabel(&#34;Total&#34;)
-  .width(    50)
-
-	d3.select(&#34;#&#34; + opts.id + &#39; svg&#39;)
-  // .empty()
-		.datum(data)
-		.transition().duration(500)
-		.call(chart);
-	
-	 nv.utils.windowResize(chart.update);
-	 return chart;
-  });
-};
-&lt;/script&gt;
-    
-  &lt;/body&gt;
-&lt;/html&gt;
 </description>
     </item>
     

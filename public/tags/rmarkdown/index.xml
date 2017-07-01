@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rmarkdown on Michael Lee</title>
-    <link>/tags/rmarkdown/index.xml</link>
+    <link>https://mikeleeco.github.io/tags/rmarkdown/index.xml</link>
     <description>Recent content in Rmarkdown on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.github.io/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>mikelee.co: Powered by RMarkdown, knitr, and Jekyll</title>
-      <link>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
+      <link>https://mikeleeco.github.io/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -111,7 +111,7 @@ function (playerID = NULL, yearID = NULL, ...)
 plot(iris)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;More to come soon :D&lt;/p&gt;
 </description>

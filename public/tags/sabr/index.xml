@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sabr on Michael Lee</title>
-    <link>/tags/sabr/index.xml</link>
+    <link>https://mikeleeco.github.io/tags/sabr/index.xml</link>
     <description>Recent content in Sabr on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/sabr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.github.io/tags/sabr/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>sabr - R package</title>
-      <link>/posts/2016-05-28-sabr-R-package/</link>
+      <link>https://mikeleeco.github.io/posts/2016-05-28-sabr-R-package/</link>
       <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-05-28-sabr-R-package/</guid>
+      <guid>https://mikeleeco.github.io/posts/2016-05-28-sabr-R-package/</guid>
       <description>
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/mikeleeco/sabr/&#34;&gt;sabr package&lt;/a&gt; connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in &lt;a href=&#34;http://www.insidethebook.com/woba.shtml&#34;&gt;The Book: Playing the Percentages in Baseball&lt;/a&gt;, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:&lt;/p&gt;
@@ -191,10 +191,10 @@ wRAA_season(&amp;quot;braunry02&amp;quot;,&amp;quot;2015&amp;quot;)
     
     <item>
       <title>sabr - R package</title>
-      <link>/projects/2016-05-28-sabr-R-package/</link>
+      <link>https://mikeleeco.github.io/projects/2016-05-28-sabr-R-package/</link>
       <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/projects/2016-05-28-sabr-R-package/</guid>
+      <guid>https://mikeleeco.github.io/projects/2016-05-28-sabr-R-package/</guid>
       <description>
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/mikeleeco/sabr/&#34;&gt;sabr package&lt;/a&gt; connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in &lt;a href=&#34;http://www.insidethebook.com/woba.shtml&#34;&gt;The Book: Playing the Percentages in Baseball&lt;/a&gt;, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:&lt;/p&gt;

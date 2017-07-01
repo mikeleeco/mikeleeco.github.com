@@ -2,319 +2,305 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/animation/2017-06-28-animated-line-chart-coe-bullying/</loc>
+    <loc>https://mikeleeco.github.io/animation/2017-06-28-animated-line-chart-coe-bullying/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/animation/2017-06-28-wsj-measles-vaccination-chart/</loc>
+    <loc>https://mikeleeco.github.io/animation/2017-06-28-wsj-measles-vaccination-chart/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2017-06-28-wsj-measles-vaccination-chart/</loc>
+    <loc>https://mikeleeco.github.io/posts/2017-06-28-wsj-measles-vaccination-chart/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/2017-06-03-EdSurvey-R-package/</loc>
+    <loc>https://mikeleeco.github.io/projects/2017-06-03-EdSurvey-R-package/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/2017-06-03-NAEPprimer-R-package/</loc>
+    <loc>https://mikeleeco.github.io/projects/2017-06-03-NAEPprimer-R-package/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/some-tips-on-making-animations-in-r/</loc>
-    <lastmod>2017-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/some-other-tips-on-making-animations-in-r/</loc>
-    <lastmod>2017-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/2016-12-26-wisconsin-presidential-election-results/</loc>
+    <loc>https://mikeleeco.github.io/posts/2016-12-26-wisconsin-presidential-election-results/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2016-06-01-NBA-Draft-Odds-Plot/</loc>
+    <loc>https://mikeleeco.github.io/posts/2016-06-01-NBA-Draft-Odds-Plot/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</loc>
+    <loc>https://mikeleeco.github.io/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2016-05-28-sabr-R-package/</loc>
+    <loc>https://mikeleeco.github.io/posts/2016-05-28-sabr-R-package/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/2016-05-28-sabr-R-package/</loc>
+    <loc>https://mikeleeco.github.io/projects/2016-05-28-sabr-R-package/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/interactives/2015-06-10-genre-interactive/</loc>
+    <loc>https://mikeleeco.github.io/interactives/2015-06-10-genre-interactive/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/interactives/2015-06-10-theme-interactive/</loc>
+    <loc>https://mikeleeco.github.io/interactives/2015-06-10-theme-interactive/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2015-06-10-video-games-interactive/</loc>
+    <loc>https://mikeleeco.github.io/posts/2015-06-10-video-games-interactive/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2015-03-25-bryant-visualization/</loc>
+    <loc>https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2015-03-25-milb-similarity-scores/</loc>
+    <loc>https://mikeleeco.github.io/posts/2015-03-25-milb-similarity-scores/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2015-02-23-milb-scraper-with-rvest/</loc>
+    <loc>https://mikeleeco.github.io/posts/2015-02-23-milb-scraper-with-rvest/</loc>
     <lastmod>2015-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/knitr/bryant/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/animation/</loc>
+    <loc>https://mikeleeco.github.io/tags/animation/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/animation/</loc>
+    <loc>https://mikeleeco.github.io/animation/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/baseball/</loc>
+    <loc>https://mikeleeco.github.io/tags/baseball/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://mikeleeco.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/d3/index.js/</loc>
+    <loc>https://mikeleeco.github.io/tags/d3/index.js/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/data/</loc>
+    <loc>https://mikeleeco.github.io/tags/data/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/dataviz/</loc>
+    <loc>https://mikeleeco.github.io/tags/dataviz/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>https://mikeleeco.github.io/tags/dplyr/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/education/</loc>
+    <loc>https://mikeleeco.github.io/tags/education/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/fivethirtyeight/</loc>
+    <loc>https://mikeleeco.github.io/tags/fivethirtyeight/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/gganimate/</loc>
+    <loc>https://mikeleeco.github.io/tags/gganimate/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>https://mikeleeco.github.io/tags/ggplot2/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/html-scraper/</loc>
+    <loc>https://mikeleeco.github.io/tags/html-scraper/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/interactives/</loc>
+    <loc>https://mikeleeco.github.io/categories/interactives/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/interactives/</loc>
+    <loc>https://mikeleeco.github.io/interactives/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/jekyll/</loc>
+    <loc>https://mikeleeco.github.io/tags/jekyll/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/knitr/</loc>
+    <loc>https://mikeleeco.github.io/tags/knitr/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://mikeleeco.github.io/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/milb/</loc>
+    <loc>https://mikeleeco.github.io/tags/milb/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/mlb/</loc>
+    <loc>https://mikeleeco.github.io/tags/mlb/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/mobygames/</loc>
+    <loc>https://mikeleeco.github.io/tags/mobygames/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/nba/</loc>
+    <loc>https://mikeleeco.github.io/tags/nba/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/politics/</loc>
+    <loc>https://mikeleeco.github.io/tags/politics/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/posts/</loc>
+    <loc>https://mikeleeco.github.io/categories/posts/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>https://mikeleeco.github.io/posts/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/project/</loc>
+    <loc>https://mikeleeco.github.io/categories/project/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/projects/</loc>
+    <loc>https://mikeleeco.github.io/categories/projects/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/projects/</loc>
+    <loc>https://mikeleeco.github.io/projects/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>https://mikeleeco.github.io/tags/r/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/research/</loc>
+    <loc>https://mikeleeco.github.io/tags/research/</loc>
     <lastmod>2017-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/resume/</loc>
+    <loc>https://mikeleeco.github.io/resume/</loc>
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
+    <loc>https://mikeleeco.github.io/tags/rmarkdown/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/rvest/</loc>
+    <loc>https://mikeleeco.github.io/tags/rvest/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/sabr/</loc>
+    <loc>https://mikeleeco.github.io/tags/sabr/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/similarity-scores/</loc>
+    <loc>https://mikeleeco.github.io/tags/similarity-scores/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/sports/</loc>
+    <loc>https://mikeleeco.github.io/tags/sports/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://mikeleeco.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/video-games/</loc>
+    <loc>https://mikeleeco.github.io/tags/video-games/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

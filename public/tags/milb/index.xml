@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Milb on Michael Lee</title>
-    <link>/tags/milb/index.xml</link>
+    <link>https://mikeleeco.github.io/tags/milb/index.xml</link>
     <description>Recent content in Milb on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/milb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.github.io/tags/milb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Kris Bryant Performance Projection</title>
-      <link>/posts/2015-03-25-bryant-visualization/</link>
+      <link>https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-03-25-bryant-visualization/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/</guid>
       <description>&lt;body&gt;
 
 
@@ -23,7 +23,7 @@
 
 &lt;p&gt;A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at &lt;a href=&#34;http://mikelee.co/posts/milb-similarity-scores/&#34; class=&#34;uri&#34;&gt;http://mikelee.co/posts/milb-similarity-scores/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can change the y-axis parameters by selecting the performance measure you’d like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.&lt;/p&gt;
-&lt;iframe src=&#34;/knitr/bryant.html&#34; , width=&#34;100%,&#34; height=&#34;550px&#34;&gt;
+&lt;iframe src=&#34;https://mikeleeco.github.io/knitr/bryant.html&#34; , width=&#34;100%,&#34; height=&#34;550px&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;
 &lt;div class=&#34;table-responsive&#34;&gt;
@@ -776,10 +776,10 @@ $(document).ready(function () {
     
     <item>
       <title>Working with Minor League Similarity Scores</title>
-      <link>/posts/2015-03-25-milb-similarity-scores/</link>
+      <link>https://mikeleeco.github.io/posts/2015-03-25-milb-similarity-scores/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-03-25-milb-similarity-scores/</guid>
       <description>&lt;p&gt;&lt;blockquote&gt;
 There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way...players who have similar primary characteristics will tend to have similar secondary characteristics as well.
 
@@ -860,9 +860,9 @@ There are some people who see baseball players that way-each one is unique, abso
 
 &lt;p&gt;Using &lt;a href=&#34;http://ramnathv.github.io/rCharts&#34;&gt;rCharts&lt;/a&gt;, an interactive visualization package maintained by &lt;a href=&#34;https://github.com/ramnathv&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt;, I created a Rmarkdown page with knitr displaying the projection data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;https://mikeleeco.github.io/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -872,10 +872,10 @@ There are some people who see baseball players that way-each one is unique, abso
     
     <item>
       <title>Let&#39;s Make a Minor League Baseball Database!</title>
-      <link>/posts/2015-02-23-milb-scraper-with-rvest/</link>
+      <link>https://mikeleeco.github.io/posts/2015-02-23-milb-scraper-with-rvest/</link>
       <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-02-23-milb-scraper-with-rvest/</guid>
+      <guid>https://mikeleeco.github.io/posts/2015-02-23-milb-scraper-with-rvest/</guid>
       <description>&lt;p&gt;
 Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the &lt;a href=&#34;http://www.seanlahman.com/baseball-archive/statistics/&#34;&gt;Lahman Baseball Database&lt;/a&gt;, which is the most robust catalog of MLB player statistics available to the public.
 &lt;/p&gt;
@@ -960,7 +960,7 @@ write.csv(minors_batting_ARI, &amp;quot;minors_batting_ARI.csv&amp;quot;)
 &lt;p&gt;There we are! Arizona&#39;s minor league batting stats from 2012-2014! 824 instances may seem like too much, for only a three year period, but Baseball-reference.com doesn&#39;t aggregate a player&#39;s statistics by year; they do it by level. Therefore, some players may have multiple rows for the same season (aren&#39;t you glad we pulled out the reference id!) &lt;/p&gt;
 &lt;div class=&#34;container&#34;&gt;
 &lt;figure&gt;
-&lt;img src=&#34;/img/minors_batting_ARI.jpg&#34; class=&#34;img-responsive&#34;&gt;&lt;/figure&gt;&lt;/img&gt;
+&lt;img src=&#34;https://mikeleeco.github.io/img/minors_batting_ARI.jpg&#34; class=&#34;img-responsive&#34;&gt;&lt;/figure&gt;&lt;/img&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 
@@ -1036,7 +1036,7 @@ for (teams in teams){ for (season in 2010:2005) {
 
 &lt;p&gt;This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/sys_time_MiLB.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/sys_time_MiLB.jpg&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The query takes about a 1:45 for every league-wide season pull. &lt;strong&gt;Pro-Tip!&lt;/strong&gt; Get that query going and have some breakfast/lunch/dinner.&lt;/p&gt;
 
