@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nba on Michael Lee</title>
-    <link>https://mikeleeco.github.io/tags/nba/index.xml</link>
+    <link>/tags/nba/index.xml</link>
     <description>Recent content in Nba on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="https://mikeleeco.github.io/tags/nba/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/nba/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>NBA Draft Odds Plot</title>
-      <link>https://mikeleeco.github.io/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
+      <link>/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>https://mikeleeco.github.io/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
+      <guid>/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:&lt;/p&gt;
@@ -112,7 +112,7 @@ g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot
 &lt;p&gt;There has to be a more efficient method to do this! If you know of a better way please &lt;a href=&#34;http://www.twitter.com/mikeleeco&#34;&gt;contact me on twitter&lt;/a&gt; or create a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd&#34;&gt;pull request on this post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
-&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;https://mikeleeco.github.io/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
