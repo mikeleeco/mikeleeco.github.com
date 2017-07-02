@@ -26,6 +26,7 @@
               <br>
               <ul class="list-inline footer-links">
               {{ range .Site.Data.beautifulhugo.social.social_icons }}
+              
                 {{- if isset $.Site.Author .id }}
                   <li>
                     <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
