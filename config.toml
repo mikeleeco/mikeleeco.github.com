@@ -1,7 +1,6 @@
-baseurl = "https://mikeleeco.github.io"
+baseurl = "/"
 languageCode = "en-us"
 title = "Michael Lee"
-theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
