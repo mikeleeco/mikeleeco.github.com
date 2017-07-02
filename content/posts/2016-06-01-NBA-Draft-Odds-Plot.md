@@ -5,7 +5,7 @@ tags: [R, ggplot2, data, dataviz, NBA]
 date: 2016-06-01
 comments: true
 categories: ["posts"]
-bigimg: [{src: "/img/draft_odds.png", desc: "NBA Draft Odds"}, {src: "/img/sphere.jpg", desc: "Sphere"}, {src: "/img/hexagon.jpg", desc: "Hexagon"}]
+bigimg: [{src: "/img/draft_odds.png", desc: "NBA Draft Odds"}]
 ---
 
 **Original Source**
