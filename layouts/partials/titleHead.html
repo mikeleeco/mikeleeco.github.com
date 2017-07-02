@@ -130,6 +130,7 @@
 
   /* Defining each section background and styles
   * --------------------------------------- */
+
   #section0 {
     background-image: url("/img/hexBackground.gif");
   }
@@ -141,10 +142,6 @@
   #section2 {
      background-image: url("/img/hexBackground.gif");
      text-align:left;
-  }
-
-  #section0 {
-    background-image: url("/img/hexBackground.gif");
   }
 
   #section3 {
@@ -290,6 +287,18 @@
     margin:0;
   }
 
+ #titleLeftSide .img-circle {
+    display: none
+  }
+
+ #titleLeftSide .footer-links {
+    display: none
+  }
+
+  #titleRightSide ul {
+    display: none
+  }
+
   #blogCenter {
     background: rgba(255, 255, 255, 0.8);
     border: 3px solid #f1f1f1;
@@ -430,8 +439,7 @@ and (max-width : 800px) {
     $(document).ready(function() {
       $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
-        slidesNavigation: true,
-        scrollOverflowReset: true
+        slidesNavigation: true
       });
     });
   </script>
