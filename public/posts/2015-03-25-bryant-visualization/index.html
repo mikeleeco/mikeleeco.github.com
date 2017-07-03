@@ -943,21 +943,27 @@ $(document).ready(function () {
       
         
           <div class="disqus-comments">
-            <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'mikeleeco';
-    var disqus_identifier = '\/posts\/2015-03-25-bryant-visualization\/';
-    var disqus_title = 'Kris Bryant Performance Projection';
-    var disqus_url = '\/posts\/2015-03-25-bryant-visualization\/';
+            
+  
+	<div id="disqus-comments"></div>
+	<script type="text/javascript">
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	(function() {
+	    
+	    
+	    if (window.location.hostname == "localhost")
+	        return;
+
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    var disqus_shortname = 'mikeleeco';
+	    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+
           </div>
         
       
