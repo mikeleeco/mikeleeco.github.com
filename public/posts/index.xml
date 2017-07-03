@@ -71,7 +71,7 @@ measles$cases &amp;lt;- as.numeric(measles$cases)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;stateAP &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/animation_samples/measles/stateName.csv&amp;quot;)
 stateAP$stateName &amp;lt;- toupper(stateAP$stateName)
 measles$state &amp;lt;- stateAP$stateAP[match(measles$state,stateAP$stateName)]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, we’ll create our measles data frame by summarizing the incidence of measles occuring in each state by year, while also recoding instances in which state’s have no incidence/values for a given year as NAs.&lt;/p&gt;
+&lt;p&gt;Finally, we’ll create our measles data frame by summarizing the incidence of measles occurring in each state by year, while also recoding instances in which state’s have no incidence/values for a given year as NAs.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mdf &amp;lt;- measles %&amp;gt;% group_by(state, year) %&amp;gt;% 
   summarise(incidence=if(all(is.na(cases))) NA else
     sum(cases, na.rm=T))
@@ -103,7 +103,7 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
                        guide=guide_colourbar(ticks=T, nbin=50,
                                              barheight=.5, label=T, 
                                              barwidth=10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;AThe most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as &lt;code&gt;values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)&lt;/code&gt;) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it’s challenging to ascribe what value a given color stands for. Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:&lt;/p&gt;
+&lt;p&gt;The most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as &lt;code&gt;values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)&lt;/code&gt;) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it’s challenging to ascribe what value a given color stands for. Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- gg +
   scale_x_continuous(expand=c(0,0), 
                      breaks=seq(1930, 2010, by=10)) +
@@ -126,14 +126,14 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
         text=element_text(family=&amp;quot;Open Sans&amp;quot;)) +
   annotate(&amp;quot;text&amp;quot;, label=&amp;quot;Vaccine introduced&amp;quot;, x=1963, y=53, 
            vjust=1, hjust=0, size=I(3), family=&amp;quot;Open Sans&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Volia!&lt;/p&gt;
+&lt;p&gt;Voila!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/posts/2017-06-28-wsj-measles-vaccination-chart_files/figure-html/gg-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;explore-the-ggplot2-object-with-gganimate&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Explore the &lt;code&gt;ggplot2&lt;/code&gt; object with &lt;code&gt;gganimate&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;It’s dang easy to create an animation using &lt;code&gt;gganimate&lt;/code&gt;. Just add &lt;code&gt;frame&lt;/code&gt; to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to interate over the data years, so &lt;code&gt;.frame = year&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gganimate(gg, &amp;quot;/home/michael/Documents/hugo/static/img/gganimate_measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s dang easy to create an animation using &lt;code&gt;gganimate&lt;/code&gt;. Just add &lt;code&gt;frame&lt;/code&gt; to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to iterate over the data years, so &lt;code&gt;.frame = year&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gganimate(gg, &amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;/img/gganimate_measles.gif&#34; alt=&#34;Measles Animation using gganimate&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Measles Animation using gganimate&lt;/p&gt;
@@ -142,7 +142,7 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;refine-our-gif-using-animation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Refine our gif using &lt;code&gt;animation&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;The main idea behind creating our animation will be iteratively print images of larger subsets of our data set. In the for-loop, &lt;code&gt;subset(mdf, year&amp;lt;=1928+i-1)&lt;/code&gt; takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.&lt;/p&gt;
+&lt;p&gt;The main idea behind creating our animation will be iteratively printing images of larger subsets of our data set. In the for-loop, &lt;code&gt;subset(mdf, year&amp;lt;=1928+i-1)&lt;/code&gt; takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.&lt;/p&gt;
 &lt;p&gt;Besides this change, and the addition of &lt;code&gt;frame=year&lt;/code&gt;, our ggplot2 call is nearly the same (I bumped up the font sizes to correspond with a larger image size). One supplement to the chart is the addition of pauses at critical points in the figure: in 1963 (when the measles vaccine was introduced) and in 2003 (the final data year of the figure). We’ll use if statements to determine whether pieces of the plot should be “drawn” given the circumstances of the subset. Here’s our final code:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;saveGIF(
   for (i in 1:76) {
@@ -200,13 +200,30 @@ extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
   print(gg)
 }
   }
-  ,movie.name=&amp;quot;/home/michael/Documents/hugo/static/img/measles.gif&amp;quot;,interval = .1, ani.width = 2050, ani.height = 1550)&lt;/code&gt;&lt;/pre&gt;
+  ,movie.name=&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;,interval = .1, ani.width = 2050, ani.height = 1550)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;/img/measles.gif&#34; alt=&#34;Measles Animation using animation&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Measles Animation using animation&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;addendum---gif-file-size-management&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Addendum - Gif File Size Management:&lt;/h3&gt;
+&lt;p&gt;Customized gifs can get super large. The version above tops of at 73.4 MB! We’ll need to reduce that size for . One source for an #rstats solution is this site -&lt;a href=&#34;http://stla.github.io/stlapblog/posts/AnimatedGifs.html&#34; class=&#34;uri&#34;&gt;http://stla.github.io/stlapblog/posts/AnimatedGifs.html&lt;/a&gt; - which uses the open source tool &lt;a href=&#34;https://github.com/kohler/gifsicle&#34;&gt;gifsicle&lt;/a&gt; to reduce gif file sizes. Let’s port this author’s &lt;code&gt;gif_compress&lt;/code&gt; script to minimize our measles gif:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
+  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
+  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
+  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
+  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
+}
+gif_compress(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;,&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&amp;quot;,extra.opts=&amp;quot;--colors 256&amp;quot;)
+
+file.size(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 73367241&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.size(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 24104452&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Still large but more manageable.&lt;/p&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -112,7 +112,7 @@
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/measles.gif" data-img-desc-1="Measles Animation">
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/measlesCompress.gif" data-img-desc-1="Measles Animation">
     </div>
   
 
@@ -219,7 +219,7 @@ measles$cases &lt;- as.numeric(measles$cases)</code></pre>
 <pre class="r"><code>stateAP &lt;- read.csv(&quot;/home/michael/Documents/animation_samples/measles/stateName.csv&quot;)
 stateAP$stateName &lt;- toupper(stateAP$stateName)
 measles$state &lt;- stateAP$stateAP[match(measles$state,stateAP$stateName)]</code></pre>
-<p>Finally, we’ll create our measles data frame by summarizing the incidence of measles occuring in each state by year, while also recoding instances in which state’s have no incidence/values for a given year as NAs.</p>
+<p>Finally, we’ll create our measles data frame by summarizing the incidence of measles occurring in each state by year, while also recoding instances in which state’s have no incidence/values for a given year as NAs.</p>
 <pre class="r"><code>mdf &lt;- measles %&gt;% group_by(state, year) %&gt;% 
   summarise(incidence=if(all(is.na(cases))) NA else
     sum(cases, na.rm=T))
@@ -251,7 +251,7 @@ extrafont::loadfonts()</code></pre>
                        guide=guide_colourbar(ticks=T, nbin=50,
                                              barheight=.5, label=T, 
                                              barwidth=10))</code></pre>
-<p>AThe most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as <code>values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)</code>) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it’s challenging to ascribe what value a given color stands for. Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:</p>
+<p>The most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as <code>values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)</code>) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it’s challenging to ascribe what value a given color stands for. Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:</p>
 <pre class="r"><code>gg &lt;- gg +
   scale_x_continuous(expand=c(0,0), 
                      breaks=seq(1930, 2010, by=10)) +
@@ -274,14 +274,14 @@ extrafont::loadfonts()</code></pre>
         text=element_text(family=&quot;Open Sans&quot;)) +
   annotate(&quot;text&quot;, label=&quot;Vaccine introduced&quot;, x=1963, y=53, 
            vjust=1, hjust=0, size=I(3), family=&quot;Open Sans&quot;)</code></pre>
-<p>Volia!</p>
+<p>Voila!</p>
 <pre class="r"><code>gg</code></pre>
 <p><img src="/posts/2017-06-28-wsj-measles-vaccination-chart_files/figure-html/gg-1.png" width="1260" style="display: block; margin: auto;" /></p>
 </div>
 <div id="explore-the-ggplot2-object-with-gganimate" class="section level2">
 <h2>Explore the <code>ggplot2</code> object with <code>gganimate</code></h2>
-<p>It’s dang easy to create an animation using <code>gganimate</code>. Just add <code>frame</code> to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to interate over the data years, so <code>.frame = year</code></p>
-<pre class="r"><code>gganimate(gg, &quot;/home/michael/Documents/hugo/static/img/gganimate_measles.gif&quot;)</code></pre>
+<p>It’s dang easy to create an animation using <code>gganimate</code>. Just add <code>frame</code> to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to iterate over the data years, so <code>.frame = year</code></p>
+<pre class="r"><code>gganimate(gg, &quot;/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif&quot;)</code></pre>
 <div class="figure">
 <img src="/img/gganimate_measles.gif" alt="Measles Animation using gganimate" />
 <p class="caption">Measles Animation using gganimate</p>
@@ -290,7 +290,7 @@ extrafont::loadfonts()</code></pre>
 </div>
 <div id="refine-our-gif-using-animation" class="section level2">
 <h2>Refine our gif using <code>animation</code></h2>
-<p>The main idea behind creating our animation will be iteratively print images of larger subsets of our data set. In the for-loop, <code>subset(mdf, year&lt;=1928+i-1)</code> takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.</p>
+<p>The main idea behind creating our animation will be iteratively printing images of larger subsets of our data set. In the for-loop, <code>subset(mdf, year&lt;=1928+i-1)</code> takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.</p>
 <p>Besides this change, and the addition of <code>frame=year</code>, our ggplot2 call is nearly the same (I bumped up the font sizes to correspond with a larger image size). One supplement to the chart is the addition of pauses at critical points in the figure: in 1963 (when the measles vaccine was introduced) and in 2003 (the final data year of the figure). We’ll use if statements to determine whether pieces of the plot should be “drawn” given the circumstances of the subset. Here’s our final code:</p>
 <pre class="r"><code>saveGIF(
   for (i in 1:76) {
@@ -348,13 +348,30 @@ extrafont::loadfonts()</code></pre>
   print(gg)
 }
   }
-  ,movie.name=&quot;/home/michael/Documents/hugo/static/img/measles.gif&quot;,interval = .1, ani.width = 2050, ani.height = 1550)</code></pre>
+  ,movie.name=&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&quot;,interval = .1, ani.width = 2050, ani.height = 1550)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <div class="figure">
 <img src="/img/measles.gif" alt="Measles Animation using animation" />
 <p class="caption">Measles Animation using animation</p>
 </div>
+<div id="addendum---gif-file-size-management" class="section level3">
+<h3>Addendum - Gif File Size Management:</h3>
+<p>Customized gifs can get super large. The version above tops of at 73.4 MB! We’ll need to reduce that size for . One source for an #rstats solution is this site -<a href="http://stla.github.io/stlapblog/posts/AnimatedGifs.html" class="uri">http://stla.github.io/stlapblog/posts/AnimatedGifs.html</a> - which uses the open source tool <a href="https://github.com/kohler/gifsicle">gifsicle</a> to reduce gif file sizes. Let’s port this author’s <code>gif_compress</code> script to minimize our measles gif:</p>
+<pre class="r"><code>gif_compress &lt;- function(ingif, outgif, show=TRUE, extra.opts=&quot;&quot;){
+  command &lt;-  sprintf(&quot;gifsicle -O3 %s &lt; %s &gt; %s&quot;, extra.opts, ingif, outgif)
+  system.fun &lt;- if (.Platform$OS.type == &quot;windows&quot;) shell else system
+  if(show) message(&quot;Executing: &quot;, strwrap(command, exdent = 2, prefix = &quot;\n&quot;))
+  system.fun(ifelse(.Platform$OS.type == &quot;windows&quot;, sprintf(&quot;\&quot;%s\&quot;&quot;, shQuote(command)), command))
+}
+gif_compress(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&quot;,&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&quot;,extra.opts=&quot;--colors 256&quot;)
+
+file.size(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&quot;)</code></pre>
+<pre><code>## [1] 73367241</code></pre>
+<pre class="r"><code>file.size(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&quot;)</code></pre>
+<pre><code>## [1] 24104452</code></pre>
+<p>Still large but more manageable.</p>
 <p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
+</div>
 </div>
 
 

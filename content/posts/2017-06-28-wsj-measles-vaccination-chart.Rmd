@@ -11,7 +11,7 @@ tags:
   - R
 subtitle: 'Recreate and animate the plot using R and this guide'
 description: 'Using ggplot2 and animation packages to reproduce and animate the famous Wall Street Journal Measles Incidence Chart'
-bigimg: [{src: "/img/measles.gif", desc: "Measles Animation"}]
+bigimg: [{src: "/img/measlesCompress.gif", desc: "Measles Animation"}]
 ---
 
 ```{r setup knitr, echo = FALSE, warning = FALSE}
@@ -92,7 +92,7 @@ stateAP$stateName <- toupper(stateAP$stateName)
 measles$state <- stateAP$stateAP[match(measles$state,stateAP$stateName)]
 ```
 
-Finally, we'll create our measles data frame by summarizing the incidence of measles occuring in each state by year, while also recoding instances in which state's have no incidence/values for a given year as NAs.
+Finally, we'll create our measles data frame by summarizing the incidence of measles occurring in each state by year, while also recoding instances in which state's have no incidence/values for a given year as NAs.
 ```{r measles data frame}
 mdf <- measles %>% group_by(state, year) %>% 
   summarise(incidence=if(all(is.na(cases))) NA else
@@ -133,7 +133,7 @@ gg <- ggplot(mdf, aes(y=state, x=year, fill=incidence)) +
                                              barwidth=10))
 ```
 
-AThe most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as `values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)`) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it's challenging to ascribe what value a given color stands for. 
+The most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as `values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)`) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it's challenging to ascribe what value a given color stands for. 
 Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:
 ```{r gg scales }
 gg <- gg +
@@ -163,7 +163,7 @@ gg <- gg +
            vjust=1, hjust=0, size=I(3), family="Open Sans")
 ```
 
-Volia!
+Voila!
 
 ```{r gg}
 gg
@@ -171,7 +171,7 @@ gg
 
 ## Explore the `ggplot2` object with `gganimate`
 
-It's dang easy to create an animation using `gganimate`. Just add `frame` to the initial ggplot2 call and you're good to go! In our plot, we'll want to interate over the data years, so `.frame = year`
+It's dang easy to create an animation using `gganimate`. Just add `frame` to the initial ggplot2 call and you're good to go! In our plot, we'll want to iterate over the data years, so `.frame = year`
 ```{r gganimate prep, echo=FALSE}
 gg <- ggplot(mdf, aes(y=state, x=year, fill=incidence, frame=year)) + 
   geom_tile(colour="white",
@@ -205,7 +205,7 @@ gg <- ggplot(mdf, aes(y=state, x=year, fill=incidence, frame=year)) +
 ```
 
 ```{r gganimate}
-gganimate(gg, "/home/michael/Documents/hugo/static/img/gganimate_measles.gif")
+gganimate(gg, "/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif")
 ```
 
 ![Measles Animation using gganimate](/img/gganimate_measles.gif)
@@ -215,7 +215,7 @@ That's a great start! Though this could be further developed using `gganimate` I
 
 ## Refine our gif using `animation`
 
-The main idea behind creating our animation will be iteratively print images of larger subsets of our data set. In the for-loop, `subset(mdf, year<=1928+i-1)` takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.
+The main idea behind creating our animation will be iteratively printing images of larger subsets of our data set. In the for-loop, `subset(mdf, year<=1928+i-1)` takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.
 
 Besides this change, and the addition of `frame=year`, our ggplot2 call is nearly the same (I bumped up the font sizes to correspond with a larger image size). One supplement to the chart is the addition of pauses at critical points in the figure: in 1963 (when the measles vaccine was introduced) and in 2003 (the final data year of the figure). We'll use if statements to determine whether pieces of the plot should be "drawn" given the circumstances of the subset. Here's our final code:
 ```{r animation}
@@ -275,10 +275,29 @@ saveGIF(
   print(gg)
 }
   }
-  ,movie.name="/home/michael/Documents/hugo/static/img/measles.gif",interval = .1, ani.width = 2050, ani.height = 1550)
+  ,movie.name="/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif",interval = .1, ani.width = 2050, ani.height = 1550)
 ```
 
 ![Measles Animation using animation](/img/measles.gif)
+
+### Addendum - Gif File Size Management:
+
+Customized gifs can get super large. The version above tops of at 73.4 MB! We'll need to reduce that size for . One source for an #rstats solution is this site -[http://stla.github.io/stlapblog/posts/AnimatedGifs.html](http://stla.github.io/stlapblog/posts/AnimatedGifs.html) - which uses the open source tool [gifsicle](https://github.com/kohler/gifsicle) to reduce gif file sizes. Let's port this author's `gif_compress` script to minimize our measles gif:
+
+```{r gifsicle}
+gif_compress <- function(ingif, outgif, show=TRUE, extra.opts=""){
+  command <-  sprintf("gifsicle -O3 %s < %s > %s", extra.opts, ingif, outgif)
+  system.fun <- if (.Platform$OS.type == "windows") shell else system
+  if(show) message("Executing: ", strwrap(command, exdent = 2, prefix = "\n"))
+  system.fun(ifelse(.Platform$OS.type == "windows", sprintf("\"%s\"", shQuote(command)), command))
+}
+gif_compress("/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif","/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif",extra.opts="--colors 256")
+
+file.size("/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif")
+file.size("/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif")
+```
+
+Still large but more manageable. 
 
 Interested in learning more? Hire me to consult on your next project, follow me on [twitter](twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
 
