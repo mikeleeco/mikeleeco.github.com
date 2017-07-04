@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Video Games on Michael Lee</title>
-    <link>/tags/video-games/index.xml</link>
+    <link>https://mikeleeco.netlify.com/tags/video-games/index.xml</link>
     <description>Recent content in Video Games on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/video-games/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mikeleeco.netlify.com/tags/video-games/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Genre Interactive - Visualizing Video Games Throughout History</title>
-      <link>/interactives/2015-06-10-genre-interactive/</link>
+      <link>https://mikeleeco.netlify.com/interactives/2015-06-10-genre-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/interactives/2015-06-10-genre-interactive/</guid>
+      <guid>https://mikeleeco.netlify.com/interactives/2015-06-10-genre-interactive/</guid>
       <description>&lt;style&gt;
       svg *::selection {
          background : transparent;
@@ -375,10 +375,10 @@ function(error, data) {
     
     <item>
       <title>Theme Interactive - Visualizing Video Games Throughout History</title>
-      <link>/interactives/2015-06-10-theme-interactive/</link>
+      <link>https://mikeleeco.netlify.com/interactives/2015-06-10-theme-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/interactives/2015-06-10-theme-interactive/</guid>
+      <guid>https://mikeleeco.netlify.com/interactives/2015-06-10-theme-interactive/</guid>
       <description>&lt;style&gt;
       svg *::selection {
          background : transparent;
@@ -737,10 +737,10 @@ function(error, data) {
     
     <item>
       <title>Visualizing Video Games Throughout History</title>
-      <link>/posts/2015-06-10-video-games-interactive/</link>
+      <link>https://mikeleeco.netlify.com/posts/2015-06-10-video-games-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2015-06-10-video-games-interactive/</guid>
+      <guid>https://mikeleeco.netlify.com/posts/2015-06-10-video-games-interactive/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Call of Duty :: Frank Underwood // Frogger :: George Costanza // Shinobi :: Wu-Tang Clan // Super Nintendo &amp;amp; Sega Genesis :: &lt;a href=&#34;https://youtu.be/CHio4lLOhKc?t=2m32s&#34;&gt;???&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -764,14 +764,14 @@ Let&amp;rsquo;s dive into what the numbers tell us.
 &lt;p&gt;
 MobyGames aggregates two sources to formulate their video game ratings: users and critics. User ratings are determined on a 0 to 5 scale and are contributed by an individual&amp;rsquo;s subjective rating of a particular game. Critic ratings are reviews from magazines, entertainment websites, and other online video game forums. A weighted average of these individual critics formulate the site&amp;rsquo;s &amp;ldquo;MobyRank&amp;rdquo; score. For this article I gave equal importance to user and critic ratings to ascertain each game&amp;rsquo;s overall rating, simply averaging the two scores into one total rating. Of the 50,000+ games, a total of 9224 had either user or critics ratings, ranging in years from 1976-2015. In the scatterplot below you&amp;rsquo;ll see the combined Mobygames ratings by date of original publication.
 &lt;/p&gt;
-&lt;img src=&#34;/img/gamerank.png&#34; class=&#34;img-responsive center-block center-block&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://mikeleeco.netlify.com/img/gamerank.png&#34; class=&#34;img-responsive center-block center-block&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;
 
 That looks pretty sharp, but in the spirit of video games, lets make it a bit more...8-bit.
 &lt;/p&gt;
 &lt;p&gt;
-&lt;img src=&#34;/img/mean_game_ranking_2d.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://mikeleeco.netlify.com/img/mean_game_ranking_2d.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;/p&gt;
 
@@ -804,7 +804,7 @@ Mobygames uses 43 themes to delineate aspects of games, which is detailed in the
 &lt;p&gt;
 Of the 38,615 games listing at least one theme, the image below shows the distribution of themes as a percentage decimal.
 &lt;/p&gt;
-&lt;img src=&#34;/img/games_by_theme.png&#34; class=&#34;img-responsive center-block&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://mikeleeco.netlify.com/img/games_by_theme.png&#34; class=&#34;img-responsive center-block&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;
 
@@ -1183,7 +1183,7 @@ Before moving on, here are a couple interesting observations, from most to least
 
 Mobygames uses 8 genres to categorize game types. The vast majority of games have at least one genre, many having multiple. Shovelware games, which are packages of dissimilar games (think &lt;b&gt;The 1000 Best Windows 95 Games Bundle&lt;/b&gt;) are responsible for many of the missing titles.
 &lt;/p&gt;
-&lt;img src=&#34;/img/games_by_genre.png&#34; class=&#34;img-responsive center-block&#34;&gt;
+&lt;img src=&#34;https://mikeleeco.netlify.com/img/games_by_genre.png&#34; class=&#34;img-responsive center-block&#34;&gt;
 
 &lt;p&gt;
 

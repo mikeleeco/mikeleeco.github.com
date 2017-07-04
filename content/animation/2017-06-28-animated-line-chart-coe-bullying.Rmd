@@ -43,5 +43,5 @@ options(width=140, dplyr.width = 150)
 
 ![COE 2017 Bullying Line Graph Animation](/img/line_graph_bullying.gif)
 
-Interested in learning more? Hire me to consult on your next project, follow me on [twitter](twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
 
