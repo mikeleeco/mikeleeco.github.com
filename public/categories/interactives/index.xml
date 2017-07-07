@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interactives on Michael Lee</title>
-    <link>https://mikeleeco.netlify.com/categories/interactives/index.xml</link>
+    <link>/categories/interactives/index.xml</link>
     <description>Recent content in Interactives on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="https://mikeleeco.netlify.com/categories/interactives/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/interactives/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Genre Interactive - Visualizing Video Games Throughout History</title>
-      <link>https://mikeleeco.netlify.com/interactives/2015-06-10-genre-interactive/</link>
+      <link>/interactives/2015-06-10-genre-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>https://mikeleeco.netlify.com/interactives/2015-06-10-genre-interactive/</guid>
+      <guid>/interactives/2015-06-10-genre-interactive/</guid>
       <description>&lt;style&gt;
       svg *::selection {
          background : transparent;
@@ -375,10 +375,10 @@ function(error, data) {
     
     <item>
       <title>Theme Interactive - Visualizing Video Games Throughout History</title>
-      <link>https://mikeleeco.netlify.com/interactives/2015-06-10-theme-interactive/</link>
+      <link>/interactives/2015-06-10-theme-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>https://mikeleeco.netlify.com/interactives/2015-06-10-theme-interactive/</guid>
+      <guid>/interactives/2015-06-10-theme-interactive/</guid>
       <description>&lt;style&gt;
       svg *::selection {
          background : transparent;

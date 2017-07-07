@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dplyr on Michael Lee</title>
-    <link>https://mikeleeco.netlify.com/tags/dplyr/index.xml</link>
+    <link>/tags/dplyr/index.xml</link>
     <description>Recent content in Dplyr on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="https://mikeleeco.netlify.com/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/dplyr/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Working with Minor League Similarity Scores</title>
-      <link>https://mikeleeco.netlify.com/posts/2015-03-25-milb-similarity-scores/</link>
+      <link>/posts/2015-03-25-milb-similarity-scores/</link>
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>https://mikeleeco.netlify.com/posts/2015-03-25-milb-similarity-scores/</guid>
+      <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
       <description>&lt;p&gt;&lt;blockquote&gt;
 There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way...players who have similar primary characteristics will tend to have similar secondary characteristics as well.
 
@@ -96,9 +96,9 @@ There are some people who see baseball players that way-each one is unique, abso
 
 &lt;p&gt;Using &lt;a href=&#34;http://ramnathv.github.io/rCharts&#34;&gt;rCharts&lt;/a&gt;, an interactive visualization package maintained by &lt;a href=&#34;https://github.com/ramnathv&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt;, I created a Rmarkdown page with knitr displaying the projection data.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://mikeleeco.netlify.com/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Have a look!&lt;/a&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;https://mikeleeco.netlify.com/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;div class=&#34;well&#34;&gt;&lt;a class=&#34;btn btn-primary btn-lg btn-block&#34; href=&#34;/posts/2015-03-25-bryant-visualization/&#34;&gt;Bryant Projection Visualization&lt;/a&gt;&lt;/p&gt;&lt;/button&gt;&lt;/div&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 

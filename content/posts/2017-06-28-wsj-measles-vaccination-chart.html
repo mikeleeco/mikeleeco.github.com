@@ -66,7 +66,7 @@ measles &lt;- melt(measles, id.var=c(&quot;YEAR&quot;, &quot;WEEK&quot;))
 colnames(measles) &lt;- c(&quot;year&quot;, &quot;week&quot;, &quot;state&quot;, &quot;cases&quot;)
 measles$cases &lt;- ifelse(measles$cases==&quot;\u002D&quot;,NA,measles$cases)
 measles$cases &lt;- as.numeric(measles$cases)</code></pre>
-<p>One piece I wanted to replicate was the state abbreviations used in the figure. I used the <a href="https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations">AP style guide</a>, and you can access that csv through <a href="www.mikelee.co/data/stateName.csv">this link</a>:</p>
+<p>One piece I wanted to replicate was the state abbreviations used in the figure. I used the <a href="https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations">AP style guide</a>, and you can access that csv through <a href="https://mikelee.co/data/stateName.csv">this link</a>:</p>
 <pre class="r"><code>stateAP &lt;- read.csv(&quot;/home/michael/Documents/animation_samples/measles/stateName.csv&quot;)
 stateAP$stateName &lt;- toupper(stateAP$stateName)
 measles$state &lt;- stateAP$stateAP[match(measles$state,stateAP$stateName)]</code></pre>

@@ -85,7 +85,7 @@ measles$cases <- ifelse(measles$cases=="\u002D",NA,measles$cases)
 measles$cases <- as.numeric(measles$cases)
 ```
 
-One piece I wanted to replicate was the state abbreviations used in the figure. I used the [AP style guide](https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations), and you can access that csv through [this link](www.mikelee.co/data/stateName.csv):
+One piece I wanted to replicate was the state abbreviations used in the figure. I used the [AP style guide](https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations), and you can access that csv through [this link](https://mikelee.co/data/stateName.csv):
 ```{r stateNames}
 stateAP <- read.csv("/home/michael/Documents/animation_samples/measles/stateName.csv")
 stateAP$stateName <- toupper(stateAP$stateName)

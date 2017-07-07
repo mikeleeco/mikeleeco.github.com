@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Politics on Michael Lee</title>
-    <link>https://mikeleeco.netlify.com/tags/politics/index.xml</link>
+    <link>/tags/politics/index.xml</link>
     <description>Recent content in Politics on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="https://mikeleeco.netlify.com/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mapping Wisconsin Presidential Election Results</title>
-      <link>https://mikeleeco.netlify.com/posts/2016-12-26-wisconsin-presidential-election-results/</link>
+      <link>/posts/2016-12-26-wisconsin-presidential-election-results/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>https://mikeleeco.netlify.com/posts/2016-12-26-wisconsin-presidential-election-results/</guid>
+      <guid>/posts/2016-12-26-wisconsin-presidential-election-results/</guid>
       <description>
 
 &lt;h4 id=&#34;your-home-state-did-us-no-favors&#34;&gt;&lt;em&gt;&amp;ldquo;Your home state did us no favors&amp;hellip;&amp;rdquo;&lt;/em&gt;&lt;/h4&gt;
@@ -136,7 +136,7 @@ grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu S
              choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;https://mikeleeco.netlify.com/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;A bar graph more accurately displays the results by candidate. Wisconsin&amp;rsquo;s 10 electoral votes were decided by only 27257 votes! That is a really small margin.&lt;/p&gt;
 
@@ -154,7 +154,7 @@ ggplot(votes, aes(cand, sum, fill = cand)) +
   labs(title = &amp;quot;Total Votes Cast in Wisconsin&amp;quot;, y = &amp;quot;Number of votes&amp;quot;, x = NULL)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;https://mikeleeco.netlify.com/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png&#34; title=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34; alt=&#34;plot of chunk Wisconsin Presidential Election Results Bar Chart&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;wisconsin-and-minnesota-voting-results&#34;&gt;Wisconsin and Minnesota Voting Results&lt;/h4&gt;
 
@@ -214,7 +214,7 @@ grid.arrange(choro1$render() + theme(text=element_text(family=&amp;quot;DejaVu S
              choro4$render() + theme(text=element_text(family=&amp;quot;DejaVu Sans Mono&amp;quot;)), ncol = 2, nrow =2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;https://mikeleeco.netlify.com/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png&#34; title=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34; alt=&#34;plot of chunk Wisconsin and Minnesota Presidential Election Results by County&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Mapping the allocation of votes by county shows Wisconsin and Minnesota have very similar county-level maps. Each has strong results favoring Clinton in major metropolitan areas, including Milwaukee, Madison, and Minneapolis/St Paul. Based solely on each state&amp;rsquo;s map, I&amp;rsquo;d posit that Minnesota seems the more likely Trump-majority. This perspective is deceiving though, as the distribution of votes by county is skewed. Each map displays the percent of votes for each candidate by county, neglecting the county&amp;rsquo;s total votes. More than 78 percent of Menominee County, WI voters selected Hilary Clinton, resulting in Northeastern Wisconsin&amp;rsquo;s dark blue polygon, but totaled only 1279 votes.&lt;/p&gt;
 
@@ -269,7 +269,7 @@ wiScatter &amp;lt;- ggplot(wisconsinSubset, aes(county, votePct,color = cand)) +
 grid.arrange(mnScatter,wiScatter,ncol=1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;https://mikeleeco.netlify.com/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png&#34; title=&#34;plot of chunk scatter plotting&#34; alt=&#34;plot of chunk scatter plotting&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png&#34; title=&#34;plot of chunk scatter plotting&#34; alt=&#34;plot of chunk scatter plotting&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Two things of note from these figures:&lt;/p&gt;
 
@@ -351,7 +351,7 @@ p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&a
   geom_curve(data=anns, aes(x=2.4, xend=3, y=580000, yend=110000), curvature=-0.3, arrow=arrow(length=unit(0.03, &amp;quot;npc&amp;quot;)))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;&lt;img src=&#34;https://mikeleeco.netlify.com/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png&#34; title=&#34;plot of chunk Presidential Election Results by Urban Area&#34; alt=&#34;plot of chunk Presidential Election Results by Urban Area&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;img src=&#34;/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png&#34; title=&#34;plot of chunk Presidential Election Results by Urban Area&#34; alt=&#34;plot of chunk Presidential Election Results by Urban Area&#34;  style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;The data shows a sizable rural/urban divide in Minnesota &lt;strong&gt;and&lt;/strong&gt; Wisconsin. Both states voted for each candidate at nearly the exact same rate in medium/large and small metropolitan areas. The major difference is how the population in each state is distributed:&lt;/p&gt;
 
