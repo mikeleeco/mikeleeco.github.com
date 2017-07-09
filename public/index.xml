@@ -17,9 +17,7 @@
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
-      <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
-&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It was featured on DataCamp across all their &lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6288400911173709824&#34;&gt;social&lt;/a&gt; &lt;a href=&#34;https://twitter.com/DataCamp/status/882634632935735296&#34;&gt;media&lt;/a&gt; &lt;a href=&#34;https://www.facebook.com/permalink.php?story_fbid=1656557754368698&amp;amp;id=726282547396228&#34;&gt;platforms&lt;/a&gt; - pretty neat!&lt;/p&gt;
 &lt;p&gt;A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -27,7 +25,6 @@
 &lt;/blockquote&gt;
 &lt;p&gt;That’s an interesting idea Kenneth!&lt;/p&gt;
 &lt;p&gt;I wonder whether a similar type of graphic representation was considered by the WSJ authors. Either way, this is a great excuse to jump on the &lt;a href=&#34;http://www.makeovermonday.co.uk/&#34;&gt;Makeover Monday&lt;/a&gt; train.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;makeover-the-wsj-measles-incidence-visualization-as-a-cartogram&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Makeover the WSJ Measles Incidence Visualization as a Cartogram&lt;/h2&gt;
 &lt;p&gt;Given that I’ve already completed the data acquisition and manipulation in my previous post, I’ll jump right into plotting the state level data. The county-level piece is an interesting idea, but I’ll leave that for someone else!&lt;/p&gt;
@@ -37,8 +34,13 @@
 &lt;p class=&#34;caption&#34;&gt;Measles Animation Cartogram&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I customized the plot in a few ways - first, I chose to represent the change in time via a timeline above the cartogram. Other developers have represented change in time using years as text - such as the &lt;a href=&#34;https://i.imgur.com/a2BEHjL.gif&#34;&gt;Financial Times’ income distribution gif&lt;/a&gt; (their original post &lt;a href=&#34;https://www.ft.com/content/98ce14ee-99a6-11e5-95c7-d47aa298f769?mhq5j=e2&#34;&gt;here&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;I selected a moving dot for a few reasons: - given the large selection of years, a frequently changing portion of the image would be a distraction - the movement of the dot is an intuitive representation of change over time - the point could be encoded with data - the color represents the national mean incidence!&lt;/p&gt;
-&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments (hopefully disqus doesn’t delete em this time :stuck_out_tongue:)&lt;/p&gt;
+&lt;p&gt;I selected a moving dot for a few reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;given the large selection of years, a frequently changing portion of the image would be a distraction&lt;/li&gt;
+&lt;li&gt;the movement of the dot is an intuitive representation of change over time&lt;/li&gt;
+&lt;li&gt;the point could be encoded with data - the color represents the national mean incidence!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn’t delete em this time :p&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
@@ -74,7 +76,7 @@
 &lt;li&gt;the movement of the dot is an intuitive representation of change over time&lt;/li&gt;
 &lt;li&gt;the point could be encoded with data - the color represents the national mean incidence!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments (hopefully disqus doesn’t delete em this time :p)&lt;/p&gt;
+&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn’t delete em this time :p&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;

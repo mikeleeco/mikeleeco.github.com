@@ -16,8 +16,6 @@ bigimg: [{src: "/img/measlesCartogram.gif", desc: "Measles Animation"}]
 
 
 
-<div id="mastering-animation-in-r" class="section level2">
-<h2>Mastering Animation in R</h2>
 <p>Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: <a href="www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/" class="uri">www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/</a></p>
 <p>It was featured on DataCamp across all their <a href="https://www.linkedin.com/feed/update/urn:li:activity:6288400911173709824">social</a> <a href="https://twitter.com/DataCamp/status/882634632935735296">media</a> <a href="https://www.facebook.com/permalink.php?story_fbid=1656557754368698&amp;id=726282547396228">platforms</a> - pretty neat!</p>
 <p>A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:</p>
@@ -26,7 +24,6 @@ bigimg: [{src: "/img/measlesCartogram.gif", desc: "Measles Animation"}]
 </blockquote>
 <p>That’s an interesting idea Kenneth!</p>
 <p>I wonder whether a similar type of graphic representation was considered by the WSJ authors. Either way, this is a great excuse to jump on the <a href="http://www.makeovermonday.co.uk/">Makeover Monday</a> train.</p>
-</div>
 <div id="makeover-the-wsj-measles-incidence-visualization-as-a-cartogram" class="section level2">
 <h2>Makeover the WSJ Measles Incidence Visualization as a Cartogram</h2>
 <p>Given that I’ve already completed the data acquisition and manipulation in my previous post, I’ll jump right into plotting the state level data. The county-level piece is an interesting idea, but I’ll leave that for someone else!</p>
@@ -36,8 +33,13 @@ bigimg: [{src: "/img/measlesCartogram.gif", desc: "Measles Animation"}]
 <p class="caption">Measles Animation Cartogram</p>
 </div>
 <p>I customized the plot in a few ways - first, I chose to represent the change in time via a timeline above the cartogram. Other developers have represented change in time using years as text - such as the <a href="https://i.imgur.com/a2BEHjL.gif">Financial Times’ income distribution gif</a> (their original post <a href="https://www.ft.com/content/98ce14ee-99a6-11e5-95c7-d47aa298f769?mhq5j=e2">here</a>)</p>
-<p>I selected a moving dot for a few reasons: - given the large selection of years, a frequently changing portion of the image would be a distraction - the movement of the dot is an intuitive representation of change over time - the point could be encoded with data - the color represents the national mean incidence!</p>
-<p>The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments (hopefully disqus doesn’t delete em this time :stuck_out_tongue:)</p>
+<p>I selected a moving dot for a few reasons:</p>
+<ul>
+<li>given the large selection of years, a frequently changing portion of the image would be a distraction</li>
+<li>the movement of the dot is an intuitive representation of change over time</li>
+<li>the point could be encoded with data - the color represents the national mean incidence!</li>
+</ul>
+<p>The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn’t delete em this time :p</p>
 <hr />
 <p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="https://twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
 </div>

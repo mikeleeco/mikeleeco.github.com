@@ -2,7 +2,7 @@
 title: 'Makeover Monday: WSJ Measles Vaccination Chart'
 author: ''
 date: '2017-07-10'
-categories: animation
+categories: posts
 tags:
   - animation
   - dataviz
@@ -61,7 +61,7 @@ I selected a moving dot for a few reasons:
 + the movement of the dot is an intuitive representation of change over time
 + the point could be encoded with data - the color represents the national mean incidence!
 
-The final product is a quality alternative to the WSJ's original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments (hopefully disqus doesn't delete em this time :p)
+The final product is a quality alternative to the WSJ's original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn't delete em this time :p
 
 ***
 
