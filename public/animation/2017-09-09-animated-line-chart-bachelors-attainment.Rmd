@@ -27,7 +27,7 @@ knit_hooks$set(wrap = function(before, options, envir){
     paste0('</', options$wrap, '>')
   }
 })
-```
+
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
 options(width=140, dplyr.width = 150)
 ```
