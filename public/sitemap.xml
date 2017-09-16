@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2017-09-16-animated-line-chart-pupil-ratio/</loc>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</loc>
     <lastmod>2017-09-09T00:00:00+00:00</lastmod>
   </url>
@@ -102,20 +107,20 @@
   </url>
   
   <url>
+    <loc>/tags/animation/</loc>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/animation/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/animation/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -144,7 +149,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,13 +173,13 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -216,7 +221,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,7 +257,7 @@
   
   <url>
     <loc>/categories/posts/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -282,7 +287,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
