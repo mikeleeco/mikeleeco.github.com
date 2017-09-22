@@ -1,0 +1,47 @@
+---
+title: "Charter School Enrollment Growth, 2005 through 2015 - Animated State Grid Map"
+author: ''
+date: '2017-09-22'
+categories: posts
+tags:
+- animation
+- dataviz
+- ggplot2
+- R
+subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+bigimg: [{src: "/img/charter_State.gif", desc: "Charter School Enrollment State Grid Map"}]
+---
+  
+```{r setup knitr, echo = FALSE, warning = FALSE}
+library(knitr)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180, out.extra='class = "img-responsive"')
+
+```
+
+```{r setup, echo = F}
+knit_hooks$set(wrap = function(before, options, envir){
+  if (before){
+    paste0('<', options$wrap, '>')
+  } else {
+    paste0('</', options$wrap, '>')
+  }
+})
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
+options(width=140, dplyr.width = 150)
+```
+
+## Animation seen here:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Learn about enrollment growth in <a href="https://twitter.com/hashtag/CharterSchools?src=hash">#CharterSchools</a> by exploring our <a href="https://twitter.com/hashtag/COE2017?src=hash">#COE2017</a> indicator: <a href="https://t.co/5fYKCqMGH7">https://t.co/5fYKCqMGH7</a> <a href="https://t.co/dBY4YdriCx">pic.twitter.com/dBY4YdriCx</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/910615129343000576">September 20, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  ***
+  
+## Full image:
+  
+![Charter School Enrollment State Grid Map](/img/charter_State.gif)
+
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+  
+  

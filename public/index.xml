@@ -8,8 +8,36 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Charter School Enrollment Growth, 2005 through 2015 - Animated State Grid Map</title>
+      <link>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Learn about enrollment growth in &lt;a href=&#34;https://twitter.com/hashtag/CharterSchools?src=hash&#34;&gt;#CharterSchools&lt;/a&gt; by exploring our &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt; indicator: &lt;a href=&#34;https://t.co/5fYKCqMGH7&#34;&gt;https://t.co/5fYKCqMGH7&lt;/a&gt; &lt;a href=&#34;https://t.co/dBY4YdriCx&#34;&gt;pic.twitter.com/dBY4YdriCx&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/910615129343000576&#34;&gt;September 20, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/charter_State.gif&#34; alt=&#34;Charter School Enrollment State Grid Map&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Charter School Enrollment State Grid Map&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Pupil Ratio Change, 2004 through 2014 - Animated Line Chart from Condition of Education 2017 Data Release</title>
@@ -1080,185 +1108,6 @@ plot(iris)
       <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2016-05-28-sabr-R-package/</guid>
-      <description>
-
-&lt;p&gt;The &lt;a href=&#34;https://github.com/mikeleeco/sabr/&#34;&gt;sabr package&lt;/a&gt; connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in &lt;a href=&#34;http://www.insidethebook.com/woba.shtml&#34;&gt;The Book: Playing the Percentages in Baseball&lt;/a&gt;, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Retrieves the most up-to-date wOBA measures from 1871-2015&lt;/li&gt;
-&lt;li&gt;Queries yearly and career offensive performance from the Lahman SQL database&lt;/li&gt;
-&lt;li&gt;Calculates a player&amp;rsquo;s seasonal wOBA performance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
-
-&lt;p&gt;Download the latest development version from github:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if (packageVersion(&amp;quot;devtools&amp;quot;) &amp;lt; 1.6) {
-  install.packages(&amp;quot;devtools&amp;quot;)
-}
-devtools::install_github(&amp;quot;mdlee12/sabr&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation:&lt;/h2&gt;
-
-&lt;p&gt;wOBA is one of the best catch-all offensive performance statistics, but it&amp;rsquo;s formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season&amp;rsquo;s run environment.&lt;/p&gt;
-
-&lt;p&gt;For example, the wOBA formula for the 2013 season was:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wOBA = (0.690 * uBB + 0.722 * HBP + 0.888 * (H - DB - TR - HR) + 1.271 * DB + 1.616 * TR + 2.101 * HR) / (AB + BB - IBB + SF + HBP)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Check out &lt;a href=&#34;http://www.fangraphs.com/library/offense/woba/&#34;&gt;Fangraphs&lt;/a&gt;&amp;rsquo; library for additional details.&lt;/p&gt;
-
-&lt;h2 id=&#34;new-functions-with-0-2&#34;&gt;New Functions with 0.2:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;wRAA_season : Returns a MLB player&amp;rsquo;s weighted Runs Above Average by yearID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(sabr)
-wRAA_season(&amp;quot;braunry02&amp;quot;,&amp;quot;2015&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 23.89798
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;wRC_season : Returns a MLB player&amp;rsquo;s weighted Runs Created by yearID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wRC_season(&amp;quot;molitpa01&amp;quot;,&amp;quot;1991&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 127.0164
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;wRCp_season : Returns a MLB player&amp;rsquo;s weighted Runs Created Plus by yearID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wRCp_season(&amp;quot;yountro01&amp;quot;,&amp;quot;1989&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 152.5421
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Full calculation details are in the &lt;a href=&#34;https://github.com/mdlee12/sabr/blob/master/vignettes/wOBA%20and%20wRC%2B%20calculation.Rmd&#34;&gt;wOBA and wRC+ calculation.Rmd file&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;wRCp_season makes a couple assumptions:&lt;/em&gt;
-1. Park Factors are pulled from the Lahman Database - these are different from other sources
-2. A player&amp;rsquo;s primary position is used to remove pitchers from the League Runs/Plate Appearance calculation&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;key-functions-from-0-1&#34;&gt;Key Functions from 0.1:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;battingseason : Offensive seasonal performance by playerID and yearID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;battingseason(&amp;quot;parrage01&amp;quot;,&amp;quot;2014&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    playerID yearID stints  teamID  AB  R   H DB TR HR RBI SB CS BB  SO IBB SF SH GIDP HBP
-## 1 parrage01   2014      2 ARI,MIL 529 64 138 22  4  9  40  9  7 32 100   5  2  6   10   5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;battingcareer : Offensive career performance by playerID by organized by season&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;battingcareer(&amp;quot;fieldpr01&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##     playerID yearID stints teamID  AB   R   H DB TR HR RBI SB CS  BB  SO IBB SF SH GIDP HBP
-## 1  fieldpr01   2005      1    MIL  59   2  17  4  0  2  10  0  0   2  17   0  1  0    0   0
-## 2  fieldpr01   2006      1    MIL 569  82 154 35  1 28  81  7  2  59 125   5  8  0   17  12
-## 3  fieldpr01   2007      1    MIL 573 109 165 35  2 50 119  2  2  90 121  21  4  0    9  14
-## 4  fieldpr01   2008      1    MIL 588  86 162 30  2 34 102  3  2  84 134  19 10  0   12  12
-## 5  fieldpr01   2009      1    MIL 591 103 177 35  3 46 141  2  3 110 138  21  9  0   14   9
-## 6  fieldpr01   2010      1    MIL 578  94 151 25  0 32  83  1  0 114 138  17  1  0   12  21
-## 7  fieldpr01   2011      1    MIL 569  95 170 36  1 38 120  1  1 107 106  32  6  0   17  10
-## 8  fieldpr01   2012      1    DET 581  83 182 33  1 30 108  1  0  85  84  18  7  0   19  17
-## 9  fieldpr01   2013      1    DET 624  82 174 36  0 25 106  1  1  75 117   5  4  0   20   9
-## 10 fieldpr01   2014      1    TEX 150  19  37  8  0  3  16  0  0  25  24  11  1  0    5   2
-## 11 fieldpr01   2015      1    TEX 613  78 187 28  0 23  98  0  0  64  88  14  5  0   21  11
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;woba_season : Returns a MLB player&amp;rsquo;s weighted On-Base Average by yearID&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;woba_season(&amp;quot;fieldpr01&amp;quot;,&amp;quot;2014&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 0.3049516
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lahman_search : Returns a player&amp;rsquo;s Lahman playerID using either:
-
-&lt;ul&gt;
-&lt;li&gt;nameFirst (Player First Name)&lt;/li&gt;
-&lt;li&gt;nameLast (Player Last Name)&lt;/li&gt;
-&lt;li&gt;nameGiven (Player Given Name)&lt;/li&gt;
-&lt;li&gt;retroID (&lt;a href=&#34;http://www.retrosheet.org/retroID.htm&#34;&gt;Retrosheet&lt;/a&gt; ID)&lt;/li&gt;
-&lt;li&gt;bbrefID (&lt;a href=&#34;http://www.baseball-reference.com/players/&#34;&gt;Baseball Reference&lt;/a&gt; ID)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lahman_search(nameFirst = &amp;quot;Robin&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    playerID nameFirst nameLast         nameGiven  retroID   bbrefID
-## 1 jenniro01     Robin Jennings Robin Christopher jennr001 jenniro01
-## 2 roberro01     Robin  Roberts        Robin Evan rober102 roberro01
-## 3 venturo01     Robin  Ventura        Robin Mark ventr001 venturo01
-## 4 yountro01     Robin    Yount          Robin R. younr001 yountro01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lahman_search(nameLast = &amp;quot;Fielder&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    playerID nameFirst nameLast     nameGiven  retroID   bbrefID
-## 1 fieldce01     Cecil  Fielder   Cecil Grant fielc001 fieldce01
-## 2 fieldpr01    Prince  Fielder Prince Semien fielp001 fieldpr01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lahman_search(nameGiven = &amp;quot;Russell Oles&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    playerID nameFirst nameLast    nameGiven  retroID   bbrefID
-## 1 branyru01   Russell  Branyan Russell Oles branr001 branyru01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lahman_search(retroID = &amp;quot;molip001&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    playerID nameFirst nameLast nameGiven  retroID   bbrefID
-## 1 molitpa01      Paul  Molitor  Paul Leo molip001 molitpa01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lahman_search(bbrefID = &amp;quot;yostne01&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##   playerID nameFirst nameLast       nameGiven  retroID  bbrefID
-## 1 yostne01       Ned     Yost Edgar Frederick yoste001 yostne01
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Have a question, issue or suggestion? Create a pull request, file an issue, or feel free to contact me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;Twitter&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>sabr - R package</title>
-      <link>/projects/2016-05-28-sabr-R-package/</link>
-      <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/projects/2016-05-28-sabr-R-package/</guid>
       <description>
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/mikeleeco/sabr/&#34;&gt;sabr package&lt;/a&gt; connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in &lt;a href=&#34;http://www.insidethebook.com/woba.shtml&#34;&gt;The Book: Playing the Percentages in Baseball&lt;/a&gt;, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:&lt;/p&gt;

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</loc>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2017-09-16-animated-line-chart-pupil-ratio/</loc>
     <lastmod>2017-09-16T00:00:00+00:00</lastmod>
   </url>
@@ -108,7 +113,7 @@
   
   <url>
     <loc>/tags/animation/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,7 +125,7 @@
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,7 +154,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,7 +184,7 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -221,7 +226,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -257,7 +262,7 @@
   
   <url>
     <loc>/categories/posts/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -287,7 +292,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
