@@ -208,5 +208,10 @@ For future investigations be aware that other pages of baseball reference use ar
 
 <hr>
 
+<h1>Update</h1> *(10/3/2017)*
+Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found <a href="/baseballReferenceScraperUpdate.R/">here</a>.
+
+<hr>
+
 <p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mikeleeco/Baseball-Reference-Scrapers">MiLB Scraper on github</a> or fork my repository to propose changes.  <a class="btn btn-primary" href="https://github.com/mikeleeco/Baseball-Reference-Scrapers/fork">Edit My Code</a></p>
 

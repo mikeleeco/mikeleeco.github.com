@@ -2422,6 +2422,11 @@ for (teams in teams){ for (season in 2010:2005) {
 
 &lt;hr&gt;
 
+&lt;p&gt;&lt;h1&gt;Update&lt;/h1&gt; &lt;em&gt;(10/3/2017)&lt;/em&gt;
+Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found &lt;a href=&#34;/baseballReferenceScraperUpdate.R/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
 &lt;p&gt;Have feedback, questions, or want to see something else added? Check out my &lt;a href=&#34;https://github.com/mikeleeco/Baseball-Reference-Scrapers&#34;&gt;MiLB Scraper on github&lt;/a&gt; or fork my repository to propose changes.  &lt;a class=&#34;btn btn-primary&#34; href=&#34;https://github.com/mikeleeco/Baseball-Reference-Scrapers/fork&#34;&gt;Edit My Code&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
