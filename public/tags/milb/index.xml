@@ -1044,20 +1044,11 @@ for (teams in teams){ for (season in 2010:2005) {
 
 &lt;p&gt;Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant&amp;rsquo;s best comparisons.&lt;/p&gt;
 
-&lt;h4&gt;Footnotes&lt;/h4&gt;
-
-&lt;p&gt;&lt;sup class=&#34;bootstrap-footnote&#34; data-text=&#34;In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.&#34;&gt;1&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.&lt;/p&gt;
-
-&lt;p&gt;&lt;sup class=&#34;bootstrap-footnote&#34; data-text=&#34;For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).&#34;&gt;2&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).&lt;/p&gt;
-
 &lt;hr&gt;
 
-&lt;p&gt;&lt;h1&gt;Update&lt;/h1&gt; &lt;em&gt;(10/3/2017)&lt;/em&gt;
-Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found &lt;a href=&#34;/baseballReferenceScraperUpdate.R/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Update (10/3/2017)&lt;/h1&gt;
+
+&lt;p&gt;Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found &lt;a href=&#34;/baseballReferenceScraperUpdate.R/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr&gt;
 

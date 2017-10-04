@@ -196,19 +196,10 @@ The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!
 
 Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant's best comparisons.
 
-<h4>Footnotes</h4>
-
-<sup class="bootstrap-footnote" data-text="In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.">1</sup>
-
-In baseball terms, one might describe his contributions to R software as equal parts Bill James and Bill Veeck.
-
-<sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>
-
-For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).
-
 <hr>
 
-<h1>Update</h1> *(10/3/2017)*
+<h1>Update (10/3/2017)</h1>
+
 Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found <a href="/baseballReferenceScraperUpdate.R/">here</a>.
 
 <hr>
