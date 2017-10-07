@@ -1,8 +1,8 @@
 ---
-title: "Educational Attainment of Young Adults - Animated Line Chart from Condition of Education 2017 Data Release"
+title: "Educational Attainment - Animated Line Chart from COE 2017 Data Release"
 author: ''
 date: '2017-09-09'
-categories: posts
+categories: animation
 tags:
   - animation
   - dataviz

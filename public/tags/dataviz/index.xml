@@ -11,7 +11,35 @@
     <atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Charter School Enrollment Growth, 2005 through 2015 - Animated State Grid Map</title>
+      <title>Twelve Year Median Debt By Educational Attainment - Animated Bar Chart</title>
+      <link>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+What was the median amount owed by federal student loan borrowers 12 years after starting &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; ed? &lt;a href=&#34;https://t.co/QRmwQMJGG0&#34;&gt;https://t.co/QRmwQMJGG0&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HigherEd&lt;/a&gt; &lt;a href=&#34;https://t.co/a6JmSm64Iw&#34;&gt;pic.twitter.com/a6JmSm64Iw&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/915993158546313217?ref_src=twsrc%5Etfw&#34;&gt;October 5, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/barChartLoans_Debt.gif&#34; alt=&#34;Twelve Year Median Debt Bar Chart&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Twelve Year Median Debt Bar Chart&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Charter School Enrollment, 2005 to 2015 - Animated State Grid Map</title>
       <link>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
@@ -39,7 +67,7 @@ Learn about enrollment growth in &lt;a href=&#34;https://twitter.com/hashtag/Cha
     </item>
     
     <item>
-      <title>Pupil Ratio Change, 2004 through 2014 - Animated Line Chart from Condition of Education 2017 Data Release</title>
+      <title>Pupil Ratio - Animated Line Chart from COE 2017 Data Release</title>
       <link>/animation/2017-09-16-animated-line-chart-pupil-ratio/</link>
       <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
@@ -67,7 +95,7 @@ How has the U.S. pupil/teacher ratio changed over time? &lt;a href=&#34;https://
     </item>
     
     <item>
-      <title>Educational Attainment of Young Adults - Animated Line Chart from Condition of Education 2017 Data Release</title>
+      <title>Educational Attainment - Animated Line Chart from COE 2017 Data Release</title>
       <link>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</link>
       <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
@@ -167,7 +195,7 @@ Gaps remain in &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&#34
     </item>
     
     <item>
-      <title>Animated Line Chart from Condition of Education 2017 Data Release</title>
+      <title>Animated Line Chart from COE 2017 Data Release</title>
       <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>

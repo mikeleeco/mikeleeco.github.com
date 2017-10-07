@@ -1,7 +1,7 @@
 ---
-title: "Charter School Enrollment, 2005 to 2015 - Animated State Grid Map"
+title: "Twelve Year Median Debt By Educational Attainment - Animated Bar Chart"
 author: ''
-date: '2017-09-22'
+date: '2017-10-05'
 categories: animation
 tags:
 - animation
@@ -9,7 +9,7 @@ tags:
 - ggplot2
 - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
-bigimg: [{src: "/img/charter_State.gif", desc: "Charter School Enrollment State Grid Map"}]
+bigimg: [{src: "/img/barChartLoans_Debt.gif", desc: "Twelve Year Median Debt Bar Chart"}]
 ---
   
 ```{r setup knitr, echo = FALSE, warning = FALSE}
@@ -33,14 +33,14 @@ options(width=140, dplyr.width = 150)
 
 ## Animation seen here:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Learn about enrollment growth in <a href="https://twitter.com/hashtag/CharterSchools?src=hash">#CharterSchools</a> by exploring our <a href="https://twitter.com/hashtag/COE2017?src=hash">#COE2017</a> indicator: <a href="https://t.co/5fYKCqMGH7">https://t.co/5fYKCqMGH7</a> <a href="https://t.co/dBY4YdriCx">pic.twitter.com/dBY4YdriCx</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/910615129343000576">September 20, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What was the median amount owed by federal student loan borrowers 12 years after starting <a href="https://twitter.com/hashtag/postsec?src=hash&amp;ref_src=twsrc%5Etfw">#postsec</a> ed? <a href="https://t.co/QRmwQMJGG0">https://t.co/QRmwQMJGG0</a> <a href="https://twitter.com/hashtag/HigherEd?src=hash&amp;ref_src=twsrc%5Etfw">#HigherEd</a> <a href="https://t.co/a6JmSm64Iw">pic.twitter.com/a6JmSm64Iw</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/915993158546313217?ref_src=twsrc%5Etfw">October 5, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   
   ***
   
 ## Full image:
   
-![Charter School Enrollment State Grid Map](/img/charter_State.gif)
+![Twelve Year Median Debt Bar Chart](/img/barChartLoans_Debt.gif)
 
 Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
   

@@ -2,7 +2,7 @@
 title: "Reproducing the WSJ Measles Vaccination Chart Using R"
 author: ''
 date: '2017-06-28'
-categories: posts
+categories: animation
 tags:
   - animation
   - dataviz
