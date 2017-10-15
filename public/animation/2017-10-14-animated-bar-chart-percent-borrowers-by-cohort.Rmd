@@ -1,16 +1,15 @@
 ---
-title: "Teacher-Pupil Ratio - Animated Line Chart from COE 2017 Data Release"
+title: "Percent of Borrowers by Cohort - Animated Bar Chart"
 author: ''
-date: '2017-09-16'
+date: '2017-10-14'
 categories: animation
 tags:
 - animation
 - dataviz
 - ggplot2
-- gganimate
 - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
-bigimg: [{src: "/img/line_pupil.gif", desc: "COE 2017 Pupil Ratio Line Graph Animation"}]
+bigimg: [{src: "/img/barChart_Loans.gif", desc: "Percent of Borrowers by Cohort After 12 Years Bar Chart"}]
 ---
   
 ```{r setup knitr, echo = FALSE, warning = FALSE}
@@ -34,14 +33,14 @@ options(width=140, dplyr.width = 150)
 
 ## Animation seen here:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How has the U.S. pupil/teacher ratio changed over time? <a href="https://t.co/FmTFWac11L">https://t.co/FmTFWac11L</a> <a href="https://twitter.com/hashtag/teaching?src=hash">#teaching</a> <a href="https://twitter.com/hashtag/EdData?src=hash">#EdData</a> <a href="https://t.co/YdttjORDPn">pic.twitter.com/YdttjORDPn</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/908016978459283456">September 13, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">NEW RELEASE: View the % of borrowers who took out fed <a href="https://twitter.com/hashtag/studentloans?src=hash&amp;ref_src=twsrc%5Etfw">#studentloans</a> within 12 years of starting <a href="https://twitter.com/hashtag/postsec?src=hash&amp;ref_src=twsrc%5Etfw">#postsec</a> <a href="https://twitter.com/hashtag/education?src=hash&amp;ref_src=twsrc%5Etfw">#education</a> <a href="https://t.co/QRmwQMJGG0">https://t.co/QRmwQMJGG0</a> <a href="https://t.co/ADugSRBrcB">pic.twitter.com/ADugSRBrcB</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/916332882213457921?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   
   ***
   
 ## Full image:
   
-![COE 2017 Pupil Ratio Line Graph Animation](/img/line_pupil.gif)
+![Percent of Borrowers by Cohort After 12 Years](/img/barChart_Loans.gif)
 
 Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
   

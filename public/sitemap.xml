@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</loc>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</loc>
     <lastmod>2017-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -22,18 +27,13 @@
   </url>
   
   <url>
-    <loc>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/animation/2017-06-28-animated-line-chart-coe-bullying/</loc>
-    <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+    <loc>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</loc>
+    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,6 +48,11 @@
   
   <url>
     <loc>/posts/2017-06-28-wsj-measles-vaccination-chart/</loc>
+    <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2017-06-28-animated-line-chart-coe-bullying/</loc>
     <lastmod>2017-06-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,19 +123,19 @@
   
   <url>
     <loc>/tags/animation/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/animation/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,7 +164,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,7 +194,7 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -231,7 +236,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -297,7 +302,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

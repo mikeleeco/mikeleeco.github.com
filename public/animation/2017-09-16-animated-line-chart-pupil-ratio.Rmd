@@ -1,5 +1,5 @@
 ---
-title: "Pupil Ratio - Animated Line Chart from COE 2017 Data Release"
+title: "Teacher-Pupil Ratio - Animated Line Chart from COE 2017 Data Release"
 author: ''
 date: '2017-09-16'
 categories: animation

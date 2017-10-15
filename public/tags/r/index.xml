@@ -11,6 +11,34 @@
     <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Percent of Borrowers by Cohort - Animated Bar Chart</title>
+      <link>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</link>
+      <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+NEW RELEASE: View the % of borrowers who took out fed &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt; within 12 years of starting &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#education&lt;/a&gt; &lt;a href=&#34;https://t.co/QRmwQMJGG0&#34;&gt;https://t.co/QRmwQMJGG0&lt;/a&gt; &lt;a href=&#34;https://t.co/ADugSRBrcB&#34;&gt;pic.twitter.com/ADugSRBrcB&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/916332882213457921?ref_src=twsrc%5Etfw&#34;&gt;October 6, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/barChart_Loans.gif&#34; alt=&#34;Percent of Borrowers by Cohort After 12 Years&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Percent of Borrowers by Cohort After 12 Years&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Twelve Year Median Debt By Educational Attainment - Animated Bar Chart</title>
       <link>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
@@ -67,7 +95,7 @@ Learn about enrollment growth in &lt;a href=&#34;https://twitter.com/hashtag/Cha
     </item>
     
     <item>
-      <title>Pupil Ratio - Animated Line Chart from COE 2017 Data Release</title>
+      <title>Teacher-Pupil Ratio - Animated Line Chart from COE 2017 Data Release</title>
       <link>/animation/2017-09-16-animated-line-chart-pupil-ratio/</link>
       <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
@@ -95,7 +123,7 @@ How has the U.S. pupil/teacher ratio changed over time? &lt;a href=&#34;https://
     </item>
     
     <item>
-      <title>Educational Attainment - Animated Line Chart from COE 2017 Data Release</title>
+      <title>Educational Attainment - Line Chart from COE 2017 Data Release</title>
       <link>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</link>
       <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
@@ -117,42 +145,6 @@ Gaps remain in &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&#34
 &lt;img src=&#34;/img/line_Bachelors.gif&#34; alt=&#34;COE 2017 Bachelors Attainment Line Graph Animation&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;COE 2017 Bachelors Attainment Line Graph Animation&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Makeover Monday: WSJ Measles Vaccination Chart</title>
-      <link>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
-      <description>&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It was featured on DataCamp across all their &lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6288400911173709824&#34;&gt;social&lt;/a&gt; &lt;a href=&#34;https://twitter.com/DataCamp/status/882634632935735296&#34;&gt;media&lt;/a&gt; &lt;a href=&#34;https://www.facebook.com/permalink.php?story_fbid=1656557754368698&amp;amp;id=726282547396228&#34;&gt;platforms&lt;/a&gt; - pretty neat!&lt;/p&gt;
-&lt;p&gt;A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Your measles chart is a beautiful piece of work! No question. The (vertical) sorting merely by alphabetic state listing, however, adds nothing to the information. Even better, I think, would be to place these stats on a US map. The animation would then show the geographic progress of the disease. Try first on a state basis; counties would be too confusing The ultimate presentation, however, would show the importance of high population densities (metropolitan areas). - Kenneth Holland.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;That’s an interesting idea Kenneth!&lt;/p&gt;
-&lt;p&gt;I wonder whether a similar type of graphic representation was considered by the WSJ authors. Either way, this is a great excuse to jump on the &lt;a href=&#34;http://www.makeovermonday.co.uk/&#34;&gt;Makeover Monday&lt;/a&gt; train.&lt;/p&gt;
-&lt;div id=&#34;makeover-the-wsj-measles-incidence-visualization-as-a-cartogram&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Makeover the WSJ Measles Incidence Visualization as a Cartogram&lt;/h2&gt;
-&lt;p&gt;Given that I’ve already completed the data acquisition and manipulation in my previous post, I’ll jump right into plotting the state level data. The county-level piece is an interesting idea, but I’ll leave that for someone else!&lt;/p&gt;
-&lt;p&gt;Here is the final result:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measlesCartogram.gif&#34; alt=&#34;Measles Animation Cartogram&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Measles Animation Cartogram&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I customized the plot in a few ways - first, I chose to represent the change in time via a timeline above the cartogram. Other developers have represented change in time using years as text - such as the &lt;a href=&#34;https://i.imgur.com/a2BEHjL.gif&#34;&gt;Financial Times’ income distribution gif&lt;/a&gt; (their original post &lt;a href=&#34;https://www.ft.com/content/98ce14ee-99a6-11e5-95c7-d47aa298f769?mhq5j=e2&#34;&gt;here&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;I selected a moving dot for a few reasons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;given the large selection of years, a frequently changing portion of the image would be a distraction&lt;/li&gt;
-&lt;li&gt;the movement of the dot is an intuitive representation of change over time&lt;/li&gt;
-&lt;li&gt;the point could be encoded with data - the color represents the national mean incidence!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn’t delete em this time :p&lt;/p&gt;
-&lt;hr /&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -195,28 +187,36 @@ Gaps remain in &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&#34
     </item>
     
     <item>
-      <title>Animated Line Chart from COE 2017 Data Release</title>
-      <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Makeover Monday: Wall Street Journal Measles Vaccination Chart</title>
+      <link>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2017-06-28-animated-line-chart-coe-bullying/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here!&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. &lt;a href=&#34;https://t.co/5BlyLdHS9W&#34;&gt;https://t.co/5BlyLdHS9W&lt;/a&gt; &lt;a href=&#34;https://t.co/Fr1pTt8xca&#34;&gt;pic.twitter.com/Fr1pTt8xca&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;May 3, 2017&lt;/a&gt;
+      <guid>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
+      <description>&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It was featured on DataCamp across all their &lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6288400911173709824&#34;&gt;social&lt;/a&gt; &lt;a href=&#34;https://twitter.com/DataCamp/status/882634632935735296&#34;&gt;media&lt;/a&gt; &lt;a href=&#34;https://www.facebook.com/permalink.php?story_fbid=1656557754368698&amp;amp;id=726282547396228&#34;&gt;platforms&lt;/a&gt; - pretty neat!&lt;/p&gt;
+&lt;p&gt;A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your measles chart is a beautiful piece of work! No question. The (vertical) sorting merely by alphabetic state listing, however, adds nothing to the information. Even better, I think, would be to place these stats on a US map. The animation would then show the geographic progress of the disease. Try first on a state basis; counties would be too confusing The ultimate presentation, however, would show the importance of high population densities (metropolitan areas). - Kenneth Holland.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;p&gt;That’s an interesting idea Kenneth!&lt;/p&gt;
+&lt;p&gt;I wonder whether a similar type of graphic representation was considered by the WSJ authors. Either way, this is a great excuse to jump on the &lt;a href=&#34;http://www.makeovermonday.co.uk/&#34;&gt;Makeover Monday&lt;/a&gt; train.&lt;/p&gt;
+&lt;div id=&#34;makeover-the-wsj-measles-incidence-visualization-as-a-cartogram&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Makeover the WSJ Measles Incidence Visualization as a Cartogram&lt;/h2&gt;
+&lt;p&gt;Given that I’ve already completed the data acquisition and manipulation in my previous post, I’ll jump right into plotting the state level data. The county-level piece is an interesting idea, but I’ll leave that for someone else!&lt;/p&gt;
+&lt;p&gt;Here is the final result:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/line_graph_bullying.gif&#34; alt=&#34;COE 2017 Bullying Line Graph Animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;COE 2017 Bullying Line Graph Animation&lt;/p&gt;
+&lt;img src=&#34;/img/measlesCartogram.gif&#34; alt=&#34;Measles Animation Cartogram&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Measles Animation Cartogram&lt;/p&gt;
 &lt;/div&gt;
+&lt;p&gt;I customized the plot in a few ways - first, I chose to represent the change in time via a timeline above the cartogram. Other developers have represented change in time using years as text - such as the &lt;a href=&#34;https://i.imgur.com/a2BEHjL.gif&#34;&gt;Financial Times’ income distribution gif&lt;/a&gt; (their original post &lt;a href=&#34;https://www.ft.com/content/98ce14ee-99a6-11e5-95c7-d47aa298f769?mhq5j=e2&#34;&gt;here&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;I selected a moving dot for a few reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;given the large selection of years, a frequently changing portion of the image would be a distraction&lt;/li&gt;
+&lt;li&gt;the movement of the dot is an intuitive representation of change over time&lt;/li&gt;
+&lt;li&gt;the point could be encoded with data - the color represents the national mean incidence!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final product is a quality alternative to the WSJ’s original visualization, though I prefer the original representation as a full grid over years - the drastic reduction in measles incidence is more impactful with 30+ years of negligible incidence stacked up next to each other. Have other thoughts? Leave them in the comments - hopefully disqus doesn’t delete em this time :p&lt;/p&gt;
+&lt;hr /&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -491,6 +491,34 @@ file.size(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/meas
 &lt;p&gt;Still large but more manageable.&lt;/p&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>School Bullying over Time by Gender- Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-06-28-animated-line-chart-coe-bullying/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here!&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. &lt;a href=&#34;https://t.co/5BlyLdHS9W&#34;&gt;https://t.co/5BlyLdHS9W&lt;/a&gt; &lt;a href=&#34;https://t.co/Fr1pTt8xca&#34;&gt;pic.twitter.com/Fr1pTt8xca&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;May 3, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/line_graph_bullying.gif&#34; alt=&#34;COE 2017 Bullying Line Graph Animation&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;COE 2017 Bullying Line Graph Animation&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1019,113 +1047,6 @@ g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot
 
 &lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
 &lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>mikelee.co: Powered by RMarkdown, knitr, and Jekyll</title>
-      <link>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</link>
-      <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Spend a few months documenting code scripts in RStudio and you&amp;rsquo;ll have surely seen those introductory lines numerous times.&lt;/p&gt;
-
-&lt;p&gt;This is also a R code script. And a markdown document. And an HTML page. All of which are generated within one .Rmd document. My site had previously supported by Github Pages and Jekyll, and now my preferred statistical software tool will streamline my blogging process. I expect this to make the transition from idea, analyses, visualization, and blog post production much more seamless.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Inspiration and First Steps&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I first heard about the ability to generate and serve files within R from a tweet from Brendan Rocks:&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; align=&#34;center&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Post on my BARUG talk tonight: Blogging w/ &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt; &amp;amp; knitr-jekyll (all credit to &lt;a href=&#34;https://twitter.com/xieyihui&#34;&gt;@xieyihui&lt;/a&gt;!) &lt;a href=&#34;https://t.co/PsGXbyXZJa&#34;&gt;https://t.co/PsGXbyXZJa&lt;/a&gt; &lt;a href=&#34;https://t.co/eZycscbmup&#34;&gt;pic.twitter.com/eZycscbmup&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brendan Rocks (@rocksbrendan) &lt;a href=&#34;https://twitter.com/rocksbrendan/status/656564982885146625&#34;&gt;October 20, 2015&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;This workflow blew my mind at the time (still does) and the post in which he explains the scaffolding is very useful. Check it out &lt;a href=&#34;https://brendanrocks.com/blogging-with-rmarkdown-knitr-jekyll/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Adding in a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_source/2016-05-24-mikeleeco-powered-by-rmarkdown.Rmd&#34;&gt;&lt;code&gt;_source&lt;/code&gt;&lt;/a&gt; directory to store .Rmd files allows   Yihui Xie&amp;rsquo;s &lt;a href=&#34;https://github.com/yihui/servr&#34;&gt;servr package&lt;/a&gt; the ability to render markdown documents in  &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_posts/2016-05-24-mikeleeco-powered-by-rmarkdown.md&#34;&gt;&lt;code&gt;_posts&lt;/code&gt;&lt;/a&gt;, which Jekyll converts to HTML - which is what you are reading now!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Improving Syntax Highlighting&lt;/strong&gt; &lt;em&gt;(with updates!)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my highlighter (rouge) but were being rendered with an &amp;ldquo;r&amp;rdquo; in front like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;r&lt;/code&gt;&lt;code&gt;cat(paste(c(&amp;quot;This&amp;quot;,&amp;quot;drove&amp;quot;,&amp;quot;me&amp;quot;,&amp;quot;mental D:&amp;quot;),sep=&amp;quot; &amp;quot;))&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;## This drove me mental D:&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;An earlier version of this post detailed a method of updating syntax highlighting using redcarpet markdown and pygments - a soon to be deprecated syntax highlighter. Turns out I wasn&amp;rsquo;t the only one having this issue! After more than a few missteps, and applying the advice from &lt;a href=&#34;https://github.com/jekyll/jekyll/issues/1342&#34;&gt;this post&lt;/a&gt;, make sure you have both jekyll &lt;a href=&#34;https://rubygems.org/pages/download&#34;&gt;ruby&lt;/a&gt; installed and updated! After updating your site infrastructure, add a css template with formatting options - such as my &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/tree/master/public/css/syntax.css&#34;&gt;&lt;code&gt;syntax.css&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final Result&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;cat(paste(c(&amp;quot;Yay&amp;quot;,&amp;quot;for&amp;quot;,&amp;quot;making&amp;quot;,&amp;quot;life&amp;quot;,&amp;quot;easier!&amp;quot;),sep=&amp;quot; &amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Yay for making life easier!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Look how great that looks! Lets see what a function looks like.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;devtools::install_github(&amp;quot;mdlee12/sabr&amp;quot;)
-library(sabr)
-sabr::woba_season
-function (playerID = NULL, yearID = NULL, ...) 
-{
-    db &amp;lt;- lahman()
-    woba_guts &amp;lt;- RSQLite::dbGetQuery(db, &amp;quot;SELECT * FROM wOBA_Table&amp;quot;)
-    wobayear &amp;lt;- woba_guts[woba_guts$yearID == yearID, ]
-    wobayear &amp;lt;- data.frame(wobayear)
-    query &amp;lt;- paste(&amp;quot;SELECT GROUP_CONCAT(DISTINCT teamID) as teamID, 
-                   SUM(H) as H, SUM([2B]) as DB, SUM([3B]) as TR,SUM(HR) as HR, 
-                   SUM(AB) as AB, SUM(BB) as BB, SUM(IBB) as IBB, SUM(SF) as SF, 
-                   SUM(SH) as SH, SUM(HBP) as HBP FROM Batting WHERE playerID = &#39;&amp;quot;, 
-                   playerID, &amp;quot;&#39; AND yearID = &#39;&amp;quot;, yearID, &amp;quot;&#39;&amp;quot;, sep = &amp;quot;&amp;quot;)
-    db &amp;lt;- lahman()
-    query &amp;lt;- RSQLite::dbGetQuery(db, query)
-    query &amp;lt;- as.data.frame(query)
-    uBB &amp;lt;- wobayear$wobaBB * (query$BB - query$IBB)
-    HBP &amp;lt;- wobayear$wobaHB * (query$HBP)
-    DB &amp;lt;- wobayear$woba2B * (query$DB)
-    TR &amp;lt;- wobayear$woba3B * (query$TR)
-    HR &amp;lt;- wobayear$wobaHR * (query$HR)
-    H &amp;lt;- wobayear$woba1B * (query$H - query$DB - query$TR - query$HR)
-    AB &amp;lt;- query$AB
-    BB &amp;lt;- query$BB
-    IBB &amp;lt;- query$IBB
-    SF &amp;lt;- query$SF
-    SH &amp;lt;- query$SH
-    PA &amp;lt;- query$PA
-    woba &amp;lt;- (uBB + HBP + H + DB + TR + HR)/(AB + BB - IBB + SF + HBP)
-    woba
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;http://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;How about some numbers:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;6*9
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 54
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sabr::woba_season(&amp;quot;yountro01&amp;quot;,1982)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## [1] 0.414997
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can also embed plots. For example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Much plots. Such scatter.
-plot(iris)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png&#34; title=&#34;plot of chunk unnamed-chunk-6&#34; alt=&#34;plot of chunk unnamed-chunk-6&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;More to come soon :D&lt;/p&gt;
 </description>
     </item>
     
