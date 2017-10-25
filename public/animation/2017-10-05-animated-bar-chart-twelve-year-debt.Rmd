@@ -1,5 +1,5 @@
 ---
-title: "Twelve Year Median Debt By Educational Attainment - Animated Bar Chart"
+title: "Median Debt By Educational Attainment - Animated Bar Chart"
 author: ''
 date: '2017-10-05'
 categories: animation

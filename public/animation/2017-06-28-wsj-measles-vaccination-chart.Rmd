@@ -1,5 +1,5 @@
 ---
-title: "Reproducing the WSJ Measles Vaccination Chart Using R"
+title: "Reproducing the WSJ Measles Vaccination Chart Using R Animation"
 author: ''
 date: '2017-06-28'
 categories: animation

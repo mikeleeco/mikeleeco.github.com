@@ -1,5 +1,5 @@
 ---
-title: "sabr - R package"
+title: "sabr - R package (GitHub)"
 tags: [R, sabr, baseball, data]
 author: "Michael Lee"
 date: 2016-04-10

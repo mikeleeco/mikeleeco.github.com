@@ -1,5 +1,5 @@
 ---
-title: "NAEPprimer - R package"
+title: "NAEPprimer - R package (CRAN)"
 tags: [R, research, education, data]
 author: "Michael Lee"
 date: 2017-06-03

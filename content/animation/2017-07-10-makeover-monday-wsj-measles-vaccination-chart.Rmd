@@ -1,5 +1,5 @@
 ---
-title: 'Makeover Monday: Wall Street Journal Measles Vaccination Chart'
+title: 'Makeover Monday: WSJ Measles Vaccination Chart'
 author: ''
 date: '2017-07-10'
 categories: animation
