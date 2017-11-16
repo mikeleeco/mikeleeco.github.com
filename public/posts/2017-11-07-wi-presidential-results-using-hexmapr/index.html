@@ -1,0 +1,413 @@
+
+
+
+
+<div id="neat-package-alert" class="section level2">
+<h2>NEAT PACKAGE ALERT!</h2>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+My 1st R package! <a href="https://t.co/dI3GJbC7FQ">https://t.co/dI3GJbC7FQ</a> Automatically turn geospatial polygons like states into regular/hexagonal grids <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://t.co/dxvYCZWJzU">pic.twitter.com/dxvYCZWJzU</a>
+</p>
+— J Bailey (<span class="citation">@iammrbailey</span>) <a href="https://twitter.com/iammrbailey/status/925346870381240320?ref_src=twsrc%5Etfw">October 31, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I’ve been thinking about implementing something like this for a while - got excited by this tweet I thought I would do some exploring and write out a post over the weekend. Creating a county-level hex grid of Wisconsin makes for a perfect supplment to my earlier post about <a href="https://www.mikelee.co/posts/2016-12-26-wisconsin-presidential-election-results/">mapping the 2016 Wisconsin presidential results</a></p>
+<hr />
+</div>
+<div id="lets-make-a-hex-grid-of-wisconsin" class="section level2">
+<h2>Let’s make a hex grid of Wisconsin</h2>
+<p>The first thing we’ll do is retrieve a Wisconsin shapefile; we can use the <code>tigris</code> package developed by Kyle Walker to pull a 2010 census shapefile of Wisconsin counties:</p>
+<pre class="r"><code>library(tigris)
+wi &lt;- counties(&quot;Wisconsin&quot;, cb = TRUE)
+wi_original &lt;- wi
+plot(wi)</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/tigris%20shapefile-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>We’ll then port some code from the <code>hexmapr</code> github README:</p>
+<pre class="r"><code>library(hexmapr)
+wi_details &lt;- get_shape_details(wi)
+wi@data$xcentroid &lt;- coordinates(wi)[,1]
+wi@data$ycentroid &lt;- coordinates(wi)[,2]</code></pre>
+<p>We’re going for the closest shapefile match, preferring a final shape than looks like the outline of the state than one with appropriate placement of counties - there is rarely a perfect grid match. So let’s test a whole bunch:</p>
+<p>I like the look of the 28th hexagon grid, and the 7th square grid. Let’s take those and assign the polygons to a new <code>SpatialPolygonsDataFrame</code>, then fortify .</p>
+<pre class="r"><code>library(dplyr)
+library(ggplot2)
+clean &lt;- function(shape){
+  shape@data$id = rownames(shape@data)
+  shape.points = fortify(shape, region=&quot;id&quot;)
+  shape.df = left_join(shape.points, shape@data, by=&quot;id&quot;)
+}
+
+new_cells_hex &lt;-  calculate_cell_size(wi_original, wi_details,0.03, &#39;hexagonal&#39;, 28)</code></pre>
+<pre><code>## [1] 10
+## [1] 1.520675
+## [1] &quot;too few polygons&quot;
+## [1] 6
+## [1] 1.475055
+## [1] &quot;too few polygons&quot;
+## [1] 9
+## [1] 1.430803
+## [1] &quot;too few polygons&quot;
+## [1] 8
+## [1] 1.387879
+## [1] &quot;too few polygons&quot;
+## [1] 8
+## [1] 1.346242
+## [1] &quot;too few polygons&quot;
+## [1] 11
+## [1] 1.305855
+## [1] &quot;too few polygons&quot;
+## [1] 12
+## [1] 1.266679
+## [1] &quot;too few polygons&quot;
+## [1] 13
+## [1] 1.228679
+## [1] &quot;too few polygons&quot;
+## [1] 13
+## [1] 1.191819
+## [1] &quot;too few polygons&quot;
+## [1] 10
+## [1] 1.156064
+## [1] &quot;too few polygons&quot;
+## [1] 14
+## [1] 1.121382
+## [1] &quot;too few polygons&quot;
+## [1] 15
+## [1] 1.087741
+## [1] &quot;too few polygons&quot;
+## [1] 18
+## [1] 1.055109
+## [1] &quot;too few polygons&quot;
+## [1] 17
+## [1] 1.023455
+## [1] &quot;too few polygons&quot;
+## [1] 20
+## [1] 0.9927516
+## [1] &quot;too few polygons&quot;
+## [1] 17
+## [1] 0.9629691
+## [1] &quot;too few polygons&quot;
+## [1] 19
+## [1] 0.93408
+## [1] &quot;too few polygons&quot;
+## [1] 21
+## [1] 0.9060576
+## [1] &quot;too few polygons&quot;
+## [1] 24
+## [1] 0.8788759
+## [1] &quot;too few polygons&quot;
+## [1] 24
+## [1] 0.8525096
+## [1] &quot;too few polygons&quot;
+## [1] 26
+## [1] 0.8269343
+## [1] &quot;too few polygons&quot;
+## [1] 32
+## [1] 0.8021263
+## [1] &quot;too few polygons&quot;
+## [1] 29
+## [1] 0.7780625
+## [1] &quot;too few polygons&quot;
+## [1] 33
+## [1] 0.7547206
+## [1] &quot;too few polygons&quot;
+## [1] 35
+## [1] 0.732079
+## [1] &quot;too few polygons&quot;
+## [1] 36
+## [1] 0.7101166
+## [1] &quot;too few polygons&quot;
+## [1] 37
+## [1] 0.6888131
+## [1] &quot;too few polygons&quot;
+## [1] 42
+## [1] 0.6681487
+## [1] &quot;too few polygons&quot;
+## [1] 44
+## [1] 0.6481043
+## [1] &quot;too few polygons&quot;
+## [1] 48
+## [1] 0.6286612
+## [1] &quot;too few polygons&quot;
+## [1] 50
+## [1] 0.6098013
+## [1] &quot;too few polygons&quot;
+## [1] 52
+## [1] 0.5915073
+## [1] &quot;too few polygons&quot;
+## [1] 59
+## [1] 0.5737621
+## [1] &quot;too few polygons&quot;
+## [1] 60
+## [1] 0.5565492
+## [1] &quot;too few polygons&quot;
+## [1] 63
+## [1] 0.5398527
+## [1] &quot;too few polygons&quot;
+## [1] 68
+## [1] 0.5236571
+## [1] &quot;too few polygons&quot;
+## [1] 74
+## [1] 0.5079474
+## [1] &quot;too many polygons&quot;
+## [1] 72
+## [1] 0.5231859
+## [1] &quot;The cellsize is 0.523185854151445&quot;</code></pre>
+<pre class="r"><code>resulthex &lt;- assign_polygons(wi_original,new_cells_hex)
+result_df_hex &lt;- clean(resulthex)
+
+new_cells_square &lt;-  calculate_cell_size(wi_original, wi_details,0.03, &#39;regular&#39;, 7)</code></pre>
+<pre><code>## [1] 7
+## [1] 1.520675
+## [1] &quot;too few polygons&quot;
+## [1] 9
+## [1] 1.475055
+## [1] &quot;too few polygons&quot;
+## [1] 8
+## [1] 1.430803
+## [1] &quot;too few polygons&quot;
+## [1] 8
+## [1] 1.387879
+## [1] &quot;too few polygons&quot;
+## [1] 9
+## [1] 1.346242
+## [1] &quot;too few polygons&quot;
+## [1] 9
+## [1] 1.305855
+## [1] &quot;too few polygons&quot;
+## [1] 12
+## [1] 1.266679
+## [1] &quot;too few polygons&quot;
+## [1] 11
+## [1] 1.228679
+## [1] &quot;too few polygons&quot;
+## [1] 11
+## [1] 1.191819
+## [1] &quot;too few polygons&quot;
+## [1] 13
+## [1] 1.156064
+## [1] &quot;too few polygons&quot;
+## [1] 14
+## [1] 1.121382
+## [1] &quot;too few polygons&quot;
+## [1] 11
+## [1] 1.087741
+## [1] &quot;too few polygons&quot;
+## [1] 15
+## [1] 1.055109
+## [1] &quot;too few polygons&quot;
+## [1] 17
+## [1] 1.023455
+## [1] &quot;too few polygons&quot;
+## [1] 18
+## [1] 0.9927516
+## [1] &quot;too few polygons&quot;
+## [1] 19
+## [1] 0.9629691
+## [1] &quot;too few polygons&quot;
+## [1] 20
+## [1] 0.93408
+## [1] &quot;too few polygons&quot;
+## [1] 20
+## [1] 0.9060576
+## [1] &quot;too few polygons&quot;
+## [1] 21
+## [1] 0.8788759
+## [1] &quot;too few polygons&quot;
+## [1] 22
+## [1] 0.8525096
+## [1] &quot;too few polygons&quot;
+## [1] 25
+## [1] 0.8269343
+## [1] &quot;too few polygons&quot;
+## [1] 24
+## [1] 0.8021263
+## [1] &quot;too few polygons&quot;
+## [1] 27
+## [1] 0.7780625
+## [1] &quot;too few polygons&quot;
+## [1] 25
+## [1] 0.7547206
+## [1] &quot;too few polygons&quot;
+## [1] 26
+## [1] 0.732079
+## [1] &quot;too few polygons&quot;
+## [1] 33
+## [1] 0.7101166
+## [1] &quot;too few polygons&quot;
+## [1] 33
+## [1] 0.6888131
+## [1] &quot;too few polygons&quot;
+## [1] 35
+## [1] 0.6681487
+## [1] &quot;too few polygons&quot;
+## [1] 39
+## [1] 0.6481043
+## [1] &quot;too few polygons&quot;
+## [1] 42
+## [1] 0.6286612
+## [1] &quot;too few polygons&quot;
+## [1] 44
+## [1] 0.6098013
+## [1] &quot;too few polygons&quot;
+## [1] 46
+## [1] 0.5915073
+## [1] &quot;too few polygons&quot;
+## [1] 49
+## [1] 0.5737621
+## [1] &quot;too few polygons&quot;
+## [1] 54
+## [1] 0.5565492
+## [1] &quot;too few polygons&quot;
+## [1] 57
+## [1] 0.5398527
+## [1] &quot;too few polygons&quot;
+## [1] 58
+## [1] 0.5236571
+## [1] &quot;too few polygons&quot;
+## [1] 65
+## [1] 0.5079474
+## [1] &quot;too few polygons&quot;
+## [1] 66
+## [1] 0.492709
+## [1] &quot;too few polygons&quot;
+## [1] 74
+## [1] 0.4779277
+## [1] &quot;too many polygons&quot;
+## [1] 65
+## [1] 0.4922656
+## [1] &quot;too few polygons&quot;
+## [1] 68
+## [1] 0.4774976
+## [1] &quot;too few polygons&quot;
+## [1] 76
+## [1] 0.4631727
+## [1] &quot;too many polygons&quot;
+## [1] 74
+## [1] 0.4770679
+## [1] &quot;too many polygons&quot;
+## [1] 65
+## [1] 0.4913799
+## [1] &quot;too few polygons&quot;
+## [1] 74
+## [1] 0.4766385
+## [1] &quot;too many polygons&quot;
+## [1] 68
+## [1] 0.4909376
+## [1] &quot;too few polygons&quot;
+## [1] 74
+## [1] 0.4762095
+## [1] &quot;too many polygons&quot;
+## [1] 70
+## [1] 0.4904958
+## [1] &quot;too few polygons&quot;
+## [1] 75
+## [1] 0.4757809
+## [1] &quot;too many polygons&quot;
+## [1] 70
+## [1] 0.4900544
+## [1] &quot;too few polygons&quot;
+## [1] 75
+## [1] 0.4753527
+## [1] &quot;too many polygons&quot;
+## [1] 71
+## [1] 0.4896133
+## [1] &quot;too few polygons&quot;
+## [1] 76
+## [1] 0.4749249
+## [1] &quot;too many polygons&quot;
+## [1] 71
+## [1] 0.4891727
+## [1] &quot;too few polygons&quot;
+## [1] 76
+## [1] 0.4744975
+## [1] &quot;too many polygons&quot;
+## [1] 72
+## [1] 0.4887324
+## [1] &quot;The cellsize is 0.488732402575336&quot;</code></pre>
+<pre class="r"><code>resultsquare &lt;- assign_polygons(wi_original,new_cells_square)
+result_df_square &lt;- clean(resultsquare)</code></pre>
+<p>Now that we’ve got our modified <code>SpatialPolygonsDataFrame</code>s - covered to a dataframe for use with ggplot2 - we can plot the result using <code>geom_polygon</code>:</p>
+<pre class="r"><code>library(viridis)
+hexplot &lt;- ggplot(result_df_hex) +
+  geom_polygon( aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=4, color = &quot;white&quot;) +
+  coord_equal() +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void()
+
+hexplot</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>squareplot &lt;- ggplot(result_df_square) +
+  geom_polygon( aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=4, color = &quot;white&quot;) +
+  coord_equal() +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void()
+
+squareplot</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-2.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>I saw on twitter that <code>sf</code> can now be used natively, so I gave that I try as well. First convert the <code>SpatialPolygonsDataFrame</code> to a simple feature (<code>sf</code>), then plot the resultant object using <code>geom_sf</code>:</p>
+<pre class="r"><code>sfResultSquare &lt;- st_as_sf(resultsquare)
+sfResultHex &lt;- st_as_sf(resulthex)
+class(sfResultHex)</code></pre>
+<pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>sfHexPlot &lt;-ggplot(sfResultHex) +
+    geom_sf(aes(fill = as.numeric(ALAND)), color = &quot;transparent&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=4, color = &quot;white&quot;) +
+    scale_fill_viridis() +
+    guides(fill=FALSE) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+
+sfHexPlot</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/hexgrid%20with%20sf-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>Pretty neat! Let’s use some more novel data than land area. Building off of a previous post mapping Wisconsin presidential election results, let’s map vote totals to our new gridmaps.</p>
+<pre class="r"><code>library(stringr)
+library(tidyr)
+all_results &lt;- read.csv(&quot;https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&quot;, stringsAsFactors = FALSE)
+
+wisconsin &lt;- all_results %&gt;% 
+  filter(str_detect(fips, &quot;^55&quot;))
+
+wisconsin_spread &lt;- wisconsin %&gt;% 
+  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;)) %&gt;%
+  select(fips, cand, votes, total_votes) %&gt;%
+  spread(cand, votes)
+
+wisconsin_spread &lt;- wisconsin_spread %&gt;% mutate(voteDiff = `Donald Trump` - `Hillary Clinton`,
+                                                pctDiff = `Donald Trump`/total_votes - `Hillary Clinton`/total_votes,
+                                                weight = total_votes/ sum(total_votes))
+wisconsin_spread$weight &lt;- ifelse(wisconsin_spread$pctDiff &gt; 0 , -wisconsin_spread$weight, wisconsin_spread$weight)</code></pre>
+<p>We can create some custom breaks to give counties with higher vote totals more prominence in the figure, then merge these onto our hex and square <code>sf</code>:</p>
+<pre class="r"><code>wisconsin_spread$breaks &lt;- cut(wisconsin_spread$weight,
+                               breaks = c(-1, -0.05, -0.01, 0, 0.01, .05, 1),
+                               labels = c(&quot;R - More than 5 Percent&quot;, &quot;R - 1 to 5 Percent&quot;, &quot;R - Less than 1 Percent&quot;,
+                                          &quot;D - Less than 1 Percent&quot;,&quot;D - 1 to 5 Percent&quot;, &quot;D - More than 5 Percent&quot;))
+wiHex &lt;- merge(sfResultHex, wisconsin_spread, by.x = &quot;GEOID&quot;, by.y = &quot;fips&quot;)
+wiSquare &lt;- merge(sfResultSquare, wisconsin_spread, by.x = &quot;GEOID&quot;, by.y = &quot;fips&quot;)</code></pre>
+<p>Once we’ve got our data sets finalized, figures are created usng <code>geom_sf</code>:</p>
+<pre class="r"><code>library(RColorBrewer)
+
+wiHexPlot &lt;- ggplot(wiHex) +
+    geom_sf(aes(fill=breaks), color = &quot;#f5f5f5&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=4, color = &quot;black&quot;) +
+    scale_fill_manual(name = &quot;Portion of WI Vote&quot;, values = brewer.pal(6, &quot;RdBu&quot;)) +
+    guides(alpha=FALSE) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+
+wiHexPlot</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>wiSquarePlot &lt;- ggplot(wiSquare) +
+    geom_sf(aes(fill = breaks), color = &quot;#f5f5f5&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=4, color = &quot;black&quot;) +
+    scale_fill_manual(name = &quot;Portion of WI Vote&quot;, values = brewer.pal(6, &quot;RdBu&quot;)) +
+    guides(alpha=FALSE) +
+  
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+
+wiSquarePlot</code></pre>
+<p><img src="2017-11-07-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-2.png" width="1800" style="display: block; margin: auto;" /></p>
+<hr />
+<p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="https://twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
+</div>

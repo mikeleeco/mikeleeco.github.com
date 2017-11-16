@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Wisconsin State Hex Grid - Mapping 2016 Presidential Results</title>
+  <meta property="og:title" content="Wisconsin State Hex Grid - Mapping 2016 Presidential Results" />
+  <meta name="twitter:title" content="Wisconsin State Hex Grid - Mapping 2016 Presidential Results" />
+  <meta name="description" content="NEAT PACKAGE ALERT! My 1st R package! https://t.co/dI3GJbC7FQ Automatically turn geospatial polygons like states into regular/hexagonal grids #rstats #ggplot2 pic.twitter.com/dxvYCZWJzU — J Bailey (@iammrbailey) October 31, 2017   I’ve been thinking about implementing something like this for a while - got excited by this tweet I thought I would do some exploring and write out a post over the weekend. Creating a county-level hex grid of Wisconsin makes for a perfect supplment to my earlier post about mapping the 2016 Wisconsin presidential results.">
+  <meta property="og:description" content="NEAT PACKAGE ALERT! My 1st R package! https://t.co/dI3GJbC7FQ Automatically turn geospatial polygons like states into regular/hexagonal grids #rstats #ggplot2 pic.twitter.com/dxvYCZWJzU — J Bailey (@iammrbailey) October 31, 2017   I’ve been thinking about implementing something like this for a while - got excited by this tweet I thought I would do some exploring and write out a post over the weekend. Creating a county-level hex grid of Wisconsin makes for a perfect supplment to my earlier post about mapping the 2016 Wisconsin presidential results.">
+  <meta name="twitter:description" content="NEAT PACKAGE ALERT! My 1st R package! https://t.co/dI3GJbC7FQ Automatically turn geospatial polygons like states into regular/hexagonal grids #rstats #ggplot2 pic.twitter.com/dxvYCZWJzU — J Bailey …">
+  <meta name="author" content="Michael Lee"/>
+  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:image" content="/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mikeleeco" />
+  <meta name="twitter:creator" content="@mikeleeco" />
+  <meta property="og:url" content="/posts/2017-11-16-wi-presidential-results-using-hexmapr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Michael Lee" />
+
+  <meta name="generator" content="Hugo 0.19" />
+  <link rel="canonical" href="/posts/2017-11-16-wi-presidential-results-using-hexmapr/" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael Lee">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="/css/highlight.min.css" />
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Michael Lee</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/posts">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Projects" href="/projects">Projects</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Interactives" href="/interactives">Interactives</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Animation" href="/animation">Animation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Resume" href="/resume/">Resume</a>
+            </li>
+          
+        
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Michael Lee" href="/">
+            <img class="avatar-img" src="/img/avatar-icon.png" alt="Michael Lee" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="/img/wiHexPlot.png" data-img-desc-1="Wisconsin Hex Plot of 2016 Presidential Results by County">
+    </div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+
+
+
+    <div class="container" role="main">
+      
+        <head>
+  <link rel="stylesheet" href="/css/postCustom.css" />
+</head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-lg-offset-0">
+
+            <h2 class="post-title">Wisconsin State Hex Grid - Mapping 2016 Presidential Results</h2>
+
+    
+      
+    
+      <p class="post-meta">
+        Posted on November 16, 2017
+      </p>
+    
+      
+  
+    <span class="post-meta">
+      
+        <span class="post-tags"><a href="/tags/dataviz">#dataviz</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/ggplot2">#ggplot2</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/hexmapr">#hexmapr</a></span>&nbsp;
+      
+        <span class="post-tags"><a href="/tags/r">#R</a></span>&nbsp;
+      
+    </span>
+  
+
+        <div id="neat-package-alert" class="section level2">
+<h2>NEAT PACKAGE ALERT!</h2>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+My 1st R package! <a href="https://t.co/dI3GJbC7FQ">https://t.co/dI3GJbC7FQ</a> Automatically turn geospatial polygons like states into regular/hexagonal grids <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://t.co/dxvYCZWJzU">pic.twitter.com/dxvYCZWJzU</a>
+</p>
+— J Bailey (<span class="citation">@iammrbailey</span>) <a href="https://twitter.com/iammrbailey/status/925346870381240320?ref_src=twsrc%5Etfw">October 31, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I’ve been thinking about implementing something like this for a while - got excited by this tweet I thought I would do some exploring and write out a post over the weekend. Creating a county-level hex grid of Wisconsin makes for a perfect supplment to my earlier post about <a href="https://www.mikelee.co/posts/2016-12-26-wisconsin-presidential-election-results/">mapping the 2016 Wisconsin presidential results</a>.</p>
+<hr />
+</div>
+<div id="lets-make-a-hex-grid-of-wisconsin" class="section level2">
+<h2>Let’s make a hex grid of Wisconsin</h2>
+<p>The first thing we’ll do is retrieve a Wisconsin shapefile; we can use the <code>tigris</code> package developed by Kyle Walker to pull a 2010 census shapefile of Wisconsin counties:</p>
+<pre class="r"><code>library(tigris)
+wi &lt;- counties(&quot;Wisconsin&quot;, cb = TRUE)
+wi_original &lt;- wi
+plot(wi)</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/tigris%20shapefile-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>We’ll then port some code from the <code>hexmapr</code> github README:</p>
+<pre class="r"><code>library(hexmapr)
+wi_details &lt;- get_shape_details(wi)
+wi@data$xcentroid &lt;- coordinates(wi)[,1]
+wi@data$ycentroid &lt;- coordinates(wi)[,2]</code></pre>
+<p>We’re going for the closest shapefile match, preferring a final shape than looks like the outline of the state than one with appropriate placement of counties - there is rarely a perfect grid match. So let’s test a whole bunch:</p>
+<pre class="r"><code># hexagon - red border for the 28th seed
+png(file = &quot;/home/michael/Documents/mikeleeco.github.com/static/img/hexGridWisconsin.png&quot;, width = 700, height = 500)
+par(mfrow=c(7,5), mar = c(0,1,2,1))
+for (i in 1:35){
+  new_cells &lt;-  calculate_cell_size(wi, wi_details,0.03, &#39;hexagonal&#39;, i)
+  if(i == 28) {
+    plot(new_cells[[2]], main = paste(&quot;Seed&quot;,i, sep=&quot; &quot;), border = &quot;red&quot;)
+  } else {
+    plot(new_cells[[2]], main = paste(&quot;Seed&quot;,i, sep=&quot; &quot;))
+  }
+}
+
+# squares - red border for the 7th seed
+png(file = &quot;/home/michael/Documents/mikeleeco.github.com/static/img/squareGridWisconsin.png&quot;, width = 700, height = 500)
+par(mfrow=c(7,5), mar = c(0,1,2,1))
+for (i in 1:35){
+  new_cells &lt;-  calculate_cell_size(wi, wi_details,0.03, &#39;regular&#39;, i)
+  if(i == 7) {
+    plot(new_cells[[2]], main = paste(&quot;Seed&quot;,i, sep=&quot; &quot;), border = &quot;red&quot;)
+  } else {
+    plot(new_cells[[2]], main = paste(&quot;Seed&quot;,i, sep=&quot; &quot;))
+  }
+}</code></pre>
+<div class="figure">
+<img src="/img/hexGridWisconsin.png" alt="hex grid options" />
+<p class="caption">hex grid options</p>
+</div>
+<div class="figure">
+<img src="/img/squareGridWisconsin.png" alt="square grid options" />
+<p class="caption">square grid options</p>
+</div>
+<p>I like the look of the 28th hexagon grid, and the 7th square grid. Let’s take those and assign the polygons to a new <code>SpatialPolygonsDataFrame</code>, then fortify .</p>
+<pre class="r"><code>library(dplyr)
+library(ggplot2)
+clean &lt;- function(shape){
+  shape@data$id = rownames(shape@data)
+  shape.points = fortify(shape, region=&quot;id&quot;)
+  shape.df = left_join(shape.points, shape@data, by=&quot;id&quot;)
+}
+
+new_cells_hex &lt;-  calculate_cell_size(wi_original, wi_details,0.03, &#39;hexagonal&#39;, 28)
+resulthex &lt;- assign_polygons(wi_original,new_cells_hex)
+result_df_hex &lt;- clean(resulthex)
+
+new_cells_square &lt;-  calculate_cell_size(wi_original, wi_details,0.03, &#39;regular&#39;, 7)
+resultsquare &lt;- assign_polygons(wi_original,new_cells_square)
+result_df_square &lt;- clean(resultsquare)</code></pre>
+<p>Now that we’ve got our modified <code>SpatialPolygonsDataFrame</code>s - covered to a dataframe for use with ggplot2 - we can plot the result using <code>geom_polygon</code>:</p>
+<pre class="r"><code>library(viridis)
+library(extrafont)
+loadfonts()
+theme_open_sans &lt;- theme(text=element_text(family=&quot;Open Sans&quot;), plot.title = element_text(family = &quot;Open Sans Semibold&quot;, size = 24), plot.subtitle = element_text(family = &quot;Open Sans Light&quot;,size = 14), legend.title = element_text(family=&quot;Open Sans Semibold&quot;))
+hexplot &lt;- ggplot(result_df_hex) +
+  geom_polygon(aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=2.5, color = &quot;white&quot;, family = &quot;Open Sans&quot;) +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void() + theme_open_sans
+
+hexplot</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>squareplot &lt;- ggplot(result_df_square) +
+  geom_polygon(aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=2.5, color = &quot;white&quot;, family = &quot;Open Sans&quot;) +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void() + theme_open_sans
+
+squareplot</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-2.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>I saw on twitter that <code>sf</code> can now be used natively, so I gave that I try as well. First convert the <code>SpatialPolygonsDataFrame</code> to a simple feature (<code>sf</code>), then plot the resultant object using <code>geom_sf</code>:</p>
+<pre class="r"><code>sfResultSquare &lt;- st_as_sf(resultsquare)
+sfResultHex &lt;- st_as_sf(resulthex)
+class(sfResultHex)</code></pre>
+<pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>sfHexPlot &lt;-ggplot(sfResultHex) +
+    geom_sf(aes(fill = as.numeric(ALAND)), color = &quot;transparent&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &quot;white&quot;, family = &quot;Open Sans&quot;) +
+    scale_fill_viridis() +
+    guides(fill=FALSE) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+
+sfHexPlot</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/hexgrid%20with%20sf-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<p>Cool to know that’s possible! Let’s use some more novel data than land area. Building off of a previous post mapping Wisconsin presidential election results, let’s map vote totals to our new gridmaps.</p>
+<pre class="r"><code>library(stringr)
+library(tidyr)
+all_results &lt;- read.csv(&quot;https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&quot;, stringsAsFactors = FALSE)
+
+wisconsin &lt;- all_results %&gt;% 
+  filter(str_detect(fips, &quot;^55&quot;))
+
+wisconsin_spread &lt;- wisconsin %&gt;% 
+  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;)) %&gt;%
+  select(fips, cand, votes, total_votes) %&gt;%
+  spread(cand, votes)
+
+wisconsin_spread &lt;- wisconsin_spread %&gt;% mutate(voteDiff = `Donald Trump` - `Hillary Clinton`,
+                                                pctDiff = `Donald Trump`/total_votes - `Hillary Clinton`/total_votes,
+                                                weight = total_votes/ sum(total_votes))
+wisconsin_spread$weight &lt;- ifelse(wisconsin_spread$pctDiff &gt; 0 , -wisconsin_spread$weight, wisconsin_spread$weight)</code></pre>
+<p>We can create some custom breaks to give counties with higher vote totals more prominence in the figure, then merge these onto our hex and square <code>SpatialPolygonsDataFrame</code>:</p>
+<pre class="r"><code>wisconsin_spread$breaks &lt;- cut(wisconsin_spread$weight,
+                               breaks = c(-1, -.1, -0.05, -0.01, 0, 0.01, .05, .1, 1),
+                               labels = c(&quot;R   More than 10 Percent&quot;, &quot;R   5 to 10 Percent&quot;, &quot;R   1 to 5 Percent&quot;, &quot;R   Less than 1 Percent&quot;, 
+                                          &quot;D   Less than 1 Percent&quot;,&quot;D   1 to 5 Percent&quot;, &quot;D   5 to 10 Percent&quot;, &quot;D   More than 10 Percent&quot;))
+wiHex &lt;- merge(result_df_hex, wisconsin_spread, by.x = &quot;GEOID&quot;, by.y = &quot;fips&quot;)
+wiSquare &lt;- merge(result_df_square, wisconsin_spread, by.x = &quot;GEOID&quot;, by.y = &quot;fips&quot;)</code></pre>
+<p>Once we’ve got our data sets finalized, figures are created usng <code>geom_polygon</code>:</p>
+<pre class="r"><code>library(RColorBrewer)
+
+wiHexPlot &lt;- ggplot(wiHex) +
+    geom_polygon(aes(x=long, y=lat, fill=breaks, group = group), color = &quot;#f5f5f5&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &quot;black&quot;, family = &quot;Open Sans&quot;) +
+    scale_fill_manual(name = &quot;Portion of WI Vote&quot;, values = brewer.pal(8, &quot;RdBu&quot;), drop = FALSE) +
+    guides(alpha=FALSE) +
+    ggtitle(label = &quot;2016 Presidential Results by Wisconsin Counties&quot;, subtitle = &quot;59 of 72 Wisconsin counties leaned Republican, while the only two counties with\nmore than 10 percent of the state&#39;s votes totaled more Democratic votes&quot;) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +   
+    theme_open_sans
+
+wiHexPlot</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-1.png" width="1800" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>wiSquarePlot &lt;- ggplot(wiSquare) +
+    geom_polygon(aes(x=long, y=lat, fill=breaks, group = group), color = &quot;#f5f5f5&quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &quot;black&quot;, family = &quot;Open Sans&quot;) +
+    scale_fill_manual(name = &quot;Percentage of WI Vote Total&quot;, values = brewer.pal(8, &quot;RdBu&quot;), drop = FALSE) +
+    guides(alpha=FALSE) +
+    ggtitle(label = &quot;2016 Presidential Results by Wisconsin Counties&quot;, subtitle = &quot;59 of 72 Wisconsin counties leaned Republican, while the only two counties with\nmore than 10 percent of the state&#39;s votes totaled more Democratic votes&quot;) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +   
+    theme_open_sans
+
+wiSquarePlot</code></pre>
+<p><img src="/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-2.png" width="1800" style="display: block; margin: auto;" /></p>
+<hr />
+<p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="https://twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
+</div>
+
+
+              <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/" data-toggle="tooltip" data-placement="top" title="Makeover Monday: WSJ Measles Vaccination Chart">&larr; Previous Post</a>
+          </li>
+        
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+              <div id="disqus_thread"></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://mikeleeco.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-lg-offset-0">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:mdlee12@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mikeleeco" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mikeleeco" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Michael Lee
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">Michael Lee</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.19</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58518999-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+</html>

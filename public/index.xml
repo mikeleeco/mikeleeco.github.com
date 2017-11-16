@@ -8,8 +8,179 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Sat, 14 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Wisconsin State Hex Grid - Mapping 2016 Presidential Results</title>
+      <link>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</link>
+      <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</guid>
+      <description>&lt;div id=&#34;neat-package-alert&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;NEAT PACKAGE ALERT!&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+My 1st R package! &lt;a href=&#34;https://t.co/dI3GJbC7FQ&#34;&gt;https://t.co/dI3GJbC7FQ&lt;/a&gt; Automatically turn geospatial polygons like states into regular/hexagonal grids &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot2&lt;/a&gt; &lt;a href=&#34;https://t.co/dxvYCZWJzU&#34;&gt;pic.twitter.com/dxvYCZWJzU&lt;/a&gt;
+&lt;/p&gt;
+— J Bailey (&lt;span class=&#34;citation&#34;&gt;@iammrbailey&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/iammrbailey/status/925346870381240320?ref_src=twsrc%5Etfw&#34;&gt;October 31, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;I’ve been thinking about implementing something like this for a while - got excited by this tweet I thought I would do some exploring and write out a post over the weekend. Creating a county-level hex grid of Wisconsin makes for a perfect supplment to my earlier post about &lt;a href=&#34;https://www.mikelee.co/posts/2016-12-26-wisconsin-presidential-election-results/&#34;&gt;mapping the 2016 Wisconsin presidential results&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lets-make-a-hex-grid-of-wisconsin&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Let’s make a hex grid of Wisconsin&lt;/h2&gt;
+&lt;p&gt;The first thing we’ll do is retrieve a Wisconsin shapefile; we can use the &lt;code&gt;tigris&lt;/code&gt; package developed by Kyle Walker to pull a 2010 census shapefile of Wisconsin counties:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tigris)
+wi &amp;lt;- counties(&amp;quot;Wisconsin&amp;quot;, cb = TRUE)
+wi_original &amp;lt;- wi
+plot(wi)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/tigris%20shapefile-1.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We’ll then port some code from the &lt;code&gt;hexmapr&lt;/code&gt; github README:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(hexmapr)
+wi_details &amp;lt;- get_shape_details(wi)
+wi@data$xcentroid &amp;lt;- coordinates(wi)[,1]
+wi@data$ycentroid &amp;lt;- coordinates(wi)[,2]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We’re going for the closest shapefile match, preferring a final shape than looks like the outline of the state than one with appropriate placement of counties - there is rarely a perfect grid match. So let’s test a whole bunch:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# hexagon - red border for the 28th seed
+png(file = &amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/hexGridWisconsin.png&amp;quot;, width = 700, height = 500)
+par(mfrow=c(7,5), mar = c(0,1,2,1))
+for (i in 1:35){
+  new_cells &amp;lt;-  calculate_cell_size(wi, wi_details,0.03, &amp;#39;hexagonal&amp;#39;, i)
+  if(i == 28) {
+    plot(new_cells[[2]], main = paste(&amp;quot;Seed&amp;quot;,i, sep=&amp;quot; &amp;quot;), border = &amp;quot;red&amp;quot;)
+  } else {
+    plot(new_cells[[2]], main = paste(&amp;quot;Seed&amp;quot;,i, sep=&amp;quot; &amp;quot;))
+  }
+}
+
+# squares - red border for the 7th seed
+png(file = &amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/squareGridWisconsin.png&amp;quot;, width = 700, height = 500)
+par(mfrow=c(7,5), mar = c(0,1,2,1))
+for (i in 1:35){
+  new_cells &amp;lt;-  calculate_cell_size(wi, wi_details,0.03, &amp;#39;regular&amp;#39;, i)
+  if(i == 7) {
+    plot(new_cells[[2]], main = paste(&amp;quot;Seed&amp;quot;,i, sep=&amp;quot; &amp;quot;), border = &amp;quot;red&amp;quot;)
+  } else {
+    plot(new_cells[[2]], main = paste(&amp;quot;Seed&amp;quot;,i, sep=&amp;quot; &amp;quot;))
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/hexGridWisconsin.png&#34; alt=&#34;hex grid options&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;hex grid options&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/squareGridWisconsin.png&#34; alt=&#34;square grid options&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;square grid options&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I like the look of the 28th hexagon grid, and the 7th square grid. Let’s take those and assign the polygons to a new &lt;code&gt;SpatialPolygonsDataFrame&lt;/code&gt;, then fortify .&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+library(ggplot2)
+clean &amp;lt;- function(shape){
+  shape@data$id = rownames(shape@data)
+  shape.points = fortify(shape, region=&amp;quot;id&amp;quot;)
+  shape.df = left_join(shape.points, shape@data, by=&amp;quot;id&amp;quot;)
+}
+
+new_cells_hex &amp;lt;-  calculate_cell_size(wi_original, wi_details,0.03, &amp;#39;hexagonal&amp;#39;, 28)
+resulthex &amp;lt;- assign_polygons(wi_original,new_cells_hex)
+result_df_hex &amp;lt;- clean(resulthex)
+
+new_cells_square &amp;lt;-  calculate_cell_size(wi_original, wi_details,0.03, &amp;#39;regular&amp;#39;, 7)
+resultsquare &amp;lt;- assign_polygons(wi_original,new_cells_square)
+result_df_square &amp;lt;- clean(resultsquare)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we’ve got our modified &lt;code&gt;SpatialPolygonsDataFrame&lt;/code&gt;s - covered to a dataframe for use with ggplot2 - we can plot the result using &lt;code&gt;geom_polygon&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(viridis)
+library(extrafont)
+loadfonts()
+theme_open_sans &amp;lt;- theme(text=element_text(family=&amp;quot;Open Sans&amp;quot;), plot.title = element_text(family = &amp;quot;Open Sans Semibold&amp;quot;, size = 24), plot.subtitle = element_text(family = &amp;quot;Open Sans Light&amp;quot;,size = 14), legend.title = element_text(family=&amp;quot;Open Sans Semibold&amp;quot;))
+hexplot &amp;lt;- ggplot(result_df_hex) +
+  geom_polygon(aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=2.5, color = &amp;quot;white&amp;quot;, family = &amp;quot;Open Sans&amp;quot;) +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void() + theme_open_sans
+
+hexplot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-1.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;squareplot &amp;lt;- ggplot(result_df_square) +
+  geom_polygon(aes(x=long, y=lat, fill = as.numeric(ALAND), group = group))+
+  geom_text(aes(V1, V2, label = NAME), size=2.5, color = &amp;quot;white&amp;quot;, family = &amp;quot;Open Sans&amp;quot;) +
+  scale_fill_viridis() +
+  guides(fill=FALSE) +
+  theme_void() + theme_open_sans
+
+squareplot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/square%20and%20hex%20plots%20of%20WI-2.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I saw on twitter that &lt;code&gt;sf&lt;/code&gt; can now be used natively, so I gave that I try as well. First convert the &lt;code&gt;SpatialPolygonsDataFrame&lt;/code&gt; to a simple feature (&lt;code&gt;sf&lt;/code&gt;), then plot the resultant object using &lt;code&gt;geom_sf&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sfResultSquare &amp;lt;- st_as_sf(resultsquare)
+sfResultHex &amp;lt;- st_as_sf(resulthex)
+class(sfResultHex)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;sf&amp;quot;         &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sfHexPlot &amp;lt;-ggplot(sfResultHex) +
+    geom_sf(aes(fill = as.numeric(ALAND)), color = &amp;quot;transparent&amp;quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &amp;quot;white&amp;quot;, family = &amp;quot;Open Sans&amp;quot;) +
+    scale_fill_viridis() +
+    guides(fill=FALSE) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+
+sfHexPlot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/hexgrid%20with%20sf-1.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Cool to know that’s possible! Let’s use some more novel data than land area. Building off of a previous post mapping Wisconsin presidential election results, let’s map vote totals to our new gridmaps.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(stringr)
+library(tidyr)
+all_results &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&amp;quot;, stringsAsFactors = FALSE)
+
+wisconsin &amp;lt;- all_results %&amp;gt;% 
+  filter(str_detect(fips, &amp;quot;^55&amp;quot;))
+
+wisconsin_spread &amp;lt;- wisconsin %&amp;gt;% 
+  filter(cand %in% c(&amp;quot;Donald Trump&amp;quot;, &amp;quot;Hillary Clinton&amp;quot;)) %&amp;gt;%
+  select(fips, cand, votes, total_votes) %&amp;gt;%
+  spread(cand, votes)
+
+wisconsin_spread &amp;lt;- wisconsin_spread %&amp;gt;% mutate(voteDiff = `Donald Trump` - `Hillary Clinton`,
+                                                pctDiff = `Donald Trump`/total_votes - `Hillary Clinton`/total_votes,
+                                                weight = total_votes/ sum(total_votes))
+wisconsin_spread$weight &amp;lt;- ifelse(wisconsin_spread$pctDiff &amp;gt; 0 , -wisconsin_spread$weight, wisconsin_spread$weight)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can create some custom breaks to give counties with higher vote totals more prominence in the figure, then merge these onto our hex and square &lt;code&gt;SpatialPolygonsDataFrame&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;wisconsin_spread$breaks &amp;lt;- cut(wisconsin_spread$weight,
+                               breaks = c(-1, -.1, -0.05, -0.01, 0, 0.01, .05, .1, 1),
+                               labels = c(&amp;quot;R   More than 10 Percent&amp;quot;, &amp;quot;R   5 to 10 Percent&amp;quot;, &amp;quot;R   1 to 5 Percent&amp;quot;, &amp;quot;R   Less than 1 Percent&amp;quot;, 
+                                          &amp;quot;D   Less than 1 Percent&amp;quot;,&amp;quot;D   1 to 5 Percent&amp;quot;, &amp;quot;D   5 to 10 Percent&amp;quot;, &amp;quot;D   More than 10 Percent&amp;quot;))
+wiHex &amp;lt;- merge(result_df_hex, wisconsin_spread, by.x = &amp;quot;GEOID&amp;quot;, by.y = &amp;quot;fips&amp;quot;)
+wiSquare &amp;lt;- merge(result_df_square, wisconsin_spread, by.x = &amp;quot;GEOID&amp;quot;, by.y = &amp;quot;fips&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once we’ve got our data sets finalized, figures are created usng &lt;code&gt;geom_polygon&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(RColorBrewer)
+
+wiHexPlot &amp;lt;- ggplot(wiHex) +
+    geom_polygon(aes(x=long, y=lat, fill=breaks, group = group), color = &amp;quot;#f5f5f5&amp;quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &amp;quot;black&amp;quot;, family = &amp;quot;Open Sans&amp;quot;) +
+    scale_fill_manual(name = &amp;quot;Portion of WI Vote&amp;quot;, values = brewer.pal(8, &amp;quot;RdBu&amp;quot;), drop = FALSE) +
+    guides(alpha=FALSE) +
+    ggtitle(label = &amp;quot;2016 Presidential Results by Wisconsin Counties&amp;quot;, subtitle = &amp;quot;59 of 72 Wisconsin counties leaned Republican, while the only two counties with\nmore than 10 percent of the state&amp;#39;s votes totaled more Democratic votes&amp;quot;) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +   
+    theme_open_sans
+
+wiHexPlot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-1.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;wiSquarePlot &amp;lt;- ggplot(wiSquare) +
+    geom_polygon(aes(x=long, y=lat, fill=breaks, group = group), color = &amp;quot;#f5f5f5&amp;quot;) +
+    geom_text(aes(V1, V2, label = NAME), size=2.5, color = &amp;quot;black&amp;quot;, family = &amp;quot;Open Sans&amp;quot;) +
+    scale_fill_manual(name = &amp;quot;Percentage of WI Vote Total&amp;quot;, values = brewer.pal(8, &amp;quot;RdBu&amp;quot;), drop = FALSE) +
+    guides(alpha=FALSE) +
+    ggtitle(label = &amp;quot;2016 Presidential Results by Wisconsin Counties&amp;quot;, subtitle = &amp;quot;59 of 72 Wisconsin counties leaned Republican, while the only two counties with\nmore than 10 percent of the state&amp;#39;s votes totaled more Democratic votes&amp;quot;) +
+    theme(panel.background = element_rect(fill = NA), axis.text = element_blank(), axis.ticks = element_blank(), axis.title = element_blank()) +   
+    theme_open_sans
+
+wiSquarePlot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-2.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Percent of Borrowers by Cohort - Animated Bar Chart</title>
@@ -942,112 +1113,6 @@ p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&a
 &lt;h4 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h4&gt;
 
 &lt;p&gt;Data with eligible-voter populations and demographic information at the county level might further supplement this exploration by providing a more detailed picture of rural and urban voters beyond raw population and vote totals. Outlets such as &lt;a href=&#34;http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/&#34;&gt;FiveThirtyEight&lt;/a&gt; have used this type of granular data to inform predictive forecasts of elections. Thoughts or questions about the post? Contact me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt; or leave a message in the comments section.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>NBA Draft Odds Plot</title>
-      <link>/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
-      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; align=&#34;center&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With thanks to &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;@hadleywickham&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/hrbrmstr&#34;&gt;@hrbrmstr&lt;/a&gt;, and &lt;a href=&#34;https://twitter.com/ColorBrewer&#34;&gt;@ColorBrewer&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/hjX39Xhi4P&#34;&gt;https://t.co/hjX39Xhi4P&lt;/a&gt; &lt;a href=&#34;https://t.co/XD27alzwNI&#34;&gt;https://t.co/XD27alzwNI&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Sparks (@dsparks) &lt;a href=&#34;https://twitter.com/dsparks/status/723497233988096004&#34;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Package Dependencies and Data&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the &lt;a href=&#34;https://en.wikipedia.org/wiki/2016_NBA_draft&#34;&gt;raw lottery odds&lt;/a&gt;. I fudged some of the data based on how it looked in the plot - not much I can do about that since there wasn&amp;rsquo;t anything programmatically to work from there! &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#devtools::install_github(&amp;quot;hadley/ggplot2&amp;quot;)
-#devtools::install_github(&amp;quot;hadley/tidyr&amp;quot;)
-library(ggplot2)
-library(tidyr)
-library(RCurl)
-library(RColorBrewer)
-dataurl &amp;lt;- &#39;https://gist.githubusercontent.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766/raw/afa955af265d14a2f72780e4e0b87ffe469c0109/odds.csv&#39;
-data &amp;lt;- getURL(dataurl)                
-odds &amp;lt;- read.csv(textConnection(data))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Data Cleanup&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The tidyr package allows us to reshape our data between long and wide formats, RColorBrewer helps generate a fluid color pallete for our plot, and RCurl assists in sourcing the data from &lt;a href=&#34;https://gist.github.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766#file-odds-csv&#34;&gt;my gist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;odds &amp;lt;- gather(odds, X)
-odds[,2] &amp;lt;- substring(odds[,2], 2)
-colnames(odds) &amp;lt;- c(&amp;quot;Team&amp;quot;,&amp;quot;Pick&amp;quot;,&amp;quot;Probability&amp;quot;)
-odds$Pick &amp;lt;- as.numeric(odds$Pick)
-odds$Team &amp;lt;- as.character(odds$Team)
-odds$Team &amp;lt;- factor(odds$Team, levels = odds[1:14,1])
-odds$Team &amp;lt;- factor(odds$Team, levels=rev(levels(odds$Team)))
-odds$Pick &amp;lt;- factor(odds$Pick, levels = 1:14)
-getPalette &amp;lt;- colorRampPalette(brewer.pal(11, &amp;quot;Spectral&amp;quot;))(14)
-odds$Probability &amp;lt;- ifelse(is.na(odds$Probability),0,odds$Probability)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;colorRampPallete&lt;/code&gt; and &lt;code&gt;brewer.pal&lt;/code&gt; functions expands the &amp;ldquo;Spectral&amp;rdquo; color pallete from 11 to 14 colors, and we&amp;rsquo;ve organized our Team y-axis to be leveled in order of likelihood of winning the top pick - without factoring in the projections that were used in the @celtics figure.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The Custom Plot Theme&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that we&amp;rsquo;ve prepared our data, we can get to customizing the plot!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- ggplot(odds, aes(Team))
-g &amp;lt;- g + geom_bar(aes(x = Team, y = Probability, fill = Pick),alpha=0.9,stat=&amp;quot;identity&amp;quot;)  
-g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot;Probability&amp;quot;, labels=scales::percent) +
-    labs(x=NULL, y=NULL, title=&amp;quot;2016 NBA Draft Lottery Probabilities&amp;quot;,
-         subtitle = &amp;quot;After tiebreakers and trades. Trades with protections are indicated by a black border, and the receiving team is named. Based on 100,000 simulations&amp;quot;,
-         caption=&amp;quot;Reproduced by: @mikeleeco                  Original: @dsparks                  Source: http://www.nba.com/celtics/news/sidebar/2016-draft-lottery-qa&amp;quot;) +
-    coord_flip() +
-    scale_fill_manual(values = getPalette)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The development version of &lt;a href=&#34;https://github.com/hadley/ggplot2&#34;&gt;ggplot2 on github&lt;/a&gt; features numerous additions including ecpanded arguments for &lt;code&gt;labs&lt;/code&gt; such as subtitles and captions. Check out &lt;code&gt;?ggplot2::labs&lt;/code&gt; or &lt;a href=&#34;https://rud.is/b/2016/03/16/supreme-annotations/&#34;&gt;Bob Rudis&amp;rsquo; post&lt;/a&gt; on his contribution to ggplot2.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g  + theme(
-  axis.text.x = element_text(size=14,margin=margin(b=5),color = &amp;quot;black&amp;quot;),
-  axis.title.x = element_text(size=16),
-  plot.subtitle = element_text(size=14),
-  plot.caption = element_text(size=16,margin = margin(t=20),face = &amp;quot;italic&amp;quot;, hjust = .5),
-  axis.text.y = element_text(size=18,margin = margin(r=-40),colour = &amp;quot;black&amp;quot;),
-  axis.ticks.y=element_blank(),
-  axis.ticks.x=element_blank(),
-  plot.title = element_text(size=30,margin = margin(b=10)),
-  panel.border=element_blank(),
-  panel.grid.major.x=element_line(color=&amp;quot;#2b2b2b&amp;quot;, linetype=&amp;quot;dotted&amp;quot;, size=0.15),
-  panel.grid.major.y=element_blank(),
-  legend.text = element_text(size=14),
-  legend.title = element_text(size=18),
-  legend.key = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;,colour = &amp;quot;#DCDCDC&amp;quot;),
-  legend.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
-  panel.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
-  plot.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;)
-)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As seen in the theme here, the developtmental version of ggplot2 also features elements to customize the new caption and subtitle arguments. Things are looking pretty sharp!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Annotations - Call for Help!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The lottery data has been transformed into a customized plot; the only missing pieces are the transparent rectangular grobs indicating picks with trade implications. I tried a few different methods to programmatically assign labels over the rows in our dataset, none of which gave the desired final output. Instead I used brute force to place transparent rectangles and texts over the appropriate data blocks:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g + annotate(&amp;quot;text&amp;quot;, x = (13.45+12.55)/2, y = .6, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHI&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 12.55, xmax = 13.45, ymin = .555, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
-            annotate(&amp;quot;text&amp;quot;, x = (2.45+1.55)/2, y = .1, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHX&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 1.55, xmax = 2.45, ymin = .021, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
-            annotate(&amp;quot;text&amp;quot;, x = (7.45+6.55)/2, y = .95, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to CHI &amp;gt;&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 6.55, xmax = 7.45, ymin = .999, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There has to be a more efficient method to do this! If you know of a better way please &lt;a href=&#34;http://www.twitter.com/mikeleeco&#34;&gt;contact me on twitter&lt;/a&gt; or create a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd&#34;&gt;pull request on this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
-&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     

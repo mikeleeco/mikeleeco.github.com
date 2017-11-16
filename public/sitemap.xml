@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</loc>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
   </url>
@@ -122,6 +127,10 @@
   </url>
   
   <url>
+    <loc>/posts/2017-11-07-wi-presidential-results-using-hexmapr/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/animation/</loc>
     <lastmod>2017-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -164,7 +173,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -194,7 +203,13 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hexmapr/</loc>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +251,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -272,13 +287,13 @@
   
   <url>
     <loc>/categories/posts/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,7 +317,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
