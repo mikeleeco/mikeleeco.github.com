@@ -4,7 +4,7 @@ comments: false
 ---
 
 ## Professional Profile
-I'm a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I'm able to contribute meaningful work, augmented by strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
+I'm a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work through strong communication skills, critically evaluating challenging data problems, and the attention to diverse audiences across my professional career.
 
 ## Core Compentencies
 
@@ -31,10 +31,11 @@ Demonstrated ability converting both unstructured and clean data into meaningful
 #### Research Associate, American Institutes for Research
 2015 - present
 
-* Co-authored the EdSurvey R package for analysis of survey data including NAEP statistical methods; developed R functions from scratch (in addition to accompanying acceptance tests), two vignettes, and a presentation to synthesize the package’s practical use for researchers
-* Co-authored the NAEPprimer data package on CRAN
-* Collaborated with designers to replicate a visualization using base R graphics tools to produce over 2000 visualizations of student and teacher level survey data to populate a client's summary reports
-* Wrote R scripts to review data sets in longitudinal surveys for compliance with the required data quality objectives
+* Co-authored the EdSurvey R package for analysis of survey data using NCES statistical methods, including the development of R functions from scratch (accompanied by acceptance tests), two vignettes, and presentation of the package’s practical use for researchers at 2016 and 2017 AERA workshops
+* Co-authored the NAEPprimer data package
+* Collaborated with designers to replicate a visualization using base R graphics tools to produce over 2000 visualizations of student and teacher level survey data to populate a client’s summary reports
+* Wrote R scripts to review data sets in longitudinal surveys to meet compliance standards
+* Developed over 5 unique animations for social media distribution
 
 <p></p>
 
@@ -57,6 +58,14 @@ Demonstrated ability converting both unstructured and clean data into meaningful
 * Documented operating procedures for the data department to enhance data infrastructure
 
 <p></p>
+
+#### Special Education Teacher, Milwaukee Public Schools 
+2011 – 2013
+
+* Utilized performance data to develop lesson plans, activities, and interventions appropriate for students with diverse learning needs and disabilities
+* Collaborated with staff to create Individualized Education Programs for students with significant behavioral challenges
+* Moderated behavior charts and implemented effective classroom management techniques
+
 
 ## Education
 
