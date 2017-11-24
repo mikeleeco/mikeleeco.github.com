@@ -20,13 +20,25 @@
 <!-- Social Media Tags -->
 {{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
   <meta property="og:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image" content="{{ . | absURL }}" />
 {{- end }}
   <meta name="twitter:card" content="summary" />
 {{- with .Site.Author.twitter }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />
 {{- end }}
+
+{{ if eq .URL "/" }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="mikeleeco.netlify.com/img/avatar-icon.png" >
+{{ else }}
+  {{ if .Site.Params.bigimg }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="mikeleeco.netlify.com/img/{{ .Params.bigimg }}" >
+  {{ else }}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="mikeleeco.netlify.com/img/{{ .Site.Params.logo }}" >
+{{ end }}
+
 {{- with .Site.Params.fb_app_id }}
   <meta property="fb:app_id" content="{{ . }}" />
 {{- end }}
