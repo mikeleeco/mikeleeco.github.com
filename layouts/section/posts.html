@@ -54,19 +54,36 @@
 
 <!--                   {{ .Content }}
  -->
+
                 {{ end }}
                 </div>
       
-                {{ if .Params.tags }}
+<!--            {{ if .Params.tags }}
                   <span class="post-meta">
                     {{ range .Params.tags }}
                       <span class="post-tags"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span>&nbsp;
                     {{ end }}
                   </span>
-                {{ end }}
+                {{ end }} -->
       
               </article>
             {{ end }}
+
+            {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+              <ul class="pager main-pager">
+                {{ if .Paginator.HasPrev }}
+                  <li class="previous">
+                    <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; Newer Posts }}</a>
+                  </li>
+                {{ end }}
+                {{ if .Paginator.HasNext }}
+                  <li class="next">
+                    <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">Older Posts &rarr;</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+
             </div>
           </div>
         </div>
