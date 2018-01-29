@@ -11,6 +11,34 @@
     <atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Highest and lowest spending states per public education pupil</title>
+      <link>/animation/2019-01-29-animated-line-chart-expenditures/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2019-01-29-animated-line-chart-expenditures/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015: &lt;a href=&#34;https://t.co/FDcsYpjmcj&#34;&gt;https://t.co/FDcsYpjmcj&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Finance?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Finance&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/r5kUgNE4vF&#34;&gt;pic.twitter.com/r5kUgNE4vF&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/956970572189241344?ref_src=twsrc%5Etfw&#34;&gt;January 26, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/barState_Expenditure.gif&#34; alt=&#34;Current Expenditures per pupil in the lowest and highest spending states&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Current Expenditures per pupil in the lowest and highest spending states&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Wisconsin State Hex Grid - Mapping 2016 Presidential Results</title>
       <link>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
