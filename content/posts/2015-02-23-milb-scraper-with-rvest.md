@@ -200,7 +200,7 @@ Stay tuned to the site for another post about similarity scores and to learn mor
 
 <h1>Update (10/3/2017)</h1>
 
-Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found <a href="/baseballReferenceScraperUpdate.R/">here</a>.
+Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found <a href="/baseballReferenceScraperUpdate.R">here</a>.
 
 <hr>
 

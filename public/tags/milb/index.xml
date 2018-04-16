@@ -1048,7 +1048,7 @@ for (teams in teams){ for (season in 2010:2005) {
 
 &lt;h1&gt;Update (10/3/2017)&lt;/h1&gt;
 
-&lt;p&gt;Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found &lt;a href=&#34;/baseballReferenceScraperUpdate.R/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found &lt;a href=&#34;/baseballReferenceScraperUpdate.R&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr&gt;
 
