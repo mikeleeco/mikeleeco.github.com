@@ -11,6 +11,189 @@
     <atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Seasonal Virgin River Narrows Discharge</title>
+      <link>/posts/2018-04-16-hiking-the-narrows/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2018-04-16-hiking-the-narrows/</guid>
+      <description>&lt;p&gt;This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as &lt;em&gt;The Narrows&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/narrows.jpg&#34; alt=&#34;The Narrows in Zion National Park&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;The Narrows in Zion National Park&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;It’s surely even more sensational in person.&lt;/p&gt;
+&lt;p&gt;Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely. Online sources confirmed my intuition that the spring run-off leads to closures, but I was curious the extent of seasonality. Let’s dig into it!&lt;/p&gt;
+&lt;div id=&#34;accessing-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Accessing the data&lt;/h2&gt;
+&lt;p&gt;The provisional data for the East Fork of the Virgin River can be easily &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&amp;amp;begin_date=&amp;amp;end_date=&amp;amp;site_no=09404900&#34;&gt;accessed via the USGS website&lt;/a&gt;, including discharge and gage height. I’ll focus on the discharge levels here, since the speed of the river (and not it’s height) is what seems to precipitate closures. The speed threshold that merits closure of The Narrows was inconsistent across the sites I investigated (if you know leave a comment), but the level I saw most often - 150 cfs - is what I will use.&lt;/p&gt;
+&lt;p&gt;A brief aside: the USGS logs some super interesting data to visualize time series. Here are some continually updated &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&#34;&gt;sources of water data for Utah&lt;/a&gt;, for example. So much to explore!&lt;/p&gt;
+&lt;p&gt;Back to The Narrows data. So we’ve got out the csv and it was completely clean like always the end! Not.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cleaning-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cleaning the data&lt;/h2&gt;
+&lt;p&gt;There was quite a few strange coding choices made through the years accessed (1993 - 2018). What follows are those gory recoding details. One nifty function I learned more about was &lt;code&gt;dplyr::separate&lt;/code&gt; which allows you to specify the direction you’d like to merge the characters you’re separating. This allowed me to push values of &lt;code&gt;0 seconds&lt;/code&gt; ino the seconds column, even though there were some values where there were no adjoining hours or minutes attached. Nifty!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+library(animation)
+library(grid)
+x &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
+x &amp;lt;- x[1:530086,]
+x2 &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows2.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
+x &amp;lt;- rbind(x,x2)
+rm(x2)
+x &amp;lt;- x %&amp;gt;% separate(datetime, c(&amp;quot;date&amp;quot;, &amp;quot;time&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;)
+x$date &amp;lt;- mdy(x$date)
+x$timeparse &amp;lt;- hm(x$time)
+x &amp;lt;- x %&amp;gt;% separate(timeparse, c(&amp;quot;hour&amp;quot;, &amp;quot;minute&amp;quot;, &amp;quot;second&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;, fill = &amp;quot;left&amp;quot;)
+x$hour &amp;lt;- gsub(&amp;quot;H&amp;quot;, &amp;quot;&amp;quot;, x$hour)
+x$minute &amp;lt;- gsub(&amp;quot;M&amp;quot;, &amp;quot;&amp;quot;, x$minute)
+x$second &amp;lt;- gsub(&amp;quot;S&amp;quot;, &amp;quot;&amp;quot;, x$second)
+x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)] &amp;lt;- sapply(x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)], as.numeric)
+x$hour &amp;lt;- ifelse(is.na(x$hour),0 ,x$hour)
+x$minute &amp;lt;- ifelse(is.na(x$minute),0 ,x$minute)
+x$hour &amp;lt;- ifelse(grepl(&amp;quot;PM&amp;quot;, x$time), x$hour + 12,x$hour)
+x$hour &amp;lt;- ifelse(nchar(x$hour) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$hour)),as.character(x$hour))
+x$minute &amp;lt;- ifelse(nchar(x$minute) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$minute)),as.character(x$minute))
+x$second &amp;lt;- ifelse(nchar(x$second) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$second)),as.character(x$second))
+x$hour &amp;lt;- ifelse(grepl(&amp;quot;24&amp;quot;, x$hour), &amp;quot;00&amp;quot;,x$hour)
+x$timeUpdate &amp;lt;- paste(x$hour,x$minute,x$second, sep = &amp;quot;:&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The full data source as an &lt;strong&gt;.Rdata&lt;/strong&gt; file can be accessed through &lt;a href=&#34;https://mikelee.co/data/narrows.Rdata&#34;&gt;this link&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;drill-down-and-visualize&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Drill down and visualize&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt; package make it easy to extract seasonality in the data:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByDay &amp;lt;- x %&amp;gt;% mutate(day = yday(date)) %&amp;gt;%
+  group_by(day) %&amp;gt;%
+  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
+
+dischargeByDay$day &amp;lt;- as.Date(as_date(dischargeByDay$day))
+dischargeByDay$month &amp;lt;- month(dischargeByDay$day, label = TRUE)
+
+plot(dischargeByDay$day, dischargeByDay$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/drill%20down-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This result is convincing on it’s own: on average from 1993 to 2018, after about 100 days and lasting until about the 160th day (Apri 10th - June 10th), the discharge level breaks the 150 cfs threshold that closes The Narrows hiking route.&lt;/p&gt;
+&lt;p&gt;Lets take this result and make it more visually engaging by adding some animation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;start-with-our-skeleton-plot&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Start with our skeleton plot&lt;/h2&gt;
+&lt;p&gt;I’ve been poking around with image dimensions and themes for distribution through twitter, and the following theme seems to be a quality balance between plot elements:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_white &amp;lt;- theme(text = element_text(family=&amp;quot;Open Sans&amp;quot;, color = &amp;quot;black&amp;quot;),
+                     panel.grid = element_blank(),
+                     panel.border = element_blank(),
+                     axis.title.x=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(t=15, b = 0)),
+                     axis.title.y=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(r=15, l = 5)),
+                     axis.text.x=element_text(size=22, hjust = 0, family = &amp;quot;Open Sans Light&amp;quot;),
+                     axis.text.y=element_text(size=22, family = &amp;quot;Open Sans Light&amp;quot;),
+                     axis.ticks = element_blank(),           
+                     plot.title=element_text(size=34,family = &amp;quot;Open Sans Extrabold&amp;quot;,hjust= 0,lineheight=1, margin = margin(t = 15)),
+                     plot.subtitle=element_text(size=26, margin = margin(t=15, b = 5),family = &amp;quot;Open Sans&amp;quot;),
+                     plot.caption=element_text(size=18, hjust = 0,margin=margin(t=15, b = 15),lineheight=1.15, family = &amp;quot;Open Sans&amp;quot;),
+                     legend.position=&amp;quot;none&amp;quot;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s important to impelement limits and breaks in the y and x scales to keep the axes stable when using ggplot2 for animation. Otherwise, the plot axes will expand according to the subset of data used in the figure.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- ggplot(dischargeByDay, aes(x = day, y = avgDischarge, group = 1)) +
+  scale_y_continuous(limits = c(0, 350), expand = c(0,0)) +
+  scale_x_date(date_breaks = &amp;quot;1 month&amp;quot;, date_labels =  &amp;quot;%b&amp;quot;, expand = c(0,0),limits = c(min(dischargeByDay$day)-1,max(dischargeByDay$day)-2)) +
+  labs(title = &amp;quot;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&amp;quot;,
+       subtitle = &amp;quot;If the river is flowing at over 150 Cubic Feet per Second (CFS) the narrows is closed&amp;quot;,
+       caption = &amp;quot;Data Accessed 3/16/2018, retrieved via https://nwis.waterdata.usgs.gov/usa/nwis/uv/&amp;quot;) +
+  xlab(&amp;quot;Date&amp;quot;) + ylab(&amp;quot;Average Discharge&amp;quot;) +
+  theme_bw() + theme_white
+gg&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/gg.png&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We’ll then use &lt;code&gt;tweenr&lt;/code&gt; and &lt;code&gt;animation&lt;/code&gt; to refine the visualization with smooth transitions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;animate-all-the-things&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animate all the things!&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gifReplicate &amp;lt;- function(x) {
+  grid.newpage()
+  grid.draw(x)
+}
+
+yDates &amp;lt;- seq(from = 0, to = max(as.numeric(dischargeByDay$day)), by = 3)
+yDates[1] &amp;lt;- 1
+
+saveGIF({
+
+  for (i in yDates) {
+    
+    gg2 &amp;lt;- gg + geom_point(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day, y = avgDischarge), alpha = .1)
+    g &amp;lt;- ggplotGrob(gg2)
+    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  grid::grid.draw(g); 
+  replicate(10,gifReplicate(g))
+
+  for (i in seq(from =1, to = 366, by = 7)) {
+    
+    gg3 &amp;lt;- gg2 + geom_segment(x = 1, xend = i, y = 150,yend = 150, color= &amp;quot;red&amp;quot;, linetype = 2) 
+    g &amp;lt;- ggplotGrob(gg3)
+    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  for (i in yDates) {
+    
+    gg4 &amp;lt;- gg3 + stat_smooth(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day), se = F, method = &amp;quot;lm&amp;quot;, formula = y ~ poly(x, 20))
+    g &amp;lt;- ggplotGrob(gg4)
+    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
+    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  grid::grid.draw(g); 
+  replicate(100,gifReplicate(g))
+  # grid.draw(gg4)
+  # geom_hline(yintercept = 150, color= &amp;quot;red&amp;quot;, linetype = 2) + 
+  #   geom_line(aes(x=day, y=avgDischarge), size=1.3) +
+},movie.name=paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),interval = .02, ani.width = 1200, ani.height = 800)
+
+gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
+  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
+  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
+  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
+  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
+}
+
+gif_compress(paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),
+             paste0(getwd(),&amp;quot;/narrowsLargeTall.gif&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/narrowsLargeTall.gif&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;addendum---further-data-exploration-needed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Addendum - Further Data Exploration Needed:&lt;/h3&gt;
+&lt;p&gt;After generating this animation and before sitting down to write this post, I explored the data a little bit more. To my delight (or chagrin) there appears to be a daily pattern to the discharge level. Looking at just April results, the discharge level decreases from 2pm to 5pm before reversing course and increasing until about 2am.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByAprilHour &amp;lt;- x %&amp;gt;% filter(month(date) == 4) %&amp;gt;%
+  mutate(day = yday(date)) %&amp;gt;%
+  group_by(hour) %&amp;gt;%
+  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
+plot(dischargeByAprilHour$hour, dischargeByAprilHour$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/daily%20changes%20in%20April-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;An exploration for another day or another analyst!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Highest and lowest spending states per public education pupil</title>
       <link>/animation/2019-01-29-animated-line-chart-expenditures/</link>
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
@@ -1098,112 +1281,6 @@ p + geom_text(data = anns,aes(label =lab), family = &amp;quot;DejaVu Sans Mono&a
 &lt;h4 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h4&gt;
 
 &lt;p&gt;Data with eligible-voter populations and demographic information at the county level might further supplement this exploration by providing a more detailed picture of rural and urban voters beyond raw population and vote totals. Outlets such as &lt;a href=&#34;http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/&#34;&gt;FiveThirtyEight&lt;/a&gt; have used this type of granular data to inform predictive forecasts of elections. Thoughts or questions about the post? Contact me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt; or leave a message in the comments section.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>NBA Draft Odds Plot</title>
-      <link>/posts/2016-06-01-NBA-Draft-Odds-Plot/</link>
-      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2016-06-01-NBA-Draft-Odds-Plot/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Original Source&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; align=&#34;center&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With thanks to &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;@hadleywickham&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/hrbrmstr&#34;&gt;@hrbrmstr&lt;/a&gt;, and &lt;a href=&#34;https://twitter.com/ColorBrewer&#34;&gt;@ColorBrewer&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/hjX39Xhi4P&#34;&gt;https://t.co/hjX39Xhi4P&lt;/a&gt; &lt;a href=&#34;https://t.co/XD27alzwNI&#34;&gt;https://t.co/XD27alzwNI&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Sparks (@dsparks) &lt;a href=&#34;https://twitter.com/dsparks/status/723497233988096004&#34;&gt;April 22, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Package Dependencies and Data&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the &lt;a href=&#34;https://en.wikipedia.org/wiki/2016_NBA_draft&#34;&gt;raw lottery odds&lt;/a&gt;. I fudged some of the data based on how it looked in the plot - not much I can do about that since there wasn&amp;rsquo;t anything programmatically to work from there! &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#devtools::install_github(&amp;quot;hadley/ggplot2&amp;quot;)
-#devtools::install_github(&amp;quot;hadley/tidyr&amp;quot;)
-library(ggplot2)
-library(tidyr)
-library(RCurl)
-library(RColorBrewer)
-dataurl &amp;lt;- &#39;https://gist.githubusercontent.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766/raw/afa955af265d14a2f72780e4e0b87ffe469c0109/odds.csv&#39;
-data &amp;lt;- getURL(dataurl)                
-odds &amp;lt;- read.csv(textConnection(data))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Data Cleanup&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The tidyr package allows us to reshape our data between long and wide formats, RColorBrewer helps generate a fluid color pallete for our plot, and RCurl assists in sourcing the data from &lt;a href=&#34;https://gist.github.com/mikeleeco/268429d0b4019ec30c4e547c16d7f766#file-odds-csv&#34;&gt;my gist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;odds &amp;lt;- gather(odds, X)
-odds[,2] &amp;lt;- substring(odds[,2], 2)
-colnames(odds) &amp;lt;- c(&amp;quot;Team&amp;quot;,&amp;quot;Pick&amp;quot;,&amp;quot;Probability&amp;quot;)
-odds$Pick &amp;lt;- as.numeric(odds$Pick)
-odds$Team &amp;lt;- as.character(odds$Team)
-odds$Team &amp;lt;- factor(odds$Team, levels = odds[1:14,1])
-odds$Team &amp;lt;- factor(odds$Team, levels=rev(levels(odds$Team)))
-odds$Pick &amp;lt;- factor(odds$Pick, levels = 1:14)
-getPalette &amp;lt;- colorRampPalette(brewer.pal(11, &amp;quot;Spectral&amp;quot;))(14)
-odds$Probability &amp;lt;- ifelse(is.na(odds$Probability),0,odds$Probability)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;colorRampPallete&lt;/code&gt; and &lt;code&gt;brewer.pal&lt;/code&gt; functions expands the &amp;ldquo;Spectral&amp;rdquo; color pallete from 11 to 14 colors, and we&amp;rsquo;ve organized our Team y-axis to be leveled in order of likelihood of winning the top pick - without factoring in the projections that were used in the @celtics figure.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The Custom Plot Theme&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that we&amp;rsquo;ve prepared our data, we can get to customizing the plot!&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- ggplot(odds, aes(Team))
-g &amp;lt;- g + geom_bar(aes(x = Team, y = Probability, fill = Pick),alpha=0.9,stat=&amp;quot;identity&amp;quot;)  
-g &amp;lt;- g + scale_y_continuous(breaks = seq(0, 1, by = 0.1),1,name=&amp;quot;Probability&amp;quot;, labels=scales::percent) +
-    labs(x=NULL, y=NULL, title=&amp;quot;2016 NBA Draft Lottery Probabilities&amp;quot;,
-         subtitle = &amp;quot;After tiebreakers and trades. Trades with protections are indicated by a black border, and the receiving team is named. Based on 100,000 simulations&amp;quot;,
-         caption=&amp;quot;Reproduced by: @mikeleeco                  Original: @dsparks                  Source: http://www.nba.com/celtics/news/sidebar/2016-draft-lottery-qa&amp;quot;) +
-    coord_flip() +
-    scale_fill_manual(values = getPalette)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The development version of &lt;a href=&#34;https://github.com/hadley/ggplot2&#34;&gt;ggplot2 on github&lt;/a&gt; features numerous additions including ecpanded arguments for &lt;code&gt;labs&lt;/code&gt; such as subtitles and captions. Check out &lt;code&gt;?ggplot2::labs&lt;/code&gt; or &lt;a href=&#34;https://rud.is/b/2016/03/16/supreme-annotations/&#34;&gt;Bob Rudis&amp;rsquo; post&lt;/a&gt; on his contribution to ggplot2.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g  + theme(
-  axis.text.x = element_text(size=14,margin=margin(b=5),color = &amp;quot;black&amp;quot;),
-  axis.title.x = element_text(size=16),
-  plot.subtitle = element_text(size=14),
-  plot.caption = element_text(size=16,margin = margin(t=20),face = &amp;quot;italic&amp;quot;, hjust = .5),
-  axis.text.y = element_text(size=18,margin = margin(r=-40),colour = &amp;quot;black&amp;quot;),
-  axis.ticks.y=element_blank(),
-  axis.ticks.x=element_blank(),
-  plot.title = element_text(size=30,margin = margin(b=10)),
-  panel.border=element_blank(),
-  panel.grid.major.x=element_line(color=&amp;quot;#2b2b2b&amp;quot;, linetype=&amp;quot;dotted&amp;quot;, size=0.15),
-  panel.grid.major.y=element_blank(),
-  legend.text = element_text(size=14),
-  legend.title = element_text(size=18),
-  legend.key = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;,colour = &amp;quot;#DCDCDC&amp;quot;),
-  legend.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
-  panel.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;),
-  plot.background = element_rect(fill=&amp;quot;#DCDCDC&amp;quot;)
-)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As seen in the theme here, the developtmental version of ggplot2 also features elements to customize the new caption and subtitle arguments. Things are looking pretty sharp!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Annotations - Call for Help!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The lottery data has been transformed into a customized plot; the only missing pieces are the transparent rectangular grobs indicating picks with trade implications. I tried a few different methods to programmatically assign labels over the rows in our dataset, none of which gave the desired final output. Instead I used brute force to place transparent rectangles and texts over the appropriate data blocks:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g &amp;lt;- g + annotate(&amp;quot;text&amp;quot;, x = (13.45+12.55)/2, y = .6, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHI&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 12.55, xmax = 13.45, ymin = .555, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
-            annotate(&amp;quot;text&amp;quot;, x = (2.45+1.55)/2, y = .1, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to PHX&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 1.55, xmax = 2.45, ymin = .021, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;) +
-            annotate(&amp;quot;text&amp;quot;, x = (7.45+6.55)/2, y = .95, alpha = 1,color=&amp;quot;black&amp;quot;, label=&amp;quot;to CHI &amp;gt;&amp;quot;, size= rel(7)) +
-            annotate(&amp;quot;rect&amp;quot;, xmin = 6.55, xmax = 7.45, ymin = .999, ymax = 1, alpha = .3,color=&amp;quot;black&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There has to be a more efficient method to do this! If you know of a better way please &lt;a href=&#34;http://www.twitter.com/mikeleeco&#34;&gt;contact me on twitter&lt;/a&gt; or create a &lt;a href=&#34;https://github.com/mikeleeco/mikeleeco.github.com/blob/master/_source/2016-06-01-NBA-Draft-Odds-Plot.Rmd&#34;&gt;pull request on this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final product:&lt;/strong&gt;
-&lt;div class=&#34;row&#34;&gt;&lt;img src=&#34;/img/draft_odds.png&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
