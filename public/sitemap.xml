@@ -7,7 +7,12 @@
   </url>
   
   <url>
-    <loc>/animation/2019-01-29-animated-line-chart-expenditures/</loc>
+    <loc>/animation/2018-02-12-animated-line-school-revenue/</loc>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2018-01-29-animated-line-chart-expenditures/</loc>
     <lastmod>2018-01-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -144,13 +149,13 @@
   
   <url>
     <loc>/categories/animation/</loc>
-    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +208,7 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2018-01-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
