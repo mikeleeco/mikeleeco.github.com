@@ -1,845 +1,1023 @@
 <!DOCTYPE html>
-<html lang="en">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<html lang="en-us">
 
- <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta name="generator" content="Hugo 0.19" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Michael Lee </title>
 
-  <title>Michael Lee</title>
-  <meta property="og:title" content="Michael Lee" />
-  <meta name="twitter:title" content="Michael Lee" />
-  <meta name="author" content="Michael Lee"/>
-  <link href='/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta property="og:image" content="/img/avatar-icon.png" />
-  <meta name="twitter:image" content="/img/avatar-icon.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@mikeleeco" />
-  <meta name="twitter:creator" content="@mikeleeco" />
-  <meta property="og:url" content="/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Michael Lee" />
+     
+      
+    
+    
+    
+    
+    
 
-  <meta name="generator" content="Hugo 0.19" />
-  <link rel="canonical" href="/" />
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Michael Lee">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="/css/highlight.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
-  <link rel="stylesheet" type="text/css" href="../js/fullPage.js-master/jquery.fullPage.css" />
-
-
-  <style>
-
-
-   
-  * {
-    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
-  }
-
-  h1 {
-    font-size: 5em;
-    color: black;
-    margin:0;
-    padding-right:0px;
-    padding-left:0px;
-  }
-
-  h2 {
-    font-size: 3em;
-    margin:0;
-  } 
-
-  h3 {
-    font-size: 1.9em;
-    margin:0;
-  }
-
-
-  li h4 {
-    font-size: 1.5em;
-    margin:0;
-    padding-right:15px;
-    padding-left:15px;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    margin:0;
-  }
-
-  span {
-    margin:0;
-  }
- 
-  p {
-    font-size: 1.2em;
-    margin:0;
-  }
-
-  .post-item {
-      display: flex;
-      list-style: none;
-      padding-right:1%;
-      padding-left:1%;
-  }
-
-   
-  .section {
-    text-align:center;
-  }
-
-  .dataViz {
-    width:95%;
-    max-width:600px;
-    background: rgba(255, 255, 255, 0.8);
-    background-image: url("/img/hexBackground.gif");
-
-  }
-
-   
-
-  #section0 {
-    background-image: url("/img/hexBackground.gif");
-  }
-
-  #section1 {
-     background-image: url("/img/hexBackground.gif");
-  }
-
-  #section2 {
-     background-image: url("/img/hexBackground.gif");
-     text-align:left;
-  }
-
-  #section3 {
-    background-image: url("/img/hexBackground.gif");
-  }
-  
-  #section4 {
-    background-image: url("/img/hexBackground.gif");
-  }
-
-  #section5 {
-    background-image: url("/img/hexBackground.gif");
-  }
-  
-  #section6 {
-    background-image: url("/img/hexBackground.gif");
-  }   
-  .fp-slidesNav.bottom {
-    bottom: 25px;
-  }
-
-   
-  #infoMenu li a {
-    color: #fff;
-  }
-
-  #section2 h1 {
-    color: #333;
-  }
-
-  .img-circle {
-    border-radius: 50%;
-    padding:15px;
-    padding-top:25px;
-    padding-bottom:25px;
-  }
-
-  #titleLeftSide {
-    background: rgba(255, 255, 255, 0.8);
-    border: 3px solid #f1f1f1;
-  }
-
-  #titleRightSide {
-    background: rgba(255, 255, 255, 0.75);
-    border: 3px solid #f1f1f1;
-    }
-
-  #info {
-    text-align:left;
-    background: rgba(255, 255, 255, 0);
-    }
-
-  #blogCenter h4 { 
-    line-height: 150%;
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  #blogCenter h5 { 
-    line-height: 170%;
-  }
-  #blogCenter {
-    background: rgba(255, 255, 255, 0.8);
-    border: 3px solid #f1f1f1;
-    padding: 40px;
-  }
-
- #sectionList li {
-    margin-left:1%;
-    margin-right:1%;
-  }
+  <meta name="author" content="">
 
  
+    <meta property="og:title" content="Michael Lee" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+
+
+
+<meta property="og:updated_time" content="2018-07-01T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
 
 
  
-
-.container { 
-  width: auto;
-}
-
-.row.is-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.is-flex .box {
-  background: none;
-  position: static;
-}
-
-.headerTitle {
-  color: black;
-}
-@media screen and (max-width : 500px)
-{
-
-  h1 {
-    font-size: 8vw;
-    margin:0;
-  }
-
-  h2 {
-    font-size: 5vw;
-    margin:0;
-  }
-
-  h3 {
-    font-size: 4vw;
-    margin:0;
-  }
-
-
-  li h4 {
-    font-size: .9em;
-    margin:0;
-    padding-right:15px;
-    padding-left:15px;
-    margin-top: 0px;
-  }
-
-  h5 {
-    font-size: .75em;
-    margin:0;
-    text-align:top;
-    margin-top: 0px;
-  }
-
-  ul {
-    margin-left:0%;
-    margin-right:0%;
-  }
-
-  p {
-    font-size: 1em;
-    margin:0;
-  }
-
- #titleLeftSide .img-circle {
-    display: none
-  }
-
- #titleLeftSide .footer-links {
-    display: none
-  }
-
-  #titleRightSide ul {
-    display: none
-  }
-
-  #blogCenter {
-    background: rgba(255, 255, 255, 0.8);
-    border: 3px solid #f1f1f1;
-    padding: 4px;
-
-  }
-
-  #blogCenter h5 { 
-    line-height: 170%;
-  }
-
-  .post-item {
-        display: flex;
-        list-style: none;
-        padding-right:1%;
-        padding-left:1%;
-    }
-}
-
-@media only screen 
-and (min-width : 500px) 
-and (max-width : 800px) {
-
-   h1 {
-    font-size: 8vw;
-    margin:0;
-  }
-
-  h2 {
-    font-size: 5vw;
-    margin:0;
-  }
-
-  h3 {
-    font-size: 4vw;
-    margin:0;
-  }
-
-
-  li h4 {
-    font-size: 3.0vw;
-    margin:0;
-    padding-right:15px;
-    padding-left:15px;
-    margin-top: 0px;
-  }
-
-  h5 {
-    font-size: 2.5vw;
-    margin:0;
-    text-align:top;
-    margin-top: 0px;
-  }
-
-  ul {
-    margin-left:0%;
-    margin-right:0%;
-  }
-
-  p {
-    font-size: 1em;
-    margin:0;
-  }
-
- #titleLeftSide .img-circle {
-    display: none
-  }
-  
-  #blogCenter {
-    background: rgba(255, 255, 255, 0.8);
-    border: 3px solid #f1f1f1;
-    padding: 4px;
-
-  }
-
-  #blogCenter h5 { 
-    line-height: 170%;
-  }
-
-.post-item {
-      display: flex;
-      list-style: none;
-      padding-right:1%;
-      padding-left:1%;
-  }
-}
-
-
- #helpText:before {
-    content: "Click arrows or tap \2192  to view content";
-    font-style: italic;
-    color: #666;
-  }
-
-@media screen and (max-width : 500px)
-{
- #helpText:before {
-    content: "Swipe to view content";
-    font-style: italic;
-    color: #666;
-  }
-}
-
-@media all and (max-width: 1200px) and (min-width: 480px) {
- #helpText:before {
-    content: "Click arrows  \2192  to view content";
-    font-style: italic;
-    color: #666;
-  }
-
-}
+    
 
 
  
-
-@media (max-width: 480px) {
-
-
-}
+    
+     
 
 
-</style>
+
   
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-58518999-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+ 
+    
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Michael Lee" /> 
+    
+    <link rel="canonical" href="/">   <link rel="icon" type="image/png" href="img/avatar-transparent.png">
 
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-  <script type="text/javascript" src="../js/fullPage.js-master/jquery.fullPage.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
-        slidesNavigation: true
-      });
-    });
-  </script>
-
+    <link rel="stylesheet" href="/css/landing.css">   
+    
+    
 </head>
-
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Michael Lee</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="Blog" href="/posts">Blog</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Projects" href="/projects">Projects</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Animation" href="/animation">Animation</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Interactives" href="/interactives">Interactives</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Resume" href="/resume/">Resume</a>
-            </li>
-          
-        
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
 
 
 <body>
+    <header> <nav class="nav has-shadow">
+<div class="nav-left">
+    <a class="nav-item" href="/">
+        <img src="/img/avatar-icon.png" alt="Michael Lee">
+    </a>
+</div>
 
-
-<div id="fullpage">
-
-  <div class="section " id="section1">
-
-    <div class="container">
-      <div class="row is-flex">
-
-
-        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-4 col-xs-12" id="titleLeftSide">
-          <br>
-           <img class="img-circle" src="/img/michael.png" />
-              <h2>Michael Lee</h2>
-              <br>
-              <h3>Research and Data Professional</h3>
-              <br>
-              <ul class="list-inline footer-links">
-              
-                  <li>
-                    <a href="mailto:mdlee12@gmail.com" title="Email me">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/mikeleeco" title="GitHub">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/mikeleeco" title="Twitter">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-            </ul>
-        </div>
-
-        <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" id="titleRightSide">
-          <br>
-
-          <div id ="info">
-            <h2>Biography</h2>
-            <br>
-              <p>
-              I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work, augmented by strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
-              <br><br>
-              I'm from Milwaukee and currently live in Washington, DC.
-              </p>
-          </div>
-              <br>
-          <div>
-              <ul class="list-inline" id="sectionList">
-                  <li><a href="/#secondPage"><h3>Blog</h3></a></li>
-                  <li><a href="/#thirdPage"><h3>Projects</h3></a></li>
-                  <li><a href="/#fourthPage"><h3>Animation</h3></a></li>
-                  <li><a href="/#fifthPage"><h3>Interactives</h3></a></li>
-                  <li><a href="/sixthPage"><h3>Contact</h3></a></li>
-                </ul>
-          </div>
-        </div>
-
-    </div>
-  </div>
-  </div>
-
-  <div class="section" id="section2">
-      <div class="container">
-      <div class="row">
-
-
-        <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12" id="blogCenter">
-        <h1><a href="/posts" class = "headerTitle">Blog</a></h1>
-        <br>
-      
-
+<div class="nav-center">
     
-                <li class="post-item"><h5>04/16/18</h5><a href="/posts/2018-04-16-hiking-the-narrows/"><h4> Seasonal Virgin River Narrows Discharge</h4></a> </li>
 
-            
-                <li class="post-item"><h5>11/16/17</h5><a href="/posts/2017-11-16-wi-presidential-results-using-hexmapr/"><h4> Wisconsin State Hex Grid - Mapping 2016 Presidential Results</h4></a> </li>
+    <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+    </a>
+    
+    
 
-            
-                <li class="post-item"><h5>07/10/17</h5><a href="/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/"><h4> Makeover Monday: WSJ Measles Vaccination Chart</h4></a> </li>
-
-            
-                <li class="post-item"><h5>06/28/17</h5><a href="/posts/2017-06-28-animated-line-chart-coe-bullying/"><h4> Animated Line Chart from Condition of Education 2017 Data Release</h4></a> </li>
-
-            
-                <li class="post-item"><h5>06/28/17</h5><a href="/posts/2017-06-28-wsj-measles-vaccination-chart/"><h4> Reproducing the WSJ Measles Vaccination Chart Using R</h4></a> </li>
-
-            
-                <li class="post-item"><h5>01/05/17</h5><a href="/posts/2016-12-26-wisconsin-presidential-election-results/"><h4> Mapping Wisconsin Presidential Election Results</h4></a> </li>
-
-            
-                <li class="post-item"><h5>06/01/16</h5><a href="/posts/2016-06-01-NBA-Draft-Odds-Plot/"><h4> NBA Draft Odds Plot</h4></a> </li>
-
-            
-                <li class="post-item"><h5>05/24/16</h5><a href="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/"><h4> mikelee.co: Powered by RMarkdown, knitr, and Jekyll</h4></a> </li>
-
-            
-                <li class="post-item"><h5>04/10/16</h5><a href="/posts/2016-05-28-sabr-R-package/"><h4> sabr - R package</h4></a> </li>
-
-            
-                <li class="post-item"><h5>06/10/15</h5><a href="/posts/2015-06-10-video-games-interactive/"><h4> Visualizing Video Games Throughout History</h4></a> </li>
-
-            
-        </div>
-        </div>
-        </div>
-  </div>
-
-  <div class="section" id="section3">
-      <div class="slide" id="slide1" data-anchor="slide1">
-        <h1><a href="/projects" class = "headerTitle">Projects</a></h1>
-        <div id="helpText"></div>
-      </div>
-
-      
-      <div class="slide">
-      <a href="/projects/2017-06-03-EdSurvey-R-package/">
-       <h2>EdSurvey - R package (CRAN)</h2>
-        
-          <img src="/img/edsurvey.png" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <a href="/projects/2017-06-03-NAEPprimer-R-package/">
-       <h2>NAEPprimer - R package (CRAN)</h2>
-        
-          <img src="/img/NAEP.png" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <a href="/projects/2016-05-28-sabr-R-package/">
-       <h2>sabr - R package (GitHub)</h2>
-        
-          <img src="/img/county.jpg" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      
-  </div>
-  
-  <div class="section" id="section4">
-    <div class="slide" id="slide1" data-anchor="slide1">
-      <h1><a href="/animation" class = "headerTitle">Animation</a></h1>
-
-      <div id="helpText"></div>
-
-    </div>
-
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2018-02-12-animated-line-school-revenue/">
-       <h2>Percentage of revenue for elementary and secondary public schools</h2>
-       <br>
-        
-          <img src="/img/lineSchool_Revenue.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2018-01-29-animated-line-chart-expenditures/">
-       <h2>Highest and lowest spending states per public education pupil</h2>
-       <br>
-        
-          <img src="/img/barState_Expenditure.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/">
-       <h2>Percent of Borrowers by Cohort - Animated Bar Chart</h2>
-       <br>
-        
-          <img src="/img/barChart_Loans.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-10-05-animated-bar-chart-twelve-year-debt/">
-       <h2>Median Debt By Educational Attainment - Animated Bar Chart</h2>
-       <br>
-        
-          <img src="/img/barChartLoans_Debt.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-09-22-animated-charter-enrollment-state-grid-map/">
-       <h2>Charter School Enrollment, 2005 to 2015 - Animated State Grid Map</h2>
-       <br>
-        
-          <img src="/img/charter_State.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-09-16-animated-line-chart-pupil-ratio/">
-       <h2>Teacher-Pupil Ratio: Line Chart from COE 2017 Data Release</h2>
-       <br>
-        
-          <img src="/img/line_pupil.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-09-09-animated-line-chart-bachelors-attainment/">
-       <h2>Educational Attainment - Line Chart from COE 2017 Data Release</h2>
-       <br>
-        
-          <img src="/img/line_Bachelors.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/">
-       <h2>Makeover Monday: WSJ Measles Vaccination Chart</h2>
-       <br>
-        
-          <img src="/img/measlesCartogram.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-06-28-wsj-measles-vaccination-chart/">
-       <h2>Reproducing the WSJ Measles Vaccination Chart Using R Animation</h2>
-       <br>
-        
-          <img src="/img/measlesCompress.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/animation/2017-06-28-animated-line-chart-coe-bullying/">
-       <h2>School Bullying by Gender- Line Chart from COE 2017 Data Release</h2>
-       <br>
-        
-          <img src="/img/line_graph_bullying.gif" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      
-  </div>
-
-  <div class="section" id="section5">
-    <div class="slide" id="slide1" data-anchor="slide1">
-      <h1><a href="/interactives" class = "headerTitle">Interactives</a></h1>
-
-      <div id="helpText"></div>
-
-    </div>
-
-      
-      <div class="slide">
-      <br>
-      <a href="/interactives/2015-06-10-genre-interactive/">
-       <h2>Genre Interactive - Visualizing Video Games Throughout History</h2>
-       <br>
-        
-          <img src="/img/genre_interactive.png" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      <div class="slide">
-      <br>
-      <a href="/interactives/2015-06-10-theme-interactive/">
-       <h2>Theme Interactive - Visualizing Video Games Throughout History</h2>
-       <br>
-        
-          <img src="/img/theme_interactive.png" class="dataViz"/>
-        
-      </a>
-      </div>
-      
-      
-  </div>
-
-  <div class="section" id="section6">
-      <h1>Contact</h1>
-      <br>
-              <ul class="list-inline footer-links">
-              
-                  <li>
-                    <a href="mailto:mdlee12@gmail.com" title="Email me">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/mikeleeco" title="GitHub">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/mikeleeco" title="Twitter">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/in/mikeleeco" title="LinkedIn">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://stackoverflow.com/users/5982900/michael-lee" title="StackOverflow">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-            </ul>
-  </div>
+    <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+    </a>
+    
 </div>
 
 
+
+<span class="nav-toggle">
+        <span></span>
+<span></span>
+<span></span>
+</span>
+
+
+
+<div class="nav-right nav-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        
+        
+        <a itemprop="url" class="nav-item is-tab " href="/posts"><span itemprop="name">Blog</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/projects"><span itemprop="name">Projects</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/interactives"><span itemprop="name">Interactives</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/resume/"><span itemprop="name">Resume</span></a>
+        
+</div>
+</nav> </header>
+    <main>
+
+<head>
+
+<style>
+
+   
+ 
+
+  #tab-content section {
+    display: none;
+  }
+
+  #tab-content section.is-active {
+    display: block;
+  }
+
+ 
+
+ul.tileBullet {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+.background {
+  position: relative;
+  height: 300px;
+}
+
+.containerMargins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.michael {
+  -webkit-filter: grayscale(.9);
+  -moz-filter: grayscale(.9);
+  filter: grayscale(.9);
+}
+
+ 
+
+div.imageWrap {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-filter: grayscale(.5);
+  -moz-filter: grayscale(.5);
+  filter: grayscale(.5);
+  border: 2px solid #f5f5f5;
+}
+
+
+div.imageWrap:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+  border: 2px solid black;
+}
+
+.coverTitle {
+  position: absolute;
+  width: 100%;
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition: 0s;
+}
+
+div.background:hover .coverTitle {
+  visibility: visible;
+  color: white;
+  opacity: 1;
+}
+
+div.backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+ 
+
+ 
+
+@media screen and (max-width: 600px) {
+
+  div.imageWrap {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    border: 2px solid black;
+    visibility: visible;
+  }
+
+  div.background {
+    position: relative;
+    background: black;
+    height: 200px;
+    opacity: 1;
+    font-size: 1.2em;
+  }
+
+  div.background .coverTitle {
+    background: #f1f1f1;
+    position: absolute;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  div.background:hover .coverTitle {
+    background: #f1f1f1;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  .coverTitle {
+    position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    visibility: visible;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0s;
+  }
+
+
+  div.backgroundImage {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+   #faIcon {
+    font-size: 1em;
+  }
+
+   #mobileText {
+    font-size: 1em;
+  }
+
+  #lessPadding {
+    padding-left: .1em;
+    padding-right: .2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
+}
+
+</style>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src="/js/filterTab.js"></script>
+<script src="/js/scrollForward.js"></script>
+
+
+
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="columns containerMargins">
+      <div class="column is-marginless is-paddingless">
+        <h1 class="title is-1"><strong>
+          Michael Lee
+        </strong></h1>
+        <h2 class="subtitle is-5">
+           I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. My toolkit includes R, SQL, D3, and LaTeX, and my background in special education assists in making complex concepts accessible.
+        </h2>
+      </div>
+      <div class="column is-marginless is-paddingless">
+        <img src="img/michael.png" class="michael is-pulled-right is-hidden-mobile"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="container is-fluid has-text-centered" style="margin-left: 2.5%;margin-right: 2.5%;">
+
+    <div class="tile is-ancestor" style="flex-wrap: wrap;">
+
+      <div class="tile is-parent">
+        
+        <article class="tile is-child box containerMargins">
+          <h3 class="title is-2">R Programming</h3>
+          <i class="fab fa-r-project" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Co-authored the EdSurvey R package for analysis of survey data using NCES statistical methods, including the development of R functions from scratch (accompanied by acceptance tests), two vignettes, and presentation of the package’s practical use for researchers at 2016, 2017, and 2018 AERA workshops.</li>
+            <li>Co-authored the NAEPprimer data package for connecting to random mini-sample of real data from the 2005 grade 8 NAEP mathematics assessment.</li>
+          </ul>
+        </article>
+
+      </div>
+      <div class="tile is-parent">
+
+        <article class="tile is-child box containerMargins">
+          <h3  class="title is-2">Automated Reporting</h3>
+          <i class="fa fa-magic" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Automated the production of summary reports, each featuring a custom-designed LaTeX template embedded with unique ggplot2 visualizations illustrating data trends.</li>
+            <li>Collaborated with designers to replicate a visualization using base R graphics tools to produce over 2000 visualizations of student and teacher level survey data to populate client summary reports.</li>
+          </ul>
+        </article>
+      
+      </div>
+      <div class="tile is-parent">
+
+        <article class="tile is-child box containerMargins">
+          <h3 class="title is-2">Data Visualization</h3>
+          <i class="fas fa-chart-bar" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Developed over 10 unique animations for social media distribution at <a href="https://twitter.com/EdNCES/" style="color: blue;">twitter.com/EdNCES</a>.</li>
+            <li>Advanced knowledge of ggplot2, the tidyverse, and additional R packages to create animations and print-ready graphics from raw data.</li>
+            <li>Experienced building interactive graphics using D3.js</li>
+          </ul>
+        </article>
+      
+      </div>
+      <div class="tile is-parent">
+
+        <article class="tile is-child box containerMargins">
+          <h3  class="title is-2">Web Development</h3>
+         <i class="fas fa-code" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Customized Bootstrap and Bulma frameworks featuring HTML and CSS responsive design principles</li>
+            <li>My blog post describing my reproduction of the Wall Street Journal’s famous measles vaccination chart as an animation was featured across <a href="https://www.linkedin.com/feed/update/urn:li:activity:6289485767152529408/" style="color: blue;">DataCamp's social media platforms</a>.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light has-text-centered">
+  <div class="hero-body">
+    <div class="column">
+      <h1 class="title is-2">
+        Take a look at my work
+      </h1>
+      <a href="#workSamples" class="scrollLink"><i class="fa fa-angle-double-down" style=" font-size: 3em;"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-medium is-light has-text-centered" id="workSamples" >
+<div class="container is-fluid" style="margin-left: 2.5%;margin-right: 2.5%;">
+
+  
+  <div class="tabs is-small is-boxed is-centered" id="tabs">
+    <ul>
+      <li class="is-active" data-tab="1">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-location-arrow fa-spin"></i></span>
+          <span id="mobileText">Animation</span>
+        </a>
+      </li>
+      <li data-tab="2">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-chart-line"></i></span>
+          <span id="mobileText">Interactives</span>
+        </a>
+      </li>
+      <li data-tab="3">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-file-code"></i></span>
+          <span id="mobileText">Projects</span>
+        </a>
+      </li>
+      <li data-tab="4">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-keyboard"></i></span>
+          <span id="mobileText">Posts</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  
+  <div id="tab-content">
+    <section class="is-active" data-content="1">
+      <div class="columns is-multiline">
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2018-02-12-animated-line-school-revenue/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Percentage of revenue for elementary and secondary public schools</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/lineSchool_Revenue.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2018-01-29-animated-line-chart-expenditures/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Highest and lowest spending states per public education pupil</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/barState_Expenditure.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Percent of Borrowers by Cohort - Animated Bar Chart</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/barChart_Loans.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-10-05-animated-bar-chart-twelve-year-debt/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Median Debt By Educational Attainment - Animated Bar Chart</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/barChartLoans_Debt.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-09-22-animated-charter-enrollment-state-grid-map/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Charter School Enrollment, 2005 to 2015 - Animated State Grid Map</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/charter_State.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-09-16-animated-line-chart-pupil-ratio/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Teacher-Pupil Ratio: Line Chart from COE 2017 Data Release</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/line_pupil.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-09-09-animated-line-chart-bachelors-attainment/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Educational Attainment - Line Chart from COE 2017 Data Release</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/line_Bachelors.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Makeover Monday: WSJ Measles Vaccination Chart</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/measlesCartogram.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-06-28-wsj-measles-vaccination-chart/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Reproducing the WSJ Measles Vaccination Chart Using R Animation</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/measlesCompress.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item animation">
+          <a href="/animation/2017-06-28-animated-line-chart-coe-bullying/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">School Bullying by Gender- Line Chart from COE 2017 Data Release</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/line_graph_bullying.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+      </div>
+    </section>
+
+    <section data-content="2">
+      <div class="columns is-multiline">
+      
+       
+ 
+        <div class="column is-4 grid-item interactives">
+          <a href="/interactives/2018-07-01-wsj-measles-interactive/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Measles Vaccination Chart D3 Replication</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/measlesReplication.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+ 
+        <div class="column is-4 grid-item interactives">
+          <a href="/interactives/2015-06-10-genre-interactive/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Genre Interactive - Visualizing Video Games Throughout History</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/genre_interactive.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+ 
+        <div class="column is-4 grid-item interactives">
+          <a href="/interactives/2015-06-10-theme-interactive/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Theme Interactive - Visualizing Video Games Throughout History</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/theme_interactive.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+      </div>
+    </section>
+    <section data-content="3">
+      <div class="columns is-multiline">
+      
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2017-06-03-EdSurvey-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">EdSurvey - R package (CRAN)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/edsurvey.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2017-06-03-NAEPprimer-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">NAEPprimer - R package (CRAN)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/NAEP.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2016-05-28-sabr-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">sabr - R package (GitHub)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/county.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+      </div>
+    </section>
+    <section data-content="4">
+      <div class="columns is-multiline">
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2018-04-16-hiking-the-narrows/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Seasonal Virgin River Narrows Discharge</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/narrowsLargeTall.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2017-11-16-wi-presidential-results-using-hexmapr/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Wisconsin State Hex Grid - Mapping 2016 Presidential Results</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/wiHexPlot.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Makeover Monday: WSJ Measles Vaccination Chart</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/measlesCartogram.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2017-06-28-animated-line-chart-coe-bullying/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Animated Line Chart from Condition of Education 2017 Data Release</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/line_graph_bullying.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2017-06-28-wsj-measles-vaccination-chart/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Reproducing the WSJ Measles Vaccination Chart Using R</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/measlesCompress.gif');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2016-12-26-wisconsin-presidential-election-results/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Mapping Wisconsin Presidential Election Results</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/WisconsinMinnesota.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2016-06-01-NBA-Draft-Odds-Plot/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">NBA Draft Odds Plot</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/draft_odds.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">mikelee.co: Powered by RMarkdown, knitr, and Jekyll</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/jekyll-blog.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2016-05-28-sabr-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">sabr - R package</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/county.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2015-06-10-video-games-interactive/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Visualizing Video Games Throughout History</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/rampage.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2015-03-25-bryant-visualization/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Kris Bryant Performance Projection</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/bryant.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2015-03-25-milb-similarity-scores/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Working with Minor League Similarity Scores</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/bryant2.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+        <div class="column is-4 grid-item posts">
+          <a href="/posts/2015-02-23-milb-scraper-with-rvest/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">Let&#39;s Make a Minor League Baseball Database!</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/bryant.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+       
+
+      </div>
+    </section>
+  </div>
+
+<br>
+
+</div>
+
+</main>
+    <footer> <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Michael Lee - 2018
+      </p>
+    </div>
+  </div>
+</footer> </footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
 </body>
+
 </html>

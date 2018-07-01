@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "title" -}}
+  {{ .Title }} | {{ .Site.Title }}
+{{- end }}
 
-  {{ partial "head.html" . }}
+{{ define "header" }} {{ partial "menu" . }} {{ end }} 
 
-  <body>
+{{ define "main" }}
 
-    {{ partial "nav.html" . }}
-
-    <div role="main" class="container main-content">
-      <div class="text-center">
-        <h1>Whoops, this page doesn't exist.</h1>
-        <img src="{{ .Site.BaseURL }}img/ghostbusters.gif" />
-
-        <h2>Try one of these links instead:</h2>
-        {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-        {{ range $pag.Pages }}
-            <a href="{{ .Permalink }}">
-              <h4 class="post-title">{{ .Title }}</h4>
-            </a>
-        {{ end }}
-        
-      </div>
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+                   <h1>Whoops, this page doesn't exist.</h1>
+                  <img src="{{ .Site.BaseURL }}/img/ghostbusters.gif" />
+                    <br>
+                   <h2><a href="{{ .Site.BaseURL }}">Click here to take me home.</a></h2>
+                  
+                </div>
+                <br>
+            </div>
+        </section>
     </div>
-
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
+</div>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}

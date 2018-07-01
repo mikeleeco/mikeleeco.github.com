@@ -1,0 +1,48 @@
+<!--  https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5553a1.htm
+
+TABLE 2. Reported cases of notifiable diseases,* by geographic division and area — United States, 2011
+
+https://wonder.cdc.gov/nndss/static/2016/annual/2016-table2i.html
+https://www.cdc.gov/mmwr/mmwr_nd/index.html
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Measles Vaccination Chart D3 Replication</title>
+<!-- 		<script src="https://d3js.org/d3.v4.min.js"></script>
+-->		
+	<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+	<body>
+		<script>
+			var pymChild = new pym.Child();
+		</script>
+		<div id="container">
+
+			<h1>Measles Vaccination Chart D3 Replication</h1>
+			<h2>Measles</h2>
+
+			<div id="graphic">
+				<div id="tooltip" class="hidden">
+					<p><span id="stateLabel">State:</span>, <span id="yearValue">2001</span></p>
+					<p><strong>Cases:</strong> <span id="value">100</span></p>
+				</div>
+			</div>
+
+			<p>Note: CDC data from 2003-2012 comes from its Summary of Notifiable Diseases, which publishes yearly rather than weekly and counts confirmed cases as opposed to provisional ones.</p>
+
+			<script src='_script.js'></script>
+
+			<div id="footer">
+				<p><strong>Source:</strong> <a href="http://www.tycho.pitt.edu">Project Tycho</a></p>
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,17 +1,18 @@
 <head>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/postCustom.css" />
+  <link rel="stylesheet" href="/css/postCustom.css" />
 </head>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12 col-lg-offset-0">
+	<div class="column is-full-desktop">
+	    <h1 class="title is-2">
+	        {{ .Title }}
+	    </h1>
+	    <h4>{{ .Date.Format "January 2, 2006" }}</h4>
+	    {{ if .Description }}
+	    	<blockquote itemprop="about">{{ .Description }}</blockquote>
+	    {{ end }}
+	</div>
+  
+  {{ .Content }}
 
-        {{ partial "extraHead.html" . }}
-
-        {{ .Content }}
-
-        {{ partial "pager.html" . }}
-
-    </div>
-  </div>
 </div>

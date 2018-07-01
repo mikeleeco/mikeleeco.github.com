@@ -1,31 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "title" -}}
+  {{ .Title }} | {{ .Site.Title }}
+{{- end }}
 
-  {{ partial "head.html" . }}
+{{ define "header" }} {{ partial "menu" . }} {{ end }} 
 
-  <body>
+{{ define "main" }}
 
-    {{ partial "nav.html" . }}
-    {{ partial "header.html" . }}
 
-    <div class="container" role="main">
-      {{ if eq .Type "posts" }}
-        {{ partial "post.html" . }}
-      {{ else if eq .Type "interactives" }}
-        {{ partial "interactives.html" . }}
-      {{ else if eq .Type "projects" }}
-        {{ partial "projects.html" . }}
-      {{ else if eq .Type "animation" }}
-        {{ partial "animation.html" . }}
-      {{ else if eq .Type "page" }}
-        {{ partial "page.html" . }}
-      {{ else }}
-        NO MATCHING PARTIAL
-        {{.Content}}
-      {{ end }}
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="content container">
+
+                {{ if eq .Type "posts" }}
+                  {{ partial "post.html" . }}
+                {{ else if eq .Type "interactives" }}
+                  {{ partial "interactives.html" . }}
+                {{ else if eq .Type "projects" }}
+                  {{ partial "projects.html" . }}
+                {{ else if eq .Type "animation" }}
+                  {{ partial "animation.html" . }}
+                {{ else if eq .Type "page" }}
+                  {{ partial "page.html" . }}
+                {{ else }}
+                  NO MATCHING PARTIAL
+                  {{.Content}}
+                {{ end }}
+                
+                </div>
+                <br>
+            </div>
+        </section>
     </div>
+</div>
 
-    {{ partial "footer.html" . }}
-
-  </body>
-</html>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}

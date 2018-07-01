@@ -1,11 +1,10 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Michael Lee"
-theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
-disqusShortName = "mikeleeco"
+disqusShortname = "mikeleeco"
 googleAnalytics = "UA-58518999-1"
 
 [Params]
@@ -16,16 +15,6 @@ googleAnalytics = "UA-58518999-1"
   commit = false
   rss = true
   comments = true
-
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
 
 [Author]
   name = "Michael Lee"
@@ -46,13 +35,13 @@ googleAnalytics = "UA-58518999-1"
     weight = 2
 
 [[menu.main]]
-    name = "Animation"
-    url = "/animation"
+    name = "Interactives"
+    url = "/interactives"
     weight = 3
 
 [[menu.main]]
-    name = "Interactives"
-    url = "/interactives"
+    name = "Animation"
+    url = "/animation"
     weight = 4
 
 [[menu.main]]

@@ -1,178 +1,423 @@
-<!DOCTYPE html>
-<html lang="en">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "menu" .}} {{end}} 
 
- {{ partial "titleHead.html" . }}
+{{ define "main" }}
 
-    {{ partial "titleNav.html" . }}
+<head>
 
-<body>
+<style>
+
+  /* Style for our header texts
+  * --------------------------------------- */
+/*  * {
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
+  }*/
+
+  #tab-content section {
+    display: none;
+  }
+
+  #tab-content section.is-active {
+    display: block;
+  }
+
+/*  .box:not(:last-child) {
+      margin-bottom: 0rem
+  }*/
+
+ul.tileBullet {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+.background {
+  position: relative;
+  height: 300px;
+}
+
+.containerMargins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.michael {
+  -webkit-filter: grayscale(.9);
+  -moz-filter: grayscale(.9);
+  filter: grayscale(.9);
+}
+
+/* styling for portfolio examples */
+
+div.imageWrap {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-filter: grayscale(.5);
+  -moz-filter: grayscale(.5);
+  filter: grayscale(.5);
+  border: 2px solid #f5f5f5;
+}
 
 
-<div id="fullpage">
+div.imageWrap:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+  border: 2px solid black;
+}
 
-  <div class="section " id="section1">
+.coverTitle {
+  position: absolute;
+  width: 100%;
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition: 0s;
+}
 
-    <div class="container">
-      <div class="row is-flex">
+div.background:hover .coverTitle {
+  visibility: visible;
+  color: white;
+  opacity: 1;
+}
+
+div.backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
 
 
-        <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-4 col-xs-12" id="titleLeftSide">
-          <br>
-           <img class="img-circle" src="{{ .Site.BaseURL }}img/michael.png" />
-              <h2>Michael Lee</h2>
-              <br>
-              <h3>Research and Data Professional</h3>
-              <br>
-              <ul class="list-inline footer-links">
-              {{ range .Site.Data.beautifulhugo.social.social_icons }}
-              
-                {{- if isset $.Site.Author .id }}
-                  <li>
-                    <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa {{ .icon }} fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                {{- end -}}
-              {{ end }}
-            </ul>
-        </div>
+/*.has-bg-img {
+  background: url('/img/hex.png') center center;
+  background-size:120%;
+}*/
 
-        <div class="col-lg-7 col-md-8 col-sm-8 col-xs-12" id="titleRightSide">
-          <br>
+/* styling for portfolio examples, mobile */
 
-          <div id ="info">
-            <h2>Biography</h2>
-            <br>
-              <p>
-              I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work, augmented by strong communication skills. I understand how to think critically regarding challenging data problems, have strong writing skills, and value the impact of diverse audiences when creating products.
-              <br><br>
-              I'm from Milwaukee and currently live in Washington, DC.
-              </p>
-          </div>
-              <br>
-          <div>
-              <ul class="list-inline" id="sectionList">
-                  <li><a href="{{ .Site.BaseURL }}#secondPage"><h3>Blog</h3></a></li>
-                  <li><a href="{{ .Site.BaseURL }}#thirdPage"><h3>Projects</h3></a></li>
-                  <li><a href="{{ .Site.BaseURL }}#fourthPage"><h3>Animation</h3></a></li>
-                  <li><a href="{{ .Site.BaseURL }}#fifthPage"><h3>Interactives</h3></a></li>
-                  <li><a href="{{ .Site.BaseURL }}sixthPage"><h3>Contact</h3></a></li>
-                </ul>
-          </div>
-        </div>
+@media screen and (max-width: 600px) {
 
+  div.imageWrap {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    border: 2px solid black;
+    visibility: visible;
+  }
+
+  div.background {
+    position: relative;
+    background: black;
+    height: 200px;
+    opacity: 1;
+    font-size: 1.2em;
+  }
+
+  div.background .coverTitle {
+    background: #f1f1f1;
+    position: absolute;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  div.background:hover .coverTitle {
+    background: #f1f1f1;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  .coverTitle {
+    position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    visibility: visible;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0s;
+  }
+
+
+  div.backgroundImage {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+   #faIcon {
+    font-size: 1em;
+  }
+
+   #mobileText {
+    font-size: 1em;
+  }
+
+  #lessPadding {
+    padding-left: .1em;
+    padding-right: .2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
+}
+
+</style>
+
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script src="/js/filterTab.js"></script>
+<script src="/js/scrollForward.js"></script>
+
+
+
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="columns containerMargins">
+      <div class="column is-marginless is-paddingless">
+        <h1 class="title is-1"><strong>
+          Michael Lee
+        </strong></h1>
+        <h2 class="subtitle is-5">
+           I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. My toolkit includes R, SQL, D3, and LaTeX, and my background in special education assists in making complex concepts accessible.
+        </h2>
+      </div>
+      <div class="column is-marginless is-paddingless">
+        <img src="img/michael.png" class="michael is-pulled-right is-hidden-mobile"/>
+      </div>
     </div>
   </div>
-  </div>
+</section>
 
-  <div class="section" id="section2">
-      <div class="container">
-      <div class="row">
+<section class="hero is-small is-light">
+  <div class="container is-fluid has-text-centered" style="margin-left: 2.5%;margin-right: 2.5%;">
 
+    <div class="tile is-ancestor" style="flex-wrap: wrap;">
 
-        <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12" id="blogCenter">
-        <h1><a href="{{ .Site.BaseURL }}posts" class = "headerTitle">Blog</a></h1>
-        <br>
-      
+      <div class="tile is-parent">
+        
+        <article class="tile is-child box containerMargins">
+          <h3 class="title is-2">R Programming</h3>
+          <i class="fab fa-r-project" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Co-authored the EdSurvey R package for analysis of survey data using NCES statistical methods, including the development of R functions from scratch (accompanied by acceptance tests), two vignettes, and presentation of the package’s practical use for researchers at 2016, 2017, and 2018 AERA workshops.</li>
+            <li>Co-authored the NAEPprimer data package for connecting to random mini-sample of real data from the 2005 grade 8 NAEP mathematics assessment.</li>
+          </ul>
+        </article>
 
-    {{ range first 10 (where .Data.Pages "Section" "posts") }}
-                <li class="post-item"><h5>{{ .Date.Format "01/02/06" }}</h5><a href="{{ .Permalink }}"><h4> {{ .Title }}</h4></a> </li>
-
-            {{ end }}
-        </div>
-        </div>
-        </div>
-  </div>
-
-  <div class="section" id="section3">
-      <div class="slide" id="slide1" data-anchor="slide1">
-        <h1><a href="{{ .Site.BaseURL }}projects" class = "headerTitle">Projects</a></h1>
-        <div id="helpText"></div>
       </div>
+      <div class="tile is-parent">
 
-      {{ range where .Data.Pages "Type" "projects" }}
-      <div class="slide">
-      <a href="{{ .Permalink }}">
-       <h2>{{ .Title }}</h2>
-        {{range .Params.bigimg}}
-          <img src="{{ .src }}" class="dataViz"/>
-        {{ end }}
-      </a>
-      </div>
-      {{ end }}
+        <article class="tile is-child box containerMargins">
+          <h3  class="title is-2">Automated Reporting</h3>
+          <i class="fa fa-magic" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Automated the production of summary reports, each featuring a custom-designed LaTeX template embedded with unique ggplot2 visualizations illustrating data trends.</li>
+            <li>Collaborated with designers to replicate a visualization using base R graphics tools to produce over 2000 visualizations of student and teacher level survey data to populate client summary reports.</li>
+          </ul>
+        </article>
       
-  </div>
-  
-  <div class="section" id="section4">
-    <div class="slide" id="slide1" data-anchor="slide1">
-      <h1><a href="{{ .Site.BaseURL }}animation" class = "headerTitle">Animation</a></h1>
+      </div>
+      <div class="tile is-parent">
 
-      <div id="helpText"></div>
+        <article class="tile is-child box containerMargins">
+          <h3 class="title is-2">Data Visualization</h3>
+          <i class="fas fa-chart-bar" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Developed over 10 unique animations for social media distribution at <a href="https://twitter.com/EdNCES/" style="color: blue;">twitter.com/EdNCES</a>.</li>
+            <li>Advanced knowledge of ggplot2, the tidyverse, and additional R packages to create animations and print-ready graphics from raw data.</li>
+            <li>Experienced building interactive graphics using D3.js</li>
+          </ul>
+        </article>
+      
+      </div>
+      <div class="tile is-parent">
 
+        <article class="tile is-child box containerMargins">
+          <h3  class="title is-2">Web Development</h3>
+         <i class="fas fa-code" style=" font-size: 5em;"></i>
+          <ul class="has-text-left tileBullet">
+            <li>Customized Bootstrap and Bulma frameworks featuring HTML and CSS responsive design principles</li>
+            <li>My blog post describing my reproduction of the Wall Street Journal’s famous measles vaccination chart as an animation was featured across <a href="https://www.linkedin.com/feed/update/urn:li:activity:6289485767152529408/" style="color: blue;">DataCamp's social media platforms</a>.</li>
+          </ul>
+        </article>
+
+      </div>
     </div>
-
-      {{ range where .Data.Pages "Type" "animation" }}
-      <div class="slide">
-      <br>
-      <a href="{{ .Permalink }}">
-       <h2>{{ .Title }}</h2>
-       <br>
-        {{range .Params.bigimg}}
-          <img src="{{ .src }}" class="dataViz"/>
-        {{ end }}
-      </a>
-      </div>
-      {{ end }}
-      
   </div>
+</section>
 
-  <div class="section" id="section5">
-    <div class="slide" id="slide1" data-anchor="slide1">
-      <h1><a href="{{ .Site.BaseURL }}interactives" class = "headerTitle">Interactives</a></h1>
-
-      <div id="helpText"></div>
-
+<section class="hero is-small is-light has-text-centered">
+  <div class="hero-body">
+    <div class="column">
+      <h1 class="title is-2">
+        Take a look at my work
+      </h1>
+      <a href="#workSamples" class="scrollLink"><i class="fa fa-angle-double-down" style=" font-size: 3em;"></i></a>
     </div>
+  </div>
+</section>
 
-      {{ range where .Data.Pages "Type" "interactives" }}
-      <div class="slide">
-      <br>
-      <a href="{{ .Permalink }}">
-       <h2>{{ .Title }}</h2>
-       <br>
-        {{range .Params.bigimg}}
-          <img src="{{ .src }}" class="dataViz"/>
-        {{ end }}
-      </a>
-      </div>
-      {{ end }}
+<section class="hero is-medium is-light has-text-centered" id="workSamples" >
+<div class="container is-fluid" style="margin-left: 2.5%;margin-right: 2.5%;">
+
+  <!-- div that contains the tabs, as well as the ids -->
+  <div class="tabs is-small is-boxed is-centered" id="tabs">
+    <ul>
+      <li class="is-active" data-tab="1">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-location-arrow fa-spin"></i></span>
+          <span id="mobileText">Animation</span>
+        </a>
+      </li>
+      <li data-tab="2">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-chart-line"></i></span>
+          <span id="mobileText">Interactives</span>
+        </a>
+      </li>
+      <li data-tab="3">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-file-code"></i></span>
+          <span id="mobileText">Projects</span>
+        </a>
+      </li>
+      <li data-tab="4">
+        <a id="lessPadding">
+          <span id="faIcon" class="icon is-small"><i class="fas fa-keyboard"></i></span>
+          <span id="mobileText">Posts</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- div that contains the content of the tab selected -->
+  <div id="tab-content">
+    <section class="is-active" data-content="1">
+      <div class="columns is-multiline">
       
+      {{ range where .Data.Pages "Type" "animation" }} <!-- start type: animation -->
+
+        <div class="column is-4 grid-item animation">
+          <a href="{{ .Permalink }}">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">{{ .Title }}</p>
+                
+                {{range .Params.bigimg}} <!-- start image -->
+                
+                <div class="backgroundImage" style="background-image: url('{{ .src }}');"></div>
+                
+                {{ end }} <!-- end image -->
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+      {{ end }} <!-- end type: animation -->
+
+      </div>
+    </section>
+
+    <section data-content="2">
+      <div class="columns is-multiline">
+      
+      {{ range where .Data.Pages "Type" "interactives" }} <!-- start type: interactives -->
+ 
+        <div class="column is-4 grid-item interactives">
+          <a href="{{ .Permalink }}">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">{{ .Title }}</p>
+                
+                {{range .Params.bigimg}} <!-- start image -->
+                
+                <div class="backgroundImage" style="background-image: url('{{ .src }}');"></div>
+                
+                {{ end }} <!-- end image -->
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+      {{ end }} <!-- end type: interactives -->
+
+      </div>
+    </section>
+    <section data-content="3">
+      <div class="columns is-multiline">
+      
+      {{ range where .Data.Pages "Type" "projects" }} <!-- start type: projects -->
+
+        <div class="column is-4 grid-item projects">
+          <a href="{{ .Permalink }}">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">{{ .Title }}</p>
+                
+                {{range .Params.bigimg}} <!-- start image -->
+                
+                <div class="backgroundImage" style="background-image: url('{{ .src }}');"></div>
+                
+                {{ end }} <!-- end image -->
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+      {{ end }} <!-- end type: projects -->
+
+      </div>
+    </section>
+    <section data-content="4">
+      <div class="columns is-multiline">
+      
+      {{ range where .Data.Pages "Type" "posts" }} <!-- start type: posts -->
+
+        <div class="column is-4 grid-item posts">
+          <a href="{{ .Permalink }}">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">{{ .Title }}</p>
+                
+                {{range .Params.bigimg}} <!-- start image -->
+                
+                <div class="backgroundImage" style="background-image: url('{{ .src }}');"></div>
+                
+                {{ end }} <!-- end image -->
+
+              </div>
+            </div>
+          </a>
+        </div>
+      
+      {{ end }} <!-- end type: posts -->
+
+      </div>
+    </section>
   </div>
 
-  <div class="section" id="section6">
-      <h1>Contact</h1>
-      <br>
-              <ul class="list-inline footer-links">
-              {{ range .Site.Data.beautifulhugo.social.social_icons }}
-                {{- if isset $.Site.Author .id }}
-                  <li>
-                    <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
-                      <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa {{ .icon }} fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                  </li>
-                {{- end -}}
-              {{ end }}
-            </ul>
-  </div>
+<br>
+
 </div>
 
+{{ end }} 
 
-</body>
-</html>
+{{ define "footer" }} {{ partial "footer" .}} {{ end }}
+

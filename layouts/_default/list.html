@@ -1,72 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "header" }} {{ partial "menu" . }} {{ end }} 
 
-  {{ partial "head.html" . }}
+{{ define "main" }}
 
-  <body>
-
-    {{ partial "nav.html" . }}
-
-    <header class="header-section ">
-      <div class="intro-header no-img">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-lg-offset-0">
-              <div class="page-heading">
-                <h1>{{ .Title }}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="container" role="main">
-      <div class="row">
-          <div class="posts-list">
-            {{ $pag := .Paginate (where .Data.Pages "Type" "posts") }}
-            {{ range $pag.Pages }}
-              <article class="post-preview">
-                <a href="{{ .Permalink }}">
-                  <h2 class="post-title">{{ .Title }}</h2>
-                </a>
-
-                  {{ if .Params.subtitle }}
-                    <h3 class="post-subtitle">
-                      {{ .Params.subtitle }}
-                    </h3>
-                  {{ end }}
-      
-                <p class="post-meta">
-                  Posted on {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
-                </p>
-                <div class="post-entry">
-                {{ if .Truncated }}
-
-                  {{slicestr .Summary 0 200 | markdownify }}
-
-                  <a href="{{ .Permalink }}" class="post-read-more">[Read&nbsp;More]</a>
-                {{ else }}
-<!-- 
-                  {{ .Content }}
- -->
-                {{ end }}
+<div class="columns is-fullheight">
+    <div class="column">
+        <section class="hero is-default is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    {{ range .Paginator.Pages }} {{ partial "page-summary" . }} {{ end }}
                 </div>
-      
-                {{ if .Params.tags }}
-                  <span class="post-meta">
-                    {{ range .Params.tags }}
-                      <span class="post-tags"><a href="/tags/{{ . | urlize }}">#{{ . }}</a></span>&nbsp;
-                  {{ end }}
-                  </span>
-                {{ end }}
-      
-              </article>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    {{ partial "footer.html" . }}
+                <br>
+                <div class="container">
+                    {{ partial "pagination" . }} 
+                </div>
+            </div>
+        </section>
+    </div>
 
-  </body>
-</html>
+</div>
+{{ end }} 
+{{ define "footer" }} 
+  {{ partial "footer" . }} 
+{{ end }}
