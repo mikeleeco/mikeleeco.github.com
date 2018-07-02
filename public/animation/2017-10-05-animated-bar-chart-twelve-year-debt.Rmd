@@ -9,6 +9,7 @@ tags:
 - ggplot2
 - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'The median cumulative amount owed 12 years after beginning postsecondary education, by educational attainment: 2003-04 cohort'
 bigimg: [{src: "/img/barChartLoans_Debt.gif", desc: "Twelve Year Median Debt Bar Chart"}]
 ---
   

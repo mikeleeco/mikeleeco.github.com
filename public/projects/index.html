@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects | Michael Lee</title>
+    <title> Michael Lee </title>
 
      
       
@@ -123,84 +123,293 @@ ga('send', 'pageview');
 </nav> </header>
     <main>
 
-<div class="columns is-fullheight">
-    <div class="column">
-        <section class="hero is-default is-bold">
-            <div class="hero-body">
-                <div class="container">
-                     <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
-    <h1 class="blog-timestamp">
-        
-    </h1>
-    <h1 class="title">
-        <a href="/projects/2017-06-03-EdSurvey-R-package/" itemprop="headline">EdSurvey - R package (CRAN)</a>
-    </h1>
-    
-    <h2 class="content" itemprop="description">
-         Package Description The EdSurvey package is a tool to read and analyze functions for education surveys and assessments data from the National Center for Education Statistics, including the National Assessment of Educational Progress (NAEP). Due to the large file sizes and complex formatting of NCES data sets, the package offers user-friendly methods to format and conduct statisitical analyses with a small memory footprint.
-For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http://www.air.org/project/nces-data-r-project-edsurvey  
-        <div class="button is-small">
-            <a href="/projects/2017-06-03-EdSurvey-R-package/" itemprop="url">Read More…</a>
-        </div>
-    </h2>
-</div>
-  <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
-    <h1 class="blog-timestamp">
-        
-    </h1>
-    <h1 class="title">
-        <a href="/projects/2017-06-03-NAEPprimer-R-package/" itemprop="headline">NAEPprimer - R package (CRAN)</a>
-    </h1>
-    
-    <h2 class="content" itemprop="description">
-        Package Description The NAEP Primer package contains a random mini-sample of real data from the 2005 grade 8 mathematics assessment that have been approved for public use. This includes two data files, as well as a system control file that corresponds to each data file to read in and format for further processing. The NAEP Primer is designed to simplify access to the NAEP database and make its technologies more user-friendly in NAEP data analysis.
-        <div class="button is-small">
-            <a href="/projects/2017-06-03-NAEPprimer-R-package/" itemprop="url">Read More…</a>
-        </div>
-    </h2>
-</div>
-  <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
-    <h1 class="blog-timestamp">
-        
-    </h1>
-    <h1 class="title">
-        <a href="/projects/2016-05-28-sabr-R-package/" itemprop="headline">sabr - R package (GitHub)</a>
-    </h1>
-    
-    <h2 class="content" itemprop="description">
-        The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:
-        <div class="button is-small">
-            <a href="/projects/2016-05-28-sabr-R-package/" itemprop="url">Read More…</a>
-        </div>
-    </h2>
-</div>
- 
-                </div>
-                <br>
-                <div class="container">
-                    <div class="tabs">
-    <p class="control">
-        
-    </p>
-    <p class="control">
-        <a class="button">
-           Page 1 of 1
-        </a>
-    </p>
-    <p class="control">
-        
-    </p>
-</div> 
-                </div>
-            </div>
-        </section>
-    </div>
+<head>
 
+<style>
+
+   
+  * {
+    font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
+  }
+
+  #tab-content section {
+    display: none;
+  }
+
+  #tab-content section.is-active {
+    display: block;
+  }
+
+ 
+
+ul.tileBullet {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+.background {
+  position: relative;
+  height: 300px;
+}
+
+.description {
+  position: relative;
+  height: 300px;
+}
+
+.containerMargins {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.michael {
+  -webkit-filter: grayscale(.9);
+  -moz-filter: grayscale(.9);
+  filter: grayscale(.9);
+}
+
+ 
+
+div.imageWrap {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-filter: grayscale(.5);
+  -moz-filter: grayscale(.5);
+  filter: grayscale(.5);
+  border: 2px solid #f5f5f5;
+}
+
+
+div.imageWrap:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+  border: 2px solid black;
+}
+
+.coverTitle {
+  position: absolute;
+  width: 100%;
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition: 0s;
+}
+
+div.background:hover .coverTitle {
+  visibility: visible;
+  color: white;
+  opacity: 1;
+}
+
+div.backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+ 
+
+ 
+
+@media screen and (max-width: 600px) {
+
+  div.imageWrap {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    border: 2px solid black;
+    visibility: visible;
+  }
+
+  div.background {
+    position: relative;
+    background: black;
+    height: 200px;
+    opacity: 1;
+    font-size: 1.2em;
+  }
+
+  div.background .coverTitle {
+    background: #f1f1f1;
+    position: absolute;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  div.background:hover .coverTitle {
+    background: #f1f1f1;
+    color: black;
+    visibility: visible;
+    opacity: 1;    
+  }
+
+  .coverTitle {
+    position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    visibility: visible;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: 0s;
+  }
+
+
+  div.backgroundImage {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+   #faIcon {
+    font-size: 1em;
+  }
+
+   #mobileText {
+    font-size: 1em;
+  }
+
+  #lessPadding {
+    padding-left: .1em;
+    padding-right: .2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
+}
+
+</style>
+
+</head>
+
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="columns containerMargins">
+      <div class="column is-marginless is-paddingless">
+        <h1 class="title is-1"><strong>
+          Projects
+        </strong></h1>
+        <h2 class="subtitle is-5">
+           
+        </h2>
+      </div>
+      <div class="column is-marginless is-paddingless is-hidden-touch">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-medium is-light has-text-centered" id="workSamples" >
+<div class="container is-fluid" style="margin-left: 2.5%;margin-right: 2.5%;">
+
+
+  
+    <section class="is-active" data-content="1">
+      <div class="columns is-multiline">
+      
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2017-06-03-EdSurvey-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">EdSurvey - R package (CRAN)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/edsurvey.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-8 description is-hidden-touch has-text-left">
+          
+               <a href="/projects/2017-06-03-EdSurvey-R-package/"><p class="title is-2 is-spaced">EdSurvey - R package (CRAN)</p></a>
+                
+                
+                <p class="subtitle is-4 "></p>
+                
+        </div>
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2017-06-03-NAEPprimer-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">NAEPprimer - R package (CRAN)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/NAEP.png');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-8 description is-hidden-touch has-text-left">
+          
+               <a href="/projects/2017-06-03-NAEPprimer-R-package/"><p class="title is-2 is-spaced">NAEPprimer - R package (CRAN)</p></a>
+                
+                
+                <p class="subtitle is-4 "></p>
+                
+        </div>
+       
+
+        <div class="column is-4 grid-item projects">
+          <a href="/projects/2016-05-28-sabr-R-package/">
+            <div class="imageWrap">
+              <div class="background">
+                <p class="title coverTitle">sabr - R package (GitHub)</p>
+                
+                 
+                
+                <div class="backgroundImage" style="background-image: url('/img/county.jpg');"></div>
+                
+                 
+
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column is-8 description is-hidden-touch has-text-left">
+          
+               <a href="/projects/2016-05-28-sabr-R-package/"><p class="title is-2 is-spaced">sabr - R package (GitHub)</p></a>
+                
+                
+                <p class="subtitle is-4 "></p>
+                
+        </div>
+       
+
+      </div>
+    </section>
 </div>
+</section>
+
 </main>
-    <footer> 
-  <footer class="footer">
+    <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
@@ -208,8 +417,7 @@ For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http
       </p>
     </div>
   </div>
-</footer> 
-</footer>
+</footer> </footer>
 
     <script async type="text/javascript" src="/js/bulma.js"></script>
 </body>

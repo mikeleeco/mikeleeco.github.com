@@ -10,6 +10,7 @@ tags:
 - gganimate
 - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015'
 bigimg: [{src: "/img/barState_Expenditure.gif", desc: "Current Expenditures per pupil in the lowest and highest spending states"}]
 ---
   

@@ -11,6 +11,34 @@
     <atom:link href="/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016</title>
+      <link>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt;, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW &lt;a href=&#34;https://twitter.com/hashtag/COE2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#COE2018&lt;/a&gt; Spotlight: &lt;a href=&#34;https://t.co/Yr9DzkGYMS&#34;&gt;https://t.co/Yr9DzkGYMS&lt;/a&gt; &lt;a href=&#34;https://t.co/o7AvnRRjcH&#34;&gt;pic.twitter.com/o7AvnRRjcH&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/999323515215020034?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/lineEducationLoans.gif&#34; alt=&#34;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Seasonal Virgin River Narrows Discharge</title>
       <link>/posts/2018-04-16-hiking-the-narrows/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
@@ -222,6 +250,24 @@ NEW Finding: Federal sources accounted for approx. 9% of the total funding for &
     </item>
     
     <item>
+      <title>Stacked Area Chart - US Education Enrollment</title>
+      <link>/animation/2018-03-05-stacked-area-chart-enrollment/</link>
+      <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2018-03-05-stacked-area-chart-enrollment/</guid>
+      <description>&lt;hr /&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/public_Enrollment.gif&#34; alt=&#34;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Highest and lowest spending states per public education pupil</title>
       <link>/animation/2018-01-29-animated-line-chart-expenditures/</link>
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
@@ -415,6 +461,34 @@ wiHexPlot&lt;/code&gt;&lt;/pre&gt;
 wiSquarePlot&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/posts/2017-11-16-wi-presidential-results-using-hexmapr_files/figure-html/join%20election%20results%20to%20sf%20object-2.png&#34; width=&#34;1800&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
+&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>High School Attainment - Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-10-19-high-school-attainment-rates/</link>
+      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-10-19-high-school-attainment-rates/</guid>
+      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Animation seen here:&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+DYK? Gaps in HS completion rates between White students and Black and Hispanic students have narrowed. Learn more: &lt;a href=&#34;https://t.co/N6geIyokVp&#34;&gt;https://t.co/N6geIyokVp&lt;/a&gt; &lt;a href=&#34;https://t.co/tZtA6jVI30&#34;&gt;pic.twitter.com/tZtA6jVI30&lt;/a&gt;
+&lt;/p&gt;
+— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/921050270049718273?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full image:&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/line_High_School.gif&#34; alt=&#34;COE 2017 High School Attainment Line Graph Animation&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;COE 2017 High School Attainment Line Graph Animation&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -638,279 +712,6 @@ Gaps remain in &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&#34
       <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2017-06-28-animated-line-chart-coe-bullying/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here!&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. &lt;a href=&#34;https://t.co/5BlyLdHS9W&#34;&gt;https://t.co/5BlyLdHS9W&lt;/a&gt; &lt;a href=&#34;https://t.co/Fr1pTt8xca&#34;&gt;pic.twitter.com/Fr1pTt8xca&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;May 3, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/line_graph_bullying.gif&#34; alt=&#34;COE 2017 Bullying Line Graph Animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;COE 2017 Bullying Line Graph Animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducing the WSJ Measles Vaccination Chart Using R</title>
-      <link>/posts/2017-06-28-wsj-measles-vaccination-chart/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2017-06-28-wsj-measles-vaccination-chart/</guid>
-      <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
-&lt;p&gt;Recently I’ve been working on creating gif animations for &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;social media&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-New from &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. &lt;a href=&#34;https://t.co/5BlyLdHS9W&#34;&gt;https://t.co/5BlyLdHS9W&lt;/a&gt; &lt;a href=&#34;https://t.co/Fr1pTt8xca&#34;&gt;pic.twitter.com/Fr1pTt8xca&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/859807520881344512&#34;&gt;May 3, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;It’s pretty addicting! And not as complicated as it appears. Let’s walk through the creation of a gif using R.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;wall-street-journal-measles-vaccination-chart&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Wall Street Journal Measles Vaccination Chart&lt;/h2&gt;
-&lt;p&gt;One of the more compelling data visualizations produced in recent years is the following representation of measles incidence from 1928 to 2003 produced by the Wall Street Journal graphics team:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measles.png&#34; alt=&#34;Wall Street Journal&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Wall Street Journal&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;In the two years after its release, many prominent data journalists, designers, and developers have analyzed/applauded the design decisions in the chart, which urge the reader to its take-home message: the introduction of the measles vaccine &lt;strong&gt;drastically&lt;/strong&gt; reduced the incidence of the virus.&lt;/p&gt;
-&lt;p&gt;Recognizing it’s merit, let’s accentuate that take-home message by adding the element of animation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;download-dependent-packages-and-prep-the-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Download dependent packages and prep the data&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reshape2)
-library(dplyr)
-library(extrafont)
-library(ggplot2)
-library(gganimate)
-library(animation)
-library(grid)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We’ll use &lt;code&gt;reshape2&lt;/code&gt; and &lt;code&gt;dplyr&lt;/code&gt; to manipulate the data, &lt;code&gt;ggplot2&lt;/code&gt; to plot it, &lt;code&gt;gganimate&lt;/code&gt; for a first animation exploration, and &lt;code&gt;animation&lt;/code&gt; and &lt;code&gt;grid&lt;/code&gt; for a customized finished product.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;download-and-prep-the-data-everything-is-a-remix&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Download and prep the data (&lt;a href=&#34;https://vimeo.com/139094998&#34;&gt;everything is a remix&lt;/a&gt;)&lt;/h2&gt;
-&lt;p&gt;The heavy data prep and plotting for this plot has been done already! Much of this code comes from [this site] (&lt;a href=&#34;https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/&#34; class=&#34;uri&#34;&gt;https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/&lt;/a&gt;), with small improvements and the inclusion of some omitted pieces. From that site, I’ve relinked the steps to download the data:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Register and login to “Project Tycho“&lt;/li&gt;
-&lt;li&gt;Go to level 1 data, then Search and retrieve data&lt;/li&gt;
-&lt;li&gt;Now change a couple of options: geographic level := state; disease outcome := incidence&lt;/li&gt;
-&lt;li&gt;Add all states (highlight all at once with Ctrl+A (or Cmd+A on Macs)&lt;/li&gt;
-&lt;li&gt;Hit submit and scroll down to Click here to download results to excel&lt;/li&gt;
-&lt;li&gt;Open in excel and export to CSV&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Once we’ve got the data and you’ve set your working directory, lets read in the file and reshape it:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;measles &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/animation_samples/measles/measles.csv&amp;quot;, skip=2)
-measles &amp;lt;- melt(measles, id.var=c(&amp;quot;YEAR&amp;quot;, &amp;quot;WEEK&amp;quot;))
-colnames(measles) &amp;lt;- c(&amp;quot;year&amp;quot;, &amp;quot;week&amp;quot;, &amp;quot;state&amp;quot;, &amp;quot;cases&amp;quot;)
-measles$cases &amp;lt;- ifelse(measles$cases==&amp;quot;\u002D&amp;quot;,NA,measles$cases)
-measles$cases &amp;lt;- as.numeric(measles$cases)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;One piece I wanted to replicate was the state abbreviations used in the figure. I used the &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations&#34;&gt;AP style guide&lt;/a&gt;, and you can access that csv through &lt;a href=&#34;https://mikelee.co/data/stateName.csv&#34;&gt;this link&lt;/a&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;stateAP &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/animation_samples/measles/stateName.csv&amp;quot;)
-stateAP$stateName &amp;lt;- toupper(stateAP$stateName)
-measles$state &amp;lt;- stateAP$stateAP[match(measles$state,stateAP$stateName)]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, we’ll create our measles data frame by summarizing the incidence of measles occurring in each state by year, while also recoding instances in which state’s have no incidence/values for a given year as NAs.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mdf &amp;lt;- measles %&amp;gt;% group_by(state, year) %&amp;gt;% 
-  summarise(incidence=if(all(is.na(cases))) NA else
-    sum(cases, na.rm=T))
-mdf$state &amp;lt;- factor(mdf$state, levels=rev(levels(mdf$state)))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;create-the-figure-using-ggplot2&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Create the figure using &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;We’ll pull the colors directly from the &lt;a href=&#34;http://graphics.wsj.com/infectious-diseases-and-vaccines/js/script.min.js&#34;&gt;WSJ javascript source code&lt;/a&gt;. We’ll also load the &lt;em&gt;Open Sans&lt;/em&gt; family of fonts via &lt;code&gt;loadfonts()&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cols&amp;lt;- c(&amp;quot;#e7f0fa&amp;quot;, #lighter than light blue
-         &amp;quot;#c9e2f6&amp;quot;, #light blue
-         &amp;quot;#95cbee&amp;quot;, #blue
-         &amp;quot;#0099dc&amp;quot;, #darker blue
-         &amp;quot;#4ab04a&amp;quot;, #green
-         &amp;quot;#ffd73e&amp;quot;, #yellow
-         &amp;quot;#eec73a&amp;quot;, #mustard
-         &amp;quot;#e29421&amp;quot;, #dark khaki (?)
-         &amp;quot;#f05336&amp;quot;, #orange red
-         &amp;quot;#ce472e&amp;quot;) #red
-extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Nifty!&lt;/p&gt;
-&lt;p&gt;Let’s shift to making the plot. The majority of the figure is generated via these three function calls:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- ggplot(mdf, aes(y=state, x=year, fill=incidence)) + 
-  geom_tile(colour=&amp;quot;white&amp;quot;,
-            width=.9, height=.9) + theme_minimal() +
-  scale_fill_gradientn(colours=cols, limits=c(0, 4000),
-                       values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1), 
-                       na.value=rgb(246, 246, 246, max=255),
-                       labels=c(&amp;quot;0k&amp;quot;, &amp;quot;1k&amp;quot;, &amp;quot;2k&amp;quot;, &amp;quot;3k&amp;quot;, &amp;quot;4k&amp;quot;),
-                       guide=guide_colourbar(ticks=T, nbin=50,
-                                             barheight=.5, label=T, 
-                                             barwidth=10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The most contentious design decision made by the WSJ authors is undoubtedly the color scale. Aligning gradient color values (in our chart as &lt;code&gt;values=c(0, 0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5, 1)&lt;/code&gt;) so that one portion of the scale is weighted more prominently than the other accentuates the message of the chart; some might see this as ambiguous or misleading - it’s challenging to ascribe what value a given color stands for. Once we have the skeleton for our plot, we can add an appropriate x axis scale, vaccine introduction line, and figure labels:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- gg +
-  scale_x_continuous(expand=c(0,0), 
-                     breaks=seq(1930, 2010, by=10)) +
-  geom_segment(x=1963, xend=1963, y=0, yend=51.5, size=.9) +
-  labs(x=&amp;quot;&amp;quot;, y=&amp;quot;&amp;quot;, fill=&amp;quot;&amp;quot;) +
-  ggtitle(&amp;quot;Measles&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, we’ll add in our theme.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- gg +
-  theme(legend.position=c(.5, -.13),
-        legend.direction=&amp;quot;horizontal&amp;quot;,
-        legend.text=element_text(colour=&amp;quot;grey20&amp;quot;),
-        plot.margin=grid::unit(c(.5,.5,1.5,.5), &amp;quot;cm&amp;quot;),
-        axis.text.y=element_text(size=6, family=&amp;quot;Open Sans Regular&amp;quot;, 
-                                 hjust=1),
-        axis.text.x=element_text(size=8, family=&amp;quot;Open Sans Regular&amp;quot;),
-        axis.ticks.y=element_blank(),
-        panel.grid=element_blank(),
-        title=element_text(hjust=-.07, vjust=1, 
-                           family=&amp;quot;Open Sans Semibold&amp;quot;),
-        text=element_text(family=&amp;quot;Open Sans&amp;quot;)) +
-  annotate(&amp;quot;text&amp;quot;, label=&amp;quot;Vaccine introduced&amp;quot;, x=1963, y=53, 
-           vjust=1, hjust=0, size=I(3), family=&amp;quot;Open Sans&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Voila!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2017-06-28-wsj-measles-vaccination-chart_files/figure-html/gg-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;explore-the-ggplot2-object-with-gganimate&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Explore the &lt;code&gt;ggplot2&lt;/code&gt; object with &lt;code&gt;gganimate&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;It’s dang easy to create an animation using &lt;code&gt;gganimate&lt;/code&gt;. Just add &lt;code&gt;frame&lt;/code&gt; to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to iterate over the data years, so &lt;code&gt;.frame = year&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gganimate(gg, &amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/gganimate_measles.gif&#34; alt=&#34;Measles Animation using gganimate&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Measles Animation using gganimate&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;That’s a great start! Though this could be further developed using &lt;code&gt;gganimate&lt;/code&gt; I prefer to use the &lt;code&gt;animation&lt;/code&gt; package’s &lt;code&gt;saveGIF&lt;/code&gt; function since I prefer the method in which multiple images can be called within one call.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;refine-our-gif-using-animation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Refine our gif using &lt;code&gt;animation&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;The main idea behind creating our animation will be iteratively printing images of larger subsets of our data set. In the for-loop, &lt;code&gt;subset(mdf, year&amp;lt;=1928+i-1)&lt;/code&gt; takes the i-th value to subset the data year used in the figure. For example, for i==5, the data years 1928 through 1932 will appear in that image.&lt;/p&gt;
-&lt;p&gt;Besides this change, and the addition of &lt;code&gt;frame=year&lt;/code&gt;, our ggplot2 call is nearly the same (I bumped up the font sizes to correspond with a larger image size). One supplement to the chart is the addition of pauses at critical points in the figure: in 1963 (when the measles vaccine was introduced) and in 2003 (the final data year of the figure). We’ll use if statements to determine whether pieces of the plot should be “drawn” given the circumstances of the subset. Here’s our final code:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;saveGIF(
-  for (i in 1:76) {
-    
-    gg &amp;lt;- ggplot(subset(mdf, year&amp;lt;=1928+i-1), aes(y=state, x=year, fill=incidence, frame=year)) + 
-      geom_tile(colour=&amp;quot;white&amp;quot;, 
-                width=.9, height=.9) + theme_minimal() +
-      scale_fill_gradientn(colours=cols, limits=c(0, 4000),
-                           values=c(0,0.01, 0.02, 0.03, 0.09, 0.1, .15, .25, .4, .5,1), 
-                           na.value=rgb(246, 246, 246, max=255),
-                           labels=c(&amp;quot;0k&amp;quot;, &amp;quot;1k&amp;quot;, &amp;quot;2k&amp;quot;, &amp;quot;3k&amp;quot;, &amp;quot;4k&amp;quot;),
-                           guide=guide_colourbar(ticks=T, nbin=50,
-                                                 barheight=2, label=T, 
-                                                 barwidth=40)) +
-      scale_x_continuous(expand=c(0,0), 
-                         breaks=seq(1930, 2010, by=10), limits = c(1928,2003))
-    
-        # add in vertical line for data year &amp;gt;= 1963 (when the vaccine was introduced) 
-      if(max(subset(mdf, year&amp;lt;=1928+i-1)$year) &amp;gt;= 1963) {
-        
-     gg &amp;lt;- gg + geom_segment(x=1963, xend=1963, y=0, yend=51.5, size=1.5) +
-          annotate(&amp;quot;text&amp;quot;, label=&amp;quot;Vaccine introduced&amp;quot;, x=1963, y=53, 
-                   vjust=1, hjust=0, size=I(10), family=&amp;quot;Open Sans&amp;quot;)
-      } else {
-        # doesn&amp;#39;t add vertical lineif before 1963! instead annotate with text &amp;quot;&amp;quot;
-        gg &amp;lt;- gg +
-          annotate(&amp;quot;text&amp;quot;, label=&amp;quot;&amp;quot;, x=1963, y=53, 
-                   vjust=1, hjust=0, size=I(10), family=&amp;quot;Open Sans&amp;quot;)
-      }
-    gg &amp;lt;- gg + labs(x=&amp;quot;&amp;quot;, y=&amp;quot;&amp;quot;, fill=&amp;quot;&amp;quot;) +
-      ggtitle(&amp;quot;Measles&amp;quot;) +
-      theme(legend.position=c(.5, -.075),
-            legend.direction=&amp;quot;horizontal&amp;quot;,
-            legend.text=element_text(colour=&amp;quot;grey20&amp;quot;, size = 22, family=&amp;quot;Open Sans Regular&amp;quot;),
-            plot.margin=grid::unit(c(.5,.5,2.5,.5), &amp;quot;cm&amp;quot;),
-            axis.text.y=element_text(size=22, family=&amp;quot;Open Sans Regular&amp;quot;, 
-                                     hjust=1),
-            axis.text.x=element_text(size=22,family=&amp;quot;Open Sans Regular&amp;quot;,margin=margin(10,0,0,0,&amp;quot;pt&amp;quot;)),
-            axis.ticks.y=element_blank(),
-            axis.line.x=element_line(colour = &amp;quot;grey50&amp;quot;),
-            axis.ticks.length=unit(.5, &amp;quot;cm&amp;quot;),
-            axis.ticks.x=element_line(colour = &amp;quot;grey50&amp;quot;),
-            panel.grid=element_blank(),
-            title=element_text(hjust=-.07, vjust=1, size = 36,
-                               family=&amp;quot;Open Sans Semibold&amp;quot;),
-            text=element_text(family=&amp;quot;Open Sans&amp;quot;))
-
-    # adding in pauses for data year == 1963 (when the vaccine was introduced) and 2003 (the last year in our data)
-    # the replicate() function will take a ggplot2 object and print it n-times via grid.draw()
-    if(max(subset(mdf, year&amp;lt;=1928+i-1)$year) == 1963) {
-      replicate(30,grid.draw(gg))
-    } else if (max(subset(mdf, year&amp;lt;=1928+i-1)$year) == 2003) {
-        replicate(30,grid.draw(gg))
-  } else {
-  print(gg)
-}
-  }
-  ,movie.name=&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;,interval = .1, ani.width = 2050, ani.height = 1550)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measles.gif&#34; alt=&#34;Measles Animation using animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Measles Animation using animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;addendum---gif-file-size-management&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Addendum - Gif File Size Management:&lt;/h3&gt;
-&lt;p&gt;Customized gifs can get super large. The version above tops of at 73.4 MB! We’ll need to reduce that size for . One source for an #rstats solution is this site -&lt;a href=&#34;http://stla.github.io/stlapblog/posts/AnimatedGifs.html&#34; class=&#34;uri&#34;&gt;http://stla.github.io/stlapblog/posts/AnimatedGifs.html&lt;/a&gt; - which uses the open source tool &lt;a href=&#34;https://github.com/kohler/gifsicle&#34;&gt;gifsicle&lt;/a&gt; to reduce gif file sizes. Let’s port this author’s &lt;code&gt;gif_compress&lt;/code&gt; script to minimize our measles gif:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
-  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
-  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
-  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
-  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
-}
-gif_compress(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;,&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&amp;quot;,extra.opts=&amp;quot;--colors 256&amp;quot;)
-
-file.size(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 73367241&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file.size(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 24104452&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Still large but more manageable.&lt;/p&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducing the WSJ Measles Vaccination Chart Using R Animation</title>
-      <link>/animation/2017-06-28-wsj-measles-vaccination-chart/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2017-06-28-wsj-measles-vaccination-chart/</guid>
-      <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
-&lt;p&gt;See the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;wall-street-journal-measles-vaccination-chart&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Wall Street Journal Measles Vaccination Chart&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measles.png&#34; alt=&#34;Wall Street Journal&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Wall Street Journal&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reproduced-animation-using-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Reproduced Animation Using R&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/measlesCompress.gif&#34; alt=&#34;Measles Animation using animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Measles Animation using animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>School Bullying by Gender- Line Chart from COE 2017 Data Release</title>
-      <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
-      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2017-06-28-animated-line-chart-coe-bullying/</guid>
       <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Animation seen here!&lt;/h2&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;

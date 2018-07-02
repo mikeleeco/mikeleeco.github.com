@@ -6,6 +6,7 @@ date: 2015-06-10
 comments: true
 hidden: true
 categories: ["interactives"]
+description: "A interactive heatmap visualizing the MobyGames videogames database by genre."
 bigimg: [{src: "/img/genre_interactive.png", desc: "Genre Interactive"}]
 ---
 

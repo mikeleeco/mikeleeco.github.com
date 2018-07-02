@@ -7,12 +7,22 @@
   </url>
   
   <url>
+    <loc>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2018-04-16-hiking-the-narrows/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/animation/2018-02-12-animated-line-school-revenue/</loc>
+    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2018-03-05-stacked-area-chart-enrollment/</loc>
     <lastmod>2018-02-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,6 +34,11 @@
   <url>
     <loc>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</loc>
     <lastmod>2017-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2017-10-19-high-school-attainment-rates/</loc>
+    <lastmod>2017-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -147,20 +162,20 @@
   </url>
   
   <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <loc>/categories/animation/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/animation/</loc>
-    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
+    <loc>/tags/animation/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -213,13 +228,13 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2018-02-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -339,7 +354,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

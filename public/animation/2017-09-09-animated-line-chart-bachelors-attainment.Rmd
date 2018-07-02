@@ -10,6 +10,7 @@ tags:
   - gganimate
   - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'The 2016 White-Black and White-Hispanic gaps in bachelor’s degree attainment rates were not measurably different from the gaps in 2000'
 bigimg: [{src: "/img/line_Bachelors.gif", desc: "COE 2017 Bachelors Attainment Line Graph Animation"}]
 ---
 

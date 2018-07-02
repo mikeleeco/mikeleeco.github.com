@@ -10,6 +10,7 @@ tags:
 - gganimate
 - R
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'Federal sources accounted for approx. 9% of the total funding for #K12 public schools in both 2005–06 and 2014 –15.'
 bigimg: [{src: "/img/lineSchool_Revenue.gif", desc: "Percentage of revenue for elementary and secondary public schools"}]
 ---
   
