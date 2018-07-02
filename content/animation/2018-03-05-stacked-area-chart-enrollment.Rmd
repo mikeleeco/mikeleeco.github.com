@@ -12,7 +12,8 @@ tags:
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016'
 bigimg: [{src: "/img/public_Enrollment.gif", desc: "Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016"}]
----
+ hidden = true
+ ---
   
 ```{r setup knitr, echo = FALSE, warning = FALSE}
 library(knitr)
