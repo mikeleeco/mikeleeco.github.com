@@ -2,6 +2,11 @@
 title: Resume
 comments: false
 ---
+<style>
+	* {
+	font-family: 'Lato', 'Open Sans', 'Lora', 'Lucida Sans Unicode', Arial, sans-serif;
+	}
+</style>
 
 ## Professional Profile
 I'm a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work through strong communication skills, critically evaluating challenging data problems, and the attention to diverse audiences across my professional career.

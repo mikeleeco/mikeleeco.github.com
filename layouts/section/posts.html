@@ -106,7 +106,7 @@ div.backgroundImage {
 
 /* styling for portfolio examples, mobile */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
   div.imageWrap {
     background-color: white;
@@ -232,7 +232,12 @@ div.backgroundImage {
                <a href="{{ .Permalink }}"><p class="title is-2 is-spaced">{{ .Title }}</p></a>
                 
                 
-                <p class="subtitle is-4 ">{{ .Description }}</p>
+                    <h2 class="content" itemprop="description">
+                        {{ .Summary }}
+                        <div class="button is-small">
+                            <a href="{{ .RelPermalink }}" itemprop="url">Read More…</a>
+                        </div>
+                    </h2>
                 
         </div>
       {{ end }} <!-- end type: posts -->
