@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2018-09-05-stacked-area-chart-enrollment/</loc>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</loc>
+    <lastmod>2018-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2018-08-07-animated-faceted-line-chart-student-loan-masters/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url>
@@ -163,19 +173,19 @@
   
   <url>
     <loc>/tags/animation/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/animation/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -204,7 +214,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,13 +238,13 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -288,7 +298,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -354,7 +364,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
