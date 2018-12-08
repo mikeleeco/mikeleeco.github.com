@@ -554,29 +554,6 @@ layout: true
 
 ---
 layout: true
-# Bar Chart - Static version
----
-
-.left-code[
-```{r gapminder-split-bar, fig.show="hide"}
-ggplot(gapminder,
-  aes(x = gdpPercap,
-      y = lifeExp,
-      size = pop,
-      color = continent)) +
-geom_point() +
-scale_x_log10() +
-theme_classic()
-```
-]
-
-
-.right-plot[
-![](`r knitr::fig_chunk("gapminder-split-bar", "png")`)
-]
-
----
-layout: true
 #  Bar Chart - Static version
 ---
 
@@ -584,7 +561,11 @@ layout: true
 
 ```{r gapminder-bar, fig.show="hide"}
 # subset gapminder countries
-countries <- gapminder %>% filter(country %in% c("Afghanistan", "Albania", "Algeria", "Argentina", "Australia"))
+countries <- gapminder %>%
+  filter(country %in% 
+           c("Afghanistan", "Albania",
+             "Algeria", "Argentina",
+             "Australia"))
 
 ggplot(subset(countries,
               year == max(countries$year)),
@@ -693,7 +674,9 @@ p <- ggplot(data = countries, aes(country, gdpPercap, fill = country)) +
   geom_col() +
   ggtitle(countries$year) +
   theme_classic() +
-  transition_states(states = year, transition_length = 3, state_length = 1) + #<<
+  transition_states(states = year, #<<
+                    transition_length = 3, #<<
+                    state_length = 1) + #<<
   ease_aes('linear')
 ```
 ]
@@ -785,7 +768,7 @@ layout: true
 ---
 
 .left-code[
-```{r gifskiGapminderLine, message= FALSE, message= FALSE, warning=FALSE, eval = TRUE, cache=TRUE}
+```{r gifskiGapminderLine, message= FALSE, message= FALSE, warning=FALSE, eval = FALSE, cache=TRUE}
 save_gif(
   expr = makePlot(), 
   gif_file = 'images/gifskiGapminderLine.gif',
