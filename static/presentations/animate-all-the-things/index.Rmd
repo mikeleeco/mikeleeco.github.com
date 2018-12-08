@@ -2,7 +2,7 @@
 title: "Animate all the things:<br>"
 subtitle: "Methods for Animated Visualization in R"
 author: "Michael Lee<br>@mikeleeco"
-date: "Slides and code: **bit.ly/**"
+date: "Slides and code: **bit.ly/animateDC**"
 output:
   xaringan::moon_reader:
     lib_dir: libs
