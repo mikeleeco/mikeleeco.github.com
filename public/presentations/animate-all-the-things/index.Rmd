@@ -215,6 +215,12 @@ layout: true
 # Animation Development Workflow
 ---
 
+---
+class: font35
+layout: true
+# Animation Development Workflow
+---
+
 1. 
 
 2. Structure your data to create frames that move across the dimension of interest
@@ -259,12 +265,6 @@ gif_file <- file.path(paste0(getwd(), '/images/gifskiGapminderBubbleChoppy.gif')
 save_gif(makePlot(), gif_file, 1280, 720, res = 144, delay = .5)
 ```
 ]
-
----
-class: font35
-layout: true
-# Animation Development Workflow
----
 
 ---
 class: font35
@@ -456,7 +456,6 @@ layout: true
 `gganimate` doesn't require data preparation (interpolation) before plotting
   - `transition_time`: indicates the variable to interpolate data over (`year`)
   - `ease_aes`: indicates the easing method
-Sets our plot limits by default! :D
 ]
 
 .right-code-anim[
