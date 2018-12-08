@@ -6,7 +6,7 @@ date: 2018-07-01
 comments: true
 hidden: true
 categories: ["interactives"]
-description: "A interactive heatmap visualizing the measles incidence for US States from 1928-2016."
+description: "An interactive heatmap visualizing the measles incidence for US States from 1928-2016."
 bigimg: [{src: "/img/measlesReplication.png", desc: "Measles Interactive"}]
 ---
 

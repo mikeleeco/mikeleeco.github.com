@@ -71,7 +71,9 @@ ga('send', 'pageview');
 
 <body>
     <header>
-  <nav class="nav has-shadow">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<nav class="nav has-shadow">
 <div class="nav-left">
     <a class="nav-item" href="/">
         <img src="/img/avatar-icon.png" alt="Michael Lee">
@@ -136,7 +138,7 @@ ga('send', 'pageview');
         <a href="/interactives/2018-07-01-wsj-measles-interactive/" itemprop="headline">Measles Vaccination Chart D3 Replication</a>
     </h1>
     
-    <blockquote itemprop="about">A interactive heatmap visualizing the measles incidence for US States from 1928-2016.</blockquote>
+    <blockquote itemprop="about">An interactive heatmap visualizing the measles incidence for US States from 1928-2016.</blockquote>
     
     <h2 class="content" itemprop="description">
          iframe { border: 0; height: 1100px; } .container { margin-left: 20px; margin-right: 20px; padding: 0px; } .footer { margin-left: 20px; margin-right: 20px; padding: 0px; }      var pymParent = new pym.Parent('graphic', '/js/d3samples/measles/measles.html', {});   
@@ -155,7 +157,7 @@ ga('send', 'pageview');
         <a href="/interactives/2015-06-10-genre-interactive/" itemprop="headline">Genre Interactive - Visualizing Video Games Throughout History</a>
     </h1>
     
-    <blockquote itemprop="about">A interactive heatmap visualizing the MobyGames videogames database by genre.</blockquote>
+    <blockquote itemprop="about">An interactive heatmap visualizing the MobyGames videogames database by genre.</blockquote>
     
     <h2 class="content" itemprop="description">
         svg *::selection { background : transparent; width: 700px; height: 500px; margin-left: 30px; font-size: 13px; } svg *::-moz-selection { background:transparent; } svg *::-webkit-selection { background:transparent; } rect.selection { stroke : #333; stroke-dasharray: 4px; stroke-opacity : 0.5; fill : transparent; } rect.cell-border { stroke: #eee; stroke-width:0.3px; } rect.cell-selected { stroke: rgb(51,102,153); stroke-width:0.5px; } rect.cell-hover { stroke: #F00; stroke-width:0.3px; } text.mono { font-size: 9pt; font-family: Andale Mono, Andale Mono; fill: #4a4a4a; } text.
@@ -174,7 +176,7 @@ ga('send', 'pageview');
         <a href="/interactives/2015-06-10-theme-interactive/" itemprop="headline">Theme Interactive - Visualizing Video Games Throughout History</a>
     </h1>
     
-    <blockquote itemprop="about">A interactive heatmap visualizing the MobyGames videogames database by theme.</blockquote>
+    <blockquote itemprop="about">An interactive heatmap visualizing the MobyGames videogames database by theme.</blockquote>
     
     <h2 class="content" itemprop="description">
         svg *::selection { background : transparent; width: 700px; height: 500px; margin-left: 30px; font-size: 13px; } svg *::-moz-selection { background:transparent; } svg *::-webkit-selection { background:transparent; } rect.selection { stroke : #333; stroke-dasharray: 4px; stroke-opacity : 0.5; fill : transparent; } rect.cell-border { stroke: #eee; stroke-width:0.3px; } rect.cell-selected { stroke: rgb(51,102,153); stroke-width:0.5px; } rect.cell-hover { stroke: #F00; stroke-width:0.3px; } text.mono { font-size: 9pt; font-family: Andale Mono, Andale Mono; fill: #4a4a4a; } text.

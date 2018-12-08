@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animate all the things:</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Michael Lee @mikeleeco" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="animate-all-the-things.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Animate all the things:<br>
+## Methods for Animated Visualization in R
+### Michael Lee<br><span class="citation">@mikeleeco</span>
+### Slides and code: <strong>bit.ly/</strong>
+
+---
+
+
+
+
+layout: true
+# Why develop animations?
+---
+
+.pull-left[
+
+## Pros
+
+- Visualization in multiple dimensions
+- Impactful
+- Accessible
+
+]
+
+.pull-right[
+
+## 
+
+]
+
+---
+layout: true
+# Why develop animations? Or not...
+---
+
+.pull-left[
+
+## Pros
+
+- Visualization in multiple dimensions
+- Impactful
+- Accessible
+
+]
+
+.pull-right[
+
+## Cons
+
+- Visualization in multiple dimensions
+- Not explorable
+- Inefficient file format (GIF)
+
+]
+
+---
+layout: true
+# How does all of this work anyway?
+---
+
+- Step 0. Open R graphics device
+
+- Step 1. n-many individual frames are created as image files a directory.
+
+- Step 2. Image files are appended, then removed
+  - Method 1: `animation` package - calls Imagemagick or GraphicsMagick software dependencies
+  - Method 2: `magick` package - ports the Imagemagick capabilities to R without dependencies (`gganimate` also features this capability)
+  - Method 3: `gifski` package - ports the gifski capabilities to R without dependencies (`gganimate` also features this capability)
+
+- Step 3. Animation is output and R graphics device is closed
+
+
+
+---
+class: section-slide
+layout: true
+---
+# Lets make some animations!
+
+---
+
+class: fullscreen, top, center, text-white
+background-image: url("images/allTheThings.png")
+
+.font150[**ANIMATE ALL THE THINGS**]
+
+---
+layout: true
+# Load libraries
+---
+
+
+```r
+# data source and graphics
+library(gapminder)
+library(ggplot2)
+
+# data manipulation and interpolation
+library(dplyr)
+library(tweenr) # install_github("thomasp85/tweenr")
+
+# animation
+library(gganimate) # install_github("thomasp85/gganimate")
+library(gifski)
+library(magick)
+library(animation)
+```
+
+---
+layout: true
+# What we'll be creating
+---
+
+## Chart Types
+- Bubble Chart
+- Bar Chart
+- Line Chart
+
+## Animation Packages
+- gifski
+- gganimate
+
+---
+class: section-slide
+layout: true
+---
+# Bubble Charts
+
+---
+layout: true
+# Bubble Chart - Static version
+---
+
+.left-code[
+
+```r
+ggplot(gapminder,
+  aes(x = gdpPercap,
+      y = lifeExp,
+      size = pop,
+      color = continent)) +
+geom_point() +
+scale_x_log10() +
+theme_classic()
+```
+]
+
+
+.right-plot[
+![](index_files/figure-html/gapminder-split-1.png)
+]
+
+---
+layout: true
+# Bubble Chart
+---
+
+- Data is split into a list of `data.frame`s
+- Each `data.frame` is a frame in the animation
+
+.codeScroll25[
+
+```r
+datalist &lt;- split(gapminder, gapminder$year)
+datalist
+```
+
+```
+## $`1952`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333      779.
+##  2 Albania     Europe     1952    55.2  1282697     1601.
+##  3 Algeria     Africa     1952    43.1  9279525     2449.
+##  4 Angola      Africa     1952    30.0  4232095     3521.
+##  5 Argentina   Americas   1952    62.5 17876956     5911.
+##  6 Australia   Oceania    1952    69.1  8691212    10040.
+##  7 Austria     Europe     1952    66.8  6927772     6137.
+##  8 Bahrain     Asia       1952    50.9   120447     9867.
+##  9 Bangladesh  Asia       1952    37.5 46886859      684.
+## 10 Belgium     Europe     1952    68    8730405     8343.
+## # ... with 132 more rows
+## 
+## $`1957`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1957    30.3  9240934      821.
+##  2 Albania     Europe     1957    59.3  1476505     1942.
+##  3 Algeria     Africa     1957    45.7 10270856     3014.
+##  4 Angola      Africa     1957    32.0  4561361     3828.
+##  5 Argentina   Americas   1957    64.4 19610538     6857.
+##  6 Australia   Oceania    1957    70.3  9712569    10950.
+##  7 Austria     Europe     1957    67.5  6965860     8843.
+##  8 Bahrain     Asia       1957    53.8   138655    11636.
+##  9 Bangladesh  Asia       1957    39.3 51365468      662.
+## 10 Belgium     Europe     1957    69.2  8989111     9715.
+## # ... with 132 more rows
+## 
+## $`1962`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1962    32.0 10267083      853.
+##  2 Albania     Europe     1962    64.8  1728137     2313.
+##  3 Algeria     Africa     1962    48.3 11000948     2551.
+##  4 Angola      Africa     1962    34    4826015     4269.
+##  5 Argentina   Americas   1962    65.1 21283783     7133.
+##  6 Australia   Oceania    1962    70.9 10794968    12217.
+##  7 Austria     Europe     1962    69.5  7129864    10751.
+##  8 Bahrain     Asia       1962    56.9   171863    12753.
+##  9 Bangladesh  Asia       1962    41.2 56839289      686.
+## 10 Belgium     Europe     1962    70.2  9218400    10991.
+## # ... with 132 more rows
+## 
+## $`1967`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1967    34.0 11537966      836.
+##  2 Albania     Europe     1967    66.2  1984060     2760.
+##  3 Algeria     Africa     1967    51.4 12760499     3247.
+##  4 Angola      Africa     1967    36.0  5247469     5523.
+##  5 Argentina   Americas   1967    65.6 22934225     8053.
+##  6 Australia   Oceania    1967    71.1 11872264    14526.
+##  7 Austria     Europe     1967    70.1  7376998    12835.
+##  8 Bahrain     Asia       1967    59.9   202182    14805.
+##  9 Bangladesh  Asia       1967    43.5 62821884      721.
+## 10 Belgium     Europe     1967    70.9  9556500    13149.
+## # ... with 132 more rows
+## 
+## $`1972`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1972    36.1 13079460      740.
+##  2 Albania     Europe     1972    67.7  2263554     3313.
+##  3 Algeria     Africa     1972    54.5 14760787     4183.
+##  4 Angola      Africa     1972    37.9  5894858     5473.
+##  5 Argentina   Americas   1972    67.1 24779799     9443.
+##  6 Australia   Oceania    1972    71.9 13177000    16789.
+##  7 Austria     Europe     1972    70.6  7544201    16662.
+##  8 Bahrain     Asia       1972    63.3   230800    18269.
+##  9 Bangladesh  Asia       1972    45.3 70759295      630.
+## 10 Belgium     Europe     1972    71.4  9709100    16672.
+## # ... with 132 more rows
+## 
+## $`1977`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1977    38.4 14880372      786.
+##  2 Albania     Europe     1977    68.9  2509048     3533.
+##  3 Algeria     Africa     1977    58.0 17152804     4910.
+##  4 Angola      Africa     1977    39.5  6162675     3009.
+##  5 Argentina   Americas   1977    68.5 26983828    10079.
+##  6 Australia   Oceania    1977    73.5 14074100    18334.
+##  7 Austria     Europe     1977    72.2  7568430    19749.
+##  8 Bahrain     Asia       1977    65.6   297410    19340.
+##  9 Bangladesh  Asia       1977    46.9 80428306      660.
+## 10 Belgium     Europe     1977    72.8  9821800    19118.
+## # ... with 132 more rows
+## 
+## $`1982`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1982    39.9 12881816      978.
+##  2 Albania     Europe     1982    70.4  2780097     3631.
+##  3 Algeria     Africa     1982    61.4 20033753     5745.
+##  4 Angola      Africa     1982    39.9  7016384     2757.
+##  5 Argentina   Americas   1982    69.9 29341374     8998.
+##  6 Australia   Oceania    1982    74.7 15184200    19477.
+##  7 Austria     Europe     1982    73.2  7574613    21597.
+##  8 Bahrain     Asia       1982    69.1   377967    19211.
+##  9 Bangladesh  Asia       1982    50.0 93074406      677.
+## 10 Belgium     Europe     1982    73.9  9856303    20980.
+## # ... with 132 more rows
+## 
+## $`1987`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1987    40.8  13867957      852.
+##  2 Albania     Europe     1987    72     3075321     3739.
+##  3 Algeria     Africa     1987    65.8  23254956     5681.
+##  4 Angola      Africa     1987    39.9   7874230     2430.
+##  5 Argentina   Americas   1987    70.8  31620918     9140.
+##  6 Australia   Oceania    1987    76.3  16257249    21889.
+##  7 Austria     Europe     1987    74.9   7578903    23688.
+##  8 Bahrain     Asia       1987    70.8    454612    18524.
+##  9 Bangladesh  Asia       1987    52.8 103764241      752.
+## 10 Belgium     Europe     1987    75.4   9870200    22526.
+## # ... with 132 more rows
+## 
+## $`1992`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1992    41.7  16317921      649.
+##  2 Albania     Europe     1992    71.6   3326498     2497.
+##  3 Algeria     Africa     1992    67.7  26298373     5023.
+##  4 Angola      Africa     1992    40.6   8735988     2628.
+##  5 Argentina   Americas   1992    71.9  33958947     9308.
+##  6 Australia   Oceania    1992    77.6  17481977    23425.
+##  7 Austria     Europe     1992    76.0   7914969    27042.
+##  8 Bahrain     Asia       1992    72.6    529491    19036.
+##  9 Bangladesh  Asia       1992    56.0 113704579      838.
+## 10 Belgium     Europe     1992    76.5  10045622    25576.
+## # ... with 132 more rows
+## 
+## $`1997`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1997    41.8  22227415      635.
+##  2 Albania     Europe     1997    73.0   3428038     3193.
+##  3 Algeria     Africa     1997    69.2  29072015     4797.
+##  4 Angola      Africa     1997    41.0   9875024     2277.
+##  5 Argentina   Americas   1997    73.3  36203463    10967.
+##  6 Australia   Oceania    1997    78.8  18565243    26998.
+##  7 Austria     Europe     1997    77.5   8069876    29096.
+##  8 Bahrain     Asia       1997    73.9    598561    20292.
+##  9 Bangladesh  Asia       1997    59.4 123315288      973.
+## 10 Belgium     Europe     1997    77.5  10199787    27561.
+## # ... with 132 more rows
+## 
+## $`2002`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       2002    42.1  25268405      727.
+##  2 Albania     Europe     2002    75.7   3508512     4604.
+##  3 Algeria     Africa     2002    71.0  31287142     5288.
+##  4 Angola      Africa     2002    41.0  10866106     2773.
+##  5 Argentina   Americas   2002    74.3  38331121     8798.
+##  6 Australia   Oceania    2002    80.4  19546792    30688.
+##  7 Austria     Europe     2002    79.0   8148312    32418.
+##  8 Bahrain     Asia       2002    74.8    656397    23404.
+##  9 Bangladesh  Asia       2002    62.0 135656790     1136.
+## 10 Belgium     Europe     2002    78.3  10311970    30486.
+## # ... with 132 more rows
+## 
+## $`2007`
+## # A tibble: 142 x 6
+##    country     continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       2007    43.8  31889923      975.
+##  2 Albania     Europe     2007    76.4   3600523     5937.
+##  3 Algeria     Africa     2007    72.3  33333216     6223.
+##  4 Angola      Africa     2007    42.7  12420476     4797.
+##  5 Argentina   Americas   2007    75.3  40301927    12779.
+##  6 Australia   Oceania    2007    81.2  20434176    34435.
+##  7 Austria     Europe     2007    79.8   8199783    36126.
+##  8 Bahrain     Asia       2007    75.6    708573    29796.
+##  9 Bangladesh  Asia       2007    64.1 150448339     1391.
+## 10 Belgium     Europe     2007    79.4  10392226    33693.
+## # ... with 132 more rows
+```
+]
+
+
+---
+layout: true
+# Animation Development Workflow
+---
+
+1. 
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. 
+
+4. 
+
+---
+layout: true
+# Bubble Chart with gifski
+---
+
+.left-text-anim[
+`makePlot()` will be passed to our function that saves the animation
+  - iterates over each `data.frame` in our list
+  
+Know your limits
+  - Full range of axes of axes used to set limits of the plot
+]
+
+.right-code-anim[
+
+```r
+makePlot &lt;- function(){
+  lapply(datalist, function(data){
+    p &lt;- ggplot(data, aes(x = gdpPercap,
+                          y = lifeExp, 
+                          size = pop, 
+                          color = continent)) +
+*     scale_y_continuous(limits =c(0, 100)) +
+      geom_point() +
+*     scale_x_log10(limits =  c(200, 140000)) +
+*     scale_size("population", limits=c(0,21000000)) +
+*     guides(color = guide_legend(order=1),
+*            size = guide_legend(order=2)) +
+      ggtitle(paste0(round(data$year,-1), "s")) +
+      theme_classic()
+    print(p)
+  })
+}
+gif_file &lt;- file.path(paste0(getwd(), '/images/gifskiGapminderBubbleChoppy.gif'))
+save_gif(makePlot(), gif_file, 1280, 720, res = 144, delay = .5)
+```
+]
+
+
+---
+layout: true
+# Animation Development Workflow
+---
+
+1. 
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+
+4. 
+
+---
+layout: true
+# Bubble Chart with gifski
+---
+
+.left-text-anim[
+`makePlot()` will be passed to our function that saves the animation
+  - iterates over each `data.frame` in our list
+  
+Know your limits
+  - Full range of axes of axes used to set limits of the plot
+]
+
+.right-code-anim[
+
+```r
+makePlot &lt;- function(){
+  lapply(datalist, function(data){
+    p &lt;- ggplot(data, aes(x = gdpPercap,
+                          y = lifeExp, 
+                          size = pop, 
+                          color = continent)) +
+*     scale_y_continuous(limits =c(0, 100)) +
+      geom_point() +
+*     scale_x_log10(limits =  c(200, 140000)) +
+*     scale_size("population", limits=c(0,21000000)) +
+*     guides(color = guide_legend(order=1),
+*            size = guide_legend(order=2)) +
+      ggtitle(paste0(round(data$year,-1), "s")) +
+      theme_classic()
+    print(p)
+  })
+}
+gif_file &lt;- file.path(paste0(getwd(), '/images/gifskiGapminderBubbleChoppy.gif'))
+save_gif(makePlot(), gif_file, 1280, 720, res = 144, delay = .5)
+```
+]
+
+---
+layout: true
+# Bubble Chart with gifski
+---
+
+![](images/gifskiGapminderBubbleChoppy.gif)
+
+---
+class: section-slide
+layout: true
+---
+# How do we get smooth animations?
+
+---
+layout: true
+# Data Interpolation Using tweenr
+---
+
+- specify the rate of change of a parameter over time
+
+https://easings.net/
+
+
+&lt;img src="images/easings.png" width="50%" height="50%" /&gt;
+
+---
+layout: true
+# Data Interpolation Using tweenr
+---
+
+.codeScroll25[
+
+```r
+datTweened &lt;- tween_states(data = datalist,
+                           tweenlength = 2, statelength = 1,
+                           ease = 'linear', nframes = 100)
+unique(datTweened$year)
+```
+
+```
+##  [1] 1952.000 1952.833 1953.667 1954.500 1955.333 1956.167 1957.000 1957.833 1958.667
+## [10] 1959.500 1960.333 1961.167 1962.000 1962.833 1963.667 1964.500 1965.333 1966.167
+## [19] 1967.000 1967.833 1968.667 1969.500 1970.333 1971.167 1972.000 1972.833 1973.667
+## [28] 1974.500 1975.333 1976.167 1977.000 1977.833 1978.667 1979.500 1980.333 1981.167
+## [37] 1982.000 1982.833 1983.667 1984.500 1985.333 1986.167 1987.000 1987.833 1988.667
+## [46] 1989.500 1990.333 1991.167 1992.000 1992.833 1993.667 1994.500 1995.333 1996.167
+## [55] 1997.000 1997.833 1998.667 1999.500 2000.333 2001.167 2002.000 2002.833 2003.667
+## [64] 2004.500 2005.333 2006.167 2007.000
+```
+]
+
+
+Split `dat` back into a `list`
+
+```r
+datalistTweened &lt;- split(datTweened, datTweened$year)
+```
+
+---
+layout: true
+# Workflow
+---
+
+1. Interpolate your data
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+
+4. 
+
+---
+layout: true
+# Bubble Chart with gifski
+---
+
+.left-text-anim[
+In `makePlot()`, each `data.frame` in the  list `datalistTweened` is created and printed by the graphics device
+]
+
+.right-code-anim[
+
+```r
+makePlot &lt;- function(){
+* lapply(datalistTweened, function(data){
+    p &lt;- ggplot(data, aes(x = gdpPercap,
+                          y = lifeExp, 
+                          size = pop, 
+                          color = continent)) +
+      scale_y_continuous(limits =c(0, 100)) +
+      geom_point() +
+      scale_x_log10(limits =  c(200, 140000)) +
+      scale_size("population", limits=c(0,21000000)) +
+      guides(color = guide_legend(order=1),
+             size = guide_legend(order=2)) +
+      ggtitle(paste0(round(data$year,-1), "s")) +
+      theme_classic()
+*   print(p)
+  })
+}
+```
+]
+
+---
+layout: true
+# Bubble Chart with gifski
+---
+
+.left-code[
+
+```r
+save_gif(
+  expr = makePlot(),
+  gif_file = 'images/gifskiGapminderBubbble.gif',
+  width = 1280, height = 720,
+  res = 144, delay = .05
+)
+```
+]
+
+.right-plot[
+![](images/gifskiGapminderBubbble.gif)
+]
+
+
+---
+layout: true
+# Workflow
+---
+
+1. Interpolate your data
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+
+4. Append and export the frames
+
+
+---
+layout: true
+# Bubble Chart with gganimate
+---
+
+.left-text-anim[
+`gganimate` doesn't require data preparation (interpolation) before plotting
+  - `transition_time`: indicates the variable to interpolate data over (`year`)
+  - `ease_aes`: indicates the easing method
+Sets our plot limits by default! :D
+]
+
+.right-code-anim[
+
+```r
+p &lt;- ggplot(gapminder,
+            aes(x = gdpPercap,
+                y = lifeExp,
+                size = pop,
+                color = continent)
+            ) +
+    geom_point() + theme_classic() +
+	  # Here comes the gganimate specific bits
+*  transition_time(year) +
+*  ease_aes('linear')
+```
+]
+
+---
+layout: true
+# Workflow
+---
+
+1. Interpolate your data
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+
+## gganimate does these internally!
+
+---
+layout: true
+# Bubble Chart with gganimate
+---
+
+.left-code[
+
+```r
+animation &lt;- animate(
+  plot = p,
+  width = 1280,
+  eight = 720,
+  res = 144,
+  fps = 20)
+
+anim_save(
+  filename = 'gganimateGapminderBubbble.gif',
+  animation = animation
+)
+```
+]
+
+.right-plot[
+![](images/gganimateGapminderBubbble.gif)
+]
+
+---
+class: section-slide
+layout: true
+---
+# Bar Charts
+
+---
+layout: true
+# Bar Chart - Static version
+---
+
+.left-code[
+
+```r
+ggplot(gapminder,
+  aes(x = gdpPercap,
+      y = lifeExp,
+      size = pop,
+      color = continent)) +
+geom_point() +
+scale_x_log10() +
+theme_classic()
+```
+]
+
+
+.right-plot[
+![](index_files/figure-html/gapminder-split-bar-1.png)
+]
+
+---
+layout: true
+#  Bar Chart - Static version
+---
+
+.left-code[
+
+
+```r
+# subset gapminder countries
+countries &lt;- gapminder %&gt;% filter(country %in% c("Afghanistan", "Albania", "Algeria", "Argentina", "Australia"))
+
+ggplot(subset(countries,
+              year == max(countries$year)),
+      aes(x = country,
+           y = gdpPercap,
+           fill = country))+
+      geom_col() + 
+      scale_y_continuous(limits = c(0,40000)) +
+      theme_classic()
+```
+]
+
+
+.right-plot[
+![](index_files/figure-html/gapminder-bar-1.png)
+]
+
+---
+layout: true
+# Bar Chart with gifski
+---
+
+Interpolate our data by country and reappend as a list
+
+
+```r
+datalist &lt;- split(countries, countries$year,drop = TRUE)
+datTweened &lt;- tween_states(datalist, tweenlength = 1,
+                           statelength = 0, 'linear', 100)
+datalistTweened &lt;- split(datTweened, datTweened$year)
+```
+
+---
+layout: true
+# Bar Chart with gifski
+---
+
+.left-text-anim[
+`makePlot()` will be passed to our function that saves the animation
+  - iterates over each `data.frame` in our list
+  
+Know your limits
+  - Full range of axes of axes used to set limits of the plot
+]
+
+.right-code-anim[
+
+```r
+makePlot &lt;- function(){
+  lapply(datalistTweened, function(data){
+    p &lt;- ggplot(data = data,
+                aes(x = country,
+                    y = gdpPercap,
+                    fill = country)) +
+      geom_col() + 
+*     scale_y_continuous(limits = c(0,40000)) +
+      ggtitle(paste0(round(data$year,-1), "s")) +
+      theme_classic()
+    print(p)
+  })
+}
+```
+]
+
+---
+layout: true
+# Bar Chart with gifski
+---
+
+.left-code[
+
+```r
+save_gif(
+  expr = makePlot(), 
+  gif_file = 'images/gifskiGapminderBar.gif',
+  width = 720,
+  height = 1280,
+  res = 144,
+  delay = .05
+)
+```
+]
+
+.right-plot[
+![](images/gifskiGapminderBar.gif)
+]
+
+---
+layout: true
+# Bar Chart with gganimate
+---
+
+.left-text-anim[
+`gganimate` doesn't require data preparation (interpolation) before plotting
+  - `transition_states`: indicates the variable to interpolate data over (`year`)
+  - `ease_aes`: indicates the easing method
+]
+
+.right-code-anim[
+
+```r
+p &lt;- ggplot(data = countries, aes(country, gdpPercap, fill = country)) +
+  geom_col() +
+  ggtitle(countries$year) +
+  theme_classic() +
+* transition_states(states = year, transition_length = 3, state_length = 1) +
+  ease_aes('linear')
+```
+]
+
+---
+layout: true
+# Bar Chart with gganimate
+---
+
+.left-code[
+
+```r
+animation &lt;- animate(
+  plot = p,
+  width = 720,
+  height = 1280,
+  res = 144,
+  fps = 20)
+
+anim_save(
+  filename = 'gganimateGapminderBar.gif',
+  animation = animation
+)
+```
+]
+
+.right-plot[
+![](images/gganimateGapminderBar.gif)
+]
+
+---
+class: section-slide
+layout: true
+---
+# Line Charts
+
+
+---
+layout: true
+#  Line Chart - Static version
+---
+
+.left-code[
+
+```r
+ggplot(data = countries,
+       aes(x = year,y = gdpPercap,
+           color = country, group = country)) +
+      geom_line()  +
+      scale_x_continuous(limits = range(countries$year)) + 
+      scale_y_continuous(limits = c(0,40000))
+```
+]
+
+.right-plot[
+![](index_files/figure-html/gapminder-line-1.png)
+]
+
+---
+layout: true
+# Line Chart with gifski
+---
+
+.left-text-anim[
+- use the `datTweened` data frame we interpolated from the 5 countries
+  
+- each frame includes all earlier data
+- iterate across the length of a data set
+]
+
+.right-code-anim[
+
+```r
+makePlot &lt;- function(){
+* for (i in 1:max(datTweened$.frame)) {
+*   p &lt;- ggplot(data = subset(datTweened, .frame &lt;= i),
+                aes(x = year,y = gdpPercap,
+                    color = country, group = country)) +
+      geom_line()  +
+      scale_x_continuous(limits = range(datTweened$year)) + 
+      scale_y_continuous(limits = c(0,40000))
+    print(p)
+  }
+}
+```
+]
+
+---
+layout: true
+# Line Chart with gifski
+---
+
+.left-code[
+
+```r
+save_gif(
+  expr = makePlot(), 
+  gif_file = 'images/gifskiGapminderLine.gif',
+  width = 1280,
+  height = 720,
+  res = 144,
+  delay = .05
+)
+```
+
+```
+## 
+Frame 1 (1%)
+Frame 2 (2%)
+Frame 3 (3%)
+Frame 4 (4%)
+Frame 5 (5%)
+Frame 6 (6%)
+Frame 7 (7%)
+Frame 8 (8%)
+Frame 9 (9%)
+Frame 10 (10%)
+Frame 11 (11%)
+Frame 12 (12%)
+Frame 13 (13%)
+Frame 14 (14%)
+Frame 15 (15%)
+Frame 16 (16%)
+Frame 17 (17%)
+Frame 18 (18%)
+Frame 19 (19%)
+Frame 20 (20%)
+Frame 21 (21%)
+Frame 22 (22%)
+Frame 23 (23%)
+Frame 24 (24%)
+Frame 25 (25%)
+Frame 26 (26%)
+Frame 27 (27%)
+Frame 28 (28%)
+Frame 29 (29%)
+Frame 30 (30%)
+Frame 31 (31%)
+Frame 32 (32%)
+Frame 33 (33%)
+Frame 34 (34%)
+Frame 35 (35%)
+Frame 36 (36%)
+Frame 37 (37%)
+Frame 38 (38%)
+Frame 39 (39%)
+Frame 40 (40%)
+Frame 41 (41%)
+Frame 42 (42%)
+Frame 43 (43%)
+Frame 44 (44%)
+Frame 45 (45%)
+Frame 46 (46%)
+Frame 47 (47%)
+Frame 48 (48%)
+Frame 49 (49%)
+Frame 50 (50%)
+Frame 51 (51%)
+Frame 52 (52%)
+Frame 53 (53%)
+Frame 54 (54%)
+Frame 55 (55%)
+Frame 56 (56%)
+Frame 57 (57%)
+Frame 58 (58%)
+Frame 59 (59%)
+Frame 60 (60%)
+Frame 61 (61%)
+Frame 62 (62%)
+Frame 63 (63%)
+Frame 64 (64%)
+Frame 65 (65%)
+Frame 66 (66%)
+Frame 67 (67%)
+Frame 68 (68%)
+Frame 69 (69%)
+Frame 70 (70%)
+Frame 71 (71%)
+Frame 72 (72%)
+Frame 73 (73%)
+Frame 74 (74%)
+Frame 75 (75%)
+Frame 76 (76%)
+Frame 77 (77%)
+Frame 78 (78%)
+Frame 79 (79%)
+Frame 80 (80%)
+Frame 81 (81%)
+Frame 82 (82%)
+Frame 83 (83%)
+Frame 84 (84%)
+Frame 85 (85%)
+Frame 86 (86%)
+Frame 87 (87%)
+Frame 88 (88%)
+Frame 89 (89%)
+Frame 90 (90%)
+Frame 91 (91%)
+Frame 92 (92%)
+Frame 93 (93%)
+Frame 94 (94%)
+Frame 95 (95%)
+Frame 96 (96%)
+Frame 97 (97%)
+Frame 98 (98%)
+Frame 99 (100%)
+## Finalizing encoding... done!
+```
+
+```
+## [1] "/home/michael/Documents/animate-all-the-things/images/gifskiGapminderLine.gif"
+```
+]
+
+.right-plot[
+![](images/gifskiGapminderLine.gif)
+]
+
+---
+layout: true
+# Line Chart with gganimate
+---
+
+.left-text-anim[
+- `transition_reveal`: indicates the variable id with which data appear, based along a dimension
+]
+
+.right-code-anim[
+
+```r
+p &lt;- ggplot(data = countries,
+            aes(x = year, y = gdpPercap,
+                  color = country, group = country)) +
+    geom_line() +
+*   transition_reveal(id=country, along=year) +
+    ease_aes('linear')
+```
+]
+
+---
+layout: true
+# Line Chart with gganimate
+---
+
+.left-code[
+
+```r
+animation &lt;- animate(
+  plot = p,
+  width = 1280,
+  height = 720,
+  res = 144,
+  fps = 20)
+
+anim_save(
+  filename = 'gganimateGapminderLine.gif',
+  animation = animation
+)
+```
+]
+
+.right-plot[
+![](images/gganimateGapminderLine.gif)
+]
+
+---
+layout: true
+# Use gifsicle for more efficient gifs
+---
+
+[Gifsicle](https://www.lcdf.org/gifsicle/) is a command-line tool for creating, editing, and getting information about GIF images and animations.
+
+
+```r
+# sourced from https://stla.github.io/stlapblog/posts/AnimatedGifs.html
+gif_compress &lt;- function(ingif, outgif, show=TRUE, extra.opts=""){
+  command &lt;-  sprintf("gifsicle -O3 %s &lt; %s &gt; %s", extra.opts, ingif, outgif)
+  system.fun &lt;- if (.Platform$OS.type == "windows") shell else system
+  if(show) message("Executing: ", strwrap(command, exdent = 2, prefix = "\n"))
+  system.fun(ifelse(.Platform$OS.type == "windows", sprintf("\"%s\"", shQuote(command)), command))
+}
+gif_compress("gganimateGapminderLine.gif","gganimateGapminderLineGifsicle.gif", extra.opts = "--colors 256")
+```
+
+![](images/gifsicle.png)
+
+---
+layout: true
+# Closing Notes
+---
+
+- `gifski`, `magick`, and `animation` packages can be expanded as far as your imagination
+
+
+```r
+makePlot &lt;- function(){
+  for (i in 1:max(datTweened$.frame)) {
+    p &lt;- ggplot(data = subset(datTweened, .frame &lt;= i),
+                aes(x = year,y = gdpPercap,
+                    color = country, group = country)) +
+      geom_line()  +
+      scale_x_continuous(limits = range(datTweened$year)) + 
+      scale_y_continuous(limits = c(0,40000))
+    print(p)
+  }
+* ...
+  # more frames can be added!
+
+}
+```
+
+- gganimate is refined and also under development
+
+---
+layout: true
+# Workflow
+---
+
+1. Interpolate your data
+
+2. Structure your data to create frames that move across the dimension of interest
+  
+3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+
+4. Append and export the frames
+
+---
+
+class: fullscreen, top, center, text-white
+background-image: url("images/allTheThings.png")
+
+.font150[**ANIMATE ALL THE THINGS**]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "foundation",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
