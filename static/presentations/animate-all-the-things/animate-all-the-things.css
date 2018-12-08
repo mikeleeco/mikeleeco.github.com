@@ -211,3 +211,38 @@ p {
   margin-bottom: 0em;
  }
 
+.font20 h2 {
+  font-size: 20px;
+}
+
+.font20 li {
+  font-size: 20px;
+}
+
+
+.font30 h2 {
+  font-size: 30px;
+}
+
+.font30 li {
+  font-size: 30px;
+}
+
+
+.font35 h2 {
+  font-size: 35px;
+}
+
+.font35 li {
+  font-size: 35px;
+}
+
+
+.font50 h2 {
+  font-size: 60px;
+}
+
+.font50 li {
+  font-size: 50px;
+}
+

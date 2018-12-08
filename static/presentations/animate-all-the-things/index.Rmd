@@ -2,7 +2,7 @@
 title: "Animate all the things:<br>"
 subtitle: "Methods for Animated Visualization in R"
 author: "Michael Lee<br>@mikeleeco"
-date: "Slides and code: **bit.ly/animateDC**"
+date: " <br> Slides and code: <br> **bit.ly/animateDC** <br> **bit.ly/animateDCcode**"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -44,6 +44,11 @@ options(
 as_table <- function(...) knitr::kable(..., format='html', digits = 3)
 ```
 
+class: fullscreen, top, center, text-white
+background-image: url("images/out.gif")
+
+---
+class: font50
 layout: true
 # Why develop animations?
 ---
@@ -65,6 +70,7 @@ layout: true
 ]
 
 ---
+class: font50
 layout: true
 # Why develop animations? Or not...
 ---
@@ -90,19 +96,20 @@ layout: true
 ]
 
 ---
+class: font30
 layout: true
 # How does all of this work anyway?
 ---
 
 - Step 0. Open R graphics device
-
+<br>
 - Step 1. n-many individual frames are created as image files a directory.
-
+<br>
 - Step 2. Image files are appended, then removed
   - Method 1: `animation` package - calls Imagemagick or GraphicsMagick software dependencies
   - Method 2: `magick` package - ports the Imagemagick capabilities to R without dependencies (`gganimate` also features this capability)
   - Method 3: `gifski` package - ports the gifski capabilities to R without dependencies (`gganimate` also features this capability)
-
+<br>
 - Step 3. Animation is output and R graphics device is closed
 
 
@@ -142,18 +149,21 @@ library(animation)
 ```
 
 ---
+class: font35
 layout: true
 # What we'll be creating
 ---
 
 ## Chart Types
+
 - Bubble Chart
 - Bar Chart
 - Line Chart
 
 ## Animation Packages
-- gifski
-- gganimate
+
+- [gifski](https://ropensci.org/technotes/2018/07/23/gifski-release/)
+- [gganimate](https://github.com/thomasp85/gganimate)
 
 ---
 class: section-slide
@@ -199,8 +209,8 @@ datalist
 ```
 ]
 
-
 ---
+class: font35
 layout: true
 # Animation Development Workflow
 ---
@@ -250,8 +260,14 @@ save_gif(makePlot(), gif_file, 1280, 720, res = 144, delay = .5)
 ```
 ]
 
+---
+class: font35
+layout: true
+# Animation Development Workflow
+---
 
 ---
+class: font35
 layout: true
 # Animation Development Workflow
 ---
@@ -343,12 +359,14 @@ unique(datTweened$year)
 ]
 
 
-Split `dat` back into a `list`
+- Split `dat` back into a `list`
+
 ```{r recreate datalist}
 datalistTweened <- split(datTweened, datTweened$year)
 ```
 
 ---
+class: font35
 layout: true
 # Workflow
 ---
@@ -415,6 +433,7 @@ save_gif(
 
 
 ---
+class: font35
 layout: true
 # Workflow
 ---
@@ -456,17 +475,52 @@ p <- ggplot(gapminder,
 ]
 
 ---
+class: font35
 layout: true
 # Workflow
 ---
 
-1. Interpolate your data
+1. **Interpolate your data**
 
-2. Structure your data to create frames that move across the dimension of interest
+2. **Structure your data to create frames that move across the dimension of interest**
   
-3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
+3. **Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)**
 
-## gganimate does these internally!
+4. Append and export the frames
+
+## gganimate does 1-3 internally!
+
+
+---
+class: font35
+layout: true
+# Workflow
+---
+
+1. **Interpolate your data**
+
+2. **Structure your data to create frames that move across the dimension of interest**
+  
+3. **Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)**
+
+4. Append and export the frames
+
+## gganimate does 1-3 internally!
+
+<br>
+How?
+
+---
+class: font35
+layout: true
+# Workflow
+---
+
+.code25[
+```{r gganimateData, message= FALSE, warning=FALSE, cache=TRUE}
+datTweened %>% filter(country == "Japan")
+```
+]
 
 ---
 layout: true
@@ -562,6 +616,12 @@ datTweened <- tween_states(datalist, tweenlength = 1,
                            statelength = 0, 'linear', 100)
 datalistTweened <- split(datTweened, datTweened$year)
 ```
+
+.codeScroll20[
+```{r barChartlapply}
+glimpse(datalistTweened)
+```
+]
 
 ---
 layout: true
@@ -805,6 +865,8 @@ gif_compress <- function(ingif, outgif, show=TRUE, extra.opts=""){
 gif_compress("gganimateGapminderLine.gif","gganimateGapminderLineGifsicle.gif", extra.opts = "--colors 256")
 ```
 
+<br>
+
 ![](images/gifsicle.png)
 
 ---
@@ -832,9 +894,17 @@ makePlot <- function(){
 
 ``` 
 
+---
+layout: true
+# Closing Notes
+---
+
 - gganimate is refined and also under development
 
+![](images/gganimateDev.png)
+
 ---
+class: font35
 layout: true
 # Workflow
 ---
@@ -846,6 +916,17 @@ layout: true
 3. Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)
 
 4. Append and export the frames
+
+---
+class: font50
+layout: true
+# Reach out!
+---
+
+- https://twitter.com/mikeleeco
+
+- https://mikelee.co
+
 
 ---
 
