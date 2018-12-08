@@ -135,22 +135,3 @@ p <- ggplot(data = countries, aes(country, gdpPercap, fill = country))  + geom_c
 animation <- animate(p, width = 720, height = 1280, res = 144)
 gif_file <- file.path(paste0(getwd(), '/gganimateGapminderBar.gif'))
 anim_save(gif_file, animation)
-
-
-: practitioners need to  strongly  consider  ensuring  that  their  data  tells  a  clean  story (too many data points, by data points, data doesnt move in synchrony)
-
-# https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/bv_ch19.pdf
-Just as in static visualization, one needs to consider the goal of the animation? 
-- If it is meant to allow a user to smoothly transition between views, then it is likely to be helpful.
-
-- On the other hand, if the user is meant to compare the “before” to the “after,” the animation is less likely to be of 
-use.
-
-Users want to understand why a change is happening, and what is changing. If every-
-thing on the screen is going to move around, perhaps it would be better to simply 
-switch atomically to a new image; this might spare the user the difficulty of trying to 
-track the differences. Finally, animations mean that it can be more difficult to print out 
-visualizations. Individual frames should be meaningful, so that users can capture and 
-share those images.
-
-Make the motion meaningful
