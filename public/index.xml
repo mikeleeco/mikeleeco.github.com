@@ -8,8 +8,411 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Wed, 05 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Dominance of Jonathan Taylor: Wisconsin Rushers in Context</title>
+      <link>/posts/2019-01-28-wisconsin-rushing-history/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2019-01-28-wisconsin-rushing-history/</guid>
+      <description>&lt;div id=&#34;hot-take-alert&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hot Take Alert&lt;/h2&gt;
+&lt;p&gt;🔥 Jonathan Taylor is on pace to be the greatest running back in Wisconsin football history 🔥&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;Over the previous three decades Wisconsin has retained several elite rushers (and offensive lines) to amass several conference championships and Rose Bowl appearances. Even when acknowledging Taylor’s case as a serious Heisman candidate in each of his first two years, proclaiming him the presumptive best running back in Wisconsin football history still feels like a bold proclamation. Let’s investigate!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;accessing-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Accessing the data&lt;/h2&gt;
+&lt;p&gt;The first step in comparing Taylor to previous Wisconsin rushers is retrieving historical college football statistics. Single-game box scores are only available on &lt;a href=&#34;https://www.sports-reference.com/cfb/&#34;&gt;Sports-Reference&lt;/a&gt; starting in 2000 (compare the game hyperlinks for the &lt;a href=&#34;https://www.sports-reference.com/cfb/schools/wisconsin/1999-schedule.html&#34;&gt;1999&lt;/a&gt; and &lt;a href=&#34;https://www.sports-reference.com/cfb/schools/wisconsin/2000-schedule.html&#34;&gt;2000&lt;/a&gt; Wisconsin schedules), therefore, two scripts were used to aggregate player data:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The first accesses single season statistics from 1956-2018, detailed here &lt;strong&gt;(NOTE: click on the gray bars to display the code!)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Scraper for Yearly Rushing Data, 1956 - 2018&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+library(rvest)
+library(ggplot2)
+library(lubridate)
+library(shadowtext)
+library(RColorBrewer)
+library(ggrepel)
+library(forcats)
+
+url &amp;lt;- &amp;quot;https://www.sports-reference.com/cfb/schools/wisconsin/&amp;quot;
+
+rushingTable &amp;lt;- &amp;#39;#rushing_and_receiving&amp;#39;
+playerIDTable &amp;lt;- paste0(rushingTable,&amp;#39; a&amp;#39;)
+rushingData &amp;lt;- data.frame()
+
+# for loop by season
+for (season in 1956:1999) {
+  html &amp;lt;- paste0(url,season,&amp;quot;.html&amp;quot;)
+
+  # batting stats
+  html %&amp;gt;%
+    read_html %&amp;gt;%
+    html_nodes(xpath = &amp;#39;//comment()&amp;#39;) %&amp;gt;%
+    html_text() %&amp;gt;%
+    paste(collapse=&amp;#39;&amp;#39;) %&amp;gt;%
+    read_html() %&amp;gt;%
+    html_node(rushingTable) %&amp;gt;%
+    html_table(header = TRUE) -&amp;gt; df
+
+  # player info
+  html %&amp;gt;%
+    read_html %&amp;gt;%
+    html_nodes(xpath = &amp;#39;//comment()&amp;#39;) %&amp;gt;%
+    html_text() %&amp;gt;%
+    paste(collapse=&amp;#39;&amp;#39;) %&amp;gt;%
+    read_html() %&amp;gt;%
+    html_nodes(playerIDTable) %&amp;gt;%
+    html_attr(name=&amp;quot;href&amp;quot;) %&amp;gt;% unlist %&amp;gt;% as.character -&amp;gt; playerIDhtml
+
+  # clean dataframe and add team and season info
+  colnames(df) &amp;lt;- df[1,]
+  df &amp;lt;- df[-1, ] 
+  df$season &amp;lt;- c(season)
+
+  # remove url data
+  playerIDhtml=gsub(&amp;quot;/cfb/players/&amp;quot;, &amp;quot;&amp;quot;, playerIDhtml,fixed = TRUE)
+  playerID=gsub(&amp;quot;.html&amp;quot;, &amp;quot;&amp;quot;, playerIDhtml,fixed = TRUE)
+
+  df$playerID &amp;lt;- c(playerID)
+
+  # bind to 
+  rushingData &amp;lt;- rbind(rushingData,df)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The second accesses single game statistics from 2000-2018.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Scraper for Single Game Rushing Data, 2000 - 2018&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;urlFirst &amp;lt;- &amp;quot;https://www.sports-reference.com/cfb/schools/wisconsin/&amp;quot;
+
+urlSecond &amp;lt;- &amp;quot;https://www.sports-reference.com&amp;quot;
+
+offenseYear &amp;lt;- &amp;quot;#offense&amp;quot;
+gameDate &amp;lt;- paste0(offenseYear,&amp;#39; a&amp;#39;)
+
+urls &amp;lt;- c()
+
+for (season in 2000:2018) {
+  html &amp;lt;- paste0(urlFirst,season,&amp;quot;/gamelog/&amp;quot;)
+
+  # player info
+  html %&amp;gt;%
+    read_html() %&amp;gt;%
+    html_nodes(gameDate) %&amp;gt;%
+    html_attr(name=&amp;quot;href&amp;quot;) %&amp;gt;% unlist %&amp;gt;% as.character -&amp;gt; playerIDhtml
+
+  playerIDhtml &amp;lt;- grep(&amp;quot;boxscores&amp;quot;,x = playerIDhtml,value = TRUE)
+  
+  html2 &amp;lt;- paste0(urlSecond,playerIDhtml)
+
+  # bind to 
+  urls &amp;lt;- c(urls,html2)
+}
+
+
+rushingDataGames &amp;lt;- data.frame()
+
+
+# for loop by season
+for (links in urls) {
+
+  # batting stats
+  links %&amp;gt;%
+    read_html %&amp;gt;%
+    html_nodes(xpath = &amp;#39;//comment()&amp;#39;) %&amp;gt;%
+    html_text() %&amp;gt;%
+    paste(collapse=&amp;#39;&amp;#39;) %&amp;gt;%
+    read_html() %&amp;gt;%
+    html_node(rushingTable) %&amp;gt;%
+    html_table(header = TRUE) -&amp;gt; df
+
+
+  # clean dataframe and add team and season info
+  colnames(df) &amp;lt;- paste0(colnames(df), df[1,])
+  df &amp;lt;- df[-1, ] 
+  df &amp;lt;- df %&amp;gt;% filter(!School %in% c(&amp;quot;School&amp;quot;, NA, &amp;quot;&amp;quot;))
+  df$gameDate &amp;lt;- gsub(pattern = paste(c(&amp;quot;https://www.sports-reference.com/cfb/boxscores/&amp;quot;), collapse = &amp;quot;|&amp;quot;),replacement =  &amp;quot;&amp;quot;, x = links)
+  df$gameDate &amp;lt;- substr(df$gameDate ,1,10)
+
+  # player info
+  links %&amp;gt;%
+    read_html %&amp;gt;%
+    html_nodes(xpath = &amp;#39;//comment()&amp;#39;) %&amp;gt;%
+    html_text() %&amp;gt;%
+    paste(collapse=&amp;#39;&amp;#39;) %&amp;gt;%
+    read_html() %&amp;gt;%
+    html_nodes(playerIDTable) %&amp;gt;%
+    html_attr(name=&amp;quot;href&amp;quot;) %&amp;gt;% unlist %&amp;gt;% as.character -&amp;gt; playerIDhtml
+
+  playerIDhtml &amp;lt;- grep(&amp;quot;players&amp;quot;,x = playerIDhtml,value = TRUE)
+
+  # remove url data
+  playerIDhtml=gsub(&amp;quot;/cfb/players/&amp;quot;, &amp;quot;&amp;quot;, playerIDhtml,fixed = TRUE)
+  playerID=gsub(&amp;quot;.html&amp;quot;, &amp;quot;&amp;quot;, playerIDhtml,fixed = TRUE)
+
+  if(links == &amp;quot;https://www.sports-reference.com/cfb/boxscores/2013-09-28-ohio-state.html&amp;quot;) {
+    playerID &amp;lt;- c(playerID[1:11], &amp;quot;corey-brown-2&amp;quot;, playerID[12:14])
+  }
+
+  if(links == &amp;quot;https://www.sports-reference.com/cfb/boxscores/2013-11-23-minnesota.html&amp;quot;) {
+    playerID &amp;lt;- c(playerID[1:11], &amp;quot;donovahn-jones-1&amp;quot;, playerID[12:15])
+  }
+ 
+
+  df$playerID &amp;lt;- c(playerID)
+
+  # bind to 
+  rushingDataGames &amp;lt;- rbind(rushingDataGames,df)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;Instead of re-running the scrapers, the full data as an &lt;strong&gt;.Rdata&lt;/strong&gt; file can be accessed through these two links: &lt;a href=&#34;https://mikelee.co/data/gameRushingData.rdata&#34;&gt;Single Game Rushing Data, 2000 - 2018&lt;/a&gt; and &lt;a href=&#34;https://mikelee.co/data/yearRushingData.rdata&#34;&gt;Yearly Rushing Data, 1968 - 2018&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analysis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Analysis&lt;/h1&gt;
+&lt;p&gt;In order to generate visualizations we’ll first need to complete some slight reshaping and data cleanup. Since the box scores don’t contain much supplementary information, we’ll instead construct a few dplyr &lt;code&gt;filter&lt;/code&gt; conditions to create our data set of best rushers in Wisconsin history.&lt;/p&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Data Reshaping and Cleanup&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rushingDataGames &amp;lt;- readRDS(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/data/gameRushingData.rdata&amp;quot;)
+
+rushingData &amp;lt;- readRDS(&amp;quot;/home/michael/Documents/mikeleeco.github.com/static/data/yearRushingData.rdata&amp;quot;)
+
+rushingDataGames$gameDate &amp;lt;- ymd(rushingDataGames$gameDate)
+
+rushingDataGames &amp;lt;- rushingDataGames %&amp;gt;% filter(School == &amp;quot;Wisconsin&amp;quot;)
+
+rushingDataGames$gameNo &amp;lt;- 1
+
+rushingDataGames$RushingYds &amp;lt;- ifelse(is.na(rushingDataGames$RushingYds) | rushingDataGames$RushingYds == &amp;quot;&amp;quot;, 0, rushingDataGames$RushingYds)
+rushingDataGames$RushingAtt &amp;lt;- ifelse(is.na(rushingDataGames$RushingAtt) | rushingDataGames$RushingAtt == &amp;quot;&amp;quot;, 0, rushingDataGames$RushingAtt)
+
+dat &amp;lt;- rushingDataGames %&amp;gt;%
+    arrange(playerID, gameDate) %&amp;gt;%
+    group_by(playerID) %&amp;gt;%
+    mutate(gameNo = cumsum(gameNo),roll_sum_att = cumsum(RushingAtt),roll_sum_yards = cumsum(RushingYds))
+
+
+dat &amp;lt;- dat %&amp;gt;%
+    arrange(playerID, gameDate) %&amp;gt;%
+    group_by(playerID) %&amp;gt;%
+    mutate()
+
+x &amp;lt;- dat %&amp;gt;% group_by(playerID) %&amp;gt;% filter(gameDate == max(gameDate, na.rm = TRUE))
+
+xx &amp;lt;- x %&amp;gt;% filter(!is.na(roll_sum_yards) &amp;amp; roll_sum_yards &amp;gt; 0)
+
+dat$gameDate &amp;lt;- ymd(dat$gameDate)
+
+xScale &amp;lt;- as.Date(as.character(c(2000:2019)),&amp;quot;%Y&amp;quot;)
+
+dat &amp;lt;- dat %&amp;gt;% group_by(playerID) %&amp;gt;% filter(max(as.numeric(gameNo), na.rm = TRUE) &amp;gt; 10 &amp;amp; max(as.numeric(roll_sum_yards), na.rm = TRUE) &amp;gt; 0 &amp;amp; max(year(gameDate), na.rm = TRUE) &amp;gt; 2000)
+
+
+rushingData$Rk &amp;lt;- NULL
+rushingData$School &amp;lt;- &amp;quot;Wisconsin&amp;quot;
+rushingData$gameNo &amp;lt;- NA
+rushingData$roll_sum_yards &amp;lt;- NA
+rushingData$gameDate &amp;lt;- rushingData$season
+
+colnames(rushingData) &amp;lt;- c(&amp;quot;Player&amp;quot;,  &amp;quot;RushingAtt&amp;quot;, &amp;quot;RushingYds&amp;quot;, &amp;quot;RushingAvg&amp;quot;, 
+&amp;quot;RushingTD&amp;quot;, &amp;quot;ReceivingRec&amp;quot;, &amp;quot;ReceivingYds&amp;quot;, &amp;quot;ReceivingAvg&amp;quot;, 
+&amp;quot;ReceivingTD&amp;quot;, &amp;quot;ScrimmagePlays&amp;quot;, &amp;quot;ScrimmageYds&amp;quot;, &amp;quot;ScrimmageAvg&amp;quot;, 
+&amp;quot;ScrimmageTD&amp;quot;, &amp;quot;gameDate&amp;quot;, &amp;quot;playerID&amp;quot;,&amp;quot;School&amp;quot;, &amp;quot;gameNo&amp;quot;, &amp;quot;roll_sum&amp;quot;, 
+&amp;quot;season&amp;quot;)
+
+
+rushingData$RushingYds &amp;lt;- ifelse(is.na(rushingData$RushingYds) | rushingData$RushingYds == &amp;quot;&amp;quot;, 0, rushingData$RushingYds)
+rushingData$RushingAtt &amp;lt;- ifelse(is.na(rushingData$RushingAtt) | rushingData$RushingAtt == &amp;quot;&amp;quot;, 0, rushingData$RushingAtt)
+
+
+
+rushingData2 &amp;lt;- rushingData %&amp;gt;% group_by(playerID, Player, season) %&amp;gt;% summarise(RushingAtt = sum(as.numeric(RushingAtt),na.rm = TRUE), RushingYds = sum(as.numeric(RushingYds),na.rm = TRUE)) %&amp;gt;% filter(max(as.numeric(RushingYds), na.rm = TRUE) &amp;gt; 1000)
+
+
+z2 &amp;lt;- rushingData2 %&amp;gt;%
+    arrange(playerID) %&amp;gt;%
+    group_by(playerID) %&amp;gt;%
+    mutate(gameNo = cumsum(season),roll_sum_att = cumsum(RushingAtt),roll_sum_yards = cumsum(RushingYds))
+
+
+z3 &amp;lt;- z2[!duplicated(z2$playerID), ]
+z3$season &amp;lt;- z3$season - 1
+z3$gameNo &amp;lt;- z3$season
+z3$RushingYds &amp;lt;- 0
+z3$roll_sum_yards &amp;lt;- 0
+
+z2 &amp;lt;- bind_rows(z2, z3)
+
+z2 &amp;lt;- z2 %&amp;gt;%
+    arrange(playerID, season, RushingYds) 
+
+z2 &amp;lt;- z2 %&amp;gt;% group_by(playerID, season) %&amp;gt;% add_tally() %&amp;gt;% ungroup()%&amp;gt;% group_by(playerID) %&amp;gt;% mutate(seasonNo = cumsum(n))
+
+leadingRushersGame &amp;lt;- c(&amp;quot;montee-ball-1&amp;quot;, &amp;quot;melvin-gordon-1&amp;quot;, &amp;quot;anthony-davis-3&amp;quot;, &amp;quot;james-white-2&amp;quot;,
+                        &amp;quot;jonathan-taylor-1&amp;quot;, &amp;quot;pj-hill-1&amp;quot;, &amp;quot;john-clay-1&amp;quot;, &amp;quot;corey-clement-1&amp;quot;, &amp;quot;brian-calhoun-1&amp;quot;)
+
+leadingRushersSeason &amp;lt;- c(&amp;quot;anthony-davis-3&amp;quot;, &amp;quot;billy-marek-1&amp;quot;, &amp;quot;brent-moss-1&amp;quot;, &amp;quot;brian-calhoun-1&amp;quot;, 
+                          &amp;quot;carl-mccullough-2&amp;quot;, &amp;quot;corey-clement-1&amp;quot;, &amp;quot;james-white-2&amp;quot;, &amp;quot;john-clay-1&amp;quot;, 
+                          &amp;quot;jonathan-taylor-1&amp;quot;, &amp;quot;larry-emery-1&amp;quot;, &amp;quot;melvin-gordon-1&amp;quot;, &amp;quot;michael-bennett-1&amp;quot;, 
+                          &amp;quot;montee-ball-1&amp;quot;, &amp;quot;pj-hill-1&amp;quot;, &amp;quot;ron-dayne-1&amp;quot;, &amp;quot;rufus-ferguson-1&amp;quot;, 
+                          &amp;quot;terrell-fletcher-1&amp;quot;)
+
+
+labelDat &amp;lt;- subset(z2, playerID %in% z2$playerID &amp;amp; playerID %in% leadingRushersSeason) %&amp;gt;% group_by(Player) %&amp;gt;% slice(which.max(roll_sum_yards))
+labelDat$roll_sum_yards &amp;lt;- ifelse(labelDat$playerID == &amp;quot;terrell-fletcher-1&amp;quot;, labelDat$roll_sum_yards - 60,
+            ifelse(labelDat$playerID == &amp;quot;brent-moss-1&amp;quot;, labelDat$roll_sum_yards + 60,labelDat$roll_sum_yards))
+
+z4 &amp;lt;- z2 %&amp;gt;% group_by(playerID) %&amp;gt;%  top_n(2, RushingYds) %&amp;gt;% mutate(seasonNo = cumsum(n),roll_sum_att = cumsum(RushingAtt),roll_sum_yards = cumsum(RushingYds), meanydsperattempt = roll_sum_yards/roll_sum_att)
+
+
+z3 &amp;lt;- z4[!duplicated(z4$playerID), ]
+z3$seasonNo &amp;lt;- z3$seasonNo - 1
+z3$gameNo &amp;lt;- z3$seasonNo
+z3$RushingYds &amp;lt;- 0
+z3$roll_sum_yards &amp;lt;- 0
+z3$roll_sum_att &amp;lt;- 0
+z4 &amp;lt;- bind_rows(z4, z3)
+
+z5 &amp;lt;- z4 %&amp;gt;%
+    arrange(playerID, season, RushingYds) %&amp;gt;%
+    filter(playerID != &amp;quot;brian-calhoun-1&amp;quot; &amp;amp; seasonNo == 2)
+
+z5$Player &amp;lt;- gsub(&amp;quot; &amp;quot;, &amp;quot;\n&amp;quot;, z5$Player)
+
+z5$playerOrder &amp;lt;- fct_reorder(z5$Player,z5$roll_sum_yards)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;ggplot2 Theme&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;themeWisconsin &amp;lt;- function () { 
+    theme_bw(base_size=13, base_family=&amp;quot;Open Sans&amp;quot;) %+replace% 
+        theme(
+            axis.line = element_line(colour = &amp;quot;#f4f4f4&amp;quot;, size = 1.2),
+            panel.border = element_blank(),
+            panel.background = element_blank(),
+            panel.grid.minor = element_blank(),
+            panel.grid.major = element_blank(),
+            plot.title =  element_text(size = 20, hjust = 0, margin = unit(c(5, 5, 5, 5), &amp;quot;mm&amp;quot;)),
+            axis.title.x = element_text(size = 15, hjust = .5, margin = unit(c(5, 5, 5, 5), &amp;quot;mm&amp;quot;)),
+            axis.title.y =  element_text(size = 15, hjust = .5, angle = 90, margin = unit(c(5, 5, 5, 5), &amp;quot;mm&amp;quot;)),
+            plot.background = element_rect(fill=&amp;quot;white&amp;quot;, colour=NA), 
+            legend.background = element_rect(fill=&amp;quot;transparent&amp;quot;, colour=NA),
+            legend.key = element_rect(fill=&amp;quot;transparent&amp;quot;, colour=NA),
+            axis.ticks = element_blank()
+        )
+}
+cols &amp;lt;- c(&amp;quot;#a6cee3&amp;quot;,&amp;quot;#1f78b4&amp;quot;,&amp;quot;#b2df8a&amp;quot;,&amp;quot;#33a02c&amp;quot;,&amp;quot;#fb9a99&amp;quot;,&amp;quot;#e31a1c&amp;quot;,&amp;quot;#ff7f00&amp;quot;,&amp;quot;#cab2d6&amp;quot;,&amp;quot;#6a3d9a&amp;quot;,&amp;quot;#b15928&amp;quot;)
+getPallette = colorRampPalette(cols)
+
+leftAlignPlot &amp;lt;- function (plot) { 
+
+  g &amp;lt;- ggplotGrob(plot)
+
+  g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 4
+  g$layout$clip[g$layout$name==&amp;quot;panel&amp;quot;] &amp;lt;- &amp;quot;off&amp;quot;
+  g$layout$z[g$layout$name==&amp;quot;panel&amp;quot;] = 17
+  grid::grid.draw(g)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Comparing Wisconsin Running Back Rushing Production by Game, 2000 - 2018&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;figure2 &amp;lt;- ggplot() +
+    geom_point(data = subset(dat, playerID %in% xx$playerID), aes(gameDate, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_point(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame), aes(gameDate, roll_sum_yards, group = playerID), color = &amp;quot;#c5050c&amp;quot;, alpha = 1) +
+    geom_line(data = subset(dat, playerID %in% xx$playerID), aes(gameDate, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_line(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame), aes(gameDate, roll_sum_yards, group = playerID), color = &amp;quot;#c5050c&amp;quot;, alpha = 1) +
+    geom_shadowtext(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame) %&amp;gt;% group_by(Player)%&amp;gt;% slice(which.max(roll_sum_yards)),
+      aes(gameDate, roll_sum_yards, label = paste0(&amp;quot;  &amp;quot;,Player)), color = &amp;quot;black&amp;quot;, bg.colour=&amp;#39;white&amp;#39;, size = 6, hjust = 0, family = &amp;quot;Open Sans&amp;quot;, fontface = &amp;quot;bold&amp;quot;) + themeWisconsin() +
+    guides(color=FALSE)  + scale_x_date(limits = ymd(c(&amp;quot;2000-04-20&amp;quot;,&amp;quot;2022-10-31&amp;quot;)),
+      labels=year(ymd(c(&amp;quot;2000-8-20&amp;quot;,&amp;quot;2002-8-20&amp;quot;,&amp;quot;2004-8-20&amp;quot;,&amp;quot;2006-8-20&amp;quot;,&amp;quot;2008-8-20&amp;quot;,&amp;quot;2010-8-20&amp;quot;,&amp;quot;2012-8-20&amp;quot;,&amp;quot;2014-8-20&amp;quot;,&amp;quot;2016-8-20&amp;quot;,&amp;quot;2018-8-20&amp;quot;))),
+      breaks=ymd(c(&amp;quot;2000-8-20&amp;quot;,&amp;quot;2002-8-20&amp;quot;,&amp;quot;2004-8-20&amp;quot;,&amp;quot;2006-8-20&amp;quot;,&amp;quot;2008-8-20&amp;quot;,&amp;quot;2010-8-20&amp;quot;,&amp;quot;2012-8-20&amp;quot;,&amp;quot;2014-8-20&amp;quot;,&amp;quot;2016-8-20&amp;quot;,&amp;quot;2018-8-20&amp;quot;)), expand = c(0, 0)) +
+      scale_y_continuous(expand = c(0, 0), limits = c(-40, 5500)) + 
+      labs(title = &amp;quot;Figure 2: Cumulative Rushing Yards by Game for Notable Wisconsin Running Backs, 2000 - 2018&amp;quot;, y = &amp;quot;Rushing Yards&amp;quot;,  x = &amp;quot;Date&amp;quot;)
+
+figure3 &amp;lt;- ggplot() +
+    geom_point(data = subset(dat, playerID %in% xx$playerID), aes(gameNo, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_point(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame), aes(gameNo, roll_sum_yards, group = playerID, color = playerID), alpha = 1) +
+    geom_line(data = subset(dat, playerID %in% xx$playerID), aes(gameNo, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_line(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame), aes(gameNo, roll_sum_yards, group = playerID, color = playerID), alpha = 1) +
+    geom_shadowtext(data = subset(dat, playerID %in% xx$playerID &amp;amp; playerID %in% leadingRushersGame) %&amp;gt;% group_by(Player)%&amp;gt;% slice(which.max(roll_sum_yards)),
+                    aes(gameNo, roll_sum_yards, label = paste0(&amp;quot;  &amp;quot;,Player), color = playerID), bg.colour=&amp;#39;white&amp;#39;, size = 6, hjust = 0, family = &amp;quot;Open Sans&amp;quot;) +
+    guides(color=FALSE)  + scale_x_continuous(limits = c(0,60),expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0), limits = c(-20, 5500)) + themeWisconsin() +
+    scale_color_manual(values = getPallette(length(unique(leadingRushersGame)))) + 
+      labs(title = &amp;quot;Figure 3: Cumulative Rushing Yards by Game Number for Notable Wisconsin Running Backs, 2000 - 2018&amp;quot;, y = &amp;quot;Rushing Yards&amp;quot;,  x = &amp;quot;Game Number&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Comparing Wisconsin Running Backs Rushing Production by Seasonal Production, 1956 - 2018&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;figure1 &amp;lt;- ggplot(data = z2, aes(season, roll_sum_yards, group = playerID)) +
+    geom_point(color = &amp;quot;#c5050c&amp;quot;) +
+    geom_line(color = &amp;quot;#c5050c&amp;quot;) +
+    geom_text_repel(data = z2 %&amp;gt;% group_by(Player)%&amp;gt;% slice(which.max(roll_sum_yards)),
+                    aes(season, roll_sum_yards, label = paste0(&amp;quot;  &amp;quot;,Player)), color = &amp;quot;black&amp;quot;, size = 6, direction = &amp;quot;y&amp;quot;, family = &amp;quot;Open Sans&amp;quot;, fontface = &amp;quot;bold&amp;quot;, hjust= 0, segment.colour = NA, point.padding = NA) +
+    guides(color=FALSE) + scale_y_continuous(expand = c(0,0), limits = c(-20, 8000)) + scale_x_continuous(limits = c(1968,2028),expand = c(0, 0)) + themeWisconsin() + 
+      labs(title = &amp;quot;Figure 1: Cumulative Rushing Yards by Season for Notable Wisconsin Running Backs, 1968 - 2018&amp;quot;, y = &amp;quot;Rushing Yards&amp;quot;,  x = &amp;quot;Date&amp;quot;)
+
+
+figure4 &amp;lt;- ggplot() +
+    geom_point(data = subset(z2, playerID %in% z2$playerID), aes(seasonNo, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_point(data = subset(z2, playerID %in% z2$playerID &amp;amp; playerID %in% leadingRushersSeason), aes(seasonNo, roll_sum_yards, group = playerID, color = playerID), alpha = 1) +
+    geom_line(data = subset(z2, playerID %in% z2$playerID), aes(seasonNo, roll_sum_yards, group = playerID), color = &amp;quot;lightgrey&amp;quot;, alpha = .7) +
+    geom_line(data = subset(z2, playerID %in% z2$playerID &amp;amp; playerID %in% leadingRushersSeason), aes(seasonNo, roll_sum_yards, group = playerID, color = playerID), alpha = 1) +
+    geom_shadowtext(data = labelDat, aes(seasonNo, roll_sum_yards, label = paste0(&amp;quot;  &amp;quot;,Player), color = playerID), bg.colour=&amp;#39;white&amp;#39;, size = 6, hjust = 0, family = &amp;quot;Open Sans&amp;quot;) +
+    guides(color=FALSE) + scale_x_continuous(labels=c(0:4), breaks=c(1:5),limits = c(1,6),expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0), limits = c(-20, 8000)) +  themeWisconsin() +
+    scale_color_manual(values = getPallette(length(unique(leadingRushersSeason)))) + 
+      labs(title = &amp;quot;Figure 4: Cumulative Rushing Yards for Notable Wisconsin Running Backs by Seasons in Program&amp;quot;, y = &amp;quot;Rushing Yards&amp;quot;,  x = &amp;quot;Season&amp;quot;)
+
+figure5 &amp;lt;- ggplot() +
+    geom_col(data = z5, aes(x = playerOrder, y = roll_sum_yards), fill = &amp;quot;#c5050c&amp;quot;, alpha = .7) +
+    scale_y_continuous(expand = c(0,0), limits = c(0,4500)) +
+    geom_text(data = z5, aes(x = playerOrder, y = roll_sum_yards, label=format(z5$roll_sum_yards, nsmall=0, big.mark=&amp;quot;,&amp;quot;)),family = &amp;quot;Open Sans&amp;quot;, vjust=-.5) +
+    guides(color=FALSE) + themeWisconsin() + 
+    labs(title = &amp;quot;Figure 5: Cumulative Rushing Yards for Notable Wisconsin Running Backs in their Two Highest Rushing Seasons&amp;quot;, y = &amp;quot;Rushing Yards&amp;quot;,  x = &amp;quot;Player&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;Wisconsin has employed an incredible sequence of successful running backs since Barry Alvarez breathed life into the program in the early 1990s. Ron Dayne, Montee Ball, Melvin Gordon, and Taylor have each finished in the top 10 of Heisman voting - Taylor doing so twice - while also winning the Doak Walker Award for the best collegiate running back.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2019-01-28-wisconsin-rushing-history_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;2700&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As displayed in Figure 1, the &lt;em&gt;four-year&lt;/em&gt; production of Ron Dayne stands out from the recent crop of running backs. Dayne’s contributions on the field resulted in breaking the FBS career rushing mark (since eclipsed, &lt;a href=&#34;https://fivethirtyeight.com/features/why-college-footballs-new-all-time-rushing-leader-isnt-really-its-all-time-rushing-leader/&#34;&gt;controversially&lt;/a&gt;) in 1999, and he deserves some credit for establishing the class of running back commit Wisconsin is able to sign to this day.&lt;/p&gt;
+&lt;div class=&#34;containerYouTube&#34;&gt;
+&lt;iframe src=&#34;https://www.youtube.com/embed/jZq_KJyDIjQ?start=2055&#34; frameborder=&#34;0&#34; allowfullscreen class=&#34;video&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;p&gt;Taylor stands on the shoulders of a legacy of elite rushing prospects. Looking more closely at single game rushing data over time in Figure 2, Taylor fits in neatly with his fellow Badgers - he is equal in stature to the best recent Wisconsin running backs. It’s incredible to reflect on the 2011 data points signifying a Wisconsin team that fielded Montee Ball, James White and Melvin Gordon (albeit for only 3 games) simultaneously!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2019-01-28-wisconsin-rushing-history_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;2700&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;When considering the rushing totals by game number is where his success has few comparisons. Figure 3 shows the cumulative rushing yards by game starting in 2000, the first year that single game data is available. Three things pop out to me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Anthony Davis and P.J. Hill had much better careers than I recall&lt;/li&gt;
+&lt;li&gt;Brian Calhoun had a monster first game as a Badger - &lt;a href=&#34;https://www.sports-reference.com/cfb/boxscores/2005-09-03-wisconsin.html&#34;&gt;258 yards rushing against Bowling Green&lt;/a&gt;!&lt;/li&gt;
+&lt;li&gt;James White and Montee Ball played &lt;em&gt;a lot&lt;/em&gt; of games in their career&lt;/li&gt;
+&lt;li&gt;Jonathan Taylor’s first 27 games have been unreal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;/posts/2019-01-28-wisconsin-rushing-history_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;2700&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;
+&lt;p&gt;In fact, when compared to all Wisconsin rushers in their first two seasons (regardless of academic standing) Taylor’s are the most yards all time. As seen in Figure 4, it’s not particularly close!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2019-01-28-wisconsin-rushing-history_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;2700&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;He is comfortably on pace to accrue more rushing yards than all Wisconsin running backs (aside from Ron Dayne) by the end of his junior season. If he returns for his senior season, the FBS career rushing mark might be in reach. Figure 5 displays the top two rushing seasons for notable Wisconsin running backs during their careers. The total rushing of Taylor’s freshman and sophomore campaigns stack up as the second highest total of the &lt;em&gt;any of the two best seasons&lt;/em&gt; of all Wisconsin running backs.&lt;/p&gt;
+&lt;img src=&#34;/posts/2019-01-28-wisconsin-rushing-history_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;2700&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;p&gt;
+&lt;p&gt;Over the first two seasons of his career, Taylor accumulated more rushing yards:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;than any rusher in school history over their first two years&lt;/li&gt;
+&lt;li&gt;than P.J. Hill, John Clay, and Rufus Ferguson in their &lt;strong&gt;three&lt;/strong&gt; college seasons&lt;/li&gt;
+&lt;li&gt;than James White, Billy Marek, Brent Moss, Terrell Fletcher, Corey Clement, Larry Emery, and Carl McCollough in their &lt;strong&gt;four&lt;/strong&gt; respective college seasons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jonathan Taylor has chewed up yards - and the best might still be to come.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Stacked Area Chart - US Education Enrollment</title>
@@ -696,34 +1099,6 @@ How has the U.S. pupil/teacher ratio changed over time? &lt;a href=&#34;https://
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;/img/line_pupil.gif&#34; alt=&#34;COE 2017 Pupil Ratio Line Graph Animation&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;COE 2017 Pupil Ratio Line Graph Animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Educational Attainment - Line Chart from COE 2017 Data Release</title>
-      <link>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</link>
-      <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Gaps remain in &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&#34;&gt;#HigherEd&lt;/a&gt; attainment between Whites, Blacks, and Hispanics. View more details in the &lt;a href=&#34;https://twitter.com/hashtag/COE2017?src=hash&#34;&gt;#COE2017&lt;/a&gt;: &lt;a href=&#34;https://t.co/N6geIyokVp&#34;&gt;https://t.co/N6geIyokVp&lt;/a&gt; &lt;a href=&#34;https://t.co/33JoRPmzbO&#34;&gt;pic.twitter.com/33JoRPmzbO&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/903305999636946945&#34;&gt;August 31, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/line_Bachelors.gif&#34; alt=&#34;COE 2017 Bachelors Attainment Line Graph Animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;COE 2017 Bachelors Attainment Line Graph Animation&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;

@@ -6,6 +6,7 @@ pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "mikeleeco"
 googleAnalytics = "UA-58518999-1"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [Params]
   subtitle = "R and Data Visualization"
