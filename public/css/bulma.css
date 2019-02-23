@@ -6986,15 +6986,15 @@ label.panel-block:hover {
 
 .section {
     background-color: #fff;
-    padding: 3rem 1.5rem
+    padding: 1rem 1rem
 }
 
 @media screen and (min-width:1000px) {
     .section.is-medium {
-        padding: 9rem 1.5rem
+        padding: 9rem 0rem
     }
     .section.is-large {
-        padding: 18rem 1.5rem
+        padding: 18rem 0rem
     }
 }
 

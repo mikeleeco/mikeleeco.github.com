@@ -11,6 +11,229 @@
     <atom:link href="/categories/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>R Animation Tip: Creating Pauses</title>
+      <link>/posts/2019-02-23-creating-pauses-in-r-animations/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2019-02-23-creating-pauses-in-r-animations/</guid>
+      <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
+&lt;p&gt;Over the last couple years I’ve developed a multitude of animations using R. During this process I’ve learned quite a bit about R graphics, gpplot2, and useful techniques in animation. In fact I presented on methods for animation in R at satRdays DC - &lt;a href=&#34;http://bit.ly/animateDC&#34;&gt;slides available here&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;containerYouTube&#34;&gt;
+&lt;iframe src=&#34;https://www.youtube.com/embed/glbFxRbqGWk&#34; frameborder=&#34;0&#34; allowfullscreen class=&#34;video&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;One simple technique to improving animations is the addition of pauses. Pauses are an effective method of capturing the viewer’s attention and driving home the main message of an animation. Pausing at the end of an animation (before it loops) offers the viewer the full scope of the visualization, and pauses during the animation can be used to emphasize key data points.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let’s walk through creating a pause in R.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-pauses-in-r---libraries-and-data-reshaping&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Pauses in R - Libraries and Data Reshaping&lt;/h2&gt;
+&lt;p&gt;We’ll use the &lt;code&gt;txhousing&lt;/code&gt; data set in the &lt;code&gt;ggplot2&lt;/code&gt; package to demonstrate - this data set contains information regarding the housing market in Texas provided by the &lt;a href=&#34;http://recenter.tamu.edu/&#34;&gt;TAMU real estate center&lt;/a&gt;. The animation will plot the median sale price of two cities - Abilene and Amarillo - from 2000 to 2015.&lt;/p&gt;
+&lt;p&gt;In my satuRdays DC presentation I covered the steps taken to develop an R animation:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Interpolate your data&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Structure your data to create frames that move across the dimension of interest&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Append and export the frames&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The variable &lt;code&gt;year&lt;/code&gt; contains the unique data values across our animation - &lt;code&gt;split&lt;/code&gt; will generate a list of data frames we can apply interpolations to using the &lt;code&gt;tweenr&lt;/code&gt; package.&lt;/p&gt;
+&lt;details open&gt;
+&lt;p&gt;&lt;summary&gt;R Libraries and Data Reshaping&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(scales)
+library(extrafont)
+library(dplyr)
+library(tweenr)
+library(lubridate)
+library(animation)
+library(RColorBrewer)
+library(grid)
+loadfonts()
+
+
+# create data frame from txhousing data included in ggplot2 package
+txHousingData &amp;lt;- txhousing %&amp;gt;% filter(city %in% unique(txhousing$city)[1:2] &amp;amp; month==1)
+txHousingData &amp;lt;- txHousingData[,c(1,2,6)]
+txHousingData$city &amp;lt;- factor(txHousingData$city, levels = c(&amp;quot;Abilene&amp;quot;,&amp;quot;Amarillo&amp;quot;), labels = c(&amp;quot;Abilene&amp;quot;,&amp;quot;Amarillo&amp;quot;))
+
+# determine the unique data values that tweenr will iterate over (in this case year)
+txList &amp;lt;- split(txHousingData,txHousingData$year)
+
+# Apply tweenr to interpolate frames between data points
+txTweenedData &amp;lt;- tween_states(txList, tweenlength= 1, statelength=0, ease=&amp;#39;linear&amp;#39;,nframes=200)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;Since our data is arranged by year by default, it’s already structured in a fashion that moves across our dimension of interest (change over time) - so we’ve already completed the first two animation steps. Now that we’ve got our interpolated data frame &lt;code&gt;txTweenedData&lt;/code&gt; we can focus on the plot aesthetics.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-aesthetics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Plot Aesthetics&lt;/h2&gt;
+&lt;details open&gt;
+&lt;p&gt;&lt;summary&gt;ggplot2 Theme and Color Palette&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot aesthetics
+theme_white &amp;lt;- theme(text = element_text(family=&amp;quot;Open Sans&amp;quot;),
+                     panel.grid.major.y=element_blank(),
+                     panel.grid.major.x=element_blank(),
+                     panel.grid.minor.x=element_blank(),
+                     panel.grid.minor.y=element_blank(),
+                     axis.title.x=element_text(size=20, margin = margin(t=10)),
+                     axis.title.y=element_text(size=20, margin = margin(t=10)),
+                     axis.text.x=element_text(size=16),
+                     axis.text.y=element_text(size=16),
+                     axis.ticks = element_blank(),
+                     plot.title=element_text(size=26,family = &amp;quot;Open Sans&amp;quot;,lineheight=1.15),
+                     plot.subtitle=element_text(size=20, margin = margin(t=20, b = -5),hjust = -0.03, family = &amp;quot;Open Sans&amp;quot;),
+                     plot.caption=element_text(size=14, margin=margin(t=15,r=-15),hjust = -.03,lineheight=1.15, family = &amp;quot;Open Sans&amp;quot;, face  = &amp;quot;italic&amp;quot;),
+                     legend.position=&amp;quot;none&amp;quot;
+)
+
+# color palette
+my_palette = c(&amp;quot;#3EC7F4&amp;quot;, &amp;quot;#3FA66C&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;It’s critical to determine plot aspects that require consistency across the animation. I like to assign this information as variable objects so that it can easily update across different frames contained in the plotting code. If these aren’t explicitly noted, ggplot2 will render the defaults in their place.&lt;/p&gt;
+&lt;details open&gt;
+&lt;p&gt;&lt;summary&gt;Plot Axes, Labels, and Titles&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# y axis breaks and labels
+yAxisBreaks &amp;lt;- seq(0, 140000, by = 20000)
+yAxisLabels &amp;lt;- paste0(format(yAxisBreaks))
+yAxisLimits &amp;lt;- c(0,max(yAxisBreaks)* 1.03)
+yAxisLabels &amp;lt;- c(yAxisLabels[1:length(yAxisLabels)-1], paste0(&amp;quot;$&amp;quot;,yAxisLabels[length(yAxisLabels)]))
+
+# x axis breaks and labels
+xAxis &amp;lt;- seq(2000, 2015, by = 2)
+xAxisBreaks &amp;lt;- xAxis
+xAxisLimits &amp;lt;- c(1999.5, 2019)
+
+# plot text
+title &amp;lt;- &amp;quot;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&amp;quot;
+subtitle &amp;lt;- &amp;quot;&amp;quot;
+caption &amp;lt;- &amp;quot;Information about the housing market in Texas provided by the TAMU real estate center, http://recenter.tamu.edu/.&amp;quot;
+xLab &amp;lt;- &amp;quot;Year&amp;quot;
+yLab &amp;lt;- &amp;quot;Median sale price&amp;quot;
+
+midPoint &amp;lt;- round(max(txTweenedData$.frame) / 2)
+
+# add adjustments for line labels
+txTweenedData$LevelLabel &amp;lt;- as.character(txTweenedData$city)
+txTweenedData$nudge_x &amp;lt;- ifelse(txTweenedData$LevelLabel==&amp;quot;Abilene&amp;quot;, 1.096,ifelse(txTweenedData$LevelLabel==&amp;quot;Amarillo&amp;quot;,1.233,0))&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-pauses&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Pauses&lt;/h2&gt;
+&lt;p&gt;Finally we’ve reached our R animation tip - and thankfully it’s pretty trivial! To generate pauses within an animation simply determine where the pause exists, subset your data to include that frame, and use &lt;code&gt;replicate&lt;/code&gt; and &lt;code&gt;grid.draw&lt;/code&gt; to repeat that frame n-times. For instance, say I wanted to pause at the midpoint of the animation to emphasize a point. I’d first calculate the midpoint, then ensure that my data includes all frames until that point: &lt;code&gt;subset(txTweenedData, .frame &amp;lt;= midPoint)&lt;/code&gt;.&lt;/p&gt;
+&lt;details open&gt;
+&lt;p&gt;&lt;summary&gt;Animation Code&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#calculate midpoint of the plot
+midPoint &amp;lt;- round(max(txTweenedData$.frame) / 2)
+
+g2 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= midPoint), aes(x = year, y = median, .frame = midPoint)) +
+    geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
+    geom_point(data = subset(txTweenedData, .frame == midPoint),aes(group=city, color=city), size=5) + 
+    geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
+    scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
+    scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits)
+g2&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/posts/2019-02-23-creating-pauses-in-r-animations_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;1260&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;Once we’ve created this frame, &lt;code&gt;replicate&lt;/code&gt; and &lt;code&gt;grid.draw&lt;/code&gt; repeat that frame n-times to create a pause.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;replicate(75,grid.draw(g2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+&lt;p&gt;Simple as that!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-animation-code-within-savegif&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full Animation Code within &lt;code&gt;saveGIF&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;(NOTE: click on the gray bars to toggle collapsing the code!)&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;Animation Code&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;saveGIF({
+  
+  # print from tue first frame to the midpoint of the figure
+  for(i in 1:midPoint) {
+    g1 &amp;lt;-  ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
+      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
+      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
+      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
+      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
+      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
+      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
+      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
+                 caption = caption)
+      print(g1);  
+    }
+  
+  # print the midpoint 75 times to create a pause
+  g2 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= midPoint), aes(x = year, y = median, .frame = midPoint)) +
+      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
+      geom_point(data = subset(txTweenedData, .frame == midPoint),aes(group=city, color=city), size=5) + 
+      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
+      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
+      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
+      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
+      geom_text(data = subset(txTweenedData, .frame == midPoint),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == midPoint)$nudge_y, nudge_x = subset(txTweenedData, .frame == midPoint)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) + 
+      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
+                 caption = caption)
+
+  replicate(75,grid.draw(g2))
+  
+  # print from tue midpoint of the figure until the last frame
+  for(i in midPoint:max(txTweenedData$.frame)) {
+    g3 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
+      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
+      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
+      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
+      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
+      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
+      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
+      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
+                 caption = caption)
+    print(g3);  }
+
+  # print the final frame of the figure 110 times to create an ending pause 
+  wholeFig &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
+      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
+      geom_point(data = subset(txTweenedData, .frame == i),aes(group=city, color=city), size=5) +
+      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
+      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
+      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
+      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
+      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
+      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
+                 caption = caption)   
+  
+  replicate(110,grid.draw(wholeFig))
+},movie.name=&amp;quot;/home/michael/Documents/animation_samples/txHousing/txHousing.gif&amp;quot;,interval = .02, ani.width = 1024, ani.height = 612)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/tx_Housing.gif&#34; alt=&#34;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;Finally it’s smart to compress the final animation, since gifs can be unwieldy.&lt;/p&gt;
+&lt;details open&gt;
+&lt;p&gt;&lt;summary&gt;GIF Compression&lt;/summary&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# compress gif
+gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
+  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
+  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
+  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
+  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
+}
+
+gif_compress(&amp;quot;/home/michael/Documents/animation_samples/txHousing/txHousing.gif&amp;quot;,&amp;quot;/home/michael/Documents/animation_samples/txHousing/tx_Housing.gif&amp;quot;,extra.opts=&amp;quot;--colors 256&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;
+&lt;p&gt;Hope you’ve found this useful! Feel free to reach out to me on twitter with any questions or feedback - &lt;a href=&#34;https://twitter.com/mikeleeco&#34; class=&#34;uri&#34;&gt;https://twitter.com/mikeleeco&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The Dominance of Jonathan Taylor: Wisconsin Rushers in Context</title>
       <link>/posts/2019-01-28-wisconsin-rushing-history/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
