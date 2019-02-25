@@ -18,9 +18,9 @@
     {{ end }}
     
     {{ partial "meta/name-author" . }} 
-    {{ partial "twitterCard" . }} 
     {{ template "_internal/opengraph.html" . }} 
     {{ partial "meta/ogimage" . }} 
+    {{ partial "twitterCard" . }} 
     
     {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }} 
     {{ template "_internal/google_analytics_async.html" . }} 
