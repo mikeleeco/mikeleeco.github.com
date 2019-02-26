@@ -118,7 +118,8 @@ midPoint &amp;lt;- round(max(txTweenedData$.frame) / 2)
 
 # add adjustments for line labels
 txTweenedData$LevelLabel &amp;lt;- as.character(txTweenedData$city)
-txTweenedData$nudge_x &amp;lt;- ifelse(txTweenedData$LevelLabel==&amp;quot;Abilene&amp;quot;, 1.096,ifelse(txTweenedData$LevelLabel==&amp;quot;Amarillo&amp;quot;,1.233,0))&lt;/code&gt;&lt;/pre&gt;
+txTweenedData$nudge_x &amp;lt;- ifelse(txTweenedData$LevelLabel==&amp;quot;Abilene&amp;quot;, 1.096,ifelse(txTweenedData$LevelLabel==&amp;quot;Amarillo&amp;quot;,1.233,0))
+txTweenedData$nudge_y &amp;lt;- 0&lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
 &lt;p&gt;
 &lt;/div&gt;
