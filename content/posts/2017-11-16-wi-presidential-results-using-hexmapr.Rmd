@@ -10,6 +10,7 @@ tags:
 - R
 subtitle: ''
 bigimg: [{src: "/img/wiHexPlot.png", desc: "Wisconsin Hex Plot of 2016 Presidential Results by County"}]
+twitterimg: "https://www.mikelee.co/img/wiHexPlot.png"
 ---
   
 ```{r setup knitr, echo = FALSE, warning = FALSE}

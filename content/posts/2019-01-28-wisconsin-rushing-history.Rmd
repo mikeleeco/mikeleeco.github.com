@@ -11,6 +11,7 @@ tags:
   - R
 subtitle: "Why Jonathan Taylor is on pace to be the greatest rusher in Wisconsin football history"
 bigimg: [{src: "/img/jTaylor.jpg", desc: "Jonathan Taylor; image: USA Today Sports Images"}]
+twitterimg: "https://www.mikelee.co/img/jTaylor.jpg"
 ---
 
 ```{r setup knitr, echo = FALSE, warning = FALSE}

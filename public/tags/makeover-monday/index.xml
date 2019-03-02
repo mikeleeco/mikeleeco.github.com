@@ -52,11 +52,12 @@
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
-      <description>&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34; class=&#34;uri&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: &lt;a href=&#34;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&#34;&gt;www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It was featured on DataCamp across all their &lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:6288400911173709824&#34;&gt;social&lt;/a&gt; &lt;a href=&#34;https://twitter.com/DataCamp/status/882634632935735296&#34;&gt;media&lt;/a&gt; &lt;a href=&#34;https://www.facebook.com/permalink.php?story_fbid=1656557754368698&amp;amp;id=726282547396228&#34;&gt;platforms&lt;/a&gt; - pretty neat!&lt;/p&gt;
 &lt;p&gt;A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Your measles chart is a beautiful piece of work! No question. The (vertical) sorting merely by alphabetic state listing, however, adds nothing to the information. Even better, I think, would be to place these stats on a US map. The animation would then show the geographic progress of the disease. Try first on a state basis; counties would be too confusing The ultimate presentation, however, would show the importance of high population densities (metropolitan areas). - Kenneth Holland.&lt;/p&gt;
+&lt;p&gt;Your measles chart is a beautiful piece of work! No question. The (vertical) sorting merely by alphabetic state listing, however, adds nothing to the information. Even better, I think, would be to place these stats on a US map. The animation would then show the geographic progress of the disease. Try first on a state basis; counties would be too confusing The ultimate presentation, however, would show the importance of high population densities (metropolitan areas).
+- Kenneth Holland.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;That’s an interesting idea Kenneth!&lt;/p&gt;
 &lt;p&gt;I wonder whether a similar type of graphic representation was considered by the WSJ authors. Either way, this is a great excuse to jump on the &lt;a href=&#34;http://www.makeovermonday.co.uk/&#34;&gt;Makeover Monday&lt;/a&gt; train.&lt;/p&gt;
