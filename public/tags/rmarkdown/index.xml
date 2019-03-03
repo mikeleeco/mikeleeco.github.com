@@ -89,7 +89,7 @@ function (playerID = NULL, yearID = NULL, ...)
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;http://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;https://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;How about some numbers:&lt;/p&gt;
 

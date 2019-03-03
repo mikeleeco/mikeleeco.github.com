@@ -2276,7 +2276,7 @@ function (playerID = NULL, yearID = NULL, ...)
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;http://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&#34;row&#34;&gt;&lt;div class=&#34;col-sm-6  col-sm-offset-3&#34;&gt;&lt;img src=&#34;https://i.imgur.com/Z0MX0qd.gif&#34; class=&#34;img-responsive center-block&#34;/&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;How about some numbers:&lt;/p&gt;
 
@@ -2644,7 +2644,7 @@ I was also curious which themes were most likely to occur simultaneously. Think 
     &lt;p&gt;&lt;span id=&#34;value&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
 
 
 

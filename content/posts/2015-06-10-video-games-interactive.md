@@ -164,7 +164,7 @@ I was also curious which themes were most likely to occur simultaneously. Think 
 	<p><span id="value"></span></p>
 </div>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 
 

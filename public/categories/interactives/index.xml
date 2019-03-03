@@ -139,7 +139,7 @@ iframe {
   &lt;p&gt;&lt;span id=&#34;value&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;chart2&#34; class=&#34;text-center&#34;&gt;&lt;/div&gt;
 
@@ -502,7 +502,7 @@ function(error, data) {
   &lt;p&gt;&lt;span id=&#34;value&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;chart1&#34; class=&#34;text-center&#34;&gt;&lt;/div&gt;
 
