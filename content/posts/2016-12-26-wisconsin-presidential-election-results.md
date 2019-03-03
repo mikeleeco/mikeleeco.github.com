@@ -6,6 +6,7 @@ tags: [R, ggplot2, politics, dataviz]
 date: 2017-01-05
 categories: ["posts"]
 bigimg: [{src: "/img/WisconsinMinnesota.png", desc: "2016 Wisconsin and Minnesota Election Results"}]
+twitterimg: "https://www.mikelee.co/img/WisconsinMinnesota.png"
 ---
 
 #### *"Your home state did us no favors..."*

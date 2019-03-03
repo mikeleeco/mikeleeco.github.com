@@ -6,6 +6,7 @@ date: 2016-06-01
 comments: true
 categories: ["posts"]
 bigimg: [{src: "/img/draft_odds.png", desc: "NBA Draft Odds"}]
+twitterimg: "https://www.mikelee.co/img/draft_odds.png"
 ---
 
 **Original Source**

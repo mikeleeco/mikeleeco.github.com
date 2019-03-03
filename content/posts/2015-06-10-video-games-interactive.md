@@ -6,6 +6,7 @@ date: 2015-06-10
 comments: true
 categories: ["posts"]
 bigimg: [{src: "/img/rampage.jpg", desc: "Rampage"}]
+twitterimg: "https://www.mikelee.co/img/rampage.jpg"
 ---
 
 > Call of Duty :: Frank Underwood // Frogger :: George Costanza // Shinobi :: Wu-Tang Clan // Super Nintendo & Sega Genesis :: <a href="https://youtu.be/CHio4lLOhKc?t=2m32s">???</a>

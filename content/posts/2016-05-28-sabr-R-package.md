@@ -7,6 +7,7 @@ categories: ["project"]
 comments: true
 description: Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics
 bigimg: [{src: "/img/county.jpg", desc: "Milwaukee County Stadium"}]
+twitterimg: "https://www.mikelee.co/img/county.jpg"
 ---
 
 The [sabr package](https://github.com/mikeleeco/sabr/) connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in [The Book: Playing the Percentages in Baseball](http://www.insidethebook.com/woba.shtml), wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:

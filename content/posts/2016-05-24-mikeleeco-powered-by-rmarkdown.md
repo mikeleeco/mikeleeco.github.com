@@ -6,6 +6,7 @@ date: 2016-05-24
 comments: true
 categories: ["posts"]
 bigimg: [{src: "/img/jekyll-blog.jpg", desc: "R and Jekyll"}]
+twitterimg: "https://www.mikelee.co/img/jekyll-blog.jpg"
 ---
 > This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

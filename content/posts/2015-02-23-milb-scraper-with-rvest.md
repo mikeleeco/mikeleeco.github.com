@@ -6,6 +6,7 @@ date: 2015-02-23
 comments: true
 categories: ["posts"]
 bigimg: [{src: "/img/bryant.jpg", desc: "Kris Bryant"}]
+twitterimg: "https://www.mikelee.co/img/bryant.jpg"
 ---
 
 <p>
