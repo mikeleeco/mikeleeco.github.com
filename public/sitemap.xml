@@ -2,13 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2019-04-19-line-chart-reported-bullying/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2019-04-17-line-chart-on-campus-crimes/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2019-02-23-creating-pauses-in-r-animations/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>/animation/2019-02-22-line-chart-status-dropout-rate/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/2019-01-28-wisconsin-rushing-history/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2019-01-24-state-map-acgr/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2018-12-12-line-chart-status-completion-rate/</loc>
+    <lastmod>2018-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -182,20 +207,20 @@
   </url>
   
   <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <loc>/categories/animation/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/animation/</loc>
-    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <loc>/tags/animation/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/animation/</loc>
-    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -224,7 +249,7 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -248,13 +273,13 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2018-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -308,7 +333,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -374,7 +399,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

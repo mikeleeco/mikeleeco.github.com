@@ -9,7 +9,8 @@ comments: false
 </style>
 
 ## Professional Profile
-I'm a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. Whether working independently or collaboratively I’m able to contribute meaningful work through strong communication skills, critically evaluating challenging data problems, and the attention to diverse audiences across my professional career.
+5+ years applying open source libraries to analyze data and build products that drive knowledge acquisition and decision making. Whether working independently or collaboratively, I’m able to
+contribute meaningful work through strong communication skills, critical evaluation of challenging data problems, and the attention to diverse audiences across my professional career.
 
 ## Core Compentencies
 
@@ -33,14 +34,18 @@ Demonstrated ability converting both unstructured and clean data into meaningful
 ## Experience
 <p></p>
 
-#### Research Associate, American Institutes for Research
-2015 - present
+#### Researcher, American Institutes for Research
+2019 - present
 
-* Co-authored the EdSurvey R package for analysis of survey data using NCES statistical methods, including the development of R functions from scratch (accompanied by acceptance tests), two vignettes, and presentation of the package’s practical use for researchers at 2016 and 2017 AERA workshops
-* Co-authored the NAEPprimer data package
-* Collaborated with designers to replicate a visualization using base R graphics tools to produce over 2000 visualizations of student and teacher level survey data to populate a client’s summary reports
+#### Research Associate, American Institutes for Research
+2015 - 2019
+
+* Co-authored the [EdSurvey](https://cran.r-project.org/web/packages/EdSurvey/index.html) and [NAEPprimer](https://cran.r-project.org/web/packages/NAEPprimer/index.html) packages for analysis of survey data using NCES statistical methods, including the programming of R functions, documentation, and workshop content
+* Directed the production on an interactive shiny application that visualizes NAEP mathematics and reading results from 1990 to 2017, including delegation of tasks and code reviews
+* Collaborated with designers to automate the production of reports for over 10 unique internal and external clients, each featuring a custom-designed LaTeX template embedded with unique ggplot2 visualizations illustrating data trends
+* Programmed custom interactive figures for visual journalism articles in D3.js
 * Wrote R scripts to review data sets in longitudinal surveys to meet compliance standards
-* Developed over 5 unique animations for social media distribution
+* Developed over 15 unique animations for social media distribution at [twitter.com/EdNCES](https://www.twitter.com/EdNCES)
 
 <p></p>
 

@@ -1,0 +1,48 @@
+---
+title: "Line Chart - On Campus Crimes"
+author: ''
+date: '2019-04-17'
+categories: animation
+tags:
+- animation
+- dataviz
+- ggplot2
+- gganimate
+- R
+subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%'
+bigimg: [{src: "/img/lineCrimesTall.gif", desc: "Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%"}]
+---
+
+```{r setup knitr, echo = FALSE, warning = FALSE}
+library(knitr)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180, out.extra='class = "img-responsive"')
+
+```
+
+```{r setup, echo = F}
+knit_hooks$set(wrap = function(before, options, envir){
+  if (before){
+    paste0('<', options$wrap, '>')
+  } else {
+    paste0('</', options$wrap, '>')
+  }
+})
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
+options(width=140, dplyr.width = 150)
+```
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In 2016, about 28,400 criminal incidents on <a href="https://twitter.com/hashtag/postsec?src=hash&amp;ref_src=twsrc%5Etfw">#postsec</a> institution campuses were reported to police/ security agencies, representing a 3% increase from 2015.<br><br>Learn more <a href="https://twitter.com/hashtag/CampusCrime?src=hash&amp;ref_src=twsrc%5Etfw">#CampusCrime</a> statistics in our NEW release: <a href="https://t.co/Wvco6IxkcC">https://t.co/Wvco6IxkcC</a> <a href="https://t.co/HKxgHq8gAs">pic.twitter.com/HKxgHq8gAs</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/1118532105183604738?ref_src=twsrc%5Etfw">April 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+ ***
+  
+## Full image:
+  
+![Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%](/img/lineCrimesTall.gif)
+
+ ***
+ 
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+  

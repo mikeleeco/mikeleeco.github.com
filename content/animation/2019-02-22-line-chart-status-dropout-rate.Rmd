@@ -1,0 +1,50 @@
+---
+title: "Line Chart - Status Dropout Rate"
+author: ''
+date: '2019-02-22'
+categories: animation
+tags:
+- animation
+- dataviz
+- ggplot2
+- gganimate
+- R
+subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: ' Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016'
+bigimg: [{src: "/img/lineStatusDropoutRateTall.gif", desc: " Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016"}]
+---
+
+```{r setup knitr, echo = FALSE, warning = FALSE}
+library(knitr)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180, out.extra='class = "img-responsive"')
+
+```
+
+```{r setup, echo = F}
+knit_hooks$set(wrap = function(before, options, envir){
+  if (before){
+    paste0('<', options$wrap, '>')
+  } else {
+    paste0('</', options$wrap, '>')
+  }
+})
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
+options(width=140, dplyr.width = 150)
+```
+ 
+Animation linked here:
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">DYK? The <a href="https://twitter.com/hashtag/Hispanic?src=hash&amp;ref_src=twsrc%5Etfw">#Hispanic</a> status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &amp; 2016. What were the rates for Black &amp; White students? Discover more: <a href="https://t.co/5SyF2HuBcJ">https://t.co/5SyF2HuBcJ</a>  <a href="https://twitter.com/hashtag/HispanicEd?src=hash&amp;ref_src=twsrc%5Etfw">#HispanicEd</a> <a href="https://t.co/Mg9MEzTeel">pic.twitter.com/Mg9MEzTeel</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/1098979512107319296?ref_src=twsrc%5Etfw">February 22, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+***
+  
+## Full image:
+  
+![Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016](/img/lineStatusDropoutRateTall.gif)
+
+ ***
+ 
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+  
