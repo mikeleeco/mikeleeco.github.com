@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/animation/2019-05-26-line-chart-college-enrollment/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/animation/2019-04-19-line-chart-reported-bullying/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
   </url>
@@ -207,13 +212,13 @@
   </url>
   
   <url>
-    <loc>/categories/animation/</loc>
+    <loc>/tags/animation/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/animation/</loc>
+    <loc>/categories/animation/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
