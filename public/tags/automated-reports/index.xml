@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automated Reports on Michael Lee</title>
+    <link>/tags/automated-reports/index.xml</link>
+    <description>Recent content in Automated Reports on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/automated-reports/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Automated Reports - Nevada Department of Education</title>
+      <link>/projects/2019-12-30-Automated-Report-Nevada/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-30-Automated-Report-Nevada/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Each Fall and Spring the Nevada Department of Education disseminates a summary report detailing results from a social-emotional learning survey. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor. One such example is &lt;a href=&#34;/img/SmithValleySchoolsElementary56.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;The goal for this project was to automate the production of each school&amp;rsquo;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance. This involves provided specific &amp;ldquo;tags&amp;rdquo; for each report element. For example, each text block is tagged with a &lt;code&gt;P&lt;/code&gt;, each header is tagged with it&amp;rsquo;s respective header type (&lt;code&gt;H1&lt;/code&gt;, &lt;code&gt;H2&lt;/code&gt;, etc), and each visualization has alt text describing the visualization and it&amp;rsquo;s respective data labels/values. I acted as development lead; translating requests from the content area team into the graphic design and data quality control of the reports. Additionally, my role as development lead involved delegating tasks to the team. This involved recreating and improving upon the design of the previous CMSD report. The typesetting was coded in LaTeX and embedded with the Open Sans family to provide an free-to-use font for clarity and emphasis. The figures were generated using the &lt;code&gt;ggplot2&lt;/code&gt; and base R graphics packages. Finally, an Rmarkdown file was used to seamlessly integrate each school&amp;rsquo;s pdf visualizations into the school level summary report pdf.&lt;/p&gt;
+
+&lt;p&gt;The updated report is &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;comparison-of-previous-and-new-report&#34;&gt;Comparison of Previous and New Report&lt;/h3&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/nevadaOriginal.gif&#34; alt = &#34;Original Nevada Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/nevadaShell.gif&#34; alt = &#34;Updated Nevada Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and data visualization production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;: Document preparation, typesetting, and 508 tagging&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-the-image-below-to-check-out-a-sample-nevada-report&#34;&gt;Click the image below to check out a sample Nevada report!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/nevada.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Click to view a sample Nevada report.&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated Reports - Cleveland Metropolitan School District</title>
+      <link>/projects/2018-11-20-Automated-Report-Cleveland-Metropolitan-School-District/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2018-11-20-Automated-Report-Cleveland-Metropolitan-School-District/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Each Fall and Spring the Cleveland Metropolitan School District disseminates a summary report detailing results from a survey assessing four social-emotional learning constructs within elementary, middle and high schools. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor; one such example is &lt;a href=&#34;/img/ES.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;The goal for this project was to automate the production of each school&amp;rsquo;s customized report. I acted as the lead graphic designer and data specialist on a team of developers to produce these summary results. This involved recreating and improving upon the design of the previous CMSD report. The typesetting was coded in LaTeX and embedded with the Open Sans family to provide an free-to-use font for clarity and emphasis. The figures were generated using the &lt;code&gt;ggplot2&lt;/code&gt; and base R graphics packages. Finally, an Rmarkdown file was used to seamlessly integrate each school&amp;rsquo;s pdf visualizations into the school level summary report pdf.&lt;/p&gt;
+
+&lt;p&gt;Check out the improved report &lt;a href=&#34;/img/cflShell.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;comparison-of-previous-and-new-report&#34;&gt;Comparison of Previous and New Report&lt;/h3&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/cflOriginal.gif&#34; alt = &#34;Original CFL Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/cflShell.gif&#34; alt = &#34;Updated CFL Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and data visualization production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;: Document preparation and typesetting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-the-image-below-to-check-out-a-sample-cleveland-report&#34;&gt;Click the image below to check out a sample Cleveland report!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;/img/cflShell.pdf&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/cmsd.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;/img/cflShell.pdf&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Click to view a sample Cleveland report.&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automated Reports - IMLS, Public Libraries Survey</title>
+      <link>/projects/2018-05-09-Automated-Reports-Public-Library-Services/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2018-05-09-Automated-Reports-Public-Library-Services/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;The Institute of Museum and Library Services&amp;rsquo; mission is to inspire libraries and museums to advance innovation, lifelong learning, and cultural and civic engagement. Each year it conducts a survey of the nation’s approximately 123,000 libraries and 35,000 museums to provide a snapshot of national and state-level trends.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;The goal for this project was to automate the production of each state and jurisdiction&amp;rsquo;s customized report. I acted as an R and LaTeX developer in creation of the template laying out these summary results. The typesetting was coded in LaTeX and embedded with the Myriad Pro and Museo Slab families for clarity and emphasis. The figures were generated using base R graphics. Finally, an Rmarkdown file was used to seamlessly integrate each state&amp;rsquo;s visualizations into the summary report pdf.&lt;/p&gt;
+
+&lt;p&gt;Check out the Alabama version of the report &lt;a href=&#34;/img/ALReport.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and data visualization production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;: Document preparation and typesetting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-the-image-below-to-check-out-a-sample-imls-public-library-services-report&#34;&gt;Click the image below to check out a sample IMLS Public Library Services report!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;/img/ALReport.pdf&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/alReport.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;/img/ALReport.pdf&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Click to view a sample report.&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

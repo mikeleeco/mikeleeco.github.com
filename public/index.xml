@@ -8,8 +8,236 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Fri, 19 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Automated Reports - Nevada Department of Education</title>
+      <link>/projects/2019-12-30-Automated-Report-Nevada/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-30-Automated-Report-Nevada/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Each Fall and Spring the Nevada Department of Education disseminates a summary report detailing results from a social-emotional learning survey. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor. One such example is &lt;a href=&#34;/img/SmithValleySchoolsElementary56.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;The goal for this project was to automate the production of each school&amp;rsquo;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance. This involves provided specific &amp;ldquo;tags&amp;rdquo; for each report element. For example, each text block is tagged with a &lt;code&gt;P&lt;/code&gt;, each header is tagged with it&amp;rsquo;s respective header type (&lt;code&gt;H1&lt;/code&gt;, &lt;code&gt;H2&lt;/code&gt;, etc), and each visualization has alt text describing the visualization and it&amp;rsquo;s respective data labels/values. I acted as development lead; translating requests from the content area team into the graphic design and data quality control of the reports. Additionally, my role as development lead involved delegating tasks to the team. This involved recreating and improving upon the design of the previous CMSD report. The typesetting was coded in LaTeX and embedded with the Open Sans family to provide an free-to-use font for clarity and emphasis. The figures were generated using the &lt;code&gt;ggplot2&lt;/code&gt; and base R graphics packages. Finally, an Rmarkdown file was used to seamlessly integrate each school&amp;rsquo;s pdf visualizations into the school level summary report pdf.&lt;/p&gt;
+
+&lt;p&gt;The updated report is &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;comparison-of-previous-and-new-report&#34;&gt;Comparison of Previous and New Report&lt;/h3&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/nevadaOriginal.gif&#34; alt = &#34;Original Nevada Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/nevadaShell.gif&#34; alt = &#34;Updated Nevada Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and data visualization production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;: Document preparation, typesetting, and 508 tagging&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-the-image-below-to-check-out-a-sample-nevada-report&#34;&gt;Click the image below to check out a sample Nevada report!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/nevada.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;/img/Lovelock_Elementary_School.pdf&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Click to view a sample Nevada report.&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - PISA</title>
+      <link>/projects/2019-12-02-IAP-PISA-Summary-Release/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-02-IAP-PISA-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-pisa&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/&#34;&gt;https://nces.ed.gov/surveys/pisa/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The Program for International Student Assessment (PISA) is an international assessment that measures 15-year-old students&amp;rsquo; reading, mathematics, and science literacy every three years. First conducted in 2000, the major domain of study rotates between reading, mathematics, and science in each cycle. PISA also includes measures of general or cross-curricular competencies, such as collaborative problem solving. By design, PISA emphasizes functional skills that students have acquired as they near the end of compulsory schooling. PISA is coordinated by the Organization for Economic Cooperation and Development (OECD), an intergovernmental organization of industrialized countries, and is conducted in the United States by NCES. Data collection for the most recent assessment was completed in Fall 2018.&lt;/p&gt;
+
+&lt;p&gt;PISA 2018 assessed students’ science, reading, and mathematics literacy in about 80 countries and education systems. Reading was the focal subject of the 2018 data collection, as it was in 2009. PISA 2018 also included the optional assessment of financial literacy which the United States administered. Data from the core 2018 reading, mathematics, and science literacy assessment are now available. Data for financial literacy will be released in spring 2020.&lt;/p&gt;
+
+&lt;p&gt;The most recent PISA results are from 2018 and are available here. More information about PISA and resources, including the OECD&amp;rsquo;s PISA reports, PISA assessment frameworks, and international data files, are available at the OECD&amp;rsquo;s &lt;a href=&#34;https://nces.ed.gov/transfer.asp?location=www.oecd.org/pisa/&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The PISA summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and json production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/pisa2018/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/pisa.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/pisa2018/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;How do U.S. 15-yr-old students use their knowledge and reasoning skills to:&lt;br&gt;• Interpret text&lt;br&gt;• Solve &lt;a href=&#34;https://twitter.com/hashtag/math?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#math&lt;/a&gt; problems &lt;br&gt;• Provide scientific solutions&lt;br&gt;&lt;br&gt;Read our JUST RELEASED &lt;a href=&#34;https://twitter.com/hashtag/OECDPISA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#OECDPISA&lt;/a&gt; web report to discover the latest findings: &lt;a href=&#34;https://t.co/3O3QDNvopp&#34;&gt;https://t.co/3O3QDNvopp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OECDEduSkills?ref_src=twsrc%5Etfw&#34;&gt;@OECDEduSkills&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/EdChat?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdChat&lt;/a&gt; &lt;a href=&#34;https://t.co/nUaTsZANYz&#34;&gt;pic.twitter.com/nUaTsZANYz&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1201879017223327744?ref_src=twsrc%5Etfw&#34;&gt;December 3, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - ICILS</title>
+      <link>/projects/2019-11-05-IAP-ICILS-Summary-Release/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-11-05-IAP-ICILS-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-icils&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/icils/&#34;&gt;https://nces.ed.gov/surveys/icils/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The International Computer and Information Literacy Study (ICILS) is a computer-based international assessment of 8th-grade students&amp;rsquo; capacities &amp;ldquo;to use information communications technologies (ICT) productively for a range of different purposes, in ways that go beyond a basic use of ICT&amp;rdquo; (Fraillon et al., 2018). First conducted in 2013, ICILS assessed students’ computer and information literacy (CIL) with an emphasis on the use of computers as information-seeking, management, and communication tools. Thereafter, increasing international recognition of the importance of students’ abilities to recognize and operationalize real-world problems using computational formulations led to the development of the computational thinking (CT) component within ICILS. The second cycle of ICILS was administered in 2018; it continued to assess CIL and in the newly added optional assessment component, assessed CT. In addition, it investigated how these abilities relate both to in-school and out-of-school contexts that support learning.&lt;/p&gt;
+
+&lt;p&gt;ICILS is sponsored by the International Association for the Evaluation of Educational Achievement (IEA) and is conducted in the United States by the National Center for Education Statistics (NCES). This study allows the United States to monitor U.S. students’ skills and experience using technology, compare U.S. students’ skills internationally, and provide data on factors that may influence students’ CIL and CT skills. The data collected through ICILS provide valuable information with which to understand the nature and extent of the &amp;ldquo;digital divide&amp;rdquo; and has the potential to inform our understanding of the relationship between technology skills and experience and student performance in other core subject areas.&lt;/p&gt;
+
+&lt;p&gt;Twenty-one education systems around the world participated in ICILS 2013. The United States participated in ICILS for the first time in 2018, along with 13 other education systems. Among them, nine, including the United States, participated in the optional CT component.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The ICILS summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and json production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;https://nces.ed.gov/surveys/icils/icils2018/theme1.asp&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/icils.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;https://nces.ed.gov/surveys/icils/icils2018/theme1.asp&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;In 2018, 86% of U.S. 8th grade teachers “strongly agreed” or “agreed” that information and communications technologies (ICT) were considered a priority for use in teaching at their schools. &lt;br&gt;&lt;br&gt;Check out our &lt;a href=&#34;https://twitter.com/hashtag/ICILS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ICILS&lt;/a&gt; web report for more: &lt;a href=&#34;https://t.co/fsyfVDwbbt&#34;&gt;https://t.co/fsyfVDwbbt&lt;/a&gt; &lt;a href=&#34;https://t.co/3AQfw33GCU&#34;&gt;pic.twitter.com/3AQfw33GCU&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1194971752767590400?ref_src=twsrc%5Etfw&#34;&gt;November 14, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Insights on Diversifying the Educator Workforce - Teacher Diversity Tool</title>
+      <link>/projects/2019-12-30-Teacher-Student-Shiny-Application/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-30-Teacher-Student-Shiny-Application/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;The Center on Great Teachers and Leader&amp;rsquo;s (GTL Center) mission is to support states and districts in their efforts to grow, respect, and retain great teachers and leaders for all students, especially those from disadvantaged backgrounds.&lt;/p&gt;
+
+&lt;p&gt;The GTL Center has an &lt;a href=&#34;https://gtlcenter.org/technical-assistance/toolkits/data-tool-diversifying-the-educator-workforce&#34;&gt;Excel data tool&lt;/a&gt; that is used to reveal insights about the diversity of the educator workforce at the state, district, school, or EPP level. One component of this tool that was missing was a method to map and explore teacher and student ethnicity data by school district.&lt;/p&gt;
+
+&lt;p&gt;The goal for this project was to develop a free, user-friendly tool to identify and visualize diversity gaps within states and school districts.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as the lead developer in the creation of a Shiny application that would map diversity gaps at the state and district level.&lt;/p&gt;
+
+&lt;p&gt;The application features an intuitive design. The left sidebar is used to export state and district level teacher data, prepopulated from the &lt;a href=&#34;https://nces.ed.gov/ccd/elsi/tablegenerator.aspx&#34;&gt;NCES table generator&lt;/a&gt;. Users are then asked to add their student diversity statistics to the tool and re-upload. Finally, select a racial characteristic to generate the diversity gap map in the main panel.&lt;/p&gt;
+
+&lt;p&gt;Linked are a &lt;a href=&#34;/data/CALIFORNIA.csv&#34;&gt;state&lt;/a&gt; and &lt;a href=&#34;/data/MilwaukeeSchoolDistrictWISCONSIN.csv&#34;&gt;district&lt;/a&gt; level data set populated with &lt;em&gt;dummy student data&lt;/em&gt; that can be used to explore the tool - give it a try!&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shiny&lt;/strong&gt;: User interface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-teacher-diversity-tool-shiny-application&#34;&gt;Click to learn more and explore the Teacher Diversity Tool Shiny Application!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/diversity.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the Teacher Diversity Tool Shiny Application&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - TALIS</title>
+      <link>/projects/2019-06-28-IAP-TALIS-Summary-Release/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-06-28-IAP-TALIS-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-talis&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/talis/&#34;&gt;https://nces.ed.gov/surveys/talis/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The Teaching and Learning International Survey (TALIS) is a survey about teachers, teaching, and learning environments. Sponsored by the Organization for Economic Cooperation and Development (OECD), TALIS is composed of two questionnaires—one for teachers and one for their principals—which ask questions about their backgrounds, their work environments, professional development, and their beliefs and attitudes about teaching. TALIS is unique because it is the only comparative international education study that collects data on nationally representative samples of teachers. For the United States, TALIS provides key information on teachers and principals and how they and their working and learning environments compare internationally.&lt;/p&gt;
+
+&lt;p&gt;The core target population in TALIS is ISCED* level 2 (lower secondary) teachers and school principals. ISCED level 2 corresponds to grades 7, 8, and 9 in the United States. Education systems also have the option to survey at the ISCED level 1 (primary) or ISCED level 3 (upper secondary). However, the United States and most other education systems only participate at the lower secondary level.&lt;/p&gt;
+
+&lt;p&gt;TALIS was first administered in 2008 and then in 2013 and 2018. The United States first participated in the 2013 cycle, along with 37 other education systems. The most recent round of data collection was in 2018, with 49 education systems participating. U.S. results for the 2018 administration of TALIS are available on the TALIS 2018 Results page. Full results from all three rounds of TALIS are available on the OECD TALIS website.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The TALIS summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning, json production, and sisualizations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://nces.ed.gov/surveys/talis/talis2018/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/talis.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://nces.ed.gov/surveys/talis/talis2018/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;NEW STAT: 99% of U.S. 7th–9th grade &lt;a href=&#34;https://twitter.com/hashtag/principals?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#principals&lt;/a&gt; in 2018 had a master’s degree or higher, which was ABOVE the &lt;a href=&#34;https://twitter.com/hashtag/TALIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TALIS&lt;/a&gt; avg. (61%). &lt;br&gt;&lt;br&gt;Read our &lt;a href=&#34;https://twitter.com/hashtag/2018TALIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#2018TALIS&lt;/a&gt; report for more: &lt;a href=&#34;https://t.co/A8uGi4q3Aj&#34;&gt;https://t.co/A8uGi4q3Aj&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OECDEduSkills?ref_src=twsrc%5Etfw&#34;&gt;@OECDEduSkills&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/FactFriday?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#FactFriday&lt;/a&gt; &lt;a href=&#34;https://t.co/vPGdsbfwCC&#34;&gt;pic.twitter.com/vPGdsbfwCC&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1144638095637327874?ref_src=twsrc%5Etfw&#34;&gt;June 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Line Chart - College Enrollment Rate</title>
@@ -800,6 +1028,57 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
     </item>
     
     <item>
+      <title>Automated Reports - Cleveland Metropolitan School District</title>
+      <link>/projects/2018-11-20-Automated-Report-Cleveland-Metropolitan-School-District/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2018-11-20-Automated-Report-Cleveland-Metropolitan-School-District/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;Each Fall and Spring the Cleveland Metropolitan School District disseminates a summary report detailing results from a survey assessing four social-emotional learning constructs within elementary, middle and high schools. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor; one such example is &lt;a href=&#34;/img/ES.pdf&#34;&gt;linked here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;The goal for this project was to automate the production of each school&amp;rsquo;s customized report. I acted as the lead graphic designer and data specialist on a team of developers to produce these summary results. This involved recreating and improving upon the design of the previous CMSD report. The typesetting was coded in LaTeX and embedded with the Open Sans family to provide an free-to-use font for clarity and emphasis. The figures were generated using the &lt;code&gt;ggplot2&lt;/code&gt; and base R graphics packages. Finally, an Rmarkdown file was used to seamlessly integrate each school&amp;rsquo;s pdf visualizations into the school level summary report pdf.&lt;/p&gt;
+
+&lt;p&gt;Check out the improved report &lt;a href=&#34;/img/cflShell.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;comparison-of-previous-and-new-report&#34;&gt;Comparison of Previous and New Report&lt;/h3&gt;
+
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/cflOriginal.gif&#34; alt = &#34;Original CFL Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;column&#34;&gt;
+    &lt;img src=&#34;/img/cflShell.gif&#34; alt = &#34;Updated CFL Report&#34; style=&#34;width:100%&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and data visualization production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;: Document preparation and typesetting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-the-image-below-to-check-out-a-sample-cleveland-report&#34;&gt;Click the image below to check out a sample Cleveland report!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;/img/cflShell.pdf&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/cmsd.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;/img/cflShell.pdf&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Click to view a sample Cleveland report.&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Stacked Area Chart - US Education Enrollment</title>
       <link>/animation/2018-09-05-stacked-area-chart-enrollment/</link>
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
@@ -814,339 +1093,6 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
 &lt;p class=&#34;caption&#34;&gt;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016</title>
-      <link>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</link>
-      <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Between 1999–2000 &amp;amp; 2015–16, avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More &lt;a href=&#34;https://twitter.com/hashtag/stats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#stats&lt;/a&gt; on student &lt;a href=&#34;https://twitter.com/hashtag/debt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#debt&lt;/a&gt; here in our NEW blog: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/93mzhYkwgF&#34;&gt;pic.twitter.com/93mzhYkwgF&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1030868436027691010?ref_src=twsrc%5Etfw&#34;&gt;August 18, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridDoctorate.gif&#34; alt=&#34;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Average cumulative student loan balance for master&#39;s degree completers, by degree program: Selected years, 2000–2016</title>
-      <link>/animation/2018-08-07-animated-faceted-line-chart-student-loan-masters/</link>
-      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2018-08-07-animated-faceted-line-chart-student-loan-masters/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields. Interested in &lt;a href=&#34;https://twitter.com/hashtag/StudentDebt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentDebt&lt;/a&gt; stats? Find more &lt;a href=&#34;https://twitter.com/hashtag/EdData?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdData&lt;/a&gt; in our NEW BLOG: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/84BvN3bqWX&#34;&gt;pic.twitter.com/84BvN3bqWX&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1026807694731161600?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridMasters.gif&#34; alt=&#34;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Measles Vaccination Chart D3 Replication</title>
-      <link>/interactives/2018-07-01-wsj-measles-interactive/</link>
-      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/interactives/2018-07-01-wsj-measles-interactive/</guid>
-      <description>&lt;style&gt;
-iframe {
-    border: 0;
-    height: 1100px;
-}
-
-.container {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0px;
-}
-
-.footer {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0px;
-}
-
-&lt;/style&gt;
-
-&lt;script src=&#34;https://d3js.org/d3.v5.min.js&#34;&gt;&lt;/script&gt;
-
-&lt;div class=&#34;container&#34;&gt;
-    &lt;div id=&#34;graphic&#34; style=&#34;width: 1500px;&#34;&gt;&lt;/div&gt;
-    &lt;script type=&#34;text/javascript&#34; src=&#34;https://pym.nprapps.org/pym.v1.min.js&#34;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var pymParent = new pym.Parent(&#39;graphic&#39;, &#39;/js/d3samples/measles/measles.html&#39;, {});
-    &lt;/script&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016</title>
-      <link>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt;, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW &lt;a href=&#34;https://twitter.com/hashtag/COE2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#COE2018&lt;/a&gt; Spotlight: &lt;a href=&#34;https://t.co/Yr9DzkGYMS&#34;&gt;https://t.co/Yr9DzkGYMS&lt;/a&gt; &lt;a href=&#34;https://t.co/o7AvnRRjcH&#34;&gt;pic.twitter.com/o7AvnRRjcH&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/999323515215020034?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationLoans.gif&#34; alt=&#34;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Seasonal Virgin River Narrows Discharge</title>
-      <link>/posts/2018-04-16-hiking-the-narrows/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/posts/2018-04-16-hiking-the-narrows/</guid>
-      <description>&lt;p&gt;This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as &lt;em&gt;The Narrows&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/narrows.jpg&#34; alt=&#34;The Narrows in Zion National Park&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;The Narrows in Zion National Park&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;It’s surely even more sensational in person.&lt;/p&gt;
-&lt;p&gt;Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely. Online sources confirmed my intuition that the spring run-off leads to closures, but I was curious the extent of seasonality. Let’s dig into it!&lt;/p&gt;
-&lt;div id=&#34;accessing-the-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Accessing the data&lt;/h2&gt;
-&lt;p&gt;The provisional data for the East Fork of the Virgin River can be easily &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&amp;amp;begin_date=&amp;amp;end_date=&amp;amp;site_no=09404900&#34;&gt;accessed via the USGS website&lt;/a&gt;, including discharge and gage height. I’ll focus on the discharge levels here, since the speed of the river (and not it’s height) is what seems to precipitate closures. The speed threshold that merits closure of The Narrows was inconsistent across the sites I investigated (if you know leave a comment), but the level I saw most often - 150 cfs - is what I will use.&lt;/p&gt;
-&lt;p&gt;A brief aside: the USGS logs some super interesting data to visualize time series. Here are some continually updated &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&#34;&gt;sources of water data for Utah&lt;/a&gt;, for example. So much to explore!&lt;/p&gt;
-&lt;p&gt;Back to The Narrows data. So we’ve got out the csv and it was completely clean like always the end! Not.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cleaning-the-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cleaning the data&lt;/h2&gt;
-&lt;p&gt;There was quite a few strange coding choices made through the years accessed (1993 - 2018). What follows are those gory recoding details. One nifty function I learned more about was &lt;code&gt;dplyr::separate&lt;/code&gt; which allows you to specify the direction you’d like to merge the characters you’re separating. This allowed me to push values of &lt;code&gt;0 seconds&lt;/code&gt; ino the seconds column, even though there were some values where there were no adjoining hours or minutes attached. Nifty!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(lubridate)
-library(animation)
-library(grid)
-x &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
-x &amp;lt;- x[1:530086,]
-x2 &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows2.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
-x &amp;lt;- rbind(x,x2)
-rm(x2)
-x &amp;lt;- x %&amp;gt;% separate(datetime, c(&amp;quot;date&amp;quot;, &amp;quot;time&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;)
-x$date &amp;lt;- mdy(x$date)
-x$timeparse &amp;lt;- hm(x$time)
-x &amp;lt;- x %&amp;gt;% separate(timeparse, c(&amp;quot;hour&amp;quot;, &amp;quot;minute&amp;quot;, &amp;quot;second&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;, fill = &amp;quot;left&amp;quot;)
-x$hour &amp;lt;- gsub(&amp;quot;H&amp;quot;, &amp;quot;&amp;quot;, x$hour)
-x$minute &amp;lt;- gsub(&amp;quot;M&amp;quot;, &amp;quot;&amp;quot;, x$minute)
-x$second &amp;lt;- gsub(&amp;quot;S&amp;quot;, &amp;quot;&amp;quot;, x$second)
-x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)] &amp;lt;- sapply(x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)], as.numeric)
-x$hour &amp;lt;- ifelse(is.na(x$hour),0 ,x$hour)
-x$minute &amp;lt;- ifelse(is.na(x$minute),0 ,x$minute)
-x$hour &amp;lt;- ifelse(grepl(&amp;quot;PM&amp;quot;, x$time), x$hour + 12,x$hour)
-x$hour &amp;lt;- ifelse(nchar(x$hour) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$hour)),as.character(x$hour))
-x$minute &amp;lt;- ifelse(nchar(x$minute) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$minute)),as.character(x$minute))
-x$second &amp;lt;- ifelse(nchar(x$second) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$second)),as.character(x$second))
-x$hour &amp;lt;- ifelse(grepl(&amp;quot;24&amp;quot;, x$hour), &amp;quot;00&amp;quot;,x$hour)
-x$timeUpdate &amp;lt;- paste(x$hour,x$minute,x$second, sep = &amp;quot;:&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The full data source as an &lt;strong&gt;.Rdata&lt;/strong&gt; file can be accessed through &lt;a href=&#34;https://mikelee.co/data/narrows.Rdata&#34;&gt;this link&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;drill-down-and-visualize&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Drill down and visualize&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt; package make it easy to extract seasonality in the data:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByDay &amp;lt;- x %&amp;gt;% mutate(day = yday(date)) %&amp;gt;%
-  group_by(day) %&amp;gt;%
-  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
-
-dischargeByDay$day &amp;lt;- as.Date(as_date(dischargeByDay$day))
-dischargeByDay$month &amp;lt;- month(dischargeByDay$day, label = TRUE)
-
-plot(dischargeByDay$day, dischargeByDay$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/drill%20down-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This result is convincing on it’s own: on average from 1993 to 2018, after about 100 days and lasting until about the 160th day (Apri 10th - June 10th), the discharge level breaks the 150 cfs threshold that closes The Narrows hiking route.&lt;/p&gt;
-&lt;p&gt;Lets take this result and make it more visually engaging by adding some animation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;start-with-our-skeleton-plot&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Start with our skeleton plot&lt;/h2&gt;
-&lt;p&gt;I’ve been poking around with image dimensions and themes for distribution through twitter, and the following theme seems to be a quality balance between plot elements:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_white &amp;lt;- theme(text = element_text(family=&amp;quot;Open Sans&amp;quot;, color = &amp;quot;black&amp;quot;),
-                     panel.grid = element_blank(),
-                     panel.border = element_blank(),
-                     axis.title.x=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(t=15, b = 0)),
-                     axis.title.y=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(r=15, l = 5)),
-                     axis.text.x=element_text(size=22, hjust = 0, family = &amp;quot;Open Sans Light&amp;quot;),
-                     axis.text.y=element_text(size=22, family = &amp;quot;Open Sans Light&amp;quot;),
-                     axis.ticks = element_blank(),           
-                     plot.title=element_text(size=34,family = &amp;quot;Open Sans Extrabold&amp;quot;,hjust= 0,lineheight=1, margin = margin(t = 15)),
-                     plot.subtitle=element_text(size=26, margin = margin(t=15, b = 5),family = &amp;quot;Open Sans&amp;quot;),
-                     plot.caption=element_text(size=18, hjust = 0,margin=margin(t=15, b = 15),lineheight=1.15, family = &amp;quot;Open Sans&amp;quot;),
-                     legend.position=&amp;quot;none&amp;quot;
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It’s important to impelement limits and breaks in the y and x scales to keep the axes stable when using ggplot2 for animation. Otherwise, the plot axes will expand according to the subset of data used in the figure.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- ggplot(dischargeByDay, aes(x = day, y = avgDischarge, group = 1)) +
-  scale_y_continuous(limits = c(0, 350), expand = c(0,0)) +
-  scale_x_date(date_breaks = &amp;quot;1 month&amp;quot;, date_labels =  &amp;quot;%b&amp;quot;, expand = c(0,0),limits = c(min(dischargeByDay$day)-1,max(dischargeByDay$day)-2)) +
-  labs(title = &amp;quot;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&amp;quot;,
-       subtitle = &amp;quot;If the river is flowing at over 150 Cubic Feet per Second (CFS) the narrows is closed&amp;quot;,
-       caption = &amp;quot;Data Accessed 3/16/2018, retrieved via https://nwis.waterdata.usgs.gov/usa/nwis/uv/&amp;quot;) +
-  xlab(&amp;quot;Date&amp;quot;) + ylab(&amp;quot;Average Discharge&amp;quot;) +
-  theme_bw() + theme_white
-gg&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/gg.png&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We’ll then use &lt;code&gt;tweenr&lt;/code&gt; and &lt;code&gt;animation&lt;/code&gt; to refine the visualization with smooth transitions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;animate-all-the-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animate all the things!&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gifReplicate &amp;lt;- function(x) {
-  grid.newpage()
-  grid.draw(x)
-}
-
-yDates &amp;lt;- seq(from = 0, to = max(as.numeric(dischargeByDay$day)), by = 3)
-yDates[1] &amp;lt;- 1
-
-saveGIF({
-
-  for (i in yDates) {
-    
-    gg2 &amp;lt;- gg + geom_point(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day, y = avgDischarge), alpha = .1)
-    g &amp;lt;- ggplotGrob(gg2)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  grid::grid.draw(g); 
-  replicate(10,gifReplicate(g))
-
-  for (i in seq(from =1, to = 366, by = 7)) {
-    
-    gg3 &amp;lt;- gg2 + geom_segment(x = 1, xend = i, y = 150,yend = 150, color= &amp;quot;red&amp;quot;, linetype = 2) 
-    g &amp;lt;- ggplotGrob(gg3)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  for (i in yDates) {
-    
-    gg4 &amp;lt;- gg3 + stat_smooth(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day), se = F, method = &amp;quot;lm&amp;quot;, formula = y ~ poly(x, 20))
-    g &amp;lt;- ggplotGrob(gg4)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  grid::grid.draw(g); 
-  replicate(100,gifReplicate(g))
-  # grid.draw(gg4)
-  # geom_hline(yintercept = 150, color= &amp;quot;red&amp;quot;, linetype = 2) + 
-  #   geom_line(aes(x=day, y=avgDischarge), size=1.3) +
-},movie.name=paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),interval = .02, ani.width = 1200, ani.height = 800)
-
-gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
-  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
-  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
-  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
-  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
-}
-
-gif_compress(paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),
-             paste0(getwd(),&amp;quot;/narrowsLargeTall.gif&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/narrowsLargeTall.gif&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;addendum---further-data-exploration-needed&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Addendum - Further Data Exploration Needed:&lt;/h3&gt;
-&lt;p&gt;After generating this animation and before sitting down to write this post, I explored the data a little bit more. To my delight (or chagrin) there appears to be a daily pattern to the discharge level. Looking at just April results, the discharge level decreases from 2pm to 5pm before reversing course and increasing until about 2am.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByAprilHour &amp;lt;- x %&amp;gt;% filter(month(date) == 4) %&amp;gt;%
-  mutate(day = yday(date)) %&amp;gt;%
-  group_by(hour) %&amp;gt;%
-  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
-plot(dischargeByAprilHour$hour, dischargeByAprilHour$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/daily%20changes%20in%20April-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;An exploration for another day or another analyst!&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Percentage of revenue for elementary and secondary public schools</title>
-      <link>/animation/2018-02-12-animated-line-school-revenue/</link>
-      <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/animation/2018-02-12-animated-line-school-revenue/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW Finding: Federal sources accounted for approx. 9% of the total funding for &lt;a href=&#34;https://twitter.com/hashtag/K12?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#K12&lt;/a&gt; public schools in both 2005–06 and 2014 –15. &lt;a href=&#34;https://t.co/G16loc8pyW&#34;&gt;https://t.co/G16loc8pyW&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/CFuRjcqMIS&#34;&gt;pic.twitter.com/CFuRjcqMIS&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/963158870557421568?ref_src=twsrc%5Etfw&#34;&gt;February 12, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineSchool_Revenue.gif&#34; alt=&#34;Percentage of revenue for elementary and secondary public schools&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Percentage of revenue for elementary and secondary public schools&lt;/p&gt;
-&lt;/div&gt;
 &lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
 &lt;/div&gt;
 </description>

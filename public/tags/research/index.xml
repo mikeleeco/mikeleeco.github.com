@@ -11,6 +11,183 @@
     <atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>International Activities Program Highlights - PISA</title>
+      <link>/projects/2019-12-02-IAP-PISA-Summary-Release/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-02-IAP-PISA-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-pisa&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/&#34;&gt;https://nces.ed.gov/surveys/pisa/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The Program for International Student Assessment (PISA) is an international assessment that measures 15-year-old students&amp;rsquo; reading, mathematics, and science literacy every three years. First conducted in 2000, the major domain of study rotates between reading, mathematics, and science in each cycle. PISA also includes measures of general or cross-curricular competencies, such as collaborative problem solving. By design, PISA emphasizes functional skills that students have acquired as they near the end of compulsory schooling. PISA is coordinated by the Organization for Economic Cooperation and Development (OECD), an intergovernmental organization of industrialized countries, and is conducted in the United States by NCES. Data collection for the most recent assessment was completed in Fall 2018.&lt;/p&gt;
+
+&lt;p&gt;PISA 2018 assessed students’ science, reading, and mathematics literacy in about 80 countries and education systems. Reading was the focal subject of the 2018 data collection, as it was in 2009. PISA 2018 also included the optional assessment of financial literacy which the United States administered. Data from the core 2018 reading, mathematics, and science literacy assessment are now available. Data for financial literacy will be released in spring 2020.&lt;/p&gt;
+
+&lt;p&gt;The most recent PISA results are from 2018 and are available here. More information about PISA and resources, including the OECD&amp;rsquo;s PISA reports, PISA assessment frameworks, and international data files, are available at the OECD&amp;rsquo;s &lt;a href=&#34;https://nces.ed.gov/transfer.asp?location=www.oecd.org/pisa/&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The PISA summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and json production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/pisa2018/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/pisa.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://nces.ed.gov/surveys/pisa/pisa2018/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;How do U.S. 15-yr-old students use their knowledge and reasoning skills to:&lt;br&gt;• Interpret text&lt;br&gt;• Solve &lt;a href=&#34;https://twitter.com/hashtag/math?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#math&lt;/a&gt; problems &lt;br&gt;• Provide scientific solutions&lt;br&gt;&lt;br&gt;Read our JUST RELEASED &lt;a href=&#34;https://twitter.com/hashtag/OECDPISA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#OECDPISA&lt;/a&gt; web report to discover the latest findings: &lt;a href=&#34;https://t.co/3O3QDNvopp&#34;&gt;https://t.co/3O3QDNvopp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OECDEduSkills?ref_src=twsrc%5Etfw&#34;&gt;@OECDEduSkills&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/EdChat?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdChat&lt;/a&gt; &lt;a href=&#34;https://t.co/nUaTsZANYz&#34;&gt;pic.twitter.com/nUaTsZANYz&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1201879017223327744?ref_src=twsrc%5Etfw&#34;&gt;December 3, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - ICILS</title>
+      <link>/projects/2019-11-05-IAP-ICILS-Summary-Release/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-11-05-IAP-ICILS-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-icils&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/icils/&#34;&gt;https://nces.ed.gov/surveys/icils/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The International Computer and Information Literacy Study (ICILS) is a computer-based international assessment of 8th-grade students&amp;rsquo; capacities &amp;ldquo;to use information communications technologies (ICT) productively for a range of different purposes, in ways that go beyond a basic use of ICT&amp;rdquo; (Fraillon et al., 2018). First conducted in 2013, ICILS assessed students’ computer and information literacy (CIL) with an emphasis on the use of computers as information-seeking, management, and communication tools. Thereafter, increasing international recognition of the importance of students’ abilities to recognize and operationalize real-world problems using computational formulations led to the development of the computational thinking (CT) component within ICILS. The second cycle of ICILS was administered in 2018; it continued to assess CIL and in the newly added optional assessment component, assessed CT. In addition, it investigated how these abilities relate both to in-school and out-of-school contexts that support learning.&lt;/p&gt;
+
+&lt;p&gt;ICILS is sponsored by the International Association for the Evaluation of Educational Achievement (IEA) and is conducted in the United States by the National Center for Education Statistics (NCES). This study allows the United States to monitor U.S. students’ skills and experience using technology, compare U.S. students’ skills internationally, and provide data on factors that may influence students’ CIL and CT skills. The data collected through ICILS provide valuable information with which to understand the nature and extent of the &amp;ldquo;digital divide&amp;rdquo; and has the potential to inform our understanding of the relationship between technology skills and experience and student performance in other core subject areas.&lt;/p&gt;
+
+&lt;p&gt;Twenty-one education systems around the world participated in ICILS 2013. The United States participated in ICILS for the first time in 2018, along with 13 other education systems. Among them, nine, including the United States, participated in the optional CT component.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The ICILS summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and json production&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;D3.js&lt;/strong&gt;: Visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+  &lt;a href=&#34;https://nces.ed.gov/surveys/icils/icils2018/theme1.asp&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;/img/icils.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+      &lt;a href=&#34;https://nces.ed.gov/surveys/icils/icils2018/theme1.asp&#34;&gt;
+        &lt;div class=&#34;middle&#34;&gt;
+          &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;In 2018, 86% of U.S. 8th grade teachers “strongly agreed” or “agreed” that information and communications technologies (ICT) were considered a priority for use in teaching at their schools. &lt;br&gt;&lt;br&gt;Check out our &lt;a href=&#34;https://twitter.com/hashtag/ICILS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ICILS&lt;/a&gt; web report for more: &lt;a href=&#34;https://t.co/fsyfVDwbbt&#34;&gt;https://t.co/fsyfVDwbbt&lt;/a&gt; &lt;a href=&#34;https://t.co/3AQfw33GCU&#34;&gt;pic.twitter.com/3AQfw33GCU&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1194971752767590400?ref_src=twsrc%5Etfw&#34;&gt;November 14, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Insights on Diversifying the Educator Workforce - Teacher Diversity Tool</title>
+      <link>/projects/2019-12-30-Teacher-Student-Shiny-Application/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-30-Teacher-Student-Shiny-Application/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;The Center on Great Teachers and Leader&amp;rsquo;s (GTL Center) mission is to support states and districts in their efforts to grow, respect, and retain great teachers and leaders for all students, especially those from disadvantaged backgrounds.&lt;/p&gt;
+
+&lt;p&gt;The GTL Center has an &lt;a href=&#34;https://gtlcenter.org/technical-assistance/toolkits/data-tool-diversifying-the-educator-workforce&#34;&gt;Excel data tool&lt;/a&gt; that is used to reveal insights about the diversity of the educator workforce at the state, district, school, or EPP level. One component of this tool that was missing was a method to map and explore teacher and student ethnicity data by school district.&lt;/p&gt;
+
+&lt;p&gt;The goal for this project was to develop a free, user-friendly tool to identify and visualize diversity gaps within states and school districts.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as the lead developer in the creation of a Shiny application that would map diversity gaps at the state and district level.&lt;/p&gt;
+
+&lt;p&gt;The application features an intuitive design. The left sidebar is used to export state and district level teacher data, prepopulated from the &lt;a href=&#34;https://nces.ed.gov/ccd/elsi/tablegenerator.aspx&#34;&gt;NCES table generator&lt;/a&gt;. Users are then asked to add their student diversity statistics to the tool and re-upload. Finally, select a racial characteristic to generate the diversity gap map in the main panel.&lt;/p&gt;
+
+&lt;p&gt;Linked are a &lt;a href=&#34;/data/CALIFORNIA.csv&#34;&gt;state&lt;/a&gt; and &lt;a href=&#34;/data/MilwaukeeSchoolDistrictWISCONSIN.csv&#34;&gt;district&lt;/a&gt; level data set populated with &lt;em&gt;dummy student data&lt;/em&gt; that can be used to explore the tool - give it a try!&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shiny&lt;/strong&gt;: User interface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-teacher-diversity-tool-shiny-application&#34;&gt;Click to learn more and explore the Teacher Diversity Tool Shiny Application!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/diversity.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the Teacher Diversity Tool Shiny Application&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - TALIS</title>
+      <link>/projects/2019-06-28-IAP-TALIS-Summary-Release/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-06-28-IAP-TALIS-Summary-Release/</guid>
+      <description>
+
+&lt;h2 id=&#34;background-via-https-nces-ed-gov-surveys-talis&#34;&gt;Background (via &lt;a href=&#34;https://nces.ed.gov/surveys/talis/&#34;&gt;https://nces.ed.gov/surveys/talis/&lt;/a&gt;)&lt;/h2&gt;
+
+&lt;p&gt;The Teaching and Learning International Survey (TALIS) is a survey about teachers, teaching, and learning environments. Sponsored by the Organization for Economic Cooperation and Development (OECD), TALIS is composed of two questionnaires—one for teachers and one for their principals—which ask questions about their backgrounds, their work environments, professional development, and their beliefs and attitudes about teaching. TALIS is unique because it is the only comparative international education study that collects data on nationally representative samples of teachers. For the United States, TALIS provides key information on teachers and principals and how they and their working and learning environments compare internationally.&lt;/p&gt;
+
+&lt;p&gt;The core target population in TALIS is ISCED* level 2 (lower secondary) teachers and school principals. ISCED level 2 corresponds to grades 7, 8, and 9 in the United States. Education systems also have the option to survey at the ISCED level 1 (primary) or ISCED level 3 (upper secondary). However, the United States and most other education systems only participate at the lower secondary level.&lt;/p&gt;
+
+&lt;p&gt;TALIS was first administered in 2008 and then in 2013 and 2018. The United States first participated in the 2013 cycle, along with 37 other education systems. The most recent round of data collection was in 2018, with 49 education systems participating. U.S. results for the 2018 administration of TALIS are available on the TALIS 2018 Results page. Full results from all three rounds of TALIS are available on the OECD TALIS website.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as data and visualization specialist on a team of designers, web developers, and content area experts to produce this summary release for the National Center for Education Statistics website. The TALIS summary release is designed to assist the general public in better understanding the most recent results of national and international surveys, embedded with static and interactive visualizations.&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning, json production, and sisualizations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-results&#34;&gt;Click to learn more and explore the results!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://nces.ed.gov/surveys/talis/talis2018/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/talis.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://nces.ed.gov/surveys/talis/talis2018/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the results&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;NEW STAT: 99% of U.S. 7th–9th grade &lt;a href=&#34;https://twitter.com/hashtag/principals?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#principals&lt;/a&gt; in 2018 had a master’s degree or higher, which was ABOVE the &lt;a href=&#34;https://twitter.com/hashtag/TALIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TALIS&lt;/a&gt; avg. (61%). &lt;br&gt;&lt;br&gt;Read our &lt;a href=&#34;https://twitter.com/hashtag/2018TALIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#2018TALIS&lt;/a&gt; report for more: &lt;a href=&#34;https://t.co/A8uGi4q3Aj&#34;&gt;https://t.co/A8uGi4q3Aj&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OECDEduSkills?ref_src=twsrc%5Etfw&#34;&gt;@OECDEduSkills&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/FactFriday?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#FactFriday&lt;/a&gt; &lt;a href=&#34;https://t.co/vPGdsbfwCC&#34;&gt;pic.twitter.com/vPGdsbfwCC&lt;/a&gt;&lt;/p&gt;&amp;mdash; NCES (@EdNCES) &lt;a href=&#34;https://twitter.com/EdNCES/status/1144638095637327874?ref_src=twsrc%5Etfw&#34;&gt;June 28, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>EdSurvey - R package (CRAN)</title>
       <link>/projects/2017-06-03-EdSurvey-R-package/</link>
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>

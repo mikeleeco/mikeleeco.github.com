@@ -27,11 +27,12 @@ data.forEach(function(d) {
 
 //Copy data into global dataset
 dat = data;
-
+console.log(dat)
 var nested_data = d3.nest()
       .key(function(data) { return data.state; })
       .entries(dat);
 
+console.log(nested_data)
 var gridItemWidth = (gridWidth - labelWidth) / 89;
 var gridItemHeight = (square) ? gridItemWidth : gridHeight / 51;
 var startX = (gridItemWidth / 2) + labelWidth;

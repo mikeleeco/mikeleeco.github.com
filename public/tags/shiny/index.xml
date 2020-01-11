@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiny on Michael Lee</title>
+    <link>/tags/shiny/index.xml</link>
+    <description>Recent content in Shiny on Michael Lee</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
+    <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
+    <atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Insights on Diversifying the Educator Workforce - Teacher Diversity Tool</title>
+      <link>/projects/2019-12-30-Teacher-Student-Shiny-Application/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2019-12-30-Teacher-Student-Shiny-Application/</guid>
+      <description>
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;The Center on Great Teachers and Leader&amp;rsquo;s (GTL Center) mission is to support states and districts in their efforts to grow, respect, and retain great teachers and leaders for all students, especially those from disadvantaged backgrounds.&lt;/p&gt;
+
+&lt;p&gt;The GTL Center has an &lt;a href=&#34;https://gtlcenter.org/technical-assistance/toolkits/data-tool-diversifying-the-educator-workforce&#34;&gt;Excel data tool&lt;/a&gt; that is used to reveal insights about the diversity of the educator workforce at the state, district, school, or EPP level. One component of this tool that was missing was a method to map and explore teacher and student ethnicity data by school district.&lt;/p&gt;
+
+&lt;p&gt;The goal for this project was to develop a free, user-friendly tool to identify and visualize diversity gaps within states and school districts.&lt;/p&gt;
+
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;For this project I acted as the lead developer in the creation of a Shiny application that would map diversity gaps at the state and district level.&lt;/p&gt;
+
+&lt;p&gt;The application features an intuitive design. The left sidebar is used to export state and district level teacher data, prepopulated from the &lt;a href=&#34;https://nces.ed.gov/ccd/elsi/tablegenerator.aspx&#34;&gt;NCES table generator&lt;/a&gt;. Users are then asked to add their student diversity statistics to the tool and re-upload. Finally, select a racial characteristic to generate the diversity gap map in the main panel.&lt;/p&gt;
+
+&lt;p&gt;Linked are a &lt;a href=&#34;/data/CALIFORNIA.csv&#34;&gt;state&lt;/a&gt; and &lt;a href=&#34;/data/MilwaukeeSchoolDistrictWISCONSIN.csv&#34;&gt;district&lt;/a&gt; level data set populated with &lt;em&gt;dummy student data&lt;/em&gt; that can be used to explore the tool - give it a try!&lt;/p&gt;
+
+&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: Data cleaning and visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shiny&lt;/strong&gt;: User interface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;click-to-learn-more-and-explore-the-teacher-diversity-tool-shiny-application&#34;&gt;Click to learn more and explore the Teacher Diversity Tool Shiny Application!&lt;/h3&gt;
+
+&lt;div class=&#34;projectBox&#34;&gt;
+    &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34; target=&#34;_blank&#34;&gt;
+        &lt;img src=&#34;/img/diversity.png&#34; alt=&#34;Avatar&#34; class=&#34;image&#34; style=&#34;width:100%&#34;&gt;
+        &lt;a href=&#34;https://airequity.shinyapps.io/diversitydatatool/&#34;&gt;
+            &lt;div class=&#34;middle&#34;&gt;
+                &lt;div class=&#34;text&#34;&gt;Explore the Teacher Diversity Tool Shiny Application&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

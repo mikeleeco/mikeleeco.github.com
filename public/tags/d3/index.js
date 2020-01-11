@@ -28,7 +28,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-07-01T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2019-12-02T00:00:00&#43;00:00"/>
 
 
 
@@ -141,6 +141,57 @@ ga('send', 'pageview');
         
     </h1>
     <h1 class="title">
+        <a href="/projects/2019-12-02-IAP-PISA-Summary-Release/" itemprop="headline">International Activities Program Highlights - PISA</a>
+    </h1>
+    
+    <h2 class="content" itemprop="description">
+        Background (via https://nces.ed.gov/surveys/pisa/) The Program for International Student Assessment (PISA) is an international assessment that measures 15-year-old students&rsquo; reading, mathematics, and science literacy every three years. First conducted in 2000, the major domain of study rotates between reading, mathematics, and science in each cycle. PISA also includes measures of general or cross-curricular competencies, such as collaborative problem solving. By design, PISA emphasizes functional skills that students have acquired as they near the end of compulsory schooling.
+        <div class="button is-small">
+            <a href="/projects/2019-12-02-IAP-PISA-Summary-Release/" itemprop="url">Read More…</a>
+        </div>
+    </h2>
+</div>
+
+  
+    <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
+    <h1 class="blog-timestamp">
+        
+    </h1>
+    <h1 class="title">
+        <a href="/projects/2019-11-05-IAP-ICILS-Summary-Release/" itemprop="headline">International Activities Program Highlights - ICILS</a>
+    </h1>
+    
+    <h2 class="content" itemprop="description">
+        Background (via https://nces.ed.gov/surveys/icils/) The International Computer and Information Literacy Study (ICILS) is a computer-based international assessment of 8th-grade students&rsquo; capacities &ldquo;to use information communications technologies (ICT) productively for a range of different purposes, in ways that go beyond a basic use of ICT&rdquo; (Fraillon et al., 2018). First conducted in 2013, ICILS assessed students’ computer and information literacy (CIL) with an emphasis on the use of computers as information-seeking, management, and communication tools.
+        <div class="button is-small">
+            <a href="/projects/2019-11-05-IAP-ICILS-Summary-Release/" itemprop="url">Read More…</a>
+        </div>
+    </h2>
+</div>
+
+  
+    <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
+    <h1 class="blog-timestamp">
+        
+    </h1>
+    <h1 class="title">
+        <a href="/projects/2019-06-28-IAP-TALIS-Summary-Release/" itemprop="headline">International Activities Program Highlights - TALIS</a>
+    </h1>
+    
+    <h2 class="content" itemprop="description">
+        Background (via https://nces.ed.gov/surveys/talis/) The Teaching and Learning International Survey (TALIS) is a survey about teachers, teaching, and learning environments. Sponsored by the Organization for Economic Cooperation and Development (OECD), TALIS is composed of two questionnaires—one for teachers and one for their principals—which ask questions about their backgrounds, their work environments, professional development, and their beliefs and attitudes about teaching. TALIS is unique because it is the only comparative international education study that collects data on nationally representative samples of teachers.
+        <div class="button is-small">
+            <a href="/projects/2019-06-28-IAP-TALIS-Summary-Release/" itemprop="url">Read More…</a>
+        </div>
+    </h2>
+</div>
+
+  
+    <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
+    <h1 class="blog-timestamp">
+        
+    </h1>
+    <h1 class="title">
         <a href="/interactives/2018-07-01-wsj-measles-interactive/" itemprop="headline">Measles Vaccination Chart D3 Replication</a>
     </h1>
     
@@ -230,7 +281,7 @@ ga('send', 'pageview');
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        Michael Lee - 2019
+        Michael Lee - 2020
       </p>
     </div>
   </div>

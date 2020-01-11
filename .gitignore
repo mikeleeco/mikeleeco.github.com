@@ -6,3 +6,7 @@ _source/
 vendor/
 .bundle/
 **/js/d3development/
+**/js/mtwo
+**/js/multiple
+content/interactives/2019-8-26-measles2.md
+public/interactives/2019-8-26-measles2/
