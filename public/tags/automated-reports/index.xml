@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>automated reports on Michael Lee</title>
@@ -20,7 +20,7 @@
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2019-12-30-automated-report-nevada/</guid>
       <description>Background Each Fall and Spring the Nevada Department of Education disseminates a summary report detailing results from a social-emotional learning survey. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor. One such example is linked here.
-Development The goal for this project was to automate the production of each school&#39;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance.</description>
+Development The goal for this project was to automate the production of each school&amp;rsquo;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance.</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@ Development The goal for this project was to automate the production of each sch
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2018-11-20-automated-report-cleveland-metropolitan-school-district/</guid>
       <description>Background Each Fall and Spring the Cleveland Metropolitan School District disseminates a summary report detailing results from a survey assessing four social-emotional learning constructs within elementary, middle and high schools. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor; one such example is linked here.
-Development The goal for this project was to automate the production of each school&#39;s customized report.</description>
+Development The goal for this project was to automate the production of each school&amp;rsquo;s customized report.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ Development The goal for this project was to automate the production of each sch
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2018-05-09-automated-reports-public-library-services/</guid>
       <description>Background The Institute of Museum and Library Services&amp;rsquo; mission is to inspire libraries and museums to advance innovation, lifelong learning, and cultural and civic engagement. Each year it conducts a survey of the nation’s approximately 123,000 libraries and 35,000 museums to provide a snapshot of national and state-level trends.
-Development The goal for this project was to automate the production of each state and jurisdiction&#39;s customized report. I acted as an R and LaTeX developer in creation of the template laying out these summary results.</description>
+Development The goal for this project was to automate the production of each state and jurisdiction&amp;rsquo;s customized report. I acted as an R and LaTeX developer in creation of the template laying out these summary results.</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jekyll on Michael Lee</title>
@@ -20,7 +20,7 @@
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</guid>
       <description>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
- Spend a few months documenting code scripts in RStudio and you&#39;ll have surely seen those introductory lines numerous times.
+ Spend a few months documenting code scripts in RStudio and you&amp;rsquo;ll have surely seen those introductory lines numerous times.
 This is also a R code script. And a markdown document. And an HTML page. All of which are generated within one .</description>
     </item>
     

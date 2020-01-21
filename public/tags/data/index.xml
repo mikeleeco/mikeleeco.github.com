@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data on Michael Lee</title>
@@ -37,7 +37,7 @@
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2019-12-30-teacher-student-shiny-application/</guid>
-      <description>Background The Center on Great Teachers and Leader&#39;s (GTL Center) mission is to support states and districts in their efforts to grow, respect, and retain great teachers and leaders for all students, especially those from disadvantaged backgrounds.
+      <description>Background The Center on Great Teachers and Leader&amp;rsquo;s (GTL Center) mission is to support states and districts in their efforts to grow, respect, and retain great teachers and leaders for all students, especially those from disadvantaged backgrounds.
 The GTL Center has an Excel data tool that is used to reveal insights about the diversity of the educator workforce at the state, district, school, or EPP level. One component of this tool that was missing was a method to map and explore teacher and student ethnicity data by school district.</description>
     </item>
     
@@ -56,7 +56,7 @@ The GTL Center has an Excel data tool that is used to reveal insights about the 
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2017-06-03-edsurvey-r-package/</guid>
-      <description>Package Description The EdSurvey package is a tool to read and analyze functions for education surveys and assessments data from the National Center for Education Statistics, including the National Assessment of Educational Progress (NAEP). Due to the large file sizes and complex formatting of NCES data sets, the package offers user-friendly methods to format and conduct statisitical analyses with a small memory footprint.
+      <description> Package Description The EdSurvey package is a tool to read and analyze functions for education surveys and assessments data from the National Center for Education Statistics, including the National Assessment of Educational Progress (NAEP). Due to the large file sizes and complex formatting of NCES data sets, the package offers user-friendly methods to format and conduct statisitical analyses with a small memory footprint.
 For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http://www.air.org/project/nces-data-r-project-edsurvey  </description>
     </item>
     
@@ -77,9 +77,10 @@ For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http
       <guid>/posts/2016-06-01-nba-draft-odds-plot/</guid>
       <description>Original Source
 I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:
+With thanks to @hadleywickham, @hrbrmstr, and @ColorBrewer. #rstats https://t.co/hjX39Xhi4P https://t.co/XD27alzwNI
+&amp;mdash; David Sparks (@dsparks) April 22, 2016 
 With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.
-Package Dependencies and Data
-The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the raw lottery odds.</description>
+Package Dependencies and Data</description>
     </item>
     
     <item>
@@ -89,7 +90,7 @@ The data was generated using simulations of the NBA Draft lottery, which resulte
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2016-05-28-sabr-r-package/</guid>
       <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&#39;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
+ Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
     </item>
     
     <item>
@@ -99,7 +100,7 @@ The data was generated using simulations of the NBA Draft lottery, which resulte
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2016-05-28-sabr-r-package/</guid>
       <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&#39;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
+ Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
     </item>
     
     <item>
@@ -108,7 +109,7 @@ The data was generated using simulations of the NBA Draft lottery, which resulte
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/interactives/2015-06-10-genre-interactive/</guid>
-      <description></description>
+      <description>svg *::selection { background : transparent; width: 700px; height: 500px; margin-left: 30px; font-size: 13px; } svg *::-moz-selection { background:transparent; } svg *::-webkit-selection { background:transparent; } rect.selection { stroke : #333; stroke-dasharray: 4px; stroke-opacity : 0.5; fill : transparent; } rect.cell-border { stroke: #eee; stroke-width:0.3px; } rect.cell-selected { stroke: rgb(51,102,153); stroke-width:0.5px; } rect.cell-hover { stroke: #F00; stroke-width:0.3px; } text.mono { font-size: 9pt; font-family: Andale Mono, Andale Mono; fill: #4a4a4a; } text.</description>
     </item>
     
     <item>
@@ -117,7 +118,7 @@ The data was generated using simulations of the NBA Draft lottery, which resulte
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/interactives/2015-06-10-theme-interactive/</guid>
-      <description>  </description>
+      <description>svg *::selection { background : transparent; width: 700px; height: 500px; margin-left: 30px; font-size: 13px; } svg *::-moz-selection { background:transparent; } svg *::-webkit-selection { background:transparent; } rect.selection { stroke : #333; stroke-dasharray: 4px; stroke-opacity : 0.5; fill : transparent; } rect.cell-border { stroke: #eee; stroke-width:0.3px; } rect.cell-selected { stroke: rgb(51,102,153); stroke-width:0.5px; } rect.cell-hover { stroke: #F00; stroke-width:0.3px; } text.mono { font-size: 9pt; font-family: Andale Mono, Andale Mono; fill: #4a4a4a; } text.</description>
     </item>
     
     <item>
@@ -126,8 +127,8 @@ The data was generated using simulations of the NBA Draft lottery, which resulte
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2015-06-10-video-games-interactive/</guid>
-      <description>Call of Duty :: Frank Underwood // Frogger :: George Costanza // Shinobi :: Wu-Tang Clan // Super Nintendo &amp;amp; Sega Genesis :: ??? That looks pretty sharp, but in the spirit of video games, lets make it a bit more&amp;hellip;8-bit.
-I was also curious which themes were most likely to occur simultaneously. Think of the following interactive as such: &amp;ldquo;If I were to randomly select from the pool of Arcade games, what is the likelihood that it also has a _____ theme?</description>
+      <description>Call of Duty :: Frank Underwood // Frogger :: George Costanza // Shinobi :: Wu-Tang Clan // Super Nintendo &amp;amp; Sega Genesis :: ???
+  Video games have long infiltrated popular culture. This article will attempt to explain that reach. Inspired by FiveThirtyEight&#39;s great article &#34;Designing the Best Board Game on the Planet&#34;, I set out to extend this methodology to video games. The focus of 538&#39;s research related to a robust data set pulled from BoardGameGeek, an exhaustive collection of board games contributed by it&#39;s passionate users.</description>
     </item>
     
     <item>
@@ -138,7 +139,7 @@ I was also curious which themes were most likely to occur simultaneously. Think 
       <guid>/posts/2015-03-25-bryant-visualization/</guid>
       <description>A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at http://mikelee.co/posts/milb-similarity-scores/.
 You can change the y-axis parameters by selecting the performance measure you’d like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.
-YearAgeLevEqGPAABRHX2BX3BHRRBISBCSBBSOBAOBPSLGOPSCount201523313054848976138325248394471050.</description>
+   Year   Age   LevEq   G   PA   AB   R   H   X2B   X3B   HR   RBI   SB   CS   BB   SO   BA   OBP   SLG   OPS   Count     2015   23   3   130   548   489   76   138   32   5   24   83   9   4   47   105   0.</description>
     </item>
     
     <item>
@@ -147,7 +148,7 @@ You can change the y-axis parameters by selecting the performance measure you’
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
-      <description>Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players.In In the most basic sense, similarity scores use aggregated performance statistics to compare a player&#39;s worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player&#39;s recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player&#39;s base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors.</description>
+      <description>There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way.</description>
     </item>
     
     <item>
@@ -156,8 +157,7 @@ You can change the y-axis parameters by selecting the performance measure you’
       <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2015-02-23-milb-scraper-with-rvest/</guid>
-      <description>To make our database we&#39;re going to use rvest, an R package designed by Hadley Wickham at RStudio [^1]. The package scrapes HTML from webpages and extracts it into readable data. Let&#39;s load the necessary packages and go from there:
-#if you haven&amp;#39;t done so already, install rvest from Wickham&amp;#39;s github repository # install.packages(&amp;#34;devtools&amp;#34;) # install_github(&amp;#34;hadley/rvest&amp;#34;) c(&amp;#39;rvest&amp;#39;,&amp;#39;dplyr&amp;#39;) -&amp;gt; packages #installs packages lapply(packages, library, character.only = T)# prep scraper url &amp;lt;- &amp;#34;http://www.</description>
+      <description>Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the Lahman Baseball Database, which is the most robust catalog of MLB player statistics available to the public.  One area of relatively limited accessibility to the average fan is statistics for Minor League players.</description>
     </item>
     
   </channel>

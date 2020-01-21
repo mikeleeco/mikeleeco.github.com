@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NBA on Michael Lee</title>
@@ -21,9 +21,10 @@
       <guid>/posts/2016-06-01-nba-draft-odds-plot/</guid>
       <description>Original Source
 I was scrolling twitter and noticed this tweet from David Sparks - Director of Basketball Analytics for the Boston Celtics:
+With thanks to @hadleywickham, @hrbrmstr, and @ColorBrewer. #rstats https://t.co/hjX39Xhi4P https://t.co/XD27alzwNI
+&amp;mdash; David Sparks (@dsparks) April 22, 2016 
 With his obligatory shoutouts to Hadley Wickham and BoB Rudis, I felt compelled to reproduce the plot in RStudio and get some ggplot2 code out there open-sourcing his work.
-Package Dependencies and Data
-The data was generated using simulations of the NBA Draft lottery, which resulted in some peculiar distributions compared to the raw lottery odds.</description>
+Package Dependencies and Data</description>
     </item>
     
   </channel>

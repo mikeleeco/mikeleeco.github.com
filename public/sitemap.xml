@@ -1,40 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/dataviz/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/ggplot2/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/posts/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -50,21 +33,43 @@
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/animation/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dataviz/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/posts/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/508-compliance/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/automated-reports/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -73,33 +78,39 @@
   </url>
   
   <url>
-    <loc>/tags/education/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/latex/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/projects/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/automated-reports/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/education/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/projects/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/d3.js/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data/</loc>
-    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -108,8 +119,15 @@
   </url>
   
   <url>
+    <loc>/tags/data/</loc>
+    <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/research/</loc>
     <lastmod>2019-12-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -125,6 +143,24 @@
   <url>
     <loc>/tags/shiny/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/interactives/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/interactives/2019-8-26-measles2/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/interactives/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -133,18 +169,9 @@
   </url>
   
   <url>
-    <loc>/categories/animation/</loc>
-    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/animation/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/gganimate/</loc>
-    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -155,6 +182,18 @@
   <url>
     <loc>/animation/2019-04-19-line-chart-reported-bullying/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/animation/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gganimate/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -173,18 +212,20 @@
   </url>
   
   <url>
+    <loc>/posts/2019-01-28-wisconsin-rushing-history/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/dplyr/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/sports/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/2019-01-28-wisconsin-rushing-history/</loc>
-    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -218,16 +259,6 @@
   </url>
   
   <url>
-    <loc>/interactives/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/interactives/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/interactives/2018-07-01-wsj-measles-interactive/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url>
@@ -243,13 +274,14 @@
   </url>
   
   <url>
-    <loc>/tags/lubridate/</loc>
+    <loc>/posts/2018-04-16-hiking-the-narrows/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2018-04-16-hiking-the-narrows/</loc>
+    <loc>/tags/lubridate/</loc>
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -263,13 +295,14 @@
   </url>
   
   <url>
-    <loc>/tags/hexmapr/</loc>
+    <loc>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</loc>
     <lastmod>2017-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2017-11-16-wi-presidential-results-using-hexmapr/</loc>
+    <loc>/tags/hexmapr/</loc>
     <lastmod>2017-11-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -303,11 +336,6 @@
   </url>
   
   <url>
-    <loc>/tags/makeover-monday/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url>
@@ -315,6 +343,12 @@
   <url>
     <loc>/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/makeover-monday/</loc>
+    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -355,11 +389,13 @@
   <url>
     <loc>/tags/politics/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/nba/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -370,11 +406,19 @@
   <url>
     <loc>/tags/jekyll/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rmarkdown/</loc>
+    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/knitr/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -383,23 +427,21 @@
   </url>
   
   <url>
-    <loc>/tags/rmarkdown/</loc>
-    <lastmod>2016-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/baseball/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/project/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/sabr/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -415,6 +457,7 @@
   <url>
     <loc>/tags/fivethirtyeight/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -425,11 +468,7 @@
   <url>
     <loc>/tags/mobygames/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rvest/</loc>
-    <lastmod>2015-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -440,6 +479,7 @@
   <url>
     <loc>/tags/video-games/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -448,8 +488,15 @@
   </url>
   
   <url>
+    <loc>/tags/rvest/</loc>
+    <lastmod>2015-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/html-scraper/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -458,18 +505,21 @@
   </url>
   
   <url>
-    <loc>/tags/milb/</loc>
+    <loc>/tags/mlb/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/mlb/</loc>
+    <loc>/tags/milb/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/similarity-scores/</loc>
     <lastmod>2015-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

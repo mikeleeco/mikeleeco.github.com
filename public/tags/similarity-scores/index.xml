@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Similarity Scores on Michael Lee</title>
@@ -19,7 +19,7 @@
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
-      <description>Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players.In In the most basic sense, similarity scores use aggregated performance statistics to compare a player&#39;s worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player&#39;s recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player&#39;s base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors.</description>
+      <description>There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way.</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>baseball on Michael Lee</title>
@@ -20,7 +20,7 @@
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2016-05-28-sabr-r-package/</guid>
       <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&#39;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
+ Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2016-05-28-sabr-r-package/</guid>
       <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&#39;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
+ Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
     </item>
     
   </channel>

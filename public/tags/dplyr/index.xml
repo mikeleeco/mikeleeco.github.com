@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dplyr on Michael Lee</title>
@@ -19,8 +19,8 @@
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2019-01-28-wisconsin-rushing-history/</guid>
-      <description>Hot Take Alert🔥 Jonathan Taylor is on pace to be the greatest running back in Wisconsin football history 🔥
-Over the previous three decades Wisconsin has retained several elite rushers (and offensive lines) to amass several conference championships and Rose Bowl appearances. Even when acknowledging Taylor’s case as a serious Heisman candidate in each of his first two years, proclaiming him the presumptive best running back in Wisconsin football history still feels like a bold proclamation.</description>
+      <description>Hot Take Alert 🔥 Jonathan Taylor is on pace to be the greatest running back in Wisconsin football history 🔥
+ Over the previous three decades Wisconsin has retained several elite rushers (and offensive lines) to amass several conference championships and Rose Bowl appearances. Even when acknowledging Taylor’s case as a serious Heisman candidate in each of his first two years, proclaiming him the presumptive best running back in Wisconsin football history still feels like a bold proclamation.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <guid>/posts/2018-04-16-hiking-the-narrows/</guid>
       <description>This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as The Narrows:
 The Narrows in Zion National Park
-It’s surely even more sensational in person.
+ It’s surely even more sensational in person.
 Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely.</description>
     </item>
     
@@ -41,7 +41,7 @@ Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary t
       <pubDate>Wed, 25 Mar 2015 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2015-03-25-milb-similarity-scores/</guid>
-      <description>Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players.In In the most basic sense, similarity scores use aggregated performance statistics to compare a player&#39;s worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player&#39;s recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player&#39;s base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors.</description>
+      <description>There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don&#39;t deny the validity of that approach-but if you take that tack, then you can&#39;t turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player&#39;s. &#34;Similarity&#34; is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way.</description>
     </item>
     
   </channel>

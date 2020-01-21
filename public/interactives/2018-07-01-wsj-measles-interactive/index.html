@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.56.0" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -135,10 +135,35 @@ if (!doNotTrack) {
 
 <div class="container">
   
-  <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+  <style>
+iframe {
+    border: 0;
+    height: 1100px;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+</style>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<div class="container">
+    <div id="graphic" style="width: 1500px;"></div>
+    <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+    <script>
+        var pymParent = new pym.Parent('graphic', '/js/d3samples/measles/measles.html', {});
+    </script>
+</div>
 
 
 </div>
