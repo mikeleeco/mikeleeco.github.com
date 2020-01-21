@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Animation on Michael Lee</title>
-    <link>/categories/animation/index.xml</link>
-    <description>Recent content in Animation on Michael Lee</description>
+    <title>animation on Michael Lee</title>
+    <link>/categories/animation/</link>
+    <description>Recent content in animation on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/categories/animation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/animation/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Line Chart - College Enrollment Rate</title>
@@ -16,25 +19,10 @@
       <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-05-26-line-chart-college-enrollment/</guid>
-      <description>&lt;p&gt;Animation Linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW STAT: The immediate college enrollment rate for &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Hispanic&lt;/a&gt; students was higher in 2017 (67%) than in 2000 (49%).&lt;br&gt;&lt;br&gt;Discover more &lt;a href=&#34;https://twitter.com/hashtag/EdStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdStats&lt;/a&gt; in our 2019 &lt;a href=&#34;https://twitter.com/hashtag/ConditionOfEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ConditionOfEd&lt;/a&gt; report: &lt;a href=&#34;https://t.co/r8gJkRDeK3&#34;&gt;https://t.co/r8gJkRDeK3&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HispanicEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HispanicEd&lt;/a&gt; &lt;a href=&#34;https://t.co/amnDqvH8UH&#34;&gt;pic.twitter.com/amnDqvH8UH&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1131294682150051841?ref_src=twsrc%5Etfw&#34;&gt;May 22, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCollegeEnrollment.gif&#34; alt=&#34;The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation Linked here:
+NEW STAT: The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).
+Discover more #EdStats in our 2019 #ConditionOfEd report: https://t.co/r8gJkRDeK3 #HispanicEd pic.twitter.com/amnDqvH8UH— NCES (@EdNCES) May 22, 2019Full image:The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -43,25 +31,9 @@ NEW STAT: The immediate college enrollment rate for &lt;a href=&#34;https://twit
       <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-04-19-line-chart-reported-bullying/</guid>
-      <description>&lt;p&gt;Animation Linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school during the school year, representing an overall decrease from 29% in 2005.&lt;br&gt;&lt;br&gt;More &lt;a href=&#34;https://twitter.com/hashtag/EdSafetyStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdSafetyStats&lt;/a&gt; in the Indicators of School Crime and Safety report, available now: &lt;a href=&#34;https://t.co/Z4JLYLn5O8&#34;&gt;https://t.co/Z4JLYLn5O8&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BJSgov?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@BJSgov&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;https://t.co/l7b3XH3kd2&#34;&gt;pic.twitter.com/l7b3XH3kd2&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1119216601545498624?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineBullyingUpdateTall.gif&#34; alt=&#34;Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation Linked here:
+NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school during the school year, representing an overall decrease from 29% in 2005.
+More #EdSafetyStats in the Indicators of School Crime and Safety report, available now: https://t.co/Z4JLYLn5O8 @BJSgov pic.twitter.com/l7b3XH3kd2— NCES (@EdNCES) April 19, 2019Full image:Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent</description>
     </item>
     
     <item>
@@ -70,24 +42,9 @@ NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school d
       <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-04-17-line-chart-on-campus-crimes/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-In 2016, about 28,400 criminal incidents on &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; institution campuses were reported to police/ security agencies, representing a 3% increase from 2015.&lt;br&gt;&lt;br&gt;Learn more &lt;a href=&#34;https://twitter.com/hashtag/CampusCrime?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CampusCrime&lt;/a&gt; statistics in our NEW release: &lt;a href=&#34;https://t.co/Wvco6IxkcC&#34;&gt;https://t.co/Wvco6IxkcC&lt;/a&gt; &lt;a href=&#34;https://t.co/HKxgHq8gAs&#34;&gt;pic.twitter.com/HKxgHq8gAs&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1118532105183604738?ref_src=twsrc%5Etfw&#34;&gt;April 17, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCrimesTall.gif&#34; alt=&#34;Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>In 2016, about 28,400 criminal incidents on #postsec institution campuses were reported to police/ security agencies, representing a 3% increase from 2015.
+Learn more #CampusCrime statistics in our NEW release: https://t.co/Wvco6IxkcC pic.twitter.com/HKxgHq8gAs— NCES (@EdNCES) April 17, 2019Full image:Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -96,25 +53,9 @@ In 2016, about 28,400 criminal incidents on &lt;a href=&#34;https://twitter.com/
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-02-22-line-chart-status-dropout-rate/</guid>
-      <description>&lt;p&gt;Animation linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? The &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Hispanic&lt;/a&gt; status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &amp;amp; 2016. What were the rates for Black &amp;amp; White students? Discover more: &lt;a href=&#34;https://t.co/5SyF2HuBcJ&#34;&gt;https://t.co/5SyF2HuBcJ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HispanicEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HispanicEd&lt;/a&gt; &lt;a href=&#34;https://t.co/Mg9MEzTeel&#34;&gt;pic.twitter.com/Mg9MEzTeel&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1098979512107319296?ref_src=twsrc%5Etfw&#34;&gt;February 22, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineStatusDropoutRateTall.gif&#34; alt=&#34;Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation linked here:
+DYK? The #Hispanic status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &amp;amp; 2016. What were the rates for Black &amp;amp; White students? Discover more: https://t.co/5SyF2HuBcJ #HispanicEd pic.twitter.com/Mg9MEzTeel— NCES (@EdNCES) February 22, 2019Full image:Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -123,25 +64,9 @@ DYK? The &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;r
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-01-24-state-map-acgr/</guid>
-      <description>&lt;p&gt;Animation linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-How have state-level adjusted cohort &lt;a href=&#34;https://twitter.com/hashtag/graduation?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#graduation&lt;/a&gt; rates (ACGR) for public high school students changed between 2010–11 and 2016–17? Find out: &lt;a href=&#34;https://t.co/fVvgrQbVcx&#34;&gt;https://t.co/fVvgrQbVcx&lt;/a&gt; &lt;a href=&#34;https://t.co/WBvUcO5r8k&#34;&gt;pic.twitter.com/WBvUcO5r8k&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1088444582382223360?ref_src=twsrc%5Etfw&#34;&gt;January 24, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/mapGraduation_Rate.gif&#34; alt=&#34;Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation linked here:
+How have state-level adjusted cohort #graduation rates (ACGR) for public high school students changed between 2010–11 and 2016–17? Find out: https://t.co/fVvgrQbVcx pic.twitter.com/WBvUcO5r8k— NCES (@EdNCES) January 24, 2019Full image:Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -150,25 +75,9 @@ How have state-level adjusted cohort &lt;a href=&#34;https://twitter.com/hashtag
       <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-12-12-line-chart-status-completion-rate/</guid>
-      <description>&lt;p&gt;Animation seen here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twitter.com/hashtag/HighSchool?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HighSchool&lt;/a&gt; status completion rates of 18-to 24-yr-olds by race/ethnicity over the past 40 years! Find more &lt;a href=&#34;https://twitter.com/hashtag/EdTrends?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdTrends&lt;/a&gt; here: &lt;a href=&#34;https://t.co/OkOs6B7tnC&#34;&gt;https://t.co/OkOs6B7tnC&lt;/a&gt; &lt;a href=&#34;https://t.co/m2U9FvIW1c&#34;&gt;pic.twitter.com/m2U9FvIW1c&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1072919011774611456?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCompletionTall.gif&#34; alt=&#34;Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:
+JUST RELEASED! Explore our new report to learn about #HighSchool status completion rates of 18-to 24-yr-olds by race/ethnicity over the past 40 years! Find more #EdTrends here: https://t.co/OkOs6B7tnC pic.twitter.com/m2U9FvIW1c— NCES (@EdNCES) December 12, 2018Full image:Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -177,18 +86,10 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-09-05-stacked-area-chart-enrollment/</guid>
-      <description>&lt;p&gt;Linked here: &lt;a href=&#34;https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data&#34;&gt;https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/public_Enrollment.gif&#34; alt=&#34;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Linked here: https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data
+Full image:Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
     </item>
     
     <item>
@@ -197,26 +98,8 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
       <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Between 1999–2000 &amp;amp; 2015–16, avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More &lt;a href=&#34;https://twitter.com/hashtag/stats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#stats&lt;/a&gt; on student &lt;a href=&#34;https://twitter.com/hashtag/debt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#debt&lt;/a&gt; here in our NEW blog: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/93mzhYkwgF&#34;&gt;pic.twitter.com/93mzhYkwgF&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1030868436027691010?ref_src=twsrc%5Etfw&#34;&gt;August 18, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridDoctorate.gif&#34; alt=&#34;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:Between 1999–2000 &amp;amp; 2015–16, avg. #StudentLoan debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More #stats on student #debt here in our NEW blog: https://t.co/mz1F3aI943 pic.twitter.com/93mzhYkwgF— NCES (@EdNCES) August 18, 2018Full image:Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -225,26 +108,8 @@ Between 1999–2000 &amp;amp; 2015–16, avg. &lt;a href=&#34;https://twitter.co
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-08-07-animated-faceted-line-chart-student-loan-masters/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields. Interested in &lt;a href=&#34;https://twitter.com/hashtag/StudentDebt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentDebt&lt;/a&gt; stats? Find more &lt;a href=&#34;https://twitter.com/hashtag/EdData?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdData&lt;/a&gt; in our NEW BLOG: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/84BvN3bqWX&#34;&gt;pic.twitter.com/84BvN3bqWX&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1026807694731161600?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridMasters.gif&#34; alt=&#34;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Avg. #StudentLoan balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields. Interested in #StudentDebt stats? Find more #EdData in our NEW BLOG: https://t.co/mz1F3aI943 pic.twitter.com/84BvN3bqWX— NCES (@EdNCES) August 7, 2018Full image:Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -253,26 +118,8 @@ DYK? Avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;a
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt;, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW &lt;a href=&#34;https://twitter.com/hashtag/COE2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#COE2018&lt;/a&gt; Spotlight: &lt;a href=&#34;https://t.co/Yr9DzkGYMS&#34;&gt;https://t.co/Yr9DzkGYMS&lt;/a&gt; &lt;a href=&#34;https://t.co/o7AvnRRjcH&#34;&gt;pic.twitter.com/o7AvnRRjcH&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/999323515215020034?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationLoans.gif&#34; alt=&#34;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:Among grad school completers in 2015–16 who took out #studentloans, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW #COE2018 Spotlight: https://t.co/Yr9DzkGYMS pic.twitter.com/o7AvnRRjcH— NCES (@EdNCES) May 23, 2018Full image:Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -281,26 +128,8 @@ Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://t
       <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-02-12-animated-line-school-revenue/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW Finding: Federal sources accounted for approx. 9% of the total funding for &lt;a href=&#34;https://twitter.com/hashtag/K12?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#K12&lt;/a&gt; public schools in both 2005–06 and 2014 –15. &lt;a href=&#34;https://t.co/G16loc8pyW&#34;&gt;https://t.co/G16loc8pyW&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/CFuRjcqMIS&#34;&gt;pic.twitter.com/CFuRjcqMIS&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/963158870557421568?ref_src=twsrc%5Etfw&#34;&gt;February 12, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineSchool_Revenue.gif&#34; alt=&#34;Percentage of revenue for elementary and secondary public schools&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Percentage of revenue for elementary and secondary public schools&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:NEW Finding: Federal sources accounted for approx. 9% of the total funding for #K12 public schools in both 2005–06 and 2014 –15. https://t.co/G16loc8pyW #Education pic.twitter.com/CFuRjcqMIS— NCES (@EdNCES) February 12, 2018Full image:Percentage of revenue for elementary and secondary public schools
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -309,26 +138,8 @@ NEW Finding: Federal sources accounted for approx. 9% of the total funding for &
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-01-29-animated-line-chart-expenditures/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015: &lt;a href=&#34;https://t.co/FDcsYpjmcj&#34;&gt;https://t.co/FDcsYpjmcj&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Finance?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Finance&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/r5kUgNE4vF&#34;&gt;pic.twitter.com/r5kUgNE4vF&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/956970572189241344?ref_src=twsrc%5Etfw&#34;&gt;January 26, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/barState_Expenditure.gif&#34; alt=&#34;Current Expenditures per pupil in the lowest and highest spending states&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Current Expenditures per pupil in the lowest and highest spending states&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015: https://t.co/FDcsYpjmcj #Finance #Education pic.twitter.com/r5kUgNE4vF— NCES (@EdNCES) January 26, 2018Full image:Current Expenditures per pupil in the lowest and highest spending states
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -337,26 +148,8 @@ DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2017-10-19-high-school-attainment-rates/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Gaps in HS completion rates between White students and Black and Hispanic students have narrowed. Learn more: &lt;a href=&#34;https://t.co/N6geIyokVp&#34;&gt;https://t.co/N6geIyokVp&lt;/a&gt; &lt;a href=&#34;https://t.co/tZtA6jVI30&#34;&gt;pic.twitter.com/tZtA6jVI30&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/921050270049718273?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/line_High_School.gif&#34; alt=&#34;COE 2017 High School Attainment Line Graph Animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;COE 2017 High School Attainment Line Graph Animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Gaps in HS completion rates between White students and Black and Hispanic students have narrowed. Learn more: https://t.co/N6geIyokVp pic.twitter.com/tZtA6jVI30— NCES (@EdNCES) October 19, 2017Full image:COE 2017 High School Attainment Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
     </item>
     
     <item>
@@ -365,26 +158,8 @@ DYK? Gaps in HS completion rates between White students and Black and Hispanic s
       <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW RELEASE: View the % of borrowers who took out fed &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt; within 12 years of starting &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#education&lt;/a&gt; &lt;a href=&#34;https://t.co/QRmwQMJGG0&#34;&gt;https://t.co/QRmwQMJGG0&lt;/a&gt; &lt;a href=&#34;https://t.co/ADugSRBrcB&#34;&gt;pic.twitter.com/ADugSRBrcB&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/916332882213457921?ref_src=twsrc%5Etfw&#34;&gt;October 6, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/barChart_Loans.gif&#34; alt=&#34;Percent of Borrowers by Cohort After 12 Years&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Percent of Borrowers by Cohort After 12 Years&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:NEW RELEASE: View the % of borrowers who took out fed #studentloans within 12 years of starting #postsec #education https://t.co/QRmwQMJGG0 pic.twitter.com/ADugSRBrcB— NCES (@EdNCES) October 6, 2017Full image:Percent of Borrowers by Cohort After 12 Years
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
     </item>
     
     <item>
@@ -393,26 +168,77 @@ NEW RELEASE: View the % of borrowers who took out fed &lt;a href=&#34;https://tw
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-What was the median amount owed by federal student loan borrowers 12 years after starting &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; ed? &lt;a href=&#34;https://t.co/QRmwQMJGG0&#34;&gt;https://t.co/QRmwQMJGG0&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HigherEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HigherEd&lt;/a&gt; &lt;a href=&#34;https://t.co/a6JmSm64Iw&#34;&gt;pic.twitter.com/a6JmSm64Iw&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/915993158546313217?ref_src=twsrc%5Etfw&#34;&gt;October 5, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/barChartLoans_Debt.gif&#34; alt=&#34;Twelve Year Median Debt Bar Chart&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Twelve Year Median Debt Bar Chart&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:What was the median amount owed by federal student loan borrowers 12 years after starting #postsec ed? https://t.co/QRmwQMJGG0 #HigherEd pic.twitter.com/a6JmSm64Iw— NCES (@EdNCES) October 5, 2017Full image:Twelve Year Median Debt Bar Chart
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Charter School Enrollment, 2005 to 2015 - Animated State Grid Map</title>
+      <link>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</guid>
+      <description>Animation seen here:Learn about enrollment growth in #CharterSchools by exploring our #COE2017 indicator: https://t.co/5fYKCqMGH7 pic.twitter.com/dBY4YdriCx— NCES (@EdNCES) September 20, 2017Full image:Charter School Enrollment State Grid Map
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Teacher-Pupil Ratio: Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-09-16-animated-line-chart-pupil-ratio/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-16-animated-line-chart-pupil-ratio/</guid>
+      <description>Animation seen here:How has the U.S. pupil/teacher ratio changed over time? https://t.co/FmTFWac11L #teaching #EdData pic.twitter.com/YdttjORDPn— NCES (@EdNCES) September 13, 2017Full image:COE 2017 Pupil Ratio Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Educational Attainment - Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</guid>
+      <description>Animation seen here:Gaps remain in #HigherEd attainment between Whites, Blacks, and Hispanics. View more details in the #COE2017: https://t.co/N6geIyokVp pic.twitter.com/33JoRPmzbO— NCES (@EdNCES) August 31, 2017Full image:COE 2017 Bachelors Attainment Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Makeover Monday: WSJ Measles Vaccination Chart</title>
+      <link>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
+      <description>Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/
+It was featured on DataCamp across all their social media platforms - pretty neat!
+A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:
+Your measles chart is a beautiful piece of work!</description>
+    </item>
+    
+    <item>
+      <title>Reproducing the WSJ Measles Vaccination Chart Using R Animation</title>
+      <link>/animation/2017-06-28-wsj-measles-vaccination-chart/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-06-28-wsj-measles-vaccination-chart/</guid>
+      <description>Mastering Animation in RSee the full write-up of the development here: www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/
+Wall Street Journal Measles Vaccination ChartWall Street Journal
+Reproduced Animation Using RMeasles Animation using animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>School Bullying by Gender- Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-06-28-animated-line-chart-coe-bullying/</guid>
+      <description>Animation seen here!New from #COE2017: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. https://t.co/5BlyLdHS9W pic.twitter.com/Fr1pTt8xca— NCES (@EdNCES) May 3, 2017Full image:COE 2017 Bullying Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
     </item>
     
   </channel>

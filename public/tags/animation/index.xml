@@ -1,14 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Animation on Michael Lee</title>
-    <link>/tags/animation/index.xml</link>
-    <description>Recent content in Animation on Michael Lee</description>
+    <title>animation on Michael Lee</title>
+    <link>/tags/animation/</link>
+    <description>Recent content in animation on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <atom:link href="/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick ggplot2 Tip: Creating Duplicate Legends</title>
+      <link>/posts/2020-01-21-creating-duplicate-legends/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2020-01-21-creating-duplicate-legends/</guid>
+      <description>Mastering the R package ggplot2The ggplot2 package provides powerful methods to display data as graphics. The beauty of the package lies in it’s simplicity - understanding the core methods (applying variables to aesthetics and transformations) covers ~95% of static visualizations a data visualization developer might be interested in generating. Most of final 5% can be achieved by understanding the infrastructure of the package. One such example is how plot components are “written” to the graphics device.</description>
+    </item>
     
     <item>
       <title>Line Chart - College Enrollment Rate</title>
@@ -16,25 +28,10 @@
       <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-05-26-line-chart-college-enrollment/</guid>
-      <description>&lt;p&gt;Animation Linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW STAT: The immediate college enrollment rate for &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Hispanic&lt;/a&gt; students was higher in 2017 (67%) than in 2000 (49%).&lt;br&gt;&lt;br&gt;Discover more &lt;a href=&#34;https://twitter.com/hashtag/EdStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdStats&lt;/a&gt; in our 2019 &lt;a href=&#34;https://twitter.com/hashtag/ConditionOfEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ConditionOfEd&lt;/a&gt; report: &lt;a href=&#34;https://t.co/r8gJkRDeK3&#34;&gt;https://t.co/r8gJkRDeK3&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HispanicEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HispanicEd&lt;/a&gt; &lt;a href=&#34;https://t.co/amnDqvH8UH&#34;&gt;pic.twitter.com/amnDqvH8UH&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1131294682150051841?ref_src=twsrc%5Etfw&#34;&gt;May 22, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCollegeEnrollment.gif&#34; alt=&#34;The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation Linked here:
+NEW STAT: The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).
+Discover more #EdStats in our 2019 #ConditionOfEd report: https://t.co/r8gJkRDeK3 #HispanicEd pic.twitter.com/amnDqvH8UH— NCES (@EdNCES) May 22, 2019Full image:The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -43,25 +40,9 @@ NEW STAT: The immediate college enrollment rate for &lt;a href=&#34;https://twit
       <pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-04-19-line-chart-reported-bullying/</guid>
-      <description>&lt;p&gt;Animation Linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school during the school year, representing an overall decrease from 29% in 2005.&lt;br&gt;&lt;br&gt;More &lt;a href=&#34;https://twitter.com/hashtag/EdSafetyStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdSafetyStats&lt;/a&gt; in the Indicators of School Crime and Safety report, available now: &lt;a href=&#34;https://t.co/Z4JLYLn5O8&#34;&gt;https://t.co/Z4JLYLn5O8&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BJSgov?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@BJSgov&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;https://t.co/l7b3XH3kd2&#34;&gt;pic.twitter.com/l7b3XH3kd2&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1119216601545498624?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineBullyingUpdateTall.gif&#34; alt=&#34;Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation Linked here:
+NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school during the school year, representing an overall decrease from 29% in 2005.
+More #EdSafetyStats in the Indicators of School Crime and Safety report, available now: https://t.co/Z4JLYLn5O8 @BJSgov pic.twitter.com/l7b3XH3kd2— NCES (@EdNCES) April 19, 2019Full image:Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent</description>
     </item>
     
     <item>
@@ -70,24 +51,9 @@ NEW STAT: In 2017, 20% of students ages 12-18 reported being bullied at school d
       <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-04-17-line-chart-on-campus-crimes/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-In 2016, about 28,400 criminal incidents on &lt;a href=&#34;https://twitter.com/hashtag/postsec?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#postsec&lt;/a&gt; institution campuses were reported to police/ security agencies, representing a 3% increase from 2015.&lt;br&gt;&lt;br&gt;Learn more &lt;a href=&#34;https://twitter.com/hashtag/CampusCrime?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CampusCrime&lt;/a&gt; statistics in our NEW release: &lt;a href=&#34;https://t.co/Wvco6IxkcC&#34;&gt;https://t.co/Wvco6IxkcC&lt;/a&gt; &lt;a href=&#34;https://t.co/HKxgHq8gAs&#34;&gt;pic.twitter.com/HKxgHq8gAs&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1118532105183604738?ref_src=twsrc%5Etfw&#34;&gt;April 17, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCrimesTall.gif&#34; alt=&#34;Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>In 2016, about 28,400 criminal incidents on #postsec institution campuses were reported to police/ security agencies, representing a 3% increase from 2015.
+Learn more #CampusCrime statistics in our NEW release: https://t.co/Wvco6IxkcC pic.twitter.com/HKxgHq8gAs— NCES (@EdNCES) April 17, 2019Full image:Between 2001 and 2016, the total number of on-campus crimes reported at postsecondary institutions decreased by 32%
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -96,222 +62,8 @@ In 2016, about 28,400 criminal incidents on &lt;a href=&#34;https://twitter.com/
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2019-02-23-creating-pauses-in-r-animations/</guid>
-      <description>&lt;div id=&#34;mastering-animation-in-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mastering Animation in R&lt;/h2&gt;
-&lt;p&gt;Over the last couple years I’ve developed a multitude of animations using R. During this process I’ve learned quite a bit about R graphics, gpplot2, and useful techniques in animation. In fact I presented on methods for animation in R at satRdays DC - &lt;a href=&#34;http://bit.ly/animateDC&#34;&gt;slides available here&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;div class=&#34;containerYouTube&#34;&gt;
-&lt;iframe src=&#34;https://www.youtube.com/embed/glbFxRbqGWk&#34; frameborder=&#34;0&#34; allowfullscreen class=&#34;video&#34;&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;p&gt;One simple technique to improving animations is the addition of pauses. Pauses are an effective method of capturing the viewer’s attention and driving home the main message of an animation. Pausing at the end of an animation (before it loops) offers the viewer the full scope of the visualization, and pauses during the animation can be used to emphasize key data points.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Let’s walk through creating a pause in R.&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-pauses-in-r---libraries-and-data-reshaping&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating Pauses in R - Libraries and Data Reshaping&lt;/h2&gt;
-&lt;p&gt;We’ll use the &lt;code&gt;txhousing&lt;/code&gt; data set in the &lt;code&gt;ggplot2&lt;/code&gt; package to demonstrate - this data set contains information regarding the housing market in Texas provided by the &lt;a href=&#34;http://recenter.tamu.edu/&#34;&gt;TAMU real estate center&lt;/a&gt;. The animation will plot the median sale price of two cities - Abilene and Amarillo - from 2000 to 2015.&lt;/p&gt;
-&lt;p&gt;In my satuRdays DC presentation I covered the steps taken to develop an R animation:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Interpolate your data&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Structure your data to create frames that move across the dimension of interest&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Determine plot aspects that require consistency across the animation (annotations, scales, legends, etc)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Append and export the frames&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The variable &lt;code&gt;year&lt;/code&gt; contains the unique data values across our animation - &lt;code&gt;split&lt;/code&gt; will generate a list of data frames we can apply interpolations to using the &lt;code&gt;tweenr&lt;/code&gt; package.&lt;/p&gt;
-&lt;details open&gt;
-&lt;p&gt;&lt;summary&gt;R Libraries and Data Reshaping&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
-library(scales)
-library(extrafont)
-library(dplyr)
-library(tweenr)
-library(lubridate)
-library(animation)
-library(RColorBrewer)
-library(grid)
-loadfonts()
-
-
-# create data frame from txhousing data included in ggplot2 package
-txHousingData &amp;lt;- txhousing %&amp;gt;% filter(city %in% unique(txhousing$city)[1:2] &amp;amp; month==1)
-txHousingData &amp;lt;- txHousingData[,c(1,2,6)]
-txHousingData$city &amp;lt;- factor(txHousingData$city, levels = c(&amp;quot;Abilene&amp;quot;,&amp;quot;Amarillo&amp;quot;), labels = c(&amp;quot;Abilene&amp;quot;,&amp;quot;Amarillo&amp;quot;))
-
-# determine the unique data values that tweenr will iterate over (in this case year)
-txList &amp;lt;- split(txHousingData,txHousingData$year)
-
-# Apply tweenr to interpolate frames between data points
-txTweenedData &amp;lt;- tween_states(txList, tweenlength= 1, statelength=0, ease=&amp;#39;linear&amp;#39;,nframes=200)&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;p&gt;Since our data is arranged by year by default, it’s already structured in a fashion that moves across our dimension of interest (change over time) - so we’ve already completed the first two animation steps. Now that we’ve got our interpolated data frame &lt;code&gt;txTweenedData&lt;/code&gt; we can focus on the plot aesthetics.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plot-aesthetics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Plot Aesthetics&lt;/h2&gt;
-&lt;details open&gt;
-&lt;p&gt;&lt;summary&gt;ggplot2 Theme and Color Palette&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot aesthetics
-theme_white &amp;lt;- theme(text = element_text(family=&amp;quot;Open Sans&amp;quot;),
-                     panel.grid.major.y=element_blank(),
-                     panel.grid.major.x=element_blank(),
-                     panel.grid.minor.x=element_blank(),
-                     panel.grid.minor.y=element_blank(),
-                     axis.title.x=element_text(size=20, margin = margin(t=10)),
-                     axis.title.y=element_text(size=20, margin = margin(t=10)),
-                     axis.text.x=element_text(size=16),
-                     axis.text.y=element_text(size=16),
-                     axis.ticks = element_blank(),
-                     plot.title=element_text(size=26,family = &amp;quot;Open Sans&amp;quot;,lineheight=1.15),
-                     plot.subtitle=element_text(size=20, margin = margin(t=20, b = -5),hjust = -0.03, family = &amp;quot;Open Sans&amp;quot;),
-                     plot.caption=element_text(size=14, margin=margin(t=15,r=-15),hjust = -.03,lineheight=1.15, family = &amp;quot;Open Sans&amp;quot;, face  = &amp;quot;italic&amp;quot;),
-                     legend.position=&amp;quot;none&amp;quot;
-)
-
-# color palette
-my_palette = c(&amp;quot;#3EC7F4&amp;quot;, &amp;quot;#3FA66C&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;p&gt;It’s critical to determine plot aspects that require consistency across the animation. I like to assign this information as variable objects so that it can easily update across different frames contained in the plotting code. If these aren’t explicitly noted, ggplot2 will render the defaults in their place.&lt;/p&gt;
-&lt;details open&gt;
-&lt;p&gt;&lt;summary&gt;Plot Axes, Labels, and Titles&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# y axis breaks and labels
-yAxisBreaks &amp;lt;- seq(0, 140000, by = 20000)
-yAxisLabels &amp;lt;- paste0(format(yAxisBreaks))
-yAxisLimits &amp;lt;- c(0,max(yAxisBreaks)* 1.03)
-yAxisLabels &amp;lt;- c(yAxisLabels[1:length(yAxisLabels)-1], paste0(&amp;quot;$&amp;quot;,yAxisLabels[length(yAxisLabels)]))
-
-# x axis breaks and labels
-xAxis &amp;lt;- seq(2000, 2015, by = 2)
-xAxisBreaks &amp;lt;- xAxis
-xAxisLimits &amp;lt;- c(1999.5, 2019)
-
-# plot text
-title &amp;lt;- &amp;quot;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&amp;quot;
-subtitle &amp;lt;- &amp;quot;&amp;quot;
-caption &amp;lt;- &amp;quot;Information about the housing market in Texas provided by the TAMU real estate center, http://recenter.tamu.edu/.&amp;quot;
-xLab &amp;lt;- &amp;quot;Year&amp;quot;
-yLab &amp;lt;- &amp;quot;Median sale price&amp;quot;
-
-midPoint &amp;lt;- round(max(txTweenedData$.frame) / 2)
-
-# add adjustments for line labels
-txTweenedData$LevelLabel &amp;lt;- as.character(txTweenedData$city)
-txTweenedData$nudge_x &amp;lt;- ifelse(txTweenedData$LevelLabel==&amp;quot;Abilene&amp;quot;, 1.096,ifelse(txTweenedData$LevelLabel==&amp;quot;Amarillo&amp;quot;,1.233,0))
-txTweenedData$nudge_y &amp;lt;- 0&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-pauses&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating Pauses&lt;/h2&gt;
-&lt;p&gt;Finally we’ve reached our R animation tip - and thankfully it’s pretty trivial! To generate pauses within an animation simply determine where the pause exists, subset your data to include that frame, and use &lt;code&gt;replicate&lt;/code&gt; and &lt;code&gt;grid.draw&lt;/code&gt; to repeat that frame n-times. For instance, say I wanted to pause at the midpoint of the animation to emphasize a point. I’d first calculate the midpoint, then ensure that my data includes all frames until that point: &lt;code&gt;subset(txTweenedData, .frame &amp;lt;= midPoint)&lt;/code&gt;.&lt;/p&gt;
-&lt;details open&gt;
-&lt;p&gt;&lt;summary&gt;Animation Code&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#calculate midpoint of the plot
-midPoint &amp;lt;- round(max(txTweenedData$.frame) / 2)
-
-g2 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= midPoint), aes(x = year, y = median, .frame = midPoint)) +
-    geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
-    geom_point(data = subset(txTweenedData, .frame == midPoint),aes(group=city, color=city), size=5) + 
-    geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
-    scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
-    scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits)
-g2&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;/posts/2019-02-23-creating-pauses-in-r-animations_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;1260&#34; class = &#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;p&gt;Once we’ve created this frame, &lt;code&gt;replicate&lt;/code&gt; and &lt;code&gt;grid.draw&lt;/code&gt; repeat that frame n-times to create a pause.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;replicate(75,grid.draw(g2))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;
-&lt;p&gt;Simple as that!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-animation-code-within-savegif&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full Animation Code within &lt;code&gt;saveGIF&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;(NOTE: click on the gray bars to toggle collapsing the code!)&lt;/strong&gt;&lt;/p&gt;
-&lt;details&gt;
-&lt;p&gt;&lt;summary&gt;Animation Code&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;saveGIF({
-  
-  # print from tue first frame to the midpoint of the figure
-  for(i in 1:midPoint) {
-    g1 &amp;lt;-  ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
-      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
-      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
-      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
-      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
-      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
-      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
-      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
-                 caption = caption)
-      print(g1);  
-    }
-  
-  # print the midpoint 75 times to create a pause
-  g2 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= midPoint), aes(x = year, y = median, .frame = midPoint)) +
-      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
-      geom_point(data = subset(txTweenedData, .frame == midPoint),aes(group=city, color=city), size=5) + 
-      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
-      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
-      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
-      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
-      geom_text(data = subset(txTweenedData, .frame == midPoint),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == midPoint)$nudge_y, nudge_x = subset(txTweenedData, .frame == midPoint)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) + 
-      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
-                 caption = caption)
-
-  replicate(75,grid.draw(g2))
-  
-  # print from tue midpoint of the figure until the last frame
-  for(i in midPoint:max(txTweenedData$.frame)) {
-    g3 &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
-      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
-      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
-      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
-      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
-      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
-      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
-      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
-                 caption = caption)
-    print(g3);  }
-
-  # print the final frame of the figure 110 times to create an ending pause 
-  wholeFig &amp;lt;- ggplot(data = subset(txTweenedData, .frame &amp;lt;= i), aes(x = year, y = median, .frame = i)) +
-      geom_point(data = subset(txTweenedData, .frame == min(.frame)),aes(group=city, color=city), size=5) + 
-      geom_point(data = subset(txTweenedData, .frame == i),aes(group=city, color=city), size=5) +
-      geom_line(aes(group=city, color=city, cumulative = TRUE, label=LevelLabel), size=2.5) +
-      scale_x_continuous(labels=xAxisBreaks, expand = c(0, 0), breaks=xAxisBreaks, limits =xAxisLimits) +                     
-      scale_y_continuous(labels=yAxisLabels, expand = c(0, 0), breaks=yAxisBreaks,limits = yAxisLimits) +
-      theme_minimal() + theme_white + scale_color_manual(values=my_palette) +
-      geom_text(data = subset(txTweenedData, .frame == i),aes(label =LevelLabel), size = 9, nudge_y = subset(txTweenedData, .frame == i)$nudge_y, nudge_x = subset(txTweenedData, .frame == i)$nudge_x, family = &amp;quot;Open Sans&amp;quot;, lineheight = 0.75) +
-      labs(x=xLab, y=yLab, title = title, subtitle = subtitle, 
-                 caption = caption)   
-  
-  replicate(110,grid.draw(wholeFig))
-},movie.name=&amp;quot;/home/michael/Documents/animation_samples/txHousing/txHousing.gif&amp;quot;,interval = .02, ani.width = 1024, ani.height = 612)&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;hr&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/tx_Housing.gif&#34; alt=&#34;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Median sale price of homes in Abilene and Amarillo, 2000 through 2015&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;p&gt;Finally it’s smart to compress the final animation, since gifs can be unwieldy.&lt;/p&gt;
-&lt;details open&gt;
-&lt;p&gt;&lt;summary&gt;GIF Compression&lt;/summary&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# compress gif
-gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
-  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
-  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
-  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
-  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
-}
-
-gif_compress(&amp;quot;/home/michael/Documents/animation_samples/txHousing/txHousing.gif&amp;quot;,&amp;quot;/home/michael/Documents/animation_samples/txHousing/tx_Housing.gif&amp;quot;,extra.opts=&amp;quot;--colors 256&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/details&gt;
-&lt;p&gt;
-&lt;p&gt;Hope you’ve found this useful! Feel free to reach out to me on twitter with any questions or feedback - &lt;a href=&#34;https://twitter.com/mikeleeco&#34; class=&#34;uri&#34;&gt;https://twitter.com/mikeleeco&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Mastering Animation in ROver the last couple years I’ve developed a multitude of animations using R. During this process I’ve learned quite a bit about R graphics, gpplot2, and useful techniques in animation. In fact I presented on methods for animation in R at satRdays DC - slides available here
+One simple technique to improving animations is the addition of pauses. Pauses are an effective method of capturing the viewer’s attention and driving home the main message of an animation.</description>
     </item>
     
     <item>
@@ -320,25 +72,9 @@ gif_compress(&amp;quot;/home/michael/Documents/animation_samples/txHousing/txHou
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-02-22-line-chart-status-dropout-rate/</guid>
-      <description>&lt;p&gt;Animation linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? The &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Hispanic&lt;/a&gt; status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &amp;amp; 2016. What were the rates for Black &amp;amp; White students? Discover more: &lt;a href=&#34;https://t.co/5SyF2HuBcJ&#34;&gt;https://t.co/5SyF2HuBcJ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HispanicEd?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HispanicEd&lt;/a&gt; &lt;a href=&#34;https://t.co/Mg9MEzTeel&#34;&gt;pic.twitter.com/Mg9MEzTeel&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1098979512107319296?ref_src=twsrc%5Etfw&#34;&gt;February 22, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineStatusDropoutRateTall.gif&#34; alt=&#34;Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation linked here:
+DYK? The #Hispanic status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &amp;amp; 2016. What were the rates for Black &amp;amp; White students? Discover more: https://t.co/5SyF2HuBcJ #HispanicEd pic.twitter.com/Mg9MEzTeel— NCES (@EdNCES) February 22, 2019Full image:Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -347,25 +83,9 @@ DYK? The &lt;a href=&#34;https://twitter.com/hashtag/Hispanic?src=hash&amp;amp;r
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2019-01-24-state-map-acgr/</guid>
-      <description>&lt;p&gt;Animation linked here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-How have state-level adjusted cohort &lt;a href=&#34;https://twitter.com/hashtag/graduation?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#graduation&lt;/a&gt; rates (ACGR) for public high school students changed between 2010–11 and 2016–17? Find out: &lt;a href=&#34;https://t.co/fVvgrQbVcx&#34;&gt;https://t.co/fVvgrQbVcx&lt;/a&gt; &lt;a href=&#34;https://t.co/WBvUcO5r8k&#34;&gt;pic.twitter.com/WBvUcO5r8k&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1088444582382223360?ref_src=twsrc%5Etfw&#34;&gt;January 24, 2019&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/mapGraduation_Rate.gif&#34; alt=&#34;Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation linked here:
+How have state-level adjusted cohort #graduation rates (ACGR) for public high school students changed between 2010–11 and 2016–17? Find out: https://t.co/fVvgrQbVcx pic.twitter.com/WBvUcO5r8k— NCES (@EdNCES) January 24, 2019Full image:Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -374,25 +94,9 @@ How have state-level adjusted cohort &lt;a href=&#34;https://twitter.com/hashtag
       <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-12-12-line-chart-status-completion-rate/</guid>
-      <description>&lt;p&gt;Animation seen here:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twitter.com/hashtag/HighSchool?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HighSchool&lt;/a&gt; status completion rates of 18-to 24-yr-olds by race/ethnicity over the past 40 years! Find more &lt;a href=&#34;https://twitter.com/hashtag/EdTrends?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdTrends&lt;/a&gt; here: &lt;a href=&#34;https://t.co/OkOs6B7tnC&#34;&gt;https://t.co/OkOs6B7tnC&lt;/a&gt; &lt;a href=&#34;https://t.co/m2U9FvIW1c&#34;&gt;pic.twitter.com/m2U9FvIW1c&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1072919011774611456?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineCompletionTall.gif&#34; alt=&#34;Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:
+JUST RELEASED! Explore our new report to learn about #HighSchool status completion rates of 18-to 24-yr-olds by race/ethnicity over the past 40 years! Find more #EdTrends here: https://t.co/OkOs6B7tnC pic.twitter.com/m2U9FvIW1c— NCES (@EdNCES) December 12, 2018Full image:Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -401,18 +105,10 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
       <pubDate>Wed, 05 Sep 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-09-05-stacked-area-chart-enrollment/</guid>
-      <description>&lt;p&gt;Linked here: &lt;a href=&#34;https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data&#34;&gt;https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/public_Enrollment.gif&#34; alt=&#34;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Linked here: https://nces.ed.gov/blogs/nces/post/celebrating-150-years-of-education-data
+Full image:Enrollment in elementary, secondary, and postsecondary institutions: Selected years, 1869-70 through 2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
     </item>
     
     <item>
@@ -421,26 +117,8 @@ JUST RELEASED! Explore our new report to learn about &lt;a href=&#34;https://twi
       <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Between 1999–2000 &amp;amp; 2015–16, avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More &lt;a href=&#34;https://twitter.com/hashtag/stats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#stats&lt;/a&gt; on student &lt;a href=&#34;https://twitter.com/hashtag/debt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#debt&lt;/a&gt; here in our NEW blog: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/93mzhYkwgF&#34;&gt;pic.twitter.com/93mzhYkwgF&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1030868436027691010?ref_src=twsrc%5Etfw&#34;&gt;August 18, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridDoctorate.gif&#34; alt=&#34;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:Between 1999–2000 &amp;amp; 2015–16, avg. #StudentLoan debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More #stats on student #debt here in our NEW blog: https://t.co/mz1F3aI943 pic.twitter.com/93mzhYkwgF— NCES (@EdNCES) August 18, 2018Full image:Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -449,26 +127,8 @@ Between 1999–2000 &amp;amp; 2015–16, avg. &lt;a href=&#34;https://twitter.co
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-08-07-animated-faceted-line-chart-student-loan-masters/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentLoan&lt;/a&gt; balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields. Interested in &lt;a href=&#34;https://twitter.com/hashtag/StudentDebt?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StudentDebt&lt;/a&gt; stats? Find more &lt;a href=&#34;https://twitter.com/hashtag/EdData?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EdData&lt;/a&gt; in our NEW BLOG: &lt;a href=&#34;https://t.co/mz1F3aI943&#34;&gt;https://t.co/mz1F3aI943&lt;/a&gt; &lt;a href=&#34;https://t.co/84BvN3bqWX&#34;&gt;pic.twitter.com/84BvN3bqWX&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/1026807694731161600?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationGridMasters.gif&#34; alt=&#34;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Avg. #StudentLoan balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields. Interested in #StudentDebt stats? Find more #EdData in our NEW BLOG: https://t.co/mz1F3aI943 pic.twitter.com/84BvN3bqWX— NCES (@EdNCES) August 7, 2018Full image:Average cumulative student loan balance for master’s degree completers, by degree program: Selected years, 2000–2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -477,26 +137,8 @@ DYK? Avg. &lt;a href=&#34;https://twitter.com/hashtag/StudentLoan?src=hash&amp;a
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-05-23-animated-line-chart-cumulative-student-loan-balance/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://twitter.com/hashtag/studentloans?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#studentloans&lt;/a&gt;, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW &lt;a href=&#34;https://twitter.com/hashtag/COE2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#COE2018&lt;/a&gt; Spotlight: &lt;a href=&#34;https://t.co/Yr9DzkGYMS&#34;&gt;https://t.co/Yr9DzkGYMS&lt;/a&gt; &lt;a href=&#34;https://t.co/o7AvnRRjcH&#34;&gt;pic.twitter.com/o7AvnRRjcH&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/999323515215020034?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineEducationLoans.gif&#34; alt=&#34;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:Among grad school completers in 2015–16 who took out #studentloans, the avg. balance was highest for those completing a professional doctorate ($186,600). Learn more in our NEW #COE2018 Spotlight: https://t.co/Yr9DzkGYMS pic.twitter.com/o7AvnRRjcH— NCES (@EdNCES) May 23, 2018Full image:Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -505,181 +147,10 @@ Among grad school completers in 2015–16 who took out &lt;a href=&#34;https://t
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/posts/2018-04-16-hiking-the-narrows/</guid>
-      <description>&lt;p&gt;This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as &lt;em&gt;The Narrows&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/narrows.jpg&#34; alt=&#34;The Narrows in Zion National Park&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;The Narrows in Zion National Park&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;It’s surely even more sensational in person.&lt;/p&gt;
-&lt;p&gt;Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely. Online sources confirmed my intuition that the spring run-off leads to closures, but I was curious the extent of seasonality. Let’s dig into it!&lt;/p&gt;
-&lt;div id=&#34;accessing-the-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Accessing the data&lt;/h2&gt;
-&lt;p&gt;The provisional data for the East Fork of the Virgin River can be easily &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&amp;amp;begin_date=&amp;amp;end_date=&amp;amp;site_no=09404900&#34;&gt;accessed via the USGS website&lt;/a&gt;, including discharge and gage height. I’ll focus on the discharge levels here, since the speed of the river (and not it’s height) is what seems to precipitate closures. The speed threshold that merits closure of The Narrows was inconsistent across the sites I investigated (if you know leave a comment), but the level I saw most often - 150 cfs - is what I will use.&lt;/p&gt;
-&lt;p&gt;A brief aside: the USGS logs some super interesting data to visualize time series. Here are some continually updated &lt;a href=&#34;https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;amp;cb_00060=on&amp;amp;format=gif_default&amp;amp;period=60&#34;&gt;sources of water data for Utah&lt;/a&gt;, for example. So much to explore!&lt;/p&gt;
-&lt;p&gt;Back to The Narrows data. So we’ve got out the csv and it was completely clean like always the end! Not.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cleaning-the-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cleaning the data&lt;/h2&gt;
-&lt;p&gt;There was quite a few strange coding choices made through the years accessed (1993 - 2018). What follows are those gory recoding details. One nifty function I learned more about was &lt;code&gt;dplyr::separate&lt;/code&gt; which allows you to specify the direction you’d like to merge the characters you’re separating. This allowed me to push values of &lt;code&gt;0 seconds&lt;/code&gt; ino the seconds column, even though there were some values where there were no adjoining hours or minutes attached. Nifty!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(lubridate)
-library(animation)
-library(grid)
-x &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
-x &amp;lt;- x[1:530086,]
-x2 &amp;lt;- read.csv(&amp;quot;/home/michael/Documents/website/narrows/narrows2.csv&amp;quot;, row.names = NULL, stringsAsFactors = FALSE)
-x &amp;lt;- rbind(x,x2)
-rm(x2)
-x &amp;lt;- x %&amp;gt;% separate(datetime, c(&amp;quot;date&amp;quot;, &amp;quot;time&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;)
-x$date &amp;lt;- mdy(x$date)
-x$timeparse &amp;lt;- hm(x$time)
-x &amp;lt;- x %&amp;gt;% separate(timeparse, c(&amp;quot;hour&amp;quot;, &amp;quot;minute&amp;quot;, &amp;quot;second&amp;quot;), &amp;quot; &amp;quot;, extra = &amp;quot;merge&amp;quot;, fill = &amp;quot;left&amp;quot;)
-x$hour &amp;lt;- gsub(&amp;quot;H&amp;quot;, &amp;quot;&amp;quot;, x$hour)
-x$minute &amp;lt;- gsub(&amp;quot;M&amp;quot;, &amp;quot;&amp;quot;, x$minute)
-x$second &amp;lt;- gsub(&amp;quot;S&amp;quot;, &amp;quot;&amp;quot;, x$second)
-x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)] &amp;lt;- sapply(x[,c(&amp;quot;hour&amp;quot;,&amp;quot;minute&amp;quot;,&amp;quot;second&amp;quot;)], as.numeric)
-x$hour &amp;lt;- ifelse(is.na(x$hour),0 ,x$hour)
-x$minute &amp;lt;- ifelse(is.na(x$minute),0 ,x$minute)
-x$hour &amp;lt;- ifelse(grepl(&amp;quot;PM&amp;quot;, x$time), x$hour + 12,x$hour)
-x$hour &amp;lt;- ifelse(nchar(x$hour) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$hour)),as.character(x$hour))
-x$minute &amp;lt;- ifelse(nchar(x$minute) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$minute)),as.character(x$minute))
-x$second &amp;lt;- ifelse(nchar(x$second) &amp;lt; 2, paste0(&amp;quot;0&amp;quot;,as.character(x$second)),as.character(x$second))
-x$hour &amp;lt;- ifelse(grepl(&amp;quot;24&amp;quot;, x$hour), &amp;quot;00&amp;quot;,x$hour)
-x$timeUpdate &amp;lt;- paste(x$hour,x$minute,x$second, sep = &amp;quot;:&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The full data source as an &lt;strong&gt;.Rdata&lt;/strong&gt; file can be accessed through &lt;a href=&#34;https://mikelee.co/data/narrows.Rdata&#34;&gt;this link&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;drill-down-and-visualize&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Drill down and visualize&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;dplyr&lt;/code&gt; and &lt;code&gt;lubridate&lt;/code&gt; package make it easy to extract seasonality in the data:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByDay &amp;lt;- x %&amp;gt;% mutate(day = yday(date)) %&amp;gt;%
-  group_by(day) %&amp;gt;%
-  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
-
-dischargeByDay$day &amp;lt;- as.Date(as_date(dischargeByDay$day))
-dischargeByDay$month &amp;lt;- month(dischargeByDay$day, label = TRUE)
-
-plot(dischargeByDay$day, dischargeByDay$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/drill%20down-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This result is convincing on it’s own: on average from 1993 to 2018, after about 100 days and lasting until about the 160th day (Apri 10th - June 10th), the discharge level breaks the 150 cfs threshold that closes The Narrows hiking route.&lt;/p&gt;
-&lt;p&gt;Lets take this result and make it more visually engaging by adding some animation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;start-with-our-skeleton-plot&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Start with our skeleton plot&lt;/h2&gt;
-&lt;p&gt;I’ve been poking around with image dimensions and themes for distribution through twitter, and the following theme seems to be a quality balance between plot elements:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;theme_white &amp;lt;- theme(text = element_text(family=&amp;quot;Open Sans&amp;quot;, color = &amp;quot;black&amp;quot;),
-                     panel.grid = element_blank(),
-                     panel.border = element_blank(),
-                     axis.title.x=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(t=15, b = 0)),
-                     axis.title.y=element_text(size=26, family = &amp;quot;Open Sans&amp;quot;, margin = margin(r=15, l = 5)),
-                     axis.text.x=element_text(size=22, hjust = 0, family = &amp;quot;Open Sans Light&amp;quot;),
-                     axis.text.y=element_text(size=22, family = &amp;quot;Open Sans Light&amp;quot;),
-                     axis.ticks = element_blank(),           
-                     plot.title=element_text(size=34,family = &amp;quot;Open Sans Extrabold&amp;quot;,hjust= 0,lineheight=1, margin = margin(t = 15)),
-                     plot.subtitle=element_text(size=26, margin = margin(t=15, b = 5),family = &amp;quot;Open Sans&amp;quot;),
-                     plot.caption=element_text(size=18, hjust = 0,margin=margin(t=15, b = 15),lineheight=1.15, family = &amp;quot;Open Sans&amp;quot;),
-                     legend.position=&amp;quot;none&amp;quot;
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It’s important to impelement limits and breaks in the y and x scales to keep the axes stable when using ggplot2 for animation. Otherwise, the plot axes will expand according to the subset of data used in the figure.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gg &amp;lt;- ggplot(dischargeByDay, aes(x = day, y = avgDischarge, group = 1)) +
-  scale_y_continuous(limits = c(0, 350), expand = c(0,0)) +
-  scale_x_date(date_breaks = &amp;quot;1 month&amp;quot;, date_labels =  &amp;quot;%b&amp;quot;, expand = c(0,0),limits = c(min(dischargeByDay$day)-1,max(dischargeByDay$day)-2)) +
-  labs(title = &amp;quot;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&amp;quot;,
-       subtitle = &amp;quot;If the river is flowing at over 150 Cubic Feet per Second (CFS) the narrows is closed&amp;quot;,
-       caption = &amp;quot;Data Accessed 3/16/2018, retrieved via https://nwis.waterdata.usgs.gov/usa/nwis/uv/&amp;quot;) +
-  xlab(&amp;quot;Date&amp;quot;) + ylab(&amp;quot;Average Discharge&amp;quot;) +
-  theme_bw() + theme_white
-gg&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/gg.png&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We’ll then use &lt;code&gt;tweenr&lt;/code&gt; and &lt;code&gt;animation&lt;/code&gt; to refine the visualization with smooth transitions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;animate-all-the-things&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animate all the things!&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gifReplicate &amp;lt;- function(x) {
-  grid.newpage()
-  grid.draw(x)
-}
-
-yDates &amp;lt;- seq(from = 0, to = max(as.numeric(dischargeByDay$day)), by = 3)
-yDates[1] &amp;lt;- 1
-
-saveGIF({
-
-  for (i in yDates) {
-    
-    gg2 &amp;lt;- gg + geom_point(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day, y = avgDischarge), alpha = .1)
-    g &amp;lt;- ggplotGrob(gg2)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  grid::grid.draw(g); 
-  replicate(10,gifReplicate(g))
-
-  for (i in seq(from =1, to = 366, by = 7)) {
-    
-    gg3 &amp;lt;- gg2 + geom_segment(x = 1, xend = i, y = 150,yend = 150, color= &amp;quot;red&amp;quot;, linetype = 2) 
-    g &amp;lt;- ggplotGrob(gg3)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  for (i in yDates) {
-    
-    gg4 &amp;lt;- gg3 + stat_smooth(data = subset(dischargeByDay, day &amp;lt;=i), aes(x = day), se = F, method = &amp;quot;lm&amp;quot;, formula = y ~ poly(x, 20))
-    g &amp;lt;- ggplotGrob(gg4)
-    g$layout$l[g$layout$name == &amp;quot;title&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;caption&amp;quot;] &amp;lt;- 3
-    g$layout$l[g$layout$name == &amp;quot;subtitle&amp;quot;] &amp;lt;- 3
-    grid::grid.draw(g); 
-    grid.newpage()
-  }
-  
-  grid::grid.draw(g); 
-  replicate(100,gifReplicate(g))
-  # grid.draw(gg4)
-  # geom_hline(yintercept = 150, color= &amp;quot;red&amp;quot;, linetype = 2) + 
-  #   geom_line(aes(x=day, y=avgDischarge), size=1.3) +
-},movie.name=paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),interval = .02, ani.width = 1200, ani.height = 800)
-
-gif_compress &amp;lt;- function(ingif, outgif, show=TRUE, extra.opts=&amp;quot;&amp;quot;){
-  command &amp;lt;-  sprintf(&amp;quot;gifsicle -O3 %s &amp;lt; %s &amp;gt; %s&amp;quot;, extra.opts, ingif, outgif)
-  system.fun &amp;lt;- if (.Platform$OS.type == &amp;quot;windows&amp;quot;) shell else system
-  if(show) message(&amp;quot;Executing: &amp;quot;, strwrap(command, exdent = 2, prefix = &amp;quot;\n&amp;quot;))
-  system.fun(ifelse(.Platform$OS.type == &amp;quot;windows&amp;quot;, sprintf(&amp;quot;\&amp;quot;%s\&amp;quot;&amp;quot;, shQuote(command)), command))
-}
-
-gif_compress(paste0(getwd(),&amp;quot;/narrowsLarge.gif&amp;quot;),
-             paste0(getwd(),&amp;quot;/narrowsLargeTall.gif&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/narrowsLargeTall.gif&#34; alt=&#34;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;addendum---further-data-exploration-needed&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Addendum - Further Data Exploration Needed:&lt;/h3&gt;
-&lt;p&gt;After generating this animation and before sitting down to write this post, I explored the data a little bit more. To my delight (or chagrin) there appears to be a daily pattern to the discharge level. Looking at just April results, the discharge level decreases from 2pm to 5pm before reversing course and increasing until about 2am.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dischargeByAprilHour &amp;lt;- x %&amp;gt;% filter(month(date) == 4) %&amp;gt;%
-  mutate(day = yday(date)) %&amp;gt;%
-  group_by(hour) %&amp;gt;%
-  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
-plot(dischargeByAprilHour$hour, dischargeByAprilHour$avgDischarge)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/posts/2018-04-16-hiking-the-narrows_files/figure-html/daily%20changes%20in%20April-1.png&#34; width=&#34;1260&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;An exploration for another day or another analyst!&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <description>This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as The Narrows:
+The Narrows in Zion National Park
+It’s surely even more sensational in person.
+Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely.</description>
     </item>
     
     <item>
@@ -688,26 +159,8 @@ plot(dischargeByAprilHour$hour, dischargeByAprilHour$avgDischarge)&lt;/code&gt;&
       <pubDate>Mon, 12 Feb 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-02-12-animated-line-school-revenue/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-NEW Finding: Federal sources accounted for approx. 9% of the total funding for &lt;a href=&#34;https://twitter.com/hashtag/K12?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#K12&lt;/a&gt; public schools in both 2005–06 and 2014 –15. &lt;a href=&#34;https://t.co/G16loc8pyW&#34;&gt;https://t.co/G16loc8pyW&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/CFuRjcqMIS&#34;&gt;pic.twitter.com/CFuRjcqMIS&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/963158870557421568?ref_src=twsrc%5Etfw&#34;&gt;February 12, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/lineSchool_Revenue.gif&#34; alt=&#34;Percentage of revenue for elementary and secondary public schools&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Percentage of revenue for elementary and secondary public schools&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:NEW Finding: Federal sources accounted for approx. 9% of the total funding for #K12 public schools in both 2005–06 and 2014 –15. https://t.co/G16loc8pyW #Education pic.twitter.com/CFuRjcqMIS— NCES (@EdNCES) February 12, 2018Full image:Percentage of revenue for elementary and secondary public schools
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -716,26 +169,8 @@ NEW Finding: Federal sources accounted for approx. 9% of the total funding for &
       <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2018-01-29-animated-line-chart-expenditures/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015: &lt;a href=&#34;https://t.co/FDcsYpjmcj&#34;&gt;https://t.co/FDcsYpjmcj&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Finance?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Finance&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Education?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Education&lt;/a&gt; &lt;a href=&#34;https://t.co/r5kUgNE4vF&#34;&gt;pic.twitter.com/r5kUgNE4vF&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/956970572189241344?ref_src=twsrc%5Etfw&#34;&gt;January 26, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/barState_Expenditure.gif&#34; alt=&#34;Current Expenditures per pupil in the lowest and highest spending states&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Current Expenditures per pupil in the lowest and highest spending states&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015: https://t.co/FDcsYpjmcj #Finance #Education pic.twitter.com/r5kUgNE4vF— NCES (@EdNCES) January 26, 2018Full image:Current Expenditures per pupil in the lowest and highest spending states
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -744,26 +179,130 @@ DYK? Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/animation/2017-10-19-high-school-attainment-rates/</guid>
-      <description>&lt;div id=&#34;animation-seen-here&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Animation seen here:&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-DYK? Gaps in HS completion rates between White students and Black and Hispanic students have narrowed. Learn more: &lt;a href=&#34;https://t.co/N6geIyokVp&#34;&gt;https://t.co/N6geIyokVp&lt;/a&gt; &lt;a href=&#34;https://t.co/tZtA6jVI30&#34;&gt;pic.twitter.com/tZtA6jVI30&lt;/a&gt;
-&lt;/p&gt;
-— NCES (&lt;span class=&#34;citation&#34;&gt;@EdNCES&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/EdNCES/status/921050270049718273?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2017&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;hr /&gt;
-&lt;/div&gt;
-&lt;div id=&#34;full-image&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Full image:&lt;/h2&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/line_High_School.gif&#34; alt=&#34;COE 2017 High School Attainment Line Graph Animation&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;COE 2017 High School Attainment Line Graph Animation&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Interested in learning more? Hire me to consult on your next project, follow me on &lt;a href=&#34;https://twitter.com/mikeleeco&#34;&gt;twitter&lt;/a&gt;, leave a comment, or contact me via &lt;a href=&#34;mailto:mdlee12@gmail.com&#34;&gt;email&lt;/a&gt;. All inquiries welcome!&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Animation seen here:DYK? Gaps in HS completion rates between White students and Black and Hispanic students have narrowed. Learn more: https://t.co/N6geIyokVp pic.twitter.com/tZtA6jVI30— NCES (@EdNCES) October 19, 2017Full image:COE 2017 High School Attainment Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
+    </item>
+    
+    <item>
+      <title>Percent of Borrowers by Cohort - Animated Bar Chart</title>
+      <link>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</link>
+      <pubDate>Sat, 14 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-10-14-animated-bar-chart-percent-borrowers-by-cohort/</guid>
+      <description>Animation seen here:NEW RELEASE: View the % of borrowers who took out fed #studentloans within 12 years of starting #postsec #education https://t.co/QRmwQMJGG0 pic.twitter.com/ADugSRBrcB— NCES (@EdNCES) October 6, 2017Full image:Percent of Borrowers by Cohort After 12 Years
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
+    </item>
+    
+    <item>
+      <title>Median Debt By Educational Attainment - Animated Bar Chart</title>
+      <link>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-10-05-animated-bar-chart-twelve-year-debt/</guid>
+      <description>Animation seen here:What was the median amount owed by federal student loan borrowers 12 years after starting #postsec ed? https://t.co/QRmwQMJGG0 #HigherEd pic.twitter.com/a6JmSm64Iw— NCES (@EdNCES) October 5, 2017Full image:Twelve Year Median Debt Bar Chart
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Charter School Enrollment, 2005 to 2015 - Animated State Grid Map</title>
+      <link>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-22-animated-charter-enrollment-state-grid-map/</guid>
+      <description>Animation seen here:Learn about enrollment growth in #CharterSchools by exploring our #COE2017 indicator: https://t.co/5fYKCqMGH7 pic.twitter.com/dBY4YdriCx— NCES (@EdNCES) September 20, 2017Full image:Charter School Enrollment State Grid Map
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Teacher-Pupil Ratio: Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-09-16-animated-line-chart-pupil-ratio/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-16-animated-line-chart-pupil-ratio/</guid>
+      <description>Animation seen here:How has the U.S. pupil/teacher ratio changed over time? https://t.co/FmTFWac11L #teaching #EdData pic.twitter.com/YdttjORDPn— NCES (@EdNCES) September 13, 2017Full image:COE 2017 Pupil Ratio Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Educational Attainment - Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-09-09-animated-line-chart-bachelors-attainment/</guid>
+      <description>Animation seen here:Gaps remain in #HigherEd attainment between Whites, Blacks, and Hispanics. View more details in the #COE2017: https://t.co/N6geIyokVp pic.twitter.com/33JoRPmzbO— NCES (@EdNCES) August 31, 2017Full image:COE 2017 Bachelors Attainment Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>Makeover Monday: WSJ Measles Vaccination Chart</title>
+      <link>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
+      <description>Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/
+It was featured on DataCamp across all their social media platforms - pretty neat!
+A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:
+Your measles chart is a beautiful piece of work!</description>
+    </item>
+    
+    <item>
+      <title>Makeover Monday: WSJ Measles Vaccination Chart</title>
+      <link>/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2017-07-10-makeover-monday-wsj-measles-vaccination-chart/</guid>
+      <description>Last week I wrote a post about recreating the WSJ measles vaccination chart as an animated cartogram - you can check out the full write-up of the development here: www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/
+It was featured on DataCamp across all their social media platforms - pretty neat!
+A comment from one of the readers (which disqus seems to have overwritten as I was re-initializing my site) read as so:
+Your measles chart is a beautiful piece of work!</description>
+    </item>
+    
+    <item>
+      <title>Animated Line Chart from Condition of Education 2017 Data Release</title>
+      <link>/posts/2017-06-28-animated-line-chart-coe-bullying/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2017-06-28-animated-line-chart-coe-bullying/</guid>
+      <description>Animation seen here!New from #COE2017: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. https://t.co/5BlyLdHS9W pic.twitter.com/Fr1pTt8xca— NCES (@EdNCES) May 3, 2017Full image:COE 2017 Bullying Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
+    </item>
+    
+    <item>
+      <title>Reproducing the WSJ Measles Vaccination Chart Using R</title>
+      <link>/posts/2017-06-28-wsj-measles-vaccination-chart/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/posts/2017-06-28-wsj-measles-vaccination-chart/</guid>
+      <description>Mastering Animation in RUPDATE: In order to reproduce some portions of this code you need the gganimate package using the deprecated API. To access that version, download v0.1.1 here.
+Recently I’ve been working on creating gif animations for social media:
+New from #COE2017: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. https://t.co/5BlyLdHS9W pic.twitter.com/Fr1pTt8xca— NCES (@EdNCES) May 3, 2017It’s pretty addicting!</description>
+    </item>
+    
+    <item>
+      <title>Reproducing the WSJ Measles Vaccination Chart Using R Animation</title>
+      <link>/animation/2017-06-28-wsj-measles-vaccination-chart/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-06-28-wsj-measles-vaccination-chart/</guid>
+      <description>Mastering Animation in RSee the full write-up of the development here: www.mikelee.co/posts/2017-06-28-wsj-measles-vaccination-chart/
+Wall Street Journal Measles Vaccination ChartWall Street Journal
+Reproduced Animation Using RMeasles Animation using animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!
+</description>
+    </item>
+    
+    <item>
+      <title>School Bullying by Gender- Line Chart from COE 2017 Data Release</title>
+      <link>/animation/2017-06-28-animated-line-chart-coe-bullying/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/animation/2017-06-28-animated-line-chart-coe-bullying/</guid>
+      <description>Animation seen here!New from #COE2017: 21% of students reported being bullied at school in 2015, a ↓ from the 28% reported in 2005. https://t.co/5BlyLdHS9W pic.twitter.com/Fr1pTt8xca— NCES (@EdNCES) May 3, 2017Full image:COE 2017 Bullying Line Graph Animation
+Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email. All inquiries welcome!</description>
     </item>
     
   </channel>

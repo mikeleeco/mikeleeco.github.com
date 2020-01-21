@@ -2,11 +2,11 @@
 <html lang="en-us">
 
 <head>
-    <meta name="generator" content="Hugo 0.19" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sports | Michael Lee</title>
+    <title>sports | Michael Lee</title>
 
      
       
@@ -21,23 +21,11 @@
   <meta name="author" content="">
 
  
-    <meta property="og:title" content="Sports" />
+    <meta property="og:title" content="sports" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/tags/sports/" />
-
-
-
-<meta property="og:updated_time" content="2019-01-28T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2019-01-28T00:00:00+00:00" />
  
     
 
@@ -45,19 +33,23 @@
  
     <meta name="twitter:site" content="@mikeleeco">
 <meta name="twitter:creator" content="@mikeleeco">
-<meta name="twitter:title" content="" />
+<meta name="twitter:title" content="sports" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content=""/>
 <meta name="twitter:description" content=""/> 
     
      
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-58518999-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
     <link href="/tags/sports/index.xml" rel="alternate" type="application/rss+xml" title="Michael Lee" /> 
@@ -133,7 +125,7 @@ ga('send', 'pageview');
 </header>
     <main>
   <header>
-    <h1>Sports</h1>
+    <h1>sports</h1>
   </header>
   
     <div class="column is-full-desktop" itemscope itemtype="http://schema.org/CreativeWork">
@@ -145,8 +137,8 @@ ga('send', 'pageview');
     </h1>
     
     <h2 class="content" itemprop="description">
-        Hot Take Alert 🔥 Jonathan Taylor is on pace to be the greatest running back in Wisconsin football history 🔥
- Over the previous three decades Wisconsin has retained several elite rushers (and offensive lines) to amass several conference championships and Rose Bowl appearances. Even when acknowledging Taylor’s case as a serious Heisman candidate in each of his first two years, proclaiming him the presumptive best running back in Wisconsin football history still feels like a bold proclamation.
+        Hot Take Alert🔥 Jonathan Taylor is on pace to be the greatest running back in Wisconsin football history 🔥
+Over the previous three decades Wisconsin has retained several elite rushers (and offensive lines) to amass several conference championships and Rose Bowl appearances. Even when acknowledging Taylor’s case as a serious Heisman candidate in each of his first two years, proclaiming him the presumptive best running back in Wisconsin football history still feels like a bold proclamation.
         <div class="button is-small">
             <a href="/posts/2019-01-28-wisconsin-rushing-history/" itemprop="url">Read More…</a>
         </div>
@@ -165,7 +157,7 @@ ga('send', 'pageview');
     <h2 class="content" itemprop="description">
         A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at http://mikelee.co/posts/milb-similarity-scores/.
 You can change the y-axis parameters by selecting the performance measure you’d like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.
-   Year   Age   LevEq   G   PA   AB   R   H   X2B   X3B   HR   RBI   SB   CS   BB   SO   BA   OBP   SLG   OPS   Count     2015   23   3   130   548   489   76   138   32   5   24   83   9   4   47   105   0.
+YearAgeLevEqGPAABRHX2BX3BHRRBISBCSBBSOBAOBPSLGOPSCount201523313054848976138325248394471050.
         <div class="button is-small">
             <a href="/posts/2015-03-25-bryant-visualization/" itemprop="url">Read More…</a>
         </div>
@@ -182,7 +174,7 @@ You can change the y-axis parameters by selecting the performance measure you’
     </h1>
     
     <h2 class="content" itemprop="description">
-        There are some people who see baseball players that way-each one is unique, absolutely not interchangeable with another. I don't deny the validity of that approach-but if you take that tack, then you can't turn around and argue that your player should be in the Hall of Fame because his numbers are just as good as this other player's. "Similarity" is a complex concept, and two players who are not statistically similar may be profoundly similar in some other way.
+        Similarity scores were created by Bill James to compare the careers of Hall of Fame eligible players.In In the most basic sense, similarity scores use aggregated performance statistics to compare a player's worth for induction into the Hall of Fame. Projection systems follow from this method: Steamer, PECOTA, Marcel, ZiPS, and others use some combination of a player's recent performance, usually the last 3-4 seasons, to project future performance. Depending on the method, a player's base statistics are then modified using typical aging curves, linear weights, regression, and numerous other factors.
         <div class="button is-small">
             <a href="/posts/2015-03-25-milb-similarity-scores/" itemprop="url">Read More…</a>
         </div>
@@ -199,7 +191,8 @@ You can change the y-axis parameters by selecting the performance measure you’
     </h1>
     
     <h2 class="content" itemprop="description">
-        Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the Lahman Baseball Database, which is the most robust catalog of MLB player statistics available to the public.  One area of relatively limited accessibility to the average fan is statistics for Minor League players.
+        To make our database we're going to use rvest, an R package designed by Hadley Wickham at RStudio [^1]. The package scrapes HTML from webpages and extracts it into readable data. Let's load the necessary packages and go from there:
+#if you haven&#39;t done so already, install rvest from Wickham&#39;s github repository # install.packages(&#34;devtools&#34;) # install_github(&#34;hadley/rvest&#34;) c(&#39;rvest&#39;,&#39;dplyr&#39;) -&gt; packages #installs packages lapply(packages, library, character.only = T)# prep scraper url &lt;- &#34;http://www.
         <div class="button is-small">
             <a href="/posts/2015-02-23-milb-scraper-with-rvest/" itemprop="url">Read More…</a>
         </div>

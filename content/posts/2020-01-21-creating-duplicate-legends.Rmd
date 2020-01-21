@@ -45,8 +45,15 @@ I'll walk through how legends are generated and how we can create a second dupli
 The `midwest` data set from the `ggplot2` package contains demographic information of midwest counties and should work as a representative dummy data set for this post. Here is a quick overview of the `midwest` data set using `glimpse`:
 
 <details open>
-<summary>`Midwest` data set overview</summary>
+<summary>R Libraries, `Midwest` data set overview</summary>
 ```{r}
+# load libraries and fonts
+library(ggplot2)
+library(scales)
+library(dplyr)
+library(grid)
+library(extrafont)
+loadfonts(quiet = TRUE)
 glimpse(midwest)
 ```
 </details>
@@ -60,7 +67,6 @@ I'll subset the data a little bit to accomodate the plot and organize the displa
 # load libraries and fonts
 library(ggplot2)
 library(scales)
-library(dplyr)
 library(grid)
 library(extrafont)
 loadfonts()

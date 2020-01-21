@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <meta name="generator" content="Hugo 0.19" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,21 +24,8 @@
 <meta property="og:description" content="Using ggplot2 and animation packages to reproduce and animate the famous Wall Street Journal Measles Incidence Chart" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2017-06-28-wsj-measles-vaccination-chart/" />
-
-
-
-<meta property="article:published_time" content="2017-06-28T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-06-28T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-06-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-06-28T00:00:00+00:00" />
  
     
 
@@ -53,12 +40,16 @@
     
      
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-58518999-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
     
@@ -155,7 +146,10 @@ ga('send', 'pageview');
 	    
 	</div>
   
-  <div id="mastering-animation-in-r" class="section level2">
+  
+
+
+<div id="mastering-animation-in-r" class="section level2">
 <h2>Mastering Animation in R</h2>
 <p><strong>UPDATE</strong>: In order to reproduce some portions of this code you need the <code>gganimate</code> package using the deprecated API. To access that version, download v0.1.1 <a href="https://github.com/thomasp85/gganimate/releases/tag/v0.1.1">here</a>.</p>
 <p>Recently I’ve been working on creating gif animations for <a href="https://twitter.com/EdNCES/status/859807520881344512">social media</a>:</p>

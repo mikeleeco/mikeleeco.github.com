@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <meta name="generator" content="Hugo 0.19" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,24 +21,11 @@
  
     <meta property="og:title" content="sabr - R package (GitHub)" />
 <meta property="og:description" content="The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:" />
+ Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&#39;s seasonal wOBA performance  Installation: Download the latest development version from github:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/projects/2016-05-28-sabr-R-package/" />
-
-
-
-<meta property="article:published_time" content="2016-04-10T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-04-10T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="/projects/2016-05-28-sabr-r-package/" />
+<meta property="article:published_time" content="2016-04-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-04-10T00:00:00+00:00" />
  
     
 
@@ -53,16 +40,20 @@
     
      
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-58518999-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
     
-    <link rel="canonical" href="/projects/2016-05-28-sabr-R-package/">   <link rel="icon" type="image/png" href="img/avatar-transparent.png">
+    <link rel="canonical" href="/projects/2016-05-28-sabr-r-package/">   <link rel="icon" type="image/png" href="img/avatar-transparent.png">
 
     <link rel="stylesheet" href="/css/bulma.css">
     <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css">
@@ -153,99 +144,59 @@ ga('send', 'pageview');
 	    
 	</div>
   
-  
-
-<p>The <a href="https://github.com/mikeleeco/sabr/">sabr package</a> connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in <a href="http://www.insidethebook.com/woba.shtml">The Book: Playing the Percentages in Baseball</a>, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:</p>
-
+  <p>The <a href="https://github.com/mikeleeco/sabr/">sabr package</a> connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in <a href="http://www.insidethebook.com/woba.shtml">The Book: Playing the Percentages in Baseball</a>, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:</p>
 <ul>
 <li>Retrieves the most up-to-date wOBA measures from 1871-2015</li>
 <li>Queries yearly and career offensive performance from the Lahman SQL database</li>
-<li>Calculates a player&rsquo;s seasonal wOBA performance</li>
+<li>Calculates a player's seasonal wOBA performance</li>
 </ul>
-
 <h2 id="installation">Installation:</h2>
-
 <p>Download the latest development version from github:</p>
-
-<pre><code class="language-r">if (packageVersion(&quot;devtools&quot;) &lt; 1.6) {
-  install.packages(&quot;devtools&quot;)
-}
-devtools::install_github(&quot;mdlee12/sabr&quot;)
-</code></pre>
-
-<h2 id="motivation">Motivation:</h2>
-
-<p>wOBA is one of the best catch-all offensive performance statistics, but it&rsquo;s formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season&rsquo;s run environment.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">if </span><span class="p">(</span><span class="nf">packageVersion</span><span class="p">(</span><span class="s">&#34;</span><span class="s">devtools&#34;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="m">1.6</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;</span><span class="s">devtools&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;</span><span class="s">mdlee12/sabr&#34;</span><span class="p">)</span>
+</code></pre></div><h2 id="motivation">Motivation:</h2>
+<p>wOBA is one of the best catch-all offensive performance statistics, but it's formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season's run environment.</p>
 <p>For example, the wOBA formula for the 2013 season was:</p>
-
-<pre><code class="language-r">wOBA = (0.690 * uBB + 0.722 * HBP + 0.888 * (H - DB - TR - HR) + 1.271 * DB + 1.616 * TR + 2.101 * HR) / (AB + BB - IBB + SF + HBP)
-</code></pre>
-
-<p>Check out <a href="http://www.fangraphs.com/library/offense/woba/">Fangraphs</a>&rsquo; library for additional details.</p>
-
-<h2 id="new-functions-with-0-2">New Functions with 0.2:</h2>
-
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">wOBA</span> <span class="o">=</span> <span class="p">(</span><span class="m">0.690</span> <span class="o">*</span> <span class="n">uBB</span> <span class="o">+</span> <span class="m">0.722</span> <span class="o">*</span> <span class="n">HBP</span> <span class="o">+</span> <span class="m">0.888</span> <span class="o">*</span> <span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="n">DB</span> <span class="o">-</span> <span class="n">TR</span> <span class="o">-</span> <span class="n">HR</span><span class="p">)</span> <span class="o">+</span> <span class="m">1.271</span> <span class="o">*</span> <span class="n">DB</span> <span class="o">+</span> <span class="m">1.616</span> <span class="o">*</span> <span class="n">TR</span> <span class="o">+</span> <span class="m">2.101</span> <span class="o">*</span> <span class="n">HR</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">AB</span> <span class="o">+</span> <span class="n">BB</span> <span class="o">-</span> <span class="n">IBB</span> <span class="o">+</span> <span class="n">SF</span> <span class="o">+</span> <span class="n">HBP</span><span class="p">)</span>
+</code></pre></div><p>Check out <a href="http://www.fangraphs.com/library/offense/woba/">Fangraphs</a>&rsquo; library for additional details.</p>
+<h2 id="new-functions-with-02">New Functions with 0.2:</h2>
 <ul>
-<li>wRAA_season : Returns a MLB player&rsquo;s weighted Runs Above Average by yearID</li>
+<li>wRAA_season : Returns a MLB player's weighted Runs Above Average by yearID</li>
 </ul>
-
-<pre><code class="language-r">library(sabr)
-wRAA_season(&quot;braunry02&quot;,&quot;2015&quot;)
-</code></pre>
-
-<pre><code>## [1] 23.89798
-</code></pre>
-
-<ul>
-<li>wRC_season : Returns a MLB player&rsquo;s weighted Runs Created by yearID</li>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">sabr</span><span class="p">)</span>
+<span class="nf">wRAA_season</span><span class="p">(</span><span class="s">&#34;</span><span class="s">braunry02&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">2015&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>## [1] 23.89798
+</code></pre><ul>
+<li>wRC_season : Returns a MLB player's weighted Runs Created by yearID</li>
 </ul>
-
-<pre><code class="language-r">wRC_season(&quot;molitpa01&quot;,&quot;1991&quot;)
-</code></pre>
-
-<pre><code>## [1] 127.0164
-</code></pre>
-
-<ul>
-<li>wRCp_season : Returns a MLB player&rsquo;s weighted Runs Created Plus by yearID</li>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">wRC_season</span><span class="p">(</span><span class="s">&#34;</span><span class="s">molitpa01&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">1991&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>## [1] 127.0164
+</code></pre><ul>
+<li>wRCp_season : Returns a MLB player's weighted Runs Created Plus by yearID</li>
 </ul>
-
-<pre><code class="language-r">wRCp_season(&quot;yountro01&quot;,&quot;1989&quot;)
-</code></pre>
-
-<pre><code>## [1] 152.5421
-</code></pre>
-
-<p><strong>Full calculation details are in the <a href="https://github.com/mdlee12/sabr/blob/master/vignettes/wOBA%20and%20wRC%2B%20calculation.Rmd">wOBA and wRC+ calculation.Rmd file</a></strong></p>
-
-<p><em>wRCp_season makes a couple assumptions:</em>
-1. Park Factors are pulled from the Lahman Database - these are different from other sources
-2. A player&rsquo;s primary position is used to remove pitchers from the League Runs/Plate Appearance calculation</p>
-
-<hr />
-
-<h2 id="key-functions-from-0-1">Key Functions from 0.1:</h2>
-
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">wRCp_season</span><span class="p">(</span><span class="s">&#34;</span><span class="s">yountro01&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">1989&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>## [1] 152.5421
+</code></pre><p><strong>Full calculation details are in the <a href="https://github.com/mdlee12/sabr/blob/master/vignettes/wOBA%20and%20wRC%2B%20calculation.Rmd">wOBA and wRC+ calculation.Rmd file</a></strong></p>
+<p><em>wRCp_season makes a couple assumptions:</em></p>
+<ol>
+<li>Park Factors are pulled from the Lahman Database - these are different from other sources</li>
+<li>A player's primary position is used to remove pitchers from the League Runs/Plate Appearance calculation</li>
+</ol>
+<hr>
+<h2 id="key-functions-from-01">Key Functions from 0.1:</h2>
 <ul>
 <li>battingseason : Offensive seasonal performance by playerID and yearID</li>
 </ul>
-
-<pre><code class="language-r">battingseason(&quot;parrage01&quot;,&quot;2014&quot;)
-</code></pre>
-
-<pre><code>##    playerID yearID stints  teamID  AB  R   H DB TR HR RBI SB CS BB  SO IBB SF SH GIDP HBP
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">battingseason</span><span class="p">(</span><span class="s">&#34;</span><span class="s">parrage01&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">2014&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##    playerID yearID stints  teamID  AB  R   H DB TR HR RBI SB CS BB  SO IBB SF SH GIDP HBP
 ## 1 parrage01   2014      2 ARI,MIL 529 64 138 22  4  9  40  9  7 32 100   5  2  6   10   5
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>battingcareer : Offensive career performance by playerID by organized by season</li>
 </ul>
-
-<pre><code class="language-r">battingcareer(&quot;fieldpr01&quot;)
-</code></pre>
-
-<pre><code>##     playerID yearID stints teamID  AB   R   H DB TR HR RBI SB CS  BB  SO IBB SF SH GIDP HBP
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">battingcareer</span><span class="p">(</span><span class="s">&#34;</span><span class="s">fieldpr01&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##     playerID yearID stints teamID  AB   R   H DB TR HR RBI SB CS  BB  SO IBB SF SH GIDP HBP
 ## 1  fieldpr01   2005      1    MIL  59   2  17  4  0  2  10  0  0   2  17   0  1  0    0   0
 ## 2  fieldpr01   2006      1    MIL 569  82 154 35  1 28  81  7  2  59 125   5  8  0   17  12
 ## 3  fieldpr01   2007      1    MIL 573 109 165 35  2 50 119  2  2  90 121  21  4  0    9  14
@@ -257,71 +208,41 @@ wRAA_season(&quot;braunry02&quot;,&quot;2015&quot;)
 ## 9  fieldpr01   2013      1    DET 624  82 174 36  0 25 106  1  1  75 117   5  4  0   20   9
 ## 10 fieldpr01   2014      1    TEX 150  19  37  8  0  3  16  0  0  25  24  11  1  0    5   2
 ## 11 fieldpr01   2015      1    TEX 613  78 187 28  0 23  98  0  0  64  88  14  5  0   21  11
-</code></pre>
-
-<ul>
-<li>woba_season : Returns a MLB player&rsquo;s weighted On-Base Average by yearID</li>
+</code></pre><ul>
+<li>woba_season : Returns a MLB player's weighted On-Base Average by yearID</li>
 </ul>
-
-<pre><code class="language-r">woba_season(&quot;fieldpr01&quot;,&quot;2014&quot;)
-</code></pre>
-
-<pre><code>## [1] 0.3049516
-</code></pre>
-
-<ul>
-<li>lahman_search : Returns a player&rsquo;s Lahman playerID using either:
-
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">woba_season</span><span class="p">(</span><span class="s">&#34;</span><span class="s">fieldpr01&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">2014&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>## [1] 0.3049516
+</code></pre><ul>
+<li>lahman_search : Returns a player's Lahman playerID using either:</li>
+</ul>
 <ul>
 <li>nameFirst (Player First Name)</li>
 <li>nameLast (Player Last Name)</li>
 <li>nameGiven (Player Given Name)</li>
 <li>retroID (<a href="http://www.retrosheet.org/retroID.htm">Retrosheet</a> ID)</li>
 <li>bbrefID (<a href="http://www.baseball-reference.com/players/">Baseball Reference</a> ID)</li>
-</ul></li>
 </ul>
-
-<pre><code class="language-r">lahman_search(nameFirst = &quot;Robin&quot;)
-</code></pre>
-
-<pre><code>##    playerID nameFirst nameLast         nameGiven  retroID   bbrefID
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">lahman_search</span><span class="p">(</span><span class="n">nameFirst</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Robin&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##    playerID nameFirst nameLast         nameGiven  retroID   bbrefID
 ## 1 jenniro01     Robin Jennings Robin Christopher jennr001 jenniro01
 ## 2 roberro01     Robin  Roberts        Robin Evan rober102 roberro01
 ## 3 venturo01     Robin  Ventura        Robin Mark ventr001 venturo01
 ## 4 yountro01     Robin    Yount          Robin R. younr001 yountro01
-</code></pre>
-
-<pre><code class="language-r">lahman_search(nameLast = &quot;Fielder&quot;)
-</code></pre>
-
-<pre><code>##    playerID nameFirst nameLast     nameGiven  retroID   bbrefID
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">lahman_search</span><span class="p">(</span><span class="n">nameLast</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Fielder&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##    playerID nameFirst nameLast     nameGiven  retroID   bbrefID
 ## 1 fieldce01     Cecil  Fielder   Cecil Grant fielc001 fieldce01
 ## 2 fieldpr01    Prince  Fielder Prince Semien fielp001 fieldpr01
-</code></pre>
-
-<pre><code class="language-r">lahman_search(nameGiven = &quot;Russell Oles&quot;)
-</code></pre>
-
-<pre><code>##    playerID nameFirst nameLast    nameGiven  retroID   bbrefID
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">lahman_search</span><span class="p">(</span><span class="n">nameGiven</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Russell Oles&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##    playerID nameFirst nameLast    nameGiven  retroID   bbrefID
 ## 1 branyru01   Russell  Branyan Russell Oles branr001 branyru01
-</code></pre>
-
-<pre><code class="language-r">lahman_search(retroID = &quot;molip001&quot;)
-</code></pre>
-
-<pre><code>##    playerID nameFirst nameLast nameGiven  retroID   bbrefID
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">lahman_search</span><span class="p">(</span><span class="n">retroID</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">molip001&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##    playerID nameFirst nameLast nameGiven  retroID   bbrefID
 ## 1 molitpa01      Paul  Molitor  Paul Leo molip001 molitpa01
-</code></pre>
-
-<pre><code class="language-r">lahman_search(bbrefID = &quot;yostne01&quot;)
-</code></pre>
-
-<pre><code>##   playerID nameFirst nameLast       nameGiven  retroID  bbrefID
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">lahman_search</span><span class="p">(</span><span class="n">bbrefID</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">yostne01&#34;</span><span class="p">)</span>
+</code></pre></div><pre><code>##   playerID nameFirst nameLast       nameGiven  retroID  bbrefID
 ## 1 yostne01       Ned     Yost Edgar Frederick yoste001 yostne01
-</code></pre>
-
-<hr />
-
+</code></pre><hr>
 <p>Have a question, issue or suggestion? Create a pull request, file an issue, or feel free to contact me on <a href="https://twitter.com/mikeleeco">Twitter</a></p>
 
 

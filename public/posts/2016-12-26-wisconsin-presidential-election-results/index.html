@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <meta name="generator" content="Hugo 0.19" />
+    <meta name="generator" content="Hugo 0.62.2" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,25 +20,12 @@
 
  
     <meta property="og:title" content="Mapping Wisconsin Presidential Election Results" />
-<meta property="og:description" content="&ldquo;Your home state did us no favors&hellip;&rdquo; As a Wisconsinite transplanted into the highest density of left-leaning voters in the country (District of Columbia) I&rsquo;ve heard from several friends over the weeks in the aftermath of the US presidential election that voters in my home state should shoulder responsibility for contributing to Donald Trump winning an electoral majority.
-The &ldquo;winner-take-all&rdquo; basis in which electoral votes are allocated means the margin of victory in each state is null - extra votes don&rsquo;t matter - which contributes to an outcome in which a winning candidate can have fewer total votes than another nominee." />
+<meta property="og:description" content="&ldquo;Your home state did us no favors&hellip;&quot; As a Wisconsinite transplanted into the highest density of left-leaning voters in the country (District of Columbia) I&#39;ve heard from several friends over the weeks in the aftermath of the US presidential election that voters in my home state should shoulder responsibility for contributing to Donald Trump winning an electoral majority.
+The &ldquo;winner-take-all&rdquo; basis in which electoral votes are allocated means the margin of victory in each state is null - extra votes don&#39;t matter - which contributes to an outcome in which a winning candidate can have fewer total votes than another nominee." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2016-12-26-wisconsin-presidential-election-results/" />
-
-
-
-<meta property="article:published_time" content="2017-01-05T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-01-05T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-01-05T00:00:00+00:00" />
  
     
 
@@ -53,12 +40,16 @@ The &ldquo;winner-take-all&rdquo; basis in which electoral votes are allocated m
     
      
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-58518999-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
  
     
     
@@ -153,67 +144,49 @@ ga('send', 'pageview');
 	    
 	</div>
   
-  
-
-<h4 id="your-home-state-did-us-no-favors"><em>&ldquo;Your home state did us no favors&hellip;&rdquo;</em></h4>
-
-<p>As a Wisconsinite transplanted into the highest density of left-leaning voters in the country (District of Columbia) I&rsquo;ve heard from several friends over the weeks in the aftermath of the US presidential election that voters in my home state should shoulder responsibility for contributing to Donald Trump winning an electoral majority.</p>
-
-<p>The &ldquo;winner-take-all&rdquo; basis in which electoral votes are allocated means the margin of victory in each state is null - extra votes don&rsquo;t matter - which contributes to an outcome in which a winning candidate can have fewer total votes than another nominee.</p>
-
+  <h4 id="your-home-state-did-us-no-favors"><em>&ldquo;Your home state did us no favors&hellip;&quot;</em></h4>
+<p>As a Wisconsinite transplanted into the highest density of left-leaning voters in the country (District of Columbia) I've heard from several friends over the weeks in the aftermath of the US presidential election that voters in my home state should shoulder responsibility for contributing to Donald Trump winning an electoral majority.</p>
+<p>The &ldquo;winner-take-all&rdquo; basis in which electoral votes are allocated means the margin of victory in each state is null - extra votes don't matter - which contributes to an outcome in which a winning candidate can have fewer total votes than another nominee.</p>
 <h4 id="big-idea">Big Idea</h4>
-
-<p>The urban/rural divide has been a popular explanation for Donald Trump&rsquo;s electoral victory in the 2016 presidential election. Does this theory explain why Trump won Wisconsin and Clinton won Minnesota?</p>
-
-<p>This post seeks to explore this idea. First, a bit of background. These two Midwestern neighbors have striking <a href="http://www.indexmundi.com/facts/united-states/quick-facts/compare/wisconsin.minnesota">population, demographic, and social indicator similarities</a>. Recent gubernatorial and congressional elections in both states have resulted in major party shifts. The policies of Wisconsin&rsquo;s Republican governor Scott Walker and Minnesota&rsquo;s Democratic governor Mark Dayton and their impact on state success has inspired <a href="https://www.google.com/#q=wisconsin+and+minnesota+government">several comparisons and juxtaposed analyses</a>. While each state has elected Republican or Independent candidates as governors in the last few decades, the Democratic nominee has won each state in 7 straight presidential elections from 1988 to 2012.</p>
-
-<p>Let&rsquo;s try to unpack the voting results in each state in 2016.</p>
-
+<p>The urban/rural divide has been a popular explanation for Donald Trump's electoral victory in the 2016 presidential election. Does this theory explain why Trump won Wisconsin and Clinton won Minnesota?</p>
+<p>This post seeks to explore this idea. First, a bit of background. These two Midwestern neighbors have striking <a href="http://www.indexmundi.com/facts/united-states/quick-facts/compare/wisconsin.minnesota">population, demographic, and social indicator similarities</a>. Recent gubernatorial and congressional elections in both states have resulted in major party shifts. The policies of Wisconsin's Republican governor Scott Walker and Minnesota's Democratic governor Mark Dayton and their impact on state success has inspired <a href="https://www.google.com/#q=wisconsin+and+minnesota+government">several comparisons and juxtaposed analyses</a>. While each state has elected Republican or Independent candidates as governors in the last few decades, the Democratic nominee has won each state in 7 straight presidential elections from 1988 to 2012.</p>
+<p>Let's try to unpack the voting results in each state in 2016.</p>
 <h4 id="wisconsin-voting-results">Wisconsin Voting Results</h4>
+<p>I started this analysis using Julia Silge's <a href="http://juliasilge.com/blog/Election-Mapping/">Utah Election Mapping</a> script, then supplemented these analyses with urban and rural county population numbers from the 2010 Census. First, I loaded the R package libraries. Next, I read in the county level 2016 presidential election results and 2010 census data:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">choroplethr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">choroplethrMaps</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggthemes</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">gridExtra</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">extrafont</span><span class="p">)</span>
+<span class="n">extrafont</span><span class="o">::</span><span class="nf">loadfonts</span><span class="p">(</span><span class="n">quiet</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 
-<p>I started this analysis using Julia Silge&rsquo;s <a href="http://juliasilge.com/blog/Election-Mapping/">Utah Election Mapping</a> script, then supplemented these analyses with urban and rural county population numbers from the 2010 Census. First, I loaded the R package libraries. Next, I read in the county level 2016 presidential election results and 2010 census data:</p>
+<span class="n">all_results</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&#34;</span><span class="s">https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&#34;</span><span class="p">)</span>
 
-<pre><code class="language-r">library(readr)
-library(choroplethr)
-library(choroplethrMaps)
-library(ggplot2)
-library(ggthemes)
-library(RColorBrewer)
-library(gridExtra)
-library(dplyr)
-library(stringr)
-library(tidyr)
-library(extrafont)
-extrafont::loadfonts(quiet = TRUE)
+<span class="n">urban</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#34;</span><span class="s">http://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.txt&#34;</span><span class="p">,</span>
+                  <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#34;</span><span class="s">,&#34;</span><span class="p">,</span> <span class="n">colClasses</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">character&#34;</span><span class="p">)</span>
+<span class="n">urban</span><span class="o">$</span><span class="n">fips</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">urban</span><span class="o">$</span><span class="n">STATE</span><span class="p">,</span><span class="n">urban</span><span class="o">$</span><span class="n">COUNTY</span><span class="p">)</span>
+<span class="n">urban</span> <span class="o">&lt;-</span> <span class="n">urban</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="n">POP_COU</span><span class="p">,</span> <span class="n">POPPCT_URBAN</span><span class="p">,</span> <span class="n">fips</span><span class="p">)</span>
+<span class="n">urban</span><span class="n">[</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">urban</span><span class="n">[</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="n">]</span><span class="p">,</span> <span class="n">as.numeric</span><span class="p">)</span>
+<span class="n">all_results</span> <span class="o">&lt;-</span> <span class="nf">left_join</span><span class="p">(</span><span class="n">all_results</span><span class="p">,</span><span class="n">urban</span><span class="p">)</span>
+</code></pre></div><p>Once the data is read and joined together through the <code>fips</code> code in each data set, we can subset <code>all_results</code> to determine the percent of votes allocated for the two major party candidates, as well as the two most popular candidates from alternative parties:</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">wisconsin</span> <span class="o">&lt;-</span> <span class="n">all_results</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">^55&#34;</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">wisconsin_spread</span> <span class="o">&lt;-</span> <span class="n">wisconsin</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="n">cand</span><span class="p">,</span> <span class="n">pct</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">pct</span> <span class="o">=</span> <span class="n">pct</span> <span class="o">*</span> <span class="m">100</span><span class="p">,</span>
+         <span class="n">region</span> <span class="o">=</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">fips</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">spread</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">pct</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">fips</span><span class="p">)</span>
 
-all_results &lt;- read_csv(&quot;https://raw.githubusercontent.com/mkearney/presidential_election_county_results_2016/master/pres16results.csv&quot;)
-
-urban &lt;- read.table(&quot;http://www2.census.gov/geo/docs/reference/ua/PctUrbanRural_County.txt&quot;,
-                  header=TRUE,sep=&quot;,&quot;, colClasses = &quot;character&quot;)
-urban$fips &lt;- paste0(urban$STATE,urban$COUNTY)
-urban &lt;- urban %&gt;% select(POP_COU, POPPCT_URBAN, fips)
-urban[,1:2] &lt;- sapply(urban[,1:2], as.numeric)
-all_results &lt;- left_join(all_results,urban)
-</code></pre>
-
-<p>Once the data is read and joined together through the <code>fips</code> code in each data set, we can subset <code>all_results</code> to determine the percent of votes allocated for the two major party candidates, as well as the two most popular candidates from alternative parties:</p>
-
-<pre><code class="language-r">wisconsin &lt;- all_results %&gt;% 
-  filter(str_detect(fips, &quot;^55&quot;))
-</code></pre>
-
-<pre><code class="language-r">wisconsin_spread &lt;- wisconsin %&gt;% 
-  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;, &quot;Jill Stein&quot;)) %&gt;%
-  select(fips, cand, pct) %&gt;% 
-  mutate(pct = pct * 100,
-         region = as.numeric(fips)) %&gt;%
-  spread(cand, pct) %&gt;%
-  select(-fips)
-
-wisconsin_spread
-</code></pre>
-
-<pre><code>## # A tibble: 72 × 5
+<span class="n">wisconsin_spread</span>
+</code></pre></div><pre><code>## # A tibble: 72 × 5
 ##    region `Donald Trump` `Gary Johnson` `Hillary Clinton` `Jill Stein`
 ## *   &lt;dbl&gt;          &lt;dbl&gt;          &lt;dbl&gt;             &lt;dbl&gt;        &lt;dbl&gt;
 ## 1   55001       59.19660       2.048085          37.39982    0.7915306
@@ -227,210 +200,179 @@ wisconsin_spread
 ## 9   55017       56.91589       3.835277          37.73315    0.8388675
 ## 10  55019       63.81016       3.291999          31.18541    0.7897845
 ## # ... with 62 more rows
-</code></pre>
+</code></pre><p>Now that our data has been reshaped, we can further subset by candidate to create county-level voting maps, using Ari Lamstein's <a href="https://cran.r-project.org/web/packages/choroplethr/index.html">choroplethr</a> package.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">`Donald Trump`</span>
+<span class="n">choro1</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">wisconsin_spread</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Donald Trump&#34;</span>
+<span class="n">choro1</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Reds&#34;</span><span class="p">)</span><span class="p">)</span>
 
-<p>Now that our data has been reshaped, we can further subset by candidate to create county-level voting maps, using Ari Lamstein&rsquo;s <a href="https://cran.r-project.org/web/packages/choroplethr/index.html">choroplethr</a> package.</p>
+<span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">`Hillary Clinton`</span>
+<span class="n">choro2</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">wisconsin_spread</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span>
+<span class="n">choro2</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Blues&#34;</span><span class="p">)</span><span class="p">)</span>
 
-<pre><code class="language-r">wisconsin_spread$value &lt;- wisconsin_spread$`Donald Trump`
-choro1 = CountyChoropleth$new(wisconsin_spread)
-choro1$set_zoom(&quot;wisconsin&quot;)
-choro1$title = &quot;Donald Trump&quot;
-choro1$set_num_colors(1)
-choro1$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro1$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Reds&quot;))
+<span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">`Gary Johnson`</span>
+<span class="n">choro3</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">wisconsin_spread</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span>
+<span class="n">choro3</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Purples&#34;</span><span class="p">)</span><span class="p">)</span>
 
-wisconsin_spread$value &lt;- wisconsin_spread$`Hillary Clinton`
-choro2 = CountyChoropleth$new(wisconsin_spread)
-choro2$set_zoom(&quot;wisconsin&quot;)
-choro2$title = &quot;Hillary Clinton&quot;
-choro2$set_num_colors(1)
-choro2$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro2$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Blues&quot;))
+<span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">wisconsin_spread</span><span class="o">$</span><span class="n">`Jill Stein`</span>
+<span class="n">choro4</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">wisconsin_spread</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span>
+<span class="n">choro4</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Greens&#34;</span><span class="p">)</span><span class="p">)</span>
 
-wisconsin_spread$value &lt;- wisconsin_spread$`Gary Johnson`
-choro3 = CountyChoropleth$new(wisconsin_spread)
-choro3$set_zoom(&quot;wisconsin&quot;)
-choro3$title = &quot;Gary Johnson&quot;
-choro3$set_num_colors(1)
-choro3$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro3$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Purples&quot;))
+<span class="nf">grid.arrange</span><span class="p">(</span><span class="n">choro1</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro2</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro3</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro4</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>A bar graph more accurately displays the results by candidate. Wisconsin's 10 electoral votes were decided by only 27257 votes! That is a really small margin.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">votes</span> <span class="o">&lt;-</span> <span class="n">wisconsin</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">cand</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">cand</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">sum</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span><span class="p">)</span>
 
-wisconsin_spread$value &lt;- wisconsin_spread$`Jill Stein`
-choro4 = CountyChoropleth$new(wisconsin_spread)
-choro4$set_zoom(&quot;wisconsin&quot;)
-choro4$title = &quot;Jill Stein&quot;
-choro4$set_num_colors(1)
-choro4$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro4$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Greens&quot;))
-
-grid.arrange(choro1$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro2$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro3$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro4$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), ncol = 2, nrow =2)
-</code></pre>
-
-<div><img src="/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results by County-1.png" title="plot of chunk Wisconsin Presidential Election Results by County" alt="plot of chunk Wisconsin Presidential Election Results by County"  style="display: block; margin: auto;" /></div>
-
-<p>A bar graph more accurately displays the results by candidate. Wisconsin&rsquo;s 10 electoral votes were decided by only 27257 votes! That is a really small margin.</p>
-
-<pre><code class="language-r">votes &lt;- wisconsin %&gt;%
-  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;,&quot;Jill Stein&quot;)) %&gt;%
-  mutate(cand = factor(cand, levels = c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;,&quot;Jill Stein&quot;))) %&gt;%
-  group_by(cand) %&gt;%
-  summarise(sum = sum(votes))
-
-ggplot(votes, aes(cand, sum, fill = cand)) +
-  geom_bar(stat = &quot;identity&quot;, alpha = 0.8) +
-  theme_tufte(base_family = &quot;DejaVu Sans Mono&quot;) +
-  scale_fill_manual(values = c(&quot;red3&quot;, &quot;navyblue&quot;, &quot;#6A51A3&quot;,&quot;darkgreen&quot;)) +
-  theme(legend.position=&quot;none&quot;) +
-  labs(title = &quot;Total Votes Cast in Wisconsin&quot;, y = &quot;Number of votes&quot;, x = NULL)
-</code></pre>
-
-<div><img src="/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin Presidential Election Results Bar Chart-1.png" title="plot of chunk Wisconsin Presidential Election Results Bar Chart" alt="plot of chunk Wisconsin Presidential Election Results Bar Chart"  style="display: block; margin: auto;" /></div>
-
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">votes</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">sum</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">cand</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">identity&#34;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme_tufte</span><span class="p">(</span><span class="n">base_family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">red3&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">navyblue&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">#6A51A3&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">darkgreen&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&#34;</span><span class="s">none&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Total Votes Cast in Wisconsin&#34;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Number of votes&#34;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span>
+</code></pre></div><!-- raw HTML omitted -->
 <h4 id="wisconsin-and-minnesota-voting-results">Wisconsin and Minnesota Voting Results</h4>
-
 <p>To get a better sense of how the results compare, lets perform the same analyses using both Wisconsin and Minnesota data.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">minnesotawisconsin</span> <span class="o">&lt;-</span> <span class="n">all_results</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">^55&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">|</span> <span class="nf">str_detect</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">^27&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">minnesotawisconsin_spread</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="n">cand</span><span class="p">,</span> <span class="n">pct</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">pct</span> <span class="o">=</span> <span class="n">pct</span> <span class="o">*</span> <span class="m">100</span><span class="p">,</span>
+         <span class="n">region</span> <span class="o">=</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">fips</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">spread</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">pct</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">fips</span><span class="p">)</span>
 
-<pre><code class="language-r">minnesotawisconsin &lt;- all_results %&gt;% 
-  filter(str_detect(fips, c(&quot;^55&quot;)) | str_detect(fips, c(&quot;^27&quot;)))
-</code></pre>
+<span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">`Donald Trump`</span>
+<span class="n">choro1</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">minnesotawisconsin_spread</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">minnesota&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Donald Trump&#34;</span>
+<span class="n">choro1</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro1</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Reds&#34;</span><span class="p">)</span><span class="p">)</span>
 
-<pre><code class="language-r">minnesotawisconsin_spread &lt;- minnesotawisconsin %&gt;% 
-  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;, &quot;Jill Stein&quot;)) %&gt;%
-  select(fips, cand, pct) %&gt;% 
-  mutate(pct = pct * 100,
-         region = as.numeric(fips)) %&gt;%
-  spread(cand, pct) %&gt;%
-  select(-fips)
+<span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">`Hillary Clinton`</span>
+<span class="n">choro2</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">minnesotawisconsin_spread</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">minnesota&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span>
+<span class="n">choro2</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro2</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Blues&#34;</span><span class="p">)</span><span class="p">)</span>
 
-minnesotawisconsin_spread$value &lt;- minnesotawisconsin_spread$`Donald Trump`
-choro1 = CountyChoropleth$new(minnesotawisconsin_spread)
-choro1$set_zoom(c(&quot;minnesota&quot;,&quot;wisconsin&quot;))
-choro1$title = &quot;Donald Trump&quot;
-choro1$set_num_colors(1)
-choro1$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro1$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Reds&quot;))
+<span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">`Gary Johnson`</span>
+<span class="n">choro3</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">minnesotawisconsin_spread</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">minnesota&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span>
+<span class="n">choro3</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro3</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Purples&#34;</span><span class="p">)</span><span class="p">)</span>
 
-minnesotawisconsin_spread$value &lt;- minnesotawisconsin_spread$`Hillary Clinton`
-choro2 = CountyChoropleth$new(minnesotawisconsin_spread)
-choro2$set_zoom(c(&quot;minnesota&quot;,&quot;wisconsin&quot;))
-choro2$title = &quot;Hillary Clinton&quot;
-choro2$set_num_colors(1)
-choro2$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro2$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Blues&quot;))
+<span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">value</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin_spread</span><span class="o">$</span><span class="n">`Jill Stein`</span>
+<span class="n">choro4</span> <span class="o">=</span> <span class="n">CountyChoropleth</span><span class="o">$</span><span class="nf">new</span><span class="p">(</span><span class="n">minnesotawisconsin_spread</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="nf">set_zoom</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">minnesota&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">wisconsin&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span>
+<span class="n">choro4</span><span class="o">$</span><span class="nf">set_num_colors</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">ggplot_polygon</span> <span class="o">=</span> <span class="nf">geom_polygon</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
+<span class="n">choro4</span><span class="o">$</span><span class="n">ggplot_scale</span> <span class="o">=</span> <span class="nf">scale_fill_gradientn</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percent&#34;</span><span class="p">,</span> 
+                                           <span class="n">colours</span> <span class="o">=</span> <span class="nf">brewer.pal</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Greens&#34;</span><span class="p">)</span><span class="p">)</span>
 
-minnesotawisconsin_spread$value &lt;- minnesotawisconsin_spread$`Gary Johnson`
-choro3 = CountyChoropleth$new(minnesotawisconsin_spread)
-choro3$set_zoom(c(&quot;minnesota&quot;,&quot;wisconsin&quot;))
-choro3$title = &quot;Gary Johnson&quot;
-choro3$set_num_colors(1)
-choro3$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro3$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Purples&quot;))
-
-minnesotawisconsin_spread$value &lt;- minnesotawisconsin_spread$`Jill Stein`
-choro4 = CountyChoropleth$new(minnesotawisconsin_spread)
-choro4$set_zoom(c(&quot;minnesota&quot;,&quot;wisconsin&quot;))
-choro4$title = &quot;Jill Stein&quot;
-choro4$set_num_colors(1)
-choro4$ggplot_polygon = geom_polygon(aes(fill = value), color = NA)
-choro4$ggplot_scale = scale_fill_gradientn(name = &quot;Percent&quot;, 
-                                           colours = brewer.pal(8, &quot;Greens&quot;))
-
-grid.arrange(choro1$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro2$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro3$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), 
-             choro4$render() + theme(text=element_text(family=&quot;DejaVu Sans Mono&quot;)), ncol = 2, nrow =2)
-</code></pre>
-
-<div><img src="/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Wisconsin and Minnesota Presidential Election Results by County-1.png" title="plot of chunk Wisconsin and Minnesota Presidential Election Results by County" alt="plot of chunk Wisconsin and Minnesota Presidential Election Results by County"  style="display: block; margin: auto;" /></div>
-
-<p>Mapping the allocation of votes by county shows Wisconsin and Minnesota have very similar county-level maps. Each has strong results favoring Clinton in major metropolitan areas, including Milwaukee, Madison, and Minneapolis/St Paul. Based solely on each state&rsquo;s map, I&rsquo;d posit that Minnesota seems the more likely Trump-majority. This perspective is deceiving though, as the distribution of votes by county is skewed. Each map displays the percent of votes for each candidate by county, neglecting the county&rsquo;s total votes. More than 78 percent of Menominee County, WI voters selected Hilary Clinton, resulting in Northeastern Wisconsin&rsquo;s dark blue polygon, but totaled only 1279 votes.</p>
-
+<span class="nf">grid.arrange</span><span class="p">(</span><span class="n">choro1</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro2</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro3</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> 
+             <span class="n">choro4</span><span class="o">$</span><span class="nf">render</span><span class="p">(</span><span class="p">)</span> <span class="o">+</span> <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</code></pre></div><!-- raw HTML omitted -->
+<p>Mapping the allocation of votes by county shows Wisconsin and Minnesota have very similar county-level maps. Each has strong results favoring Clinton in major metropolitan areas, including Milwaukee, Madison, and Minneapolis/St Paul. Based solely on each state's map, I'd posit that Minnesota seems the more likely Trump-majority. This perspective is deceiving though, as the distribution of votes by county is skewed. Each map displays the percent of votes for each candidate by county, neglecting the county's total votes. More than 78 percent of Menominee County, WI voters selected Hilary Clinton, resulting in Northeastern Wisconsin's dark blue polygon, but totaled only 1279 votes.</p>
 <p>Lets break this down further by exploring the allocation of votes by county.</p>
-
 <h3 id="vote-distributions-by-county">Vote Distributions by County</h3>
-
 <p>Focusing on the two major candidates, the two states also have similar vote distributions. Each of these figures displays the percentage of votes for Donald Trump (red) and Hilary Clinton (blue), with each bubble sized by percentage of total state vote, organized by the percentage of votes for Donald Trump.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">minnesota</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">minnesotawisconsin</span><span class="p">,</span> <span class="n">st</span><span class="o">==</span><span class="s">&#34;</span><span class="s">MN&#34;</span><span class="p">)</span>
+<span class="n">minnesota</span><span class="o">$</span><span class="n">votePct</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">minnesota</span><span class="o">$</span><span class="n">votes</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">minnesota</span><span class="o">$</span><span class="n">votes</span><span class="p">)</span><span class="p">)</span> <span class="o">*</span> <span class="m">100</span>
+<span class="n">minnesota</span> <span class="o">&lt;-</span> <span class="n">minnesota</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span><span class="p">)</span>
+<span class="n">vals</span> <span class="o">=</span> <span class="n">minnesota</span><span class="n">[</span> <span class="n">minnesota</span><span class="o">$</span><span class="n">cand</span> <span class="o">==</span> <span class="s">&#39;</span><span class="s">Donald Trump&#39;</span><span class="p">,</span> <span class="n">]</span>
+<span class="n">minnesota</span><span class="o">$</span><span class="n">county</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">minnesota</span><span class="o">$</span><span class="n">county</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">rev</span><span class="p">(</span><span class="n">vals</span><span class="o">$</span><span class="n">county</span><span class="p">)</span><span class="p">)</span>
+<span class="n">minnesotaSubset</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">minnesota</span><span class="p">,</span> <span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">mnScatter</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">minnesotaSubset</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">county</span><span class="p">,</span> <span class="n">votePct</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">cand</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="n">votes</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">15</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme_tufte</span><span class="p">(</span><span class="n">base_family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">red3&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">navyblue&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">guide</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Percentage of Total Votes Cast for Clinton and Trump By County&#34;</span><span class="p">,</span>
+       <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Minnesota&#34;</span><span class="p">,</span>
+       <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Total Vote Percentage&#34;</span><span class="p">,</span>
+       <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">axis.ticks.x</span><span class="o">=</span><span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">legend.title</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">plot.title</span> <span class="o">=</span>  <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">16</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">plot.subtitle</span> <span class="o">=</span>  <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">13</span><span class="p">)</span><span class="p">)</span>
 
-<pre><code class="language-r">minnesota &lt;- subset(minnesotawisconsin, st==&quot;MN&quot;)
-minnesota$votePct &lt;- (minnesota$votes/sum(minnesota$votes)) * 100
-minnesota &lt;- minnesota %&gt;% arrange(desc(votes))
-vals = minnesota[ minnesota$cand == 'Donald Trump', ]
-minnesota$county &lt;- factor(minnesota$county, levels = rev(vals$county))
-minnesotaSubset &lt;- subset(minnesota, cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;))
-mnScatter &lt;- ggplot(minnesotaSubset, aes(county, votePct,color = cand)) +
-  geom_point(aes(size = votes)) +
-  scale_y_continuous(limits=c(0,15)) +
-  theme_tufte(base_family = &quot;DejaVu Sans Mono&quot;) +
-  scale_color_manual(values = c(&quot;red3&quot;, &quot;navyblue&quot;)) +
-  scale_size_continuous(guide = FALSE) +
-  labs(title = &quot;Percentage of Total Votes Cast for Clinton and Trump By County&quot;,
-       subtitle = &quot;Minnesota&quot;,
-       y = &quot;Total Vote Percentage&quot;,
-       x = NULL) +
-  theme(axis.text.x=element_blank(),
-        axis.ticks.x=element_blank(),
-        legend.title = element_blank(),
-        plot.title =  element_text(size = 16),
-        plot.subtitle =  element_text(size = 13))
+<span class="n">wisconsin</span><span class="o">$</span><span class="n">votePct</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">wisconsin</span><span class="o">$</span><span class="n">votes</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">wisconsin</span><span class="o">$</span><span class="n">votes</span><span class="p">)</span><span class="p">)</span> <span class="o">*</span> <span class="m">100</span>
+<span class="n">wisconsin</span> <span class="o">&lt;-</span> <span class="n">wisconsin</span> <span class="o">%&gt;%</span> <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span><span class="p">)</span>
+<span class="n">vals</span> <span class="o">=</span> <span class="n">wisconsin</span><span class="n">[</span> <span class="n">wisconsin</span><span class="o">$</span><span class="n">cand</span> <span class="o">==</span> <span class="s">&#39;</span><span class="s">Donald Trump&#39;</span><span class="p">,</span> <span class="n">]</span>
+<span class="n">wisconsin</span><span class="o">$</span><span class="n">county</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">wisconsin</span><span class="o">$</span><span class="n">county</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">rev</span><span class="p">(</span><span class="n">vals</span><span class="o">$</span><span class="n">county</span><span class="p">)</span><span class="p">)</span>
+<span class="n">wisconsinSubset</span> <span class="o">&lt;-</span> <span class="nf">subset</span><span class="p">(</span><span class="n">wisconsin</span><span class="p">,</span> <span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="n">wiScatter</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">wisconsinSubset</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">county</span><span class="p">,</span> <span class="n">votePct</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">cand</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="n">votes</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">15</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme_tufte</span><span class="p">(</span><span class="n">base_family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">red3&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">navyblue&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_size_continuous</span><span class="p">(</span><span class="n">guide</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">subtitle</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Wisconsin&#34;</span><span class="p">,</span>
+       <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Total Vote Percentage&#34;</span><span class="p">,</span>
+       <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">County (ordered by Total Vote Percentage\n for Donald Trump (smallest to largest))&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="o">=</span><span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">axis.ticks.x</span><span class="o">=</span><span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">legend.title</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">20</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">plot.subtitle</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">13</span><span class="p">)</span><span class="p">)</span>
 
-wisconsin$votePct &lt;- (wisconsin$votes/sum(wisconsin$votes)) * 100
-wisconsin &lt;- wisconsin %&gt;% arrange(desc(votes))
-vals = wisconsin[ wisconsin$cand == 'Donald Trump', ]
-wisconsin$county &lt;- factor(wisconsin$county, levels = rev(vals$county))
-wisconsinSubset &lt;- subset(wisconsin, cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;))
-wiScatter &lt;- ggplot(wisconsinSubset, aes(county, votePct,color = cand)) +
-  geom_point(aes(size = votes)) +
-  scale_y_continuous(limits=c(0,15)) +
-  theme_tufte(base_family = &quot;DejaVu Sans Mono&quot;) +
-  scale_color_manual(values = c(&quot;red3&quot;, &quot;navyblue&quot;)) +
-  scale_size_continuous(guide = FALSE) +
-  labs(subtitle = &quot;Wisconsin&quot;,
-       y = &quot;Total Vote Percentage&quot;,
-       x = &quot;County (ordered by Total Vote Percentage\n for Donald Trump (smallest to largest))&quot;) +
-  theme(axis.text.x=element_blank(),
-        axis.ticks.x=element_blank(),
-        legend.title = element_blank(),
-        plot.title = element_text(size = 20),
-        plot.subtitle = element_text(size = 13))
-
-grid.arrange(mnScatter,wiScatter,ncol=1)
-</code></pre>
-
-<div><img src="/img/figure/source/2016-12-26-wisconsin-presidential-election-results/scatter plotting-1.png" title="plot of chunk scatter plotting" alt="plot of chunk scatter plotting"  style="display: block; margin: auto;" /></div>
-
+<span class="nf">grid.arrange</span><span class="p">(</span><span class="n">mnScatter</span><span class="p">,</span><span class="n">wiScatter</span><span class="p">,</span><span class="n">ncol</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</code></pre></div><!-- raw HTML omitted -->
 <p>Two things of note from these figures:</p>
-
 <ul>
-<li>The county with Minnesota&rsquo;s most votes significantly backed Clinton over Trump (14.7% and 6.6% of the total votes cast in the state respectively). Meanwhile, the top-voting Wisconsin&rsquo;s county also garnered significant support for Clinton over Trump, but contributed only 9.8% and 4.3% of the total votes cast in the state respectively.</li>
-<li>Trump earned more votes than Clinton in 7 of Wisconsin&rsquo;s 10 largest counties, including Waukesha - the third largest (4.9% and 2.7% of the total votes cast in the state respectively). Only 4 out of the top 10 most populous counties in Minnesota favored Trump.
-<br /></li>
+<li>The county with Minnesota's most votes significantly backed Clinton over Trump (14.7% and 6.6% of the total votes cast in the state respectively). Meanwhile, the top-voting Wisconsin's county also garnered significant support for Clinton over Trump, but contributed only 9.8% and 4.3% of the total votes cast in the state respectively.</li>
+<li>Trump earned more votes than Clinton in 7 of Wisconsin's 10 largest counties, including Waukesha - the third largest (4.9% and 2.7% of the total votes cast in the state respectively). Only 4 out of the top 10 most populous counties in Minnesota favored Trump.</li>
 </ul>
+<p>The above figure seems to imply that the counties with larger populations in each state had a significant impact on each state's victor; while most Wisconsin counties favored Trump, most Minnesota counties favored Clinton. Perhaps different levels of urban density might result in a better explanation?</p>
+<p>The 2010 Census <a href="https://www.whitehouse.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf">breaks up metropolitan areas</a> into segments: small, medium, and large. An area must have a population of at least 50,000 to be considered an urbanized metropolitan area, and is further separated if it's population is greater than 250,000. For this analysis, small metropolitan areas consist of those ranging in population from 50,000 to 250,000, while populations greater than 250,000 are combined into one category.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">minnesotawisconsin</span> <span class="o">&lt;-</span> <span class="n">all_results</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="nf">str_detect</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">^55&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">|</span> <span class="nf">str_detect</span><span class="p">(</span><span class="n">fips</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">^27&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
 
-<p>The above figure seems to imply that the counties with larger populations in each state had a significant impact on each state&rsquo;s victor; while most Wisconsin counties favored Trump, most Minnesota counties favored Clinton. Perhaps different levels of urban density might result in a better explanation?</p>
-
-<p>The 2010 Census <a href="https://www.whitehouse.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf">breaks up metropolitan areas</a> into segments: small, medium, and large. An area must have a population of at least 50,000 to be considered an urbanized metropolitan area, and is further separated if it&rsquo;s population is greater than 250,000. For this analysis, small metropolitan areas consist of those ranging in population from 50,000 to 250,000, while populations greater than 250,000 are combined into one category.</p>
-
-<pre><code class="language-r">minnesotawisconsin &lt;- all_results %&gt;% 
-  filter(str_detect(fips, c(&quot;^55&quot;)) | str_detect(fips, c(&quot;^27&quot;)))
-
-minnesotawisconsin$urbanClass &lt;- ifelse(minnesotawisconsin$POP_COU &lt; 50000, &quot;Not a Metropolitan Area&quot;,
-                                 ifelse(minnesotawisconsin$POP_COU &gt; 50000 &amp; minnesotawisconsin$POP_COU &lt; 250000,
-                                        &quot;Small Metropolitan Area&quot;,&quot;Medium to Large Metropolitan Area&quot;))
-# Quick idiot check to make sure our ifelse statement didn't go awry
-table(round(minnesotawisconsin$POP_COU,-5), minnesotawisconsin$urbanClass)
-</code></pre>
-
-<pre><code>##          
+<span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">urbanClass</span> <span class="o">&lt;-</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">POP_COU</span> <span class="o">&lt;</span> <span class="m">50000</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Not a Metropolitan Area&#34;</span><span class="p">,</span>
+                                 <span class="nf">ifelse</span><span class="p">(</span><span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">POP_COU</span> <span class="o">&gt;</span> <span class="m">50000</span> <span class="o">&amp;</span> <span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">POP_COU</span> <span class="o">&lt;</span> <span class="m">250000</span><span class="p">,</span>
+                                        <span class="s">&#34;</span><span class="s">Small Metropolitan Area&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">Medium to Large Metropolitan Area&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="c1"># Quick idiot check to make sure our ifelse statement didn&#39;t go awry</span>
+<span class="nf">table</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">POP_COU</span><span class="p">,</span><span class="m">-5</span><span class="p">)</span><span class="p">,</span> <span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">urbanClass</span><span class="p">)</span>
+</code></pre></div><pre><code>##          
 ##           Medium to Large Metropolitan Area Not a Metropolitan Area Small Metropolitan Area
 ##   0                                       0                     920                       0
 ##   1e+05                                   0                       0                     241
@@ -440,68 +382,59 @@ table(round(minnesotawisconsin$POP_COU,-5), minnesotawisconsin$urbanClass)
 ##   5e+05                                  16                       0                       0
 ##   9e+05                                   7                       0                       0
 ##   1200000                                 9                       0                       0
-</code></pre>
+</code></pre><p>After a quick <code>table</code> to ensure correct recoding of urban classification, I grouped the data by candidate, state, and urban classification to better isolate the voting distributions.</p>
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">urbanClass</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">minnesotawisconsin</span><span class="o">$</span><span class="n">urbanClass</span><span class="p">,</span>
+                                        <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Medium to Large Metropolitan Area&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Small Metropolitan Area&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Not a Metropolitan Area&#34;</span><span class="p">)</span><span class="p">)</span>
 
-<p>After a quick <code>table</code> to ensure correct recoding of urban classification, I grouped the data by candidate, state, and urban classification to better isolate the voting distributions.</p>
+<span class="n">mnwiUrban</span> <span class="o">&lt;-</span> <span class="n">minnesotawisconsin</span> <span class="o">%&gt;%</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="n">cand</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">cand</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">,</span>
+                       <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Stein&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">st</span><span class="p">,</span><span class="n">urbanClass</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">sumVotes</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span><span class="p">,</span> <span class="n">population</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">POP_COU</span><span class="p">)</span><span class="p">)</span>
 
-<pre><code class="language-r">minnesotawisconsin$urbanClass &lt;- factor(minnesotawisconsin$urbanClass,
-                                        levels = c(&quot;Medium to Large Metropolitan Area&quot;, &quot;Small Metropolitan Area&quot;, &quot;Not a Metropolitan Area&quot;))
+<span class="n">mnwiUrban</span> <span class="o">&lt;-</span> <span class="n">mnwiUrban</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">st</span><span class="p">,</span> <span class="n">urbanClass</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">percent</span> <span class="o">=</span> <span class="n">sumVotes</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">sumVotes</span><span class="p">)</span><span class="p">)</span>
 
-mnwiUrban &lt;- minnesotawisconsin %&gt;%
-  filter(cand %in% c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;, &quot;Jill Stein&quot;)) %&gt;%
-  mutate(cand = factor(cand, levels = c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;, &quot;Jill Stein&quot;),
-                       labels = c(&quot;Trump&quot;, &quot;Clinton&quot;, &quot;Johnson&quot;, &quot;Stein&quot;))) %&gt;%
-  group_by(cand, st,urbanClass) %&gt;%
-  summarise(sumVotes = sum(votes), population = sum(POP_COU))
+<span class="n">mnwiUrban</span><span class="o">$</span><span class="n">st</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">mnwiUrban</span><span class="o">$</span><span class="n">st</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">MN&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">WI&#34;</span><span class="p">)</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Minnesota&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Wisconsin&#34;</span><span class="p">)</span><span class="p">)</span>
 
-mnwiUrban &lt;- mnwiUrban %&gt;%
-  group_by(st, urbanClass) %&gt;%
-  mutate(percent = sumVotes/sum(sumVotes))
+<span class="n">p</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">mnwiUrban</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">sumVotes</span><span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="n">cand</span><span class="p">)</span><span class="p">)</span>  <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">identity&#34;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">facet_grid</span><span class="p">(</span><span class="n">st</span> <span class="o">~</span> <span class="n">urbanClass</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme_tufte</span><span class="p">(</span><span class="n">base_family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">red3&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">navyblue&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">#6A51A3&#34;</span><span class="p">,</span><span class="s">&#34;</span><span class="s">darkgreen&#34;</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&#34;</span><span class="s">none&#34;</span><span class="p">,</span>
+        <span class="n">strip.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">strip.text.y</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">14</span><span class="p">)</span><span class="p">,</span>
+        <span class="n">plot.title</span> <span class="o">=</span>  <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">16</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="nf">paste0</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span><span class="m">3</span><span class="p">)</span><span class="o">*</span><span class="m">100</span><span class="p">,</span><span class="s">&#34;</span><span class="s">%&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">nudge_y</span> <span class="o">=</span> <span class="m">50000</span><span class="p">,</span><span class="n">family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Distribution of Votes Cast in Minnesota and Wisconsin Counties By Urban Classification&#34;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">Number of votes&#34;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span> <span class="o">+</span> 
+  <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000000</span><span class="p">)</span><span class="p">)</span>
 
-mnwiUrban$st &lt;- factor(mnwiUrban$st, levels = c(&quot;MN&quot;, &quot;WI&quot;), labels = c(&quot;Minnesota&quot;, &quot;Wisconsin&quot;))
+<span class="c1">## Add in some annotations - since we&#39;re facetting we need to make a dummy data.frame with the same factor levels and plot positions as those used in the figure</span>
+<span class="n">anns</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">cand</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Donald Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Hillary Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Gary Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Jill Stein&#34;</span><span class="p">)</span><span class="p">,</span>
+                                 <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Trump&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Clinton&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Johnson&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Stein&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span>
+                   <span class="n">st</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="s">&#34;</span><span class="s">MN&#34;</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">MN&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">WI&#34;</span><span class="p">)</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Minnesota&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Wisconsin&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">,</span>
+                   <span class="n">sumVotes</span> <span class="o">=</span> <span class="m">700000</span><span class="p">,</span>
+                   <span class="n">lab</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">For each State and Urban Class:\nBar Height - Total Votes\n\n  Percent - Portion of votes&#34;</span><span class="p">,</span>
+                   <span class="n">urbanClass</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Not a Metropolitan Area&#34;</span><span class="p">,</span><span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;</span><span class="s">Medium to Large Metropolitan Area&#34;</span><span class="p">,</span>
+                                                                            <span class="s">&#34;</span><span class="s">Small Metropolitan Area&#34;</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">Not a Metropolitan Area&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
 
-p &lt;- ggplot(mnwiUrban, aes(cand, sumVotes,fill = cand))  +
-  geom_bar(stat = &quot;identity&quot;, alpha = 0.8) + 
-  facet_grid(st ~ urbanClass) +
-  theme_tufte(base_family = &quot;DejaVu Sans Mono&quot;) +
-  scale_fill_manual(values = c(&quot;red3&quot;, &quot;navyblue&quot;, &quot;#6A51A3&quot;,&quot;darkgreen&quot;)) +
-  theme(legend.position=&quot;none&quot;,
-        strip.text.x = element_text(size = 12),
-        strip.text.y = element_text(size = 14),
-        plot.title =  element_text(size = 16)) +
-  geom_text(aes(label=paste0(round(percent,3)*100,&quot;%&quot;)), nudge_y = 50000,family = &quot;DejaVu Sans Mono&quot;) +
-  labs(title = &quot;Distribution of Votes Cast in Minnesota and Wisconsin Counties By Urban Classification&quot;, y = &quot;Number of votes&quot;, x = NULL) + 
-  scale_y_continuous(limits=c(0,1000000))
-
-## Add in some annotations - since we're facetting we need to make a dummy data.frame with the same factor levels and plot positions as those used in the figure
-anns &lt;- data.frame(cand = factor(&quot;Gary Johnson&quot;, levels = c(&quot;Donald Trump&quot;, &quot;Hillary Clinton&quot;, &quot;Gary Johnson&quot;, &quot;Jill Stein&quot;),
-                                 labels = c(&quot;Trump&quot;, &quot;Clinton&quot;, &quot;Johnson&quot;, &quot;Stein&quot;)),
-                   st = factor(&quot;MN&quot;, levels = c(&quot;MN&quot;, &quot;WI&quot;), labels = c(&quot;Minnesota&quot;, &quot;Wisconsin&quot;)),
-                   sumVotes = 700000,
-                   lab = &quot;For each State and Urban Class:\nBar Height - Total Votes\n\n  Percent - Portion of votes&quot;,
-                   urbanClass = factor(&quot;Not a Metropolitan Area&quot;,levels = c(&quot;Medium to Large Metropolitan Area&quot;,
-                                                                            &quot;Small Metropolitan Area&quot;, &quot;Not a Metropolitan Area&quot;)))
-
-## Apply the annotations to the top right facet (i.e. Minnesota, Not a Metropolitan Area). Swoopy arrows are fun!
-p + geom_text(data = anns,aes(label =lab), family = &quot;DejaVu Sans Mono&quot;, size = 3) +
-  geom_curve(data=anns, aes(x=2.1, xend=1.5, y=690000, yend=100000), curvature=0.3, arrow=arrow(length=unit(0.03, &quot;npc&quot;))) +
-  geom_curve(data=anns, aes(x=2.4, xend=3, y=580000, yend=110000), curvature=-0.3, arrow=arrow(length=unit(0.03, &quot;npc&quot;)))
-</code></pre>
-
-<div><img src="/img/figure/source/2016-12-26-wisconsin-presidential-election-results/Presidential Election Results by Urban Area-1.png" title="plot of chunk Presidential Election Results by Urban Area" alt="plot of chunk Presidential Election Results by Urban Area"  style="display: block; margin: auto;" /></div>
-
+<span class="c1">## Apply the annotations to the top right facet (i.e. Minnesota, Not a Metropolitan Area). Swoopy arrows are fun!</span>
+<span class="n">p</span> <span class="o">+</span> <span class="nf">geom_text</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">anns</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span><span class="n">lab</span><span class="p">)</span><span class="p">,</span> <span class="n">family</span> <span class="o">=</span> <span class="s">&#34;</span><span class="s">DejaVu Sans Mono&#34;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_curve</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">anns</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">2.1</span><span class="p">,</span> <span class="n">xend</span><span class="o">=</span><span class="m">1.5</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="m">690000</span><span class="p">,</span> <span class="n">yend</span><span class="o">=</span><span class="m">100000</span><span class="p">)</span><span class="p">,</span> <span class="n">curvature</span><span class="o">=</span><span class="m">0.3</span><span class="p">,</span> <span class="n">arrow</span><span class="o">=</span><span class="nf">arrow</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="nf">unit</span><span class="p">(</span><span class="m">0.03</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">npc&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_curve</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">anns</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">2.4</span><span class="p">,</span> <span class="n">xend</span><span class="o">=</span><span class="m">3</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="m">580000</span><span class="p">,</span> <span class="n">yend</span><span class="o">=</span><span class="m">110000</span><span class="p">)</span><span class="p">,</span> <span class="n">curvature</span><span class="o">=</span><span class="m">-0.3</span><span class="p">,</span> <span class="n">arrow</span><span class="o">=</span><span class="nf">arrow</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="nf">unit</span><span class="p">(</span><span class="m">0.03</span><span class="p">,</span> <span class="s">&#34;</span><span class="s">npc&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><!-- raw HTML omitted -->
 <p>The data shows a sizable rural/urban divide in Minnesota <strong>and</strong> Wisconsin. Both states voted for each candidate at nearly the exact same rate in medium/large and small metropolitan areas. The major difference is how the population in each state is distributed:</p>
-
-<pre><code class="language-r">mnwiUrban %&gt;%
-    select(st,urbanClass, sumVotes, population) %&gt;%
-    group_by(st,urbanClass) %&gt;%
-    summarise(total = sum(sumVotes), metroPopulationTotal = unique(population)) %&gt;%
-    mutate(stateVoteAllocationByMetro = total/sum(total),
-           populationPctByMetro = metroPopulationTotal/sum(metroPopulationTotal),
-           votingPctByMetro = total/metroPopulationTotal)
-</code></pre>
-
-<pre><code>## Source: local data frame [6 x 7]
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">mnwiUrban</span> <span class="o">%&gt;%</span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">st</span><span class="p">,</span><span class="n">urbanClass</span><span class="p">,</span> <span class="n">sumVotes</span><span class="p">,</span> <span class="n">population</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">st</span><span class="p">,</span><span class="n">urbanClass</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">total</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">sumVotes</span><span class="p">)</span><span class="p">,</span> <span class="n">metroPopulationTotal</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">population</span><span class="p">)</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">stateVoteAllocationByMetro</span> <span class="o">=</span> <span class="n">total</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total</span><span class="p">)</span><span class="p">,</span>
+           <span class="n">populationPctByMetro</span> <span class="o">=</span> <span class="n">metroPopulationTotal</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">metroPopulationTotal</span><span class="p">)</span><span class="p">,</span>
+           <span class="n">votingPctByMetro</span> <span class="o">=</span> <span class="n">total</span><span class="o">/</span><span class="n">metroPopulationTotal</span><span class="p">)</span>
+</code></pre></div><pre><code>## Source: local data frame [6 x 7]
 ## Groups: st [2]
 ## 
 ##          st                        urbanClass   total metroPopulationTotal stateVoteAllocationByMetro populationPctByMetro votingPctByMetro
@@ -512,16 +445,10 @@ p + geom_text(data = anns,aes(label =lab), family = &quot;DejaVu Sans Mono&quot;
 ## 4 Wisconsin Medium to Large Metropolitan Area  972116              1825699                  0.3318823            0.3210310        0.5324624
 ## 5 Wisconsin           Small Metropolitan Area 1411946              2766790                  0.4820411            0.4865125        0.5103192
 ## 6 Wisconsin           Not a Metropolitan Area  545037              1094497                  0.1860767            0.1924564        0.4979794
-</code></pre>
-
-<p>While the highest portion of votes in Minnesota came from counties defined as medium and large metropolitan areas (46.4%), those defined as small metropolitan areas contributed the most votes in Wisconsin (48.2%). These voting distributions match up nicely with the percentage of each state&rsquo;s population by metropolitan area, as seen in the two variables <code>stateVoteAllocationByMetro</code> and <code>populationPctByMetro</code> - these distributions contributed to the outcome of each state&rsquo;s election. The rate at which different types of urban areas supported a particular candidate is nearly identical between Minnesota and Wisconsin.</p>
-
+</code></pre><p>While the highest portion of votes in Minnesota came from counties defined as medium and large metropolitan areas (46.4%), those defined as small metropolitan areas contributed the most votes in Wisconsin (48.2%). These voting distributions match up nicely with the percentage of each state's population by metropolitan area, as seen in the two variables <code>stateVoteAllocationByMetro</code> and <code>populationPctByMetro</code> - these distributions contributed to the outcome of each state's election. The rate at which different types of urban areas supported a particular candidate is nearly identical between Minnesota and Wisconsin.</p>
 <h4 id="conclusion">Conclusion</h4>
-
-<p>While there are major differences in how rural and urban voters supported particular candidates, this division is not unique to states that cracked the &ldquo;Midwestern Blue-State Firewall&rdquo; in the 2016 presidential election. In Minnesota and Wisconsin, larger metropolitan areas voted strongly in favor of Clinton, while smaller and non-urban areas strongly favored Trump. Further exploration is necessary to make more granular conclusions, but in these two states the differing distributions of populations into small and medium/large metropolitan areas may help explain each candidate&rsquo;s victory.</p>
-
+<p>While there are major differences in how rural and urban voters supported particular candidates, this division is not unique to states that cracked the &ldquo;Midwestern Blue-State Firewall&rdquo; in the 2016 presidential election. In Minnesota and Wisconsin, larger metropolitan areas voted strongly in favor of Clinton, while smaller and non-urban areas strongly favored Trump. Further exploration is necessary to make more granular conclusions, but in these two states the differing distributions of populations into small and medium/large metropolitan areas may help explain each candidate's victory.</p>
 <h4 id="next-steps">Next Steps</h4>
-
 <p>Data with eligible-voter populations and demographic information at the county level might further supplement this exploration by providing a more detailed picture of rural and urban voters beyond raw population and vote totals. Outlets such as <a href="http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/">FiveThirtyEight</a> have used this type of granular data to inform predictive forecasts of elections. Thoughts or questions about the post? Contact me on <a href="https://twitter.com/mikeleeco">twitter</a> or leave a message in the comments section.</p>
 
 

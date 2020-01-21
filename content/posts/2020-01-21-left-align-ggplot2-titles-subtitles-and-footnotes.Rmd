@@ -44,8 +44,15 @@ I'll walk through how titles, subtitles, and footnotes can be repositioned to al
 The `midwest` data set from the `ggplot2` package contains demographic information of midwest counties and should work as a representative dummy data set for this post. Here is a quick overview of the `midwest` data set using `glimpse`:
 
 <details open>
-<summary>`Midwest` data set overview</summary>
+<summary>R Libraries, `Midwest` data set overview</summary>
 ```{r}
+# load libraries and fonts
+library(ggplot2)
+library(scales)
+library(dplyr)
+library(grid)
+library(extrafont)
+loadfonts(quiet = TRUE)
 glimpse(midwest)
 ```
 </details>
@@ -54,16 +61,8 @@ glimpse(midwest)
 I'll subset the data a little bit to accomodate the plot and organize the display order of counties by their total population. The `theme_white` block of code adds some basic aesthetics and fonts.
 
 <details open>
-<summary>R Libraries, Data Manipulation, and Plot Generation</summary>
+<summary>Data Manipulation, and Plot Generation</summary>
 ```{r}
-# load libraries and fonts
-library(ggplot2)
-library(scales)
-library(dplyr)
-library(grid)
-library(extrafont)
-loadfonts()
-
 # data subset and refactoring
 midwest <- midwest[!duplicated(midwest$county), ]
 midwestAAU <- midwest %>% filter(category == "AAU") %>% arrange(poptotal)
