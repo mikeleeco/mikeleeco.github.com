@@ -8,8 +8,46 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Sun, 01 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/interactives/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Measles Vaccination Chart D3 Replication 2</title>
+      <link>/interactives/2019-8-26-measles2/</link>
+      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/interactives/2019-8-26-measles2/</guid>
+      <description>&lt;style&gt;
+iframe {
+    border: 0;
+    height: 1100px;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.footer {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+&lt;/style&gt;
+
+&lt;script src=&#34;https://d3js.org/d3.v5.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;container&#34;&gt;
+    &lt;div id=&#34;graphic&#34; style=&#34;width: 1500px;&#34;&gt;&lt;/div&gt;
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://pym.nprapps.org/pym.v1.min.js&#34;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var pymParent = new pym.Parent(&#39;graphic&#39;, &#39;/js/mtwo/index.html&#39;, {});
+    &lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Measles Vaccination Chart D3 Replication</title>
