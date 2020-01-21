@@ -70,15 +70,6 @@ The GTL Center has an Excel data tool that is used to reveal insights about the 
     </item>
     
     <item>
-      <title>Measles Vaccination Chart D3 Replication 2</title>
-      <link>/interactives/2019-8-26-measles2/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      <author>mdlee12@gmail.com (Michael Lee)</author>
-      <guid>/interactives/2019-8-26-measles2/</guid>
-      <description> iframe { border: 0; height: 1100px; } .container { margin-left: 20px; margin-right: 20px; padding: 0px; } .footer { margin-left: 20px; margin-right: 20px; padding: 0px; }      var pymParent = new pym.Parent(&#39;graphic&#39;, &#39;/js/mtwo/index.html&#39;, {});   </description>
-    </item>
-    
-    <item>
       <title>International Activities Program Highlights - TALIS</title>
       <link>/projects/2019-06-28-iap-talis-summary-release/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
