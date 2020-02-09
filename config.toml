@@ -16,6 +16,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   commit = false
   rss = true
   comments = true
+  relativeurls = true
 
 [Author]
   name = "Michael Lee"

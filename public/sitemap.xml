@@ -147,6 +147,23 @@
   </url>
   
   <url>
+    <loc>/interactives/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/interactives/2019-8-26-measles2/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/interactives/</loc>
+    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/projects/2019-06-28-iap-talis-summary-release/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
@@ -242,20 +259,8 @@
   </url>
   
   <url>
-    <loc>/interactives/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/interactives/2018-07-01-wsj-measles-interactive/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/interactives/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -525,6 +530,11 @@
   <url>
     <loc>/posts/2015-02-23-milb-scraper-with-rvest/</loc>
     <lastmod>2015-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-02-08-recreate-fivethirteight-chicklet-stacked-bar-chart-in-ggplot2/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
