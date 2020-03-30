@@ -43,8 +43,7 @@ Reading [this recent 538 article](https://fivethirtyeight.com/features/how-much-
 
 That reminded me of a recent package written by Bob Rudis used to create rounded edges in stacked bar charts (aka chicklets). Seemed like a perfect excuse to test out a couple new packages!
 
-## 538 Chicklet Graph Recreation Code
-
+## 538 Chicklet Graph Code
 
 <details open>
 <summary>538 Chicklet Graph Recreation Code</summary>
@@ -93,7 +92,7 @@ gg <- ggplot(dat, aes(Sport, Percent,  fill = Type, label = Label)) +
   theme_minimal() +
   theme(
         legend.position = "top",
-        plot.title = element_markdown(hjust =0.5,family = "Raleway"),
+        plot.title = element_markdown(hjust =0.5),
         plot.subtitle = element_markdown(hjust = 0.5),
         plot.caption = element_markdown(hjust = 0, size = 11, margin = unit(c(0, 0, 0, 0), "cm"), color = "#718c9e"),
         legend.text = element_markdown(size = 11),
@@ -128,10 +127,9 @@ gg <- ggplot(dat, aes(Sport, Percent,  fill = Type, label = Label)) +
     ACLS, NLCS, and World<br>Series; 10 NBA regular-season games between Nov. 6 and Nov. 15, 2019; 10 NHL regular-season games between Nov. 5 and Nov. 19, 2019, including three overtime games;
     and<br>seven English Premier League games between Nov. 9 and Nov. 23, 2019. NBA game action includes free throws, so the action time exceeds the game time.<br>
     <br>
-    FivethirtyEight SOURCE: UNIVERSITY OF TEXAS AT AUSTIN SPORTS ANALYTICS COURSE"
+    FiveThirtyEight SOURCE: UNIVERSITY OF TEXAS AT AUSTIN SPORTS ANALYTICS COURSE"
   ) 
 
-gg
 
 alignTitles <- function(ggplot, title = NULL, subtitle = NULL, caption = NULL) {
   # grab the saved ggplot2 object
