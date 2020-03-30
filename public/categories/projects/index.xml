@@ -8,10 +8,20 @@
     <language>en-us</language>
     <managingEditor>mdlee12@gmail.com (Michael Lee)</managingEditor>
     <webMaster>mdlee12@gmail.com (Michael Lee)</webMaster>
-    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NCES Social Media Outreach  - Animation</title>
+      <link>/projects/2020-03-30-nces-animation/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      <author>mdlee12@gmail.com (Michael Lee)</author>
+      <guid>/projects/2020-03-30-nces-animation/</guid>
+      <description>Background The National Center for Education Statistics (NCES) is the primary federal entity for collecting and analyzing data related to education in the United States. The AIR social media team uses https://twitter.com/EdNCES to broadcast and disseminate the education-related data of the center to the public.
+Goal In an effort to expand the outreach and discoverability of NCES research, the social media team sought to make NCES&amp;rsquo; static publication figures more impactful through the use of animation.</description>
+    </item>
     
     <item>
       <title>Automated Reports - Nevada Department of Education</title>
@@ -86,8 +96,8 @@ Development The goal for this project was to automate the production of each sta
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2017-06-03-edsurvey-r-package/</guid>
-      <description> Package Description The EdSurvey package is a tool to read and analyze functions for education surveys and assessments data from the National Center for Education Statistics, including the National Assessment of Educational Progress (NAEP). Due to the large file sizes and complex formatting of NCES data sets, the package offers user-friendly methods to format and conduct statisitical analyses with a small memory footprint.
-For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http://www.air.org/project/nces-data-r-project-edsurvey  </description>
+      <description>Background National Assessment of Educational Progress (NAEP) data sets from the National Center for Education Statistics (NCES) require special statistical methods to analyze. Because of their scope and complexity, users with computers that have insufficient memory to read in entire NAEP data sets might have trouble conducting analyses without having to write special code to read in just the appropriate variables.
+Goal Develop an R package that gives users functions to perform analyses that account for both complex sample survey designs and the use of plausible values – behind the scenes and without any special tuning by the user.</description>
     </item>
     
     <item>
@@ -96,7 +106,8 @@ For more info:  https://cran.r-project.org/web/packages/EdSurvey/index.html http
       <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
       <author>mdlee12@gmail.com (Michael Lee)</author>
       <guid>/projects/2017-06-03-naepprimer-r-package/</guid>
-      <description>Package Description The NAEP Primer package contains a random mini-sample of real data from the 2005 grade 8 mathematics assessment that have been approved for public use. This includes two data files, as well as a system control file that corresponds to each data file to read in and format for further processing. The NAEP Primer is designed to simplify access to the NAEP database and make its technologies more user-friendly in NAEP data analysis.</description>
+      <description>Background National Assessment of Educational Progress (NAEP) data sets from the National Center for Education Statistics (NCES) require special statistical methods to analyze. Because of their scope and complexity, users with computers that have insufficient memory to read in entire NAEP data sets might have trouble conducting analyses without having to write special code to read in just the appropriate variables.
+Goal Develop an R package that would contain a random mini-sample of real data from the 2005 grade 8 mathematics assessment that have been approved for public use.</description>
     </item>
     
     <item>
