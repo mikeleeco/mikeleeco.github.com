@@ -1,0 +1,50 @@
+---
+title: "State Map - Adjusted Cohort Graduation Rate (2020 update)"
+author: ''
+date: '2020-03-13'
+categories: animation
+tags:
+- animation
+- dataviz
+- ggplot2
+- gganimate
+- R
+subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'The adjusted cohort #GraduationRate (ACGR) is the % of public high school students who graduate w/ a regular diploma within 4 yrs of starting 9th grade for the first time.'
+bigimg: [{src: "/img/mapGraduation_Rate2020.gif", desc: "The adjusted cohort #GraduationRate (ACGR) is the % of public high school students who graduate w/ a regular diploma within 4 yrs of starting 9th grade for the first time."}]
+---
+
+```{r setup knitr, echo = FALSE, warning = FALSE}
+library(knitr)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180, out.extra='class = "img-responsive"')
+
+```
+
+```{r setup, echo = F}
+knit_hooks$set(wrap = function(before, options, envir){
+  if (before){
+    paste0('<', options$wrap, '>')
+  } else {
+    paste0('</', options$wrap, '>')
+  }
+})
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
+options(width=140, dplyr.width = 150)
+```
+
+ 
+Animation linked here:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The adjusted cohort <a href="https://twitter.com/hashtag/GraduationRate?src=hash&amp;ref_src=twsrc%5Etfw">#GraduationRate</a> (ACGR) is the % of public high school students who graduate w/ a regular diploma within 4 yrs of starting 9th grade for the first time. Browse our UPDATED table: <a href="https://t.co/gfP7FRpklr">https://t.co/gfP7FRpklr</a><br><br>These data are also available at: <a href="https://t.co/XiWDUS38BA">https://t.co/XiWDUS38BA</a> <a href="https://t.co/JEybQL19qO">pic.twitter.com/JEybQL19qO</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/1238564506638393344?ref_src=twsrc%5Etfw">March 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+***
+  
+## Full image:
+  
+![The adjusted cohort #GraduationRate (ACGR) is the % of public high school students who graduate w/ a regular diploma within 4 yrs of starting 9th grade for the first time.](/img/mapGraduation_Rate2020.gif)
+
+ ***
+ 
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+  

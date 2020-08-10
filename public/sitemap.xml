@@ -3,15 +3,103 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/animation/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-08-07-bar-chart-parent-educational-attainment/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/animation/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/animation/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dataviz/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gganimate/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-07-09-racing-bar-chart-enrollment-postsecondary/</loc>
+    <lastmod>2020-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-06-18-racing-bar-chart-enrollment-secondary/</loc>
+    <lastmod>2020-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-06-10-state-map-percentage-ell-update/</loc>
+    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-05-30-line-chart-masters-degrees-conferred/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-05-28-line-chart-college-enrollment-update/</loc>
+    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-05-26-bar-chart-median-annual-earnings-update/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/animation/2020-04-16-racing-bar-chart-enrollment/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -21,18 +109,6 @@
   
   <url>
     <loc>/projects/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -62,6 +138,11 @@
   </url>
   
   <url>
+    <loc>/animation/2020-03-13-state-map-acgr-update/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -70,18 +151,6 @@
   <url>
     <loc>/posts/2020-02-08-recreate-fivethirtyeight-chicklet-stacked-bar-chart-in-ggplot2/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/dataviz/</loc>
-    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ggplot2/</loc>
-    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -104,12 +173,6 @@
   <url>
     <loc>/posts/2020-01-21-left-align-ggplot2-titles-subtitles-and-footnotes/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -180,14 +243,18 @@
   </url>
   
   <url>
+    <loc>/animation/2019-07-05-state-map-percentage-ell/</loc>
+    <lastmod>2019-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/projects/2019-06-28-iap-talis-summary-release/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/animation/</loc>
-    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/animation/2019-06-19-bar-chart-median-annual-earnings/</loc>
+    <lastmod>2019-06-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -198,18 +265,6 @@
   <url>
     <loc>/animation/2019-04-19-line-chart-reported-bullying/</loc>
     <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/animation/</loc>
-    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/gganimate/</loc>
-    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

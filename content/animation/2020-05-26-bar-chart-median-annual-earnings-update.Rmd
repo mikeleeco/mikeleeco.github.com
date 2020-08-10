@@ -1,0 +1,49 @@
+---
+title: "Bar Chart - Median Annual Earnings (2020 update)"
+author: ''
+date: '2020-05-26'
+categories: animation
+tags:
+- animation
+- dataviz
+- ggplot2
+- gganimate
+- R
+subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
+description: 'How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats'
+bigimg: [{src: "/img/barChartGender_Earnings2020.gif", desc: "How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats"}]
+---
+
+```{r setup knitr, echo = FALSE, warning = FALSE}
+library(knitr)
+# knitr::opts_chunk$set(cache = TRUE, warning = FALSE, message = FALSE, dpi = 180, out.extra='class = "img-responsive"')
+
+```
+
+```{r setup, echo = F}
+knit_hooks$set(wrap = function(before, options, envir){
+  if (before){
+    paste0('<', options$wrap, '>')
+  } else {
+    paste0('</', options$wrap, '>')
+  }
+})
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, dpi = 180, fig.height = 5, fig.width = 7, fig.align = "center")
+options(width=140, dplyr.width = 150)
+```
+
+Animation Linked here:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment?<br><br>Dive into the <a href="https://twitter.com/hashtag/ConditionOfEd?src=hash&amp;ref_src=twsrc%5Etfw">#ConditionOfEd</a> for more updated <a href="https://twitter.com/hashtag/EdStats?src=hash&amp;ref_src=twsrc%5Etfw">#EdStats</a>: <a href="https://t.co/sM6BxRQHhG">https://t.co/sM6BxRQHhG</a> <a href="https://twitter.com/hashtag/EdChat?src=hash&amp;ref_src=twsrc%5Etfw">#EdChat</a> <a href="https://t.co/X4d2uFxyXl">pic.twitter.com/X4d2uFxyXl</a></p>&mdash; NCES (@EdNCES) <a href="https://twitter.com/EdNCES/status/1265292116462272514?ref_src=twsrc%5Etfw">May 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+ ***
+  
+## Full image:
+  
+![How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats](/img/barChartGender_Earnings2020.gif)
+
+ ***
+ 
+Interested in learning more? Hire me to consult on your next project, follow me on [twitter](https://twitter.com/mikeleeco), leave a comment, or contact me via [email](mailto:mdlee12@gmail.com). All inquiries welcome!
+  
