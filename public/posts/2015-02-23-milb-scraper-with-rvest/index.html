@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Let&#39;s Make a Minor League Baseball Database! | Michael Lee
+    </title>
 
-<head>
-    <meta name="generator" content="Hugo 0.56.0" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Let&#39;s Make a Minor League Baseball Database! | Michael Lee</title>
-
-     
-      
-    
-    
-    
-    
-    
+         
 
   <meta name="author" content="">
 
- 
-    <meta property="og:title" content="Let&#39;s Make a Minor League Baseball Database!" />
-<meta property="og:description" content="Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the Lahman Baseball Database, which is the most robust catalog of MLB player statistics available to the public.  One area of relatively limited accessibility to the average fan is statistics for Minor League players." />
+ <meta property="og:title" content="Let&#39;s Make a Minor League Baseball Database!" />
+<meta property="og:description" content="Baseball is a game of numbers, some more accessible than others. Rates, averages, linear weights, aging curves, and WAR are only a few of the myriad statistics influencing decision makers in MLB franchises. An endless amount of data is accessible to the average fan at many sites, most notably the Lahman Baseball Database, which is the most robust catalog of MLB player statistics available to the public.One area of relatively limited accessibility to the average fan is statistics for Minor League players." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2015-02-23-milb-scraper-with-rvest/" />
+<meta property="og:url" content="/posts/2015-02-23-milb-scraper-with-rvest/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-02-23T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-02-23T00:00:00+00:00" />
- 
-    
-
 
  
-    <meta name="twitter:site" content="@mikeleeco">
+
+
+ <meta name="twitter:site" content="@mikeleeco">
 <meta name="twitter:creator" content="@mikeleeco">
 <meta name="twitter:title" content="Let&#39;s Make a Minor League Baseball Database!" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="https://www.mikelee.co/img/bryant.jpg"/>
-<meta name="twitter:description" content="A step-by-step tutorial to make your own Minor League Baseball Database using rvest."/> 
-    
-     
-    
+<meta name="twitter:description" content="A step-by-step tutorial to make your own Minor League Baseball Database using rvest."/>  
 <script type="application/javascript">
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-58518999-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
-    
-    
-    <link rel="canonical" href="/posts/2015-02-23-milb-scraper-with-rvest/">   <link rel="icon" type="image/png" href="img/avatar-transparent.png">
 
-    <link rel="stylesheet" href="/css/bulma.css">
-    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css">
+    <link rel="canonical" href="/posts/2015-02-23-milb-scraper-with-rvest/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png">
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
     <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
 
-    <link rel="stylesheet" href="/css/landing.css">   
+    <link rel="stylesheet" href="/css/landing.css" />
+      
     
     
-</head>
+  </head>
+  
 
-
-<body>
+  <body>
     <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 <nav class="nav has-shadow">
@@ -76,22 +70,18 @@ if (!doNotTrack) {
 </div>
 
 <div class="nav-center">
-    
 
     <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
         <span class="icon">
             <i class="fab fa-github"></i>
           </span>
     </a>
-    
-    
 
     <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
         <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
     </a>
-    
 </div>
 
 
@@ -115,21 +105,18 @@ if (!doNotTrack) {
         
         <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
         
-        <a itemprop="url" class="nav-item is-tab " href="/resume/"><span itemprop="name">Resume</span></a>
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
         
 </div>
 </nav> </header>
     <main>
 
-
 <div class="columns is-fullheight">
-    <div class="column">
-        <section class="hero is-default is-bold">
-            <div class="hero-body">
-                <div class="content container">
-
-                
-                  <head>
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
   <link rel="stylesheet" href="/css/postCustom.css" />
   <script src="/js/hideOutput.js"></script>
 </head>
@@ -148,205 +135,152 @@ Baseball is a game of numbers, some more accessible than others. Rates, averages
 </p>
 <p>
 One area of relatively limited accessibility to the average fan is statistics for Minor League players. Though player statistics by position, year, and team are available at many sites, a thorough catalog of MiLB data akin to the Lahman database is unavailable. I wonder who <a href="http://www.baseball-reference.com/minors/player.cgi?id=bryant001kri">Kris Bryant</a> would be most similar to? </p>
-
 <p><p>What do you mean Baseball Reference doesn't calculate similarity scores for minor league players?</p></p>
-
 <p><a class="btn btn-success btn-lg btn-block" href="https://www.youtube.com/watch?v=bnRrvOb0m-I">As If Button</a></p>
-
-<p><strong><h2>Let's make our own damn database!</h2></strong>  
+<p><strong><h2>Let's make our own damn database!</h2></strong>	
 </p>
-
 <p>To make our database we&rsquo;re going to use <a href="https://github.com/hadley/rvest">rvest</a>, an R package designed by Hadley Wickham at RStudio [^1]. The package scrapes HTML from webpages and extracts it into readable data. Let&rsquo;s load the necessary packages and go from there:</p>
-
-<pre><code class="language-r">#if you haven't done so already, install rvest from Wickham's github repository
-# install.packages(&quot;devtools&quot;)
-# install_github(&quot;hadley/rvest&quot;)
-c('rvest','dplyr') -&gt; packages #installs packages
-lapply(packages, library, character.only = T)
-</code></pre>
-
-<p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
-
-<pre><code class="language-r"># prep scraper
-url &lt;- &quot;http://www.baseball-reference.com/minors/&quot;
-teams=c(&quot;ARI&quot;)
-stats_table &lt;- '#team_batting.sortable.stats_table'
-stats_id &lt;- paste0(stats_table,' a')
-</code></pre>
-
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1">#if you haven&#39;t done so already, install rvest from Wickham&#39;s github repository</span>
+<span class="c1"># install.packages(&#34;devtools&#34;)</span>
+<span class="c1"># install_github(&#34;hadley/rvest&#34;)</span>
+<span class="nf">c</span><span class="p">(</span><span class="s">&#39;rvest&#39;</span><span class="p">,</span><span class="s">&#39;dplyr&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">packages</span> <span class="c1">#installs packages</span>
+<span class="nf">lapply</span><span class="p">(</span><span class="n">packages</span><span class="p">,</span> <span class="n">library</span><span class="p">,</span> <span class="n">character.only</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span>
+</code></pre></div><p>The function below will construct each team's minor league website, for every desired year, and pull out the same table every time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1"># prep scraper</span>
+<span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&#34;http://www.baseball-reference.com/minors/&#34;</span>
+<span class="n">teams</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;ARI&#34;</span><span class="p">)</span>
+<span class="n">stats_table</span> <span class="o">&lt;-</span> <span class="s">&#39;#team_batting.sortable.stats_table&#39;</span>
+<span class="n">stats_id</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">stats_table</span><span class="p">,</span><span class="s">&#39; a&#39;</span><span class="p">)</span>
+</code></pre></div><p>
 Let's start with the Arizona Diamondbacks batting statistics from 2012-2014. We'll call the data frame we're about to pull the variable <strong>"minors_batting_ARI"</strong>. We're reconstructing the url <code>http://www.baseball-reference.com/minors/affiliate.cgi?id=ARI&year=2014</code> and instructing the scraper to pull the necessary data table and then repeat the process for next season. We're calling the pulled data table 'df' for simplicity.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">minors_batting_ARI</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
 
-<pre><code class="language-r">minors_batting_ARI &lt;- data.frame()
+  <span class="c1"># for loop by teams and seasonfor (teams in teams){ </span>
+  <span class="nf">for </span><span class="p">(</span><span class="n">season</span> <span class="n">in</span> <span class="m">2014</span><span class="o">:</span><span class="m">2012</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">html</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s">&#34;affiliate.cgi?id=&#34;</span><span class="p">,</span><span class="n">teams</span><span class="p">,</span><span class="s">&#34;&amp;year=&#34;</span><span class="p">,</span><span class="n">season</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">)</span>
 
-  # for loop by teams and seasonfor (teams in teams){ 
-  for (season in 2014:2012) {
-    html &lt;- paste(url,&quot;affiliate.cgi?id=&quot;,teams,&quot;&amp;year=&quot;,season,sep=&quot;&quot;)
-
-    # batting stats
-    read_html(html) %&gt;%
-      html_nodes(stats_table) %&gt;%
-      html_table(header = T) %&gt;%
-      data.frame() %&gt;%
-      tbl_df() -&gt; df
-</code></pre>
-
-<p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to <a href="http://youtu.be/1EiqELgKp5g?t=56s">get angry</a>.</p>
-
+    <span class="c1"># batting stats</span>
+    <span class="nf">read_html</span><span class="p">(</span><span class="n">html</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">stats_table</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_table</span><span class="p">(</span><span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">data.frame</span><span class="p">()</span> <span class="o">%&gt;%</span>
+      <span class="nf">tbl_df</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">df</span>
+</code></pre></div><p>So far our code will scrape the batting table from the team's minor league page, but we also need to extract each player's Minor League baseball-reference id using it's href. Isn't that right Chris Young? No. Not you, <a href="http://www.baseball-reference.com/players/y/youngch04.shtml">Chris Young</a>. The other, lankier <a href="http://www.baseball-reference.com/players/y/youngch03.shtml">Chris Young</a>. We're good man, no need to <a href="http://youtu.be/1EiqELgKp5g?t=56s">get angry</a>.</p>
 <p>This portion of code extracts the attributes of the URL in the table and changes them into characters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r">    <span class="c1"># player info</span>
+    <span class="nf">read_html</span><span class="p">(</span><span class="n">html</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">stats_id</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_attr</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#34;href&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">unlist</span> <span class="o">%&gt;%</span> <span class="n">as.character</span> <span class="o">-&gt;</span> <span class="n">min_playerid</span>
+</code></pre></div><p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player&rsquo;s unique reference id. We&rsquo;re trimming out characters from the href attributes we don&rsquo;t need, leaving only the reference ids.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r">    <span class="c1"># clean dataframe and add team and season info</span>
+    <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df[1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">df</span><span class="p">),</span><span class="n">]</span>
+    <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df[</span><span class="o">!</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Rk</span><span class="o">==</span><span class="s">&#39;Rk&#39;</span><span class="p">),</span><span class="n">]</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">season</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">teams</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
 
-<pre><code class="language-r">    # player info
-    read_html(html) %&gt;%
-      html_nodes(stats_id) %&gt;%
-      html_attr(name=&quot;href&quot;) %&gt;% unlist %&gt;% as.character -&gt; min_playerid
-</code></pre>
+    <span class="c1"># remove url data</span>
+    <span class="n">min_playerid</span><span class="o">=</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;/register/player.cgi?id=&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">min_playerid</span><span class="p">,</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">min_playerid</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">min_playerid</span><span class="p">)</span>
 
-<p>Using R formatting code we delete unnecessary rows and create a column called <i>bref_player_id</i> to assign each player&rsquo;s unique reference id. We&rsquo;re trimming out characters from the href attributes we don&rsquo;t need, leaving only the reference ids.</p>
-
-<pre><code class="language-r">    # clean dataframe and add team and season info
-    df &lt;- df[1:nrow(df),]
-    df &lt;- df[!na.omit(df$Rk=='Rk'),]
-    df$season &lt;- c(season)
-    df$teams &lt;- c(teams)
-
-    # remove url data
-    min_playerid=gsub(&quot;/register/player.cgi?id=&quot;, &quot;&quot;, min_playerid,fixed = TRUE)
-    df$min_playerid &lt;- c(min_playerid)
-
-    # bind to dataframe
-    minors_batting_ARI &lt;- rbind(minors_batting_ARI,df)
-  }
-}
-</code></pre>
-
-<pre><code class="language-r">#to view the dataset and save it as a .csv in our working directory
-View(minors_batting_ARI)
-write.csv(minors_batting_ARI, &quot;minors_batting_ARI.csv&quot;)
-</code></pre>
-
-<p>There we are! Arizona's minor league batting stats from 2012-2014! 824 instances may seem like too much, for only a three year period, but Baseball-reference.com doesn't aggregate a player's statistics by year; they do it by level. Therefore, some players may have multiple rows for the same season (aren't you glad we pulled out the reference id!) </p>
+    <span class="c1"># bind to dataframe</span>
+    <span class="n">minors_batting_ARI</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">minors_batting_ARI</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1">#to view the dataset and save it as a .csv in our working directory</span>
+<span class="nf">View</span><span class="p">(</span><span class="n">minors_batting_ARI</span><span class="p">)</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">minors_batting_ARI</span><span class="p">,</span> <span class="s">&#34;minors_batting_ARI.csv&#34;</span><span class="p">)</span>
+</code></pre></div><p>There we are! Arizona's minor league batting stats from 2012-2014! 824 instances may seem like too much, for only a three year period, but Baseball-reference.com doesn't aggregate a player's statistics by year; they do it by level. Therefore, some players may have multiple rows for the same season (aren't you glad we pulled out the reference id!) </p>
 <div class="container">
 <figure>
 <img src="/img/minors_batting_ARI.jpg" class="img-responsive"></figure></img>
 </figure>
 </div>
-
-
 <p>... let's take a left turn on <a href="http://hardballtalk.nbcsports.com/2013/01/25/the-diamondbacks-are-travelling-down-grit-avenue-and-guts-boulevard-and-grind-parkway/">Grind Parkway</a> and pull in <strong>all MiLB batting statistics for 2014</strong>.</p>
-
 <h2>MiLB Batting Stats for All Teams</h2>
-
 <p>First we'll need a list of baseball-reference's team codes. I'll do the dirty work and include franchise codes for each team since 1969 if you want to play with that data <sup class="bootstrap-footnote" data-text="For future investigations be aware that other pages of baseball reference use archived team codes such as MON (Montreal Expos) and CAL (California Angels).">2</sup>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">teams</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;ARI&#34;</span><span class="p">,</span><span class="s">&#34;ATL&#34;</span><span class="p">,</span><span class="s">&#34;BAL&#34;</span><span class="p">,</span><span class="s">&#34;BOS&#34;</span><span class="p">,</span><span class="s">&#34;CHC&#34;</span><span class="p">,</span><span class="s">&#34;CHW&#34;</span><span class="p">,</span><span class="s">&#34;CIN&#34;</span><span class="p">,</span><span class="s">&#34;CLE&#34;</span><span class="p">,</span><span class="s">&#34;COL&#34;</span><span class="p">,</span><span class="s">&#34;DET&#34;</span><span class="p">,</span><span class="s">&#34;HOU&#34;</span><span class="p">,</span><span class="s">&#34;KCR&#34;</span><span class="p">,</span><span class="s">&#34;ANA&#34;</span><span class="p">,</span><span class="s">&#34;LAD&#34;</span><span class="p">,</span><span class="s">&#34;FLA&#34;</span><span class="p">,</span><span class="s">&#34;MIL&#34;</span><span class="p">,</span><span class="s">&#34;MIN&#34;</span><span class="p">,</span><span class="s">&#34;NYM&#34;</span><span class="p">,</span><span class="s">&#34;NYY&#34;</span><span class="p">,</span><span class="s">&#34;OAK&#34;</span><span class="p">,</span><span class="s">&#34;PHI&#34;</span><span class="p">,</span><span class="s">&#34;PIT&#34;</span><span class="p">,</span><span class="s">&#34;SDP&#34;</span><span class="p">,</span><span class="s">&#34;SFG&#34;</span><span class="p">,</span><span class="s">&#34;SEA&#34;</span><span class="p">,</span><span class="s">&#34;STL&#34;</span><span class="p">,</span><span class="s">&#34;TBD&#34;</span><span class="p">,</span><span class="s">&#34;TEX&#34;</span><span class="p">,</span><span class="s">&#34;TOR&#34;</span><span class="p">,</span><span class="s">&#34;WSN&#34;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&#34;http://www.baseball-reference.com/minors/&#34;</span>
+<span class="n">teams</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;ARI&#34;</span><span class="p">,</span><span class="s">&#34;ATL&#34;</span><span class="p">,</span><span class="s">&#34;BAL&#34;</span><span class="p">,</span><span class="s">&#34;BOS&#34;</span><span class="p">,</span><span class="s">&#34;CHC&#34;</span><span class="p">,</span><span class="s">&#34;CHW&#34;</span><span class="p">,</span><span class="s">&#34;CIN&#34;</span><span class="p">,</span><span class="s">&#34;CLE&#34;</span><span class="p">,</span><span class="s">&#34;COL&#34;</span><span class="p">,</span><span class="s">&#34;DET&#34;</span><span class="p">,</span><span class="s">&#34;HOU&#34;</span><span class="p">,</span><span class="s">&#34;KCR&#34;</span><span class="p">,</span><span class="s">&#34;ANA&#34;</span><span class="p">,</span><span class="s">&#34;LAD&#34;</span><span class="p">,</span><span class="s">&#34;FLA&#34;</span><span class="p">,</span><span class="s">&#34;MIL&#34;</span><span class="p">,</span><span class="s">&#34;MIN&#34;</span><span class="p">,</span><span class="s">&#34;NYM&#34;</span><span class="p">,</span><span class="s">&#34;NYY&#34;</span><span class="p">,</span><span class="s">&#34;OAK&#34;</span><span class="p">,</span><span class="s">&#34;PHI&#34;</span><span class="p">,</span><span class="s">&#34;PIT&#34;</span><span class="p">,</span><span class="s">&#34;SDP&#34;</span><span class="p">,</span><span class="s">&#34;SFG&#34;</span><span class="p">,</span><span class="s">&#34;SEA&#34;</span><span class="p">,</span><span class="s">&#34;STL&#34;</span><span class="p">,</span><span class="s">&#34;TBD&#34;</span><span class="p">,</span><span class="s">&#34;TEX&#34;</span><span class="p">,</span><span class="s">&#34;TOR&#34;</span><span class="p">,</span><span class="s">&#34;WSN&#34;</span><span class="p">)</span>
+<span class="n">stats_table</span> <span class="o">&lt;-</span> <span class="s">&#39;#team_batting.sortable.stats_table&#39;</span>
+<span class="n">stats_id</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">stats_table</span><span class="p">,</span><span class="s">&#39; a&#39;</span><span class="p">)</span>
+<span class="n">minors_batting</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
 
-<pre><code class="language-r">teams=c(&quot;ARI&quot;,&quot;ATL&quot;,&quot;BAL&quot;,&quot;BOS&quot;,&quot;CHC&quot;,&quot;CHW&quot;,&quot;CIN&quot;,&quot;CLE&quot;,&quot;COL&quot;,&quot;DET&quot;,&quot;HOU&quot;,&quot;KCR&quot;,&quot;ANA&quot;,&quot;LAD&quot;,&quot;FLA&quot;,&quot;MIL&quot;,&quot;MIN&quot;,&quot;NYM&quot;,&quot;NYY&quot;,&quot;OAK&quot;,&quot;PHI&quot;,&quot;PIT&quot;,&quot;SDP&quot;,&quot;SFG&quot;,&quot;SEA&quot;,&quot;STL&quot;,&quot;TBD&quot;,&quot;TEX&quot;,&quot;TOR&quot;,&quot;WSN&quot;)
-</code></pre>
+<span class="c1"># for loop by teams and season</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">teams</span> <span class="n">in</span> <span class="n">teams</span><span class="p">){</span> 
+  <span class="nf">for </span><span class="p">(</span><span class="n">season</span> <span class="n">in</span> <span class="m">2014</span><span class="o">:</span><span class="m">2014</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">html</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s">&#34;affiliate.cgi?id=&#34;</span><span class="p">,</span><span class="n">teams</span><span class="p">,</span><span class="s">&#34;&amp;year=&#34;</span><span class="p">,</span><span class="n">season</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">)</span>
 
-<pre><code class="language-r">url &lt;- &quot;http://www.baseball-reference.com/minors/&quot;
-teams=c(&quot;ARI&quot;,&quot;ATL&quot;,&quot;BAL&quot;,&quot;BOS&quot;,&quot;CHC&quot;,&quot;CHW&quot;,&quot;CIN&quot;,&quot;CLE&quot;,&quot;COL&quot;,&quot;DET&quot;,&quot;HOU&quot;,&quot;KCR&quot;,&quot;ANA&quot;,&quot;LAD&quot;,&quot;FLA&quot;,&quot;MIL&quot;,&quot;MIN&quot;,&quot;NYM&quot;,&quot;NYY&quot;,&quot;OAK&quot;,&quot;PHI&quot;,&quot;PIT&quot;,&quot;SDP&quot;,&quot;SFG&quot;,&quot;SEA&quot;,&quot;STL&quot;,&quot;TBD&quot;,&quot;TEX&quot;,&quot;TOR&quot;,&quot;WSN&quot;)
-stats_table &lt;- '#team_batting.sortable.stats_table'
-stats_id &lt;- paste0(stats_table,' a')
-minors_batting &lt;- data.frame()
+    <span class="c1"># batting stats</span>
+    <span class="nf">read_html</span><span class="p">(</span><span class="n">html</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">stats_table</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_table</span><span class="p">(</span><span class="n">header</span> <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">data.frame</span><span class="p">()</span> <span class="o">%&gt;%</span>
+      <span class="nf">tbl_df</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">df</span>
 
-# for loop by teams and season
-for (teams in teams){ 
-  for (season in 2014:2014) {
-    html &lt;- paste(url,&quot;affiliate.cgi?id=&quot;,teams,&quot;&amp;year=&quot;,season,sep=&quot;&quot;)
+    <span class="c1"># player info</span>
+    <span class="nf">read_html</span><span class="p">(</span><span class="n">html</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">stats_id</span><span class="p">)</span> <span class="o">%&gt;%</span>
+      <span class="nf">html_attr</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#34;href&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">unlist</span> <span class="o">%&gt;%</span> <span class="n">as.character</span> <span class="o">-&gt;</span> <span class="n">min_playerid</span>
 
-    # batting stats
-    read_html(html) %&gt;%
-      html_nodes(stats_table) %&gt;%
-      html_table(header = T) %&gt;%
-      data.frame() %&gt;%
-      tbl_df() -&gt; df
+    <span class="c1"># clean dataframe and add team and season info</span>
+    <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df[1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">df</span><span class="p">),</span><span class="n">]</span>
+    <span class="n">df</span> <span class="o">&lt;-</span> <span class="n">df[</span><span class="o">!</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">df</span><span class="o">$</span><span class="n">Rk</span><span class="o">==</span><span class="s">&#39;Rk&#39;</span><span class="p">),</span><span class="n">]</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">season</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">season</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">teams</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
 
-    # player info
-    read_html(html) %&gt;%
-      html_nodes(stats_id) %&gt;%
-      html_attr(name=&quot;href&quot;) %&gt;% unlist %&gt;% as.character -&gt; min_playerid
+    <span class="c1"># remove url data</span>
+    <span class="n">min_playerid</span><span class="o">=</span><span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;/register/player.cgi?id=&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">min_playerid</span><span class="p">,</span><span class="n">fixed</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">$</span><span class="n">min_playerid</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">min_playerid</span><span class="p">)</span>
 
-    # clean dataframe and add team and season info
-    df &lt;- df[1:nrow(df),]
-    df &lt;- df[!na.omit(df$Rk=='Rk'),]
-    df$season &lt;- c(season)
-    df$teams &lt;- c(teams)
+    <span class="c1"># bind to </span>
+    <span class="n">minors_batting</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">minors_batting</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-    # remove url data
-    min_playerid=gsub(&quot;/register/player.cgi?id=&quot;, &quot;&quot;, min_playerid,fixed = TRUE)
-    df$min_playerid &lt;- c(min_playerid)
+</code></pre></div><p>To query other seasons or teams, simply change the information selected. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">teams</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;OAK&#34;</span><span class="p">,</span><span class="s">&#34;TBD&#34;</span><span class="p">)</span>
 
-    # bind to 
-    minors_batting &lt;- rbind(minors_batting,df)
-  }
-}
+<span class="n">stats_table</span> <span class="o">&lt;-</span> <span class="s">&#39;#team_batting.sortable.stats_table&#39;</span>
+<span class="n">stats_id</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="n">stats_table</span><span class="p">,</span><span class="s">&#39; a&#39;</span><span class="p">)</span>
+<span class="n">minors_batting</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">()</span>
 
-</code></pre>
-
-<p>To query other seasons or teams, simply change the information selected. For example:</p>
-
-<pre><code class="language-r">teams=c(&quot;OAK&quot;,&quot;TBD&quot;)
-
-stats_table &lt;- '#team_batting.sortable.stats_table'
-stats_id &lt;- paste0(stats_table,' a')
-minors_batting &lt;- data.frame()
-
-for (teams in teams){ for (season in 2010:2005) {
-</code></pre>
-
-<p>Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.</p>
-
+<span class="nf">for </span><span class="p">(</span><span class="n">teams</span> <span class="n">in</span> <span class="n">teams</span><span class="p">){</span> <span class="nf">for </span><span class="p">(</span><span class="n">season</span> <span class="n">in</span> <span class="m">2010</span><span class="o">:</span><span class="m">2005</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div><p>Will pull in minor league batting statistics for Oakland and Tampa Bay for the years 2005-2010.</p>
 <p>Lets clean up all of the stray objects besides the <code>minors_batting</code> dataframe in our working environment before moving on:</p>
-
-<pre><code class="language-r">rm(list=setdiff(ls(), &quot;minors_batting&quot;))
-</code></pre>
-
-<h3>Obligatory heads up!</h3>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="o">=</span><span class="nf">setdiff</span><span class="p">(</span><span class="nf">ls</span><span class="p">(),</span> <span class="s">&#34;minors_batting&#34;</span><span class="p">))</span>
+</code></pre></div><h3>Obligatory heads up!</h3>
 <p>This code is querying 30 distinct URLs for every season, so multi-season outputs can take some time. Here are my system.time indicators for the above function:</p>
-
-<p><img src="/img/sys_time_MiLB.jpg"></p>
-
+<img src="/img/sys_time_MiLB.jpg">
 <p>The query takes about a 1:45 for every league-wide season pull. <strong>Pro-Tip!</strong> Get that query going and have some breakfast/lunch/dinner.</p>
-
 <h4>Coming up...</h4>
-
 <p>Stay tuned to the site for another post about similarity scores and to learn more about Kris Bryant&rsquo;s best comparisons.</p>
-
 <hr>
-
 <h1>Update (10/3/2017)</h1>
-
 <p>Baseball Reference has made slight alterations to their website that has deprecated the code above as originally published. An updated version of the scraper code can be found <a href="/baseballReferenceScraperUpdate.R">here</a>.</p>
-
 <hr>
-
 <p>Have feedback, questions, or want to see something else added? Check out my <a href="https://github.com/mikeleeco/Baseball-Reference-Scrapers">MiLB Scraper on github</a> or fork my repository to propose changes.  <a class="btn btn-primary" href="https://github.com/mikeleeco/Baseball-Reference-Scrapers/fork">Edit My Code</a></p>
 
 
 </div>
-
-                
-                
-                </div>
-                <br>
-            </div>
-        </section>
-    </div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
 </div>
 
 </main>
-    <footer> 
-  <footer class="footer">
+    <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        Michael Lee - 2020
+        Michael Lee - 2021
       </p>
     </div>
   </div>
-</footer> 
-</footer>
+</footer> </footer>
 
     <script async type="text/javascript" src="/js/bulma.js"></script>
-</body>
-
+  </body>
 </html>

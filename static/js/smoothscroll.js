@@ -4,8 +4,8 @@
  * 2016 (c) Dustan Kasten, Jeremias Menichelli - MIT License
  */
 
-(function(w, d, undefined) {
-  'use strict';
+(function (w, d, undefined) {
+  "use strict";
 
   /*
    * aliases
@@ -17,7 +17,7 @@
   // polyfill
   function polyfill() {
     // return when scrollBehavior interface is supported
-    if ('scrollBehavior' in d.documentElement.style) {
+    if ("scrollBehavior" in d.documentElement.style) {
       return;
     }
 
@@ -33,14 +33,16 @@
     var original = {
       scroll: w.scroll || w.scrollTo,
       scrollBy: w.scrollBy,
-      scrollIntoView: Element.prototype.scrollIntoView
+      scrollIntoView: Element.prototype.scrollIntoView,
     };
 
     /*
      * define timing method
      */
-    var now = w.performance && w.performance.now
-      ? w.performance.now.bind(w.performance) : Date.now;
+    var now =
+      w.performance && w.performance.now
+        ? w.performance.now.bind(w.performance)
+        : Date.now;
 
     /**
      * changes scroll position inside an element
@@ -70,24 +72,25 @@
      * @returns {Boolean}
      */
     function shouldBailOut(x) {
-      if (typeof x !== 'object'
-            || x === null
-            || x.behavior === undefined
-            || x.behavior === 'auto'
-            || x.behavior === 'instant') {
+      if (
+        typeof x !== "object" ||
+        x === null ||
+        x.behavior === undefined ||
+        x.behavior === "auto" ||
+        x.behavior === "instant"
+      ) {
         // first arg not an object/null
         // or behavior is auto, instant or undefined
         return true;
       }
 
-      if (typeof x === 'object'
-            && x.behavior === 'smooth') {
+      if (typeof x === "object" && x.behavior === "smooth") {
         // first argument is an object and behavior is smooth
         return false;
       }
 
       // throw error when behavior is not supported
-      throw new TypeError('behavior not valid');
+      throw new TypeError("behavior not valid");
     }
 
     /**
@@ -107,10 +110,9 @@
         // set condition variables
         isBody = el === d.body;
         hasScrollableSpace =
-          el.clientHeight < el.scrollHeight ||
-          el.clientWidth < el.scrollWidth;
+          el.clientHeight < el.scrollHeight || el.clientWidth < el.scrollWidth;
         hasVisibleOverflow =
-          w.getComputedStyle(el, null).overflow === 'visible';
+          w.getComputedStyle(el, null).overflow === "visible";
       } while (!isBody && !(hasScrollableSpace && !hasVisibleOverflow));
 
       isBody = hasScrollableSpace = hasVisibleOverflow = null;
@@ -193,7 +195,7 @@
         startY: startY,
         x: x,
         y: y,
-        frame: frame
+        frame: frame,
       });
     }
 
@@ -202,7 +204,7 @@
      */
 
     // w.scroll and w.scrollTo
-    w.scroll = w.scrollTo = function() {
+    w.scroll = w.scrollTo = function () {
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0])) {
         original.scroll.call(
@@ -214,16 +216,11 @@
       }
 
       // LET THE SMOOTHNESS BEGIN!
-      smoothScroll.call(
-        w,
-        d.body,
-        ~~arguments[0].left,
-        ~~arguments[0].top
-      );
+      smoothScroll.call(w, d.body, ~~arguments[0].left, ~~arguments[0].top);
     };
 
     // w.scrollBy
-    w.scrollBy = function() {
+    w.scrollBy = function () {
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0])) {
         original.scrollBy.call(
@@ -244,7 +241,7 @@
     };
 
     // Element.prototype.scrollIntoView
-    Element.prototype.scrollIntoView = function() {
+    Element.prototype.scrollIntoView = function () {
       // avoid smooth behavior if not required
       if (shouldBailOut(arguments[0])) {
         original.scrollIntoView.call(this, arguments[0] || true);
@@ -268,20 +265,20 @@
         w.scrollBy({
           left: parentRects.left,
           top: parentRects.top,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       } else {
         // reveal element in viewport
         w.scrollBy({
           left: clientRects.left,
           top: clientRects.top,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     };
   }
 
-  if (typeof exports === 'object') {
+  if (typeof exports === "object") {
     // commonjs
     module.exports = { polyfill: polyfill };
   } else {

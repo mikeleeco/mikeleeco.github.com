@@ -14,6 +14,7 @@ description: 'Using ggplot2 and animation packages to reproduce and animate the 
 bigimg: [{src: "/img/gg-1.png", desc: "Measles Animation"}]
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="mastering-animation-in-r" class="section level2">
@@ -33,7 +34,7 @@ New from <a href="https://twitter.com/hashtag/COE2017?src=hash">#COE2017</a>: 21
 <h2>Wall Street Journal Measles Vaccination Chart</h2>
 <p>One of the more compelling data visualizations produced in recent years is the following representation of measles incidence from 1928 to 2003 produced by the Wall Street Journal graphics team:</p>
 <div class="figure">
-<img src="/img/measles.png" alt="Wall Street Journal" />
+<img src="/img/measles.png" alt="" />
 <p class="caption">Wall Street Journal</p>
 </div>
 <p>In the two years after its release, many prominent data journalists, designers, and developers have analyzed/applauded the design decisions in the chart, which urge the reader to its take-home message: the introduction of the measles vaccine <strong>drastically</strong> reduced the incidence of the virus.</p>
@@ -129,7 +130,7 @@ Once we have the skeleton for our plot, we can add an appropriate x axis scale, 
            vjust=1, hjust=0, size=I(3), family=&quot;Open Sans&quot;)</code></pre>
 <p>Voila!</p>
 <div class="figure">
-<img src="/img/gg-1.png" alt="Measles Animation using animation" />
+<img src="/img/gg-1.png" alt="" />
 <p class="caption">Measles Animation using animation</p>
 </div>
 </div>
@@ -138,7 +139,7 @@ Once we have the skeleton for our plot, we can add an appropriate x axis scale, 
 <p>It’s dang easy to create an animation using <code>gganimate</code>. Just add <code>frame</code> to the initial ggplot2 call and you’re good to go! In our plot, we’ll want to iterate over the data years, so <code>.frame = year</code></p>
 <pre class="r"><code>gganimate(gg, &quot;/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif&quot;)</code></pre>
 <div class="figure">
-<img src="/img/gganimate_measles.gif" alt="Measles Animation using gganimate" />
+<img src="/img/gganimate_measles.gif" alt="" />
 <p class="caption">Measles Animation using gganimate</p>
 </div>
 <p>That’s a great start! Though this could be further developed using <code>gganimate</code> I prefer to use the <code>animation</code> package’s <code>saveGIF</code> function since I prefer the method in which multiple images can be called within one call.</p>
@@ -205,7 +206,7 @@ Once we have the skeleton for our plot, we can add an appropriate x axis scale, 
   }
   ,movie.name=&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&quot;,interval = .1, ani.width = 2050, ani.height = 1550)</code></pre>
 <div class="figure">
-<img src="/img/measlesCompressed.gif" alt="Measles Animation using animation" />
+<img src="/img/measlesCompressed.gif" alt="" />
 <p class="caption">Measles Animation using animation</p>
 </div>
 <div id="addendum---gif-file-size-management" class="section level3">
@@ -222,7 +223,7 @@ gif_compress(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measl
 file.size(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif&quot;)</code></pre>
 <pre><code>## [1] NA</code></pre>
 <pre class="r"><code>file.size(&quot;/home/michael/Documents/mikeleeco.github.com/static/img/measlesCompressed.gif&quot;)</code></pre>
-<pre><code>## [1] 24104452</code></pre>
+<pre><code>## [1] NA</code></pre>
 <p>Still large but more manageable.</p>
 <p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="https://twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
 </div>
