@@ -1,73 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Kris Bryant Performance Projection | Michael Lee
+    </title>
 
-<head>
-    <meta name="generator" content="Hugo 0.56.0" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kris Bryant Performance Projection | Michael Lee</title>
-
-     
-      
-    
-    
-    
-    
-    
+         
 
   <meta name="author" content="">
 
- 
-    <meta property="og:title" content="Kris Bryant Performance Projection" />
+ <meta property="og:title" content="Kris Bryant Performance Projection" />
 <meta property="og:description" content="A dynamic rCharts visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players. Read more at http://mikelee.co/posts/milb-similarity-scores/.
 You can change the y-axis parameters by selecting the performance measure you’d like to visualize. Additionally, hover over the points to see player details, and select players in the legend to show or remove their data from the graph.
    Year   Age   LevEq   G   PA   AB   R   H   X2B   X3B   HR   RBI   SB   CS   BB   SO   BA   OBP   SLG   OPS   Count     2015   23   3   130   548   489   76   138   32   5   24   83   9   4   47   105   0." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2015-03-25-bryant-visualization/" />
+<meta property="og:url" content="/posts/2015-03-25-bryant-visualization/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-03-25T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-03-25T00:00:00+00:00" />
- 
-    
-
 
  
-    <meta name="twitter:site" content="@mikeleeco">
+
+
+ <meta name="twitter:site" content="@mikeleeco">
 <meta name="twitter:creator" content="@mikeleeco">
 <meta name="twitter:title" content="Kris Bryant Performance Projection" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content=""/>
-<meta name="twitter:description" content="An interactive visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players"/> 
-    
-     
-    
+<meta name="twitter:description" content="An interactive visualization displaying performance projections for Kris Bryant based on his 10 most similar career MiLB comparable players"/>  
 <script type="application/javascript">
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 	ga('create', 'UA-58518999-1', 'auto');
-	
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
  
-    
-    
-    <link rel="canonical" href="/posts/2015-03-25-bryant-visualization/">   <link rel="icon" type="image/png" href="img/avatar-transparent.png">
 
-    <link rel="stylesheet" href="/css/bulma.css">
-    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css">
+    <link rel="canonical" href="/posts/2015-03-25-bryant-visualization/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png">
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
     <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
 
-    <link rel="stylesheet" href="/css/landing.css">   
+    <link rel="stylesheet" href="/css/landing.css" />
+      
     
     
-</head>
+  </head>
+  
 
-
-<body>
+  <body>
     <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 <nav class="nav has-shadow">
@@ -78,22 +72,18 @@ if (!doNotTrack) {
 </div>
 
 <div class="nav-center">
-    
 
     <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
         <span class="icon">
             <i class="fab fa-github"></i>
           </span>
     </a>
-    
-    
 
     <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
         <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
     </a>
-    
 </div>
 
 
@@ -117,21 +107,18 @@ if (!doNotTrack) {
         
         <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
         
-        <a itemprop="url" class="nav-item is-tab " href="/resume/"><span itemprop="name">Resume</span></a>
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
         
 </div>
 </nav> </header>
     <main>
 
-
 <div class="columns is-fullheight">
-    <div class="column">
-        <section class="hero is-default is-bold">
-            <div class="hero-body">
-                <div class="content container">
-
-                
-                  <head>
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
   <link rel="stylesheet" href="/css/postCustom.css" />
   <script src="/js/hideOutput.js"></script>
 </head>
@@ -903,30 +890,25 @@ $(document).ready(function () {
 
 
 </div>
-
-                
-                
-                </div>
-                <br>
-            </div>
-        </section>
-    </div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
 </div>
 
 </main>
-    <footer> 
-  <footer class="footer">
+    <footer> <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        Michael Lee - 2020
+        Michael Lee - 2021
       </p>
     </div>
   </div>
-</footer> 
-</footer>
+</footer> </footer>
 
     <script async type="text/javascript" src="/js/bulma.js"></script>
-</body>
-
+  </body>
 </html>

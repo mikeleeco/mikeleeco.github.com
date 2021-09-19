@@ -3,10 +3,10 @@ title: "sabr - R package"
 tags: [R, sabr, baseball, data]
 author: "Michael Lee"
 date: 2016-04-10
-categories: ["project"]
+categories: ["projects"]
 comments: true
 description: Connect to the Lahman SQL Database to query and calculate MLB offensive performance statistics
-bigimg: [{src: "/img/county.jpg", desc: "Milwaukee County Stadium"}]
+bigimg: [{ src: "/img/county.jpg", desc: "Milwaukee County Stadium" }]
 twitterimg: "https://www.mikelee.co/img/county.jpg"
 ---
 
@@ -20,7 +20,6 @@ The [sabr package](https://github.com/mikeleeco/sabr/) connects the Lahman SQL D
 
 Download the latest development version from github:
 
-
 ```r
 if (packageVersion("devtools") < 1.6) {
   install.packages("devtools")
@@ -30,19 +29,19 @@ devtools::install_github("mdlee12/sabr")
 
 ## Motivation:
 
-wOBA is one of the best catch-all offensive performance statistics, but it's formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season's run environment. 
+wOBA is one of the best catch-all offensive performance statistics, but it's formula is a bit convoluted since it requires 1) ten distinct rate stats and 2) weighted values based on a season's run environment.
 
 For example, the wOBA formula for the 2013 season was:
-
 
 ```r
 wOBA = (0.690 * uBB + 0.722 * HBP + 0.888 * (H - DB - TR - HR) + 1.271 * DB + 1.616 * TR + 2.101 * HR) / (AB + BB - IBB + SF + HBP)
 ```
+
 Check out [Fangraphs](http://www.fangraphs.com/library/offense/woba/)' library for additional details.
 
 ## New Functions with 0.2:
 
-* wRAA_season : Returns a MLB player's weighted Runs Above Average by yearID
+- wRAA_season : Returns a MLB player's weighted Runs Above Average by yearID
 
 ```r
 library(sabr)
@@ -53,7 +52,7 @@ wRAA_season("braunry02","2015")
 ## [1] 23.89798
 ```
 
-* wRC_season : Returns a MLB player's weighted Runs Created by yearID
+- wRC_season : Returns a MLB player's weighted Runs Created by yearID
 
 ```r
 wRC_season("molitpa01","1991")
@@ -63,7 +62,7 @@ wRC_season("molitpa01","1991")
 ## [1] 127.0164
 ```
 
-* wRCp_season : Returns a MLB player's weighted Runs Created Plus by yearID
+- wRCp_season : Returns a MLB player's weighted Runs Created Plus by yearID
 
 ```r
 wRCp_season("yountro01","1989")
@@ -72,17 +71,19 @@ wRCp_season("yountro01","1989")
 ```
 ## [1] 152.5421
 ```
+
 **Full calculation details are in the [wOBA and wRC+ calculation.Rmd file](https://github.com/mdlee12/sabr/blob/master/vignettes/wOBA%20and%20wRC%2B%20calculation.Rmd)**
 
-*wRCp_season makes a couple assumptions:*
+_wRCp_season makes a couple assumptions:_
+
 1. Park Factors are pulled from the Lahman Database - these are different from other sources
 2. A player's primary position is used to remove pitchers from the League Runs/Plate Appearance calculation
 
-******
+---
 
 ## Key Functions from 0.1:
 
-* battingseason : Offensive seasonal performance by playerID and yearID
+- battingseason : Offensive seasonal performance by playerID and yearID
 
 ```r
 battingseason("parrage01","2014")
@@ -93,7 +94,7 @@ battingseason("parrage01","2014")
 ## 1 parrage01   2014      2 ARI,MIL 529 64 138 22  4  9  40  9  7 32 100   5  2  6   10   5
 ```
 
-* battingcareer : Offensive career performance by playerID by organized by season
+- battingcareer : Offensive career performance by playerID by organized by season
 
 ```r
 battingcareer("fieldpr01")
@@ -114,7 +115,7 @@ battingcareer("fieldpr01")
 ## 11 fieldpr01   2015      1    TEX 613  78 187 28  0 23  98  0  0  64  88  14  5  0   21  11
 ```
 
-* woba_season : Returns a MLB player's weighted On-Base Average by yearID
+- woba_season : Returns a MLB player's weighted On-Base Average by yearID
 
 ```r
 woba_season("fieldpr01","2014")
@@ -124,13 +125,13 @@ woba_season("fieldpr01","2014")
 ## [1] 0.3049516
 ```
 
+- lahman_search : Returns a player's Lahman playerID using either:
 
-* lahman_search : Returns a player's Lahman playerID using either:
- + nameFirst (Player First Name)
- + nameLast (Player Last Name)
- + nameGiven (Player Given Name)
- + retroID ([Retrosheet](http://www.retrosheet.org/retroID.htm) ID)
- + bbrefID ([Baseball Reference](http://www.baseball-reference.com/players/) ID)
+* nameFirst (Player First Name)
+* nameLast (Player Last Name)
+* nameGiven (Player Given Name)
+* retroID ([Retrosheet](http://www.retrosheet.org/retroID.htm) ID)
+* bbrefID ([Baseball Reference](http://www.baseball-reference.com/players/) ID)
 
 ```r
 lahman_search(nameFirst = "Robin")
@@ -181,5 +182,6 @@ lahman_search(bbrefID = "yostne01")
 ## 1 yostne01       Ned     Yost Edgar Frederick yoste001 yostne01
 ```
 
-******
+---
+
 Have a question, issue or suggestion? Create a pull request, file an issue, or feel free to contact me on [Twitter](https://twitter.com/mikeleeco)
