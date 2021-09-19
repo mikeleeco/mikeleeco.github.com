@@ -9,8 +9,8 @@
           {{ if eq .Type "posts" }} {{ partial "post.html" . }} {{ else if eq
           .Type "interactives" }} {{ partial "interactives.html" . }} {{ else if
           eq .Type "projects" }} {{ partial "projects.html" . }} {{ else if eq
-          .Type "animation" }} {{ partial "animation.html" . }} {{ else }} NO
-          MATCHING PARTIAL {{.Content}} {{ end }}
+          .Type "animation" }} {{ partial "animation.html" . }} {{ else }}
+          {{.Content}} {{ end }}
         </div>
         <br />
       </div>
