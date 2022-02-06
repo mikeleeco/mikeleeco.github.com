@@ -3,16 +3,13 @@
 </head>
 
 <div class="container">
-	<div class="column is-full-desktop">
-	    <h1 class="title is-2">
-	        {{ .Title }}
-	    </h1>
-	    <h4>{{ .Date.Format "January 2, 2006" }}</h4>
-	    {{ if .Description }}
-	    	<blockquote itemprop="about">{{ .Description }}</blockquote>
-	    {{ end }}
-	</div>
-  
-  {{ .Content }}
+  <div class="column is-full-desktop">
+    <h1 class="title is-2">{{ .Title }}</h1>
+    <h4>{{ .Date.Format "January 2, 2006" }}</h4>
+    {{ if .Description }}
+    <blockquote itemprop="about">{{ .Description }}</blockquote>
+    {{ end }}
+  </div>
 
+  {{ .Content }}
 </div>

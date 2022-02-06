@@ -17,7 +17,12 @@
   </script>
 
   <link rel="stylesheet" href="/css/landing.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script async type="text/javascript" src="/js/bulma.js"></script>
+
+  <script src="/js/filterTab.js"></script>
+  <script src="/js/scrollForward.js"></script>
 
   <style>
     /* Style for our header texts
@@ -52,8 +57,7 @@
     }
 
     .containerMargins {
-      margin-left: 2.5%;
-      margin-right: 2.5%;
+      padding: 5%;
     }
 
     .michael {
@@ -185,16 +189,7 @@
   </style>
 </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-  integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-  crossorigin="anonymous"
-/>
-<script src="/js/filterTab.js"></script>
-<script src="/js/scrollForward.js"></script>
-
+<body>
 <section class="hero is-medium is-light">
   <div class="hero-body">
     <div class="columns containerMargins">
@@ -216,73 +211,74 @@
 </section>
 
 <section class="hero is-small is-light">
+
   <div
-    class="container is-fluid has-text-centered"
-    style="margin-left: 2.5%; margin-right: 2.5%"
-  >
-    <div class="tile is-ancestor" style="flex-wrap: wrap">
-      <div class="tile is-parent">
-        <article class="tile is-child box containerMargins">
-          <h3 class="title is-2">R Programming</h3>
-          <i class="fab fa-r-project" style="font-size: 5em"></i>
-          <ul class="has-text-left tileBullet">
-            <li>
-              Extensive experience with R programming, including package development, shiny development, and automated report development.
-            </li>
-            <li>
-              Co-authored the EdSurvey and NAEPprimer data packages for analyzing education survey and assessment data from the National Center for Education Statistics (NCES).
-            </li>
-            <li>
-              Check out some of my more popular R data visualization blog posts: <a href="/posts/2019-01-28-wisconsin-rushing-history/" style="color: blue"
-              >covering the dominance of Wisconsin's Jonathan Taylor</a> and <a href="posts/2017-06-28-wsj-measles-vaccination-chart/" style="color: blue"
-              >my reproduction of the Wall Street Journal's Measles Vaccination chart</a>.
-            </li>
-          </ul>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child box containerMargins">
-          <h3 class="title is-2">Web App Development</h3>
-          <i class="fa fa-magic" style="font-size: 5em"></i>
-          <ul class="has-text-left tileBullet">
-            <li>
-              Experience leading data teams and delivering compelling web products.
-            </li>
-            <li>
-              5+ years of R package and web app development with experience. 1+ years of part-time tooling in Svelte and React.
-            </li>
-            <li> 
-              Familar coordinating development tasks, performing task management, reviewing feature requests, and facilitating collaborative development.
-            </li> 
-          </ul>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child box containerMargins">
-          <h3 class="title is-2">Data Visualization</h3>
-          <i class="fas fa-chart-bar" style="font-size: 5em"></i>
-          <ul class="has-text-left tileBullet">
-            <li>
-              Developed over 20 unique animations for social media distribution
-              at
-              <a href="https://twitter.com/EdNCES/" style="color: blue"
-                >twitter.com/EdNCES</a>.
-            </li>
-            <li>
-              Advanced knowledge of R data analysis and graphics packages. Experienced in all phases of the development process, including design, data manipulation, production, and automation.
-            </li>
-            <li>Experienced building interactive graphics using D3.js. See my contributions to the <a href="/projects/2019-06-28-iap-talis-summary-release/" style="color: blue"
-              >TALIS</a>, <a href="/projects/2020-01-01-iap-timss-summary-release/" style="color: blue"
-              >TIMSS</a>, <a href="/projects/2019-11-05-iap-icils-summary-release/
-              " style="color: blue"
-              >ICILS</a>, and <a href="/projects/2019-12-02-iap-pisa-summary-release/
-              " style="color: blue"
-              >PISA</a> summary releases.</li>
-          </ul>
-        </article>
-      </div>
+  class="has-text-centered"
+  style="margin-left: 2.5%; margin-right: 2.5%"
+>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box containerMargins">
+        <h3 class="title is-2">Web App Development</h3>
+        <i class="fas fa-file-code" style="font-size: 5em"></i>
+        <ul class="has-text-left tileBullet">
+          <li>
+            Experience leading data teams and delivering compelling web products.
+          </li>
+          <li>
+            5+ years of R package and web app development with experience. 1+ years of part-time tooling in Svelte and React.
+          </li>
+          <li> 
+            Familar coordinating development tasks, performing task management, reviewing feature requests, and facilitating collaborative development.
+          </li> 
+        </ul>
+      </article>
     </div>
-  </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box containerMargins">
+        <h3 class="title is-2">R Programming</h3>
+        <i class="fab fa-r-project" style="font-size: 5em"></i>
+        <ul class="has-text-left tileBullet">
+          <li>
+            Extensive experience with R programming, including package development, shiny development, and automated report development.
+          </li>
+          <li>
+            Co-authored the EdSurvey and NAEPprimer data packages for analyzing education survey and assessment data from the National Center for Education Statistics (NCES).
+          </li>
+          <li>
+            Check out some of my more popular R data visualization blog posts: <a href="/posts/2019-01-28-wisconsin-rushing-history/" style="color: blue"
+            >covering the dominance of Wisconsin's Jonathan Taylor</a> and <a href="posts/2017-06-28-wsj-measles-vaccination-chart/" style="color: blue"
+            >my reproduction of the Wall Street Journal's Measles Vaccination chart</a>.
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box containerMargins">
+        <h3 class="title is-2">Data Visualization</h3>
+        <i class="fas fa-chart-bar" style="font-size: 5em"></i>
+        <ul class="has-text-left tileBullet">
+          <li>
+            Developed over 20 unique animations for social media distribution
+            at
+            <a href="https://twitter.com/EdNCES/" style="color: blue"
+              >twitter.com/EdNCES</a>.
+          </li>
+          <li>
+            Advanced knowledge of R data analysis and graphics packages. Experienced in all phases of the development process, including design, data manipulation, production, and automation.
+          </li>
+          <li>Experienced building interactive graphics using D3.js. See my contributions to the <a href="/projects/2019-06-28-iap-talis-summary-release/" style="color: blue"
+            >TALIS</a>, <a href="/projects/2020-01-01-iap-timss-summary-release/" style="color: blue"
+            >TIMSS</a>, <a href="/projects/2019-11-05-iap-icils-summary-release/
+            " style="color: blue"
+            >ICILS</a>, and <a href="/projects/2019-12-02-iap-pisa-summary-release/
+            " style="color: blue"
+            >PISA</a> summary releases.</li>
+        </ul>
+      </article>
+    </div>
+  </div>  
+  </div>  
 </section>
 
 <section class="hero is-small is-light has-text-centered">
@@ -378,7 +374,7 @@
       {{ end }}   
     </div>
 
-
+</body>
 
   {{ partial "footer" .}}
 </section>
