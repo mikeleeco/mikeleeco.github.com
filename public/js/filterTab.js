@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $('section[data-content="' + "projects" + '"]').addClass("is-active");
+
   $("#tabs li").on("click", function () {
     var tab = $(this).data("tab");
 

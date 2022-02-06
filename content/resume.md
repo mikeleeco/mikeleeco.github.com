@@ -37,13 +37,13 @@ A developer living in the Washington, DC area specializing in the creation of gr
 
 ## Specialties
 
-Data Visualization
-Data Analysis & Processing
-Web Development
-Web Scraping
-R Package Development
-Technical Writing
-Workshop Moderation
+- Data Visualization
+- Data Analysis & Processing
+- R Package Development
+- Web Development
+- Web Scraping
+- Technical Writing
+- Workshop Moderation
 
 ## Skills and Tools
 

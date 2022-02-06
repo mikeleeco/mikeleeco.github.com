@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/2022-01-20-perc-covid-data-story/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/projects/</loc>
+    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/2021-01-20-iap-timss-summary-release/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/animation/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -9,12 +27,6 @@
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/animation/2020-08-07-bar-chart-parent-educational-attainment/</loc>
-    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/animation/2020-07-09-racing-bar-chart-enrollment-postsecondary/</loc>
@@ -41,12 +53,6 @@
     <loc>/projects/2020-03-30-nces-animation/</loc>
     <lastmod>2020-03-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/projects/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/projects/</loc>
-    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/animation/2020-03-13-state-map-acgr-update/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -64,9 +70,6 @@
   </url><url>
     <loc>/posts/2020-01-21-left-align-ggplot2-titles-subtitles-and-footnotes/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/projects/2020-01-01-iap-timss-summary-release/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/projects/2019-12-30-automated-report-nevada/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
@@ -199,9 +202,6 @@
   </url><url>
     <loc>/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/</loc>
     <lastmod>2016-05-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/2016-05-28-sabr-r-package/</loc>
-    <lastmod>2016-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/projects/2016-05-28-sabr-r-package/</loc>
     <lastmod>2016-04-10T00:00:00+00:00</lastmod>

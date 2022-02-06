@@ -6,7 +6,26 @@
     <description>Recent content in projects on Michael Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PERC Covid Data Story</title>
+      <link>/projects/2022-01-20-perc-covid-data-story/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2022-01-20-perc-covid-data-story/</guid>
+      <description>Background (via https://www.air.org/perc-data-story) Looking Back to Go Forward: Lessons Learned About Teaching and Learning During the Pandemic A data story from the National Survey of Public Education&amp;rsquo;s Response to COVID-19
+Development For this project I acted as data story development coordinator and visualization specialist. I coordinated project relations between the content area experts (researchers who conducted the study) and the data story development team creating the web product, consisting of designers and web developers.</description>
+    </item>
+    
+    <item>
+      <title>International Activities Program Highlights - TIMSS</title>
+      <link>/projects/2021-01-20-iap-timss-summary-release/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2021-01-20-iap-timss-summary-release/</guid>
+      <description>Background (via https://nces.ed.gov/surveys/timss/) The Trends in International Mathematics and Science Study (TIMSS) is an international comparative study that measures trends in mathematics and science achievement at the 4th and 8th grades every 4 years. TIMSS is designed to align broadly with mathematics and science curricula in the participating education systems and, therefore, to reflect students’ school-based learning. The United States has participated in every administration of TIMSS since its inception in 1995, and the study provides valuable information on how U.</description>
+    </item>
+    
     <item>
       <title>NCES Social Media Outreach  - Animation</title>
       <link>/projects/2020-03-30-nces-animation/</link>
@@ -15,15 +34,6 @@
       <guid>/projects/2020-03-30-nces-animation/</guid>
       <description>Background The National Center for Education Statistics (NCES) is the primary federal entity for collecting and analyzing data related to education in the United States. The AIR social media team uses https://twitter.com/EdNCES to broadcast and disseminate the education-related data of the center to the public.
 Goal In an effort to expand the outreach and discoverability of NCES research, the social media team sought to make NCES&#39; static publication figures more impactful through the use of animation.</description>
-    </item>
-    
-    <item>
-      <title>International Activities Program Highlights - TIMSS</title>
-      <link>/projects/2020-01-01-iap-timss-summary-release/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/2020-01-01-iap-timss-summary-release/</guid>
-      <description>Background (via https://nces.ed.gov/surveys/timss/) The Program for International Student Assessment (PISA) is an international assessment that measures 15-year-old students&#39; reading, mathematics, and science literacy every three years. First conducted in 2000, the major domain of study rotates between reading, mathematics, and science in each cycle. PISA also includes measures of general or cross-curricular competencies, such as collaborative problem solving. By design, PISA emphasizes functional skills that students have acquired as they near the end of compulsory schooling.</description>
     </item>
     
     <item>
@@ -111,16 +121,6 @@ Goal Develop an R package that gives users functions to perform analyses that ac
       <guid>/projects/2017-06-03-naepprimer-r-package/</guid>
       <description>Background National Assessment of Educational Progress (NAEP) data sets from the National Center for Education Statistics (NCES) require special statistical methods to analyze. Because of their scope and complexity, users with computers that have insufficient memory to read in entire NAEP data sets might have trouble conducting analyses without having to write special code to read in just the appropriate variables.
 Goal Develop an R package that would contain a random mini-sample of real data from the 2005 grade 8 mathematics assessment that have been approved for public use.</description>
-    </item>
-    
-    <item>
-      <title>sabr - R package</title>
-      <link>/posts/2016-05-28-sabr-r-package/</link>
-      <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2016-05-28-sabr-r-package/</guid>
-      <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
     </item>
     
     <item>

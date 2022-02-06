@@ -134,16 +134,6 @@ This is also a R code script. And a markdown document. And an HTML page. All of 
     </item>
     
     <item>
-      <title>sabr - R package</title>
-      <link>/posts/2016-05-28-sabr-r-package/</link>
-      <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2016-05-28-sabr-r-package/</guid>
-      <description>The sabr package connects the Lahman SQL Database with functions used in calculating offensive performance in the MLB, namely wOBA. Created by Tom Tango and popularized in The Book: Playing the Percentages in Baseball, wOBA uses yearly MLB performance to weigh offensive measures relative to league value. This package offers the following capabilities:
- Retrieves the most up-to-date wOBA measures from 1871-2015 Queries yearly and career offensive performance from the Lahman SQL database Calculates a player&amp;rsquo;s seasonal wOBA performance  Installation: Download the latest development version from github:</description>
-    </item>
-    
-    <item>
       <title>Visualizing Video Games Throughout History</title>
       <link>/posts/2015-06-10-video-games-interactive/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
