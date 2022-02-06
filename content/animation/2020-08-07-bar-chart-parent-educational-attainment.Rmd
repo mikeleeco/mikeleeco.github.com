@@ -4,11 +4,13 @@ author: ''
 date: '2020-08-07'
 categories: animation
 tags:
-- animation
-- dataviz
-- ggplot2
-- gganimate
-- R
+  - animation
+  - dataviz
+  - ggplot2
+  - gganimate
+  - R
+  - NCES
+  - bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Higher percentages of adults with higher levels of education than of adults with lower levels of education reported that computers and the Internet were always available for educational purposes for elementary and secondary students in their households.'
 bigimg: [{src: "/img/barChartEducational_Attainment.gif", desc: "Higher percentages of adults with higher levels of education than of adults with lower levels of education reported that computers and the Internet were always available for educational purposes for elementary and secondary students in their households."}]

@@ -9,6 +9,8 @@ tags:
 - ggplot2
 - gganimate
 - R
+- NCES
+- line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Between 1999–2000 & 2015–16, average student loan debt for medical doctorate completers increased by 97% (from $124,700 to $246,000).'
 bigimg: [{src: "/img/lineEducationGridDoctorate.gif", desc: "Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016"}]

@@ -9,6 +9,8 @@ tags:
 - ggplot2
 - gganimate
 - R
+- NCES
+- bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats'
 bigimg: [{src: "/img/barChartGender_Earnings2019.gif", desc: "How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats"}]

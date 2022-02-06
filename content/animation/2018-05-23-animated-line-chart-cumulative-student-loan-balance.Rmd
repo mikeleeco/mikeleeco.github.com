@@ -9,6 +9,8 @@ tags:
 - ggplot2
 - gganimate
 - R
+- NCES
+- line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Among grad school completers in 2015-16 who took out student loans, the avgerage balance was highest for those completing a professional doctorate ($186,600).'
 bigimg: [{src: "/img/lineEducationLoans.gif", desc: "Average cumulative student loan balance for graduate school completers, by degree type: Selected years, 2000-2016"}]

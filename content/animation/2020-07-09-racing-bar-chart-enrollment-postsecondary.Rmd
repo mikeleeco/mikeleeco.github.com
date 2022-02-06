@@ -4,11 +4,13 @@ author: ''
 date: '2020-07-09'
 categories: animation
 tags:
-- animation
-- dataviz
-- ggplot2
-- gganimate
-- R
+  - animation
+  - dataviz
+  - ggplot2
+  - gganimate
+  - R
+  - NCES
+  - bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Total enrollment in public elementary and secondary schools has grown since 1995, but it has not grown across all racial/ethnic groups. As such, racial/ethnic distributions of public school students across the country have shifted.'
 bigimg: [{src: "/img/barChartRaceK12Percent.gif", desc: "Total enrollment in public elementary and secondary schools has grown since 1995, but it has not grown across all racial/ethnic groups. As such, racial/ethnic distributions of public school students across the country have shifted."}]

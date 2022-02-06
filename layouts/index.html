@@ -23,8 +23,8 @@
     /* Style for our header texts
   * --------------------------------------- */
     * {
-      font-family: "Lato", "Open Sans", "Lora", "Lucida Sans Unicode", Arial,
-        sans-serif;
+    font-family: 
+      sans-serif;
     }
 
     #tab-content section {
@@ -200,11 +200,9 @@
     <div class="columns containerMargins">
       <div class="column is-marginless is-paddingless">
         <h1 class="title is-1"><strong> Michael Lee </strong></h1>
-        <h2 class="subtitle is-5">
-          I’m a research and data professional with an interest in creating
-          products and tools that supplement the acquisition of knowledge. My
-          toolkit includes R, SQL, D3, and LaTeX, and my background in special
-          education assists in making complex concepts accessible.
+        <h2 class="subtitle is-4">
+        Developer living in the Washington, DC area specializing in the creation of graphics, web applications, and other data-driven projects. I teach workshops on R programming and data visualization and also enjoy baking baklava, biking, and playing word games.
+
         </h2>
       </div>
       <div class="column is-marginless is-paddingless">
@@ -229,36 +227,33 @@
           <i class="fab fa-r-project" style="font-size: 5em"></i>
           <ul class="has-text-left tileBullet">
             <li>
-              Co-authored the EdSurvey R package for analysis of survey data
-              using NCES statistical methods, including the development of R
-              functions from scratch (accompanied by acceptance tests), two
-              vignettes, and presentation of the package’s practical use for
-              researchers at 2016, 2017, and 2018 AERA workshops
+              Extensive experience with R programming, including package development, shiny development, and automated report development.
             </li>
             <li>
-              Co-authored the NAEPprimer data package for connecting to random
-              mini-sample of real data from the 2005 grade 8 NAEP mathematics
-              assessment
+              Co-authored the EdSurvey and NAEPprimer data packages for analyzing education survey and assessment data from the National Center for Education Statistics (NCES).
+            </li>
+            <li>
+              Check out some of my more popular R data visualization blog posts: <a href="/posts/2019-01-28-wisconsin-rushing-history/" style="color: blue"
+              >covering the dominance of Wisconsin's Jonathan Taylor</a> and <a href="posts/2017-06-28-wsj-measles-vaccination-chart/" style="color: blue"
+              >my reproduction of the Wall Street Journal's Measles Vaccination chart</a>.
             </li>
           </ul>
         </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child box containerMargins">
-          <h3 class="title is-2">Automated Reporting</h3>
+          <h3 class="title is-2">Web App Development</h3>
           <i class="fa fa-magic" style="font-size: 5em"></i>
           <ul class="has-text-left tileBullet">
             <li>
-              Automated the production of summary reports, each featuring a
-              custom-designed LaTeX template embedded with unique ggplot2
-              visualizations illustrating data trends
+              Experience leading data teams and delivering compelling web products.
             </li>
             <li>
-              Collaborated with designers to replicate a visualization using
-              base R graphics tools to produce over 2000 visualizations of
-              student and teacher level survey data to populate client summary
-              reports
+              5+ years of R package and web app development with experience. 1+ years of part-time tooling in Svelte and React.
             </li>
+            <li> 
+              Familar coordinating development tasks, performing task management, reviewing feature requests, and facilitating collaborative development.
+            </li> 
           </ul>
         </article>
       </div>
@@ -268,44 +263,21 @@
           <i class="fas fa-chart-bar" style="font-size: 5em"></i>
           <ul class="has-text-left tileBullet">
             <li>
-              Developed over 10 unique animations for social media distribution
+              Developed over 20 unique animations for social media distribution
               at
               <a href="https://twitter.com/EdNCES/" style="color: blue"
-                >twitter.com/EdNCES</a
-              >
+                >twitter.com/EdNCES</a>.
             </li>
             <li>
-              Advanced knowledge of ggplot2, the tidyverse, and additional R
-              packages to create animations and print-ready graphics from raw
-              data
+              Advanced knowledge of R data analysis and graphics packages. Experienced in all phases of the development process, including design, data manipulation, production, and automation.
             </li>
-            <li>Experienced building interactive graphics using D3.js</li>
-          </ul>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child box containerMargins">
-          <h3 class="title is-2">Web Development</h3>
-          <i class="fas fa-code" style="font-size: 5em"></i>
-          <ul class="has-text-left tileBullet">
-            <li>
-              Customized Bootstrap and Bulma frameworks featuring HTML and CSS
-              responsive design principles
-            </li>
-            <li>
-              Experienced creating unique websites in both Jekyll and Hugo
-              static site generation frameworks
-            </li>
-            <li>
-              My blog post describing my reproduction of the Wall Street
-              Journal’s famous measles vaccination chart as an animation was
-              featured across
-              <a
-                href="https://www.linkedin.com/feed/update/urn:li:activity:6289485767152529408/"
-                style="color: blue"
-                >DataCamp's social media platforms</a
-              >.
-            </li>
+            <li>Experienced building interactive graphics using D3.js. See my contributions to the <a href="/projects/2019-06-28-iap-talis-summary-release/" style="color: blue"
+              >TALIS</a>, <a href="/projects/2020-01-01-iap-timss-summary-release/" style="color: blue"
+              >TIMSS</a>, <a href="/projects/2019-11-05-iap-icils-summary-release/
+              " style="color: blue"
+              >ICILS</a>, and <a href="/projects/2019-12-02-iap-pisa-summary-release/
+              " style="color: blue"
+              >PISA</a> summary releases.</li>
           </ul>
         </article>
       </div>
@@ -329,6 +301,14 @@
     <!-- div that contains the tabs, as well as the ids -->
     <div class="tabs is-small is-boxed is-centered" id="tabs">
       <ul>
+        <li data-tab="projects" class="is-active">
+          <a id="lessPadding">
+            <span id="faIcon" class="icon is-small"
+              ><i class="fas fa-file-code"></i
+            ></span>
+            <span id="mobileText">Projects</span>
+          </a>
+        </li>
         <li data-tab="animation">
           <a id="lessPadding">
             <span id="faIcon" class="icon is-small"
@@ -343,14 +323,6 @@
               ><i class="fas fa-chart-line"></i
             ></span>
             <span id="mobileText">Interactives</span>
-          </a>
-        </li>
-        <li data-tab="projects">
-          <a id="lessPadding">
-            <span id="faIcon" class="icon is-small"
-              ><i class="fas fa-file-code"></i
-            ></span>
-            <span id="mobileText">Projects</span>
           </a>
         </li>
         <li data-tab="posts">

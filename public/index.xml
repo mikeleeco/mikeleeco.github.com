@@ -148,6 +148,15 @@ Reading this recent 538 article I noticed a neat stacked bar chart:</description
     </item>
     
     <item>
+      <title>International Activities Program Highlights - TIMSS</title>
+      <link>/projects/2020-01-01-iap-timss-summary-release/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2020-01-01-iap-timss-summary-release/</guid>
+      <description>Background (via https://nces.ed.gov/surveys/timss/) The Program for International Student Assessment (PISA) is an international assessment that measures 15-year-old students&#39; reading, mathematics, and science literacy every three years. First conducted in 2000, the major domain of study rotates between reading, mathematics, and science in each cycle. PISA also includes measures of general or cross-curricular competencies, such as collaborative problem solving. By design, PISA emphasizes functional skills that students have acquired as they near the end of compulsory schooling.</description>
+    </item>
+    
+    <item>
       <title>Automated Reports - Nevada Department of Education</title>
       <link>/projects/2019-12-30-automated-report-nevada/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
@@ -332,8 +341,7 @@ Full image: Enrollment in elementary, secondary, and postsecondary institutions:
       <pubDate>Sat, 18 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/animation/2018-08-18-animated-faceted-line-chart-student-loan-doctors/</guid>
-      <description>Animation seen here: Between 1999–2000 &amp;amp; 2015–16, avg. #StudentLoan debt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More #stats on student #debt here in our NEW blog: https://t.co/mz1F3aI943 pic.twitter.com/93mzhYkwgF — NCES (@EdNCES) August 18, 2018    Full image: Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016
- Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
+      <description>Animation seen here: Between 1999–2000 &amp;amp; 2015–16, avg. #StudentLoandebt for medical doctorate completers increased by 97% (from $124,700 to $246,000). More #statson student #debthere in our NEW blog: https://t.co/mz1F3aI943 pic.twitter.com/93mzhYkwgF — NCES (@EdNCES) August 18, 2018   Full image: Average cumulative student loan balance for doctorate degree completers, by degree program: Selected years, 2000–2016   Interested in learning more? Hire me to consult on your next project, follow me on twitter, leave a comment, or contact me via email.</description>
     </item>
     
     <item>
@@ -674,8 +682,8 @@ You can change the y-axis parameters by selecting the performance measure you’
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/resume/</guid>
-      <description>* { font-family: &#39;Lato&#39;, &#39;Open Sans&#39;, &#39;Lora&#39;, &#39;Lucida Sans Unicode&#39;, Arial, sans-serif; }  Professional Profile 5+ years applying open source libraries to analyze data and build products that drive knowledge acquisition and decision making. Whether working independently or collaboratively, I’m able to contribute meaningful work through strong communication skills, critical evaluation of challenging data problems, and the attention to diverse audiences across my professional career.
-Core Compentencies</description>
+      <description>* { font-family: &#39;Lato&#39;, &#39;Open Sans&#39;, &#39;Lora&#39;, &#39;Lucida Sans Unicode&#39;, Arial, sans-serif; }  Professional Profile A developer living in the Washington, DC area specializing in the creation of graphics, web applications, and other data-driven projects. I teach workshops on R programming and data visualization and also enjoy baking baklava, biking, and playing word games.
+Specialties Data Visualization Data Analysis &amp;amp; Processing Web Development Web Scraping R Package Development Technical Writing Workshop Moderation</description>
     </item>
     
   </channel>

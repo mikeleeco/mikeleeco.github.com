@@ -9,6 +9,8 @@ tags:
 - ggplot2
 - gganimate
 - R
+- NCES
+- racingbar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Fall enrollment of U.S. residents in degree-granting postsecondary institutions from 1976 to 2028 by race/ethnicity.'
 bigimg: [{src: "/img/barChartRacePostSec.gif", desc: "Fall enrollment of U.S. residents in degree-granting postsecondary institutions from 1976 to 2028 by race/ethnicity."}]

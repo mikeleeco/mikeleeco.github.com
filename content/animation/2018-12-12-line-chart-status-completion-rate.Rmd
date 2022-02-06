@@ -9,6 +9,8 @@ tags:
 - ggplot2
 - gganimate
 - R
+- NCES
+- line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016'
 bigimg: [{src: "/img/lineCompletionTall.gif", desc: "Status completion rates of 18 to 24 year olds, by race/ethnicity: October 1976 through 2016"}]
