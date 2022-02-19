@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Recreate a FiveThirtyEight Chicklet Stacked Bar Chart in ggplot2 | Michael Lee
+    </title>
+
+          <meta name="author" content=""> 
+ <meta property="og:title" content="Recreate a FiveThirtyEight Chicklet Stacked Bar Chart in ggplot2" />
+<meta property="og:description" content="Inspiration Virtually following along with rstudio::conf 2020 (and having major conference envy) I heard about Claus Wilke’s new package ggtext. The package supports HTML and markdown styling for text and annotations in ggplot2 graphics. If you’re familiar with HTML or D3.js this seems like a basic feature, but in R graphics this functionality is not natively supported.
+Reading this recent 538 article I noticed a neat stacked bar chart:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2020-02-08-recreate-fivethirtyeight-chicklet-stacked-bar-chart-in-ggplot2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-02-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-08T00:00:00+00:00" />
+
+  
+ <meta name="twitter:site" content="@mikeleeco" />
+<meta name="twitter:creator" content="@mikeleeco" />
+<meta name="twitter:title" content="Recreate a FiveThirtyEight Chicklet Stacked Bar Chart in ggplot2" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.mikelee.co/img/chicklet538.png" />
+<meta name="twitter:description" content="Use ggchicklet and ggtext to recreate FiveThirtyEight&#39;s Stacked Bar Chart in ggplot2" />
+ 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
+
+    <link rel="canonical" href="/posts/2020-02-08-recreate-fivethirtyeight-chicklet-stacked-bar-chart-in-ggplot2/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png" />
+
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
+    <script src="/js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <link rel="stylesheet" href="/css/landing.css" />
+      
+    
+    
+  </head>
+  
+
+  <body>
+    <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<nav class="nav has-shadow">
+<div class="nav-left">
+    <a class="nav-item" href="/">
+        <img src="/img/avatar-icon.png" alt="Michael Lee">
+    </a>
+</div>
+
+<div class="nav-center">
+
+    <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+    </a>
+
+    <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+    </a>
+</div>
+
+
+
+<span class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</span>
+
+
+
+<div class="nav-right nav-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        
+        
+        <a itemprop="url" class="nav-item is-tab " href="/posts"><span itemprop="name">Blog</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/projects"><span itemprop="name">Projects</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/interactives"><span itemprop="name">Interactives</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
+        
+</div>
+</nav> </header>
+    <main>
+
+<div class="columns is-fullheight">
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
+  <link rel="stylesheet" href="/css/postCustom.css" />
+  <script src="/js/hideOutput.js"></script>
+</head>
+
+<div class="container">
+  <div class="column is-full-desktop">
+    <h1 class="title is-2">Recreate a FiveThirtyEight Chicklet Stacked Bar Chart in ggplot2</h1>
+    <h4>February 8, 2020</h4>
+    
+  </div>
+
+  
+
+
+<div id="inspiration" class="section level2">
+<h2>Inspiration</h2>
+<p>Virtually following along with <strong>rstudio::conf 2020</strong> (and having major conference envy) I heard about Claus Wilke’s new package <code>ggtext</code>. The package supports HTML and markdown styling for text and annotations in <code>ggplot2</code> graphics. If you’re familiar with HTML or D3.js this seems like a basic feature, but in R graphics this functionality is not natively supported.</p>
+<p>Reading <a href="https://fivethirtyeight.com/features/how-much-football-is-even-in-a-football-broadcast/">this recent 538 article</a> I noticed a neat stacked bar chart:</p>
+<p><img src="/img/orig538.png" /></p>
+<p>That reminded me of a recent package written by Bob Rudis used to create rounded edges in stacked bar charts (aka chicklets). Seemed like a perfect excuse to test out a couple new packages!</p>
+</div>
+<div id="chicklet-graph-recreation-code" class="section level2">
+<h2>538 Chicklet Graph Recreation Code</h2>
+<details open>
+<p><summary>538 Chicklet Graph Recreation Code</summary></p>
+<pre class="r"><code># load libraries
+# devtools::install_github(&quot;tidyverse/ggplot2&quot;)
+library(ggplot2)
+library(ggchicklet)
+library(ggtext)
+library(dplyr)
+library(forcats)
+library(grid)
+
+# import data
+dat &lt;- dat &lt;- data.frame(
+  Sport = c(&quot;NFL&quot;, &quot;NFL&quot;, &quot;NFL&quot;, &quot;MLB&quot;, &quot;MLB&quot;, &quot;MLB&quot;, &quot;NBA&quot;, &quot;NBA&quot;,
+            &quot;NBA&quot;, &quot;NHL&quot;, &quot;NHL&quot;, &quot;NHL&quot;, &quot;EPL&quot;, &quot;EPL&quot;, &quot;EPL&quot;),
+  Type = c(&quot;Game Action&quot;, &quot;Nonaction&quot;, &quot;Commercials&quot;, &quot;Game Action&quot;, 
+            &quot;Nonaction&quot;, &quot;Commercials&quot;, &quot;Game Action&quot;, &quot;Nonaction&quot;, &quot;Commercials&quot;, 
+            &quot;Game Action&quot;, &quot;Nonaction&quot;, &quot;Commercials&quot;, &quot;Game Action&quot;, &quot;Nonaction&quot;, 
+            &quot;Commercials&quot;),
+  Time = c(18, 140.6, 49.9, 22.5, 150.9, 51.8, 49.6, 61.8,
+           33.5, 63, 56.6, 37.4, 58.7, 47.8, 10.1),
+  stringsAsFactors = FALSE)
+
+# refactor levels
+dat &lt;- dat %&gt;% group_by(Sport) %&gt;% mutate(Percent = Time/sum(Time)) %&gt;% ungroup() %&gt;% 
+  mutate(Sport = fct_relevel(
+    Sport,
+    rev(c(&quot;NFL&quot;, &quot;MLB&quot;, &quot;NBA&quot;, &quot;NHL&quot;, &quot;EPL&quot;)))
+  ) %&gt;% 
+  mutate(Type = fct_relevel(
+    Type,
+    c(&quot;Commercials&quot;,&quot;Nonaction&quot;,&quot;Game Action&quot;))
+  ) 
+
+# keep trailing zeroes and add &quot;min&quot; to first bar value labels
+dat$Label &lt;- as.character(sprintf(&quot;%.1f&quot;, dat$Time))
+dat$Label &lt;- ifelse(dat$Type == &quot;Game Action&quot;, paste0(dat$Label, &quot; min&quot;), dat$Label)
+
+# generate plot
+gg &lt;- ggplot(dat, aes(Sport, Percent,  fill = Type, label = Label)) +
+  geom_chicklet(width = 1,radius = unit(6,units = &quot;pt&quot;), position = ggplot2::position_stack(reverse = FALSE)) +
+  geom_text(size = 4, fontface= &quot;bold&quot;, position = position_stack(vjust = 0.5)) +
+  scale_y_continuous(limits = c(0,1),expand = c(0, 0)) +  coord_flip() +
+  theme_minimal() +
+  theme(
+        legend.position = &quot;top&quot;,
+        plot.title = element_markdown(hjust =0.5,family = &quot;Raleway&quot;),
+        plot.subtitle = element_markdown(hjust = 0.5),
+        plot.caption = element_markdown(hjust = 0, size = 11, margin = unit(c(0, 0, 0, 0), &quot;cm&quot;), color = &quot;#718c9e&quot;),
+        legend.text = element_markdown(size = 11),
+        axis.text = element_text(face = &quot;bold&quot;, size = 11),
+        axis.text.x = element_blank(),
+        axis.title.y = element_markdown(hjust = 0, size = 20, margin = unit(c(0, 0, 0, 0), &quot;cm&quot;), color = &quot;#718c9e&quot;),
+        panel.grid = element_blank(),
+        axis.title.x = element_markdown(
+          halign = 0,
+          margin = margin(2, 0, 15, 0),
+          fill = &quot;transparent&quot;
+        )
+        
+  ) +
+  scale_fill_manual(
+    name = NULL,
+    values = c(`Game Action` = &quot;#FA759F&quot;, Nonaction = &quot;#B5BEC9&quot;, Commercials = &quot;#72D4DB&quot;),
+    labels = c(
+      # `Game Action` = &quot;&lt;strong style=&#39;color:#FA759F&#39;&gt;GAME ACTION&lt;/strong&gt; (BALL OR PUCK IN PLAY)&quot;,
+      # Nonaction = &quot;&lt;strong style=&#39;color:#B5BEC9&#39;&gt;NONACTION&lt;/strong&gt; (GAME STOPPAGE, COMMENTARY, ETC.)&quot;,
+      # Commercials = &quot;&lt;strong style=&#39;color:#72D4DB&#39;&gt;COMMERCIALS&lt;/strong&gt;&quot;)
+      `Game Action` = &quot;&lt;strong&gt;GAME ACTION&lt;/strong&gt; (BALL OR PUCK IN PLAY)&quot;,
+      Nonaction = &quot;&lt;strong&gt;NONACTION&lt;/strong&gt; (GAME STOPPAGE, COMMENTARY, ETC.)&quot;,
+      Commercials = &quot;&lt;strong&gt;COMMERCIALS&lt;/strong&gt;&quot;),
+    guide = guide_legend(reverse = TRUE)
+  ) +
+  labs(
+    y = &quot;&lt;span style=&#39;font-size:13pt;&#39;&gt;The average share of broadcast time showing &lt;strong style=&#39;color:#FA759F&#39;&gt;GAME ACTION&lt;/strong&gt; is highest in&lt;br&gt;the English Premier League - but there is more total action in an average&lt;br&gt;National Hockey League game, which lasts longer.&lt;/span&gt;&quot;,    x = NULL, fill = NULL,
+    title = &quot;&lt;b&gt;NFL and MLB games are long, slow affairs&lt;/b&gt;&quot;,
+    subtitle = &quot;Minutes by broadcast by what is shown on screen across five major men&#39;s sports leagues&quot;,
+    caption = &quot;Games that we included: 10 NFL regular-season games between Nov. 7 amd Nov. 18, 2019. 17 MLB postseason games, including all the games in the 2019
+    ACLS, NLCS, and World&lt;br&gt;Series; 10 NBA regular-season games between Nov. 6 and Nov. 15, 2019; 10 NHL regular-season games between Nov. 5 and Nov. 19, 2019, including three overtime games;
+    and&lt;br&gt;seven English Premier League games between Nov. 9 and Nov. 23, 2019. NBA game action includes free throws, so the action time exceeds the game time.&lt;br&gt;
+    &lt;br&gt;
+    FivethirtyEight SOURCE: UNIVERSITY OF TEXAS AT AUSTIN SPORTS ANALYTICS COURSE&quot;
+  ) 
+
+gg
+
+alignTitles &lt;- function(ggplot, title = NULL, subtitle = NULL, caption = NULL) {
+  # grab the saved ggplot2 object
+  g &lt;- ggplotGrob(ggplot)
+  
+  
+  # find the object which provides the plot information for the title, subtitle, and caption
+  if(!is.null(title)) {
+    g$layout[which(g$layout$name == &quot;title&quot;),]$l &lt;- title
+  }
+  if(!is.null(subtitle)) {
+    g$layout[which(g$layout$name == &quot;subtitle&quot;),]$l &lt;- subtitle
+  }
+  if(!is.null(caption)) {
+    g$layout[which(g$layout$name == &quot;caption&quot;),]$l &lt;- caption
+  }
+  g
+}
+
+# align caption to y axis value labels
+gg2 &lt;- alignTitles(gg, caption = 2)
+grid.draw(gg2)
+
+# add arrow
+x &lt;- rev(c(0.25, 0.25, 0.28, 0.28))
+y &lt;- rev(c(0.2, 0.15, 0.15, 0.15))
+grid.bezier(x, y, gp=gpar(lwd=1.5, fill=&quot;black&quot;),
+            arrow=arrow(type=&quot;open&quot;,length = unit(0.1, &quot;inches&quot;)))</code></pre>
+</details>
+<p>
+<p><img src="/img/chicklet538.png" /></p>
+<hr>
+<p>Hope you’ve found this useful! Feel free to reach out to me on twitter with any questions or feedback - <a href="https://twitter.com/mikeleeco" class="uri">https://twitter.com/mikeleeco</a></p>
+</div>
+
+</div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
+</div>
+
+</main>
+    <footer> <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Michael Lee - 2022</p>
+    </div>
+  </div>
+</footer>
+ </footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+  </body>
+</html>

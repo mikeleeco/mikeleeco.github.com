@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Automated Reports - Nevada Department of Education | Michael Lee
+    </title>
+
+          <meta name="author" content="Michael Lee"> 
+ <meta property="og:title" content="Automated Reports - Nevada Department of Education" />
+<meta property="og:description" content="Background Each Fall and Spring the Nevada Department of Education disseminates a summary report detailing results from a social-emotional learning survey. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor. One such example is linked here.
+Development The goal for this project was to automate the production of each school&rsquo;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/projects/2019-12-30-automated-report-nevada/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2019-12-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-30T00:00:00+00:00" />
+
+  
+ <meta name="twitter:site" content="@mikeleeco" />
+<meta name="twitter:creator" content="@mikeleeco" />
+<meta name="twitter:title" content="Automated Reports - Nevada Department of Education" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.mikelee.co/img/nevada.png" />
+<meta name="twitter:description" content="Automate the production of over 700 reports embedded with customized text, tables, visualizations, and 508 compliance tags." />
+ 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
+
+    <link rel="canonical" href="/projects/2019-12-30-automated-report-nevada/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png" />
+
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
+    <script src="/js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <link rel="stylesheet" href="/css/landing.css" />
+      
+    
+    
+  </head>
+  
+
+  <body>
+    <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<nav class="nav has-shadow">
+<div class="nav-left">
+    <a class="nav-item" href="/">
+        <img src="/img/avatar-icon.png" alt="Michael Lee">
+    </a>
+</div>
+
+<div class="nav-center">
+
+    <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+    </a>
+
+    <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+    </a>
+</div>
+
+
+
+<span class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</span>
+
+
+
+<div class="nav-right nav-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        
+        
+        <a itemprop="url" class="nav-item is-tab " href="/posts"><span itemprop="name">Blog</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/projects"><span itemprop="name">Projects</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/interactives"><span itemprop="name">Interactives</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
+        
+</div>
+</nav> </header>
+    <main>
+
+<div class="columns is-fullheight">
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
+  <link rel="stylesheet" href="/css/postCustom.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/projects.css" />
+</head>
+
+<div class="container">
+  <div class="column is-full-desktop">
+    <h1 class="title is-2">Automated Reports - Nevada Department of Education</h1>
+    <h4>December 30, 2019</h4>
+    
+  </div>
+
+  <h2 id="background">Background</h2>
+<p>Each Fall and Spring the Nevada Department of Education disseminates a summary report detailing results from a social-emotional learning survey. The report uses a standard template populated with customized text, data values, and data visualizations. Previous productions of these reports were created by a separate contractor. One such example is <a href="/img/SmithValleySchoolsElementary56.pdf">linked here</a>.</p>
+<h2 id="development">Development</h2>
+<p>The goal for this project was to automate the production of each school&rsquo;s customized report. One special (read: complex) consideration of this report generation was a requirement for 508 compliance. This involves provided specific &ldquo;tags&rdquo; for each report element. For example, each text block is tagged with a <code>P</code>, each header is tagged with it&rsquo;s respective header type (<code>H1</code>, <code>H2</code>, etc), and each visualization has alt text describing the visualization and it&rsquo;s respective data labels/values. I acted as development lead; translating requests from the content area team into the graphic design and data quality control of the reports. Additionally, my role as development lead involved delegating tasks to the team. This involved recreating and improving upon the design of the previous CMSD report. The typesetting was coded in LaTeX and embedded with the Open Sans family to provide an free-to-use font for clarity and emphasis. The figures were generated using the <code>ggplot2</code> and base R graphics packages. Finally, an Rmarkdown file was used to seamlessly integrate each school&rsquo;s pdf visualizations into the school level summary report pdf.</p>
+<p>The updated report is <a href="/img/Lovelock_Elementary_School.pdf">linked here</a>.</p>
+<h3 id="comparison-of-previous-and-new-report">Comparison of Previous and New Report</h3>
+<div class="row">
+  <div class="column">
+    <img src="/img/nevadaOriginal.gif" alt = "Original Nevada Report" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/img/nevadaShell.gif" alt = "Updated Nevada Report" style="width:100%">
+  </div>
+</div>
+<h2 id="software">Software</h2>
+<ul>
+<li><strong>R</strong>: Data cleaning and data visualization production</li>
+<li><strong>LaTeX</strong>: Document preparation, typesetting, and 508 tagging</li>
+</ul>
+<h3 id="click-the-image-below-to-check-out-a-sample-nevada-report">Click the image below to check out a sample Nevada report!</h3>
+<div class="projectBox">
+  <a href="/img/Lovelock_Elementary_School.pdf" target="_blank">
+      <img src="/img/nevada.png" alt="Avatar" class="image" style="width:100%">
+      <a href="/img/Lovelock_Elementary_School.pdf">
+        <div class="middle">
+          <div class="text">Click to view a sample Nevada report.</div>
+        </div>
+      </a>
+  </a>
+</div>
+
+</div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
+</div>
+
+</main>
+    <footer> <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Michael Lee - 2022</p>
+    </div>
+  </div>
+</footer>
+ </footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Seasonal Virgin River Narrows Discharge | Michael Lee
+    </title>
+
+    
+    <meta name="description" content="Investigate and visualize the USGS water discharge data for the Virgin River Narrows from 1993 - 2018" />
+          <meta name="author" content=""> 
+ <meta property="og:title" content="Seasonal Virgin River Narrows Discharge" />
+<meta property="og:description" content="Investigate and visualize the USGS water discharge data for the Virgin River Narrows from 1993 - 2018" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2018-04-16-hiking-the-narrows/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-04-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-16T00:00:00+00:00" />
+
+  
+ <meta name="twitter:site" content="@mikeleeco" />
+<meta name="twitter:creator" content="@mikeleeco" />
+<meta name="twitter:title" content="Seasonal Virgin River Narrows Discharge" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.mikelee.co/img/narrowsLargeTall.png" />
+<meta name="twitter:description" content="Why I probably won&#39;t be hiking The Narrows this April" />
+ 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
+
+    <link rel="canonical" href="/posts/2018-04-16-hiking-the-narrows/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png" />
+
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
+    <script src="/js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <link rel="stylesheet" href="/css/landing.css" />
+      
+    
+    
+  </head>
+  
+
+  <body>
+    <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<nav class="nav has-shadow">
+<div class="nav-left">
+    <a class="nav-item" href="/">
+        <img src="/img/avatar-icon.png" alt="Michael Lee">
+    </a>
+</div>
+
+<div class="nav-center">
+
+    <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+    </a>
+
+    <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+    </a>
+</div>
+
+
+
+<span class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</span>
+
+
+
+<div class="nav-right nav-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        
+        
+        <a itemprop="url" class="nav-item is-tab " href="/posts"><span itemprop="name">Blog</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/projects"><span itemprop="name">Projects</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/interactives"><span itemprop="name">Interactives</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
+        
+</div>
+</nav> </header>
+    <main>
+
+<div class="columns is-fullheight">
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
+  <link rel="stylesheet" href="/css/postCustom.css" />
+  <script src="/js/hideOutput.js"></script>
+</head>
+
+<div class="container">
+  <div class="column is-full-desktop">
+    <h1 class="title is-2">Seasonal Virgin River Narrows Discharge</h1>
+    <h4>April 16, 2018</h4>
+    
+    <blockquote itemprop="about">Investigate and visualize the USGS water discharge data for the Virgin River Narrows from 1993 - 2018</blockquote>
+    
+  </div>
+
+  
+
+
+<p>This April I’m visiting Zion National Park, one of North America’s most interesting locations to explore geologic formations. One such venue in the park is an iconic hike referred to as <em>The Narrows</em>:</p>
+<div class="figure">
+<img src="/img/narrows.jpg" alt="The Narrows in Zion National Park" />
+<p class="caption">The Narrows in Zion National Park</p>
+</div>
+<p>It’s surely even more sensational in person.</p>
+<p>Unfortunately, there’s a catch: the Virgin River, a Colorado river tributary that shaped the distinct rock walls of The Narrows, has seasonal water level changes that can force hikers to trek waist deep in the river or close the route entirely. Online sources confirmed my intuition that the spring run-off leads to closures, but I was curious the extent of seasonality. Let’s dig into it!</p>
+<div id="accessing-the-data" class="section level2">
+<h2>Accessing the data</h2>
+<p>The provisional data for the East Fork of the Virgin River can be easily <a href="https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;cb_00060=on&amp;format=gif_default&amp;period=60&amp;begin_date=&amp;end_date=&amp;site_no=09404900">accessed via the USGS website</a>, including discharge and gage height. I’ll focus on the discharge levels here, since the speed of the river (and not it’s height) is what seems to precipitate closures. The speed threshold that merits closure of The Narrows was inconsistent across the sites I investigated (if you know leave a comment), but the level I saw most often - 150 cfs - is what I will use.</p>
+<p>A brief aside: the USGS logs some super interesting data to visualize time series. Here are some continually updated <a href="https://waterdata.usgs.gov/ut/nwis/uv?cb_00065=on&amp;cb_00060=on&amp;format=gif_default&amp;period=60">sources of water data for Utah</a>, for example. So much to explore!</p>
+<p>Back to The Narrows data. So we’ve got out the csv and it was completely clean like always the end! Not.</p>
+</div>
+<div id="cleaning-the-data" class="section level2">
+<h2>Cleaning the data</h2>
+<p>There was quite a few strange coding choices made through the years accessed (1993 - 2018). What follows are those gory recoding details. One nifty function I learned more about was <code>dplyr::separate</code> which allows you to specify the direction you’d like to merge the characters you’re separating. This allowed me to push values of <code>0 seconds</code> ino the seconds column, even though there were some values where there were no adjoining hours or minutes attached. Nifty!</p>
+<pre class="r"><code>library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(lubridate)
+library(animation)
+library(grid)
+x &lt;- read.csv(&quot;/home/michael/Documents/website/narrows/narrows.csv&quot;, row.names = NULL, stringsAsFactors = FALSE)
+x &lt;- x[1:530086,]
+x2 &lt;- read.csv(&quot;/home/michael/Documents/website/narrows/narrows2.csv&quot;, row.names = NULL, stringsAsFactors = FALSE)
+x &lt;- rbind(x,x2)
+rm(x2)
+x &lt;- x %&gt;% separate(datetime, c(&quot;date&quot;, &quot;time&quot;), &quot; &quot;, extra = &quot;merge&quot;)
+x$date &lt;- mdy(x$date)
+x$timeparse &lt;- hm(x$time)
+x &lt;- x %&gt;% separate(timeparse, c(&quot;hour&quot;, &quot;minute&quot;, &quot;second&quot;), &quot; &quot;, extra = &quot;merge&quot;, fill = &quot;left&quot;)
+x$hour &lt;- gsub(&quot;H&quot;, &quot;&quot;, x$hour)
+x$minute &lt;- gsub(&quot;M&quot;, &quot;&quot;, x$minute)
+x$second &lt;- gsub(&quot;S&quot;, &quot;&quot;, x$second)
+x[,c(&quot;hour&quot;,&quot;minute&quot;,&quot;second&quot;)] &lt;- sapply(x[,c(&quot;hour&quot;,&quot;minute&quot;,&quot;second&quot;)], as.numeric)
+x$hour &lt;- ifelse(is.na(x$hour),0 ,x$hour)
+x$minute &lt;- ifelse(is.na(x$minute),0 ,x$minute)
+x$hour &lt;- ifelse(grepl(&quot;PM&quot;, x$time), x$hour + 12,x$hour)
+x$hour &lt;- ifelse(nchar(x$hour) &lt; 2, paste0(&quot;0&quot;,as.character(x$hour)),as.character(x$hour))
+x$minute &lt;- ifelse(nchar(x$minute) &lt; 2, paste0(&quot;0&quot;,as.character(x$minute)),as.character(x$minute))
+x$second &lt;- ifelse(nchar(x$second) &lt; 2, paste0(&quot;0&quot;,as.character(x$second)),as.character(x$second))
+x$hour &lt;- ifelse(grepl(&quot;24&quot;, x$hour), &quot;00&quot;,x$hour)
+x$timeUpdate &lt;- paste(x$hour,x$minute,x$second, sep = &quot;:&quot;)</code></pre>
+<p>The full data source as an <strong>.Rdata</strong> file can be accessed through <a href="https://mikelee.co/data/narrows.Rdata">this link</a>:</p>
+</div>
+<div id="drill-down-and-visualize" class="section level2">
+<h2>Drill down and visualize</h2>
+<p>The <code>dplyr</code> and <code>lubridate</code> package make it easy to extract seasonality in the data:</p>
+<pre class="r"><code>dischargeByDay &lt;- x %&gt;% mutate(day = yday(date)) %&gt;%
+  group_by(day) %&gt;%
+  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
+
+dischargeByDay$day &lt;- as.Date(as_date(dischargeByDay$day))
+dischargeByDay$month &lt;- month(dischargeByDay$day, label = TRUE)
+
+plot(dischargeByDay$day, dischargeByDay$avgDischarge)</code></pre>
+<p><img src="/posts/2018-04-16-hiking-the-narrows_files/figure-html/drill%20down-1.png" width="1260" style="display: block; margin: auto;" /></p>
+<p>This result is convincing on it’s own: on average from 1993 to 2018, after about 100 days and lasting until about the 160th day (Apri 10th - June 10th), the discharge level breaks the 150 cfs threshold that closes The Narrows hiking route.</p>
+<p>Lets take this result and make it more visually engaging by adding some animation.</p>
+</div>
+<div id="start-with-our-skeleton-plot" class="section level2">
+<h2>Start with our skeleton plot</h2>
+<p>I’ve been poking around with image dimensions and themes for distribution through twitter, and the following theme seems to be a quality balance between plot elements:</p>
+<pre class="r"><code>theme_white &lt;- theme(text = element_text(family=&quot;Open Sans&quot;, color = &quot;black&quot;),
+                     panel.grid = element_blank(),
+                     panel.border = element_blank(),
+                     axis.title.x=element_text(size=26, family = &quot;Open Sans&quot;, margin = margin(t=15, b = 0)),
+                     axis.title.y=element_text(size=26, family = &quot;Open Sans&quot;, margin = margin(r=15, l = 5)),
+                     axis.text.x=element_text(size=22, hjust = 0, family = &quot;Open Sans Light&quot;),
+                     axis.text.y=element_text(size=22, family = &quot;Open Sans Light&quot;),
+                     axis.ticks = element_blank(),           
+                     plot.title=element_text(size=34,family = &quot;Open Sans Extrabold&quot;,hjust= 0,lineheight=1, margin = margin(t = 15)),
+                     plot.subtitle=element_text(size=26, margin = margin(t=15, b = 5),family = &quot;Open Sans&quot;),
+                     plot.caption=element_text(size=18, hjust = 0,margin=margin(t=15, b = 15),lineheight=1.15, family = &quot;Open Sans&quot;),
+                     legend.position=&quot;none&quot;
+)</code></pre>
+<p>It’s important to impelement limits and breaks in the y and x scales to keep the axes stable when using ggplot2 for animation. Otherwise, the plot axes will expand according to the subset of data used in the figure.</p>
+<pre class="r"><code>gg &lt;- ggplot(dischargeByDay, aes(x = day, y = avgDischarge, group = 1)) +
+  scale_y_continuous(limits = c(0, 350), expand = c(0,0)) +
+  scale_x_date(date_breaks = &quot;1 month&quot;, date_labels =  &quot;%b&quot;, expand = c(0,0),limits = c(min(dischargeByDay$day)-1,max(dischargeByDay$day)-2)) +
+  labs(title = &quot;Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)&quot;,
+       subtitle = &quot;If the river is flowing at over 150 Cubic Feet per Second (CFS) the narrows is closed&quot;,
+       caption = &quot;Data Accessed 3/16/2018, retrieved via https://nwis.waterdata.usgs.gov/usa/nwis/uv/&quot;) +
+  xlab(&quot;Date&quot;) + ylab(&quot;Average Discharge&quot;) +
+  theme_bw() + theme_white
+gg</code></pre>
+<div class="figure">
+<img src="/img/gg.png" alt="Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)" />
+<p class="caption">Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)</p>
+</div>
+<p>We’ll then use <code>tweenr</code> and <code>animation</code> to refine the visualization with smooth transitions.</p>
+</div>
+<div id="animate-all-the-things" class="section level2">
+<h2>Animate all the things!</h2>
+<pre class="r"><code>gifReplicate &lt;- function(x) {
+  grid.newpage()
+  grid.draw(x)
+}
+
+yDates &lt;- seq(from = 0, to = max(as.numeric(dischargeByDay$day)), by = 3)
+yDates[1] &lt;- 1
+
+saveGIF({
+
+  for (i in yDates) {
+    
+    gg2 &lt;- gg + geom_point(data = subset(dischargeByDay, day &lt;=i), aes(x = day, y = avgDischarge), alpha = .1)
+    g &lt;- ggplotGrob(gg2)
+    g$layout$l[g$layout$name == &quot;title&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;caption&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;subtitle&quot;] &lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  grid::grid.draw(g); 
+  replicate(10,gifReplicate(g))
+
+  for (i in seq(from =1, to = 366, by = 7)) {
+    
+    gg3 &lt;- gg2 + geom_segment(x = 1, xend = i, y = 150,yend = 150, color= &quot;red&quot;, linetype = 2) 
+    g &lt;- ggplotGrob(gg3)
+    g$layout$l[g$layout$name == &quot;title&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;caption&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;subtitle&quot;] &lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  for (i in yDates) {
+    
+    gg4 &lt;- gg3 + stat_smooth(data = subset(dischargeByDay, day &lt;=i), aes(x = day), se = F, method = &quot;lm&quot;, formula = y ~ poly(x, 20))
+    g &lt;- ggplotGrob(gg4)
+    g$layout$l[g$layout$name == &quot;title&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;caption&quot;] &lt;- 3
+    g$layout$l[g$layout$name == &quot;subtitle&quot;] &lt;- 3
+    grid::grid.draw(g); 
+    grid.newpage()
+  }
+  
+  grid::grid.draw(g); 
+  replicate(100,gifReplicate(g))
+  # grid.draw(gg4)
+  # geom_hline(yintercept = 150, color= &quot;red&quot;, linetype = 2) + 
+  #   geom_line(aes(x=day, y=avgDischarge), size=1.3) +
+},movie.name=paste0(getwd(),&quot;/narrowsLarge.gif&quot;),interval = .02, ani.width = 1200, ani.height = 800)
+
+gif_compress &lt;- function(ingif, outgif, show=TRUE, extra.opts=&quot;&quot;){
+  command &lt;-  sprintf(&quot;gifsicle -O3 %s &lt; %s &gt; %s&quot;, extra.opts, ingif, outgif)
+  system.fun &lt;- if (.Platform$OS.type == &quot;windows&quot;) shell else system
+  if(show) message(&quot;Executing: &quot;, strwrap(command, exdent = 2, prefix = &quot;\n&quot;))
+  system.fun(ifelse(.Platform$OS.type == &quot;windows&quot;, sprintf(&quot;\&quot;%s\&quot;&quot;, shQuote(command)), command))
+}
+
+gif_compress(paste0(getwd(),&quot;/narrowsLarge.gif&quot;),
+             paste0(getwd(),&quot;/narrowsLargeTall.gif&quot;))</code></pre>
+<div class="figure">
+<img src="/img/narrowsLargeTall.gif" alt="Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)" />
+<p class="caption">Mean Flow of the VIRGIN RIVER NARROWS by day (1993 - 2018)</p>
+</div>
+<div id="addendum---further-data-exploration-needed" class="section level3">
+<h3>Addendum - Further Data Exploration Needed:</h3>
+<p>After generating this animation and before sitting down to write this post, I explored the data a little bit more. To my delight (or chagrin) there appears to be a daily pattern to the discharge level. Looking at just April results, the discharge level decreases from 2pm to 5pm before reversing course and increasing until about 2am.</p>
+<pre class="r"><code>dischargeByAprilHour &lt;- x %&gt;% filter(month(date) == 4) %&gt;%
+  mutate(day = yday(date)) %&gt;%
+  group_by(hour) %&gt;%
+  summarise(avgDischarge = mean(discharge, na.rm = TRUE))
+plot(dischargeByAprilHour$hour, dischargeByAprilHour$avgDischarge)</code></pre>
+<p><img src="/posts/2018-04-16-hiking-the-narrows_files/figure-html/daily%20changes%20in%20April-1.png" width="1260" style="display: block; margin: auto;" /></p>
+<p>An exploration for another day or another analyst!</p>
+<hr />
+<p>Interested in learning more? Hire me to consult on your next project, follow me on <a href="https://twitter.com/mikeleeco">twitter</a>, leave a comment, or contact me via <a href="mailto:mdlee12@gmail.com">email</a>. All inquiries welcome!</p>
+</div>
+</div>
+
+</div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
+</div>
+
+</main>
+    <footer> <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Michael Lee - 2022</p>
+    </div>
+  </div>
+</footer>
+ </footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+  </body>
+</html>

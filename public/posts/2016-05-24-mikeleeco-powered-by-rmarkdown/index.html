@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      mikelee.co: Powered by RMarkdown, knitr, and Jekyll | Michael Lee
+    </title>
+
+         
+<meta name="author" content="" />
+
+ <meta property="og:title" content="mikelee.co: Powered by RMarkdown, knitr, and Jekyll" />
+<meta property="og:description" content="This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+ Spend a few months documenting code scripts in RStudio and you&rsquo;ll have surely seen those introductory lines numerous times.
+This is also a R code script. And a markdown document. And an HTML page. All of which are generated within one ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-05-24T00:00:00+00:00" />
+
+  
+ <meta name="twitter:site" content="@mikeleeco" />
+<meta name="twitter:creator" content="@mikeleeco" />
+<meta name="twitter:title" content="mikelee.co: Powered by RMarkdown, knitr, and Jekyll" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://www.mikelee.co/img/jekyll-blog.jpg" />
+<meta name="twitter:description" content="Generating blog content made easier with R" />
+ 
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-58518999-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+ 
+
+    <link rel="canonical" href="/posts/2016-05-24-mikeleeco-powered-by-rmarkdown/" />
+      <link rel="icon" type="image/png" href="img/avatar-transparent.png" />
+
+
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link rel="stylesheet" href="/css/code-highlighting/highlight.min.css" />
+    <script src="/js/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <link rel="stylesheet" href="/css/landing.css" />
+      
+    
+    
+  </head>
+  
+
+  <body>
+    <header> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<nav class="nav has-shadow">
+<div class="nav-left">
+    <a class="nav-item" href="/">
+        <img src="/img/avatar-icon.png" alt="Michael Lee">
+    </a>
+</div>
+
+<div class="nav-center">
+
+    <a class="nav-item" target="blank" href="https://github.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+    </a>
+
+    <a class="nav-item" target="blank" href="https://twitter.com/mikeleeco">
+        <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+    </a>
+</div>
+
+
+
+<span class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</span>
+
+
+
+<div class="nav-right nav-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        
+        
+        <a itemprop="url" class="nav-item is-tab " href="/posts"><span itemprop="name">Blog</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/projects"><span itemprop="name">Projects</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/interactives"><span itemprop="name">Interactives</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/animation"><span itemprop="name">Animation</span></a>
+        
+        <a itemprop="url" class="nav-item is-tab " href="/resume"><span itemprop="name">Resume</span></a>
+        
+</div>
+</nav> </header>
+    <main>
+
+<div class="columns is-fullheight">
+  <div class="column">
+    <section class="hero is-default is-bold">
+      <div class="hero-body">
+        <div class="content container">
+           <head>
+  <link rel="stylesheet" href="/css/postCustom.css" />
+  <script src="/js/hideOutput.js"></script>
+</head>
+
+<div class="container">
+  <div class="column is-full-desktop">
+    <h1 class="title is-2">mikelee.co: Powered by RMarkdown, knitr, and Jekyll</h1>
+    <h4>May 24, 2016</h4>
+    
+  </div>
+
+  <blockquote>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</p>
+</blockquote>
+<p>Spend a few months documenting code scripts in RStudio and you&rsquo;ll have surely seen those introductory lines numerous times.</p>
+<p>This is also a R code script. And a markdown document. And an HTML page. All of which are generated within one .Rmd document. My site had previously supported by Github Pages and Jekyll, and now my preferred statistical software tool will streamline my blogging process. I expect this to make the transition from idea, analyses, visualization, and blog post production much more seamless.</p>
+<p><strong>Inspiration and First Steps</strong></p>
+<p>I first heard about the ability to generate and serve files within R from a tweet from Brendan Rocks:</p>
+<blockquote class="twitter-tweet" align="center" data-lang="en"><p lang="en" dir="ltr">Post on my BARUG talk tonight: Blogging w/ <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> &amp; knitr-jekyll (all credit to <a href="https://twitter.com/xieyihui">@xieyihui</a>!) <a href="https://t.co/PsGXbyXZJa">https://t.co/PsGXbyXZJa</a> <a href="https://t.co/eZycscbmup">pic.twitter.com/eZycscbmup</a></p>&mdash; Brendan Rocks (@rocksbrendan) <a href="https://twitter.com/rocksbrendan/status/656564982885146625">October 20, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>This workflow blew my mind at the time (still does) and the post in which he explains the scaffolding is very useful. Check it out <a href="https://brendanrocks.com/blogging-with-rmarkdown-knitr-jekyll/">here</a>.</p>
+<p>Adding in a <a href="https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_source/2016-05-24-mikeleeco-powered-by-rmarkdown.Rmd"><code>_source</code></a> directory to store .Rmd files allows	Yihui Xie&rsquo;s <a href="https://github.com/yihui/servr">servr package</a> the ability to render markdown documents in  <a href="https://github.com/mikeleeco/mikeleeco.github.com/tree/master/_posts/2016-05-24-mikeleeco-powered-by-rmarkdown.md"><code>_posts</code></a>, which Jekyll converts to HTML - which is what you are reading now!</p>
+<p><strong>Improving Syntax Highlighting</strong> <em>(with updates!)</em></p>
+<p>The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my highlighter (rouge) but were being rendered with an &ldquo;r&rdquo; in front like so:</p>
+<p><code>r``cat(paste(c(&quot;This&quot;,&quot;drove&quot;,&quot;me&quot;,&quot;mental D:&quot;),sep=&quot; &quot;))</code></p>
+<p><code>## This drove me mental D:</code></p>
+<p>An earlier version of this post detailed a method of updating syntax highlighting using redcarpet markdown and pygments - a soon to be deprecated syntax highlighter. Turns out I wasn&rsquo;t the only one having this issue! After more than a few missteps, and applying the advice from <a href="https://github.com/jekyll/jekyll/issues/1342">this post</a>, make sure you have both jekyll <a href="https://rubygems.org/pages/download">ruby</a> installed and updated! After updating your site infrastructure, add a css template with formatting options - such as my <a href="https://github.com/mikeleeco/mikeleeco.github.com/tree/master/public/css/syntax.css"><code>syntax.css</code></a>.</p>
+<p><strong>Final Result</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="nf">cat</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;Yay&#34;</span><span class="p">,</span><span class="s">&#34;for&#34;</span><span class="p">,</span><span class="s">&#34;making&#34;</span><span class="p">,</span><span class="s">&#34;life&#34;</span><span class="p">,</span><span class="s">&#34;easier!&#34;</span><span class="p">),</span><span class="n">sep</span><span class="o">=</span><span class="s">&#34; &#34;</span><span class="p">))</span>
+</code></pre></div><pre tabindex="0"><code>## Yay for making life easier!
+</code></pre><p>Look how great that looks! Lets see what a function looks like.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&#34;mdlee12/sabr&#34;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">sabr</span><span class="p">)</span>
+<span class="n">sabr</span><span class="o">::</span><span class="n">woba_season</span>
+<span class="nf">function </span><span class="p">(</span><span class="n">playerID</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> <span class="n">yearID</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="n">db</span> <span class="o">&lt;-</span> <span class="nf">lahman</span><span class="p">()</span>
+    <span class="n">woba_guts</span> <span class="o">&lt;-</span> <span class="n">RSQLite</span><span class="o">::</span><span class="nf">dbGetQuery</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="s">&#34;SELECT * FROM wOBA_Table&#34;</span><span class="p">)</span>
+    <span class="n">wobayear</span> <span class="o">&lt;-</span> <span class="n">woba_guts[woba_guts</span><span class="o">$</span><span class="n">yearID</span> <span class="o">==</span> <span class="n">yearID</span><span class="p">,</span> <span class="n">]</span>
+    <span class="n">wobayear</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">wobayear</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&#34;SELECT GROUP_CONCAT(DISTINCT teamID) as teamID, 
+</span><span class="s">                   SUM(H) as H, SUM([2B]) as DB, SUM([3B]) as TR,SUM(HR) as HR, 
+</span><span class="s">                   SUM(AB) as AB, SUM(BB) as BB, SUM(IBB) as IBB, SUM(SF) as SF, 
+</span><span class="s">                   SUM(SH) as SH, SUM(HBP) as HBP FROM Batting WHERE playerID = &#39;&#34;</span><span class="p">,</span> 
+                   <span class="n">playerID</span><span class="p">,</span> <span class="s">&#34;&#39; AND yearID = &#39;&#34;</span><span class="p">,</span> <span class="n">yearID</span><span class="p">,</span> <span class="s">&#34;&#39;&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+    <span class="n">db</span> <span class="o">&lt;-</span> <span class="nf">lahman</span><span class="p">()</span>
+    <span class="n">query</span> <span class="o">&lt;-</span> <span class="n">RSQLite</span><span class="o">::</span><span class="nf">dbGetQuery</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">&lt;-</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">uBB</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">wobaBB</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">BB</span> <span class="o">-</span> <span class="n">query</span><span class="o">$</span><span class="n">IBB</span><span class="p">)</span>
+    <span class="n">HBP</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">wobaHB</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">HBP</span><span class="p">)</span>
+    <span class="n">DB</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">woba2B</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">DB</span><span class="p">)</span>
+    <span class="n">TR</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">woba3B</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">TR</span><span class="p">)</span>
+    <span class="n">HR</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">wobaHR</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">HR</span><span class="p">)</span>
+    <span class="n">H</span> <span class="o">&lt;-</span> <span class="n">wobayear</span><span class="o">$</span><span class="n">woba1B</span> <span class="o">*</span> <span class="p">(</span><span class="n">query</span><span class="o">$</span><span class="n">H</span> <span class="o">-</span> <span class="n">query</span><span class="o">$</span><span class="n">DB</span> <span class="o">-</span> <span class="n">query</span><span class="o">$</span><span class="n">TR</span> <span class="o">-</span> <span class="n">query</span><span class="o">$</span><span class="n">HR</span><span class="p">)</span>
+    <span class="n">AB</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">AB</span>
+    <span class="n">BB</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">BB</span>
+    <span class="n">IBB</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">IBB</span>
+    <span class="n">SF</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">SF</span>
+    <span class="n">SH</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">SH</span>
+    <span class="n">PA</span> <span class="o">&lt;-</span> <span class="n">query</span><span class="o">$</span><span class="n">PA</span>
+    <span class="n">woba</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">uBB</span> <span class="o">+</span> <span class="n">HBP</span> <span class="o">+</span> <span class="n">H</span> <span class="o">+</span> <span class="n">DB</span> <span class="o">+</span> <span class="n">TR</span> <span class="o">+</span> <span class="n">HR</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">AB</span> <span class="o">+</span> <span class="n">BB</span> <span class="o">-</span> <span class="n">IBB</span> <span class="o">+</span> <span class="n">SF</span> <span class="o">+</span> <span class="n">HBP</span><span class="p">)</span>
+    <span class="n">woba</span>
+<span class="p">}</span>
+</code></pre></div><div class="row"><div class="col-sm-6  col-sm-offset-3"><img src="https://i.imgur.com/Z0MX0qd.gif" class="img-responsive center-block"/></div></div>
+<p>How about some numbers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="m">6</span><span class="o">*</span><span class="m">9</span>
+</code></pre></div><pre tabindex="0"><code>## [1] 54
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="n">sabr</span><span class="o">::</span><span class="nf">woba_season</span><span class="p">(</span><span class="s">&#34;yountro01&#34;</span><span class="p">,</span><span class="m">1982</span><span class="p">)</span>
+</code></pre></div><pre tabindex="0"><code>## [1] 0.414997
+</code></pre><p>You can also embed plots. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="c1"># Much plots. Such scatter.</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
+</code></pre></div><p><img src="/img/figure/source/2016-05-24-mikeleeco-powered-by-rmarkdown/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" /></p>
+<p>More to come soon :D</p>
+
+</div>
+ 
+        </div>
+        <br />
+      </div>
+    </section>
+  </div>
+</div>
+
+</main>
+    <footer> <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Michael Lee - 2022</p>
+    </div>
+  </div>
+</footer>
+ </footer>
+
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+  </body>
+</html>
