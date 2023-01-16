@@ -48,9 +48,23 @@
     </div>
     <div class="hero-content-box">
       <p class="bottom">
-        Before you go be sure to take a tour around, send me an email, follow me
-        on twitter, or solve a few anagrams below. I think the first one is in
-        your domain.
+        Before you go be sure to take a <button
+          class="chevron"
+          class:unclicked
+          on:click={jumpToGame}>tour around</button
+        >, send me an
+
+        <a
+          href="mailto:mdlee12@gmail.com?subject=Message to Mike Lee from mikelee.co"
+          >email</a
+        >, or follow me on
+        <a
+          class="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/intent/follow?screen_name=mikeleeco"
+          ><Icon name="twitter" /> Twitter</a
+        >
       </p>
     </div>
     <div class="hero-content-box-chevron" />
