@@ -1,0 +1,73 @@
+.slug h1 {
+	margin-top: 5rem;
+	margin-bottom: 1.5rem;
+}
+
+.slug h2 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.slug h3 {
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.slug h3,
+.slug h4,
+.slug h5,
+.slug h6,
+.slug p,
+.slug button,
+.slug pre,
+.slug ol,
+.slug ul,
+.slug iframe,
+.slug hr,
+.slug img,
+.slug table {
+	margin-bottom: 1.15rem;
+}
+
+.slug img:not(.expanded) {
+	box-shadow: 2px 2px 10px rgba(51, 51, 51, 0.15);
+	border-radius: 5px;
+}
+
+table {
+	position: relative;
+	z-index: 10;
+	background: var(--primary-color);
+	color: var(--text-color);
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	width: 100%;
+}
+
+thead {
+	font-weight: bold;
+}
+
+td,
+th {
+	border: solid rgb(164, 164, 164);
+	border-width: 0 0 1px;
+	padding: 0.5em 0.75em;
+	vertical-align: top;
+	letter-spacing: 0.64px;
+	text-align: left;
+}
+
+td:last-of-type,
+th:last-of-type {
+	text-align: right;
+}
+
+td:first-of-type,
+th:first-of-type {
+	text-align: left;
+}
+
+tr:hover {
+	background: var(--primary-color);
+}
