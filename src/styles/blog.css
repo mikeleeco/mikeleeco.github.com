@@ -1,0 +1,84 @@
+.content h1 {
+	margin-top: 3.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.content h2 {
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.content h3 {
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+}
+
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p,
+.content button,
+.content pre,
+.content ol,
+.content ul,
+.content iframe,
+.content hr,
+.content img,
+.content table,
+.content blockquote,
+.content video {
+	margin-bottom: 1.15rem;
+}
+
+blockquote p:last-of-type {
+	margin-bottom: 0 !important;
+}
+
+.content img:not(.expanded) {
+	box-shadow: 2px 2px 10px rgba(51, 51, 51, 0.15);
+	border-radius: 5px;
+}
+
+.content video {
+	width: 100%;
+	max-width: 100%;
+}
+
+table {
+	position: relative;
+	z-index: 10;
+	background: var(--primary-color);
+	color: var(--text-color);
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	width: 100%;
+}
+
+thead {
+	font-weight: bold;
+}
+
+td,
+th {
+	border: solid rgb(164, 164, 164);
+	border-width: 0 0 1px;
+	padding: 0.5em 0.75em;
+	vertical-align: top;
+	letter-spacing: 0.64px;
+	text-align: left;
+}
+
+td:last-of-type,
+th:last-of-type {
+	text-align: right;
+}
+
+td:first-of-type,
+th:first-of-type {
+	text-align: left;
+}
+
+tr:hover {
+	background: var(--primary-color);
+}
