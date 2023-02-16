@@ -31,7 +31,7 @@
           />, and anyalytical tools <Icon
             color="var(--accent-color)"
             name="database"
-          />.
+          />
         </p>
       </div>
     </div>
@@ -43,7 +43,7 @@
         portfolio at
         <a class="" href="https://github.com/mikeleeco/mikeleeco.github.com"
           >this github</a
-        >.
+        >
       </p>
     </div>
     <div class="hero-content-box">
@@ -64,7 +64,7 @@
           rel="noopener noreferrer"
           href="https://twitter.com/intent/follow?screen_name=mikeleeco"
           ><Icon name="twitter" /> Twitter</a
-        >.
+        >
       </p>
     </div>
     <div class="hero-content-box-chevron" />

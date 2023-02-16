@@ -1,6 +1,5 @@
 <script>
   export let styles = "";
-  export let hasBackground = false;
   import ColorSwitcher from "$lib/ColorSwitcher.svelte";
   import Logo from "$lib/Logo.svelte";
 
@@ -15,7 +14,7 @@
   });
 </script>
 
-<div style={styles} class:hasBackground>
+<div style={styles}>
   <ColorSwitcher />
   <Logo comp={"nav"} />
 </div>
@@ -47,10 +46,6 @@
 
   /* On small screens, put a background behind nav to prevent text overlap */
   @media screen and (max-width: 868px) {
-    .hasBackground {
-      background: var(--primary-color);
-      /* box-shadow: 1px 1px 6px var(--box-shadow-color); */
-    }
   }
 
   @media screen and (max-width: 560px) {
