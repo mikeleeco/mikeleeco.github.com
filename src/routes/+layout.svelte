@@ -1,5 +1,4 @@
 <script>
-  import "../app.postcss";
   import { onMount, tick } from "svelte";
   import { theme } from "../stores/theme.js";
 
@@ -91,9 +90,9 @@
   $: $theme, setColors($theme);
 </script>
 
-<window />
-<Nav hasbackground={true} />
-<loading />
+<Window />
+<Nav />
+<Loading />
 <slot />
 
-<footer />
+<Footer />
