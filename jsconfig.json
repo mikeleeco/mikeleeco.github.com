@@ -13,7 +13,13 @@
     "strict": true
   },
 
-  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "src/routes/sandbox/sandbox/gamesByDate.ts",
+    "src/routes/sandbox/sandbox/gamesByDate.ts"
+  ]
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias and https://kit.svelte.dev/docs/configuration#files
   //
   // If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
