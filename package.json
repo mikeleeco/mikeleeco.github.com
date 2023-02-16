@@ -18,7 +18,7 @@
     "@popperjs/core": "^2.11.6",
     "@sveltejs/adapter-auto": "^1.0.0",
     "@sveltejs/adapter-netlify": "^2.0.4",
-    "@sveltejs/kit": "^1.0.0",
+    "@sveltejs/kit": "^1.7.1",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.2",
     "eslint": "^8.28.0",
