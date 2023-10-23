@@ -19,7 +19,7 @@
 
 <section id="hero">
   <div class="hero-content">
-    <div class="hero-content-box ">
+    <div class="hero-content-box">
       <div class="top">
         <p class="top">
           Hi! I'm <span class="mike">Mike Lee</span>. I develop websites <Icon
@@ -39,11 +39,11 @@
     <div class="hero-content-box">
       <p class="middle">
         Check out my <a class="" href="/projects">projects</a> page to learn a
-        little more details about my experience or check out the code for this
-        portfolio at
+        little more details about my work or check out the code for this website
+        on
         <a class="" href="https://github.com/mikeleeco/mikeleeco.github.com"
-          >this github</a
-        >
+          >at GitHub.
+        </a>
       </p>
     </div>
     <div class="hero-content-box">

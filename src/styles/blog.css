@@ -13,6 +13,11 @@
 	margin-bottom: 0.75rem;
 }
 
+p {
+	padding-bottom: 1rem;
+
+}
+
 .content h3,
 .content h4,
 .content h5,
