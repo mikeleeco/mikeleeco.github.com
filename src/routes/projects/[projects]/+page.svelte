@@ -6,7 +6,7 @@
   export let data;
   let projects = data.projects;
   let { title, description, categories, img, url } = projects.metadata;
-  let image = "https://www.mikelee.co/img/michael.png";
+  let image = !img ? "https://www.mikelee.co/img/michael.png" : img;
 </script>
 
 <Seo {title} {description} {image} />

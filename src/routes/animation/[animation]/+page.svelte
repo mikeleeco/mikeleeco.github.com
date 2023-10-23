@@ -1,12 +1,12 @@
 <!-- Skeleton for  -->
 <script>
-	import BackTo from '$lib/BackTo.svelte';
-	import Seo from '$lib/Seo.svelte';
+	import BackTo from "$lib/BackTo.svelte";
+	import Seo from "$lib/Seo.svelte";
 
 	export let data;
 	let animation = data.animation;
-	let { title, description, categories } = animation.metadata;
-	let image = 'https://www.mikelee.co/img/michael.png';
+	let { title, description, categories, img } = animation.metadata;
+	let image = !img ? "https://www.mikelee.co/img/michael.png" : img;
 </script>
 
 <Seo {title} {description} {image} />
@@ -17,5 +17,9 @@
 	<svelte:component this={animation.default} />
 </article>
 <div>
-	<BackTo href={`/${categories}`} text={`Back to all ${categories}`} classes="border-top" />
+	<BackTo
+		href={`/${categories}`}
+		text={`Back to all ${categories}`}
+		classes="border-top"
+	/>
 </div>
