@@ -1,7 +1,7 @@
 <script>
   import { onMount, tick } from "svelte";
   import { theme } from "../stores/theme.js";
-
+  import "../app.css";
   import Window from "$lib/Window.svelte";
   import Nav from "$lib/Nav/Nav.svelte";
   import ColorSwitcher from "$lib/ColorSwitcher.svelte";
