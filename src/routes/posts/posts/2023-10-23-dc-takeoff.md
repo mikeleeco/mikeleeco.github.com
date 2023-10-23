@@ -5,10 +5,6 @@ date: '2023-10-23'
 categories: posts
 tags:
   - life
-  - R
-  - Python
-  - Svelte
-  - word games
   - Alma Thomas
   - NASA
 featured: true
@@ -17,25 +13,7 @@ img: '/img/SAAM-1980.36.12_1_screen.jpg'
 ---
 
 <script>
-  import Scrolly from '$lib/components/Scrolly.svelte'
   import Image from '$lib/components/Image.svelte'
-  let value;
-  let currentStep
-  // const steps = [
-	// 	 "<p>This is a dynamic, responsive scatterplot that uses Russell Goldenberg's <a target='_blank' href='	https://twitter.com/codenberg/status/1432774653139984387' target='_blank'><code>Scrolly</code></a> to update its points' values on scroll.</p>",
-  //   "<p>The scatterplot uses tweened values to automatically update your points with smooth transitions. It also binds to the width of the container <code>div</code>, so its responsive by default.</p>",
-  //   "<p>Try resizing me to see the 'side-by-side' version, compared to the 'text-on-top' version that appears on small screens.</p><p>Want it to always appear 'text-on-top'? Just comment out the media query at the bottom of our styles (as in, leave the styles but comment out the surrounding <code>media</code> query).</p>",
-  // ];
-
-
-    const steps = [
-    '<Image src="/img/SAAM-1976.140.1_1_screen.jpg"  alt="Image showing an abstract woman painted in oil on textured wove paper." text="Alma Thomas (American, 1891–1978) <em> Untitled (Standing Nude)</em>, ca. 1958 Oil on textured wove paper. 610x499 mm; 24x19 1/4 inches. Provenance: acquired directly from the artist; private Washington, DC collection. Accessed from: <a href="https://catalogue.swanngalleries.com/Lots/auction-lot/ALMA-THOMAS-(1891---1978)-Untitled-(Standing-Nude)?saleno=2303&lotNo=59&refNo=667525">Swann Galleries</a>" />',
-    '<Image src="/img/SAAM-1978.40.3_2_screen.jpg"  alt="Image showing an abstract woman painted in oil on textured wove paper." text="Alma Thomas (American, 1891–1978) <em> Untitled (Standing Nude)</em>, ca. 1958 Oil on textured wove paper. 610x499 mm; 24x19 1/4 inches. Provenance: acquired directly from the artist; private Washington, DC collection. Accessed from: <a href="https://catalogue.swanngalleries.com/Lots/auction-lot/ALMA-THOMAS-(1891---1978)-Untitled-(Standing-Nude)?saleno=2303&lotNo=59&refNo=667525">Swann Galleries</a>"',
-    '<Image src="/img/SAAM-1978.40.4_1_screen.jpg"  alt="Alma Thomas, Snoopy Sees Earth Wrapped in Sunset, 1970, acrylic on canvas, 47 7/8 x 47 7/8 in. (121.6 x 121.6 cm.), Smithsonian American Art Museum, Gift of the artist, 1978.40.4"',
-    '<Image src="/img/blastOff.jpg"  alt="Alma W. Thomas, Blast Off, 1970, acrylic on canvas, 74 x54 inches"'
-  ];
-
-
 </script>
 
 
@@ -49,7 +27,7 @@ Recently, I went for an evening walk around my parent's neighborhood. I have spe
 
 You may be familiar with this sense. Close your eyes and think of the place you spent most of your life. Nearby houses, buildings, parks, even trees can be pictured in detail. The cream brick house with a brown roof on the corner. A block where houses are built into a small hill where you're stepping up a crest to the front door. The ugly one on Kenmore where you can see the KFC sign from the front window. I veered left at consecutive intersections as intuition navigated me back.
 
-Less than a quarter mile before my destination a whole block of houses felt foreign. Is it possible I've never been on this block? Hmm. Nooked between two major thoroughfares, this street exists outside of the neighborhood's main grid. Besides those on the corners these houses felt unfamilar. It seemed the grooves of my life never guided me here. I chuckled at the novelty, appreciated a few bay windows, and walked home.
+Less than a quarter mile before my destination a whole block of houses felt foreign. Is it possible I've never been on this block? Hmm. Nooked between two major thoroughfares, this street exists outside of the neighborhood's main grid. Besides those on the corners these houses felt unfamiliar. It seemed the grooves of my life never guided me here. I chuckled at the novelty, appreciated a few bay windows, and walked home.
 
 ***
 
@@ -57,7 +35,7 @@ After a decade living in DC I moved back to Wisconsin this fall. I'll dearly mis
 
 Alma Thomas moved to Washington, DC in 1907 at the age of 16 to escape race riots in Georgia<a id='footnote-1-ref' href="#footnote-1"><sup>[1]</sup></a>. Her family settled into a Victorian house at 1530 15th Street in the black segment of a segregated city. Prepared to teach Kindergarten art instruction by trade, she supervised art classes for six years at schools in Maryland, Pennsylvania, and Delaware. She was drawn back to DC to explore art of her own interest: costume design. She entered Howard University in 1921 as as a 30-year old home economics student before switching to fine art, specializing in sculpture. She was the first graduate of Howard's art department and secured a job with DC Public Schools shortly after graduating. She would teach art for over 35 years at Shaw Junior High, an all-black school that remained segregated during the entirety of her tenure.
 
-<Image alt="Image of a photograph of a row house next to a street." text="1530 15th Street today. The house sits next to a popular bike lane - I've riden by her house hundreds of times." src="/img/153015thStreet.png"/>
+<Image alt="Image of a photograph of a row house next to a street." text="1530 15th Street today. The house sits next to a popular bike lane - I've biked by her house hundreds of times." src="/img/153015thStreet.png"/>
 
 Her art education was formal and informal. As a teacher she prepped lesson plans, organized museum field trips, judged dance competitions, and facilitated student exhibitions. During summers in the early 1930s she attended Columbia University's Teachers College earning a masters degree and taking over 100 hours of instruction in marionettes. She brought these techniques to her students: building jointed puppets with life-like body proportions, making costumes, and encouraging experimentation with color and patterns in their work.
 
@@ -78,7 +56,7 @@ She explored more abstraction at selected one-woman and group exhibitions at the
 <Image alt="Red Abstraction. Composition primarily in red accented with thin black lines. Background in olive green. Rendered in oil on canvas, by Alma Thomas." text="Alma Thomas, Red Abstraction, 1960, oil on canvas, 36 1/4 x 30 in. (92.1 x 76.2 cm.), Smithsonian American Art Museum, Gift of the artist, 1978.40.1. Accessed from: <a target='_blank' href='https://americanart.si.edu/artwork/red-abstraction-24016'>Smithsonian American Art Museum</a>" src="/img/SAAM-1978.40.1_1_screen.jpg"/>
 
 
-She would paint her last realist work of the March on Washingon in 1963.
+She would paint her last realist work of the March on Washington in 1963.
 
 <Image alt="March on Washington. Composition of a crowd of people in front of a background of signs. Rendered in oil on canvas, by Alma Thomas." text="Alma Thomas, March on Washington, 1963, oil on canvas, 30 x 39 in. (76.2 x 99 cm.). Accessed from: <a target='_blank' href='https://catalogue.swanngalleries.com/Lots/auction-lot/ALMA-THOMAS-(1891---1978)-March-on-Washington?saleno=2268&lotNo=131&refNo=656286'>Swann Galleries</a>" src="/img/marchOnWashington.jpg"/>
 
@@ -113,22 +91,22 @@ Visiting a NASA facility in September I was struck by how much it felt like a bu
 
 It was special having family nearby in DC. I'm excited to be close to family and friends in Milwaukee, too. We'll see how I acclimate to the winters (eep). I had hoped a Brewers playoff run might welcome me home but instead was greeted to my spirit torn in two. Til next year.
 
-The Thomas piece that moved me the most on my visit was _Aquatic Gardens_. The chaotic blue brush strokes seem to ripple across the canvas in waves. A bay of calm yellow lillipads are gently thrashed back into position as you navigate one part to another.
+The Thomas piece that moved me the most on my visit was _Aquatic Gardens_. The chaotic blue brush strokes seem to ripple across the canvas in waves. A bay of calm yellow lily pads are gently thrashed back into position as you navigate one part to another.
 
 
   <Image src="/img/SAAM-1980.36.7_2_screen.jpg"  text="Alma Thomas, Aquatic Gardens, 1973, acrylic on canvas, 72 x 52 in. (182.8 x 132.1 cm), Smithsonian American Art Museum, Bequest of the artist, 1980.36.7.  Accessed from:  <a target='_blank' href='https://americanart.si.edu/artwork/aquatic-gardens-23999'>Smithsonian American Art Museum</a>"  alt="Aquatic Gardens. Composition of paint splotches shades of dark blues, arranged randomly in waves across a yellow canvas, by Alma Thomas" />
 
-It was inspired by the Kenilworth Park & Aquatic Gardens. The Gardens are an oasis of riverbeds on DC's Northeastern border. The Anacostia River here teems with lillipads, wildflowers, rare birds, and other wildlife. A place with so much beauty Fox News might try to convince you it doesn't exist in DC.
+It was inspired by the Kenilworth Park & Aquatic Gardens. The Gardens are an oasis of riverbeds on DC's Northeastern border. The Anacostia River here teems with lily pads, wildflowers, rare birds, and other wildlife. A place with so much beauty Fox News might try to convince you it doesn't exist in DC.
 
 <div class='flex flex-col'>
 
   <div class="flex-row">
 
-    <Image src="/img/3738111976_c2de9968cf_c.jpg"  alt="A photograph of two turtles perched on a rock in a stream next to a bay of lillipads." text="Two turtles perched on a rock in a stream next to a bay of lillipads in Kenilworth Park & Aquatic Gardens in Washington, DC. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3738111976/'>Flickr photostream</a>" />
+    <Image src="/img/3738111976_c2de9968cf_c.jpg"  alt="A photograph of two turtles perched on a rock in a stream next to a bay of lily pads." text="Two turtles perched on a rock in a stream next to a bay of lily pads in Kenilworth Park & Aquatic Gardens in Washington, DC. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3738111976/'>Flickr photostream</a>" />
     
-    <Image src="/img/3739013972_eac1be384d_c.jpg"  alt="A photograph of a snake scooting across lillipads in Kenilworth Park & Aquatic Gardens in Washington, DC" text="A snake scooting across lillipads. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3739013972/'>Flickr photostream</a>" />
+    <Image src="/img/3739013972_eac1be384d_c.jpg"  alt="A photograph of a snake scooting across lily pads in Kenilworth Park & Aquatic Gardens in Washington, DC" text="A snake scooting across lily pads. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3739013972/'>Flickr photostream</a>" />
     
-    <Image src="/img/3738060962_4eec2f1297_c.jpg"  alt="A photograph of a bay of green lillipads. A few in the center are topped with white flowers." text="A bay of green lillipads topped with white flowers in Kenilworth Park & Aquatic Gardens in Washington, DC. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3738060962/'>Flickr photostream</a>" />
+    <Image src="/img/3738060962_4eec2f1297_c.jpg"  alt="A photograph of a bay of green lily pads. A few in the center are topped with white flowers." text="A bay of green lily pads topped with white flowers in Kenilworth Park & Aquatic Gardens in Washington, DC. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3738060962/'>Flickr photostream</a>" />
     
     <Image src="/img/3737314319_23e57f7dc8_c.jpg"  alt="A photograph of a field of tropical lilies ready to bloom." text="A field of pink tropical lilies nearing bloom in Kenilworth Park & Aquatic Gardens in Washington, DC. Accessed from Adam Fagen's <a target='_blank' href='https://www.flickr.com/photos/afagen/3737333739/'>Flickr photostream</a>" />
     
@@ -150,9 +128,7 @@ For a city that filled my heart for a decade the Thomas exhibit was a fitting se
 
 <p id="footnote-1">1. <a href="https://weta.org/watch/shows/weta-arts/weta-arts-february-2023-alma-thomas"> https://weta.org/watch/shows/weta-arts/weta-arts-february-2023-alma-thomas</a> <a href="#footnote-1-ref">&#8617;</a></p>
 
-
 <p id="footnote-2">2. <a href="https://www.smithsonianmag.com/blogs/smithsonian-education/2022/01/27/alma-thomas/"> https://www.smithsonianmag.com/blogs/smithsonian-education/2022/01/27/alma-thomas/</a> <a href="#footnote-2-ref">&#8617;</a></p>
 
-<p id="footnote-3">3. <a href="https://edan.si.edu/slideshow/viewer/?damspath=/CollectionsOnline/thomalma/Box_0002/Folder_043
-"> https://edan.si.edu/slideshow/viewer/?damspath=/CollectionsOnline/thomalma/Box_0002/Folder_043
+<p id="footnote-3">3. <a href="https://edan.si.edu/slideshow/viewer/?damspath=/CollectionsOnline/thomalma/Box_0002/Folder_043"> https://edan.si.edu/slideshow/viewer/?damspath=/CollectionsOnline/thomalma/Box_0002/Folder_043
 </a> <a href="#footnote-3-ref">&#8617;</a></p>
