@@ -115,11 +115,11 @@ It was inspired by the Kenilworth Park & Aquatic Gardens. The Gardens are an oas
 
 I explored much of the nature of DC but never made it to the Aquatic Gardens. It's on the list for my visit. Until then I'll wonder how well the piece fits and try to take in the world through a similar lens. Thomas spent her life eyes-opened to inspiration and let it flow through. She was a craftsperson fulfilled by the process of rendering her perspective on the world through art; recognition was a byproduct.
 
-<blockquote  cite="Rick Rubin, A Creative Act">
+<blockquote  cite="Rick Rubin, The Creative Act">
 "Like carpenters, we show up each day and do our job...Sometimes our ideas come through bolts of lightning. Other times through effort, experiment, and craft. As we work, we may notice connections and become surprised by the wonder of what's revealed through the doing itself. In a way, these small a-ha! moments are also bolts of lightning. Less vivid, they illuminate our way...Without diligence, inspiration alone rarely yields work of much consequence.
 <br>
 Making great art may not always require great effort, but without it, you'll never know. If inspiration calls, we ride the lightning until the energy is exhausted.
-<footer>- Rick Rubin, <cite>A Creative Act</cite></footer>
+<footer>- Rick Rubin, <cite><em>The Creative Act: A Way of Being</em></cite></footer>
 </blockquote>
 
 For a city that filled my heart for a decade the Thomas exhibit was a fitting send off and reminder to myself: open yourself to the world, learn new skills, and create. Breathe in life at whatever pace you can. Inspiration might be through your back window or down a street you've never been on. Perhaps you'll find some meaning to your world there.
