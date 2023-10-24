@@ -41,7 +41,7 @@ Her art education was formal and informal. As a teacher she prepped lesson plans
 
 <Image alt="Clown Marionette. Image showing a clown-like marionette made of wood, paint, and strings, by Alma Thomas." text="Alma Thomas (American, 1891–1978) <em>Clown Marionette</em>, ca. 1935 Fabric, wood, paint, and strings. The Columbus Museum Columbus, GA. Accessed from: <a target='_blank' href='https://chrysler.org/exhibition/alma-thomas/'>https://chrysler.org/exhibition/alma-thomas/</a>" src="/img/Thomas_PR_09_Clown.jpg"/>
 
-As an artist and advocate she served as vice president of the Barnett Aden Gallery, one of the first black-owned art galleries in the US. She founded arts organizations for children and began to focus her work on painting. By the early 1950s she honed her technique through participation in art collectives and attending advanced art courses at American University. Her work was realist. 
+As an artist and advocate she served as vice president of the Barnett Aden Gallery, one of the first black-owned art galleries in the US. She founded arts organizations for children and began to focus her work on painting. By the early 1950s she honed her technique through participation in art collectives and attending advanced art courses at American University. Her work was realist with notes of abstract flourish.
 
 <div class="flex sm:flex-row flex-col align-bottom items-end gap-2">
 
