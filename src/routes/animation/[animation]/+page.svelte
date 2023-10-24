@@ -6,7 +6,9 @@
 	export let data;
 	let animation = data.animation;
 	let { title, description, categories, img } = animation.metadata;
-	let image = !img ? "https://www.mikelee.co/img/michael.png" : img;
+	let image = !img
+		? "https://www.mikelee.co/img/michael.png"
+		: "https://www.mikelee.co" + img;
 </script>
 
 <Seo {title} {description} {image} />

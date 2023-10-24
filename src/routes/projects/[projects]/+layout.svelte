@@ -6,8 +6,6 @@
   let title;
   let description;
   let image = "https://www.mikelee.co/img/michael.png";
-  let img;
-  let url;
 
   import IntersectionObserver from "svelte-intersection-observer";
   let element, intersecting;
