@@ -17,13 +17,13 @@
 >
     <img {src} {alt} />
 
-    <figcaption class="hidden sm:block py-2">{@html text}</figcaption>
-
     {#if visible}
         <figcaption
             class="lg:hidden flex-1 bg-[--primary-color] opacity-[85%] p-3 w-full absolute"
         >
             <div class="text-primary opacity-100 p-2">{@html text}</div>
         </figcaption>
+    {:else}
+        <figcaption class="hidden sm:block py-2">{@html text}</figcaption>
     {/if}
 </figure>
