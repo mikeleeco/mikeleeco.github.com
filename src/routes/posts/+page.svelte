@@ -6,7 +6,7 @@
 
   import { windowWidth } from "../../stores/global.js";
 
-  console.log($windowWidth);
+  // console.log($windowWidth);
   let pageWidth = 1000;
   $: pageWidth = $windowWidth < 468;
   let anyHovered;

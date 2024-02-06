@@ -10,7 +10,7 @@
     ? "https://www.mikelee.co/img/michael.png"
     : "https://www.mikelee.co" + img;
 
-  console.log(image);
+  // console.log(image);
 </script>
 
 <Seo {title} {description} {image} />

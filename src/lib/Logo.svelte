@@ -15,12 +15,12 @@
   {#if $theme == "dark"}
     <img
       loading="lazy"
-      src={"/images/icons/lee5light.png"}
+      src={"/images/icons/logoInvert.png"}
       alt="Mike Lee Logo"
     />
   {:else}<img
       loading="lazy"
-      src={"/images/icons/lee5.png"}
+      src={"/images/icons/logo.png"}
       alt="Mike Lee Logo"
     />
   {/if}

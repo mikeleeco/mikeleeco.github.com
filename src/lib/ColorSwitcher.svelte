@@ -7,7 +7,7 @@
   let transitionDuration = 500;
   let currentAccent;
 
-  console.log($windowWidth);
+  // console.log($windowWidth);
   import { sleep } from "../scripts/utils.js";
 
   async function setColors() {
