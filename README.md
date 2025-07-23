@@ -7,3 +7,10 @@ I’m a research and data professional with an interest in creating products and
 ### Resume
 
 Check out my resume, linked [here](https://www.mikelee.co/Michael_Lee_Resume.pdf)
+
+<!-- install -->
+
+npm install feather-icons bowser gsap date-fns svelte-preprocess
+npm i --save-dev @types/feather-icons
+
+<!-- ffmpeg -i input.mp4 -c:v libvpx -b:v 1M -c:a libvorbis leeLogo.webm -->

@@ -7,18 +7,16 @@
 	let description;
 	let image = 'https://www.mikelee.co/img/michael.png';
 
-	import IntersectionObserver from 'svelte-intersection-observer';
 	let element, intersecting;
 </script>
 
 <Seo {title} {description} {image} />
 
 <main>
-	<IntersectionObserver {element} bind:intersecting rootMargin="-60px">
-		<div class="top-level" style="max-width: none;" bind:this={element}>
-			<BackTo href="/animation" text="Animation" classes="page-heading" />
-		</div>
-	</IntersectionObserver>
+	<div class="top-level" style="max-width: none;" bind:this={element}>
+		<BackTo href="/animation" text="Animation" classes="page-heading" />
+	</div>
+
 	<div class="slug main-content">
 		<slot />
 	</div>

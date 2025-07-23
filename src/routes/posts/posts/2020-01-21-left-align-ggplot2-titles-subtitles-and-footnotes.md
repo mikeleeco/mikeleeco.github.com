@@ -7,7 +7,7 @@ tags:
   - dataviz
   - ggplot2
   - R
-featured: false
+featured: true
 description: 'Override ggplot2 defaults to add a consistent left-alignment throughout your figure'
 img: '/img/midwestPlotLeftAligned.png'
 ---
@@ -200,8 +200,3 @@ Label</summary>
 Y-Axis Value Label](/img/midwestPlotLeftAlignedAxisText.png)
 
 <hr>
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

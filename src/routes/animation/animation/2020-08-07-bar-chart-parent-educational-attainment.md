@@ -14,7 +14,7 @@ tags:
   - bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Adults with higher levels of education reported that computers and the Internet were always available for educational purposes for elementary and secondary students in their households at a higher percentage than adults with lower levels of education.'
-img: '/img/barChartEducational_Attainment.gif'
+img: '/img/barChartEducational_Attainment.png'
 ---
 
 Animation Linked here:
@@ -34,20 +34,3 @@ latest results from
 <a href="https://twitter.com/EdNCES/status/1291749953975603201?ref_src=twsrc%5Etfw">August
 7, 2020</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Higher percentages of adults with higher levels of education than of
-adults with lower levels of education reported that computers and the
-Internet were always available for educational purposes for elementary
-and secondary students in their
-households.](/img/barChartEducational_Attainment.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

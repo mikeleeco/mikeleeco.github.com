@@ -1,126 +1,97 @@
 <script>
-  import { onMount } from "svelte";
-  import { windowHeight, windowWidth } from "../../stores/global.js";
-  import { prefersReducedMotion } from "../../stores/motion.js";
-  import { sleep } from "../../scripts/utils.js";
-  import Icon from "$lib/components/Icon.svelte";
+	import { onMount } from 'svelte';
+	import { windowHeight, windowWidth } from '../../stores/global.js';
+	import { prefersReducedMotion } from '../../stores/motion.js';
+	import { sleep } from '../../scripts/utils.js';
+	import Icon from '$lib/components/Icon.svelte';
+	// // vanilla js
+	// const video = document.getElementById('intro-animation');
+	// video.onended = () => {
+	// 	video.style.transition = 'opacity 0.5s ease';
+	// 	video.style.opacity = '0';
+	// 	setTimeout(() => (video.style.display = 'none'), 500);
+	// };
 
-  let sectionHeight = $windowHeight;
+	// // sveltekit adapted vanilla
+	// let videoElement;
 
-  let pageWidth = $windowWidth > 768;
+	// function handleVideoEnd() {
+	// 	videoElement.style.transition = 'opacity 0.5s ease';
+	// 	videoElement.style.opacity = '0';
 
-  let scrollToGame = () => window.scrollTo(0, $windowHeight * 1);
-  let unclicked = true;
-  const jumpToGame = () => {
-    unclicked = false;
-    scrollToGame();
-  };
+	// 	setTimeout(() => {
+	// 		videoElement.style.display = 'none';
+	// 	}, 500);
+	// }
+
+	// sveltekit native
+	import { fade } from 'svelte/transition';
+	import Brick from '$lib/components/Brick.svelte';
+	import Drawing from '$lib/components/Drawing.svelte';
+	import Logo from '$lib/Logo.svelte';
+	let visible = true;
 </script>
 
-<section id="hero">
-  <div class="hero-content">
-    <div class="hero-content-box">
-      <div class="top">
-        <p class="top">
-          Hi! I'm <span class="mike">Mike Lee</span>. I develop websites <Icon
-            color="var(--accent-color)"
-            name="code"
-          />, visualizations <Icon
-            color="var(--accent-color)"
-            name="bar-chart"
-          />, and anyalytical tools <Icon
-            color="var(--accent-color)"
-            name="database"
-          />
-        </p>
-      </div>
-    </div>
-    <!-- <p in:fly={{ y: 30 }} class="chevron" class:unclicked on:click={jumpToGame}>projects</p> -->
-    <div class="hero-content-box">
-      <p class="middle">
-        Check out my <a class="" href="/projects">projects</a> page to learn a
-        little more details about my work or check out the code for this website
-        on
-        <a class="" href="https://github.com/mikeleeco/mikeleeco.github.com"
-          >at GitHub.
-        </a>
-      </p>
-    </div>
-    <div class="hero-content-box">
-      <p class="bottom">
-        Before you go be sure to take a <button
-          class="chevron"
-          class:unclicked
-          on:click={jumpToGame}>tour around</button
-        >, send me an
+<!-- Animation of lee logo -->
+<!-- after pause, display links with drawn icons -->
+<div
+	class="grid grid-cols-1 place-items-center content-start gap-4 lg:w-full lg:grid-cols-3 lg:grid-rows-3"
+>
+	<!-- Top -->
+	<div class="hidden lg:order-1 lg:block"></div>
+	<div class="order-2">
+		<a href="/apps">
+			<Brick>
+				<Drawing alt="Apps icon" name="apps" classNames="text-left w-1/2 lg:w-1/4 lg:self-center" />
+				<span class="text-left text-5xl">Apps</span>
+			</Brick></a
+		>
+	</div>
+	<div class="hidden lg:order-3 lg:block"></div>
 
-        <a
-          href="mailto:mdlee12@gmail.com?subject=Message to Mike Lee from mikelee.co"
-          >email</a
-        >, or follow me on
-        <a
-          class="link"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/intent/follow?screen_name=mikeleeco"
-          ><Icon name="twitter" /> Twitter</a
-        >
-      </p>
-    </div>
-    <div class="hero-content-box-chevron" />
-    <button class="chevron" class:unclicked on:click={jumpToGame}>
-      <Icon name="chevron-down" />
-    </button>
-  </div>
-</section>
+	<!-- Middle -->
+	<div class="order-4">
+		<a href="/cartoons">
+			<Brick>
+				<Drawing alt="Cartoons icon" name="cartoons" classNames="w-1/2 lg:w-1/4 lg:self-center" />
+				<span class="text-left text-5xl">Cartoons</span>
+			</Brick></a
+		>
+	</div>
 
-<style>
-  #hero {
-    margin: 1rem;
-    font-family: var(--font-sans);
-    height: 90vh;
+	<div class="hidden h-75 w-75 p-6 text-center text-white sm:flex xl:order-5">
+		{#if visible}
+			<!-- <video autoplay muted playsinline onended={() => (visible = false)} class="">
+					<source src="/img/leeAnimation.webm" type="video/webm" />
+					<source src="/img/leeAnimation.mp4" type="video/mp4" />
 
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .mike {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    color: var(--accent-color);
-  }
-  .hero-content {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .hero-content-box {
-    margin-top: auto;
-  }
-  .top {
-    font-size: 4rem;
-  }
+					Your browser does not support the video tag.
+				</video> -->
+			<Logo />
+		{:else}
+			<!-- <div class="hidden sm:block"> -->
+			<Logo />
+			<!-- </div> -->
+		{/if}
+	</div>
+	<div class="order-6">
+		<a href="/posts">
+			<Brick>
+				<Drawing alt="Posts icon" name="posts" classNames="w-1/2 lg:w-1/4 lg:self-center" />
+				<span class="text-left text-5xl">Posts</span>
+			</Brick></a
+		>
+	</div>
 
-  .hero-content-box-chevron {
-    align-items: center;
-    margin-top: auto;
-    justify-content: center;
-    font-size: 3rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    #hero {
-      margin-left: 2%;
-      margin-right: 2%;
-    }
-  }
-  .top {
-    font-size: 2rem;
-  }
-
-  @media screen and (max-width: 468px) {
-    section {
-      place-items: center;
-    }
-  }
-</style>
+	<!-- Bottom -->
+	<div class="hidden lg:order-7 lg:block"></div>
+	<div class="order-8">
+		<a href="/about">
+			<Brick>
+				<Drawing alt="About icon" name="about" classNames="w-1/2 lg:w-1/4 lg:self-center" />
+				<span class="text-left text-5xl">About</span>
+			</Brick></a
+		>
+	</div>
+	<div class="hidden lg:order-9 lg:block"></div>
+</div>

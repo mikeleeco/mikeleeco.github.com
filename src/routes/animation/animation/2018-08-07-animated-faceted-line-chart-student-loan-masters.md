@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Average student loan balances were higher in 2015–16 than in 1999–2000 for all master’s degree fields.'
-img: '/img/lineEducationGridMasters.gif'
+img: '/img/lineEducationGridMasters.png'
 ---
 
 ## Animation seen here:
@@ -36,16 +36,3 @@ in our NEW BLOG:
 <a href="https://twitter.com/EdNCES/status/1026807694731161600?ref_src=twsrc%5Etfw">August
 7, 2018</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Average cumulative student loan balance for master’s degree
-completers, by degree program: Selected years,
-2000–2016](/img/lineEducationGridMasters.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

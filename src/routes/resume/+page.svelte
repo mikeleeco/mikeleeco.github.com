@@ -14,7 +14,7 @@
     classes="page-heading transition-content centered"
   />
   <article>
-    <h3 class="page-title transition-title overflow-hidden">Resume</h3>
+    <h1 class="page-title transition-title overflow-hidden">Resume</h1>
     <h4 class="page-subtitle  transition-title">
       Web applications, graphics, and data-driven projects.
     </h4>

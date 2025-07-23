@@ -33,18 +33,20 @@ That looks pretty sharp, but in the spirit of video games, lets make it a bit mo
 
 As you can see, very little has changed in a video game's reception by year of distribution. There is a mild increase in ratings by year since video games came into prominence. This displays an interesting contrast compared to 538's article on board games, which described the possibility that recent years might be considered "the golden age of serious board gaming." I'd hypothesize that this is effect is due to the platform these entertainment options are consumed. Board games are easily compared; Settlers of Catan and Monopoly are using equal technology, though one is deemed of a higher quality sinced it's final product is more innovative in using similar tools. Video games are influenced by the effects of advances in technology. Objectively, you can't compare <a href="https://www.mobygames.com/game/pong____">Pong!</a> to <a href="https://www.mobygames.com/game/mario-tennis">Mario Tennis</a>; you have to consider the technology of the day. Keeping that in mind, below you'll see the top 11 games by the average user/critics score:
 
-<div class="table-responsive"><table class="table table-hover"><tr class="info"><th>Title</th><th>Year</th><th>Publisher</th><th>Genre</th><th>Platform</th><th>Rating</th></tr>
- <tr><td>Bayonetta 2</td><td>2014</td><td>Nintendo of America Inc.</td><td>Action</td><td>Wii U</td><td>94.5</td></tr>
- <tr><td>Metroid Prime Trilogy</td><td>2009</td><td>Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Wii, Wii U</td><td>94.5</td></tr>
- <tr><td>Super Mario Galaxy 2</td><td>2010</td><td>Nintendo Co., Ltd., Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Wii, Wii U</td><td>94.5</td></tr>
- <tr><td>ESPN NFL 2K5</td><td>2004</td><td>Global Star Software Inc., SEGA Europe Ltd., SEGA of America, Inc.</td><td>Sports</td><td>PlayStation 2, Xbox</td><td>93.75</td></tr>
- <tr><td>World Series Baseball 2K3</td><td>2003</td><td>SEGA of America, Inc.</td><td>Sports</td><td>PlayStation 2, Xbox</td><td>93.75</td></tr>
- <tr><td>Final Fantasy X | X-2 HD Remaster</td><td>2013</td><td>Square Enix Co., Ltd., Square Enix, Inc.</td><td>Role-Playing (RPG)</td><td>PlayStation 3, PS Vita</td><td>93.5</td></tr>
- <tr><td>Grand Theft Auto V</td><td>2013</td><td>Rockstar Games, Inc.</td><td>Action, Racing / Driving</td><td>PlayStation 3, PlayStation 4, Windows, Xbox 360, Xbox One</td><td>93.5</td></tr>
- <tr><td>Sins of a Solar Empire: Trinity</td><td>2010</td><td>1C-SoftClub, rondomedia Marketing & Vertriebs GmbH, Snowball Studios, Stardock Entertainment, Inc.</td><td>Strategy</td><td>Windows</td><td>93.5</td></tr>
- <tr><td>Super Mario Bros.</td><td>1985</td><td>Nintendo Co., Ltd., Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Arcade, Game Boy Advance, NES, Nintendo 3DS, Wii, Wii U</td><td>93.33</td></tr>
- <tr><td>RalliSport Challenge 2</td><td>2004</td><td>Microsoft Game Studios</td><td>Racing / Driving</td><td>Xbox</td><td>93</td></tr>
- <tr><td>Vampire Chronicle for Matching Service</td><td>2000</td><td>Capcom Co., Ltd.</td><td>Action</td><td>Dreamcast</td><td>93</td></tr></table></div>
+<div class="table"><table class="table table-hover"><tbody>
+    <tr class="info"><th>Title</th><th>Year</th><th>Publisher</th><th>Genre</th><th>Platform</th><th>Rating</th></tr>
+     <tr><td>Bayonetta 2</td><td>2014</td><td>Nintendo of America Inc.</td><td>Action</td><td>Wii U</td><td>94.5</td></tr>
+     <tr><td>Metroid Prime Trilogy</td><td>2009</td><td>Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Wii, Wii U</td><td>94.5</td></tr>
+     <tr><td>Super Mario Galaxy 2</td><td>2010</td><td>Nintendo Co., Ltd., Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Wii, Wii U</td><td>94.5</td></tr>
+     <tr><td>ESPN NFL 2K5</td><td>2004</td><td>Global Star Software Inc., SEGA Europe Ltd., SEGA of America, Inc.</td><td>Sports</td><td>PlayStation 2, Xbox</td><td>93.75</td></tr>
+     <tr><td>World Series Baseball 2K3</td><td>2003</td><td>SEGA of America, Inc.</td><td>Sports</td><td>PlayStation 2, Xbox</td><td>93.75</td></tr>
+     <tr><td>Final Fantasy X | X-2 HD Remaster</td><td>2013</td><td>Square Enix Co., Ltd., Square Enix, Inc.</td><td>Role-Playing (RPG)</td><td>PlayStation 3, PS Vita</td><td>93.5</td></tr>
+     <tr><td>Grand Theft Auto V</td><td>2013</td><td>Rockstar Games, Inc.</td><td>Action, Racing / Driving</td><td>PlayStation 3, PlayStation 4, Windows, Xbox 360, Xbox One</td><td>93.5</td></tr>
+     <tr><td>Sins of a Solar Empire: Trinity</td><td>2010</td><td>1C-SoftClub, rondomedia Marketing & Vertriebs GmbH, Snowball Studios, Stardock Entertainment, Inc.</td><td>Strategy</td><td>Windows</td><td>93.5</td></tr>
+     <tr><td>Super Mario Bros.</td><td>1985</td><td>Nintendo Co., Ltd., Nintendo of America Inc., Nintendo of Europe GmbH</td><td>Action</td><td>Arcade, Game Boy Advance, NES, Nintendo 3DS, Wii, Wii U</td><td>93.33</td></tr>
+     <tr><td>RalliSport Challenge 2</td><td>2004</td><td>Microsoft Game Studios</td><td>Racing / Driving</td><td>Xbox</td><td>93</td></tr>
+     <tr><td>Vampire Chronicle for Matching Service</td><td>2000</td><td>Capcom Co., Ltd.</td><td>Action</td><td>Dreamcast</td><td>93</td></tr>
+</tbody></table></div>
 
 Though the earlier graph illustrated game ratings haven't changed much over the last 40 years, 10 out of the top 11 games have been released within the past 15 years. This may be indicative of a recency bias, a publisher's increased understanding of qualities that facilitate more highly regarded games, or some other factor. Many of these best game have a so-called "replay value", such as RPGs, infinite universes, or sports franchises.
 

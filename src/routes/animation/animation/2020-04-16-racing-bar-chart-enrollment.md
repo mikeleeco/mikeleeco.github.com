@@ -27,8 +27,3 @@ Linked here: <https://nces.ed.gov/blogs/nces/post/racing-bar-chart>
 </iframe>
 
 ---
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

@@ -13,7 +13,7 @@ tags:
   - bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'The percent of first-time beginning postsecondary students who took out federal education loans within 12 years of entering postsecondary education increased from 55 to 63% over the last eight years.'
-img: '/img/barChart_Loans.gif'
+img: '/img/barChart_Loans.png'
 ---
 
 ## Animation seen here:
@@ -32,15 +32,3 @@ within 12 years of starting
 <a href="https://twitter.com/EdNCES/status/916332882213457921?ref_src=twsrc%5Etfw">October
 6, 2017</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Percent of Borrowers by Cohort After 12
-Years](/img/barChart_Loans.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

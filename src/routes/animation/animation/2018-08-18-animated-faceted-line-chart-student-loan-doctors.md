@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Between 1999–2000 & 2015–16, average student loan debt for medical doctorate completers increased by 97% (from $124,700 to $246,000).'
-img: '/img/lineEducationGridDoctorate.gif'
+img: '/img/lineEducationGridDoctorate.png'
 ---
 
 ## Animation seen here:
@@ -36,16 +36,3 @@ here in our NEW blog:
 <a href="https://twitter.com/EdNCES/status/1030868436027691010?ref_src=twsrc%5Etfw">August
 18, 2018</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Average cumulative student loan balance for doctorate degree
-completers, by degree program: Selected years,
-2000–2016](/img/lineEducationGridDoctorate.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

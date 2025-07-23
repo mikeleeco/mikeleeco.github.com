@@ -16,9 +16,11 @@
 <Seo {title} {description} {image} {keywords} />
 
 <article>
-	<h3 class="page-title overflow-hidden">{title}</h3>
-	<h4 class="page-subtitle">{description}</h4>
-	<svelte:component this={posts.default} />
+	<div class="flex flex-col gap-5">
+		<h3 class="page-title overflow-hidden">{title}</h3>
+		<h4 class="page-subtitle">{description}</h4>
+		<svelte:component this={posts.default} />
+	</div>
 </article>
 <div>
 	<BackTo

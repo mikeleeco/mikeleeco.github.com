@@ -22,7 +22,7 @@
 </script>
 
 {#if transitioning}
-	<div in:fade={{ duration: 0 }} out:fade={{ duration: 600 }} class="fullscreen-loading" />
+	<div in:fade={{ duration: 0 }} out:fade={{ duration: 600 }} class="fullscreen-loading"></div>
 {/if}
 
 <style>
@@ -32,7 +32,7 @@
 		position: fixed;
 		left: 0;
 		top: 0;
-		background: var(--primary-color);
+		background: var(--theme-color-background);
 		z-index: 100;
 		/* cursor: none; */
 	}

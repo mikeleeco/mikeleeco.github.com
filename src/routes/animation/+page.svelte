@@ -1,11 +1,8 @@
 <script>
-	import Transition from '$lib/Transition.svelte';
-	import PostSection from '$lib/Content/PostCompact.svelte';
-	import PostDescription from '$lib/Content/PostDescription.svelte';
+	// import Transition from '$lib/Transition.svelte';
+	import Post from '$lib/Content/PostCompact.svelte';
 	import BackTo from '$lib/BackTo.svelte';
 	import { windowWidth } from '../../stores/global.js';
-
-	let anyHovered;
 
 	let pageWidth;
 	$: pageWidth = $windowWidth < 468;
@@ -17,39 +14,15 @@
 	});
 </script>
 
-<Transition />
-
 <main class="main">
-	<BackTo href="/" text="Home" classes="page-heading transition-content centered" />
-	<h1 class="page-title transition-title overflow-hidden">Animation</h1>
+	<BackTo href="/" text="Home" classes="page-heading" />
+	<h1 class="">Animation</h1>
 
-	<div class="animations-container main-content transition-content ">
+	<div class="">
 		{#each filteredAnimations as post}
 			<div>
-				{#if !pageWidth}
-					<PostDescription post={post.metadata} slug={post.slug} />
-				{:else}
-					<PostSection post={post.metadata} slug={post.slug} bind:anyHovered />
-				{/if}
+				<Post post={post.metadata} slug={post.slug} />
 			</div>
 		{/each}
 	</div>
 </main>
-
-<style>
-	.animations-container {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 10px;
-		width: 100%;
-		margin: auto;
-		padding: 1rem;
-		max-width: 1168px;
-	}
-
-	@media screen and (max-width: 568px) {
-		.animations-container {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-</style>

@@ -156,8 +156,3 @@ perfect excuse to test out a couple new packages!
 ![FiveThirtyEight Chicklet Stacked Bar Chart Recreation](/img/chicklet538.png)
 
 <hr>
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

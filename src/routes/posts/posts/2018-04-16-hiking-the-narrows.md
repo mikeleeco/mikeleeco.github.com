@@ -13,7 +13,7 @@ tags:
 featured: false
 subtitle: "Why I probably won't be hiking The Narrows this April"
 description: 'Investigate and visualize the USGS water discharge data for the Virgin River Narrows from 1993 - 2018'
-img: '/img/narrowsLargeTall.gif'
+img: '/img/narrowsLargeTall.png'
 ---
 
 This April I’m visiting Zion National Park, one of North America’s most
@@ -229,7 +229,7 @@ smooth transitions.
                  paste0(getwd(),"/narrowsLargeTall.gif"))
 ```
 
-![Mean Flow of the VIRGIN RIVER NARROWS by day (1993 -2018)](/img/narrowsLargeTall.gif)
+![Mean Flow of the VIRGIN RIVER NARROWS by day (1993 -2018)](/img/Animation/narrowsLargeTall.gif)
 
 ### Addendum - Further Data Exploration Needed:
 
@@ -252,8 +252,3 @@ reversing course and increasing until about 2am.
 An exploration for another day or another analyst!
 
 ---
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

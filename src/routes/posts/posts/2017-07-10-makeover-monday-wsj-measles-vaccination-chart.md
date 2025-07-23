@@ -12,7 +12,7 @@ tags:
 featured: true
 subtitle: 'Recreating the WSJ measles vaccination chart as an animated cartogram'
 description: 'Using ggplot2 and animation packages to reproduce and animate the famous Wall Street Journal Measles Incidence Chart - this time as a cartogram!'
-img: '/img/measlesCartogram.gif'
+img: '/img/measlesCartogram.png'
 ---
 
 Last week I wrote a post about recreating the WSJ measles vaccination
@@ -54,7 +54,7 @@ someone else!
 
 Here is the final result:
 
-![Measles Animation Cartogram](/img/measlesCartogram.gif)
+![Measles Animation Cartogram](/img/Animation/measlesCartogram.gif)
 
 I customized the plot in a few ways - first, I chose to represent the
 change in time via a timeline above the cartogram. Other developers have
@@ -79,8 +79,3 @@ impactful with 30+ years of negligible incidence stacked up next to each
 other.
 
 ---
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

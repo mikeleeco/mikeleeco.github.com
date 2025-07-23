@@ -15,7 +15,6 @@
 </script>
 
 <div style={styles}>
-  <ColorSwitcher />
   <Logo comp={"nav"} />
 </div>
 <!-- {#if expanded} -->

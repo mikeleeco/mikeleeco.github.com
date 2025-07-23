@@ -2,7 +2,7 @@
 title: 'Mapping Wisconsin Presidential Election Results'
 description: 'Wisconsin played a major role in the presidential election, but the result is not due to major differences with its Midwest neighbor.'
 tags: [R, ggplot2, politics, dataviz]
-date: 2017-01-05
+date: '2017-01-05'
 featured: true
 categories: 'posts'
 img: '/img/WisconsinMinnesota.png'

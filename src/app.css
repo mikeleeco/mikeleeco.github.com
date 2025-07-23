@@ -1,5 +1,536 @@
 /* Write your global styles here, in PostCSS syntax */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@layer components {
+	body {
+		background-color: var(--theme-color-background);
+	}
+	main {
+		min-height: 100vh;
+		color: var(--theme-color-text);
+	}
+
+	.visible {
+		opacity: 1 !important;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 300;
+		margin: 2rem 0;
+		padding-bottom: 1rem;
+		font-family: 'serif';
+		border-bottom: 1px solid rgba(var(--theme-color-accent), 0.5);
+		color: var(--theme-color-text);
+		text-transform: uppercase;
+	}
+	h2 {
+		font-weight: 400;
+		color: var(--theme-color-text);
+		font-family: 'serif';
+	}
+
+	h3,
+	h4 {
+		font-weight: 300;
+		color: var(--theme-color-text);
+	}
+
+	li {
+		color: var(--theme-pure-text-color);
+		font-size: 1.275rem;
+		font-weight: 300;
+		margin-left: 1rem;
+		line-height: 1.5;
+	}
+
+	ul {
+		list-style-position: inside;
+		margin-left: 1rem;
+		list-style-type: circle;
+	}
+	.link {
+		cursor: pointer;
+		text-decoration-line: underline;
+		&:focus {
+			outline-style: none;
+			@media (forced-colors: active) {
+				outline: 2px solid transparent;
+				outline-offset: 2px;
+			}
+		}
+		&:focus-visible {
+			outline: 2px solid currentColor;
+			outline-offset: 2px;
+		}
+	}
+
+	select {
+		background: var(--theme-color-background);
+
+		padding: 0.4rem;
+		margin: 0.1rem;
+	}
+	strong {
+		font-weight: 600;
+		font-weight: 500;
+		color: var(--theme-pure-text-color);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	a {
+		color: var(--theme-color-accent);
+		text-decoration: none;
+	}
+
+	h2 {
+		font-size: 1.85rem;
+		color: var(--theme-color-accent);
+	}
+
+	h3 {
+		font-size: 1.65rem;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	h5,
+	h6 {
+		font-size: 1.35rem;
+	}
+
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-color: var(--theme-color-accent);
+		background-color: var(--theme-color-accent);
+		border-top: 1px solid var(--theme-color-accent);
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	iframe {
+		width: 100%;
+		left: 0;
+		box-shadow: 1px 1px 6px 1px var(--box-shadow-color);
+		margin: 1rem 0 2rem 0 !important;
+		z-index: 3;
+		position: relative;
+	}
+
+	figcaption {
+		color: var(--theme-pure-text-color);
+	}
+
+	/* This breakpoint is intentionally higher than the regular mobile breakpoint */
+	/* UNCOMMENT TO ALLOW IFRAMES TO BE FULLBLEED */
+	/* @media screen and (min-width: 1100px) {
+  iframe {
+    position: relative;
+    left: calc(-35vw + 50%);
+    width: 70vw;
+  }
+} */
+
+	/* On blog posts, we make code chunks and iframes larger than content width */
+	/* We do this instead so that iframes are not centered but instead right justified */
+	@media screen and (min-width: 1100px) {
+		iframe {
+			width: 75vw;
+			max-width: 1100px;
+		}
+
+		pre {
+			width: max-content;
+			min-width: 100%;
+			max-width: 75vw;
+		}
+	}
+
+	pre {
+		font-size: 0.9rem !important;
+		margin-bottom: 1rem !important;
+		border-radius: 3px;
+	}
+
+	code:not(pre > code) {
+		font-family: var(--font-mono);
+		background: rgba(var(--theme-color-background), 0.1);
+		color: var(--theme-color-accent);
+		padding: 3px 5px;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		font-size: 0.825em;
+		font-weight: 600;
+		box-decoration-break: clone;
+	}
+
+	.uppercase {
+		text-transform: uppercase;
+	}
+
+	.centered {
+		text-align: center;
+	}
+
+	input,
+	button {
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	button:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	button {
+		background-color: var(--semitransparent-bg);
+
+		border: 2px solid var(--theme-color-accent);
+		color: var(--theme-pure-text-color);
+		border-radius: 0.3rem;
+		padding: 0.4rem;
+		margin: 0.1rem;
+		position: relative;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	input {
+		border: 2px solid var(--theme-color-accent);
+		background-color: var(--theme-pure-background);
+		color: var(--theme-pure-text-color);
+		padding: 0.3rem;
+		border-radius: 0.3rem;
+	}
+
+	.button:focus {
+		background-color: var(--theme-pure-background);
+	}
+
+	.button:active {
+		background-color: var(--theme-color-accent);
+	}
+
+	.button:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		background-image: linear-gradient(
+			135deg,
+			var(--semitransparent-bg) 10%,
+			/* var(--theme-pure-background) 30%, */ rgba(var(--theme-color-accent), 0.4) 150%
+		);
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 250ms linear;
+		-webkit-transition: opacity 250ms linear;
+		-moz-transition: opacity 250ms linear;
+		-ms-transition: opacity 250ms linear;
+		-o-transition: opacity 250ms linear;
+	}
+
+	.button:hover::before {
+		opacity: 1;
+	}
+
+	.page-overline {
+		font-size: 0.88rem;
+		text-transform: uppercase;
+		letter-spacing: 0.64px;
+		font-weight: 300;
+		margin-top: 1.25rem;
+		margin-bottom: -1.5rem;
+	}
+
+	.section-title {
+		font-size: 3.5rem;
+		font-weight: 200;
+		margin: 2rem 0;
+		padding-bottom: 1rem;
+		font-family: var(--font-serif);
+		border-bottom: 1px solid rgba(var(--theme-color-accent), 0.5);
+		color: var(--theme-color-accent);
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	.page-title {
+		font-size: 5rem;
+		font-weight: 300;
+		margin: 2rem 0;
+		padding-bottom: 1rem;
+		font-family: var(--font-serif);
+		border-bottom: 1px solid rgba(var(--theme-color-accent), 0.5);
+		color: var(--theme-color-accent);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	/* We set opacity of transitioning elements to 0 to prevent brief paint before opacity transitions 
+But for users who prefer reduced motion, we don't want to apply this 
+(they would never become visible because transitions never trigger) */
+	@media (prefers-reduced-motion: no-preference) {
+		.transition-title,
+		.transition-subtitle,
+		.transition-content,
+		.begin-invisible:not(.transitioned) {
+			opacity: 0;
+		}
+	}
+
+	.overflow-hidden {
+		overflow: hidden;
+	}
+
+	.gradient-accented {
+		color: var(--theme-color-accent);
+	}
+
+	.accented {
+		color: var(--theme-color-accent);
+	}
+
+	.bolded {
+		font-weight: 500;
+	}
+
+	.padding-bottom {
+		padding-bottom: 0.2rem;
+	}
+
+	.border-top {
+		border-top: 1px solid var(--theme-color-accent);
+		border-top: 0.5px solid var(--theme-color-accent);
+		padding-top: 1.5rem;
+	}
+
+	.border-bottom {
+		border-bottom: 1px solid var(--theme-color-accent);
+		border-bottom: 0.5px solid var(--theme-color-accent);
+		padding-bottom: 1.5rem;
+	}
+
+	.no-border {
+		border: none;
+	}
+
+	.block {
+		display: block;
+	}
+
+	a:not(.no-underline) {
+		position: relative;
+		color: var(--theme-color-accent);
+		background: linear-gradient(var(--theme-color-accent), var(--theme-color-accent)) left bottom
+			no-repeat;
+		background-size: 0% 1px;
+		font-weight: 500;
+		transition: background-size 0.25s ease-out;
+		-webkit-transition: background-size 0.25s ease-out;
+		-moz-transition: background-size 0.25s ease-out;
+		-ms-transition: background-size 0.25s ease-out;
+		-o-transition: background-size 0.25s ease-out;
+	}
+
+	a:not(.no-underline):hover {
+		background-size: 100% 1px;
+	}
+
+	blockquote {
+		color: var(--theme-color-text);
+		border-left: 10px solid var(--theme-color-accent);
+		padding: 1rem;
+		margin: 1.5rem;
+		line-height: 2;
+		background: var(--semitransparent-bg);
+		border-radius: 3px;
+		font-family: var(--font-serif);
+	}
+
+	summary::marker {
+		content: ' + ';
+		font-family: var(--font-mono);
+		font-size: 1.1rem;
+	}
+
+	details {
+		font-family: var(--font-mono);
+		color: var(--theme-color-text);
+		border-left: 10px solid var(--theme-color-accent);
+		margin-left: 0.5rem;
+		line-height: 2;
+		background: var(--semitransparent-bg);
+		box-shadow: 1px 1px 6px var(--box-shadow-color);
+		border-radius: 3px;
+		cursor: pointer;
+	}
+
+	*/ summary {
+		font-family: var(--font-mono);
+		font-size: 1.1rem;
+	}
+
+	blockquote p:last-of-type {
+		margin-bottom: 0 !important;
+	}
+
+	img,
+	pre,
+	iframe {
+		width: 100%;
+	}
+
+	table {
+		width: 100%;
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+
+	.twitter-tweet {
+		margin: 10px auto;
+	}
+
+	.see-all-flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* ALL INDEX.SVELTE PAGES HAVE THIS FOR THEIR MAIN TAG */
+	.main {
+		max-width: 1100px;
+		width: 95%;
+		margin: 0 auto 4rem;
+		padding-top: var(--nav-height);
+	}
+
+	/* FORMATTING FOR CONTENT PAGES (BLOG POSTS, PROJECT PAGES, AWARD PAGES */
+	.top-level {
+		/* max-width: 1068px; */
+		margin: 0 auto 5vh;
+		padding-top: var(--nav-height);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+	}
+
+	.main-content {
+		max-width: 768px;
+		margin: 0 auto;
+		width: 50%;
+		margin-bottom: 4rem;
+	}
+
+	.main-content :not(h1, h2, h3)::selection {
+		color: var(--theme-pure-background);
+		background: var(--theme-pure-text-color);
+		text-shadow: none;
+	}
+
+	.page-subtitle {
+		font-size: 2rem;
+
+		line-height: 1;
+		text-align: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		background-color: var(--theme-pure-background);
+	}
+
+	.page-description {
+		font-size: 1rem;
+
+		line-height: 1;
+		text-align: left;
+		padding: 1rem;
+		margin-bottom: 1rem;
+		background-color: var(--theme-pure-background);
+	}
+	/* .title {
+		font-family: 'serif';
+	} */
+
+	/* MOBILE BREAKPOINT */
+	@media screen and (max-width: 460px) {
+		.page-title {
+			font-size: 3rem;
+		}
+
+		.page-title {
+			font-size: 2.25rem;
+		}
+	}
+}
+@layer base {
+	[data-theme='light'] {
+		--theme-pure-background: #e6e8e6;
+		--theme-color-accent: #1b692f;
+		--theme-color-text: #020a04;
+		--theme-color-board: #f0ead6;
+		--theme-color-board-border: transparent;
+		--theme-color-tile: #f8f0e0;
+		--theme-color-tile-font-multiplier: #1e191f;
+		--theme-color-board-font: black;
+		--theme-color-tile-font: #1e191f;
+		--theme-color-double-letter: #ffe6da;
+		--theme-color-triple-letter: #b4f6af;
+		--theme-color-double-word: #f3b497;
+		--theme-color-triple-word: #7ca979;
+		--theme-color-double-letter-font: #f3b497;
+		--theme-color-triple-letter-font: #7ca979;
+		--theme-color-double-word-font: #073865;
+		--theme-color-triple-word-font: #073865;
+		--theme-color-hover: #ececec;
+		--theme-color-background: #fafcfa;
+		--theme-pure-color-text: #e8f2f2;
+		--theme-color-secondary: white;
+		--theme-color-success: #61dbc7;
+		--theme-color-warning: #d07206;
+		--theme-color-error: #e34a4d;
+	}
+
+	[data-theme='dark'] {
+		--theme-pure-background: #081f0e;
+		--theme-color-accent: #1b692f;
+		--theme-color-text: #fafcfa;
+		--theme-color-board: #5d5c67;
+		--theme-color-board-border: transparent;
+		--theme-color-tile: #494854;
+		--theme-color-board-font: black;
+		--theme-color-tile-font: white;
+		--theme-color-double-letter: #ffe6da;
+		--theme-color-triple-letter: #b4f6af;
+		--theme-color-double-word: #f3b497;
+		--theme-color-triple-word: #7ca979;
+		--theme-color-double-letter-font: #f3b497;
+		--theme-color-triple-letter-font: #7ca979;
+		--theme-color-double-word-font: #fafcfa;
+		--theme-color-triple-word-font: #fafcfa;
+		--theme-color-hover: #0d0a2e;
+		--theme-color-secondary: #e6ebef;
+		--theme-pure-color-text: #6d6b7d;
+		--theme-color-background: #020a04;
+		--theme-color-success: #13534b;
+		--theme-color-warning: #f7c01d;
+		--theme-color-error: #f16a7e;
+	}
+}

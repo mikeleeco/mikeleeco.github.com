@@ -10,7 +10,7 @@ tags:
   - R
 featured: true
 description: 'Improve your R animations by implementing pause frames for emphasis'
-img: '/img/tx_Housing.gif'
+img: '/img/tx_Housing.png'
 ---
 
 ## Mastering Animation in R
@@ -282,7 +282,7 @@ Simple as that!
 
 <hr>
 
-![Median sale price of homes in Abilene and Amarillo, 2000 through 2015](/img/tx_Housing.gif)
+![Median sale price of homes in Abilene and Amarillo, 2000 through 2015](/img/Animation/tx_Housing.gif)
 
 <hr>
 
@@ -306,8 +306,3 @@ unwieldy.
 ```
 
 </details>
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

@@ -217,7 +217,7 @@ we’ll want to iterate over the data years, so `.frame = year`
 
     gganimate(gg, "/home/michael/Documents/mikeleeco.github.com/static/img/gganimate_measles.gif")
 
-![Measles Animation using gganimate](/img/gganimate_measles.gif)
+![Measles Animation using gganimate](/img/Animation/gganimate_measles.gif)
 
 That’s a great start! Though this could be further developed using
 `gganimate` I prefer to use the `animation` package’s `saveGIF` function
@@ -300,7 +300,7 @@ be “drawn” given the circumstances of the subset. Here’s our final code:
       ,movie.name="/home/michael/Documents/mikeleeco.github.com/static/img/measles.gif",interval = .1, ani.width = 2050, ani.height = 1550)
 ```
 
-![Measles Animation using animation](/img/measlesCompressed.gif)
+![Measles Animation using animation](/img/Animation/measlesCompressed.gif)
 
 ### Addendum - Gif File Size Management:
 
@@ -336,8 +336,3 @@ to minimize our measles gif:
 ```
 
 Still large but more manageable.
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

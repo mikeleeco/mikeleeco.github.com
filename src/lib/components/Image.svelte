@@ -1,29 +1,24 @@
 <script>
-    export let alt;
-    export let src;
-    export let text;
+	let { alt, src, text, caption = true, visible = false, classNames = '' } = $props();
 
-    let visible = false;
-
-    function showCaption() {
-        visible = !visible;
-    }
+	let showCaption = $state(visible);
+	function revealCaption() {
+		visible = !visible;
+	}
 </script>
 
-<figure
-    on:keypress={showCaption}
-    on:click={showCaption}
-    class="relative flex flex-col first:pt-5 last:pb-5 py-5"
->
-    <img {src} {alt} />
+<button class="border-0" onclick={revealCaption} aria-labelledby="caption">
+	<figure role="tooltip" class="flex flex-col ${caption ? ' py-5  first:pt-5 last:pb-5' : ''}">
+		<img {src} {alt} class={classNames} />
 
-    {#if visible}
-        <figcaption
-            class="lg:hidden flex-1 bg-[--primary-color] opacity-[85%] p-3 w-full absolute"
-        >
-            <div class="text-primary opacity-100 p-2">{@html text}</div>
-        </figcaption>
-    {:else}
-        <figcaption class="hidden sm:block py-2">{@html text}</figcaption>
-    {/if}
-</figure>
+		{#if visible & caption}
+			<figcaption
+				class="absolute w-full flex-1 bg-[--theme-color-background] p-3 opacity-[85%] lg:hidden"
+			>
+				<div class="theme-color-text p-2 opacity-100">{@html text}</div>
+			</figcaption>
+		{:else}
+			<figcaption class="hidden sm:block">{@html text}</figcaption>
+		{/if}
+	</figure>
+</button>
