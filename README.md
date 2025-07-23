@@ -1,16 +1,14 @@
-## Portfolio and blog of Michael Lee
+### Hi there - I'm Mike Lee 👋
 
-I’m a research and data professional with an interest in creating products and tools that supplement the acquisition of knowledge. My toolkit includes R, SQL, D3, and LaTeX, and my background in special education assists in making complex concepts accessible.
+Apps             |  Cartoons             |  Posts             |  About
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+[![Apps](https://raw.githubusercontent.com/mikeleeco/mikeleeco.github.com/refs/heads/main/static/img/apps.png)](https://www.mikelee.co/apps)  |  [![Cartoons](https://raw.githubusercontent.com/mikeleeco/mikeleeco.github.com/refs/heads/main/static/img/cartoons.png)](https://www.mikelee.co/cartoons) |  [![Posts](https://raw.githubusercontent.com/mikeleeco/mikeleeco.github.com/refs/heads/main/static/img/posts.png)](https://www.mikelee.co/posts) | [![About](https://raw.githubusercontent.com/mikeleeco/mikeleeco.github.com/refs/heads/main/static/img/about.png) ](https://www.mikelee.co/about)
 
-![Animation](https://d33wubrfki0l68.cloudfront.net/5c9a4243f27660869fcd886baf7b2e32da203edc/d754e/img/lineeducationloans.gif)
+A cartoonist and developer living in Milwaukee, Wisconsin specializing in the creation of graphics, web applications, and data-driven projects. I teach workshops on R programming and data visualization and also enjoy baking baklava, biking, and playing word games. Learn more about my skills and experience by [checking out my portoflio](https://www.mikelee.co).
+
+
+![Animation](https://d33wubrfki0l68.cloudfront.net/5c9a4243f27660869fcd886baf7b2e32da203edc/d754e/img/lineeducationloans.gif
+)
 
 ### Resume
-
-Check out my resume, linked [here](https://www.mikelee.co/Michael_Lee_Resume.pdf)
-
-<!-- install -->
-
-npm install feather-icons bowser gsap date-fns svelte-preprocess
-npm i --save-dev @types/feather-icons
-
-<!-- ffmpeg -i input.mp4 -c:v libvpx -b:v 1M -c:a libvorbis leeLogo.webm -->
+Linked [here](http://www.mikelee.co/Michael_Lee_Resume.pdf).
