@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Current expenditures per pupil ranged from $6,751 in Utah to $20,744 in New York for FY 2015'
-img: '/img/barState_Expenditure.gif'
+img: '/img/barState_Expenditure.png'
 ---
 
 ## Animation seen here:
@@ -32,15 +32,3 @@ $20,744 in New York for FY 2015:
 <a href="https://twitter.com/EdNCES/status/956970572189241344?ref_src=twsrc%5Etfw">January
 26, 2018</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Current Expenditures per pupil in the lowest and highest spending
-states](/img/barState_Expenditure.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

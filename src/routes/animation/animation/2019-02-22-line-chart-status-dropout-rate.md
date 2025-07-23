@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: ' Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000 through 2016'
-img: '/img/lineStatusDropoutRateTall.gif'
+img: '/img/lineStatusDropoutRateTall.png'
 ---
 
 Animation linked here:
@@ -33,17 +33,3 @@ status high school dropout rate ↓ from 27.8% to 8.6% between 2000 &
 <a href="https://twitter.com/EdNCES/status/1098979512107319296?ref_src=twsrc%5Etfw">February
 22, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Status dropout rates of 16 to 24 year olds, by race/ethnicity: 2000
-through 2016](/img/lineStatusDropoutRateTall.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

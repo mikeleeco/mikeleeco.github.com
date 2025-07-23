@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'The immediate college enrollment rate for #Hispanic students was higher in 2017 (67%) than in 2000 (49%).'
-img: '/img/lineCollegeEnrollment.gif'
+img: '/img/lineCollegeEnrollment.png'
 ---
 
 Animation Linked here:
@@ -36,18 +36,3 @@ report: <a href="https://t.co/r8gJkRDeK3">https://t.co/r8gJkRDeK3</a>
 <a href="https://twitter.com/EdNCES/status/1131294682150051841?ref_src=twsrc%5Etfw">May
 22, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![The immediate college enrollment rate for #Hispanic students was
-higher in 2017 (67%) than in 2000
-(49%).](/img/lineCollegeEnrollment.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

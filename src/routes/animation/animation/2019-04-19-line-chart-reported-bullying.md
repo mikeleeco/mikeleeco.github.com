@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Between 2005 and 2017, the percentage of students ages 12-18 who reported being bullied at school decreased from 29 to 20 percent'
-img: '/img/lineBullyingUpdateTall.gif'
+img: '/img/lineBullyingUpdateTall.png'
 ---
 
 Animation Linked here:
@@ -34,18 +34,3 @@ in the Indicators of School Crime and Safety report, available now:
 <a href="https://twitter.com/EdNCES/status/1119216601545498624?ref_src=twsrc%5Etfw">April
 19, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Between 2005 and 2017, the percentage of students ages 12-18 who
-reported being bullied at school decreased from 29 to 20
-percent](/img/lineBullyingUpdateTall.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

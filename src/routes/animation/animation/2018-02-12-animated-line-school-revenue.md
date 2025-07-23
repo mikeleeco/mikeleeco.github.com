@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Federal sources accounted for approx. 9% of the total funding for #K12 public schools in both 2005–06 and 2014 –15.'
-img: '/img/lineSchool_Revenue.gif'
+img: '/img/lineSchool_Revenue.png'
 ---
 
 ## Animation seen here:
@@ -33,15 +33,3 @@ public schools in both 2005–06 and 2014 –15.
 <a href="https://twitter.com/EdNCES/status/963158870557421568?ref_src=twsrc%5Etfw">February
 12, 2018</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Percentage of revenue for elementary and secondary public
-schools](/img/lineSchool_Revenue.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

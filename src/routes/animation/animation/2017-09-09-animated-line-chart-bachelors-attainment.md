@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'The 2016 White-Black and White-Hispanic gaps in bachelor’s degree attainment rates were not measurably different from the gaps in 2000'
-img: '/img/line_Bachelors.gif'
+img: '/img/line_Bachelors.png'
 ---
 
 ## Animation seen here:
@@ -33,15 +33,3 @@ the
 <a href="https://twitter.com/EdNCES/status/903305999636946945">August
 31, 2017</a>
 </blockquote>
-
----
-
-## Full image:
-
-![COE 2017 Bachelors Attainment Line Graph
-Animation](/img/line_Bachelors.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

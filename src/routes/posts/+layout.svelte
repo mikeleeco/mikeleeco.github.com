@@ -5,8 +5,11 @@
 	let image = 'https://www.mikelee.co/img/michael.png';
 	let title = 'Blog';
 	let description = 'Some of my posts.';
+	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
 </script>
 
 <Seo {title} {description} {image} />
 
-<slot />
+<ContainerLayout>
+	<slot />
+</ContainerLayout>

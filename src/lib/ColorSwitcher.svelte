@@ -1,67 +1,46 @@
-<script>
-  import { fly, fade } from "svelte/transition";
-  import { windowWidth } from "../stores/global.js";
-  import { theme } from "../stores/theme.js";
+<script lang="ts">
+	import { preventDefault } from 'svelte/legacy';
 
-  let transitioning = false;
-  let transitionDuration = 500;
-  let currentAccent;
+	import { theme } from '../stores/theme.js';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 
-  // console.log($windowWidth);
-  import { sleep } from "../scripts/utils.js";
+	let themes = $state([
+		{ title: '🌚  Dark', theme: 'dark' },
+		{ title: '🌝  Light', theme: 'light' }
+	]);
 
-  async function setColors() {
-    currentAccent = getComputedStyle(document.documentElement).getPropertyValue(
-      "--accent-color"
-    );
+	let selectedTheme = $state();
+	onMount(() => {
+		selectedTheme = localStorage.getItem('theme');
+		$theme = selectedTheme;
+		console.log('selectedTheme:', selectedTheme);
+		document.documentElement.setAttribute('data-theme', $theme);
+	});
 
-    transitioning = true;
-    await sleep(transitionDuration);
-
-    transitioning = false;
-    if ($theme == "dark") {
-      theme.set("light");
-    } else {
-      theme.set("dark");
-    }
-  }
-
-  import { cubicIn, cubicOut } from "svelte/easing";
+	async function setColors(click) {
+		let newTheme = click.target.getAttribute('data-set-theme');
+		$theme = newTheme;
+		if (newTheme) {
+			document.documentElement.setAttribute('data-theme', newTheme);
+			localStorage.theme = newTheme;
+			selectedTheme = newTheme;
+		}
+	}
 </script>
 
-{#if transitioning}
-  <div
-    in:fade={{ opacity: 1, easing: cubicIn }}
-    out:fade={{ opacity: 1, easing: cubicOut }}
-    class="fullscreen-transition"
-    style="background: {currentAccent};"
-  />
-{/if}
+<!-- 			disabled={$theme === i.theme} -->
 {#key $theme}
-  <button class="color-switcher" on:click={setColors}>
-    {$theme == "dark" ? "🌙" : "☀️"}
-  </button>
+	{#each themes as i}
+		<button
+			class="button-icon {selectedTheme === i.theme
+				? 'border-accent cursor-pointer border-2'
+				: 'border-2 border-transparent'}"
+			data-set-theme={i.theme}
+			onclick={preventDefault(setColors)}
+			type={'button'}
+		>
+			{i.title}
+		</button>
+	{/each}
 {/key}
-
-<style>
-  .fullscreen-transition {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: grey;
-    z-index: 10000;
-  }
-
-  button {
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-family: var(--font-sans);
-    font-weight: 300;
-    font-size: 1.5rem;
-    z-index: 101;
-    user-select: none;
-    border: 0;
-  }
-</style>

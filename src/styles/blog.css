@@ -15,9 +15,10 @@
 
 p {
 	padding-bottom: 1rem;
-
 }
-
+.page-subtitle {
+	margin-bottom: 2rem;
+}
 .content h3,
 .content h4,
 .content h5,
@@ -53,14 +54,14 @@ blockquote p:last-of-type {
 table {
 	position: relative;
 	z-index: 10;
-	background: var(--primary-color);
-	color: var(--text-color);
+	background: var(--theme-color-background);
+	color: var(--theme-color-text);
 	font-family: var(--font-sans);
 	line-height: 1.5;
 	width: 100%;
 }
 
-thead {
+th {
 	font-weight: bold;
 }
 
@@ -85,5 +86,5 @@ th:first-of-type {
 }
 
 tr:hover {
-	background: var(--primary-color);
+	background: var(--theme-color-background);
 }

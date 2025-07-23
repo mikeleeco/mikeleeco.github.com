@@ -14,7 +14,7 @@ tags:
   - bar
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'How did the median annual earnings of full-time, year-round workers ages 25–34 vary by sex and educational attainment? Dive into the #ConditionOfEd for more #EdStats'
-img: '/img/barChartGender_Earnings2019.gif'
+img: '/img/barChartGender_Earnings2019.png'
 ---
 
 Animation Linked here:
@@ -34,19 +34,3 @@ for more
 <a href="https://twitter.com/EdNCES/status/1137034256193118210?ref_src=twsrc%5Etfw">June
 7, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![How did the median annual earnings of full-time, year-round workers
-ages 25–34 vary by sex and educational attainment? Dive into the
-#ConditionOfEd for more
-#EdStats](/img/barChartGender_Earnings2019.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

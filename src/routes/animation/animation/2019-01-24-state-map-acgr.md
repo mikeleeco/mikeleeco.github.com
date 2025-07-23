@@ -14,7 +14,7 @@ tags:
   - gridmap
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Adjusted cohort graduation rate (ACGR) of public high school students, by state: 2010-11 through 2016-17'
-img: '/img/mapGraduation_Rate.gif'
+img: '/img/mapGraduation_Rate.png'
 ---
 
 Animation linked here:
@@ -32,17 +32,3 @@ rates (ACGR) for public high school students changed between 2010–11 and
 <a href="https://twitter.com/EdNCES/status/1088444582382223360?ref_src=twsrc%5Etfw">January
 24, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Adjusted cohort graduation rate (ACGR) of public high school students,
-by state: 2010-11 through 2016-17](/img/mapGraduation_Rate.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

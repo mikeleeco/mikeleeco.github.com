@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'White-Black and White-Hispanic gaps in high school attainment rates\ arrowed between 2000 and 2016.'
-img: '/img/line_High_School.gif'
+img: '/img/line_High_School.png'
 ---
 
 ## Animation seen here:
@@ -30,15 +30,3 @@ Hispanic students have narrowed. Learn more:
 <a href="https://twitter.com/EdNCES/status/921050270049718273?ref_src=twsrc%5Etfw">October
 19, 2017</a>
 </blockquote>
-
----
-
-## Full image:
-
-![COE 2017 High School Attainment Line Graph
-Animation](/img/line_High_School.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

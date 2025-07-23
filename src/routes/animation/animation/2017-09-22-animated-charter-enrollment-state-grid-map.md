@@ -13,7 +13,7 @@ tags:
   - gridmap
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Change in public elementary and secondary charter school enrollment as a percent of public school enrollment, by state: 2004-2005 through 2014-2015'
-img: '/img/charter_State.gif'
+img: '/img/charter_State.png'
 ---
 
 ## Animation seen here:
@@ -31,14 +31,3 @@ indicator: <a href="https://t.co/5fYKCqMGH7">https://t.co/5fYKCqMGH7</a>
 <a href="https://twitter.com/EdNCES/status/910615129343000576">September
 20, 2017</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Charter School Enrollment State Grid Map](/img/charter_State.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

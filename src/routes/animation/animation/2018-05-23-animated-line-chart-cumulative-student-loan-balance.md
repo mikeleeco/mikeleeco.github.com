@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'Among grad school completers in 2015-16 who took out student loans, the avgerage balance was highest for those completing a professional doctorate ($186,600).'
-img: '/img/lineEducationLoans.gif'
+img: '/img/lineEducationLoans.png'
 ---
 
 ## Animation seen here:
@@ -33,16 +33,3 @@ Spotlight: <a href="https://t.co/Yr9DzkGYMS">https://t.co/Yr9DzkGYMS</a>
 <a href="https://twitter.com/EdNCES/status/999323515215020034?ref_src=twsrc%5Etfw">May
 23, 2018</a>
 </blockquote>
-
----
-
-## Full image:
-
-![Average cumulative student loan balance for graduate school
-completers, by degree type: Selected years,
-2000-2016](/img/lineEducationLoans.gif)
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

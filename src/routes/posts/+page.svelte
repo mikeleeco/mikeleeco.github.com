@@ -1,46 +1,62 @@
 <script>
-  import Transition from "$lib/Transition.svelte";
-  import PostSection from "$lib/Content/PostCompact.svelte";
-  import PostDescription from "$lib/Content/PostDescription.svelte";
-  import BackTo from "$lib/BackTo.svelte";
+	import Transition from '$lib/Transition.svelte';
+	import Post from '$lib/Content/PostCompact.svelte';
+	import BackTo from '$lib/BackTo.svelte';
+	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
+	let { data } = $props();
+	let posts = data.posts;
 
-  import { windowWidth } from "../../stores/global.js";
+	let recentPosts = posts.filter((b) => {
+		// console.log('b.metadata.date: ', b.metadata.date);
 
-  // console.log($windowWidth);
-  let pageWidth = 1000;
-  $: pageWidth = $windowWidth < 468;
-  let anyHovered;
-  export let data;
-  let posts = data.posts;
+		if (Date.parse(b.metadata.date) > Date.parse('2020-06-10')) return 1;
+		else return null;
+	});
 
-  let filteredPosts = posts.sort((a, b) => {
-    if (Date.parse(b.metadata.date) > Date.parse(a.metadata.date)) return 1;
-    if (Date.parse(b.metadata.date) < Date.parse(a.metadata.date)) return -1;
-  });
+	let featuredPosts = posts
+		.filter((d) => d.metadata.featured == true)
+		// Sort by featured first, and if featured is the same (both false), then sort by date
+		.sort((a, b) => {
+			if (Date.parse(b.metadata.date) > Date.parse(a.metadata.date)) return 1;
+			if (Date.parse(b.metadata.date) < Date.parse(a.metadata.date)) return -1;
+		});
 </script>
 
 <Transition />
 
-<main class="main">
-  <BackTo
-    href="/"
-    text="Home"
-    classes="page-heading transition-content centered"
-  />
-  <h1 class="page-title transition-title overflow-hidden">Blog</h1>
-  <!-- <h3 class="page-description transition-title">Description</h3> -->
-  <div class="posts-grid transition-content">
-    {#each filteredPosts as post}
-      <div>
-        {#if !pageWidth}
-          <PostDescription post={post.metadata} slug={post.slug} />
-        {:else}
-          <PostSection post={post.metadata} slug={post.slug} bind:anyHovered />
-        {/if}
-      </div>
-    {/each}
-  </div>
-</main>
+<ContainerLayout>
+	<div class="flex flex-col justify-center">
+		<BackTo href="/" text="Home" classes="heading" />
+		<h1 class="">Posts</h1>
+		<!-- <h3 class="description transition-title">Description</h3> -->
+		<div class="flex flex-col gap-10">
+			<div>
+				<h2 class="">Recent Posts</h2>
+				{#each recentPosts as post}
+					<div>
+						<Post post={post.metadata} slug={post.slug} />
+					</div>
+				{/each}
+			</div>
+
+			<div>
+				<h2 class="">Featured Posts</h2>
+				<div class="">
+					{#each featuredPosts as post}
+						<div>
+							<Post post={post.metadata} slug={post.slug} />
+						</div>
+					{/each}
+				</div>
+			</div>
+
+			<!-- UPDATE: posts should start with 2025 changes -->
+			<!-- List popular posts -->
+			<!-- List personal favorites -->
+			<!-- List chronological posts -->
+		</div>
+	</div>
+</ContainerLayout>
 
 <style>
 </style>

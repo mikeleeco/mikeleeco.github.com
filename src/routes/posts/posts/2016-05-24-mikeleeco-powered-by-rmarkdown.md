@@ -27,7 +27,7 @@ Adding in a [`_source`](https://github.com/mikeleeco/mikeleeco.github.com/tree/m
 
 The first part of this post was pretty trivial given my previous experience with both jekyll and knitr. Adjusting syntax highlighting was a bit of a hiccup. Out of the box, code blocks in divs were being generated using my highlighter (rouge) but were being rendered with an "r" in front like so:
 
-` r``cat(paste(c("This","drove","me","mental D:"),sep=" ")) `
+`r``cat(paste(c("This","drove","me","mental D:"),sep=" "))`
 
 `## This drove me mental D:`
 

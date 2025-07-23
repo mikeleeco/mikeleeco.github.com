@@ -14,7 +14,7 @@ tags:
   - gridmap
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'The adjusted cohort #GraduationRate (ACGR) is the % of public high school students who graduate w/ a regular diploma within 4 yrs of starting 9th grade for the first time.'
-img: '/img/mapGraduation_Rate2020.gif'
+img: '/img/mapGraduation_Rate2020.png'
 ---
 
 Animation linked here:
@@ -35,18 +35,3 @@ data are also available at:
 <a href="https://twitter.com/EdNCES/status/1238564506638393344?ref_src=twsrc%5Etfw">March
 13, 2020</a>
 </blockquote>
-
----
-
-## Full image:
-
-![The adjusted cohort #GraduationRate (ACGR) is the % of public high
-school students who graduate w/ a regular diploma within 4 yrs of
-starting 9th grade for the first time.](/img/mapGraduation_Rate2020.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

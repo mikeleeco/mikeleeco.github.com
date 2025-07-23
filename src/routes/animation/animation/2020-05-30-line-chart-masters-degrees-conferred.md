@@ -14,7 +14,7 @@ tags:
   - line
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'In 2010–11, business surpassed #education as the field in which the largest number of master’s degrees were conferred and has remained the largest field in each subsequent year.'
-img: '/img/lineEarningsProgram.gif'
+img: '/img/lineEarningsProgram.png'
 ---
 
 Animation Linked here:
@@ -36,18 +36,3 @@ data in the updated
 <a href="https://twitter.com/EdNCES/status/1266829511636783105?ref_src=twsrc%5Etfw">May
 30, 2020</a>
 </blockquote>
-
----
-
-## Full image:
-
-![In 2010–11, business surpassed #education as the field in which the
-largest number of master’s degrees were conferred and has remained the
-largest field in each subsequent year.](/img/lineEarningsProgram.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!

@@ -16,31 +16,31 @@
 <Seo {title} {description} {image} />
 
 <article>
-  <h2 class="page-title">{title}</h2>
-  <h3 class="page-subtitle">{description}</h3>
-
-  {#if url === ""}
-    <img
-      loading="lazy"
-      src={img}
-      alt="Project img for {title}"
-      class="post-img"
-    />
-  {:else}
-    <a class="no-underline" href={url}>
+  <div class="flex flex-col gap-5">
+    <h2 class="page-title">{title}</h2>
+    <h3 class="page-subtitle">{description}</h3>
+    {#if url === ""}
       <img
         loading="lazy"
         src={img}
         alt="Project img for {title}"
         class="post-img"
       />
-    </a>
-    <a class="" href={url}> {url}</a>
-  {/if}
-
-  <svelte:component this={projects.default} />
+    {:else}
+      <a class="no-underline" href={url}>
+        <img
+          loading="lazy"
+          src={img}
+          alt="Project img for {title}"
+          class="post-img"
+        />
+      </a>
+      <a class="" href={url}> {url}</a>
+    {/if}
+    <svelte:component this={projects.default} />
+  </div>
 </article>
-<div>
+<div class="py-5">
   <BackTo
     href={`/${categories}`}
     text={`Back to all ${categories}`}

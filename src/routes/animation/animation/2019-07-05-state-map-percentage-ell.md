@@ -14,7 +14,7 @@ tags:
   - gridmap
 subtitle: 'Animation created using ggplot2 and animation packages for social media distribution'
 description: 'The % of public school students in the U.S. who were English language learners (#ELL) was higher in fall 2016 (9.6%, or 4.9M) than in fall 2000 (8.1%, or 3.8M).'
-img: '/img/map_ELL_Color2019.gif'
+img: '/img/map_ELL_Color2019.png'
 ---
 
 Animation linked here:
@@ -37,18 +37,3 @@ in our recently released
 <a href="https://twitter.com/EdNCES/status/1147204611557732354?ref_src=twsrc%5Etfw">July
 5, 2019</a>
 </blockquote>
-
----
-
-## Full image:
-
-![The % of public school students in the U.S. who were English language
-learners (#ELL) was higher in fall 2016 (9.6%, or 4.9M) than in fall
-2000 (8.1%, or 3.8M).](/img/map_ELL_Color2019.gif)
-
----
-
-Interested in learning more? Hire me to consult on your next project,
-follow me on [twitter](https://twitter.com/mikeleeco),
-or contact me via [email](mailto:mdlee12@gmail.com). All inquiries
-welcome!
