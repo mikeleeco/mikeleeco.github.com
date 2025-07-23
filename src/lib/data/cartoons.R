@@ -34,7 +34,6 @@ tags <- lapply(cartoons$tags, function(u) {
 cartoons$tags <- tags
 cartoons$Themes <- NULL
 # Convert to JSON with column names
-swl <- toJSON(cartoons, pretty = TRUE, auto_unbox = TRUE)
 
 # create 
 # years <-  list.files("./static/img/cartoons")
@@ -59,6 +58,10 @@ for(i in 1:nrow(cartoons)) {
     file.copy(fileName, paste0("./static/img/cartoons/",basename(cartoons$Path[i])))
     }
 }
+
+cartoons <- cartoons %>% filter(!Archive)
+
+swl <- toJSON(cartoons, pretty = TRUE, auto_unbox = TRUE)
 
 writeLines(swl, "./src/lib/data/cartoons.json")
 # writeLines(swl, paste0("../crabapple-games/src/lib/data/dabblegrams/",year,"/",month,"/puzzles.json"))

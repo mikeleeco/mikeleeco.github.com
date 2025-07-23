@@ -304,22 +304,6 @@
     "alt": "Three babies sit on a carpet together. “Ppppppppbt!“"
   },
   {
-    "Filename": "bedroom.jpeg",
-    "Caption": "Oh, you know. He’s doing his own thing.",
-    "Description": "A woman talks of a phone next to a bed as another person dances on the other side of the room.",
-    "Month": "March",
-    "Date": "2024-03-31",
-    "Path": "2024/March/bedroom.jpeg",
-    "bottom_crop": 12,
-    "left_crop": 1,
-    "font_size": 120,
-    "Setting": "Home, bedroom",
-    "Posted": true,
-    "Archive": true,
-    "tags": ["Relationships", "Marriage", "Home", "Bedroom"],
-    "alt": "A woman talks of a phone next to a bed as another person dances on the other side of the room. “Oh, you know. He’s doing his own thing.“"
-  },
-  {
     "Filename": "enoughGood.jpeg",
     "Caption": "Well. That’s enough. Good for the day.",
     "Description": "An angel and a devil sit on top of the shoulders of a man.",
@@ -700,25 +684,6 @@
     "alt": "One crane talks to another crane in a riverbed. “I used to work in construction.“"
   },
   {
-    "Filename": "idea.jpeg",
-    "Caption": "Hey don’t blame me. I’m just an idea guy.",
-    "Description": "A cloud in a tie sits at a conference table.",
-    "Month": "July",
-    "Date": "2024-07-31",
-    "Path": "2024/July/idea.jpeg",
-    "top_crop": 3,
-    "right_crop": 1,
-    "bottom_crop": 11,
-    "left_crop": 0,
-    "font_size": 120,
-    "padding_percent": 3,
-    "Setting": "Office, workplace",
-    "Posted": true,
-    "Archive": true,
-    "tags": ["Workplace", "Jobs", "Ideas", "Office"],
-    "alt": "A cloud in a tie sits at a conference table. “Hey don’t blame me. I’m just an idea guy.“"
-  },
-  {
     "Filename": "pullover.jpeg",
     "Caption": "I’m sorry officer. I’m late for a meeting. I was hauling ass tonight.",
     "Description": "A sheriff looks grimly at a man with his hands on the wheel of a truck.",
@@ -765,23 +730,6 @@
     "Archive": false,
     "tags": ["Fairy Tale", "Shoes", "Farming", "Farm", "Field"],
     "alt": "Two men in hats tend to a field. One points out a small boot with windows and smoke billowing from a chimney. He remarks “Oh, there’s my shoe!” with the caption “The Little Old Lady meets her maker” ““"
-  },
-  {
-    "Filename": "eyes.jpeg",
-    "Caption": "Hey, I was watching that!",
-    "Description": "A man appears in distress as he looks out an open window.",
-    "Month": "July",
-    "Date": "2024-07-31",
-    "Path": "2024/July/eyes.jpeg",
-    "top_crop": 3,
-    "right_crop": 1,
-    "bottom_crop": 15,
-    "font_size": 120,
-    "Setting": "Home, living room",
-    "Posted": true,
-    "Archive": true,
-    "tags": ["Television", "Surprise", "Home", "Living Room"],
-    "alt": "A man appears in distress as he looks out an open window. “Hey, I was watching that!“"
   },
   {
     "Filename": "wildflowers.jpeg",
@@ -833,21 +781,6 @@
     "Archive": false,
     "tags": ["Animals", "Ducks", "Fishing", "Friends", "Nature", "Lake"],
     "alt": "Ducklings swim with their beaks open between a pair of adult ducks. One looks forlorn as the other quacks… “I’m beginning to suspect your friend is withholding their true favorite fishing spot.“"
-  },
-  {
-    "Filename": "enough.jpeg",
-    "Caption": "Your father and I have decided. We’ve had enough!",
-    "Description": "A mom and dad rejoice as their children stand nearby. Two young ones are fighting as an older sibling tries to intervene. A teenage girl looks nonplussed as a toddler frowns.",
-    "Month": "August",
-    "Date": "2024-08-31",
-    "Path": "2024/August/enough.jpeg",
-    "bottom_crop": 12,
-    "font_size": 125,
-    "Setting": "Home, yard",
-    "Posted": true,
-    "Archive": true,
-    "tags": ["Family", "Children", "Home", "Yard"],
-    "alt": "A mom and dad rejoice as their children stand nearby. Two young ones are fighting as an older sibling tries to intervene. A teenage girl looks nonplussed as a toddler frowns. “Your father and I have decided. We’ve had enough!“"
   },
   {
     "Filename": "martins.jpeg",
