@@ -30,6 +30,14 @@
 		</p>
 
 		<span class="">
+			<h2>License</h2>
+			Visit the 
+			<a
+				target="_blank"
+				aria-label="footer-link"
+				rel="noopener noreferrer"
+				href="/license">License</a
+			> page for more information about the content of this website.
 			<h2>Contact</h2>
 			<p>
 				Interested in learning more? <a href="/contact">Contact me</a> to draw a cartoon or consult on

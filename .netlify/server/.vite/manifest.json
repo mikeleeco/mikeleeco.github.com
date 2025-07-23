@@ -607,6 +607,17 @@
       "_ContainerLayout.js"
     ]
   },
+  "src/routes/license/+page.svelte": {
+    "file": "entries/pages/license/_page.svelte.js",
+    "name": "entries/pages/license/_page.svelte",
+    "src": "src/routes/license/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_client.js",
+      "_Seo.js",
+      "_ContainerLayout.js"
+    ]
+  },
   "src/routes/posts.json/+server.js": {
     "file": "entries/endpoints/posts.json/_server.js",
     "name": "entries/endpoints/posts.json/_server",
