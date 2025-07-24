@@ -10,7 +10,7 @@
 	import { insertBeforeLastSlash } from '$lib/utils/utils';
 	import { derived } from 'svelte/store';
 	import BackTo from '$lib/BackTo.svelte';
-	let selectedTag = $state('Aliens');
+	let selectedTag = $state('Animals');
 	let images = data;
 	import { replaceJpeg } from '$lib/utils/utils';
 	const tags = Array.from(new Set(data.flatMap((img) => img.tags))).sort();
