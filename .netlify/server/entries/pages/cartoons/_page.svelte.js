@@ -6,7 +6,7 @@ import { c as cartoons, r as replaceJpeg } from "../../../chunks/utils.js";
 import { B as BackTo } from "../../../chunks/BackTo.js";
 function _page($$payload, $$props) {
   push();
-  let selectedTag = "Aliens";
+  let selectedTag = "Animals";
   let images = cartoons;
   const tags = Array.from(new Set(cartoons.flatMap((img) => img.tags))).sort();
   let filtered = images.filter((img) => img.tags.includes(selectedTag));

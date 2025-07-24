@@ -28,21 +28,20 @@
 			and scroll through my <a href="/projects">projects</a> and
 			<a href="/animation">data visualization</a> products.
 		</p>
-
-		<span class="">
+		<div>
 			<h2>License</h2>
-			Visit the 
-			<a
-				target="_blank"
-				aria-label="footer-link"
-				rel="noopener noreferrer"
-				href="/license">License</a
-			> page for more information about the content of this website.
+			Visit the
+			<a target="_blank" aria-label="footer-link" rel="noopener noreferrer" href="/license"
+				>License</a
+			>
+			page for more information about the content of this website.
+		</div>
+		<div>
 			<h2>Contact</h2>
 			<p>
 				Interested in learning more? <a href="/contact">Contact me</a> to draw a cartoon or consult on
 				your next project.
 			</p>
-		</span>
+		</div>
 	</div>
 </ContainerLayout>
