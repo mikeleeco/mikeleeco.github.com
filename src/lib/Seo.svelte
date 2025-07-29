@@ -1,10 +1,9 @@
 <script>
 	export let title = 'Mike Lee';
 	export let description =
-		'A developer living in the Washington, DC area specializing in the creation of web applications,graphics, and other data-driven projects using R, Shiny, React, Svelte, and D3. I teach workshops on R programming and data visualization.';
-	export let keywords =
-		'web development, data science, data visualization, R, Shiny, React, Svelte';
-	export let image = 'https://www.mikelee.co/img/michael.png';
+		"A developer and cartoonist living in Milwaukee, Wisconsin specializing in the creation of web applications, graphics, and other data-driven projects I've taught classrooms and coding workshops, consulted with researchers, sports agents and students, and developed data products for government education agencies.";
+	export let keywords = 'web development, data science, data visualization, R, Python, Svelte';
+	export let image = 'https://www.mikelee.co/images/icons/logo.png';
 </script>
 
 <svelte:head>
