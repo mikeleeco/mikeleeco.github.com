@@ -44,14 +44,14 @@
 </svelte:head>
 
 <Seo
-	title={`Cartoon by Mike Lee - ${replaceJpeg(image.Filename).toUpperCase()}`}
+	title={`${replaceJpeg(image.Filename).toUpperCase()} - Cartoon by Mike Lee`}
 	description={image.Description}
 	keywords={'cartoon,single panel,' + image.tags.toString()}
 	image={`https://www.mikelee.co/cartoons/${replaceJpeg(image.Filename)}`}
 />
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div class="flex flex-col">
-	<div>
+	<div class='sm:p-5 p-2'>
 		<BackTo href={`/cartoons`} text={`Back to all cartoons`} classes="" />
 	</div>
 	<div class="flex flex-row place-content-between gap-5 justify-self-center">
