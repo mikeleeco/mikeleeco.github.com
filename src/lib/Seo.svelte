@@ -17,6 +17,8 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="title" property="og:title" content={title} />
 	<meta name="description" property="og:description" content={description} />
+	<meta name="image" property="og:image" content={image} />
+
 	<meta name="keywords" content={keywords} />
 	<meta name="language" content="EN" />
 	<meta name="robots" content="index, follow" />

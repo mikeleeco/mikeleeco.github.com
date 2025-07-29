@@ -12,7 +12,7 @@
 	import BackTo from '$lib/BackTo.svelte';
 	let selectedTag = $state('Animals');
 	let images = data;
-	import { replaceJpeg, getRandomIntInclusive  } from '$lib/utils/utils';
+	import { replaceJpeg, getRandomIntInclusive } from '$lib/utils/utils';
 	const tags = Array.from(new Set(data.flatMap((img) => img.tags))).sort();
 
 	let filtered = $derived(images.filter((img) => img.tags.includes(selectedTag)));
@@ -24,14 +24,14 @@
 
 <!-- Whats the best way to organize a sveltekit app to load up image information (alt text, image tags) saved in a csv file. 
  I'd like the image name to be the [id] then use the row returned to populate the image info -->
-<Seo title={'Cartoons'} />
+<Seo title={'Cartoons by Mike Lee'} />
 <ContainerLayout>
 	<div class="flex flex-col">
 		<div>
 			<BackTo href={`/`} text={`Home`} classes="" />
 		</div>
 		<div class="grid gap-5">
-			<h1 class=''>Cartoons</h1>
+			<h1 class="">Cartoons</h1>
 			<div>
 				<button
 					class="button"
