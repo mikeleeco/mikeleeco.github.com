@@ -45,11 +45,12 @@
 
 <Seo
 	title={`Cartoon - ${replaceJpeg(image.Filename).toUpperCase()}`}
-	description={image.Caption}
-	keywords={image.tags}
+	description={image.Description}
+	keywords={'cartoon,single panel,' + image.tags.toString()}
 />
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div class="flex flex-col">
+	{image.tags}
 	<div>
 		<BackTo href={`/cartoons`} text={`Back to all cartoons`} classes="" />
 	</div>
@@ -90,7 +91,7 @@
 			onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-right" /></button
 		>
 	</div>
-	<div class="flex flex-col gap-5 place-self-end self-center items-center">
+	<div class="flex flex-col items-center gap-5 place-self-end self-center">
 		<div class="flex flex-row sm:hidden">
 			<button
 				aria-label="button-forward"
