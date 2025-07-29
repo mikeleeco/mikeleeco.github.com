@@ -47,7 +47,7 @@
 	title={`Cartoon by Mike Lee - ${replaceJpeg(image.Filename).toUpperCase()}`}
 	description={image.Description}
 	keywords={'cartoon,single panel,' + image.tags.toString()}
-	image={`https://www.mikelee.co/cartoons/${replaceJpeg(nextCartoon.Filename)}`}
+	image={`https://www.mikelee.co/cartoons/${replaceJpeg(image.Filename)}`}
 />
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div class="flex flex-col">
