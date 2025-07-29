@@ -5,12 +5,12 @@
 	import Seo from '$lib/Seo.svelte';
 	let image = $derived(data.image);
 	let index = $derived(data.index);
-	import { replaceJpeg } from '$lib/utils/utils';
+	import { replaceJpeg, getRandomIntInclusive } from '$lib/utils/utils';
 	import cartoons from '$lib/data/cartoons.json';
+	import Icon from '$lib/components/Icon.svelte';
 
 	import { goto } from '$app/navigation';
-	import {  format, parseISO } from 'date-fns';
-
+	import { format, parseISO } from 'date-fns';
 	function onKeyDown(e) {
 		let nextCartoon;
 
@@ -53,19 +53,13 @@
 	<div>
 		<BackTo href={`/cartoons`} text={`Back to all cartoons`} classes="" />
 	</div>
-	<div class="flex flex-row place-content-between gap-5 pb-5">
-		{#if index !== cartoons.length - 1}
-			<button
-				aria-label="button-forward"
-				class="button mx-auto h-full w-20 self-center"
-				type="submit"
-				onclick={() => goto(navigateCartoons('forward'))}>{'<'}</button
-			>
-		{:else}
-			<button aria-label="button-forward-spacing" class="button invisible mx-auto h-full w-20"
-			></button>
-		{/if}
-		<div class="mx-auto flex max-w-5xl flex-col gap-10 py-8">
+	<div class="flex flex-row place-content-between gap-5 justify-self-center">
+		<button
+			aria-label="button-forward"
+			class={`button m-2 h-20 w-20 items-center justify-center self-center ${index !== cartoons.length - 1 ? 'hidden sm:flex' : 'hidden'}`}
+			onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-left" /></button
+		>
+		<div class="mx-auto flex w-fit max-w-5xl flex-col gap-10 py-12 md:py-6">
 			<div class="flex flex-col">
 				<!-- {image.Filename} -->
 				<img
@@ -80,7 +74,7 @@
 					>{/if}
 			</div>
 
-			<div class="flex flex-col">
+			<div class="flex flex-col px-5">
 				<p><strong>Date:</strong> {format(parseISO(image.Date), 'LLLL, y')}</p>
 				<p class="">
 					<strong>Tags:</strong>
@@ -90,16 +84,42 @@
 			</div>
 		</div>
 
-		{#if index !== 0}
+		<button
+			aria-label="button-forward"
+			class={`button m-2 h-20 w-20  items-center justify-center self-center  ${index !== 0 ? 'hidden sm:flex' : 'hidden'}`}
+			onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-right" /></button
+		>
+	</div>
+	<div class="flex flex-col gap-5 place-self-end self-center items-center">
+		<div class="flex flex-row sm:hidden">
 			<button
-				aria-label="button-back"
-				class="button mx-auto h-full w-20 self-center"
-				type="submit"
-				onclick={() => goto(navigateCartoons('back'))}>{'>'}</button
+				aria-label="button-forward"
+				class={`button  h-20 w-20 items-center justify-center self-center  ${index !== 0 ? 'flex' : 'hidden'} sm:hidden`}
+				onclick={() => goto(navigateCartoons('back'))}><Icon name="arrow-left" /></button
 			>
-		{:else}
-			<button aria-label="button-back-spacing" class="button invisible mx-auto h-full w-20"
-			></button>
-		{/if}
+			<button
+				aria-label="button-forward"
+				class={`button  h-20 w-20 items-center justify-center self-center  ${index !== cartoons.length - 1 ? 'flex' : 'hidden'} sm:hidden`}
+				onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-right" /></button
+			>
+		</div>
+
+		<div>
+			<button
+				class="button"
+				onclick={() => goto(`/cartoons/${replaceJpeg(cartoons[cartoons.length - 1].Filename)}`)}
+				>Latest</button
+			>
+			<button class="button" onclick={() => goto(`/cartoons/${replaceJpeg(cartoons[0].Filename)}`)}
+				>Oldest</button
+			>
+			<button
+				class="button"
+				onclick={() =>
+					goto(
+						`/cartoons/${replaceJpeg(cartoons[getRandomIntInclusive(0, cartoons.length)].Filename)}`
+					)}>Random</button
+			>
+		</div>
 	</div>
 </div>

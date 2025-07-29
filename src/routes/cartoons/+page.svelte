@@ -12,17 +12,11 @@
 	import BackTo from '$lib/BackTo.svelte';
 	let selectedTag = $state('Animals');
 	let images = data;
-	import { replaceJpeg } from '$lib/utils/utils';
+	import { replaceJpeg, getRandomIntInclusive  } from '$lib/utils/utils';
 	const tags = Array.from(new Set(data.flatMap((img) => img.tags))).sort();
 
 	let filtered = $derived(images.filter((img) => img.tags.includes(selectedTag)));
 	// let image = $derived(data.image);
-
-	function getRandomIntInclusive(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
 
 	const randomFloat = $state(getRandomIntInclusive(0, data.length));
 	let randomImage = $derived(data[randomFloat]);
