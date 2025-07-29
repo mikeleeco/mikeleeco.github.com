@@ -16,4 +16,4 @@ Linked [here](http://www.mikelee.co/Michael_Lee_Resume.pdf).
 
 ## Licensing
 - All source code is licensed under the MIT License (see `LICENSE`).
-- All artwork and image assets in the `art/` directory are licensed under CC BY-NC 4.0 (see `LICENSE-ART.md`).
+- All artwork and image assets are licensed under CC BY-NC 4.0 (see `LICENSE-ART.md`).
