@@ -44,13 +44,13 @@
 </svelte:head>
 
 <Seo
-	title={`Cartoon - ${replaceJpeg(image.Filename).toUpperCase()}`}
+	title={`Cartoon by Mike Lee - ${replaceJpeg(image.Filename).toUpperCase()}`}
 	description={image.Description}
 	keywords={'cartoon,single panel,' + image.tags.toString()}
+	image={`https://www.mikelee.co/cartoons/${replaceJpeg(nextCartoon.Filename)}`}
 />
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div class="flex flex-col">
-	{image.tags}
 	<div>
 		<BackTo href={`/cartoons`} text={`Back to all cartoons`} classes="" />
 	</div>
