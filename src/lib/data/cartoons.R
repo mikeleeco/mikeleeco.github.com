@@ -14,7 +14,7 @@ if(nrow(duplicateNames) > 0) {
 
 
 remove <- cartoons[!cartoons$Posted,]
-# remove <- remove %>% filter(Date!= max(Date))
+remove <- remove %>% filter(Date != max(Date))
 cartoons <- cartoons[cartoons$Posted,]
 # cartoons$themes <- strsplit(cartoons$Themes, ",\\s*")
 # cartoons$settings <- strsplit(cartoons$Setting, ",\\s*")
@@ -100,25 +100,38 @@ cartoons$Setting <- NULL
 # years <-  list.files("./static/img/cartoons")
 capt <- "2025/June/needle.jpeg"
 
-# for(i in 1:nrow(remove)) { 
-#     fileName <- paste0("../../Pictures/newYorker/",dirname(remove$Path[i]),"/Captions/", basename(remove$Path[i]))
+for(i in 1:nrow(remove)) { 
+    fileName <- paste0("../../Pictures/newYorker/",dirname(remove$Path[i]),"/Captions/", basename(remove$Path[i]))
    
-#     if(remove$Date[i] != max(remove$Date))  {
-#                 file.copy(fileName, paste0("../../Pictures/newYorker/data/Unpublished/", basename(remove$Path[i])))
-#     }
+    # if(remove$Date[i] != remove$Date[nrow(remove)])  {
+      # print(paste0('file: ', fileName));
+      file.copy(fileName, paste0("../../Pictures/newYorker/data/Unpublished/", basename(remove$Path[i])))
+    # }
 
-# }        
+}        
+# write.csv(x = remove, file = "../../Pictures/newYorker/data/Socials/unpublished.csv", row.names = FALSE)
 
-# for(i in 1:nrow(cartoons)) { 
-#     # print(i['Posted'])
-#     if(cartoons$Archive[i]) {
-#     fileName <- paste0("../../Pictures/newYorker/",dirname(cartoons$Path[i]),"/Captions/", basename(cartoons$Path[i]))
-#         file.copy(fileName, paste0("../../Pictures/newYorker/data/Archive/", basename(cartoons$Path[i])))
-#     } else {
-#     fileName <- paste0("../../Pictures/newYorker/",dirname(cartoons$Path[i]),"/Uncaptioned/", basename(cartoons$Path[i]))
-#     file.copy(fileName, paste0("./static/img/cartoons/",basename(cartoons$Path[i])))
-#     }
-# }
+for(i in 1:nrow(cartoons)) { 
+    # print(i['Posted'])
+    if(cartoons$Archive[i]) {
+    fileName <- paste0("../../Pictures/newYorker/",dirname(cartoons$Path[i]),"/Captions/", basename(cartoons$Path[i]))
+        file.copy(fileName, paste0("../../Pictures/newYorker/data/Archive/", basename(cartoons$Path[i])))
+    } else {
+    fileName <- paste0("../../Pictures/newYorker/",dirname(cartoons$Path[i]),"/Uncaptioned/", basename(cartoons$Path[i]))
+    file.copy(fileName, paste0("./static/img/cartoons/",basename(cartoons$Path[i])))
+    }
+}
+
+wsj <- remove %>% filter(Color == "Black" & Instruments %in% "Ink")
+for(i in 1:nrow(wsj)) { 
+    fileName <- paste0("../../Pictures/newYorker/",dirname(wsj$Path[i]),"/Captions/", basename(wsj$Path[i]))
+   
+    if(wsj$Date[i] != wsj$Date[nrow(wsj)])  {
+      # print(paste0('file: ', fileName));
+      file.copy(fileName, paste0("../../Pictures/newYorker/Publications/wsj/", basename(wsj$Path[i])))
+    }
+
+}      
 
 cartoons <- cartoons %>% filter(!Archive)
 cartoons$Categories <- NULL
@@ -139,8 +152,10 @@ count_categories(cartoons) %>% arrange(desc(Freq))
 
 cartoons$tags <- NULL
 cartoons$publishPath <- paste0("../../Pictures/newYorker/",dirname(cartoons$Path),"/Captions/", basename(cartoons$Filename))
-write.csv(x = cartoons, file = "../../Pictures/newYorker/data/Socials/cartoons.csv", row.names = FALSE)
+write.csv(x = cartoons, file = "../../Pictures/newYorker/data/Socials/cartoons2.csv", row.names = FALSE)
 
 
 
-library(dplyr)
+# library(dplyr)
+
+
