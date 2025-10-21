@@ -50,5 +50,8 @@
 		"feather-icons": "^4.29.2",
 		"gsap": "^3.13.0",
 		"svelte-preprocess": "^6.0.3"
+	},
+	"overrides": {
+		"cookie": "^0.7.0"
 	}
 }
