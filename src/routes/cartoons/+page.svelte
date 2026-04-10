@@ -15,7 +15,7 @@
 	import { replaceJpeg, getRandomIntInclusive } from '$lib/utils/utils';
 	const tags = Array.from(new Set(data.flatMap((img) => img.tags))).sort();
 
-	let filtered = $derived(images.filter((img) => img.tags.includes(selectedTag)));
+	let filtered = $derived(images.filter((img) => img.tags?.includes(selectedTag)));
 	// let image = $derived(data.image);
 
 	const randomFloat = $state(getRandomIntInclusive(0, data.length));
@@ -76,12 +76,12 @@
 				{#each filtered as image}
 					<a
 						href={`/cartoons/${replaceJpeg(image.Filename)}`}
-						class="block h-auto w-full content-center border object-contain p-4 hover:shadow lg:h-90"
+						class="content-center border p-4 hover:bg-(--theme-color-secondary) lg:h-90 overflow-hidden"
 					>
 						<img
 							src={`/img/cartoons/${image.Filename}`}
 							alt={image.Description}
-							class="lg:max-h-auto max-w-full"
+							class="lg:max-h-auto max-w-full "
 						/>
 						<!-- <img src={`/img/cartoons/${insertBeforeLastSlash(image.Path, "/Captions/")}`} alt={image.Caption} class="lg:max-h-full max-w-full " /> -->
 						<!-- <p class="mt-2 text-sm text-gray-600">{image.Caption}</p> -->

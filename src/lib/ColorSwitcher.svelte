@@ -5,17 +5,30 @@
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 
-	let themes = $state([
+	let { member = false, handleSwitch = false } = $props();
+
+	let themes = [
 		{ title: '🌚  Dark', theme: 'dark' },
 		{ title: '🌝  Light', theme: 'light' }
-	]);
+	];
+
+	let themeOptions = $derived.by(() => {
+		return member ? themes : themes.filter((a) => (a.theme === 'dark') | (a.theme === 'light'));
+	});
 
 	let selectedTheme = $state();
 	onMount(() => {
 		selectedTheme = localStorage.getItem('theme');
-		$theme = selectedTheme;
-		console.log('selectedTheme:', selectedTheme);
-		document.documentElement.setAttribute('data-theme', $theme);
+		if (!selectedTheme) {
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				selectedTheme = 'dark';
+			} else {
+				document.documentElement.setAttribute('data-theme', 'light');
+				selectedTheme = 'light';
+			}
+			$theme = selectedTheme;
+		}
 	});
 
 	async function setColors(click) {
@@ -31,13 +44,13 @@
 
 <!-- 			disabled={$theme === i.theme} -->
 {#key $theme}
-	{#each themes as i}
+	{#each themeOptions as i}
 		<button
-			class="button-icon {selectedTheme === i.theme
+			class="button button-icon {selectedTheme === i.theme
 				? 'border-accent cursor-pointer border-2'
 				: 'border-2 border-transparent'}"
 			data-set-theme={i.theme}
-			onclick={preventDefault(setColors)}
+			onclick={setColors}
 			type={'button'}
 		>
 			{i.title}

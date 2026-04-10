@@ -4,7 +4,7 @@
 </script>
 
 <footer class="mt-10 border-y-2 border-[var(--theme-color-accent)] p-10">
-	<div class="flex place-content-between">
+	<div class="flex place-content-between items-center">
 		<div class="square w-12">
 			<Logo />
 		</div>
