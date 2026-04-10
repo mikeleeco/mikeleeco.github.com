@@ -15,10 +15,10 @@
 		let nextCartoon;
 
 		switch (e.keyCode) {
-			case 37:
+			case 39:
 				nextCartoon = cartoons[+index + 1];
 				return goto(`/cartoons/${replaceJpeg(nextCartoon.Filename)}`);
-			case 39:
+			case 37:
 				nextCartoon = cartoons[+index - 1];
 				return goto(`/cartoons/${replaceJpeg(nextCartoon.Filename)}`);
 			default:
@@ -51,14 +51,14 @@
 />
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 <div class="flex flex-col">
-	<div class='sm:p-5 p-2'>
+	<div class="p-2 sm:p-5">
 		<BackTo href={`/cartoons`} text={`Back to all cartoons`} classes="" />
 	</div>
 	<div class="flex flex-row place-content-between gap-5 justify-self-center">
 		<button
 			aria-label="button-forward"
-			class={`button m-2 h-20 w-20 items-center justify-center self-center ${index !== cartoons.length - 1 ? 'hidden sm:flex' : 'hidden'}`}
-			onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-left" /></button
+			class={`button m-2 h-20 w-20 items-center justify-center self-center sm:block ${index !== 0 ? ' hidden' : 'hidden sm:invisible'}`}
+			onclick={() => goto(navigateCartoons('back'))}><Icon name="arrow-left" /></button
 		>
 		<div class="mx-auto flex w-fit max-w-5xl flex-col gap-10 py-12 md:py-6">
 			<div class="flex flex-col">
@@ -71,7 +71,7 @@
 
 				{#if image.Caption}<span
 						class="p-1 text-center font-serif text-lg italic sm:p-5 md:p-10 md:text-2xl"
-						>{'"'}{image.Caption}{'"'}</span
+						>{'"'}{@html image.Caption}{'"'}</span
 					>{/if}
 			</div>
 
@@ -85,9 +85,10 @@
 			</div>
 		</div>
 
+
 		<button
 			aria-label="button-forward"
-			class={`button m-2 h-20 w-20  items-center justify-center self-center  ${index !== 0 ? 'hidden sm:flex' : 'hidden'}`}
+			class={`button m-2 h-20 w-20  items-center justify-center self-center  ${index === cartoons.length -1  ? 'hidden sm:invisible sm:block' : 'hidden sm:block'}`}
 			onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-right" /></button
 		>
 	</div>
@@ -100,7 +101,7 @@
 			>
 			<button
 				aria-label="button-forward"
-				class={`button  h-20 w-20 items-center justify-center self-center  ${index !== cartoons.length - 1 ? 'flex' : 'hidden'} sm:hidden`}
+				class={`button  h-20 w-20 items-center justify-center self-center  ${index === cartoons.length - 1 ? 'hidden sm:block sm:invisible' : ''}`}
 				onclick={() => goto(navigateCartoons('forward'))}><Icon name="arrow-right" /></button
 			>
 		</div>
