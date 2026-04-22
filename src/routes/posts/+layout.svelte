@@ -1,6 +1,7 @@
 <!-- Template for /projects, populated by +page.svelte -->
 <script>
 	import Seo from '$lib/Seo.svelte';
+	let { children } = $props();
 
 	let image = 'https://www.mikelee.co/img/michael.png';
 	let title = 'Blog';
@@ -8,8 +9,8 @@
 	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
 </script>
 
-<Seo {title} {description} {image} />
+<!-- <Seo {title} {description} {image} /> -->
 
 <ContainerLayout>
-	<slot />
+	{@render children?.()}
 </ContainerLayout>
