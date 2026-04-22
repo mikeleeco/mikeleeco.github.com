@@ -30,15 +30,14 @@ Suddenly I had a kernel of an idea for a zine and the pressure of a due date. I 
 ***
 <Image alt="A photograph of me vending a zine fest. A zine with a yellow cover on display on a foldable table. Zines stack in a plastic container." src="/img/zineFest.jpg"/>
 
-As the first attendees wandered through the fest I was still hacking the staples correctly into place. To avoid folding or creasing the product zine creatoes can bind them using a long reach stapler. Good to know for next time. It turns out both bike maintenance and zine binding requires specialized knowledge and tools. Despite my hapdash approach attendees were responding to the zine warmly. It was a drug watching attendees slow their walk, examine the cover, and smile. I was awash with joy that people thought these doodles were funny.
+As the first attendees wandered through the fest I was still hacking the staples correctly into place. To avoid folding or creasing the product zine creators can bind them using a long reach stapler. Good to know for next time. It turns out both bike maintenance and zine binding requires specialized knowledge and tools. Despite my slapdash approach attendees were responding to the zine warmly. It was a drug watching attendees slow their walk, examine the cover, and smile. I was awash with joy that people thought these doodles were funny.
 
-I wrote An Opinionated Guide to Urban Cycling for new and aspiring bike riders. And dedicated bikers who perused the guide  agreed the recommendations covered important essentials. I'm filled with the hope that maybe people will go on a bike ride or reference it at some point. Consider it a starter pack to riding in the city. To get you confident to make mistakes and get on the saddle again.
+I wrote An Opinionated Guide to Urban Cycling for new and aspiring bike riders. And dedicated bikers who perused the guide agreed the recommendations covered important essentials. I'm filled with the hope that maybe people will go on a bike ride or reference it at some point. Consider it a starter pack to riding in the city. To get you confident to make mistakes and get on the saddle again.
 
-The first print of these has already sold out! I plan to make a second print soon to clean up a few mistakes I noticed with the first. And a future edition may add some sections ommitted due to the production crunch. Reach out to me on socials if you have thoughts or ideas or experiences getting acclimated to urban cycling. If you are interested in being notified when a second run is produced be sure to follow me on socials.
+The first print of these has already sold out! I plan to make a second print soon to clean up a few mistakes in the first. And a future edition may add some sections ommitted due to the production crunch. Reach out to me on socials if you have thoughts or ideas or experiences getting acclimated to urban cycling. If you are interested in being notified when a second run is produced be sure to follow.
 
 Thanks to the many folks who purchased a copy and connected with me about their bike adventures and misadventures! And thanks to <a href="https://shyelectron.com/">shy_electron</a> for being a supportive table mate to a newbie and helping process some of my sales. I had a great time connecting to the zine community and was buoyed by the positive reception. Already excited to table at a future zine fest. More soon!
 
 <div class="w-100 self-center">
-  
   <Image alt="An illustration of a carrot riding a bicycle." src="/img/bikingGuy.png"  />
 </div>
