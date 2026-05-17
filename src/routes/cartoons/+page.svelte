@@ -27,6 +27,8 @@
 <Seo title={'Cartoons by Mike Lee'} />
 <ContainerLayout>
 	<div class="flex flex-col">
+
+
 		<div>
 			<BackTo href={`/`} text={`Home`} classes="" />
 		</div>
@@ -76,12 +78,12 @@
 				{#each filtered as image}
 					<a
 						href={`/cartoons/${replaceJpeg(image.Filename)}`}
-						class="content-center border p-4 hover:bg-(--theme-color-secondary) lg:h-90 overflow-hidden"
+						class="content-center overflow-hidden border p-4 hover:bg-(--theme-color-secondary) lg:h-90"
 					>
 						<img
 							src={`/img/cartoons/${image.Filename}`}
 							alt={image.Description}
-							class="lg:max-h-auto max-w-full "
+							class="lg:max-h-auto max-w-full"
 						/>
 						<!-- <img src={`/img/cartoons/${insertBeforeLastSlash(image.Path, "/Captions/")}`} alt={image.Caption} class="lg:max-h-full max-w-full " /> -->
 						<!-- <p class="mt-2 text-sm text-gray-600">{image.Caption}</p> -->
