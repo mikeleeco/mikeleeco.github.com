@@ -18,7 +18,7 @@
 		</p>
 		<p>
 			I’m a cartoonist who has submitted around 200 single panel cartoons to the New Yorker. I enjoy
-			working in ink and watercolor. Check out some of <a href="/cartoons">my cartoons</a>.
+			working in ink and watercolor. Check out some of <a href="/my-cartoons">my cartoons</a>.
 		</p>
 		<p>
 			I've taught classrooms and coding workshops, consulted with researchers, sports agents and
