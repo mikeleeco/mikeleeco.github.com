@@ -15,9 +15,9 @@ if (nrow(duplicateNames) > 0) {
 }
 
 
-remove <- cartoons[!cartoons$Posted, ]
+remove <- cartoons[!cartoons$Posted & !cartoons$Sold, ]
 remove <- remove[remove$Rejected, ]
-remove <- remove %>% filter(Date != max(Date))
+# remove <- remove |> filter(Date != max(Date))
 cartoons <- cartoons[cartoons$Posted, ]
 # cartoons$themes <- strsplit(cartoons$Themes, ",\\s*")
 # cartoons$settings <- strsplit(cartoons$Setting, ",\\s*")
@@ -31,7 +31,7 @@ assign_categories <- function(df) {
   categories <- c("Animal", "Art", "Baby", "Business", "Christmas", "City", "Dating", "Doctor", "Dog", "Easter", "Education", "Fairy Tale", "Family", "Food", "Friendship", "Halloween", "Health", "Life", "Other", "Marriage", "Therapy", "Religion", "Science", "Sports", "Summer", "Technology", "Thanksgiving", "Travel", "Winter")
 
   category_keywords <- list(
-    Animals = c("animal", "animals", "pet", "bird", "duck", "ducklings", "dogs", "cats", "eagle", "horse", "cow", "chicken", "pig", "crow", "chimanzee", "monkey", "bee", "bees", "nest"),
+    Animals = c("animal", "animals", "pet", "bird", "duck", "ducklings", "dogs", "cats", "eagle", "horse", "cow", "chicken", "pig", "crow", "chimanzee", "monkey", "bee", "bees", "nest", "rhino", "elephant"),
     Art = c("art", "painting", "drawing", "cartoon", "pencil", "pen"),
     Aquatic = c("fish", "crab", "lobster", "whale", "seal", "dolphin"),
     Babies = c("baby", "babies", "infant", "nursery"),
