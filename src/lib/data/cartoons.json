@@ -18,6 +18,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Therapy",
     "Categories": "Therapy"
   },
@@ -40,6 +41,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Sports",
     "Categories": "Sports"
   },
@@ -61,6 +63,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Therapy", "Relationships"],
     "Categories": "Therapy, Relationships"
   },
@@ -83,6 +86,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Art", "Life", "Marriage", "Relationships"],
     "Categories": "Art, Life, Marriage, Relationships"
   },
@@ -103,6 +107,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Life", "Other"],
     "Categories": "Gag, Life, Other"
   },
@@ -124,6 +129,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Travel"],
     "Categories": "Gag, Travel"
   },
@@ -145,6 +151,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Work",
     "Categories": "Work"
   },
@@ -166,6 +173,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Education", "Gag", "Kids", "Nature"],
     "Categories": "Animals, Education, Gag, Kids, Nature"
   },
@@ -188,6 +196,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Art", "Sports"],
     "Categories": "Art, Sports"
   },
@@ -208,6 +217,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Friendship", "Nature"],
     "Categories": "Animals, Friendship, Nature"
   },
@@ -227,6 +237,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Other"],
     "Categories": "Gag, Other"
   },
@@ -246,6 +257,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature"],
     "Categories": "Animals, Nature"
   },
@@ -265,6 +277,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Life",
     "Categories": "Life"
   },
@@ -282,6 +295,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature"],
     "Categories": "Animals, Nature"
   },
@@ -305,6 +319,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Nature",
     "Categories": "Nature"
   },
@@ -325,6 +340,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "Other"
   },
@@ -342,6 +358,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Art", "Babies", "Life"],
     "Categories": "Art, Babies, Life"
   },
@@ -360,6 +377,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Therapy",
     "Categories": "Therapy"
   },
@@ -378,6 +396,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Life",
     "Categories": "Life"
   },
@@ -395,6 +414,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Family", "Kids", "Life", "Music"],
     "Categories": "Family, Kids, Life, Music"
   },
@@ -414,6 +434,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["City", "Relationships"],
     "Categories": "City, Relationships"
   },
@@ -432,6 +453,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "City",
     "Categories": "City"
   },
@@ -453,6 +475,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Family", "Food", "Kids"],
     "Categories": "Family, Food, Kids"
   },
@@ -472,6 +495,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Aquatic", "Nature", "Therapy"],
     "Categories": "Animals, Aquatic, Nature, Therapy"
   },
@@ -491,6 +515,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Therapy",
     "Categories": "Therapy"
   },
@@ -513,6 +538,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Gag", "Insects", "Nature"],
     "Categories": "Animals, Gag, Insects, Nature"
   },
@@ -532,6 +558,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "City", "Dogs", "Friendship"],
     "Categories": "Animals, City, Dogs, Friendship"
   },
@@ -551,6 +578,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Therapy", "Sports"],
     "Categories": "Therapy, Sports"
   },
@@ -570,6 +598,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Life"],
     "Categories": "Animals, Life"
   },
@@ -588,6 +617,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "City", "Dogs"],
     "Categories": "Animals, City, Dogs"
   },
@@ -607,6 +637,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "City", "Music"],
     "Categories": "Animals, City, Music"
   },
@@ -627,6 +658,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "City"],
     "Categories": "Animals, City"
   },
@@ -646,6 +678,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Education",
     "Categories": "Education"
   },
@@ -665,6 +698,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Religion",
     "Categories": "Religion"
   },
@@ -683,6 +717,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Life",
     "Categories": "Life"
   },
@@ -704,6 +739,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Insects", "Work"],
     "Categories": "Animals, Insects, Work"
   },
@@ -724,6 +760,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature"],
     "Categories": "Animals, Nature"
   },
@@ -746,6 +783,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Family", "Health", "Life"],
     "Categories": "Family, Health, Life"
   },
@@ -764,6 +802,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature"],
     "Categories": "Animals, Nature"
   },
@@ -782,6 +821,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature", "Work"],
     "Categories": "Animals, Nature, Work"
   },
@@ -800,6 +840,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Work",
     "Categories": "Work"
   },
@@ -818,6 +859,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["City", "Sports"],
     "Categories": "City, Sports"
   },
@@ -837,6 +879,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Fairy Tale",
     "Categories": "Fairy Tale"
   },
@@ -855,6 +898,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Insects", "Life", "Nature"],
     "Categories": "Animals, Insects, Life, Nature"
   },
@@ -866,14 +910,16 @@
     "Date": "2024-08-31",
     "Path": "2024/August/a.jpeg",
     "top_crop": 1,
-    "right_crop": 1,
+    "right_crop": 2,
     "bottom_crop": 20,
+    "left_crop": 1,
     "font_size": 180,
     "Posted": true,
     "Archive": false,
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Life", "Relationships"],
     "Categories": "Life, Relationships"
   },
@@ -885,6 +931,7 @@
     "Date": "2024-08-31",
     "Path": "2024/August/ducklings.jpeg",
     "top_crop": 1,
+    "right_crop": 2,
     "bottom_crop": 17,
     "left_crop": 2,
     "font_size": 180,
@@ -894,6 +941,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Aquatic", "Friendship", "Nature"],
     "Categories": "Animals, Aquatic, Friendship, Nature"
   },
@@ -904,7 +952,10 @@
     "Month": "August",
     "Date": "2024-08-31",
     "Path": "2024/August/martins.jpeg",
+    "top_crop": 2,
+    "right_crop": 2,
     "bottom_crop": 16,
+    "left_crop": 1,
     "caption_height_percentage": 0,
     "font_size": 180,
     "Posted": true,
@@ -912,6 +963,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Halloween", "Marriage", "Relationships"],
     "Categories": "Gag, Halloween, Marriage, Relationships"
   },
@@ -924,13 +976,15 @@
     "Path": "2024/August/report.jpeg",
     "top_crop": 1,
     "right_crop": 1,
-    "bottom_crop": 20,
+    "bottom_crop": 15,
+    "left_crop": 1,
     "font_size": 180,
     "Posted": true,
     "Archive": false,
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Sports",
     "Categories": "Sports"
   },
@@ -952,6 +1006,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Family", "Food", "Life", "Relationships"],
     "Categories": "Family, Food, Life, Relationships"
   },
@@ -973,6 +1028,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Gag"],
     "Categories": "Animals, Gag"
   },
@@ -992,6 +1048,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Food", "Music"],
     "Categories": "Food, Music"
   },
@@ -1012,6 +1069,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Life", "Relationships"],
     "Categories": "Life, Relationships"
   },
@@ -1032,6 +1090,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Life", "Therapy", "Relationships"],
     "Categories": "Life, Therapy, Relationships"
   },
@@ -1051,6 +1110,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Nature"],
     "Categories": "Animals, Nature"
   },
@@ -1070,6 +1130,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Food", "Relationships"],
     "Categories": "Food, Relationships"
   },
@@ -1090,6 +1151,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Music", "Sports"],
     "Categories": "Music, Sports"
   },
@@ -1112,6 +1174,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Friendship", "Games", "Life", "Relationships"],
     "Categories": "Friendship, Games, Life, Relationships"
   },
@@ -1133,6 +1196,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Friendship", "Kids"],
     "Categories": "Friendship, Kids"
   },
@@ -1153,6 +1217,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Aquatic", "Life", "Nature"],
     "Categories": "Aquatic, Life, Nature"
   },
@@ -1174,6 +1239,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Food", "Life"],
     "Categories": "Animals, Food, Life"
   },
@@ -1195,6 +1261,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Marriage", "Relationships"],
     "Categories": "Gag, Marriage, Relationships"
   },
@@ -1216,6 +1283,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Insects"],
     "Categories": "Animals, Insects"
   },
@@ -1236,6 +1304,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Nature",
     "Categories": "Nature"
   },
@@ -1257,6 +1326,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Food",
     "Categories": "Food"
   },
@@ -1276,6 +1346,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Food", "Relationships"],
     "Categories": "Food, Relationships"
   },
@@ -1294,6 +1365,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Family", "Gag", "Life"],
     "Categories": "Family, Gag, Life"
   },
@@ -1313,6 +1385,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Nature"],
     "Categories": "Gag, Nature"
   },
@@ -1336,6 +1409,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Gag", "Insects"],
     "Categories": "Animals, Gag, Insects"
   },
@@ -1357,6 +1431,7 @@
     "Instruments": "Pencil",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["City", "Halloween", "Life", "Nature"],
     "Categories": "City, Halloween, Life, Nature"
   },
@@ -1378,6 +1453,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Life", "Marriage", "Relationships"],
     "Categories": "Life, Marriage, Relationships"
   },
@@ -1400,6 +1476,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Fairy Tale", "Friendship", "Life"],
     "Categories": "Fairy Tale, Friendship, Life"
   },
@@ -1421,6 +1498,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Insects", "Nature", "Relationships"],
     "Categories": "Animals, Insects, Nature, Relationships"
   },
@@ -1441,6 +1519,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Relationships"],
     "Categories": "Animals, Relationships"
   },
@@ -1461,6 +1540,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Science", "Work"],
     "Categories": "Science, Work"
   },
@@ -1481,6 +1561,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Family", "Kids", "Life", "Music"],
     "Categories": "Animals, Family, Kids, Life, Music"
   },
@@ -1502,6 +1583,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Sports"],
     "Categories": "Gag, Sports"
   },
@@ -1523,6 +1605,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Travel", "Winter"],
     "Categories": "Gag, Travel, Winter"
   },
@@ -1544,6 +1627,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Babies", "Family"],
     "Categories": "Babies, Family"
   },
@@ -1565,6 +1649,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Babies", "City", "Family", "Gag"],
     "Categories": "Babies, City, Family, Gag"
   },
@@ -1585,6 +1670,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Friendship"],
     "Categories": "Animals, Friendship"
   },
@@ -1606,6 +1692,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Family",
     "Categories": "Family"
   },
@@ -1626,6 +1713,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "City", "Food"],
     "Categories": "Animals, City, Food"
   },
@@ -1647,6 +1735,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["City", "Gag", "Other", "Summer", "Work"],
     "Categories": "City, Gag, Other, Summer, Work"
   },
@@ -1667,6 +1756,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Life",
     "Categories": "Life"
   },
@@ -1689,6 +1779,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Fairy Tale", "Gag"],
     "Categories": "Fairy Tale, Gag"
   },
@@ -1710,6 +1801,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["City", "Other"],
     "Categories": "City, Other"
   },
@@ -1731,6 +1823,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Kids", "Life"],
     "Categories": "Kids, Life"
   },
@@ -1751,6 +1844,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Politics",
     "Categories": "Politics"
   },
@@ -1769,6 +1863,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Gag", "Work"],
     "Categories": "Animals, Gag, Work"
   },
@@ -1790,6 +1885,7 @@
     "Instruments": "F",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Art", "Gag", "Therapy"],
     "Categories": "Art, Gag, Therapy"
   },
@@ -1811,6 +1907,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Animals",
     "Categories": "Animals"
   },
@@ -1821,7 +1918,7 @@
     "Month": "April",
     "Date": "2025-04-30",
     "Path": "2025/April/breaking.jpeg",
-    "top_crop": 1,
+    "top_crop": 2,
     "right_crop": 1,
     "bottom_crop": 0,
     "left_crop": 1,
@@ -1834,6 +1931,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Life", "Sports"],
     "Categories": "Life, Sports"
   },
@@ -1858,6 +1956,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Science", "Work"],
     "Categories": "Science, Work"
   },
@@ -1879,6 +1978,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Art", "Work"],
     "Categories": "Art, Work"
   },
@@ -1901,6 +2001,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Gag",
     "Categories": "Gag"
   },
@@ -1921,6 +2022,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Health", "Sports"],
     "Categories": "Health, Sports"
   },
@@ -1940,6 +2042,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Sports", "Travel"],
     "Categories": "Sports, Travel"
   },
@@ -1961,6 +2064,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "Other"
   },
@@ -1982,6 +2086,7 @@
     "Instruments": "Pencil",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Religion",
     "Categories": "Religion"
   },
@@ -2003,6 +2108,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Health",
     "Categories": "Health"
   },
@@ -2024,6 +2130,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Nature",
     "Categories": "Nature"
   },
@@ -2045,6 +2152,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "other"
   },
@@ -2066,13 +2174,14 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "other"
   },
   {
     "Filename": "forever.jpeg",
     "Caption": "We’ll always be best buds no matter what. We’ve punched each other in the nuts! Yet here I stand. That’s how much you mean to me.",
-    "Description": "Two men dressed in formal attire have their hands on the shoulder of a man in the center. A nearby woman in a long white dress looks sheepish. A man points and says to the one in the center…",
+    "Description": "An image of a ballroom with chandeliers and people in the background dancing. In the foreground, two men dressed in formal attire have their hands on the shoulder of a man in the center. A nearby woman in a long white dress looks sheepish. A man points and says to the one in the center and says…",
     "Month": "July",
     "Date": "2025-07-31",
     "Path": "2025/July/forever.jpeg",
@@ -2087,6 +2196,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Friendship", "Marriage", "Relationships"],
     "Categories": "Friendship, Marriage, Relationships"
   },
@@ -2108,6 +2218,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Aquatic", "City", "Gag"],
     "Categories": "Aquatic, City, Gag"
   },
@@ -2129,6 +2240,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Cats", "Dogs"],
     "Categories": "Animals, Cats, Dogs"
   },
@@ -2150,6 +2262,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Aquatic", "Nature"],
     "Categories": "Aquatic, Nature"
   },
@@ -2171,6 +2284,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Internet",
     "Categories": "Internet"
   },
@@ -2192,6 +2306,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Music"],
     "Categories": "Animals, Music"
   },
@@ -2213,13 +2328,14 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Health",
     "Categories": "Health"
   },
   {
     "Filename": "organic.jpeg",
     "Caption": "",
-    "Description": "A poster promoting a band. Four skeletal formulas of four-carbon alkyl radicals each have a mop of black hair. The poster reads: “ENJOY THE BUTYLS ON ORGANIC RECORDS”",
+    "Description": "A poster promoting a band. Skeletal formulas of four-carbon alkyl radicals each don mops of black hair like a famous foursome from Liverpool. The poster reads: “ENJOY THE BUTYLS ON ORGANIC RECORDS”",
     "Month": "August",
     "Date": "2025-08-31",
     "Path": "2025/August/organic.jpeg",
@@ -2234,6 +2350,7 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Music"],
     "Categories": "Gag, Music"
   },
@@ -2255,13 +2372,14 @@
     "Instruments": "Ink, Watercolor",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "other"
   },
   {
     "Filename": "dishes.jpeg",
     "Caption": "I’m sorry I had to break it to you like this. I swear I told you I didn’t have a dishwasher. ",
-    "Description": "A woman looks forlongly at a stack of dishes. A man stands over a sink and holds a plate.",
+    "Description": "A woman looks forlornly at a stack of dishes. A man stands over a sink and holds a plate.",
     "Month": "September",
     "Date": "2025-09-30",
     "Path": "2025/September/dishes.jpeg",
@@ -2276,6 +2394,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Relationships",
     "Categories": "Relationships"
   },
@@ -2295,12 +2414,13 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Gag", "Music"],
     "Categories": "Gag, Music"
   },
   {
     "Filename": "gametime.jpeg",
-    "Caption": "They cancelled?! It’s five minutes to game time! Who else can ring the pump-up glockenspiel?!",
+    "Caption": "They canceled?! It’s five minutes to game time! Who else can ring the pump-up glockenspiel?!",
     "Description": "A television camera person points their camera and grimaces. A small crowd sits in three rows next to a staircase by an entrance with a game clock. A man in a suit talks on a cell phone standing next to a large percussion instrument with bars and two soft mallets. The man’s hair is straight up as he says into the phone…",
     "Month": "September",
     "Date": "2025-09-30",
@@ -2313,6 +2433,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Music", "Sports"],
     "Categories": "Music, Sports"
   },
@@ -2336,6 +2457,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Other",
     "Categories": "other"
   },
@@ -2359,6 +2481,7 @@
     "Instruments": "Pencil",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Animals",
     "Categories": "Animals"
   },
@@ -2382,6 +2505,7 @@
     "Instruments": "Pencil",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": ["Animals", "Food"],
     "Categories": "Animals, Food"
   },
@@ -2405,6 +2529,7 @@
     "Instruments": "Pencil",
     "Color": "Color",
     "Rejected": true,
+    "Sold": false,
     "tags": "Animals",
     "Categories": "Animals"
   },
@@ -2428,6 +2553,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Fairy Tale",
     "Categories": "Fairy Tale"
   },
@@ -2451,6 +2577,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Family",
     "Categories": "Family"
   },
@@ -2474,6 +2601,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Politics",
     "Categories": "Politics"
   },
@@ -2497,6 +2625,7 @@
     "Instruments": "Ink",
     "Color": "Black",
     "Rejected": true,
+    "Sold": false,
     "tags": "Fairy Tale",
     "Categories": "Fairy Tale"
   }
