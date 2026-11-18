@@ -1,17 +1,16 @@
 <script>
-	export let split = 'chars';
-	export let stagger = 0.02;
-	export let startingOpacity = 0;
-
 	import { onMount } from 'svelte';
-	import { SplitText } from 'gsap/dist/SplitText.js';
-	import { gsap, MorphSVGPlugin } from '../scripts/gsap.js';
 	import { pageTransitionDelay } from '../stores/global.js';
 	import { prefersReducedMotion } from '../stores/motion.js';
+	import { sleep } from '../scripts/utils.js';
 
-	gsap.registerPlugin(SplitText);
+	export let split = 'chars';
+	export let stagger = 1;
+	export let startingOpacity = 0;
 
-	let title, subtitle, content;
+	let gsap;
+	let SplitText;
+
 
 	async function transition() {
 		title = document.querySelectorAll('.transition-title');
@@ -73,10 +72,18 @@
 		}
 	}
 
-	import { sleep } from '../scripts/utils.js';
-
 	onMount(async () => {
 		if ($prefersReducedMotion) return;
+
+		const [{ gsap: gsapInstance }, { SplitText: SplitTextPlugin }] =
+			await Promise.all([
+				import('../scripts/gsap.js'),
+				import('gsap/SplitText')
+			]);
+
+		gsap = gsapInstance;
+		SplitText = SplitTextPlugin;
+		gsap.registerPlugin(SplitText);
 
 		await sleep($pageTransitionDelay);
 		await transition();
