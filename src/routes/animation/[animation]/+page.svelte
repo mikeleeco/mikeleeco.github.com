@@ -1,7 +1,7 @@
 <!-- Skeleton for  -->
 <script>
-	import BackTo from '$lib/BackTo.svelte';
-	import Seo from '$lib/Seo.svelte';
+	import BackTo from '#lib/BackTo.svelte';
+	import Seo from '#lib/Seo.svelte';
 
 	export let data;
 	let animation = data.animation;

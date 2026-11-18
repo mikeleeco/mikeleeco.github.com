@@ -1,7 +1,7 @@
 <!-- Template for /projects/[slug], populated by +page.svelte -->
 <script>
-	import BackTo from '$lib/BackTo.svelte';
-	import Seo from '$lib/Seo.svelte';
+	import BackTo from '#lib/BackTo.svelte';
+	import Seo from '#lib/Seo.svelte';
 
 	let title;
 	let description;

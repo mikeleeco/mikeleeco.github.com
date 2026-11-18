@@ -10,14 +10,13 @@ tags:
   - Art
   - Cartoons
 featured: true
-description: "Many people feel scared or uncertain around riding and maintaining their bicycles. I wrote a zine about it."
+description: 'Many people feel scared or uncertain around riding and maintaining their bicycles. I wrote a zine about it.'
 img: '/img/bikingGuy.png'
 ---
 
 <script>
-  import Image from '$lib/components/Image.svelte'
+  import Image from '#lib/components/Image.svelte'
 </script>
-
 
 I was accepted to <a href="https://milwaukeezinefest.com">Milwaukee Zine Fest</a> about a week before it was scheduled. In the two months on the waitlist I focused on other projects. I had never done an event like this so a zine to exhibit <i>didn't exist</i>. Maybe next year, I supposed. But there were a few days to consider the invitation before I had to confirm or reject.
 
@@ -27,7 +26,8 @@ While I'm not an expert mechanic there is a depth of knowledge I've learned abou
 
 Suddenly I had a kernel of an idea for a zine and the pressure of a due date. I wrote, drew, scanned, processed, and binded the zine in the handful of days before Milwaukee Zine Fest. On Saturday morning I arrived shortly before the 1030am start time with a plastic container of zines and set up my table with a couple hand drawn cards to advertise the goods.
 
-***
+---
+
 <Image alt="A photograph of me vending a zine fest. A zine with a yellow cover on display on a foldable table. Zines stack in a plastic container." src="/img/zineFest.jpg"/>
 
 As the first attendees wandered through the fest I was still hacking the staples correctly into place. To avoid folding or creasing the product zine creators can bind them using a long reach stapler. Good to know for next time. It turns out both bike maintenance and zine binding requires specialized knowledge and tools. Despite my slapdash approach attendees were responding to the zine warmly. It was a drug watching attendees slow their walk, examine the cover, and smile. I was awash with joy that people thought these doodles were funny.

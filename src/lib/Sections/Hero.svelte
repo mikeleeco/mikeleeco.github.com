@@ -3,7 +3,7 @@
 	import { windowHeight, windowWidth } from '../../stores/global.js';
 	import { prefersReducedMotion } from '../../stores/motion.js';
 	import { sleep } from '../../scripts/utils.js';
-	import Icon from '$lib/components/Icon.svelte';
+	import Icon from '#lib/components/Icon.svelte';
 	// // vanilla js
 	// const video = document.getElementById('intro-animation');
 	// video.onended = () => {
@@ -26,9 +26,9 @@
 
 	// sveltekit native
 	import { fade } from 'svelte/transition';
-	import Brick from '$lib/components/Brick.svelte';
-	import Drawing from '$lib/components/Drawing.svelte';
-	import Logo from '$lib/Logo.svelte';
+	import Brick from '#lib/components/Brick.svelte';
+	import Drawing from '#lib/components/Drawing.svelte';
+	import Logo from '#lib/Logo.svelte';
 	let visible = true;
 </script>
 

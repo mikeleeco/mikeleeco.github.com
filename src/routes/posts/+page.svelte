@@ -1,8 +1,8 @@
 <script>
-	import Transition from '$lib/Transition.svelte';
-	import Post from '$lib/Content/PostCompact.svelte';
-	import BackTo from '$lib/BackTo.svelte';
-	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
+	import Transition from '#lib/Transition.svelte';
+	import Post from '#lib/Content/PostCompact.svelte';
+	import BackTo from '#lib/BackTo.svelte';
+	import ContainerLayout from '#lib/components/ContainerLayout.svelte';
 	let { data } = $props();
 	let posts = data.posts;
 
