@@ -1,6 +1,6 @@
-import { writable, readable } from "svelte/store";
+import { writable, readable } from 'svelte/store';
 
-export const currentIcon = writable("");
+export const currentIcon = writable('');
 
 export const pageTransitionDelay = readable(900);
 export const menuExpanded = writable(false);

@@ -1,6 +1,6 @@
 <script>
-	import Icon from '$lib/components/Icon.svelte';
-	import Logo from '$lib/Logo.svelte';
+	import Icon from '#lib/components/Icon.svelte';
+	import Logo from '#lib/Logo.svelte';
 </script>
 
 <footer class="mt-10 border-y-2 border-[var(--theme-color-accent)] p-10">

@@ -1,7 +1,7 @@
 <script>
-	// import Transition from '$lib/Transition.svelte';
-	import Post from '$lib/Content/PostCompact.svelte';
-	import BackTo from '$lib/BackTo.svelte';
+	// import Transition from '#lib/Transition.svelte';
+	import Post from '#lib/Content/PostCompact.svelte';
+	import BackTo from '#lib/BackTo.svelte';
 	import { windowWidth } from '../../stores/global.js';
 
 	let pageWidth;

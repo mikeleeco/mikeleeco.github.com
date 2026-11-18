@@ -1,7 +1,7 @@
 <script>
-	import Transition from '$lib/Transition.svelte';
-	import BackTo from '$lib/BackTo.svelte';
-	import Seo from '$lib/Seo.svelte';
+	import Transition from '#lib/Transition.svelte';
+	import BackTo from '#lib/BackTo.svelte';
+	import Seo from '#lib/Seo.svelte';
 </script>
 
 <Transition />

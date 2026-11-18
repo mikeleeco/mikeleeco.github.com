@@ -3,7 +3,7 @@
  */
 export async function load({ fetch }) {
 	const res = await fetch(`/posts.json`);
-	const posts = await res.json();
+	const posts = await res.Response.json();
 
 	return {
 		posts

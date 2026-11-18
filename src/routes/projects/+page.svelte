@@ -1,7 +1,7 @@
 <script>
-	import Transition from '$lib/Transition.svelte';
-	import Post from '$lib/Content/PostCompact.svelte';
-	import BackTo from '$lib/BackTo.svelte';
+	import Transition from '#lib/Transition.svelte';
+	import Post from '#lib/Content/PostCompact.svelte';
+	import BackTo from '#lib/BackTo.svelte';
 
 	let { data } = $props();
 	let projects = data.projects;

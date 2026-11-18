@@ -1,5 +1,5 @@
-import cartoons from '$lib/data/cartoons.json';
-import { findCartoon } from '$lib/utils/utils';
+import cartoons from '#lib/data/cartoons.json';
+import { findCartoon } from '#lib/utils/utils.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export function load({ params }) {

@@ -1,6 +1,6 @@
 <!-- Template for /posts/[slug], populated by +page.svelte -->
 <script>
-	import BackTo from '$lib/BackTo.svelte';
+	import BackTo from '#lib/BackTo.svelte';
 
 	let element;
 	let { children } = $props();

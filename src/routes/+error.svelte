@@ -1,6 +1,6 @@
 <script>
-	import { page } from '$app/stores';
-	import Icon from '$lib/components/Icon.svelte';
+	import { page } from '$app/state';
+	import Icon from '#lib/components/Icon.svelte';
 
 	let showTech = false;
 </script>
@@ -12,7 +12,7 @@
 		alt="Peter Venkman denial animation. Sorry you've reached an error. - Mike"
 	/>
 	<hr />
-	<h2>Error {$page.status}</h2>
+	<h2>Error {page.status}</h2>
 
 	<button
 		on:click={() => {
@@ -22,7 +22,7 @@
 		{showTech ? 'Hide' : 'Show'} the technical details {@html showTech ? '&uarr;' : '&darr;'}
 	</button>
 	{#if showTech}
-		<pre>{$page.error.message}</pre>
+		<pre>{page.error.message}</pre>
 	{/if}
 
 	<h1>Sorry we've encountered an error.</h1>

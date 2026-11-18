@@ -1,5 +1,5 @@
 <script>
-	import Seo from '$lib/Seo.svelte';
+	import Seo from '#lib/Seo.svelte';
 
 	let image = 'https://www.mikelee.co/img/michael.png';
 </script>

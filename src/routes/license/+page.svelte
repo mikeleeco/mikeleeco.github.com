@@ -2,8 +2,8 @@
 	// export let data;
 	import { goto } from '$app/navigation';
 
-	import Seo from '$lib/Seo.svelte';
-	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
+	import Seo from '#lib/Seo.svelte';
+	import ContainerLayout from '#lib/components/ContainerLayout.svelte';
 </script>
 
 <Seo title={'About'} />
