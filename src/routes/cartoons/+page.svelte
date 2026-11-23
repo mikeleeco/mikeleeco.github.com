@@ -24,13 +24,13 @@
  I'd like the image name to be the [id] then use the row returned to populate the image info -->
 <Seo title={'Cartoons by Mike Lee'} />
 <ContainerLayout>
-	<div class="flex flex-col">
+	<div class="flex flex-col ">
 
 
 		<div>
 			<BackTo href={`/`} text={`Home`} classes="" />
 		</div>
-		<div class="grid gap-5">
+		<div class="grid gap-5 ">
 			<h1 class="">Cartoons</h1>
 				<div>
 			<button

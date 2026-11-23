@@ -1,7 +1,6 @@
 <script>
 	let { alt, src, text, caption = true, visible = false, classNames = '' } = $props();
 
-	let showCaption = $state(visible);
 	function revealCaption() {
 		visible = !visible;
 	}

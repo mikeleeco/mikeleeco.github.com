@@ -5,12 +5,13 @@
 	import { sleep } from '../scripts/utils.js';
 
 	export let split = 'chars';
-	export let stagger = 1;
+	export let stagger = 0.02;
 	export let startingOpacity = 0;
 
 	let gsap;
 	let SplitText;
 
+	let title, subtitle, content;
 
 	async function transition() {
 		title = document.querySelectorAll('.transition-title');
@@ -72,20 +73,21 @@
 		}
 	}
 
-	onMount(async () => {
-		if ($prefersReducedMotion) return;
+onMount(async () => {
+	console.log('prefersReducedMotion:', $prefersReducedMotion);
+	if ($prefersReducedMotion) return;
 
-		const [{ gsap: gsapInstance }, { SplitText: SplitTextPlugin }] =
-			await Promise.all([
-				import('../scripts/gsap.js'),
-				import('gsap/SplitText')
-			]);
+	const [{ gsap: gsapInstance }, { SplitText: SplitTextPlugin }] =
+		await Promise.all([
+			import('../scripts/gsap.js'),
+			import('gsap/SplitText')
+		]);
 
-		gsap = gsapInstance;
-		SplitText = SplitTextPlugin;
-		gsap.registerPlugin(SplitText);
+	gsap = gsapInstance;
+	SplitText = SplitTextPlugin;
+	gsap.registerPlugin(SplitText);
 
-		await sleep($pageTransitionDelay);
-		await transition();
-	});
+	await sleep($pageTransitionDelay);
+	await transition();
+});
 </script>
