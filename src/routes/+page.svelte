@@ -1,6 +1,6 @@
 <script>
-	import Seo from '$lib/Seo.svelte';
-	import Hero from '$lib/Sections/Hero.svelte';
+	import Seo from '#lib/Seo.svelte';
+	import Hero from '#lib/Sections/Hero.svelte';
 </script>
 
 <svelte:window />

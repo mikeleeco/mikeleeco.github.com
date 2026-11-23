@@ -1,10 +1,10 @@
 <script>
 	export let projects;
 	export let home;
-	import Transition from '$lib/Transition.svelte';
+	import Transition from '#lib/Transition.svelte';
 
-	import ProjectSection from '$lib/Content/Project.svelte';
-	import Post from '$lib/Content/PostCompact.svelte';
+	import ProjectSection from '#lib/Content/Project.svelte';
+	import Post from '#lib/Content/PostCompact.svelte';
 	import { windowWidth } from '../../stores/global.js';
 
 	let element;

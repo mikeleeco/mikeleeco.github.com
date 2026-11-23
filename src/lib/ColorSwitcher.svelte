@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { preventDefault } from 'svelte/legacy';
 
 	import { theme } from '../stores/theme.js';
-	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 
-	let { member = false, handleSwitch = false } = $props();
+	let { member = false } = $props();
 
 	let themes = [
 		{ title: '🌚  Dark', theme: 'dark' },
@@ -13,7 +11,9 @@
 	];
 
 	let themeOptions = $derived.by(() => {
-		return member ? themes : themes.filter((a) => (a.theme === 'dark') | (a.theme === 'light'));
+		return member
+			? themes
+			: themes.filter((a) => a.theme === 'dark' | a.theme === 'light');
 	});
 
 	let selectedTheme = $state();

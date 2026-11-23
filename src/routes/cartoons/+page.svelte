@@ -2,20 +2,18 @@
 	// export let data;
 	import { goto } from '$app/navigation';
 
-	import Seo from '$lib/Seo.svelte';
-	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
+	import Seo from '#lib/Seo.svelte';
+	import ContainerLayout from '#lib/components/ContainerLayout.svelte';
 
-	import data from '$lib/data/cartoons.json';
-	import { writable } from 'svelte/store';
-	import { insertBeforeLastSlash } from '$lib/utils/utils';
-	import { derived } from 'svelte/store';
-	import BackTo from '$lib/BackTo.svelte';
+	import data from '#lib/data/cartoons.json';
+	import { replaceJpeg, getRandomIntInclusive, cartoonPath } from '#lib/utils/utils.js';
+
+	import BackTo from '#lib/BackTo.svelte';
 	let selectedTag = $state('Animals');
-	let images = data;
-	import { replaceJpeg, getRandomIntInclusive } from '$lib/utils/utils';
+	let cartoons = data;
 	const tags = Array.from(new Set(data.flatMap((img) => img.tags))).sort();
 
-	let filtered = $derived(images.filter((img) => img.tags?.includes(selectedTag)));
+	let filtered = $derived(cartoons.filter((img) => img.tags?.includes(selectedTag)));
 	// let image = $derived(data.image);
 
 	const randomFloat = $state(getRandomIntInclusive(0, data.length));
@@ -26,30 +24,30 @@
  I'd like the image name to be the [id] then use the row returned to populate the image info -->
 <Seo title={'Cartoons by Mike Lee'} />
 <ContainerLayout>
-	<div class="flex flex-col">
+	<div class="flex flex-col ">
 
 
 		<div>
 			<BackTo href={`/`} text={`Home`} classes="" />
 		</div>
-		<div class="grid gap-5">
+		<div class="grid gap-5 ">
 			<h1 class="">Cartoons</h1>
-			<div>
-				<button
-					class="button"
-					onclick={() => goto(`/cartoons/${replaceJpeg(data[data.length - 1].Filename)}`)}
-					>Latest</button
-				>
-				<button class="button" onclick={() => goto(`/cartoons/${replaceJpeg(data[0].Filename)}`)}
-					>Oldest</button
-				>
-				<button
-					class="button"
-					onclick={() =>
-						goto(`/cartoons/${replaceJpeg(data[getRandomIntInclusive(0, data.length)].Filename)}`)}
-					>Random</button
-				>
-			</div>
+				<div>
+			<button
+				class="button"
+				onclick={() => goto(cartoonPath(cartoons[cartoons.length - 1]))}
+				>Latest</button
+			>
+			<button class="button" onclick={() => goto(cartoonPath(cartoons[0]))}
+				>Oldest</button
+			>
+			<button
+				class="button"
+				onclick={() =>
+					goto(cartoonPath(
+						cartoons[getRandomIntInclusive(0, cartoons.length)]))}>Random</button
+			>
+		</div>
 
 			<!-- <div class="grid grid-cols-1 place-items-center gap-4 md:grid-cols-3">
 			<a

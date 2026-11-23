@@ -2,10 +2,10 @@
 	// export let data;
 	import { goto } from '$app/navigation';
 
-	import Seo from '$lib/Seo.svelte';
-	import ContainerLayout from '$lib/components/ContainerLayout.svelte';
-	import BackTo from '$lib/BackTo.svelte';
-	import Image from '$lib/components/Image.svelte';
+	import Seo from '#lib/Seo.svelte';
+	import ContainerLayout from '#lib/components/ContainerLayout.svelte';
+	import BackTo from '#lib/BackTo.svelte';
+	import Image from '#lib/components/Image.svelte';
 </script>
 
 <Seo title={'Apps'} />
